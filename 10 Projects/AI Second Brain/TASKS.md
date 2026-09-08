@@ -22,9 +22,10 @@ If you have a longer window, do **T0.3** (the 30-day audit prompt) then come bac
   Same PDF. Lower severity than the token but they're recordings of paid course content.
 - [ ] **T0.3 · Run the 30-day audit prompt** `20 min`
   In ChatGPT/Claude: *"Look at my last 30 days of conversations. Where am I spending most of my time, and what from that list should be automated?"* Evidence-led input to T0.4. (Source: Advanced Agents, Day 2.)
-- [ ] **T0.4 · Choose the showcase workflow** `45 min` `⭐ blocks everything`
+- [~] **T0.4 · Choose the showcase workflow** `45 min` `⭐ blocks everything` — IN PROGRESS 8 Sep
   Criteria: genuinely recurrent · has a *checkable* right answer (or no golden dataset is possible) · legible to a client in <30 sec · needs **no** client-confidential data to demo.
-  → Bring me 3–4 candidates and we'll pressure-test them together.
+  Direction chosen: **fitness / running / trail running** (D14 in PROGRESS.md) — evidence-led, not guessed.
+  Still open: the exact input→output task shape (e.g. single-run plan-adherence check vs. weekly summary vs. race-readiness call). Lock this before ticking T0.4 done.
 - [ ] **T0.5 · Write `data-policy.md`** `45 min`
   Three tiers (public / internal / client-confidential), red lines, what may never enter the system. Save to `02_Architecture/`.
 - [ ] **T0.6 · Check your firm's AI policy** `30 min`

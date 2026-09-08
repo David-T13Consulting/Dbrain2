@@ -20,6 +20,9 @@ PARA structure:
   folder elsewhere on disk, never git-tracked, and leave a pointer note in the vault (path + one-line
   summary) so they stay findable. Example: `10 Projects/AI Second Brain/00_Source_Material.md`.
   Update the pointer note if the file ever moves — a stale path is worse than no note.
+- **Fact-check before adding anything.** Nothing becomes structured knowledge (Projects / Areas /
+  Resources) without David confirming it first. Raw capture into `00 Inbox` is exempt — the gate is
+  at triage. Claude structures the second brain; David populates it.
 
 ## Capture
 Messages starting `capture:` land in `00 Inbox/` as dated markdown, untouched until weekly triage.

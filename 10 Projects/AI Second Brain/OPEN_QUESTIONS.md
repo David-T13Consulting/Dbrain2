@@ -19,7 +19,9 @@ The single most consequential decision in the plan. Criteria:
 *Good shape:* "turn a messy discovery-call transcript into a structured findings memo in my house format."
 *Bad shape:* "help me think" — unmeasurable, undemoable.
 
-**To resolve:** run T0.3 (30-day audit prompt), bring 3–4 candidates, we pressure-test together.
+**8 Sep — partially resolved (D14):** domain chosen — fitness / running / trail running, evidence-led
+from David's actual recent topics rather than guessed. **Still open:** the precise task shape
+(input → output). Continuing now.
 
 ---
 

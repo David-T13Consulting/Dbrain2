@@ -6,9 +6,10 @@
 
 ## ▶ Next action
 
-> **T0.1 — Revoke the Telegram bot token.** 5 minutes. Do this one first; it's a live credential.
+> **T0.5 — Write `data-policy.md`.** 45 min. T0.4 is locked (below); this is what's left to clear the Week 0 gate.
 
-If you have a longer window, do **T0.3** (the 30-day audit prompt) then come back with 3–4 candidate workflows so we can settle **T0.4**, which unblocks all of H1.
+After that: T0.2 (rotate Zoom passcodes, still open) and T0.6 (check firm's AI policy — needs you, not me).
+Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
 
 ---
 
@@ -22,16 +23,25 @@ If you have a longer window, do **T0.3** (the 30-day audit prompt) then come bac
   Same PDF. Lower severity than the token but they're recordings of paid course content.
 - [ ] **T0.3 · Run the 30-day audit prompt** `20 min`
   In ChatGPT/Claude: *"Look at my last 30 days of conversations. Where am I spending most of my time, and what from that list should be automated?"* Evidence-led input to T0.4. (Source: Advanced Agents, Day 2.)
-- [~] **T0.4 · Choose the showcase workflow** `45 min` `⭐ blocks everything` — IN PROGRESS 8 Sep
-  Criteria: genuinely recurrent · has a *checkable* right answer (or no golden dataset is possible) · legible to a client in <30 sec · needs **no** client-confidential data to demo.
-  Direction chosen: **fitness / running / trail running** (D14 in PROGRESS.md) — evidence-led, not guessed.
-  Still open: the exact input→output task shape (e.g. single-run plan-adherence check vs. weekly summary vs. race-readiness call). Lock this before ticking T0.4 done.
+- [x] **T0.4 · Choose the showcase workflow** `45 min` `⭐ blocks everything` ✅ **LOCKED 8 Sep** (D14, D15 in PROGRESS.md)
+  **"Classify each run's session type (easy / long / tempo / hills / intervals / race / recovery) from raw
+  Strava data, then roll a week of classified sessions into a coaching assessment — trend, effort
+  adequacy, and race-goal trajectory."**
+  Evidence-led (David's actual last-few-weeks topics, not guessed from his job). No Runna connector
+  exists and Strava's `get_training_plan` tool doesn't return real plan data — session-type
+  classification from raw metrics (pace/HR/elevation/effort) is the workaround, and it's a cleaner
+  golden-dataset task than plan-compliance checking would have been anyway.
+  **H1 scope** (checkable core): session-type classification + trend/effort-adequacy.
+  **H2 scope** (judgment layer, confidence bands): race-goal trajectory call.
+  **Golden-dataset note:** no external plan to check against, so ground truth for T3.1 comes from
+  David labeling a batch of his own historical runs by actual session type — flag this as real work
+  he'll need to do, not just Claude's.
 - [ ] **T0.5 · Write `data-policy.md`** `45 min`
   Three tiers (public / internal / client-confidential), red lines, what may never enter the system. Save to `02_Architecture/`.
 - [ ] **T0.6 · Check your firm's AI policy** `30 min`
   The one input I can't research. Also scan two live client contracts for AI/subprocessor clauses. → resolves OQ-2.
 
-**Week 0 gate:** you can state the showcase workflow and your red lines in one sentence each.
+**Week 0 gate:** you can state the showcase workflow and your red lines in one sentence each. Showcase workflow ✅ done (T0.4). Red lines — pending T0.5.
 
 ---
 

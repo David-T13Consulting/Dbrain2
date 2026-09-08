@@ -11,15 +11,15 @@
 | **Phase** | Week 0 — Foundations |
 | **Weeks elapsed** | 0 of 13 |
 | **Target** | Client-ready demo, December 2026 |
-| **Status** | 🟡 Planning complete, execution not started |
-| **Blocked on** | T0.4 — showcase workflow not yet chosen (blocks all of H1) |
-| **Next action** | T0.4 — choose the showcase workflow (T0.1 done, T1.1/T1.3/T1.5 done) |
-| **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log) |
+| **Status** | 🟢 Showcase workflow locked, Week 0 gate half-clear (workflow ✅, red lines pending T0.5) |
+| **Blocked on** | Nothing — T0.4 resolved. T0.5 (data-policy.md) is next to clear the Week 0 gate |
+| **Next action** | T0.5 — write `data-policy.md` |
+| **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
 
 ```
-Week 0  Foundations    ░░░░░░░░░░   0%   ← you are here
+Week 0  Foundations    ███░░░░░░░  33%   ← you are here (T0.1, T0.4 done; T0.2/3/5/6 open)
 H1      Ship           ░░░░░░░░░░   0%
 H2      Validate       ░░░░░░░░░░   0%
 H3      Collaborate    ░░░░░░░░░░   0%
@@ -71,12 +71,50 @@ Append-only. Each entry: what, why, and what would change it.
 | D12 | 8 Sep | **Project tracking merged into the vault**, under `10 Projects/AI Second Brain/`. Raw source material (67 screenshots + 3 PDFs, 239MB) stays at `~/Desktop/AI_SecondBrain_Project/00_Source_Material/`, deliberately outside the vault and not git-tracked | David: "should we move them all under my Vault?" Answer: split by nature. Tracking docs are themselves a PARA project (active, has an end state) so they belong in `10 Projects/`; large binaries would bloat git and clutter the Obsidian UI for no benefit — they're already distilled into the summary docs. Establishes a standing rule: large files never enter the vault, they live in a separate location with a maintained pointer note from the vault. Build history (this git log) now lives inside the second brain itself — deliberate, David confirmed no objection | If the source material needs re-processing regularly rather than as a one-time archive |
 | D13 | 8 Sep | **Standing rule 8: fact-check before adding anything to the vault.** Claude proposes, David confirms, before a fact/note/inference becomes structured knowledge. Capture into `00 Inbox` is exempt (unprocessed by design); gate applies at triage | David: "you probably know things about me. Some may be false so you MUST always fact check things with me before adding info to my second brain... You're here to help me structure it properly, not to populate it for me." | — |
 | D14 | 8 Sep | **Showcase workflow direction: fitness / running / trail running**, not a consulting-domain task | Ran evidence-led T0.4 properly this time — asked what David actually turned to notes/AI for in the last few weeks, rather than inferring from his job title. Of 8 real topics (parenting, home reno, fitness, supplements, personal finance, San Diego relocation, Tower 13 contract search, Phinest/KPMG conversations), running is the only one with real structured data behind it already (Strava-connected) and a genuinely checkable right answer (actual vs. planned pace/zone/distance). Phinest/KPMG contract review was the runner-up — more on-theme for the client pitch, but needs synthetic data and is a harder build. Exact task shape (the specific input→output transformation) still to be locked | If the exact task shape doesn't clear the checkability bar once specified |
+| D15 | 8 Sep | **T0.4 locked:** "Classify each run's session type (easy/long/tempo/hills/intervals/race/recovery) from raw Strava data, then roll a week of classified sessions into a coaching assessment — trend, effort adequacy, and race-goal trajectory." No Runna connector exists (checked the MCP registry); Strava's `get_training_plan` tool doesn't return real plan data, only a signup link. Session-type classification from raw metrics is the workaround, and a cleaner golden-dataset task than plan-compliance checking would have been | David wants a weekly assessment coach, not a single-workout checker. Decomposed so the golden dataset still has a checkable core: H1 = classification + trend/effort-adequacy (objective). H2 = goal-trajectory judgment, using the confidence-UX pattern (>90%/50-90%/<50%) rather than forcing a binary call in week 1. Ground truth for T3.1 will come from David labeling his own historical runs — no external plan to check against | If Runna ships a real API/connector later, or if session-type classification proves too noisy without HR/lap data on most runs |
 
 ---
 
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 3 — 8 Sep 2026 · Claude
+**Did:**
+- T0.1 done: David revoked the Telegram bot token
+- Built the vault skeleton in `~/Documents/Dbrain2` (David's existing Obsidian install) — PARA structure,
+  git init, classification convention (T1.1, T1.3, T1.5)
+- David caught an architecture error: project tracking was split from the vault it tracks. Corrected —
+  moved `CLAUDE.md`/`TASKS.md`/`PROGRESS.md`/`OPEN_QUESTIONS.md`/`CAPTURE.md`/roadmap docs/`memory/`
+  into `Dbrain2/10 Projects/AI Second Brain/` (D12). Raw source material (239MB, screenshots + PDFs)
+  stays outside the vault, ungit-tracked, referenced via a maintained pointer note — new standing
+  large-file policy (rule 7)
+- Cleaned up `~/Documents/Claude/Projects/` at David's request: removed 42 OS/app junk files; restructured
+  `Job search/Applications/` into `Active/` (10) and `Archive/` (14) by a 6-week-quiet cutoff; deduped
+  3 near-identical resume PDFs; refiled loose/misplaced files. Documented all judgment calls in that
+  folder's own README rather than silently deciding
+- David set standing rule 8: Claude fact-checks with him before anything becomes structured vault
+  knowledge (capture stays exempt — gate is at triage) (D13)
+- **T0.4 locked** (D14, D15): showcase workflow is session-type classification (easy/long/tempo/hills/
+  intervals/race/recovery) from raw Strava data, rolling into a weekly coaching assessment. Checked the
+  MCP registry for a Runna connector — none exists; Strava's own `get_training_plan` tool doesn't return
+  real plan data either, just a signup link. Pulled real Strava data (profile, zones, 15 recent
+  activities, full lap data on one structured workout) to ground the decision instead of guessing
+
+**Corrected mid-session:** first pass at T0.4 candidates was inferred from David's job title, not evidence
+— he called it out ("I don't understand how this fits into my second brain strategy"). Redid it properly:
+asked what he'd actually been thinking about the last few weeks, worked from that.
+
+**Needs David:**
+- Confirm whether the two `*_root-copy` CVs in the archived job-search folders (OMP, Lung Cancer Europe)
+  are stale duplicates — flagged in that folder's README, low stakes since both are archived
+- T0.2 (rotate 4 Zoom passcodes) still open
+- Project instructions still need pasting into claude.ai settings (from session 2, still outstanding)
+- For T3.1 (golden dataset, week 3): will need David to label a batch of his own historical runs by
+  actual session type — no external plan to check ground truth against
+
+**Pick up at:** T0.5 (`data-policy.md`) to clear the rest of the Week 0 gate, then T0.2/T0.6, then
+T1.2/T1.4 (both unblocked now that T0.4 is locked).
 
 ### Session 2 — 7 Sep 2026 · Claude
 **Did:**

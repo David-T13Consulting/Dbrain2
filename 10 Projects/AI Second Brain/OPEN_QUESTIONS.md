@@ -6,24 +6,7 @@
 
 ## 🔴 Blocking
 
-### OQ-1 · What is the showcase workflow?
-**Blocks:** all of H1 (skills, golden dataset, evals — everything downstream)
-**Owner:** David · **Task:** T0.4
-
-The single most consequential decision in the plan. Criteria:
-- Genuinely recurrent (you actually do it repeatedly)
-- Has a **checkable right answer** — without this, no golden dataset is possible, and without a golden dataset there is no showcase
-- Legible to a client in under 30 seconds
-- Demonstrable with **no** client-confidential data
-
-*Good shape:* "turn a messy discovery-call transcript into a structured findings memo in my house format."
-*Bad shape:* "help me think" — unmeasurable, undemoable.
-
-**8 Sep — partially resolved (D14):** domain chosen — fitness / running / trail running, evidence-led
-from David's actual recent topics rather than guessed. **Still open:** the precise task shape
-(input → output). Continuing now.
-
----
+*Nothing currently blocking.*
 
 ## 🟡 Needed soon
 
@@ -57,6 +40,7 @@ My recommendation is against local inference for a live demo regardless — the 
 
 | # | Question | Answer | Date |
 |---|---|---|---|
+| R7 | (was OQ-1) What is the showcase workflow? | **"Classify each run's session type from raw Strava data, roll a week into a coaching assessment — trend, effort adequacy, race-goal trajectory."** H1 = classification + trend/effort (checkable core). H2 = goal-trajectory judgment with confidence bands. Ground truth for the golden dataset comes from David labeling his own historical runs | 8 Sep |
 | R1 | Showcase format? | Live system I drive, screen-shared | 7 Sep |
 | R2 | "Collaborative" — which sense? | Humans sharing first, multi-agent second | 7 Sep |
 | R3 | Which sector to anchor security on? | Generic but strict, specialise later | 7 Sep |

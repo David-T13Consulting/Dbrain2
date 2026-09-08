@@ -1,0 +1,5 @@
+# Obsidian local UI/cache state -- not vault content
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.DS_Store

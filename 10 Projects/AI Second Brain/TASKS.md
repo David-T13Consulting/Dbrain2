@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T0.6 — Check two live client contracts for AI / subprocessor clauses.** 30 min, needs David. Last open Week 0 item; may tighten data-policy §6.
+> **T1.2 — Write `AGENTS.md` for the vault, by hand, 20–30 lines.** 1 h. Parallel: T0.7 (AI-use contract clause).
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -38,8 +38,9 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
   he'll need to do, not just Claude's.
 - [x] **T0.5 · Write `data-policy.md`** `45 min` ✅ **done 29 Sep** — v0.1 in `02_Architecture/data-policy.md`. §6 (Tower13 commercial) provisional pending T0.6.
   Three tiers (public / internal / client-confidential), red lines, what may never enter the system. Save to `02_Architecture/`.
-- [ ] **T0.6 · Check your firm's AI policy** `30 min`
-  The one input I can't research. Also scan two live client contracts for AI/subprocessor clauses. → resolves OQ-2.
+- [x] **T0.6 · Check your firm's AI policy** `30 min` ✅ **closed 29 Sep — replaced by a rule (D16).** There's no firm policy above Tower13. David set the rule instead: every contract must state his AI agent use explicitly, and engagements without that stay out of the system entirely. data-policy.md → v0.2.
+- [ ] **T0.7 · Add an AI-use disclosure clause to the Tower13 contract template, and to live contracts at renewal** `1 h` `needs David + lawyer review`
+  Until it's in a contract, that engagement stays out of the system. Claude can draft; a Belgian lawyer should check it.
 
 **Week 0 gate:** you can state the showcase workflow and your red lines in one sentence each. Showcase workflow ✅ done (T0.4). Red lines ✅ done (T0.5, 29 Sep).
 

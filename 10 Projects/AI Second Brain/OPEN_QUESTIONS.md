@@ -10,12 +10,6 @@
 
 ## 🟡 Needed soon
 
-### OQ-2 · What does your firm's AI policy actually say?
-**Blocks:** final version of `data-policy.md` §6 (v0.1 done 29 Sep), governance one-pager (T8)
-**Reframed 29 Sep:** David is independent (Tower13), so there's no firm policy above him. The real input is the AI/subprocessor clauses in his live contracts. David reads them himself: under data-policy §5 the contract text must not go to a model API.
-**Owner:** David — I cannot research this
-Also: scan two live client contracts for AI / subprocessor clauses. Constrains the standing rule on client data.
-
 ### OQ-3 · Is a colleague available for the week-10 two-person test?
 **Blocks:** T10 design (multi-user layer)
 **Owner:** David
@@ -41,6 +35,7 @@ My recommendation is against local inference for a live demo regardless — the 
 
 | # | Question | Answer | Date |
 |---|---|---|---|
+| R8 | (was OQ-2) What does the firm's AI policy say? | No firm above Tower13. David's rule (D16): every contract must state his AI agent use explicitly, or the engagement stays out. Follow-up is T0.7 | 29 Sep |
 | R7 | (was OQ-1) What is the showcase workflow? | **"Classify each run's session type from raw Strava data, roll a week into a coaching assessment — trend, effort adequacy, race-goal trajectory."** H1 = classification + trend/effort (checkable core). H2 = goal-trajectory judgment with confidence bands. Ground truth for the golden dataset comes from David labeling his own historical runs | 8 Sep |
 | R1 | Showcase format? | Live system I drive, screen-shared | 7 Sep |
 | R2 | "Collaborative" — which sense? | Humans sharing first, multi-agent second | 7 Sep |

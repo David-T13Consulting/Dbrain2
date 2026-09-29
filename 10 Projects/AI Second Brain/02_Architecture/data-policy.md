@@ -1,7 +1,7 @@
 ---
 classification: internal
-version: 0.1
-status: confirmed by David 29 Sep 2026 — §6 provisional pending T0.6
+version: 0.2
+status: confirmed by David 29 Sep 2026
 ---
 
 # Data policy — Dbrain2 / AI Second Brain
@@ -45,11 +45,20 @@ The `client` tag exists so the rule can be checked (a note carrying it is a viol
 - Anything sent to a model API must therefore be something I would accept being stored by that provider for 30 days, which means `public` or `internal` only.
 - The provider and hosting choice gets re-checked against this policy at T9 (week 9).
 
-## 6 · Tower13 commercial material (provisional, pending T0.6)
+## 6 · Tower13 commercial material and contracts
 
-- My own rates, proposals, pipeline and positioning are `internal`.
-- A document containing a counterparty's terms, names or confidential information (for example Phinest/KPMG subcontracting agreements) is `client`, so it stays out.
-- **Open:** T0.6 checks two live contracts for AI or subprocessor clauses. If a contract restricts AI use of *my own* notes about the engagement, this section tightens.
+**Rule (D16, 29 Sep):** every client contract must state clearly that I use a personal AI agent. Until a
+contract says so, nothing about that engagement goes into the system, **including my own notes about it**.
+
+| Contract state | What may enter the system |
+|---|---|
+| States my AI agent use explicitly | My own `internal` notes about the engagement: my time, my learnings, my rates. Counterparty confidential material still never enters (§2.1). |
+| Silent or ambiguous | Nothing about the engagement. |
+| Restricts or bans AI use | Nothing about the engagement, and I don't use the agent on it at all. |
+
+- My own rates, proposals, pipeline and positioning, when they don't mention an engagement, stay `internal`.
+- A disclosure clause makes my own notes permissible. It never makes client data permissible. §2.1 is absolute.
+- Going forward, the Tower13 contract template carries a standard AI-use disclosure clause (T0.7).
 
 ## 7 · Enforcement (current → planned)
 

@@ -12,14 +12,14 @@
 | **Weeks elapsed** | 0 of 13 |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
-| **Blocked on** | T0.6 needs David (contract scan) |
-| **Next action** | T0.6 — David scans two live contracts for AI/subprocessor clauses; then T1.2 `AGENTS.md` |
+| **Blocked on** | Nothing |
+| **Next action** | T1.2 — `AGENTS.md` (parallel: T0.7 contract clause) |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
 
 ```
-Week 0  Foundations    ████████░░  83%   ← you are here (T0.1–T0.5 closed; T0.6 open)
+Week 0  Foundations    █████████░  90%   ← T0.1–T0.6 closed; T0.7 (contract clause) open
 H1      Ship           ░░░░░░░░░░   0%
 H2      Validate       ░░░░░░░░░░   0%
 H3      Collaborate    ░░░░░░░░░░   0%
@@ -72,6 +72,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D13 | 8 Sep | **Standing rule 8: fact-check before adding anything to the vault.** Claude proposes, David confirms, before a fact/note/inference becomes structured knowledge. Capture into `00 Inbox` is exempt (unprocessed by design); gate applies at triage | David: "you probably know things about me. Some may be false so you MUST always fact check things with me before adding info to my second brain... You're here to help me structure it properly, not to populate it for me." | — |
 | D14 | 8 Sep | **Showcase workflow direction: fitness / running / trail running**, not a consulting-domain task | Ran evidence-led T0.4 properly this time — asked what David actually turned to notes/AI for in the last few weeks, rather than inferring from his job title. Of 8 real topics (parenting, home reno, fitness, supplements, personal finance, San Diego relocation, Tower 13 contract search, Phinest/KPMG conversations), running is the only one with real structured data behind it already (Strava-connected) and a genuinely checkable right answer (actual vs. planned pace/zone/distance). Phinest/KPMG contract review was the runner-up — more on-theme for the client pitch, but needs synthetic data and is a harder build. Exact task shape (the specific input→output transformation) still to be locked | If the exact task shape doesn't clear the checkability bar once specified |
 | D15 | 8 Sep | **T0.4 locked:** "Classify each run's session type (easy/long/tempo/hills/intervals/race/recovery) from raw Strava data, then roll a week of classified sessions into a coaching assessment — trend, effort adequacy, and race-goal trajectory." No Runna connector exists (checked the MCP registry); Strava's `get_training_plan` tool doesn't return real plan data, only a signup link. Session-type classification from raw metrics is the workaround, and a cleaner golden-dataset task than plan-compliance checking would have been | David wants a weekly assessment coach, not a single-workout checker. Decomposed so the golden dataset still has a checkable core: H1 = classification + trend/effort-adequacy (objective). H2 = goal-trajectory judgment, using the confidence-UX pattern (>90%/50-90%/<50%) rather than forcing a binary call in week 1. Ground truth for T3.1 will come from David labeling his own historical runs — no external plan to check against | If Runna ships a real API/connector later, or if session-type classification proves too noisy without HR/lap data on most runs |
+| D16 | 29 Sep | **Every client contract must state explicitly that David uses a personal AI agent.** Engagements under silent or ambiguous contracts stay fully out of the system, including David's own notes. A disclosure clause permits own notes only; client data stays excluded regardless | David: "assume all contracts must be very clear that I use a personal AI agent." Replaces T0.6: there's no firm policy above Tower13, so David sets the rule. Turns a compliance check into a standard Tower13 clause (T0.7), which is itself a governance-as-GTM signal | A client refuses the clause and the engagement matters more than the system coverage |
 
 ---
 
@@ -88,7 +89,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 - Week 0 gate met.
 - Housekeeping: git in the device VM can't clean its lock files, so they are removed after each commit.
 
-**Pick up at:** T0.6 (David, contracts), then T1.2 `AGENTS.md`.
+- D16: contracts must state AI agent use explicitly; T0.6 closed, T0.7 added; data-policy → v0.2.
+
+**Pick up at:** T1.2 `AGENTS.md`; T0.7 in parallel.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

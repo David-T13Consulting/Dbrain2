@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | David reviews AGENTS.md; then T1.4 bounded migration |
+| **Next action** | T1.4 bounded migration |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -92,9 +92,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - D16: contracts must state AI agent use explicitly; T0.6 closed, T0.7 added; data-policy → v0.2.
 
-- T1.2: AGENTS.md v1 written at the vault root with a CLAUDE.md stub (D17). Waiting on David's line-by-line review. T0.7 is future-only: no live contracts.
+- T1.2: AGENTS.md v1 written at the vault root with a CLAUDE.md stub (D17). Approved by David. T0.7 is future-only: no live contracts.
 
-**Pick up at:** David's review of AGENTS.md, then T1.4.
+**Pick up at:** T1.4.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

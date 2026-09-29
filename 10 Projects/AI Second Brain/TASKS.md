@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T1.4 — Migrate a bounded subset of knowledge: only what the Strava showcase needs.** 2 h. (T1.2 v1 is written and awaiting David's review.) T0.7 before the next contract is signed.
+> **T1.4 — Migrate a bounded subset of knowledge: only what the Strava showcase needs.** 2 h. T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -52,7 +52,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 
 ### Week 1 — Vault
 - [x] **T1.1** Create vault skeleton: `00 Inbox / 10 Projects / 20 Areas / 30 Resources / 40 Archive / 90 System` `30 min` ✅ done 8 Sep — built inside `~/Documents/Dbrain2` (the Obsidian vault), not this folder. See D11 in PROGRESS.md.
-- [x] **T1.2** Write `AGENTS.md` for the vault — **by hand**, 20–30 lines `1 h` ✅ **29 Sep, v1 pending David's line-by-line review.** At the vault root, with a root `CLAUDE.md` importing it (D17). Every line passes the test: would the agent get this wrong without being told?
+- [x] **T1.2** Write `AGENTS.md` for the vault — **by hand**, 20–30 lines `1 h` ✅ **29 Sep, v1 approved by David.** At the vault root, with a root `CLAUDE.md` importing it (D17). Every line passes the test: would the agent get this wrong without being told?
   Auto-generated ones measurably underperform (+23% cost, redundant content).
 - [x] **T1.3** `git init` the vault, first commit `15 min` ✅ done 8 Sep — commit 377e8c2 in Dbrain2
 - [ ] **T1.4** Migrate a *bounded* subset of knowledge — only what the showcase workflow needs `2 h`

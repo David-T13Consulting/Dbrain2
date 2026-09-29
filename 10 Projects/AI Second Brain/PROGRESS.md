@@ -123,7 +123,7 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T3.1 pilot: batch 01 labelled by David in ~9 min via multiple choice. Blind v1.1 score: terrain 90%, intent 56%. Four failure causes → rubric v1.2 + classify-session v0.3 (D25). Batch 01 designated the dev set. 20-run batches agreed (D26).
 
-**Session summary:** 4 → 26 decisions logged. Week 0 gate met; vault has AGENTS.md, a data policy, a running baseline, a rubric, 3 skills (2 with deterministic scripts), success thresholds, a blind-call log and the first golden-dataset batch.
+**Session summary:** D16–D26 logged this session. Week 0 gate met; vault has AGENTS.md, a data policy, a running baseline, a rubric, 3 skills (2 with deterministic scripts), success thresholds, a blind-call log and the first golden-dataset batch.
 
 **Pick up at:** T3.1 batch 02 (Claude prepares 20 held-out runs, blind). T2.6 after Dinant (4 Oct). Open items: LTHR re-test (OQ-6), stale project instructions (action for David).
 

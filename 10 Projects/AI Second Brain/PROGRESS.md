@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | T2.2 — SKILL.md #1 classify-session |
+| **Next action** | David reviews classify-session v0.1 → T2.3 weekly-assessment |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -76,6 +76,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D17 | 29 Sep | **AGENTS.md at the vault root, with a one-line root `CLAUDE.md` (`@AGENTS.md`) importing it.** Agents write notes in English, and stop and ask when unsure | AGENTS.md is the cross-tool standard, which keeps the T9 model decision open; Claude only auto-loads CLAUDE.md, so the stub keeps a single source of truth. English keeps search and evals in one language. Stop-and-ask matches rule 8, read-only mode and the <50% confidence band | The T9 model/tool choice drops AGENTS.md support |
 | D18 | 29 Sep | **Showcase modelling choices:** (1) HR zones are threshold-based (Friel), LTHR 166 derived from race data, provisional; the vault note is the source of truth, not Strava or Apple. (2) Session types have two axes, terrain (road/trail/mountain) × intent, scored separately; terrain comes from shoes plus climbing per km, never from Strava's sport_type. (3) H2 = readiness for the next minor race; no big target race exists. (4) Hikes, walks and rides count as load and aren't classified | Evidence: max HR unconfirmed (175 observed vs 182 age-derived), and race averages cluster at 163–167. Strava's sport_type is mislabelled on at least 2 activities, and climbing per km alone confuses hilly road races with trail. David chose race readiness over a fitness trend | Re-test LTHR with a 30-min effort; at T3.1, test the zone model against the labelled data |
 | D19 | 29 Sep | **Success thresholds approved** for the 3 showcase skills: classify-session (terrain ≥95%, intent ≥85%, <10% unsure) · weekly-assessment (numbers 100% match a deterministic recalculation, verdict ≥90% judge pass, zero made-up numbers, <5% exceptions) · race-readiness (≥80% agreement with David, 100% of <50% confidence cases escalated, 6-week window) | Written before the skills, per the roadmap. Separates what code can check from what needs a judge | Golden dataset shows a threshold is unreachable or trivially easy |
+| D20 | 29 Sep | **Skill conventions:** skills live in `90 System/skills/<name>/SKILL.md`; each outputs structured JSON (one line per item) with confidence, the rule IDs that fired and evidence; skills receive their data rather than fetching it (no API calls inside the eval loop); thresholds live only in the rubric and baseline notes, which skills reference and never copy | Structured output is what makes scoring possible. A pure-function skill can be tested repeatedly. One source of truth for thresholds prevents drift | A skill genuinely needs to fetch its own data |
 
 ---
 
@@ -102,7 +103,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T2.1 approved (D19). Gelbressoise details added (all three distances are "course nature"); distance still undecided.
 
-**Pick up at:** T2.2.
+- T2.2: classify-session v0.1 drafted (D20). Rule IDs (T1–T4, I1–I7) added to the rubric so outputs can cite them. Gelbressoise working assumption: 12 km.
+
+**Pick up at:** David's review of classify-session, then T2.3.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

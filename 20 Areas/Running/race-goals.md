@@ -12,7 +12,7 @@ When no race is within the window, the weekly assessment says so rather than inv
 | Date | Race | Terrain | Distance | Climbing (m) | Goal |
 |---|---|---|---|---|---|
 | 2026-10-04 | Semi-marathon de Dinant (1st edition) | road, along the Meuse, Hastière → Dinant | 21.1 km | not published, likely low (river route) | none set |
-| 2026-11-11 | La Gelbressoise (Gelbressée, Namur) | "course nature" (off-road/mixed) | ⚠️ 5 / 12 / 20 km, undecided | not published | none set |
+| 2026-11-11 | La Gelbressoise (Gelbressée, Namur) | "course nature" (off-road/mixed) | 12 km (working assumption, 29 Sep; 20 km as a controlled long run still an option) | not published | none set |
 | 2026-11-21 | Trail du Beaujolais Nouveau, Haversin (Chevetogne) | trail | 32 km | ~1,100 | none set |
 
 Sources: trainerday.com (Dinant, Haversin), calculitineraires.fr (Dinant route, 21.15 km), gotrail.run and ledossard.com/inscription/index.php?id=3408 (Gelbressoise: 20 km 10:30, 12 km 11:00, 5 km 11:20, all "course nature"). Checked 29 Sep 2026.

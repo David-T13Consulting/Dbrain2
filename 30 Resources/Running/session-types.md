@@ -10,22 +10,22 @@ Two independent axes, scored separately. Only runs (Run, TrailRun) are classifie
 Hikes, walks and rides count toward weekly load and get no type.
 
 ## Axis 1 · Terrain (applied in order; first match wins)
-1. Road shoes (28636543, 21087212) → **road**, whatever the climbing (e.g. 11 Aug 2026: 71 m/km of hill work on road)
-2. Trail shoes (25832441) and ≥50 m climbing per km → **mountain**
-3. Trail shoes → **trail**
-4. No gear recorded: ≥50 m/km → mountain · 15–50 → trail · <15 → road
+1. **[T1]** Road shoes (28636543, 21087212) → **road**, whatever the climbing (e.g. 11 Aug 2026: 71 m/km of hill work on road)
+2. **[T2]** Trail shoes (25832441) and ≥50 m climbing per km → **mountain**
+3. **[T3]** Trail shoes → **trail**
+4. **[T4]** No gear recorded: ≥50 m/km → mountain · 15–50 → trail · <15 → road
 Strava's sport_type is **not** used; it's unreliable (e.g. 8 Nov 2025 Runna long run tagged TrailRun).
 
 ## Axis 2 · Intent (applied in order; first match wins)
-| Intent | Rule |
+| Intent (first match wins) | Rule |
 |---|---|
-| race | Named event (race name in title or description), or a race-effort HR profile. DNFs count |
-| intervals | Work/rest alternation, ≥3 reps, detected from pace/HR in the data (don't rely on manual laps), or reps in a Runna description |
-| hills | **Structured climb repeats:** ≥3 climb/descend cycles on the same or similar climb, HR reaching Z4+ on the climbs and dropping on the descents |
-| tempo | ≥15 min continuous in Z3–Z4 (149–165), not in reps |
-| long | Road ≥75 min · trail/mountain ≥2 h · or labelled "Long Run" by Runna |
-| recovery | ≤45 min and average HR ≤140 (Z1) |
-| easy | Everything else with average HR ≤148 (Z1–Z2) |
+| **[I1]** race | Named event (race name in title or description), or a race-effort HR profile. DNFs count |
+| **[I2]** intervals | Work/rest alternation, ≥3 reps, detected from pace/HR in the data (don't rely on manual laps), or reps in a Runna description |
+| **[I3]** hills | **Structured climb repeats:** ≥3 climb/descend cycles on the same or similar climb, HR reaching Z4+ on the climbs and dropping on the descents |
+| **[I4]** tempo | ≥15 min continuous in Z3–Z4 (149–165), not in reps |
+| **[I5]** long | Road ≥75 min · trail/mountain ≥2 h · or labelled "Long Run" by Runna |
+| **[I6]** recovery | ≤45 min and average HR ≤140 (Z1) |
+| **[I7]** easy | Everything else with average HR ≤148 (Z1–Z2) |
 
 **Hills vs a hilly run** (delegated to Claude, 29 Sep): a continuous run over rolling or hilly ground is **not** "hills".
 It's classified by its effort (easy, long, tempo), and the hilliness is captured by the terrain axis. "Hills" means

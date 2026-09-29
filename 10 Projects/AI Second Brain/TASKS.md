@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T2.2 — Write `SKILL.md` #1: classify-session.** 1.5 h. T0.7 before the next contract is signed.
+> **Review `classify-session` v0.1**, then T2.3 — `SKILL.md` #2: weekly-assessment. T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -63,7 +63,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 ### Week 2 — Skills
 - [x] **T2.1** Write success thresholds for 3 skills — **before** writing the skills `45 min` ✅ **approved 29 Sep** → `02_Architecture/success-thresholds.md` (D19)
   Format: *"handles ≥X% of cases with <Y% exceptions."* Defining "good" is your job, not an engineer's.
-- [ ] **T2.2** Write `SKILL.md` #1 `1.5 h`
+- [x] **T2.2** Write `SKILL.md` #1 `1.5 h` ✅ **29 Sep, v0.1 drafted, pending David's review** → `90 System/skills/classify-session/SKILL.md` (D20)
 - [ ] **T2.3** Write `SKILL.md` #2 `1.5 h`
 - [ ] **T2.4** Write `SKILL.md` #3 `1.5 h`
 

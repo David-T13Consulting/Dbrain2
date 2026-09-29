@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T2.5 — David logs his blind call for Dinant** (ready / borderline / not ready + time guess). Then approve the time threshold → T3.1 golden dataset. T0.7 before the next contract is signed.
+> **T3.1 — Golden dataset v1.** Design first (row sources, labelling workflow for David), then build. T2.6 after Sunday's race. T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -65,8 +65,9 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
   Format: *"handles ≥X% of cases with <Y% exceptions."* Defining "good" is your job, not an engineer's.
 - [x] **T2.2** Write `SKILL.md` #1 `1.5 h` ✅ **29 Sep, v0.2 approved** → `90 System/skills/classify-session/SKILL.md` (D20, D21)
 - [x] **T2.3** Write `SKILL.md` #2 `1.5 h` ✅ **29 Sep, v0.2 approved** (median baseline, D23) → `90 System/skills/weekly-assessment/` (SKILL.md + compute_week.py) + `30 Resources/Running/weekly-flags.md` (D22)
-- [x] **T2.4** Write `SKILL.md` #3 `1.5 h` ✅ **29 Sep, v0.1 drafted and smoke-tested** → `90 System/skills/race-readiness/` + `30 Resources/Running/readiness-rules.md` + `20 Areas/Running/readiness-calls.md` (D24). Time threshold proposed, pending approval.
-- [ ] **T2.5 · Log David's blind call for Dinant (before 4 Oct), then run race-readiness live** `5 min` `David first`
+- [x] **T2.4** Write `SKILL.md` #3 `1.5 h` ✅ **29 Sep, v0.1 drafted and smoke-tested** → `90 System/skills/race-readiness/` + `30 Resources/Running/readiness-rules.md` + `20 Areas/Running/readiness-calls.md` (D24). Time threshold approved.
+- [x] **T2.5 · Log David's blind call for Dinant, then run race-readiness live** ✅ 29 Sep: David borderline / 1:35 → skill borderline (0.60), 1:38:54–1:45:01. Verdict agrees.
+- [ ] **T2.6 · After 4 Oct: add Dinant chip time to `readiness-calls.md`, score the range** `2 min` `David`
 
 ### Week 3 — Golden dataset ⭐
 - [ ] **T3.1** Draft golden dataset v1 — 150 rows `4 h` `⭐ the showcase artifact`

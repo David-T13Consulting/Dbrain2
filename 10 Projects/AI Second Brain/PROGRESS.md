@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | T2.5 — David's blind call for Dinant; approve the time threshold |
+| **Next action** | T3.1 — golden dataset design |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -117,7 +117,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T2.4: race-readiness v0.1 drafted and smoke-tested (D24). Dinant output computed but deliberately **not shown to David** until his blind call is logged.
 
-**Pick up at:** T2.5 (blind call), then T3.1.
+- T2.5: first blind call logged. David borderline / 1:35; skill borderline (0.60) / 1:38:54–1:45:01, so the verdict agrees. Time threshold approved. Known road-elevation limitation logged before the race, not tuned after seeing David's guess.
+
+**Pick up at:** T3.1 golden dataset. T2.6 (Dinant actual time) after 4 Oct.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

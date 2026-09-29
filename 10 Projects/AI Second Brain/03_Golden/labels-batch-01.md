@@ -1,6 +1,6 @@
 ---
 classification: internal
-status: pilot batch, labelled by David 30 Sep 2026 via multiple choice (issued 2026-09-29 09:46)
+status: pilot batch, labelled by David 29 Sep 2026 via multiple choice (issued 2026-09-29 09:46)
 ---
 # Golden dataset: labelling batch 01 (pilot, 10 runs)
 

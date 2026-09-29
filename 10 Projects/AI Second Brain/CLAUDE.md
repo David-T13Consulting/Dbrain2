@@ -59,7 +59,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 | **Reliability contract** | Metric / target / measurement / alert-threshold table for a workflow |
 | **Confidence UX** | 3 bands: >90% full answer · 50–90% softened · <50% withhold + escalate |
 | **HITL** | Human-in-the-loop. Must be a *shrinking queue*, not permanent babysitting |
-| **Showcase workflow** | The ONE task the system will do excellently. **Not yet chosen — task 0.4** |
+| **Showcase workflow** | Strava session classification → weekly assessment → race readiness (D14/D15). Skills in `90 System/skills/` |
 | **Agentic search** | Agent greps/reads files directly. Our retrieval choice. Not vector RAG |
 | **ZDR** | Zero data retention |
 | **S.M.A.R.T. memory** | Scoped · Monitored · Auditable · Retrievable · Timed |

@@ -11,16 +11,16 @@
 | **Phase** | Week 0 — Foundations |
 | **Weeks elapsed** | 0 of 13 |
 | **Target** | Client-ready demo, December 2026 |
-| **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
-| **Blocked on** | Nothing |
-| **Next action** | T3.1 — golden dataset design |
+| **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset started (dev batch done) |
+| **Blocked on** | David's labelling time (5 × 20 min + weeks) |
+| **Next action** | T3.1 batch 02 (20 held-out runs); T2.6 Dinant chip time after 4 Oct |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
 
 ```
-Week 0  Foundations    █████████░  90%   ← T0.1–T0.6 closed; T0.7 (contract clause) open
-H1      Ship           █████░░░░░  50%   (Week 1 + Week 2 skills drafted)
+Week 0  Foundations    █████████░  90%   (T0.7 contract clause: future-only)
+H1      Ship           ██████░░░░  60%   ← you are here (Weeks 1–2 done, Week 3 started)
 H2      Validate       ░░░░░░░░░░   0%
 H3      Collaborate    ░░░░░░░░░░   0%
 ```
@@ -81,6 +81,8 @@ Append-only. Each entry: what, why, and what would change it.
 | D22 | 29 Sep | **weekly-assessment design:** a Python script (`compute_week.py`) computes every number and the model only writes the verdict; load = moving time + distance + climbing + time in each zone (Strava Relative Effort excluded because it can't be recalculated); flags F1 load ±30% vs 4-wk baseline, F2 <75% Z1–Z2, F3 no quality session, F4 no long run, with F3/F4 suppressed in race and post-race weeks. Thresholds sit in the `weekly-flags.md` frontmatter and zones in the baseline table; the script parses both and fails loudly if it can't | Meets the 100% numeric-match threshold by design. "The model doesn't do maths" is a governance point for the demo | T3 labelled weeks show the flag thresholds misfire |
 | D23 | 29 Sep | **Load baseline = median of the previous 4 weeks**, not the mean | Smoke test: the Dents du Midi week (641 min) lifted the 4-week mean to 280 min against a typical week of ~160, so every week after a big race would look like a collapse. The median gives 169. Races still count as load | Labelled weeks at T3 show the median hides real load build-ups |
 | D24 | 29 Sep | **race-readiness design:** 4 criteria computed by `compute_readiness.py`: C1 endurance coverage, C2 terrain specificity (off-road only), C3 recovery (the 1-day-per-mile heuristic on km-effort), C4 recent comparable finished race. A predicted time range (Riegel 1.06 from the C4 reference's chip time, ±3% road / ±8% trail) is withheld when there's no reference. **Blind-call protocol:** David logs his call in `readiness-calls.md` before seeing any output | David picked all 4 criteria, blind logging, and adding time prediction. Blind logging keeps the ≥80% agreement metric uncontaminated. Smoke test: Haversin correctly withholds the time (Dents du Midi at 99 km-effort is outside the 0.5–2× reference window) | C3 heuristic disagrees with David's blind calls systematically |
+| D25 | 29 Sep | **Dev/test split for the golden dataset.** Batch 01 (10 runs) is the dev set, used to tune the rubric, and is excluded from headline scores. Accuracy is claimed only on held-out batches. **Rubric v1.2** from batch 01: climbing ≥50 m/km → mountain whatever the shoes; hills before intervals; tempo before long (reverts D21); Runna's "Long Run" label ignored; recovery also = Z1–Z2 within 14 days after a race | Blind score of v1.1 on batch 01: terrain 90%, intent 56%, both below threshold. D21 was Claude inferring David's definition instead of asking; David labels progression and pace-block runs as tempo. Scoring the same rows used for tuning would overstate accuracy | Held-out batches show v1.2 overfit to batch 01 |
+| D26 | 29 Sep | **Labelling workflow:** multiple choice (terrain, then intent group, then a split question), facts only, no predictions shown; **20-run batches** | Pilot pace ~1 min per run. David asked for choices over free text | Pace drops or fatigue shows in label consistency |
 
 ---
 
@@ -119,7 +121,11 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T2.5: first blind call logged. David borderline / 1:35; skill borderline (0.60) / 1:38:54–1:45:01, so the verdict agrees. Time threshold approved. Known road-elevation limitation logged before the race, not tuned after seeing David's guess.
 
-**Pick up at:** T3.1 golden dataset. T2.6 (Dinant actual time) after 4 Oct.
+- T3.1 pilot: batch 01 labelled by David in ~9 min via multiple choice. Blind v1.1 score: terrain 90%, intent 56%. Four failure causes → rubric v1.2 + classify-session v0.3 (D25). Batch 01 designated the dev set. 20-run batches agreed (D26).
+
+**Session summary:** 4 → 26 decisions logged. Week 0 gate met; vault has AGENTS.md, a data policy, a running baseline, a rubric, 3 skills (2 with deterministic scripts), success thresholds, a blind-call log and the first golden-dataset batch.
+
+**Pick up at:** T3.1 batch 02 (Claude prepares 20 held-out runs, blind). T2.6 after Dinant (4 Oct). Open items: LTHR re-test (OQ-6), stale project instructions (action for David).
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

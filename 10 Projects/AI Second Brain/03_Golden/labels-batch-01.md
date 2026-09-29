@@ -1,6 +1,6 @@
 ---
 classification: internal
-status: pilot batch, labelled by David 29 Sep 2026 via multiple choice (issued 2026-09-29 09:46)
+status: DEV SET (used to tune rubric v1.2, excluded from headline scores, D25). Pilot batch labelled by David 29 Sep 2026 via multiple choice (issued 2026-09-29 09:46)
 ---
 # Golden dataset: labelling batch 01 (pilot, 10 runs)
 
@@ -38,3 +38,6 @@ Excluded on purpose: the 3 activities used as worked examples in classify-sessio
 | 10 | trail · can't tell | trail · unsure | ✅ | abstain ✅ | No HR → I8. Correct abstention, excluded from accuracy |
 
 **Terrain 9/10 = 90%** (threshold ≥95%) · **Intent 5/9 = 56%** (threshold ≥85%) · Unsure 1/10 = 10% (budget <10%).
+
+**Dev re-score after rubric v1.2** (for information only, not a headline score: these rows tuned the rules): terrain 10/10 · intent 9/9 (+1 correct abstention).
+Pace: 10 runs labelled in ~9 min via multiple choice (issued 09:46, done 09:55).

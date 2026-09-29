@@ -22,6 +22,17 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 
 ---
 
+### OQ-6 · Is LTHR really 166?
+**Blocks:** nothing, but zones stay provisional
+**Owner:** David · a 30-min solo all-out effort (LTHR = average HR of the last 20 min). Re-check zones against the golden dataset afterwards.
+
+### OQ-7 · Should the post-race recovery window scale with race size?
+**Affects:** rubric I6b (currently a flat 14 days after any race)
+**Owner:** decide from held-out batches. If short races (10 km) wrongly turn easy runs into "recovery", scale the window by km-effort.
+
+### OQ-8 · Project instructions in claude.ai are stale
+**Owner:** David · they still point to `~/Desktop/AI_SecondBrain_Project/`; the vault has been `~/Documents/Dbrain2/10 Projects/AI Second Brain/` since 8 Sep. Replacement text is at the bottom of the project doc `claude/ai-second-brain-project.md`.
+
 ## 🟢 Nice to know
 
 ### OQ-4 · How much RAM does the MacBook Air have?

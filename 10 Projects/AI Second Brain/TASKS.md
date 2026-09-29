@@ -1,12 +1,12 @@
 # Tasks — AI Second Brain Project
 
-**Updated:** 29 Sep 2026 · **Phase:** Week 0 — Foundations · **Target:** client-ready December 2026
+**Updated:** 29 Sep 2026 (session 4 close) · **Phase:** Week 0 — Foundations · **Target:** client-ready December 2026
 
 ---
 
 ## ▶ Next action
 
-> **T3.1 — Golden dataset v1.** Design first (row sources, labelling workflow for David), then build. T2.6 after Sunday's race. T0.7 before the next contract is signed.
+> **T3.1 batch 02: 20 held-out runs, multiple choice, ~20 min.** Claude prepares the batch (facts only, blind) and scores it with rubric v1.2. **T2.6** after Sunday: add Dinant chip time. T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -71,6 +71,14 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 
 ### Week 3 — Golden dataset ⭐
 - [ ] **T3.1** Draft golden dataset v1 — 150 rows `4 h` `⭐ the showcase artifact`
+  🟡 **In progress (29 Sep):** batch 01 (10 runs) labelled → **dev set**, used to tune rubric v1.2 (D25). Remaining work, all **held-out**:
+  - [ ] Batch 02 · 20 runs (~20 min, multiple choice)
+  - [ ] Batch 03 · 20 runs
+  - [ ] Batch 04 · 20 runs
+  - [ ] Batch 05 · 20 runs
+  - [ ] Batch 06 · 20 runs
+  - [ ] Weeks · ~30 weekly assessments (~1 min each, split into 2 sessions)
+  - [ ] Race times backtest (automatic from results; past readiness verdicts **not** labelled, because of hindsight bias)
   Columns: Input · Expected output · Edge case? · Judge type (rule/LLM). 20–30% edge cases.
 - [ ] **T3.2** Add adversarial rows (≥3) and note coverage gaps `1 h`
 - [ ] **T3.3** Commit as `golden-dataset.md`, versioned like code `15 min`

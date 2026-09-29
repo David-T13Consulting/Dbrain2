@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | David reviews classify-session v0.1 → T2.3 weekly-assessment |
+| **Next action** | T2.3 — weekly-assessment SKILL.md |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -77,6 +77,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D18 | 29 Sep | **Showcase modelling choices:** (1) HR zones are threshold-based (Friel), LTHR 166 derived from race data, provisional; the vault note is the source of truth, not Strava or Apple. (2) Session types have two axes, terrain (road/trail/mountain) × intent, scored separately; terrain comes from shoes plus climbing per km, never from Strava's sport_type. (3) H2 = readiness for the next minor race; no big target race exists. (4) Hikes, walks and rides count as load and aren't classified | Evidence: max HR unconfirmed (175 observed vs 182 age-derived), and race averages cluster at 163–167. Strava's sport_type is mislabelled on at least 2 activities, and climbing per km alone confuses hilly road races with trail. David chose race readiness over a fitness trend | Re-test LTHR with a 30-min effort; at T3.1, test the zone model against the labelled data |
 | D19 | 29 Sep | **Success thresholds approved** for the 3 showcase skills: classify-session (terrain ≥95%, intent ≥85%, <10% unsure) · weekly-assessment (numbers 100% match a deterministic recalculation, verdict ≥90% judge pass, zero made-up numbers, <5% exceptions) · race-readiness (≥80% agreement with David, 100% of <50% confidence cases escalated, 6-week window) | Written before the skills, per the roadmap. Separates what code can check from what needs a judge | Golden dataset shows a threshold is unreachable or trivially easy |
 | D20 | 29 Sep | **Skill conventions:** skills live in `90 System/skills/<name>/SKILL.md`; each outputs structured JSON (one line per item) with confidence, the rule IDs that fired and evidence; skills receive their data rather than fetching it (no API calls inside the eval loop); thresholds live only in the rubric and baseline notes, which skills reference and never copy | Structured output is what makes scoring possible. A pure-function skill can be tested repeatedly. One source of truth for thresholds prevents drift | A skill genuinely needs to fetch its own data |
+| D21 | 29 Sep | **Rubric v1.1:** (1) long is checked before tempo, and tempo blocks inside a long run are noted, not reclassified; (2) new I8 fallback, unsure, when no rule matches; (3) race = named events only, the vague "race-effort HR profile" clause removed. IDs renumbered (I4 long, I5 tempo) while nothing yet cites them | Gaps found while writing the skill: 8 Nov 2025 Runna long run would have been labelled tempo; unstructured hard runs had no rule; the HR-profile race clause couldn't be checked | Golden dataset shows I8 exceeds the 10% exception budget |
 
 ---
 
@@ -105,7 +106,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T2.2: classify-session v0.1 drafted (D20). Rule IDs (T1–T4, I1–I7) added to the rubric so outputs can cite them. Gelbressoise working assumption: 12 km.
 
-**Pick up at:** David's review of classify-session, then T2.3.
+- David applied all 3 review fixes (D21); classify-session v0.2 approved.
+
+**Pick up at:** T2.3.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

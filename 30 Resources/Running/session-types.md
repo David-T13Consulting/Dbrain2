@@ -1,6 +1,6 @@
 ---
 classification: internal
-status: confirmed by David 29 Sep 2026 (v1; thresholds get tested against the golden dataset at T3.1)
+status: confirmed by David 29 Sep 2026 (v1.1: long before tempo, I8 fallback, race = named events only; thresholds get tested against the golden dataset at T3.1)
 updated: 2026-09-29
 ---
 # Session types: classification rubric
@@ -19,13 +19,14 @@ Strava's sport_type is **not** used; it's unreliable (e.g. 8 Nov 2025 Runna long
 ## Axis 2 · Intent (applied in order; first match wins)
 | Intent (first match wins) | Rule |
 |---|---|
-| **[I1]** race | Named event (race name in title or description), or a race-effort HR profile. DNFs count |
+| **[I1]** race | Named event (race name in title or description). DNFs count. Unnamed hard efforts are **not** race |
 | **[I2]** intervals | Work/rest alternation, ≥3 reps, detected from pace/HR in the data (don't rely on manual laps), or reps in a Runna description |
 | **[I3]** hills | **Structured climb repeats:** ≥3 climb/descend cycles on the same or similar climb, HR reaching Z4+ on the climbs and dropping on the descents |
-| **[I4]** tempo | ≥15 min continuous in Z3–Z4 (149–165), not in reps |
-| **[I5]** long | Road ≥75 min · trail/mountain ≥2 h · or labelled "Long Run" by Runna |
+| **[I4]** long | Road ≥75 min · trail/mountain ≥2 h · or labelled "Long Run" by Runna. Tempo blocks inside a long run don't change the intent; note them in the evidence |
+| **[I5]** tempo | ≥15 min continuous in Z3–Z4 (149–165), not in reps, and not qualifying as long |
 | **[I6]** recovery | ≤45 min and average HR ≤140 (Z1) |
-| **[I7]** easy | Everything else with average HR ≤148 (Z1–Z2) |
+| **[I7]** easy | Average HR ≤148 (Z1–Z2), no rule above matched |
+| **[I8]** unsure | Nothing above matched (e.g. unstructured run averaging >148 with <15 min steady). Goes to David and counts toward the 10% exception budget |
 
 **Hills vs a hilly run** (delegated to Claude, 29 Sep): a continuous run over rolling or hilly ground is **not** "hills".
 It's classified by its effort (easy, long, tempo), and the hilliness is captured by the terrain axis. "Hills" means
@@ -39,7 +40,7 @@ whether the reps are timed or distance-based efforts (intervals) or climbs (hill
 - Tuesday trail intervals without manual laps: structure has to be detected from the pace/HR streams.
 - 25 Sep 2026 "9km Long Run": Runna calls it long, but it's 47 min. Plan label vs metrics.
 - 11 Aug 2026 "Evening Run": road shoes, 478 m climbing in 6.8 km. Road × hills?
-- 8 Nov 2025 Runna long run with tempo blocks, trail shoes, 28 m/km. Long or tempo? Trail or road?
+- 8 Nov 2025 Runna long run with tempo blocks, trail shoes, 28 m/km. Intent resolved by v1.1 (I4 long, tempo noted). Terrain: trail by T3, but was it really run on road?
 - 18 Aug 2026 pyramid: HR artifact of 179 during the warm-up.
 - 15 Nov 2025 Yvoir half trail, DNF. Still counts as race.
 - A race run at training effort (e.g. a controlled Gelbressoise 20 km before Haversin): the rule says race, but the effort says long. Decide at T3.1 labelling.

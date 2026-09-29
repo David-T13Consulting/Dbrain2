@@ -1,6 +1,6 @@
 ---
 classification: internal
-status: DRAFT (axes confirmed by David 29 Sep 2026; thresholds proposed by Claude, pending David's confirmation)
+status: confirmed by David 29 Sep 2026 (v1; thresholds get tested against the golden dataset at T3.1)
 updated: 2026-09-29
 ---
 # Session types: classification rubric
@@ -17,17 +17,26 @@ Hikes, walks and rides count toward weekly load and get no type.
 Strava's sport_type is **not** used; it's unreliable (e.g. 8 Nov 2025 Runna long run tagged TrailRun).
 
 ## Axis 2 · Intent (applied in order; first match wins)
-| Intent | Proposed rule | ⚠️ To confirm |
-|---|---|---|
-| race | Named event (race name in title or description), or a race-effort HR profile | Are Tuesday group runs ever "race"? |
-| intervals | Laps alternate work and rest (≥3 reps), or a Runna description with reps | — |
-| hills | Repeated climbs: ≥3 climb/descend cycles, with HR peaking in Z4+ on the climbs | Road hill repeats vs a hilly trail run: where's the line? |
-| tempo | ≥15 min continuous in Z3–Z4 (149–165), not in reps | — |
-| long | Road ≥75 min · trail/mountain ≥2 h · or labelled "Long Run" by Runna | Duration-based, or "longest run of the week"? |
-| recovery | ≤45 min and average HR ≤140 (Z1) | — |
-| easy | Everything else with average HR ≤148 (Z1–Z2) | — |
+| Intent | Rule |
+|---|---|
+| race | Named event (race name in title or description), or a race-effort HR profile. DNFs count |
+| intervals | Work/rest alternation, ≥3 reps, detected from pace/HR in the data (don't rely on manual laps), or reps in a Runna description |
+| hills | **Structured climb repeats:** ≥3 climb/descend cycles on the same or similar climb, HR reaching Z4+ on the climbs and dropping on the descents |
+| tempo | ≥15 min continuous in Z3–Z4 (149–165), not in reps |
+| long | Road ≥75 min · trail/mountain ≥2 h · or labelled "Long Run" by Runna |
+| recovery | ≤45 min and average HR ≤140 (Z1) |
+| easy | Everything else with average HR ≤148 (Z1–Z2) |
+
+**Hills vs a hilly run** (delegated to Claude, 29 Sep): a continuous run over rolling or hilly ground is **not** "hills".
+It's classified by its effort (easy, long, tempo), and the hilliness is captured by the terrain axis. "Hills" means
+deliberate repeats only. That keeps the two axes independent.
+
+**Tuesday-evening trail runs** (David, 29 Sep): usually intervals, sometimes endurance. Expect trail × intervals
+most weeks and trail × easy/long otherwise. Trail intervals on a slope can look like hills; the difference is
+whether the reps are timed or distance-based efforts (intervals) or climbs (hills).
 
 ## Known edge cases (seed rows for T3.1)
+- Tuesday trail intervals without manual laps: structure has to be detected from the pace/HR streams.
 - 25 Sep 2026 "9km Long Run": Runna calls it long, but it's 47 min. Plan label vs metrics.
 - 11 Aug 2026 "Evening Run": road shoes, 478 m climbing in 6.8 km. Road × hills?
 - 8 Nov 2025 Runna long run with tempo blocks, trail shoes, 28 m/km. Long or tempo? Trail or road?

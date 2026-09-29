@@ -13,14 +13,14 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | David confirms session-types thresholds + gives the race list → T1.4 done |
+| **Next action** | T2.1 — success thresholds for 3 skills |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
 
 ```
 Week 0  Foundations    █████████░  90%   ← T0.1–T0.6 closed; T0.7 (contract clause) open
-H1      Ship           ░░░░░░░░░░   0%
+H1      Ship           ███░░░░░░░  25%   (T1.1–T1.5 done)
 H2      Validate       ░░░░░░░░░░   0%
 H3      Collaborate    ░░░░░░░░░░   0%
 ```
@@ -97,7 +97,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T1.4 in progress: 3 notes drafted (athlete-baseline, session-types, race-goals) from David's Strava data and his decisions (D18).
 
-**Pick up at:** David confirms the session-types thresholds and supplies the upcoming races, then T1.4 closes and Week 2 (T2.1 success thresholds) starts.
+- T1.4 closed: David confirmed the long-run rule, delegated the hills definition (structured repeats only), said Tuesday trail runs are usually intervals, and listed 3 races (Dinant half 4 Oct, Gelbressoise 11 Nov, Haversin 32 km 21 Nov). David set his HR zones manually in Strava and on his Apple Watch to match.
+
+**Pick up at:** T2.1.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

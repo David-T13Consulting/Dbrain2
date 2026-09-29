@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T1.4 — finish:** David confirms the session-types thresholds + lists upcoming minor races. T0.7 before the next contract is signed.
+> **T2.1 — Write success thresholds for the 3 showcase skills, before writing the skills.** 45 min. T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -55,8 +55,8 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 - [x] **T1.2** Write `AGENTS.md` for the vault — **by hand**, 20–30 lines `1 h` ✅ **29 Sep, v1 approved by David.** At the vault root, with a root `CLAUDE.md` importing it (D17). Every line passes the test: would the agent get this wrong without being told?
   Auto-generated ones measurably underperform (+23% cost, redundant content).
 - [x] **T1.3** `git init` the vault, first commit `15 min` ✅ done 8 Sep — commit 377e8c2 in Dbrain2
-- [ ] **T1.4** Migrate a *bounded* subset of knowledge — only what the showcase workflow needs `2 h`
-  🟡 **29 Sep, in progress:** `20 Areas/Running/athlete-baseline.md` (confirmed), `30 Resources/Running/session-types.md` (draft, thresholds to confirm), `20 Areas/Running/race-goals.md` (draft, race list needed). See D18.
+- [x] **T1.4** Migrate a *bounded* subset of knowledge — only what the showcase workflow needs `2 h`
+  ✅ **done 29 Sep:** `20 Areas/Running/athlete-baseline.md`, `30 Resources/Running/session-types.md`, `20 Areas/Running/race-goals.md`, all confirmed. Open: Gelbressoise distance. See D18.
   ⚠️ Resist importing everything. That's the collector's fallacy and it costs weeks.
 - [x] **T1.5** Confirm agent is **read-only** at this stage. No MCP servers. `10 min` ✅ confirmed 8 Sep — documented in Dbrain2/90 System/README.md, no write MCP configured
 

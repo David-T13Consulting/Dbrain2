@@ -1,6 +1,6 @@
 # Tasks — AI Second Brain Project
 
-**Updated:** 7 Sep 2026 · **Phase:** Week 0 — Foundations · **Target:** client-ready December 2026
+**Updated:** 29 Sep 2026 · **Phase:** Week 0 — Foundations · **Target:** client-ready December 2026
 
 ---
 
@@ -8,7 +8,7 @@
 
 > **T0.5 — Write `data-policy.md`.** 45 min. T0.4 is locked (below); this is what's left to clear the Week 0 gate.
 
-After that: T0.2 (rotate Zoom passcodes, still open) and T0.6 (check firm's AI policy — needs you, not me).
+After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
 
 ---
@@ -19,9 +19,9 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 
 - [x] **T0.1 · Revoke the Telegram bot token** ✅ done 8 Sep `5 min` `🔴 security`
   Token `8842032811:AAFH…` is in `00_Source_Material/Product_School/Product School - Advanced Agents.pdf` (p.2). Revoke via BotFather → `/mybots` → select → API Token → Revoke.
-- [ ] **T0.2 · Rotate the four Zoom recording passcodes** `10 min` `🔴 security`
+- [x] **T0.2 · Rotate the four Zoom recording passcodes** `10 min` `🔴 security` ✅ **closed 29 Sep — mitigated, not rotated.** Recordings are Product School's, not David's to rotate. Exposure contained: the PDF stays outside the vault, ungit-tracked (rule 7).
   Same PDF. Lower severity than the token but they're recordings of paid course content.
-- [ ] **T0.3 · Run the 30-day audit prompt** `20 min`
+- [x] **T0.3 · Run the 30-day audit prompt** `20 min` ✅ **closed 29 Sep — superseded.** Its only purpose was evidence for T0.4, which was locked 8 Sep from David's actual recent topics.
   In ChatGPT/Claude: *"Look at my last 30 days of conversations. Where am I spending most of my time, and what from that list should be automated?"* Evidence-led input to T0.4. (Source: Advanced Agents, Day 2.)
 - [x] **T0.4 · Choose the showcase workflow** `45 min` `⭐ blocks everything` ✅ **LOCKED 8 Sep** (D14, D15 in PROGRESS.md)
   **"Classify each run's session type (easy / long / tempo / hills / intervals / race / recovery) from raw

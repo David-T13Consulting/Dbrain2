@@ -1,6 +1,6 @@
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 7 Sep 2026 · **Updated by:** Claude (session 2)
+**Last updated:** 29 Sep 2026 · **Updated by:** Claude (session 4)
 
 ---
 
@@ -11,15 +11,15 @@
 | **Phase** | Week 0 — Foundations |
 | **Weeks elapsed** | 0 of 13 |
 | **Target** | Client-ready demo, December 2026 |
-| **Status** | 🟢 Showcase workflow locked, Week 0 gate half-clear (workflow ✅, red lines pending T0.5) |
-| **Blocked on** | Nothing — T0.4 resolved. T0.5 (data-policy.md) is next to clear the Week 0 gate |
-| **Next action** | T0.5 — write `data-policy.md` |
+| **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
+| **Blocked on** | T0.6 needs David (contract scan) |
+| **Next action** | T0.6 — David scans two live contracts for AI/subprocessor clauses; then T1.2 `AGENTS.md` |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
 
 ```
-Week 0  Foundations    ███░░░░░░░  33%   ← you are here (T0.1, T0.4 done; T0.2/3/5/6 open)
+Week 0  Foundations    ████████░░  83%   ← you are here (T0.1–T0.5 closed; T0.6 open)
 H1      Ship           ░░░░░░░░░░   0%
 H2      Validate       ░░░░░░░░░░   0%
 H3      Collaborate    ░░░░░░░░░░   0%
@@ -29,7 +29,7 @@ H3      Collaborate    ░░░░░░░░░░   0%
 
 | Gate | Criteria met | Status |
 |---|---|---|
-| Week 0 | Workflow named · red lines stated | ⬜ Not met |
+| Week 0 | Workflow named · red lines stated | ✅ Met 29 Sep |
 | H1 | 3 skills pass · rollback tested · evals screen-shareable · no client data | ⬜ Not met |
 | H2 | Eval dashboard live · HITL% falling · governance one-pager survives review | ⬜ Not met |
 | H3 | Demo runs twice, no unexplained failures | ⬜ Not met |
@@ -78,6 +78,17 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 4 — 29 Sep 2026 · Claude
+**Did:**
+- Resumed after 3 weeks idle. David: ignore the timeline, work the backlog in sequence.
+- T0.2 closed as mitigated: the Zoom recordings are Product School's, so not David's to rotate. The PDF stays outside the vault.
+- T0.3 closed as superseded: its only purpose was evidence for T0.4, which was already decided.
+- T0.5 done: `02_Architecture/data-policy.md` v0.1. David confirmed three calls: (1) his Strava/HR data is `internal` and may be demoed as-is, with its Art. 9 status stated out loud; (2) third-party data allowed only in minimised form and never demoed; (3) Tower13 material split by counterparty, so own rates and pipeline are internal and anything with counterparty terms is client (excluded). §6 provisional pending T0.6.
+- Week 0 gate met.
+- Housekeeping: git in the device VM can't clean its lock files, so they are removed after each commit.
+
+**Pick up at:** T0.6 (David, contracts), then T1.2 `AGENTS.md`.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

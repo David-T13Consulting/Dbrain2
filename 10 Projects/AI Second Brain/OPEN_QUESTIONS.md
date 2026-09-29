@@ -1,6 +1,6 @@
 # Open Questions
 
-**Updated:** 7 Sep 2026 · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 29 Sep 2026 · Open questions block work. Resolve them or explicitly park them.
 
 ---
 
@@ -11,7 +11,8 @@
 ## 🟡 Needed soon
 
 ### OQ-2 · What does your firm's AI policy actually say?
-**Blocks:** `data-policy.md` (T0.5), governance one-pager (T8)
+**Blocks:** final version of `data-policy.md` §6 (v0.1 done 29 Sep), governance one-pager (T8)
+**Reframed 29 Sep:** David is independent (Tower13), so there's no firm policy above him. The real input is the AI/subprocessor clauses in his live contracts. David reads them himself: under data-policy §5 the contract text must not go to a model API.
 **Owner:** David — I cannot research this
 Also: scan two live client contracts for AI / subprocessor clauses. Constrains the standing rule on client data.
 

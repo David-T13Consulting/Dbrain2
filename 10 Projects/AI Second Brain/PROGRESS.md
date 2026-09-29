@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | T1.4 bounded migration |
+| **Next action** | David confirms session-types thresholds + gives the race list → T1.4 done |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -74,6 +74,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D15 | 8 Sep | **T0.4 locked:** "Classify each run's session type (easy/long/tempo/hills/intervals/race/recovery) from raw Strava data, then roll a week of classified sessions into a coaching assessment — trend, effort adequacy, and race-goal trajectory." No Runna connector exists (checked the MCP registry); Strava's `get_training_plan` tool doesn't return real plan data, only a signup link. Session-type classification from raw metrics is the workaround, and a cleaner golden-dataset task than plan-compliance checking would have been | David wants a weekly assessment coach, not a single-workout checker. Decomposed so the golden dataset still has a checkable core: H1 = classification + trend/effort-adequacy (objective). H2 = goal-trajectory judgment, using the confidence-UX pattern (>90%/50-90%/<50%) rather than forcing a binary call in week 1. Ground truth for T3.1 will come from David labeling his own historical runs — no external plan to check against | If Runna ships a real API/connector later, or if session-type classification proves too noisy without HR/lap data on most runs |
 | D16 | 29 Sep | **Every client contract must state explicitly that David uses a personal AI agent.** Engagements under silent or ambiguous contracts stay fully out of the system, including David's own notes. A disclosure clause permits own notes only; client data stays excluded regardless | David: "assume all contracts must be very clear that I use a personal AI agent." Replaces T0.6: there's no firm policy above Tower13, so David sets the rule. Turns a compliance check into a standard Tower13 clause (T0.7), which is itself a governance-as-GTM signal | A client refuses the clause and the engagement matters more than the system coverage |
 | D17 | 29 Sep | **AGENTS.md at the vault root, with a one-line root `CLAUDE.md` (`@AGENTS.md`) importing it.** Agents write notes in English, and stop and ask when unsure | AGENTS.md is the cross-tool standard, which keeps the T9 model decision open; Claude only auto-loads CLAUDE.md, so the stub keeps a single source of truth. English keeps search and evals in one language. Stop-and-ask matches rule 8, read-only mode and the <50% confidence band | The T9 model/tool choice drops AGENTS.md support |
+| D18 | 29 Sep | **Showcase modelling choices:** (1) HR zones are threshold-based (Friel), LTHR 166 derived from race data, provisional; the vault note is the source of truth, not Strava or Apple. (2) Session types have two axes, terrain (road/trail/mountain) × intent, scored separately; terrain comes from shoes plus climbing per km, never from Strava's sport_type. (3) H2 = readiness for the next minor race; no big target race exists. (4) Hikes, walks and rides count as load and aren't classified | Evidence: max HR unconfirmed (175 observed vs 182 age-derived), and race averages cluster at 163–167. Strava's sport_type is mislabelled on at least 2 activities, and climbing per km alone confuses hilly road races with trail. David chose race readiness over a fitness trend | Re-test LTHR with a 30-min effort; at T3.1, test the zone model against the labelled data |
 
 ---
 
@@ -94,7 +95,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T1.2: AGENTS.md v1 written at the vault root with a CLAUDE.md stub (D17). Approved by David. T0.7 is future-only: no live contracts.
 
-**Pick up at:** T1.4.
+- T1.4 in progress: 3 notes drafted (athlete-baseline, session-types, race-goals) from David's Strava data and his decisions (D18).
+
+**Pick up at:** David confirms the session-types thresholds and supplies the upcoming races, then T1.4 closes and Week 2 (T2.1 success thresholds) starts.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

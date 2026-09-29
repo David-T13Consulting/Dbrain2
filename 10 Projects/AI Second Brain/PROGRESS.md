@@ -13,14 +13,14 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | T2.4 — race-readiness SKILL.md |
+| **Next action** | T2.5 — David's blind call for Dinant; approve the time threshold |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
 
 ```
 Week 0  Foundations    █████████░  90%   ← T0.1–T0.6 closed; T0.7 (contract clause) open
-H1      Ship           ███░░░░░░░  25%   (T1.1–T1.5 done)
+H1      Ship           █████░░░░░  50%   (Week 1 + Week 2 skills drafted)
 H2      Validate       ░░░░░░░░░░   0%
 H3      Collaborate    ░░░░░░░░░░   0%
 ```
@@ -80,6 +80,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D21 | 29 Sep | **Rubric v1.1:** (1) long is checked before tempo, and tempo blocks inside a long run are noted, not reclassified; (2) new I8 fallback, unsure, when no rule matches; (3) race = named events only, the vague "race-effort HR profile" clause removed. IDs renumbered (I4 long, I5 tempo) while nothing yet cites them | Gaps found while writing the skill: 8 Nov 2025 Runna long run would have been labelled tempo; unstructured hard runs had no rule; the HR-profile race clause couldn't be checked | Golden dataset shows I8 exceeds the 10% exception budget |
 | D22 | 29 Sep | **weekly-assessment design:** a Python script (`compute_week.py`) computes every number and the model only writes the verdict; load = moving time + distance + climbing + time in each zone (Strava Relative Effort excluded because it can't be recalculated); flags F1 load ±30% vs 4-wk baseline, F2 <75% Z1–Z2, F3 no quality session, F4 no long run, with F3/F4 suppressed in race and post-race weeks. Thresholds sit in the `weekly-flags.md` frontmatter and zones in the baseline table; the script parses both and fails loudly if it can't | Meets the 100% numeric-match threshold by design. "The model doesn't do maths" is a governance point for the demo | T3 labelled weeks show the flag thresholds misfire |
 | D23 | 29 Sep | **Load baseline = median of the previous 4 weeks**, not the mean | Smoke test: the Dents du Midi week (641 min) lifted the 4-week mean to 280 min against a typical week of ~160, so every week after a big race would look like a collapse. The median gives 169. Races still count as load | Labelled weeks at T3 show the median hides real load build-ups |
+| D24 | 29 Sep | **race-readiness design:** 4 criteria computed by `compute_readiness.py`: C1 endurance coverage, C2 terrain specificity (off-road only), C3 recovery (the 1-day-per-mile heuristic on km-effort), C4 recent comparable finished race. A predicted time range (Riegel 1.06 from the C4 reference's chip time, ±3% road / ±8% trail) is withheld when there's no reference. **Blind-call protocol:** David logs his call in `readiness-calls.md` before seeing any output | David picked all 4 criteria, blind logging, and adding time prediction. Blind logging keeps the ≥80% agreement metric uncontaminated. Smoke test: Haversin correctly withholds the time (Dents du Midi at 99 km-effort is outside the 0.5–2× reference window) | C3 heuristic disagrees with David's blind calls systematically |
 
 ---
 
@@ -114,7 +115,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - Baseline switched to the median (D23); weekly-assessment v0.2 approved.
 
-**Pick up at:** T2.4.
+- T2.4: race-readiness v0.1 drafted and smoke-tested (D24). Dinant output computed but deliberately **not shown to David** until his blind call is logged.
+
+**Pick up at:** T2.5 (blind call), then T3.1.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

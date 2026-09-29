@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T2.1 — Write success thresholds for the 3 showcase skills, before writing the skills.** 45 min. T0.7 before the next contract is signed.
+> **T2.2 — Write `SKILL.md` #1: classify-session.** 1.5 h. T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -61,7 +61,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 - [x] **T1.5** Confirm agent is **read-only** at this stage. No MCP servers. `10 min` ✅ confirmed 8 Sep — documented in Dbrain2/90 System/README.md, no write MCP configured
 
 ### Week 2 — Skills
-- [ ] **T2.1** Write success thresholds for 3 skills — **before** writing the skills `45 min`
+- [x] **T2.1** Write success thresholds for 3 skills — **before** writing the skills `45 min` ✅ **approved 29 Sep** → `02_Architecture/success-thresholds.md` (D19)
   Format: *"handles ≥X% of cases with <Y% exceptions."* Defining "good" is your job, not an engineer's.
 - [ ] **T2.2** Write `SKILL.md` #1 `1.5 h`
 - [ ] **T2.3** Write `SKILL.md` #2 `1.5 h`

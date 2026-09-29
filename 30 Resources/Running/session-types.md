@@ -42,3 +42,4 @@ whether the reps are timed or distance-based efforts (intervals) or climbs (hill
 - 8 Nov 2025 Runna long run with tempo blocks, trail shoes, 28 m/km. Long or tempo? Trail or road?
 - 18 Aug 2026 pyramid: HR artifact of 179 during the warm-up.
 - 15 Nov 2025 Yvoir half trail, DNF. Still counts as race.
+- A race run at training effort (e.g. a controlled Gelbressoise 20 km before Haversin): the rule says race, but the effort says long. Decide at T3.1 labelling.

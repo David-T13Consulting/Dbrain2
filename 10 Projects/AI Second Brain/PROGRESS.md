@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | David reviews weekly-assessment v0.1 → T2.4 race-readiness |
+| **Next action** | T2.4 — race-readiness SKILL.md |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -79,6 +79,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D20 | 29 Sep | **Skill conventions:** skills live in `90 System/skills/<name>/SKILL.md`; each outputs structured JSON (one line per item) with confidence, the rule IDs that fired and evidence; skills receive their data rather than fetching it (no API calls inside the eval loop); thresholds live only in the rubric and baseline notes, which skills reference and never copy | Structured output is what makes scoring possible. A pure-function skill can be tested repeatedly. One source of truth for thresholds prevents drift | A skill genuinely needs to fetch its own data |
 | D21 | 29 Sep | **Rubric v1.1:** (1) long is checked before tempo, and tempo blocks inside a long run are noted, not reclassified; (2) new I8 fallback, unsure, when no rule matches; (3) race = named events only, the vague "race-effort HR profile" clause removed. IDs renumbered (I4 long, I5 tempo) while nothing yet cites them | Gaps found while writing the skill: 8 Nov 2025 Runna long run would have been labelled tempo; unstructured hard runs had no rule; the HR-profile race clause couldn't be checked | Golden dataset shows I8 exceeds the 10% exception budget |
 | D22 | 29 Sep | **weekly-assessment design:** a Python script (`compute_week.py`) computes every number and the model only writes the verdict; load = moving time + distance + climbing + time in each zone (Strava Relative Effort excluded because it can't be recalculated); flags F1 load ±30% vs 4-wk baseline, F2 <75% Z1–Z2, F3 no quality session, F4 no long run, with F3/F4 suppressed in race and post-race weeks. Thresholds sit in the `weekly-flags.md` frontmatter and zones in the baseline table; the script parses both and fails loudly if it can't | Meets the 100% numeric-match threshold by design. "The model doesn't do maths" is a governance point for the demo | T3 labelled weeks show the flag thresholds misfire |
+| D23 | 29 Sep | **Load baseline = median of the previous 4 weeks**, not the mean | Smoke test: the Dents du Midi week (641 min) lifted the 4-week mean to 280 min against a typical week of ~160, so every week after a big race would look like a collapse. The median gives 169. Races still count as load | Labelled weeks at T3 show the median hides real load build-ups |
 
 ---
 
@@ -111,7 +112,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T2.3: weekly-assessment v0.1 + compute_week.py drafted and smoke-tested on real 21–27 Sep summaries (D22). The test exposed the Dents du Midi week (641 min) inflating the 4-week mean baseline.
 
-**Pick up at:** David's review (mean vs median baseline), then T2.4.
+- Baseline switched to the median (D23); weekly-assessment v0.2 approved.
+
+**Pick up at:** T2.4.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

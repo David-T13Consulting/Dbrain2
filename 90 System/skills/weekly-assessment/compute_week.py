@@ -88,7 +88,8 @@ def main():
     for k in range(1, cfg["lookback_weeks"] + 1):
         s0 = ws - timedelta(days=7 * k); s1 = s0 + timedelta(days=6)
         prior.append(sum(a["moving_time_s"] for a in acts if s0 <= local_date(a) <= s1) / 60)
-    prior_avg = round(sum(prior) / len(prior), 1)
+    import statistics
+    prior_avg = round(statistics.median(prior), 1)  # median: one big race week cannot distort the baseline (D23)
     total = mins(week)
     delta_pct = round((total - prior_avg) / prior_avg * 100, 1) if prior_avg else None
 
@@ -125,7 +126,7 @@ def main():
                  "run_distance_km": round(sum(a["distance_m"] for a in runs) / 1000, 1),
                  "run_elevation_m": round(sum(a["elevation_gain_m"] for a in runs)),
                  "runs": len(runs), "other_sessions": len(other)},
-        "trend": {"prior_weeks_moving_min": [round(x, 1) for x in prior], "prior_avg_min": prior_avg, "delta_pct": delta_pct},
+        "trend": {"prior_weeks_moving_min": [round(x, 1) for x in prior], "prior_median_min": prior_avg, "delta_pct": delta_pct},
         "intensity": {"z1_z2_pct": easy_share, "z3_pct": pct(zsum[3]), "z4_z5_pct": pct(zsum[4] + zsum[5]),
                       "hr_coverage_pct": round(covered / run_secs * 100, 1) if run_secs else None, "method_per_run": methods},
         "sessions": [{"id": a["id"], "date": str(local_date(a)), "terrain": a.get("terrain"), "intent": a.get("intent")} for a in runs],

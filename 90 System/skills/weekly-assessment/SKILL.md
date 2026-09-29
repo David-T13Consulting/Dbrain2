@@ -2,7 +2,7 @@
 name: weekly-assessment
 description: Turn one week (Mon–Sun) of classified Strava sessions into a coaching assessment covering load trend, intensity balance, flags and a verdict. Use when David asks how his training week went, or for golden-dataset scoring.
 classification: internal
-version: 0.1
+version: 0.2
 ---
 # weekly-assessment
 
@@ -27,7 +27,7 @@ are included as load only.
 
 ```
 Week <week> · <week_type>
-Load: <total_moving_min> min (<delta_pct>% vs 4-wk avg <prior_avg_min>) · <runs> runs, <run_distance_km> km, <run_elevation_m> m D+ · <other_sessions> other
+Load: <total_moving_min> min (<delta_pct>% vs 4-wk median <prior_median_min>) · <runs> runs, <run_distance_km> km, <run_elevation_m> m D+ · <other_sessions> other
 Intensity: Z1–Z2 <z1_z2_pct>% · Z3 <z3_pct>% · Z4–Z5 <z4_z5_pct>% (HR coverage <hr_coverage_pct>%)
 Sessions: <one line per run: date · terrain × intent>
 Flags: <each fired flag with its value and threshold, or "none">

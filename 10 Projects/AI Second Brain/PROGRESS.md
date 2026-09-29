@@ -97,7 +97,7 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - T1.4 in progress: 3 notes drafted (athlete-baseline, session-types, race-goals) from David's Strava data and his decisions (D18).
 
-- T1.4 closed: David confirmed the long-run rule, delegated the hills definition (structured repeats only), said Tuesday trail runs are usually intervals, and listed 3 races (Dinant half 4 Oct, Gelbressoise 11 Nov, Haversin 32 km 21 Nov). David set his HR zones manually in Strava and on his Apple Watch to match.
+- T1.4 closed: David confirmed the long-run rule, delegated the hills definition (structured repeats only), said Tuesday trail runs are usually intervals, and listed 3 races (Dinant half 4 Oct, Gelbressoise 11 Nov, Haversin 32 km 21 Nov). David is setting his HR zones manually in Strava and on his Apple Watch to match.
 
 **Pick up at:** T2.1.
 

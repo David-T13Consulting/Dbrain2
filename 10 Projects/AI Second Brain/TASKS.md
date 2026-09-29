@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T0.5 — Write `data-policy.md`.** 45 min. T0.4 is locked (below); this is what's left to clear the Week 0 gate.
+> **T0.6 — Check two live client contracts for AI / subprocessor clauses.** 30 min, needs David. Last open Week 0 item; may tighten data-policy §6.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -36,12 +36,12 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
   **Golden-dataset note:** no external plan to check against, so ground truth for T3.1 comes from
   David labeling a batch of his own historical runs by actual session type — flag this as real work
   he'll need to do, not just Claude's.
-- [ ] **T0.5 · Write `data-policy.md`** `45 min`
+- [x] **T0.5 · Write `data-policy.md`** `45 min` ✅ **done 29 Sep** — v0.1 in `02_Architecture/data-policy.md`. §6 (Tower13 commercial) provisional pending T0.6.
   Three tiers (public / internal / client-confidential), red lines, what may never enter the system. Save to `02_Architecture/`.
 - [ ] **T0.6 · Check your firm's AI policy** `30 min`
   The one input I can't research. Also scan two live client contracts for AI/subprocessor clauses. → resolves OQ-2.
 
-**Week 0 gate:** you can state the showcase workflow and your red lines in one sentence each. Showcase workflow ✅ done (T0.4). Red lines — pending T0.5.
+**Week 0 gate:** you can state the showcase workflow and your red lines in one sentence each. Showcase workflow ✅ done (T0.4). Red lines ✅ done (T0.5, 29 Sep).
 
 ---
 

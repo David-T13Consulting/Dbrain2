@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T1.2 — Write `AGENTS.md` for the vault, by hand, 20–30 lines.** 1 h. Parallel: T0.7 (AI-use contract clause).
+> **T1.4 — Migrate a bounded subset of knowledge: only what the Strava showcase needs.** 2 h. (T1.2 v1 is written and awaiting David's review.) T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -40,7 +40,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
   Three tiers (public / internal / client-confidential), red lines, what may never enter the system. Save to `02_Architecture/`.
 - [x] **T0.6 · Check your firm's AI policy** `30 min` ✅ **closed 29 Sep — replaced by a rule (D16).** There's no firm policy above Tower13. David set the rule instead: every contract must state his AI agent use explicitly, and engagements without that stay out of the system entirely. data-policy.md → v0.2.
 - [ ] **T0.7 · Add an AI-use disclosure clause to the Tower13 contract template, and to live contracts at renewal** `1 h` `needs David + lawyer review`
-  Until it's in a contract, that engagement stays out of the system. Claude can draft; a Belgian lawyer should check it.
+  David has no live contracts (29 Sep), so this only applies going forward: the clause goes in the template before the next engagement is signed. Claude can draft; a Belgian lawyer should check it.
 
 **Week 0 gate:** you can state the showcase workflow and your red lines in one sentence each. Showcase workflow ✅ done (T0.4). Red lines ✅ done (T0.5, 29 Sep).
 
@@ -52,7 +52,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 
 ### Week 1 — Vault
 - [x] **T1.1** Create vault skeleton: `00 Inbox / 10 Projects / 20 Areas / 30 Resources / 40 Archive / 90 System` `30 min` ✅ done 8 Sep — built inside `~/Documents/Dbrain2` (the Obsidian vault), not this folder. See D11 in PROGRESS.md.
-- [ ] **T1.2** Write `AGENTS.md` for the vault — **by hand**, 20–30 lines `1 h`
+- [x] **T1.2** Write `AGENTS.md` for the vault — **by hand**, 20–30 lines `1 h` ✅ **29 Sep, v1 pending David's line-by-line review.** At the vault root, with a root `CLAUDE.md` importing it (D17). Every line passes the test: would the agent get this wrong without being told?
   Auto-generated ones measurably underperform (+23% cost, redundant content).
 - [x] **T1.3** `git init` the vault, first commit `15 min` ✅ done 8 Sep — commit 377e8c2 in Dbrain2
 - [ ] **T1.4** Migrate a *bounded* subset of knowledge — only what the showcase workflow needs `2 h`

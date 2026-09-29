@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 gate met (workflow ✅ T0.4, red lines ✅ T0.5). T0.6 open as a refinement |
 | **Blocked on** | Nothing |
-| **Next action** | T1.2 — `AGENTS.md` (parallel: T0.7 contract clause) |
+| **Next action** | David reviews AGENTS.md; then T1.4 bounded migration |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -73,6 +73,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D14 | 8 Sep | **Showcase workflow direction: fitness / running / trail running**, not a consulting-domain task | Ran evidence-led T0.4 properly this time — asked what David actually turned to notes/AI for in the last few weeks, rather than inferring from his job title. Of 8 real topics (parenting, home reno, fitness, supplements, personal finance, San Diego relocation, Tower 13 contract search, Phinest/KPMG conversations), running is the only one with real structured data behind it already (Strava-connected) and a genuinely checkable right answer (actual vs. planned pace/zone/distance). Phinest/KPMG contract review was the runner-up — more on-theme for the client pitch, but needs synthetic data and is a harder build. Exact task shape (the specific input→output transformation) still to be locked | If the exact task shape doesn't clear the checkability bar once specified |
 | D15 | 8 Sep | **T0.4 locked:** "Classify each run's session type (easy/long/tempo/hills/intervals/race/recovery) from raw Strava data, then roll a week of classified sessions into a coaching assessment — trend, effort adequacy, and race-goal trajectory." No Runna connector exists (checked the MCP registry); Strava's `get_training_plan` tool doesn't return real plan data, only a signup link. Session-type classification from raw metrics is the workaround, and a cleaner golden-dataset task than plan-compliance checking would have been | David wants a weekly assessment coach, not a single-workout checker. Decomposed so the golden dataset still has a checkable core: H1 = classification + trend/effort-adequacy (objective). H2 = goal-trajectory judgment, using the confidence-UX pattern (>90%/50-90%/<50%) rather than forcing a binary call in week 1. Ground truth for T3.1 will come from David labeling his own historical runs — no external plan to check against | If Runna ships a real API/connector later, or if session-type classification proves too noisy without HR/lap data on most runs |
 | D16 | 29 Sep | **Every client contract must state explicitly that David uses a personal AI agent.** Engagements under silent or ambiguous contracts stay fully out of the system, including David's own notes. A disclosure clause permits own notes only; client data stays excluded regardless | David: "assume all contracts must be very clear that I use a personal AI agent." Replaces T0.6: there's no firm policy above Tower13, so David sets the rule. Turns a compliance check into a standard Tower13 clause (T0.7), which is itself a governance-as-GTM signal | A client refuses the clause and the engagement matters more than the system coverage |
+| D17 | 29 Sep | **AGENTS.md at the vault root, with a one-line root `CLAUDE.md` (`@AGENTS.md`) importing it.** Agents write notes in English, and stop and ask when unsure | AGENTS.md is the cross-tool standard, which keeps the T9 model decision open; Claude only auto-loads CLAUDE.md, so the stub keeps a single source of truth. English keeps search and evals in one language. Stop-and-ask matches rule 8, read-only mode and the <50% confidence band | The T9 model/tool choice drops AGENTS.md support |
 
 ---
 
@@ -91,7 +92,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - D16: contracts must state AI agent use explicitly; T0.6 closed, T0.7 added; data-policy → v0.2.
 
-**Pick up at:** T1.2 `AGENTS.md`; T0.7 in parallel.
+- T1.2: AGENTS.md v1 written at the vault root with a CLAUDE.md stub (D17). Waiting on David's line-by-line review. T0.7 is future-only: no live contracts.
+
+**Pick up at:** David's review of AGENTS.md, then T1.4.
 
 ### Session 3 — 8 Sep 2026 · Claude
 **Did:**

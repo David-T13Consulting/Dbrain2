@@ -10,7 +10,7 @@ PARA structure:
 - `20 Areas` — ongoing responsibilities, no end state.
 - `30 Resources` — reference material, topic-based.
 - `40 Archive` — inactive projects/areas, kept for record.
-- `90 System` — notes about the system itself (this file, templates, later: AGENTS.md).
+- `90 System` — notes about the system itself (this file, templates). The agent-facing rules live in `/AGENTS.md` at the vault root, with `/CLAUDE.md` importing them..
 
 ## Rules
 - Every note carries `classification: public | internal | client` in frontmatter. No exceptions, from note one.
@@ -26,7 +26,7 @@ PARA structure:
 
 ## Capture
 Messages starting `capture:` land in `00 Inbox/` as dated markdown, untouched until weekly triage.
-Full protocol: see `CAPTURE.md` in the AI_SecondBrain_Project folder (project tracking lives there, not here).
+Full protocol: `10 Projects/AI Second Brain/CAPTURE.md`.
 
 ## Provenance
 Vault skeleton created 8 Sep 2026, session 3. Project tracking (roadmap, tasks, decision log) moved

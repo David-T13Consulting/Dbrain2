@@ -2,7 +2,7 @@
 name: classify-session
 description: Classify one Strava activity by terrain (road/trail/mountain), intent (race/hills/intervals/long/tempo/recovery/easy) and two flags (tempo_block, vertical). Use when a single activity needs a session type, for the weekly assessment or golden-dataset scoring.
 classification: internal
-version: 0.4
+version: 0.5
 ---
 # classify-session
 
@@ -25,8 +25,9 @@ Plus `recent_races`: date and distance of races in the 14 days before the activi
 1. **Is it a run?** Apply Axis 0. If not → `terrain: null, intent: "load-only"`, flags null. Stop.
 2. **Terrain.** Apply T1→T4 in order; first match wins. Climbing (T1) beats shoes. Unknown gear = no gear. Never use `sport_type` for terrain.
 3. **Flags.** Compute `tempo_block` and `vertical` per the rubric. `vertical` is `null` without an altitude stream.
-   Tempo block effort: pace on flat road, HR (Z4+) on trail, mountain or sustained climbs, or a Runna race-pace description.
-4. **Intent.** Apply I1→I8 in order; first match wins. Long (I4) comes before tempo (I5). Recovery (I6) only inside the post-race window.
+   `tempo_block` (broad): ≥15 min continuous, not in reps, at Z3+ HR on any terrain, or at/faster than marathon pace on flat road, or Runna race-pace blocks.
+   The **strict** test for intent I5 is narrower: marathon pace or faster on flat road, Z4+ off-road or on sustained climbs, or Runna blocks.
+4. **Intent.** Apply I1→I8 in order; first match wins. Long (I4, distance over 15 km; km-effort on mountain terrain) comes before tempo (I5). A long run with tempo work is `long` + `tempo_block`. Recovery (I6) only inside the post-race window.
 5. **Confidence** (0–1) reflects how cleanly the rule fired:
    - Clean match on complete data → ≥0.9
    - A rule matched but a close competitor exists (listed edge case, borderline threshold) → 0.5–0.9
@@ -49,6 +50,6 @@ Flags are `null` where the example had no streams.
 - 13 Sep 2026 "Morning Run", description "Jogging de Namur", road shoes, 9.9 km, avg HR 167:
   `{"terrain":"road","intent":"race","tempo_block":null,"vertical":null,"confidence":0.95,"rules":["T2","I1"],"evidence":"Named event (Jogging de Namur) in description; road shoes; avg HR 167, Z5."}`
 - 19 Sep 2026 "Dents du Midi 2026", trail shoes, 60.6 km, 3,866 m climbing (64 m/km):
-  `{"terrain":"mountain","intent":"race","tempo_block":null,"vertical":true,"confidence":0.95,"rules":["T1","I1"],"evidence":"Named event; trail shoes; 64 m climbing/km ≥50."}`
+  `{"terrain":"mountain","intent":"race","tempo_block":null,"vertical":true,"confidence":0.95,"rules":["T1","I1"],"evidence":"Named event; trail shoes; run above 1,000 m (Champéry, Switzerland)."}`
 - 18 Aug 2026 "Pyramid Set", road shoes, Runna description with 9 reps, max HR 179 in warm-up:
   `{"terrain":"road","intent":"intervals","tempo_block":false,"vertical":false,"confidence":0.9,"rules":["T2","I3"],"evidence":"Runna description lists 9 reps with walking rest; laps alternate. Warm-up HR 179 is an artifact, ignored."}`

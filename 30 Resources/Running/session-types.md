@@ -1,6 +1,6 @@
 ---
 classification: internal
-status: v1.3 drafted 30 Sep 2026 from David's decisions D27–D32 (tuned on dev batches 01 + 02). Tested only on held-out batches, from batch 03
+status: v1.4 drafted 30 Sep 2026 from David's decisions D27–D40 (tuned on dev batches 01–03). Tested only on held-out batches, from batch 04
 updated: 2026-09-30
 ---
 # Session types: classification rubric
@@ -10,7 +10,7 @@ The rubric the golden dataset (T3.1) is labelled against.
 Each run gets **two axes and two flags**, scored separately:
 - **Terrain** (the surface): road | trail | mountain
 - **Intent** (the main label): race | hills | intervals | long | tempo | recovery | easy | unsure
-- **`tempo_block`** flag: the run contains race-pace work, whatever its main label (D28)
+- **`tempo_block`** flag: the run contains ≥15 min of sustained tempo effort, whatever its main label (D28, D36). A run can be long **and** tempo: that's `long` + `tempo_block` (D40)
 - **`vertical`** flag: the run contains steep climbing work, whatever its terrain (D31)
 
 ## Axis 0 · Is it a run? (D30)
@@ -20,10 +20,10 @@ Only runs are classified. Hikes, walks and rides count toward weekly load and ge
 - Pace slower than 10:00/km **and** average HR in Z1 **and** climbing <50 m/km → load-only (the climbing condition keeps slow mountain runs in, e.g. Tignes 17 Jul 2026 at 10:15/km)
 
 ## Axis 1 · Terrain = the surface (applied in order; first match wins)
-1. **[T1]** ≥50 m climbing per km → **mountain**, whatever the shoes
+1. **[T1]** Run mostly above **~1,000 m altitude** and not in road shoes → **mountain** (D35). Climbing rate alone never makes a run mountain (Profondeville hill repeats at 121 m/km are trail)
 2. **[T2]** Road shoes → **road**
 3. **[T3]** Trail shoes → **trail**
-4. **[T4]** No gear, or gear not in the shoe list (D30): 15–50 m/km → trail · <15 → road
+4. **[T4]** No gear, or gear not in the shoe list (D30): ≥25 m/km → trail · <25 → road (D39)
 Strava's sport_type is **not** used for terrain; it's unreliable.
 Namur Tiennes and Citadelle repeats are **not** mountain terrain: they're road or trail with the `vertical` flag (D31).
 
@@ -31,20 +31,20 @@ Namur Tiennes and Citadelle repeats are **not** mountain terrain: they're road o
 | Intent | Rule |
 |---|---|
 | **[I1]** race | Named event (race name in title or description). DNFs count. Unnamed hard efforts are **not** race |
-| **[I2]** hills | **Structured climb repeats:** ≥3 climb/descend cycles on the same or similar climb, HR reaching Z4+ on the climbs and dropping on the descents. Checked before intervals |
+| **[I2]** hills | **Structured climb work**, either: (a) ≥3 climb/descend cycles on the same or similar climb, HR reaching Z4+ on the climbs and dropping on the descents; or (b) ≥3 work reps done uphill, the work parts averaging ≥5% grade, however many sets (D37). Checked before intervals. Laps of a loop inside a long run are not hills |
 | **[I3]** intervals | Work/rest alternation, ≥3 reps, detected from pace/HR in the data (don't rely on manual laps), or reps in a Runna description |
-| **[I4]** long | Road ≥75 min · trail/mountain ≥2 h. **Duration wins over tempo** (D28): a long run with race-pace work is `long` + `tempo_block`. Runna's "Long Run" label is ignored |
-| **[I5]** tempo | Not long, and a **tempo block** exists (definition below) |
+| **[I4]** long | **Distance over 15 km** on road or trail; on mountain terrain, km-effort (km + climbing ÷ 100) over 15 (D40). A long run with tempo work is `long` + `tempo_block`, never a choice between the two. Runna's "Long Run" label is ignored |
+| **[I5]** tempo | Not long, and a **strict** tempo block: ≥15 min continuous at or faster than marathon pace on flat road, or in Z4+ on trail, mountain or a sustained climb, or Runna race-pace blocks (D29, D32, D36). The broader flag alone doesn't make a run tempo |
 | **[I6]** recovery | Average HR in Z1–Z3 **and** within the post-race window: 7 days after a race up to 21 km, 14 days after a marathon, ultra or mountain race (D27). Needs recent race dates as context. Never used outside that window |
 | **[I7]** easy | Average HR in Z1–Z3, no rule above matched |
 | **[I8]** unsure | Nothing above matched, or no HR on trail/mountain where it's needed. Goes to David and counts toward the 10% exception budget |
 
-## Flag · `tempo_block` (D28, D29, D32)
-**≥15 min continuous at race effort, not in reps** (reps with rest are intervals). Race effort means:
-- **Flat road:** pace at or faster than the **marathon pace** in the baseline row in effect on the run's date (Strava prediction, updated monthly). Strict, no tolerance: David's easy runs sit only 10–15 s/km slower
-- **Trail, mountain, or a sustained climb** (where pace means nothing): HR in Z4 or above
-- **Or** a Runna description that prescribes race-pace blocks (e.g. 8 Nov 2025: 6 km @4:50, 2 km @4:25, 4 km @4:50)
-Set on any run. On a non-long run it makes the main intent `tempo`.
+## Flag · `tempo_block` (D28, D36)
+**≥15 min continuous at tempo effort or harder, not in reps** (reps with rest are intervals or hills). Tempo effort means either:
+- HR in **Z3 or above**, on any terrain, including on climbs, **or**
+- on flat road, pace at or faster than the **marathon pace** in the baseline row in effect on the run's date, **or**
+- a Runna description that prescribes race-pace blocks (e.g. 8 Nov 2025: 6 km @4:50, 2 km @4:25, 4 km @4:50)
+Set on any run, including easy and long ones (e.g. batch 03 #19: easy + tempo_block). The flag is broader than the strict test in I5 on purpose: it records tempo work, it doesn't decide the session type.
 
 ## Flag · `vertical` (D31)
 Steep climbing work, the "mountain simulation" David does on Namur Tiennes and the Citadelle:
@@ -68,5 +68,6 @@ Needs the altitude stream; without it the flag is `null`, not `false`. Threshold
 - A race run at training effort (e.g. a controlled Gelbressoise 20 km before Haversin): the rule says race, but the effort says long. Decide at labelling.
 
 ## Version history
+- **v1.4** (30 Sep 2026): mountain = altitude (D35); unknown-gear cut-off 25 m/km (D39); long = over 15 km, km-effort in the mountains, long + tempo allowed (D40); flag vs strict tempo split (D36); uphill reps = hills (D37). From batch 03, where v1.3 scored held-out terrain 90%, intent 75% (after one relabel), tempo_block 70%, vertical 80%.
 - **v1.3** (30 Sep 2026): recovery post-race only (D27); two labels, duration-first + `tempo_block` (D28); tempo = target race pace on flat, HR Z4 off-road (D29, D32); hikes excluded, unknown gear = no gear (D30); terrain = surface + `vertical` flag (D31); easy ceiling raised from top of Z2 to top of Z3. Athlete values moved out of the rubric into dated baseline tables. From batch 02, where v1.2 scored 85% / 50% held-out.
 - **v1.2** (29 Sep 2026): tuned on batch 01 (D25).

@@ -22,15 +22,6 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 
 ---
 
-### OQ-10 · Rubric v1.4: questions from held-out batch 03
-**Blocks:** rubric v1.4 and batch 04 · **Owner:** David. Evidence in `03_Golden/labels-batch-03.md`.
-- **G1** ✅ altitude (D35)
-- **G2** ⏳ David: "75 m". Checked 30 Sep: 75 m/km would turn batch 03 #8 (35 m/km) and #11 (27 m/km), both labelled trail, into road. Put back to David
-- **G3** ✅ option 2 (D36)
-- **G4** ✅ yes (D37)
-- **G5** ⏳ David: "over 15 km is long". Checked 30 Sep against his labels: the 7 May 2026 run itself is 16.0 km (labelled tempo), and Tignes 17 Jul 2026 is 12.1 km (labelled long). Put back to David
-- **G6** ✅ misclick → relabelled long (D38)
-
 ### OQ-6 · Is LTHR really 166?
 **Blocks:** nothing directly, but batch 02 (cause B) suggests it matters: 20 km de Bruxelles averaged 163 for 96 min
 **Owner:** David · a 30-min solo all-out effort (LTHR = average HR of the last 20 min). Re-check zones against the golden dataset afterwards.
@@ -55,6 +46,7 @@ My recommendation is against local inference for a live demo regardless — the 
 
 | # | Question | Answer | Date |
 |---|---|---|---|
+| R10 | (was OQ-10) Rubric v1.4 questions from batch 03 | G1 altitude mountain (D35) · G2 25 m/km (D39) · G3 broad flag / strict tempo (D36) · G4 uphill reps = hills (D37) · G5 long = over 15 km, long + tempo allowed (D40) · G6 misclick relabel (D38) | 30 Sep |
 | R9 | (was OQ-9) Rubric v1.3 questions from batch 02 | A recovery post-race only (D27) · B two labels + race-pace tempo (D28, D29), HR off-road (D32) · C `vertical` flag (D31) · D unknown gear = no gear · E hikes aren't runs (D30) | 30 Sep |
 | R8 | (was OQ-2) What does the firm's AI policy say? | No firm above Tower13. David's rule (D16): every contract must state his AI agent use explicitly, or the engagement stays out. Follow-up is T0.7 | 29 Sep |
 | R7 | (was OQ-1) What is the showcase workflow? | **"Classify each run's session type from raw Strava data, roll a week into a coaching assessment — trend, effort adequacy, race-goal trajectory."** H1 = classification + trend/effort (checkable core). H2 = goal-trajectory judgment with confidence bands. Ground truth for the golden dataset comes from David labeling his own historical runs | 8 Sep |

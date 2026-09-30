@@ -1,6 +1,6 @@
 # Open Questions
 
-**Updated:** 29 Sep 2026 · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 30 Sep 2026 · Open questions block work. Resolve them or explicitly park them.
 
 ---
 
@@ -22,8 +22,17 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 
 ---
 
+### OQ-9 · Rubric v1.3: five questions from held-out batch 02
+**Blocks:** rubric v1.3 and batch 03 · **Owner:** David (~10 min)
+Detail and evidence in `03_Golden/labels-batch-02.md` → "Failure causes".
+- **A** Is "recovery" only a post-race thing for you? (0 of 8 easy runs labelled recovery)
+- **B** Is tempo about a planned block rather than HR? Your long runs sit at HR 150–155 = Z3; also ties to OQ-6 (LTHR may be too low)
+- **C** Mountain = steep climbs (your answer). What threshold: max grade over a climb, or specific named climbs?
+- **D** Which shoes are gear 21432884 and 21432902?
+- **E** OK to treat "Hike" in the name, or very slow pace on low HR, as not a run?
+
 ### OQ-6 · Is LTHR really 166?
-**Blocks:** nothing, but zones stay provisional
+**Blocks:** nothing directly, but batch 02 (cause B) suggests it matters: 20 km de Bruxelles averaged 163 for 96 min
 **Owner:** David · a 30-min solo all-out effort (LTHR = average HR of the last 20 min). Re-check zones against the golden dataset afterwards.
 
 ### OQ-7 · Should the post-race recovery window scale with race size?

@@ -1,6 +1,6 @@
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 29 Sep 2026 · **Updated by:** Claude (session 4)
+**Last updated:** 30 Sep 2026 · **Updated by:** Claude (session 5)
 
 ---
 
@@ -11,9 +11,9 @@
 | **Phase** | Week 0 — Foundations |
 | **Weeks elapsed** | 0 of 13 |
 | **Target** | Client-ready demo, December 2026 |
-| **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset started (dev batch done) |
+| **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset 30/150 labelled; first held-out score in (v1.2: 85% / 50%) |
 | **Blocked on** | David's labelling time (5 × 20 min + weeks) |
-| **Next action** | T3.1 batch 02 (20 held-out runs); T2.6 Dinant chip time after 4 Oct |
+| **Next action** | David answers rubric questions A–E (OQ-9) → rubric v1.3 → batch 03; T2.6 Dinant chip time after 4 Oct |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -89,6 +89,16 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 5 — 30 Sep 2026 · Claude
+**Did:**
+- David asked whether the golden dataset could be skipped or handed to another LLM. Answer: it's on the critical path (H1 gate, T4.1, T5, T9 all read from it), and LLM-written labels would score model-vs-model agreement, not correctness. David chose to label the full batch himself.
+- Fixed a reproducible held-out sampling order: 133 eligible runs (Jan 2025 – 29 Sep 2026, minus dev batch, worked examples, kid runs), seeded shuffle (20260930) → `03_Golden/heldout-order.md`. Batches 02–06 = rows 1–100, 101–133 spare.
+- T3.1 batch 02: 20 held-out runs, facts only, labelled by David via multiple choice (terrain, intent group, split) → `03_Golden/labels-batch-02.md`.
+- Blind score of rubric v1.2 on batch 02: **terrain 17/20 (85%), intent 10/20 (50%)**, 0 unsure. Dev re-score had been 100%/100%: v1.2 overfit to batch 01, exactly the D25 revisit condition. The dev/test split paid for itself on first use.
+- Five failure causes logged as hypotheses (A recovery too eager, B tempo firing on long/easy runs — possibly LTHR set too low, C mountain = steep climbs per David, D unlisted gear, E hike logged as run). Not tuned: needs David's answers first (OQ-9).
+
+**Pick up at:** David answers OQ-9 A–E → Claude drafts rubric v1.3 + classify-session v0.4 → batch 03 (rows 21–40 of heldout-order) scores v1.3. T2.6 after 4 Oct.
 
 ### Session 4 — 29 Sep 2026 · Claude
 **Did:**

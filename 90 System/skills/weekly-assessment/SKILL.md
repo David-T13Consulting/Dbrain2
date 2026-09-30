@@ -12,7 +12,7 @@ threshold of 100% of numbers matching a deterministic recalculation.
 
 ## Sources of truth
 - Flag rules and thresholds: `30 Resources/Running/weekly-flags.md` (the script reads the frontmatter)
-- Zones: `20 Areas/Running/athlete-baseline.md` (the script reads the table)
+- Zones: `20 Areas/Running/athlete-baseline.md` (the script reads the dated zone table and uses the row in effect for the week; no bpm values live in this skill)
 - Session intents: output of the `classify-session` skill
 
 ## Input

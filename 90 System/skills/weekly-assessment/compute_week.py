@@ -18,18 +18,24 @@ def vault_root(argv):
         return argv[argv.index("--vault") + 1]
     return os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 
-def read_zones(vault):
+def read_zones(vault, on_date):
+    """Zone upper bounds (Z1..Z4) in effect on on_date, from the dated table in athlete-baseline.md.
+    Returns (uppers, effective_from, assumed) where assumed=True if on_date predates every row."""
     p = os.path.join(vault, "20 Areas/Running/athlete-baseline.md")
     txt = open(p, encoding="utf-8").read()
-    uppers = []
-    for z in ("Z1", "Z2", "Z3", "Z4"):
-        m = re.search(rf"^\|\s*{z}\b[^|]*\|\s*[≤<]?\s*(\d+)(?:\s*[–-]\s*(\d+))?\s*\|", txt, re.M)
-        if not m:
-            sys.exit(f"ERROR: cannot parse {z} from athlete-baseline.md")
-        uppers.append(int(m.group(2) or m.group(1)))
-    if uppers != sorted(uppers):
-        sys.exit("ERROR: zone bounds not increasing")
-    return uppers  # upper bound of Z1..Z4; Z5 is above
+    rows = []
+    for m in re.finditer(r"^\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|", txt, re.M):
+        eff = date.fromisoformat(m.group(1))
+        uppers = [int(m.group(i)) for i in (3, 4, 5, 6)]
+        if uppers != sorted(uppers):
+            sys.exit(f"ERROR: zone bounds not increasing in row {eff}")
+        rows.append((eff, uppers))
+    if not rows:
+        sys.exit("ERROR: cannot parse the dated zone table in athlete-baseline.md")
+    rows.sort()
+    valid = [r for r in rows if r[0] <= on_date]
+    eff, uppers = valid[-1] if valid else rows[0]
+    return uppers, str(eff), not valid
 
 def read_flags(vault):
     p = os.path.join(vault, "30 Resources/Running/weekly-flags.md")
@@ -71,8 +77,9 @@ def main():
     argv = sys.argv[1:]
     data = json.load(open(argv[0], encoding="utf-8"))
     vault = vault_root(argv)
-    uppers, cfg = read_zones(vault), read_flags(vault)
+    cfg = read_flags(vault)
     ws = date.fromisoformat(data["week_start"])
+    uppers, zones_from, zones_assumed = read_zones(vault, ws)
     if ws.weekday() != 0:
         sys.exit("ERROR: week_start must be a Monday")
     we = ws + timedelta(days=6)
@@ -132,7 +139,7 @@ def main():
         "sessions": [{"id": a["id"], "date": str(local_date(a)), "terrain": a.get("terrain"), "intent": a.get("intent")} for a in runs],
         "unclassified_or_unsure": [a["id"] for a in runs if a.get("intent") in (None, "unsure")],
         "flags": flags,
-        "zone_upper_bounds_used": uppers, "flag_config_used": cfg,
+        "zone_upper_bounds_used": uppers, "zones_effective_from": zones_from, "zones_assumed": zones_assumed, "flag_config_used": cfg,
     }
     print(json.dumps(out, ensure_ascii=False, indent=1))
 

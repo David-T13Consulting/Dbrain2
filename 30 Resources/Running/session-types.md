@@ -5,7 +5,8 @@ updated: 2026-09-30
 ---
 # Session types: classification rubric
 
-The rubric the golden dataset (T3.1) is labelled against. Zones and target paces: [[athlete-baseline]].
+The rubric the golden dataset (T3.1) is labelled against.
+**No athlete values live here.** Heart-rate zones and target race paces are in the dated tables in [[athlete-baseline]]; each run is judged with the values in effect on its date. When fitness changes, update the baseline, not this rubric.
 Each run gets **two axes and two flags**, scored separately:
 - **Terrain** (the surface): road | trail | mountain
 - **Intent** (the main label): race | hills | intervals | long | tempo | recovery | easy | unsure
@@ -16,7 +17,7 @@ Each run gets **two axes and two flags**, scored separately:
 Only runs are classified. Hikes, walks and rides count toward weekly load and get `load-only`.
 - `sport_type` isn't Run or TrailRun → load-only
 - Name says it's a hike or walk ("Hike", "Walk", "Randonnée", "Marche") → load-only, whatever the sport_type (e.g. 21 Jul 2026 "Morning Hike" logged as TrailRun)
-- Pace slower than 10:00/km **and** average HR ≤140 **and** climbing <50 m/km → load-only (the climbing condition keeps slow mountain runs in, e.g. Tignes 17 Jul 2026 at 10:15/km)
+- Pace slower than 10:00/km **and** average HR in Z1 **and** climbing <50 m/km → load-only (the climbing condition keeps slow mountain runs in, e.g. Tignes 17 Jul 2026 at 10:15/km)
 
 ## Axis 1 · Terrain = the surface (applied in order; first match wins)
 1. **[T1]** ≥50 m climbing per km → **mountain**, whatever the shoes
@@ -34,14 +35,14 @@ Namur Tiennes and Citadelle repeats are **not** mountain terrain: they're road o
 | **[I3]** intervals | Work/rest alternation, ≥3 reps, detected from pace/HR in the data (don't rely on manual laps), or reps in a Runna description |
 | **[I4]** long | Road ≥75 min · trail/mountain ≥2 h. **Duration wins over tempo** (D28): a long run with race-pace work is `long` + `tempo_block`. Runna's "Long Run" label is ignored |
 | **[I5]** tempo | Not long, and a **tempo block** exists (definition below) |
-| **[I6]** recovery | Average HR ≤156 (Z1–Z3) **and** within the post-race window: 7 days after a race up to 21 km, 14 days after a marathon, ultra or mountain race (D27). Needs recent race dates as context. Never used outside that window |
-| **[I7]** easy | Average HR ≤156 (Z1–Z3), no rule above matched |
+| **[I6]** recovery | Average HR in Z1–Z3 **and** within the post-race window: 7 days after a race up to 21 km, 14 days after a marathon, ultra or mountain race (D27). Needs recent race dates as context. Never used outside that window |
+| **[I7]** easy | Average HR in Z1–Z3, no rule above matched |
 | **[I8]** unsure | Nothing above matched, or no HR on trail/mountain where it's needed. Goes to David and counts toward the 10% exception budget |
 
 ## Flag · `tempo_block` (D28, D29, D32)
 **≥15 min continuous at race effort, not in reps** (reps with rest are intervals). Race effort means:
-- **Flat road:** pace ≤5:10/km (David's target marathon pace or faster; half ~4:40, 5–10 km a little faster). Strict: David's easy runs sit at 5:15–5:20
-- **Trail, mountain, or a sustained climb** (where pace means nothing): HR ≥157 (Z4+)
+- **Flat road:** pace at or faster than the **marathon target** in effect on the run's date. Strict, no tolerance: David's easy runs sit only 5–10 s/km slower than the current target
+- **Trail, mountain, or a sustained climb** (where pace means nothing): HR in Z4 or above
 - **Or** a Runna description that prescribes race-pace blocks (e.g. 8 Nov 2025: 6 km @4:50, 2 km @4:25, 4 km @4:50)
 Set on any run. On a non-long run it makes the main intent `tempo`.
 
@@ -67,5 +68,5 @@ Needs the altitude stream; without it the flag is `null`, not `false`. Threshold
 - A race run at training effort (e.g. a controlled Gelbressoise 20 km before Haversin): the rule says race, but the effort says long. Decide at labelling.
 
 ## Version history
-- **v1.3** (30 Sep 2026): recovery post-race only (D27); two labels, duration-first + `tempo_block` (D28); tempo = target race pace on flat, HR Z4 off-road (D29, D32); hikes excluded, unknown gear = no gear (D30); terrain = surface + `vertical` flag (D31); easy ceiling raised from 148 to 156. From batch 02, where v1.2 scored 85% / 50% held-out.
+- **v1.3** (30 Sep 2026): recovery post-race only (D27); two labels, duration-first + `tempo_block` (D28); tempo = target race pace on flat, HR Z4 off-road (D29, D32); hikes excluded, unknown gear = no gear (D30); terrain = surface + `vertical` flag (D31); easy ceiling raised from top of Z2 to top of Z3. Athlete values moved out of the rubric into dated baseline tables. From batch 02, where v1.2 scored 85% / 50% held-out.
 - **v1.2** (29 Sep 2026): tuned on batch 01 (D25).

@@ -13,6 +13,7 @@ reference notes below. Calls no API and writes no file.
 - Rubric and rule IDs: `30 Resources/Running/session-types.md`
 - Zones, target race paces and shoe list: `20 Areas/Running/athlete-baseline.md`
 If either is missing or unreadable, stop and say so. Don't fall back to generic running knowledge.
+Use the zone row and target-pace row **in effect on the activity's date** (`effective_from` ≤ date; if the date predates every row, use the earliest row and lower confidence to ≤0.9). Never use a bpm or pace value from memory or from this file.
 
 ## Input
 One activity object with: `id, name, description, sport_type, start_local, gear_id, distance_m,

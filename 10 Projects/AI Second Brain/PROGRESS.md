@@ -89,6 +89,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D30 | 30 Sep | **Hikes are not runs** (count toward load, no session type). **Unknown gear = no gear** (T4) | David, OQ-9 D and E | — |
 | D31 | 30 Sep | **Terrain = surface; `vertical` flag for steep climbing work.** Terrain: road / trail, mountain only for real mountains (T1 ≥50 m/km kept). `vertical` = one sustained climb ≥15%, or ≥2 climbs ≥8%. Terrain relabel for 3 batch 02 rows (#16, #18, #19: mountain → surface + flag) | David: Tiennes and Citadelle repeats "simulate mountain runs" (a purpose, not a surface). Max gradient alone didn't reproduce his labels (Grospierres ~14% = trail; Citadelle loop ~10% = mountain). Feeds race-readiness C2 (Haversin ~1,100 m) | Flag thresholds misfire on held-out batches; altitude noise near 8% |
 | D32 | 30 Sep | **Off-road tempo = HR.** On trail, mountain or sustained climbs, a tempo block is ≥15 min at HR ≥157 (Z4+), or Runna race-pace blocks. Flat road keeps race pace (D29) | David chose it after the test: on the 4 labelled off-road easy/tempo runs, average pace (raw or climb-adjusted) got 3/4 with 1–3 s margins; HR got 4/4 | LTHR re-test (OQ-6) moves Z4 |
+| D33 | 30 Sep | **No athlete values hardcoded.** HR zones and target race paces live only in dated tables in `athlete-baseline.md` (`effective_from`; add a row on change, never edit old rows). Rubric and skills refer to zones by name and read the row in effect on the run's date; `compute_week.py` does the same and reports `zones_effective_from` / `zones_assumed` | David: values will change as he improves. Dating them keeps historical golden-dataset rows judged by the zones that applied then | — |
 
 ---
 
@@ -107,6 +108,8 @@ Newest first. One entry per working session — what happened, what changed, whe
 - David answered OQ-9 → D27–D32. Two of his answers were tested against his own labels before being written as rules: "maximum gradient" for mountain (didn't reproduce his labels → `vertical` flag instead, D31) and "average pace" for off-road tempo (3/4 vs HR 4/4 → HR, D32).
 - Rubric **v1.3** (`30 Resources/Running/session-types.md`) and **classify-session v0.4** written; target race paces added to athlete-baseline. Batch 02 is now dev (D25 protocol). v1.2's held-out score stays 85% / 50%.
 - Dev re-score of v1.3, main intent, done by hand: batch 02 20/20, batch 01 8/9 (the 23 Aug progression run is long + tempo_block, David said tempo). Tuned rows, so this proves consistency, not accuracy.
+
+- D33: removed hardcoded HR/pace values from rubric v1.3 and skill v0.4 at David's request; baseline zones and paces now dated; compute_week.py made date-aware and tested (2026 week → current row; Dec 2024 week → earliest row, flagged as assumed).
 
 **Pick up at:** batch 03 = rows 21–40 of `heldout-order.md`, blind. Labelling now also asks the two flags for every run (not only where the rule might fire, which would hide false negatives). Expect ~25–30 min. Flags on the dev rows are not labelled; the terrain of 3 batch 02 rows (#16, #18, #19) is superseded by D31 and left as history. T2.6 after 4 Oct.
 

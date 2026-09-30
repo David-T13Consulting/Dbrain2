@@ -13,7 +13,7 @@
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset 30/150 labelled; first held-out score in (v1.2: 85% / 50%) |
 | **Blocked on** | David's labelling time (5 × 20 min + weeks) |
-| **Next action** | T3.1 batch 03 (rows 21–40 of heldout-order) scores rubric v1.3 blind, now with 2 flags; T2.6 Dinant chip time after 4 Oct |
+| **Next action** | David answers OQ-10 (G1–G6) → rubric v1.4 → batch 04 (rows 41–60); T2.6 Dinant chip time after 4 Oct |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Phase progress
@@ -112,7 +112,9 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - D33: removed hardcoded HR/pace values from rubric v1.3 and skill v0.4 at David's request; baseline zones and paces now dated; compute_week.py made date-aware and tested (2026 week → current row; Dec 2024 week → earliest row, flagged as assumed).
 
-**Pick up at:** batch 03 = rows 21–40 of `heldout-order.md`, blind. Labelling now also asks the two flags for every run (not only where the rule might fire, which would hide false negatives). Expect ~25–30 min. Flags on the dev rows are not labelled; the terrain of 3 batch 02 rows (#16, #18, #19) is superseded by D31 and left as history. T2.6 after 4 Oct.
+- T3.1 batch 03 labelled (one run per screen after David objected to two runs sharing a question). v1.3 held-out: terrain 90%, intent 70% (up from 50%), tempo_block 70%, vertical 80%. Six causes G1–G6 logged in `labels-batch-03.md`; questions to David as OQ-10.
+
+**Pick up at (superseded):** batch 03 = rows 21–40 of `heldout-order.md`, blind. Labelling now also asks the two flags for every run (not only where the rule might fire, which would hide false negatives). Expect ~25–30 min. Flags on the dev rows are not labelled; the terrain of 3 batch 02 rows (#16, #18, #19) is superseded by D31 and left as history. T2.6 after 4 Oct.
 
 ### Session 4 — 29 Sep 2026 · Claude
 **Did:**

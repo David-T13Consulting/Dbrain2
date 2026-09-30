@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **T3.1 batch 03: 20 held-out runs (rows 21–40 of `03_Golden/heldout-order.md`), ~25–30 min, now with the two flags.** First held-out score of rubric v1.3. **T2.6** after Sunday: add Dinant chip time. T0.7 before the next contract is signed.
+> **Answer batch 03 questions G1–G6 (OQ-10), then rubric v1.4 → batch 04 (rows 41–60).** v1.3 held-out: terrain 90%, intent 70%, tempo_block 70%, vertical 80%. **T2.6** after Sunday: Dinant chip time. T0.7 before the next contract.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -74,7 +74,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
   🟡 **In progress (29 Sep):** batch 01 (10 runs) labelled → **dev set**, used to tune rubric v1.2 (D25). Remaining work, all **held-out**:
   - [x] Batch 02 · 20 runs ✅ 30 Sep. First held-out score of v1.2: terrain 17/20 (85%), intent 10/20 (50%). Sampling order fixed in `03_Golden/heldout-order.md` (seed 20260930)
   - [x] Rubric v1.3 + classify-session v0.4 ✅ 30 Sep (D27–D32). Batch 02 is now dev
-  - [ ] Batch 03 · 20 runs (scores v1.3; labels now include `tempo_block` and `vertical`)
+  - [x] Batch 03 · 20 runs ✅ 30 Sep. v1.3 held-out: terrain 18/20, intent 14/20, tempo_block 14/20, vertical 16/20
   - [ ] Batch 04 · 20 runs
   - [ ] Batch 05 · 20 runs
   - [ ] Batch 06 · 20 runs

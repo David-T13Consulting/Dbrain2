@@ -11,7 +11,7 @@
 | **Phase** | Week 0 — Foundations |
 | **Weeks elapsed** | 0 of 13 |
 | **Target** | Client-ready demo, December 2026 |
-| **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset 30/150 labelled; first held-out score in (v1.2: 85% / 50%) |
+| **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset 50/150 runs labelled (all dev now); rubric v1.4 awaiting its held-out test (batch 04) |
 | **Blocked on** | David's labelling time (5 × 20 min + weeks) |
 | **Next action** | T3.1 batch 04 (rows 41–60) scores rubric v1.4 blind; T2.6 Dinant chip time after 4 Oct |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
@@ -105,6 +105,7 @@ Append-only. Each entry: what, why, and what would change it.
 Newest first. One entry per working session — what happened, what changed, where to pick up.
 
 ### Session 5 — 30 Sep 2026 · Claude
+**Summary:** held-out scores v1.2 → v1.3: intent 50% → 75%, terrain 85% → 90%. D27–D40 logged. Rubric v1.4, classify-session v0.5, dated baseline (zones + Strava pace predictions), monthly pace-check scheduled task (1st of month, 08:52). Session closed by David (tired).
 **Did:**
 - David asked whether the golden dataset could be skipped or handed to another LLM. Answer: it's on the critical path (H1 gate, T4.1, T5, T9 all read from it), and LLM-written labels would score model-vs-model agreement, not correctness. David chose to label the full batch himself.
 - Fixed a reproducible held-out sampling order: 133 eligible runs (Jan 2025 – 29 Sep 2026, minus dev batch, worked examples, kid runs), seeded shuffle (20260930) → `03_Golden/heldout-order.md`. Batches 02–06 = rows 1–100, 101–133 spare.

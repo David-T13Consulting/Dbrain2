@@ -1,7 +1,7 @@
 ---
 classification: internal
 status: confirmed by David 29 Sep 2026 (zone model); values provisional where marked
-updated: 2026-09-29
+updated: 2026-09-30
 ---
 # Athlete baseline
 
@@ -29,6 +29,14 @@ Contains my own special-category (heart rate) data; see data-policy §4.
 | min/km | >5:50 | 5:50–5:01 | 5:01–4:31 | 4:31–4:13 | 4:13–3:58 | <3:58 |
 
 Pace isn't used for intent on trail or mountain terrain. Use HR there.
+
+## Target race paces (David, 30 Sep 2026): what "tempo" means on flat road
+| Distance | Target pace |
+|---|---|
+| Marathon | ~5:10/km |
+| Half marathon | ~4:40/km |
+| 5–10 km | a little faster than 4:40 |
+A tempo block on flat road = ≥15 min at ≤5:10/km ([[session-types]], D29). Revisit when targets change.
 
 ## Shoes (terrain signal)
 | Strava gear id | Type |

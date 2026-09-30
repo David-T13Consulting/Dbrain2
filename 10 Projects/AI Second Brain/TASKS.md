@@ -6,7 +6,7 @@
 
 ## ▶ Next action
 
-> **Decide rubric v1.3 (~10 min, David):** answer the 5 questions in `03_Golden/labels-batch-02.md` (failure causes A–E, also OQ-9). Batch 02 held-out score for v1.2: terrain 85%, intent 50%. Then Claude drafts v1.3 and batch 03 scores it. **T2.6** after Sunday: add Dinant chip time. T0.7 before the next contract is signed.
+> **T3.1 batch 03: 20 held-out runs (rows 21–40 of `03_Golden/heldout-order.md`), ~25–30 min, now with the two flags.** First held-out score of rubric v1.3. **T2.6** after Sunday: add Dinant chip time. T0.7 before the next contract is signed.
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
@@ -73,8 +73,8 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 - [ ] **T3.1** Draft golden dataset v1 — 150 rows `4 h` `⭐ the showcase artifact`
   🟡 **In progress (29 Sep):** batch 01 (10 runs) labelled → **dev set**, used to tune rubric v1.2 (D25). Remaining work, all **held-out**:
   - [x] Batch 02 · 20 runs ✅ 30 Sep. First held-out score of v1.2: terrain 17/20 (85%), intent 10/20 (50%). Sampling order fixed in `03_Golden/heldout-order.md` (seed 20260930)
-  - [ ] Rubric v1.3 from batch 02 failure causes (needs David's answers first; batch 02 then becomes dev)
-  - [ ] Batch 03 · 20 runs
+  - [x] Rubric v1.3 + classify-session v0.4 ✅ 30 Sep (D27–D32). Batch 02 is now dev
+  - [ ] Batch 03 · 20 runs (scores v1.3; labels now include `tempo_block` and `vertical`)
   - [ ] Batch 04 · 20 runs
   - [ ] Batch 05 · 20 runs
   - [ ] Batch 06 · 20 runs

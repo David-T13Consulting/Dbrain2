@@ -22,15 +22,6 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 
 ---
 
-### OQ-9 · Rubric v1.3: five questions from held-out batch 02
-**Blocks:** rubric v1.3 and batch 03 · **Owner:** David (~10 min)
-Detail and evidence in `03_Golden/labels-batch-02.md` → "Failure causes".
-- **A** Is "recovery" only a post-race thing for you? (0 of 8 easy runs labelled recovery)
-- **B** Is tempo about a planned block rather than HR? Your long runs sit at HR 150–155 = Z3; also ties to OQ-6 (LTHR may be too low)
-- **C** Mountain = steep climbs (your answer). What threshold: max grade over a climb, or specific named climbs?
-- **D** Which shoes are gear 21432884 and 21432902?
-- **E** OK to treat "Hike" in the name, or very slow pace on low HR, as not a run?
-
 ### OQ-6 · Is LTHR really 166?
 **Blocks:** nothing directly, but batch 02 (cause B) suggests it matters: 20 km de Bruxelles averaged 163 for 96 min
 **Owner:** David · a 30-min solo all-out effort (LTHR = average HR of the last 20 min). Re-check zones against the golden dataset afterwards.
@@ -55,6 +46,7 @@ My recommendation is against local inference for a live demo regardless — the 
 
 | # | Question | Answer | Date |
 |---|---|---|---|
+| R9 | (was OQ-9) Rubric v1.3 questions from batch 02 | A recovery post-race only (D27) · B two labels + race-pace tempo (D28, D29), HR off-road (D32) · C `vertical` flag (D31) · D unknown gear = no gear · E hikes aren't runs (D30) | 30 Sep |
 | R8 | (was OQ-2) What does the firm's AI policy say? | No firm above Tower13. David's rule (D16): every contract must state his AI agent use explicitly, or the engagement stays out. Follow-up is T0.7 | 29 Sep |
 | R7 | (was OQ-1) What is the showcase workflow? | **"Classify each run's session type from raw Strava data, roll a week into a coaching assessment — trend, effort adequacy, race-goal trajectory."** H1 = classification + trend/effort (checkable core). H2 = goal-trajectory judgment with confidence bands. Ground truth for the golden dataset comes from David labeling his own historical runs | 8 Sep |
 | R1 | Showcase format? | Live system I drive, screen-shared | 7 Sep |

@@ -32,13 +32,16 @@ Checked 30 Sep 2026: Strava can't supply history. Its zones before David's manua
 
 Pace isn't used for intent on trail or mountain terrain. Use HR there.
 
-## Target race paces, by date: what "race effort" means on flat road
+## Race paces, by date: what "race effort" means on flat road
 Same rule as zones: each run uses the row in effect on its date; add a row when targets change.
 A tempo block on flat road = ≥15 min at or faster than the **marathon** target ([[session-types]], D29).
 
-| effective_from | marathon | half | 5–10 km | source |
-|---|---|---|---|---|
-| 2025-01-01 | 5:10/km | 4:40/km | a little faster than half | David, 30 Sep 2026. Assumed to hold back to Jan 2025 |
+| effective_from | marathon | half | 10 km | 5 km | source |
+|---|---|---|---|---|---|
+| 2025-01-01 | 5:10/km | 4:40/km | – | – | David's own targets, stated 30 Sep 2026. Assumed to hold back to Jan 2025 |
+| 2026-09-30 | 5:06/km | 4:34/km | 4:16/km | 4:03/km | Strava Performance Predictions (Progress tab), read by David 30 Sep 2026 |
+
+**Updated monthly** from Strava Performance Predictions: a scheduled check asks David on the 1st of each month (D34). Predictions track current fitness; add a row only when a value changes.
 
 ## Shoes (terrain signal)
 | Strava gear id | Type |

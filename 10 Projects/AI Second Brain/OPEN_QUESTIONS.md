@@ -33,6 +33,12 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 ### OQ-8 · Project instructions in claude.ai are stale
 **Owner:** David · they still point to `~/Desktop/AI_SecondBrain_Project/`; the vault has been `~/Documents/Dbrain2/10 Projects/AI Second Brain/` since 8 Sep. Replacement text is at the bottom of the project doc `claude/ai-second-brain-project.md`.
 
+### OQ-11 · Second domain: family logistics inputs (parked)
+**Blocks:** nothing until the H1 gate · **Owner:** David. Context: `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`
+- Where does each source live (commune trash calendar, school menus, kids' activity schedules: site, portal, email)?
+- Who else would use it (second user for week 10)?
+- David's rule on children's data (proposal: minimised, first names/initials only, never demoed; synthetic family for demos)
+
 ## 🟢 Nice to know
 
 ### OQ-4 · How much RAM does the MacBook Air have?

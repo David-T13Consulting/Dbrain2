@@ -123,6 +123,8 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 - OQ-10 answered → D35–D40; rubric **v1.4** and classify-session **v0.5** written. Batch 03 is now dev.
 
+- Scope question: David asked when to add domains (family logistics, energy, vacations, knowledge digest). Captured to the inbox (unprocessed), one gated backlog line, OQ-11 parked. Nothing built (rule 8, depth over breadth).
+
 **Pick up at:** batch 04 = rows 41–60 of `heldout-order.md`, one run per screen, intent split with a "Long with tempo" answer. T2.6 after 4 Oct.
 
 **Pick up at (superseded):** batch 03 = rows 21–40 of `heldout-order.md`, blind. Labelling now also asks the two flags for every run (not only where the rule might fire, which would hide false negatives). Expect ~25–30 min. Flags on the dev rows are not labelled; the terrain of 3 batch 02 rows (#16, #18, #19) is superseded by D31 and left as history. T2.6 after 4 Oct.

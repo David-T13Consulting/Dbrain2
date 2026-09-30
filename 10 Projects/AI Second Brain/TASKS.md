@@ -125,6 +125,8 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 
 ## Backlog / someday
 
+- [ ] **Second domain: choose after the H1 gate** (see `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`). Proposed: family logistics, then knowledge digest. Parked questions: OQ-11
+
 - [ ] Migrate Apple Notes → markdown (export route; no API exists)
 - [ ] Retrieve the 4 Product School capstone tools from the LMS (Strategy Assembler, AI Bet Evaluator, Roadmap Builder, Pitch Builder)
 - [ ] Decide relationship between this project and the Vibe Coding app+deck deliverable → OQ-5

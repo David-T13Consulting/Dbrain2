@@ -17,6 +17,8 @@ Model: Z1 <85% · Z2 85–89% · Z3 90–94% · Z4 95–99% · Z5 ≥100% of LTH
 |---|---|---|---|---|---|---|
 | 2025-01-01 | 166 | 140 | 148 | 156 | 165 | Race averages 2026 (see below). No earlier value known, so it's applied back to Jan 2025 as an assumption |
 
+Checked 30 Sep 2026: Strava can't supply history. Its zones before David's manual setting (29 Sep 2026) were `MaxHeartRateFromAge` (age formula, Z4 166–179), and its run pace zones come from a single 1:40 half with no dated history.
+
 - **Where LTHR 166 comes from:** race averages. Jogging de Namur 10k (13 Sep 2026): 46 min, avg 167. 20km de Bruxelles (May 2026): 96 min, avg 163. 5 mile TT (Jan 2026): 38 min, avg 164.
 - **To do:** re-test with a 30-minute solo all-out effort (LTHR = average of the last 20 min). Re-check against the golden dataset at T3.1.
 - **Resting HR:** 49 (Apple Watch, Sep 2026).

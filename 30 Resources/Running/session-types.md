@@ -41,7 +41,7 @@ Namur Tiennes and Citadelle repeats are **not** mountain terrain: they're road o
 
 ## Flag · `tempo_block` (D28, D29, D32)
 **≥15 min continuous at race effort, not in reps** (reps with rest are intervals). Race effort means:
-- **Flat road:** pace at or faster than the **marathon target** in effect on the run's date. Strict, no tolerance: David's easy runs sit only 5–10 s/km slower than the current target
+- **Flat road:** pace at or faster than the **marathon pace** in the baseline row in effect on the run's date (Strava prediction, updated monthly). Strict, no tolerance: David's easy runs sit only 10–15 s/km slower
 - **Trail, mountain, or a sustained climb** (where pace means nothing): HR in Z4 or above
 - **Or** a Runna description that prescribes race-pace blocks (e.g. 8 Nov 2025: 6 km @4:50, 2 km @4:25, 4 km @4:50)
 Set on any run. On a non-long run it makes the main intent `tempo`.

@@ -12,7 +12,7 @@ Climb figures: gain / horizontal distance of named Strava segments (approximate)
 
 | # | Strava id | Date | Name | Shoes | km | Moving | Climb m (m/km) | Avg HR | Structure seen in data | Context | Terrain | Intent | tempo_block | vertical | Note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | 16853059708 | Sat 27 Dec 2025 | Morning Run | road | 21.1 | 1:50:23 | 74 (4) | 152 | Laps 5.0 km @5:10 · 3.0 @5:13 · 3.0 @5:02 · 5.0 @5:17 · 3.0 @5:16 · 2.1 @5:25; HR 149–154 throughout. One 32 m climb at 9% | – | road | intervals | yes | no | |
+| 1 | 16853059708 | Sat 27 Dec 2025 | Morning Run | road | 21.1 | 1:50:23 | 74 (4) | 152 | Laps 5.0 km @5:10 · 3.0 @5:13 · 3.0 @5:02 · 5.0 @5:17 · 3.0 @5:16 · 2.1 @5:25; HR 149–154 throughout. One 32 m climb at 9% | – | road | long | yes | no | Relabelled 30 Sep: was intervals, David "most likely misclick" (D38) |
 | 2 | 15278687605 | Tue 29 Jul 2025 | Evening Run (Profondeville) | trail | 7.5 | 1:35:37 | 908 (121) | 157 | Repeated climbs: Montée Rivière ×3 (84 m, 26%), Rivage Sart ×4 (92 m, 24%), TSY1 ×4 (124 m, 23%), Couleuvrine ×3 (143 m, 27%), Piwi's Up ×4 (129 m, 21%). HR 156–167 up, 140–150 down | – | trail | hills | no | yes | |
 | 3 | 13563521926 | Tue 4 Feb 2025 | Evening Run (Jambes track) | road | 13.1 | 1:09:38 | 75 (6) | 148 | 4.6 km @5:42 (HR 135) · 0.83 @4:33 · 0.41 @4:01 · 1.03 @4:10 · 0.62 @4:08 · 0.41 @4:03 · 1.01 @4:14 (HR 158–165), ~200 m easy between · 3.1 km @5:57 | – | road | intervals | no | no | |
 | 4 | 17592917374 | Tue 3 Mar 2026 | Evening Run | road | 13.0 | 1:07:16 | 6 (0) | 152 | 2.5 km @5:29 (HR 138) · then 3.8 km continuous @4:42–4:59 (~18 min, HR 156–162) · 6.7 km @5:16 (HR 153) | – | road | tempo | yes | no | |
@@ -41,7 +41,7 @@ Applied by Claude as written, after all labels were locked. Values from the base
 
 | # | David | v1.3 | Terrain | Intent | tempo_block (D / v1.3) | vertical (D / v1.3) | Why v1.3 missed |
 |---|---|---|---|---|---|---|---|
-| 1 | road · intervals | road · long | ✅ | ❌ | yes / yes ✅ | no / no ✅ | No work/rest alternation in the laps (5:02–5:25); 110 min road → long |
+| 1 | road · ~~intervals~~ long (D38) | road · long | ✅ | ❌ → ✅ after relabel | yes / yes ✅ | no / no ✅ | No work/rest alternation in the laps (5:02–5:25); 110 min road → long |
 | 2 | trail · hills | **mountain** · hills | ❌ | ✅ | no / no ✅ | yes / yes ✅ | T1: 121 m/km ≥50 → mountain. David: trail (Profondeville is not a real mountain) |
 | 3 | road · intervals | road · intervals | ✅ | ✅ | no / no ✅ | no / no ✅ | |
 | 4 | road · tempo | road · tempo | ✅ | ✅ | yes / yes ✅ | no / no ✅ | |
@@ -64,6 +64,7 @@ Applied by Claude as written, after all labels were locked. Values from the base
 
 **Terrain 18/20 = 90%** (≥95%) · **Intent 14/20 = 70%** (≥85%) · **tempo_block 14/20 = 70%** · **vertical 16/20 = 80%** · Unsure 0.
 Intent up from 50% (v1.2 on batch 02) to 70% on fresh data. Still below threshold.
+**After the #1 ground-truth correction (D38): intent 15/20 = 75%.** Both figures are kept; the corrected one is the headline, with the correction disclosed.
 
 ### Failure causes (hypotheses, for David)
 | Cause | Rows | What the data suggests |

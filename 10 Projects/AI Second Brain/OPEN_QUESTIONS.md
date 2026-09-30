@@ -24,12 +24,12 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 
 ### OQ-10 · Rubric v1.4: questions from held-out batch 03
 **Blocks:** rubric v1.4 and batch 04 · **Owner:** David. Evidence in `03_Golden/labels-batch-03.md`.
-- **G1** Mountain = altitude (e.g. above ~1,000 m) rather than climbing per km?
-- **G2** Unknown shoes: raise the road/trail cut-off from 15 to ~25 m/km?
-- **G3** What is a "tempo block" to you: race pace only, any sustained effort at tempo HR, or any quality work including reps and hard climbs?
-- **G4** Reps done on a climb = hills, even with few sets or time-based reps?
-- **G5** 7 May 2026 (38 min @5:01 in 87 min) = tempo, but 8 Mar 2026 (88 min @5:10 in 163 min) = long. What made the difference?
-- **G6** 27 Dec 2025 (21 km, laps 5:02–5:25) labelled intervals: what was the structure?
+- **G1** ✅ altitude (D35)
+- **G2** ⏳ David: "75 m". Checked 30 Sep: 75 m/km would turn batch 03 #8 (35 m/km) and #11 (27 m/km), both labelled trail, into road. Put back to David
+- **G3** ✅ option 2 (D36)
+- **G4** ✅ yes (D37)
+- **G5** ⏳ David: "over 15 km is long". Checked 30 Sep against his labels: the 7 May 2026 run itself is 16.0 km (labelled tempo), and Tignes 17 Jul 2026 is 12.1 km (labelled long). Put back to David
+- **G6** ✅ misclick → relabelled long (D38)
 
 ### OQ-6 · Is LTHR really 166?
 **Blocks:** nothing directly, but batch 02 (cause B) suggests it matters: 20 km de Bruxelles averaged 163 for 96 min

@@ -23,3 +23,6 @@ David approved: `classification: internal` added to 13 notes in `10 Projects/AI 
 
 ## [2026-10-01] decision | Amend build plan for local, remote and multi-agent operation
 David requested amendments, reordering, missing steps and contradiction fixes without replacing the plan. Added S1–S6 and P tasks; retained original rationale/work packages, T IDs, completed work and decision history. Local benchmarking moves first; running evaluation continues alongside; additional human users deferred. Added source provenance, exact-patch approval, scoped tools, voice/text access, durable jobs, independent recovery and operational evidence. Reconciled planning summaries/capture guidance; data-policy v0.3 updates implementation timing and clarifies enforcement without expanding allowed data. D45–D48 and session 7 record the change. Updated index entries for the amended project summaries. This change implements documentation only; reviewed code issues remain open tasks.
+
+## [2026-10-01] decision | Triage routing and raw-capture provenance (D49)
+David: wiki covers the whole vault; triaged content goes to PARA by purpose; verbatim captures archived untouched in `40 Archive/Inbox/` and cited via `source:`. Agent split: Cowork edits, Claude Code / Codex commit (option C). Handoff queue created at `90 System/handoff.md`.

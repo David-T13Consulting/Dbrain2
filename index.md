@@ -43,6 +43,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 
 ## 90 System
 - [[90 System/README|README]] — vault conventions for humans · internal
+- [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the git agent to commit · internal
 - [[90 System/lint-checklist|lint-checklist]] — weekly wiki health check, with countable results · internal
 - [[90 System/skills/classify-session/SKILL|classify-session]], [[90 System/skills/weekly-assessment/SKILL|weekly-assessment]], [[90 System/skills/race-readiness/SKILL|race-readiness]] — the three showcase skills · internal
 

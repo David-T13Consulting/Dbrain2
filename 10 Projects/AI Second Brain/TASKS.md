@@ -68,7 +68,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] **Decide on the 15 notes without `classification:`** ✅ 1 Oct, applied as proposed. Proposal: `internal` for project notes, Welcome.md `public`, the root CLAUDE.md stub exempt (one line, imports AGENTS.md)
 - [ ] Triage the two Inbox items (`assistant-scope-ideas`, `how-to-automate-pm-job`) at the next weekly pass, and run lint then
 - [x] Resolve OQ-12 via D47: running is the domain; supervised wiki maintenance is shared platform work. ✅ 1 Oct
-- [ ] Resolve remaining OQ-13 storage/retention/schema details at P1.3/P3.1.
+- [ ] Resolve remaining OQ-13 retention/IDs/metadata details at P1.3/P3.1 (routing and provenance settled by D49, 1 Oct).
 - [ ] Automate lint at S3; corrections/index/log changes stay approval-gated. Read-only inspection is available now.
 
 ---

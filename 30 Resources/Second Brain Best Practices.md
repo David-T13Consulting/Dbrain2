@@ -72,5 +72,5 @@ RAG re-derives knowledge from raw documents on every question. The LLM Wiki **co
 
 ## Open questions
 - (resolved 1 Oct) Gist URL captured.
-- Durable source evidence is planned; physical storage and retention details remain open (OQ-13).
+- Durable source evidence: verbatim captures are archived untouched in `40 Archive/Inbox/` and cited via `source:` (D49). Retention, IDs and metadata remain open (OQ-13).
 - Scope clarified by D47: approved PARA knowledge; 90 System holds schema/policy. Start with a bounded corpus, not a full migration.

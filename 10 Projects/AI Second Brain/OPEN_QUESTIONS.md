@@ -56,6 +56,8 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 D47: running remains the established domain; supervised wiki maintenance is shared platform work. Demonstrate the complete lifecycle, with a small synthetic professional example at S6. This is the explicit scope amendment, not an additional production domain.
 
 ### OQ-13 · Durable source storage, retention and schema
+**Partly resolved 1 Oct (D49, David):** the wiki covers the entire vault (PARA + 90 System). Triage moves the processed content to Projects/Areas/Resources/Archive/System by purpose; the verbatim capture moves untouched to `40 Archive/Inbox/` and the new note cites it in `source:`. Moves happen only at requested triage.
+**Still open:** retention/deletion (incl. audio, backups), stable IDs, minimum metadata.
 **Blocks:** P3.1 implementation; design in P1.3 · **Owner:** David. The amended plan preserves source evidence after approved triage and covers approved knowledge across PARA, with 90 System as schema/policy. Still choose the physical source location, retention/deletion rules (including audio and backups), stable IDs and minimum metadata. No automatic move to `40 Archive/raw`; inbox items remain untouched until requested triage.
 
 ---

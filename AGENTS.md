@@ -30,6 +30,11 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
 - Query: read `index.md` first, then the pages. If an answer is worth keeping, propose it as a note (classification and sources included) and file it only after David confirms.
 - Lint weekly with `90 System/lint-checklist.md`. Report findings read-only; fix only what David approves.
 
+## Multi-agent work
+- Cowork (Claude desktop) edits files but never runs git. Claude Code / Codex do all git work: branch, commit, push, PR.
+- Cowork lists its uncommitted changes in `90 System/handoff.md`. Before your own work, commit those as their own commit, then clear the entry.
+- Never commit, revert or overwrite another agent's uncommitted files unless they are in the handoff. If unsure, stop and ask David.
+
 ## Where to start
 - Active work lives in `10 Projects/<name>/`. Read that project's CLAUDE.md or README first.
 - Conventions written for humans are in `90 System/README.md`.

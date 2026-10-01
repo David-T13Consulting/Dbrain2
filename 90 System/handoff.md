@@ -1,11 +1,21 @@
 ---
 classification: internal
 ---
-# Handoff queue (Cowork → git agent)
+# Handoff queue (Cowork → the lead)
 
-Cowork edits files but cannot run git (D49). It lists uncommitted changes here. The git agent (Claude Code / Codex) commits each entry as its own commit with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Empty queue = nothing pending.
+Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue empty.** Last processed 1 Oct 2026 (session 12). Four entries became three commits:
+**Queue: empty.** Latest batch processed 1 Oct 2026 (session 13). Three entries became three commits:
+
+| Entry | Commit | Note |
+|---|---|---|
+| Lead/queue orchestration in `AGENTS.md` + design record + brief template + first brief (D63) | `08ea191` | `AGENTS.md` and `_template.md` held edits belonging to two entries and were split hunk by hunk |
+| Model policy section + its brief + `models:` field (D64) | `1931d8e` | — |
+| Stop-conditions brief (D65) | `892146e` | Brief only. The `AGENTS.md` change it specifies is the lead's own work and lands separately, because all three entries edit the same section |
+
+Provisional IDs were committed as Cowork wrote them (`D-cowork-1/2/3`) and renumbered by the lead in a following commit; the mapping is in `log.md`.
+
+Previous batch, 1 Oct 2026 (session 12). Four entries became three commits:
 
 | Entry | Commit | Note |
 |---|---|---|

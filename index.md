@@ -41,6 +41,23 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[30 Resources/Running/readiness-rules|readiness-rules]] — race-readiness rules · internal
 - [[30 Resources/Second Brain Best Practices|Second Brain Best Practices]] — the LLM Wiki pattern (Karpathy), fit with this vault, decisions D41–D44 · public · draft
 
+### Belgian Healthcare & eHealth
+Industry knowledge base on Belgian ambulatory healthcare — institutional, financial and technical — built from published documentation. All `public` · draft, written 1 Oct 2026.
+- [[30 Resources/Belgian Healthcare & eHealth/README|README]] — hub: reading order, the eleven things that matter most, scope and exclusions · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/institutions-and-actors|institutions-and-actors]] — INAMI, eHealth platform, sickness funds, NIC/CIN, regions, CoBRHA · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/reimbursement-and-financial-flows|reimbursement-and-financial-flows]] — nomenclature, cash vs third-party payer, fee-for-service vs capitation, DMG, the practice premium as a revenue line · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/mycarenet-services-and-flows|mycarenet-services-and-flows]] — the billing rails message by message, with the flat-file anatomy · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/billing-rules-and-cumulation|billing-rules-and-cumulation]] — the nomenclature as a rules engine: cumulation prohibitions, the four same-day patterns, place/time/qualification, physio §§11–12 and nursing care-day forfaits · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/ehealth-platform-and-apis|ehealth-platform-and-apis]] — the eleven basic services and the ~80-API catalogue · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/identity-access-and-consent|identity-access-and-consent]] — identifiers, I.AM/STS, consent, therapeutic links, exclusions · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/clinical-data-sharing-and-standards|clinical-data-sharing-and-standards]] — metahub and hubs, KMEHR, Sumehr, FHIR, VIDIS, Recip-e · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/software-homologation-and-obligations|software-homologation-and-obligations]] — the three approval gates, provider obligations, the premium's eight parameters · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/regulatory-and-compliance|regulatory-and-compliance]] — GDPR, patient rights, Quality Law art. 33/35, MDR, AI Act, EHDS · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/vendor-landscape|vendor-landscape]] — the published approved-software lists read as a market map · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/integration-architecture|integration-architecture]] — bridging REST to a SOAP estate; the Free Health Connector and its AGPL topology · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/glossary|glossary]] — acronym decoder, plus a message-number quick reference · public · draft
+- [[30 Resources/Belgian Healthcare & eHealth/sources|sources]] — source register by reliability tier, pointer note for the local spec archive, coverage gaps · public · draft
+
 ## 90 System
 - [[90 System/README|README]] — vault conventions for humans · internal
 - [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the git agent to commit · internal

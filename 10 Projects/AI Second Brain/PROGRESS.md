@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 1 Oct 2026 · **Updated by:** Claude (session 6)
+**Last updated:** 1 Oct 2026 · **Updated by:** Codex (session 7)
 
 ---
 
@@ -11,15 +11,17 @@ classification: internal
 
 | | |
 |---|---|
-| **Phase** | Week 0 — Foundations |
-| **Weeks elapsed** | 0 of 13 |
+| **Phase** | S1 architecture alignment; running validation in parallel |
+| **Schedule** | Original 13-week ordering superseded by S1–S6; re-estimate after hardware/time assessment |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset 50/150 runs labelled (all dev now); rubric v1.4 awaiting its held-out test (batch 04) |
-| **Blocked on** | David's labelling time (5 × 20 min + weeks) |
-| **Next action** | T3.1 batch 04 (rows 41–60) scores rubric v1.4 blind; T2.6 Dinant chip time after 4 Oct |
+| **Dependencies** | Hardware inventory next; device/time/budget/acceptance decisions open. Running labels do not block platform experiments |
+| **Next action** | P1.1 hardware inventory; P1.2/P1.3 requirements and targets. Parallel: T3.1 batch 04; T2.6 after 4 Oct |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
-### Phase progress
+### Original work-package progress — retained snapshot
+
+Current platform gates S1–S6 are not yet passed. P1.0 documentation amendment is complete; runtime work remains planned. The historical snapshot below is not a percentage-complete estimate for the new scope.
 
 ```
 Week 0  Foundations    █████████░  90%   (T0.7 contract clause: future-only)
@@ -28,26 +30,26 @@ H2      Validate       ░░░░░░░░░░   0%
 H3      Collaborate    ░░░░░░░░░░   0%
 ```
 
-### Gate status
+### Original domain/demo gate status — current platform gates in roadmap §0
 
 | Gate | Criteria met | Status |
 |---|---|---|
 | Week 0 | Workflow named · red lines stated | ✅ Met 29 Sep |
 | H1 | 3 skills pass · rollback tested · evals screen-shareable · no client data | ⬜ Not met |
-| H2 | Eval dashboard live · HITL% falling · governance one-pager survives review | ⬜ Not met |
+| H2 | Eval dashboard live · avoidable exceptions measured separately from approvals · governance review (D48) | ⬜ Not met |
 | H3 | Demo runs twice, no unexplained failures | ⬜ Not met |
 
 ---
 
 ## Metrics
 
-Not yet instrumented — begins week 3 with the golden dataset. Targets for reference:
+Not yet instrumented as a service. Start platform measurement at S2; retain running scores in their batch records. Original aspirations below are qualified by D48 and roadmap §0; no population-level reliability claim yet:
 
 | Metric | Target | Current |
 |---|---|---|
 | Hallucination rate | <1% | — |
 | Eval regression | 100% of changes stay positive | — |
-| HITL % | Trending down | — |
+| Avoidable exceptions | Mandatory approvals tracked separately; preserve the approval gate | — |
 | Recall accuracy | ≥85% | — |
 
 *Deliberately not tracked at this volume: drift velocity/week, confidence distribution, inference ROI, deflection rate. Know the numbers; explain why they're not instrumented yet.*
@@ -104,12 +106,23 @@ Append-only. Each entry: what, why, and what would change it.
 | D42 | 1 Oct | **Supervised ingest = the governance demo:** "LLM Wiki with a human gate and an audit log". Reading to confirm (OQ-12): the Strava workflow stays the showcase content, and the gate plus log are the governance wrapper | The gist allows supervised, one-source-at-a-time ingest. That is rule 8 turned into a demo, and it fits Governance = GTM. Risk: competes with "depth over breadth" if treated as a second showcase | OQ-12 answer says it is a second showcase, or H1 slips |
 | D43 | 1 Oct | **Lint = weekly triage step with a manual checklist** (`90 System/lint-checklist.md`), read-only, countable. Agent-run lint after Week 4 (T4.2) | Gist lint: orphans, contradictions, stale claims, missing pages, gaps. Counts make it measurable. First baseline run: 15 notes lack `classification:` (rule 3) | Checklist yields no findings for 4 weeks |
 | D44 | 1 Oct | **Good query answers get filed back as notes, through the rule 8 gate.** Added to AGENTS.md under "Wiki operations" together with the index/log/ingest/lint rules | The gist's compounding effect depends on answers not disappearing into chat. The gate keeps David as the populator | Triage load becomes the bottleneck |
+| D45 | 1 Oct | **Amend the existing build plan to S1–S6:** architecture, local read-only slice, supervised wiki maintenance, remote text/voice, measured agents, operations/demo. Benchmark the Air first; one controlled inference host is the working architecture. Additional humans deferred. Supersedes D2 ordering, D6 local-host exclusion and D8 week-9 timing | David requested the plan be amended/reordered after the review; local models, cross-device access and voice are central goals | Hardware, availability and weekly time change scope or dates |
+| D46 | 1 Oct | **Plan enforced runtime boundaries and one deterministic writer.** Bind approval to exact patch/base revision; scoped roots/tools; restore test before writes; independent backups and redacted traces from the first service | Classification labels alone do not enforce permissions. Preserve existing data exclusions and human knowledge approval | Threat tests or restore drills expose missing controls |
+| D47 | 1 Oct | **Running remains the domain; supervised wiki maintenance is shared platform work.** Preserve source evidence, provenance and contradictions; plan code/runtime separation outside the vault. Small synthetic professional demo at S6. Resolves OQ-12; OQ-13 storage/retention detail remains open | Demonstrate a complete knowledge lifecycle while preserving existing skills and avoiding a second production domain | A new domain is explicitly approved |
+| D48 | 1 Oct | **Platform and running evaluation proceed alongside each other.** Freeze acceptance sets; independent arithmetic checks; evidence-state UI; heuristic confidence is not probability; mandatory approvals are distinct from avoidable exceptions | The 150 running labels must not block local feasibility experiments; review exposed calculation/rule inconsistencies. Corrections are planned, not performed here | Measured performance or test coverage changes acceptance criteria |
 
 ---
 
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 7 — 1 Oct 2026 · Codex
+**Authorization:** David asked to amend, reorder and extend the existing build plan, preserving it and fixing contradictions. Planning/documentation scope only.
+**Changed:** added S1–S6 to the roadmap; retained original rationale/work packages, T IDs and completed checkboxes; added P tasks for local QA, supervised updates, remote voice/text, bounded agents and operations. Reconciled current-state summaries, open questions and scheduling references. D45–D48 appended; historical decision/session entries preserved.
+**Review evidence:** prior read-only synthetic checks reproduced load-only hikes counted as runs, 200% HR coverage on an inconsistent stream and F3 firing for long + tempo work. Source inspection found weekly zone selection, missing-history ambiguity and stale classifier guidance. P3.4/P3.5 track fixes; no code/rubric changes made.
+**Validation scope:** documentation diff, links/task references and preservation of completed work/history. No model installed, hardware purchased, service deployed, inbox triaged or data policy scope expanded.
+**Pick up at:** P1.1 read-only hardware inventory; P1.2/P1.3 settle requirements/targets. T3.1 batch 04 remains the next independent labelling action.
 
 ### Session 6 — 1 Oct 2026 · Claude
 **Summary:** adopted the Karpathy LLM Wiki pattern in governed form. D41–D44 logged. Two Inbox/Resources notes created, vault-root `index.md` and `log.md` added, AGENTS.md gained a "Wiki operations" section, lint checklist written and run once.

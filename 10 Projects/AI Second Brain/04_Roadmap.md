@@ -1,7 +1,9 @@
 ---
 classification: internal
 ---
-# The Roadmap — Personal AI System, Client-Demonstrable in 3 Months
+# The Roadmap — Local Personal AI System, Operated and Demonstrated
+
+**Amended 1 October 2026 at David's request.** The original rationale, H1/H2/H3 work packages and completed work are retained below. The delivery order in §0 replaces the original week-by-week schedule. December 2026 remains the target; dates will be re-estimated after the hardware benchmark and available weekly time are known. This amendment authorizes planning changes, not implementation or purchases.
 
 **Supersedes** §5 of `02_Critical_Assessment.md`.
 **Built from three sources:** the Prisme One webinar (personal architecture), Product School (rigour and commercial framing), and current published practice (mechanics, security, regulation).
@@ -11,13 +13,72 @@ classification: internal
 | | |
 |---|---|
 | **Showcase format** | A live system you drive — screen-shared, real tasks, in front of a client |
-| **Collaborative means** | Humans sharing a governed system first; multi-agent second |
+| **Access and collaboration** | David across devices first; measurable multi-agent execution next; additional human users deferred until the personal service is reliable |
 | **Security anchor** | Generic but strict — design to the tightest common denominator |
-| **Horizon** | 3 months to something client-ready |
+| **Horizon** | December 2026 target, subject to measured capacity and delivery gates |
+
+## 0. Current delivery order — amendment of 1 October 2026
+
+**Outcome:** an Obsidian second brain for personal and permitted professional use, running a local model, reachable across devices through text and voice, with evidence that David can build, operate and maintain it. Keep the running workflow as the established domain; supervised wiki maintenance is the shared platform. A small synthetic professional example later demonstrates transfer without importing client information.
+
+**Working architecture:** one inference host David controls, with authenticated clients on phone, tablet and laptop. Benchmark the current MacBook Air first. Dedicated hardware, models, runtime, networking and speech tools remain choices to evaluate; none is purchased, installed or selected by this amendment. Offline capture is required; full offline inference on every device is not part of the initial target.
+
+### Six delivery stages
+
+| Stage | Work, in dependency order | Exit evidence | Existing work retained |
+|---|---|---|---|
+| **S1 · Align architecture** | Confirm device/access expectations, weekly time and budget; inventory hardware; define source, knowledge, proposal and runtime boundaries; reconcile project instructions | One authoritative plan, bounded initial corpus, data-flow and permission design, measurable acceptance criteria | T0/T1 completed foundations; T8 governance design starts here |
+| **S2 · Local read-only slice** | Benchmark local model candidates on the current Mac; implement scoped search and cited answers; record quality, latency and memory; enforce local inference without silent cloud fallback | Reproducible local question-answering run, source citations and abstention cases, measured resource use; evidence for retaining the Air or considering a dedicated host | T9 moves forward; T4.1/T5/T6 start with platform evaluations |
+| **S3 · Supervised wiki maintenance** | Preserve source evidence; propose synthesis, links and contradictions; validate an exact patch; bind approval to that patch and base revision; apply through one writer; commit and update index/log | One source safely updates connected notes; rejection produces no knowledge changes; stale approval is rejected; rollback and independent restore demonstrated before runtime writes | T4.2 before T4.3; D41–D44; running fixes continue alongside |
+| **S4 · Remote text and voice** | Add private authenticated access, mobile UI, durable capture queue, local speech recognition and local speech output; define vault sync separately | Text/voice works away from home on agreed devices; captures survive host/network loss; retry does not duplicate; pending/error states are visible | CAPTURE remains interim until this passes |
+| **S5 · Measured multi-agent execution** | Add coordinator, curator and evidence checker with scoped tools; compare with the S2/S3 single-agent baseline; persist state and bound retries/time/tool use | Checker benefit and latency cost measured; unauthorized tool actions denied; interrupted work resumes without double writes; David can inspect an execution trace | T11 moves ahead of T10; no requirement for multiple models in memory |
+| **S6 · Operate and demonstrate** | Finish monitoring, reliability contract, threat tests, backup/restore and upgrade runbooks; pin versions; rehearse normal and failure paths; package synthetic demo/code/evals | Rebuild and restore drills pass; upgrade regression results recorded; two repeatable demos include a controlled failure and recovery | T5/T6/T8/T12/T13 completed; T10 deferred |
+
+Security, evaluation and observability begin in S1/S2 and continue through all stages. S6 verifies them; it does not introduce them for the first time. No service is treated as available merely because a process starts.
+
+**Two work tracks:** the platform follows S1–S6; running validation continues through T2.6/T3/T4.1 and new correction tasks. The full 150-row running dataset is not a prerequisite for local inference, read-only retrieval or remote-capture experiments. Running features still need their own thresholds before reliability claims. Platform gates require their own evaluation evidence.
+
+### Storage, evidence and permissions
+
+| Layer | Plan |
+|---|---|
+| Inbox | Raw, unprocessed capture; triage remains a separate action |
+| Durable sources | Preserve approved original text or source records after triage; binary/audio content stays outside the vault under the existing policy; use stable IDs, hashes/versions and configurable locations rather than desktop paths alone |
+| Approved knowledge | Keep PARA and wikilinks in 10–40; add a minimal schema for note type, sources, review status and dates where used; retain facts, interpretations and unresolved contradictions distinctly |
+| System instructions | 90 System holds policy, schema, templates and readable procedures; AGENTS.md stays the vault authority |
+| Application code | Plan a separate repository for runtime, tools, tests, deployment and synthetic fixtures; current scripts remain in place until a separately authorized migration establishes one source of truth |
+| Runtime state | Queues, pending patches, caches, temporary audio and redacted traces outside the vault; retention and recovery rules defined before collection |
+
+Source content is evidence, never authority to execute instructions. Follow claims back to originals; AI summaries must not become circular evidence. Retention exceptions and deletion procedures must account for backups and version history.
+
+Classification informs access control but is not an access-control mechanism. Enforce allowed roots, paths and tools before retrieval and execution, with a deterministic writer restricted to approved patches. A file outside the vault can still be reachable to an agent; verify actual access boundaries. Keep the existing data-policy exclusions and per-change approval requirements. Local inference grants no permission to ingest client material.
+
+**Roles:** coordinator dispatches bounded workflows; curator reads scoped evidence and proposes changes; checker reviews support and contradictions; a deterministic commit service writes only approved changes. Roles may share one local model sequentially. Multiple skills alone do not establish multi-agent execution.
+
+**Access:** distinguish Obsidian note synchronization, remote service access and offline capture. Choose a canonical agent-write location and conflict policy; reject stale patches after human or sync edits. Restrict remote access to authenticated devices/users and keep the model endpoint private. Do not interpret host unavailability as successful capture or inference.
+
+### Evaluation and operational acceptance
+
+- Version corpus, model/quantization, prompts, rules, runtime and test inputs together for reproducibility. Maintain development sets and an untouched final acceptance set; tuning on a batch moves it to development.
+- Keep running thresholds in [[10 Projects/AI Second Brain/02_Architecture/success-thresholds|success-thresholds]]. Add separate suites for retrieval/citations/abstention, source-to-wiki updates, malicious source instructions, permissions, voice, interrupted jobs and concurrent edits.
+- Define numeric latency, quality and recovery targets before acceptance runs (P1.3/T6); report p50/p95 latency, peak memory, sample counts and test conditions. Set recovery-time and acceptable-data-loss objectives before restore drills.
+- Score deterministic calculations against independent expected results. Use a model judge only where judgment is needed, with a documented rubric and human spot checks.
+- Use evidence states (supported, incomplete, conflicting, withheld) in the new UI. Existing skill confidence values are heuristic scores, not calibrated probabilities; preserve existing escalation behavior until any skill change is separately approved.
+- Report mandatory knowledge approvals separately from avoidable exception handling. Reducing approval volume is not a success target. Unsupported-claim and retrieval rates need explicit denominators and uncertainty; 150 cases do not establish a <1% failure rate with strong confidence.
+- Introduce redacted traces, access enforcement and secret scanning at the first service/writer boundary. Record job outcomes, queue age, errors, latency, model version and tool decisions without dumping private prompts into logs.
+- Treat Git history, device synchronization and independent backups as separate controls. Test both a bad-commit rollback and restore after loss of the working copy; include source storage and runtime state in the recovery design.
+
+### Findings to turn into correction tasks
+
+The 1 October review reproduced `load-only` hikes counted as runs, 200% HR coverage on an inconsistent synthetic stream, and “no quality” firing for `long` + `tempo_block`. Inspection also found weekly rather than per-activity zone selection, absent history treated as zero load, and stale classifier instructions/examples. These are **open corrections**, not fixes completed by this amendment. Decide the F3 quality-work definition with David before changing it; the broad tempo flag alone is not necessarily enough.
+
+### Task mapping and history
+
+[[10 Projects/AI Second Brain/TASKS|TASKS]] is the execution checklist; [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] records evidence and decisions. Existing T IDs and completed checkboxes stay intact. New P tasks fill platform gaps. D45–D48 amend D2/D6/D8 and clarify the wiki/evaluation scope without rewriting prior decisions. §2–§3 below retain the original planning history; their week numbers are reference labels, not current dependencies or deadlines.
 
 ---
 
-## 1. The strategic reframe — read this first
+## 1. The strategic reframe — original rationale retained
 
 The webinar's endpoint is *"a personal AI system that makes me productive."* **That is not showcaseable to a consulting client.** Every creator on LinkedIn claims it, the demo is unfalsifiable, and productivity claims from a director are assumed rather than impressive.
 
@@ -49,9 +110,9 @@ You are approaching that centre from the PM side, and you have the one thing eng
 
 ---
 
-## 2. What changed from the earlier plan
+## 2. September planning history — superseded ordering
 
-| Earlier plan | Now | Why |
+| Earlier plan | September choice (historical) | Why |
 |---|---|---|
 | Evals in phase 2, loosely defined | **Golden dataset in week 3, eval dashboard in week 5** | It's the showcase artifact, not a hygiene step |
 | Model/hosting decision in phase 4 | **Week 9, decided against your own golden set** | You'll have data instead of opinions — and that's a demo moment |
@@ -61,9 +122,9 @@ You are approaching that centre from the PM side, and you have the one thing eng
 
 ---
 
-## 3. The 13 weeks
+## 3. Original 13-week work packages — retained reference
 
-Structured on Product School's AI-compressed Three Horizons — H1 ship (0–4 weeks), H2 validate (1–3 months), H3 explore (3–6 months). Revisit monthly, not annually.
+Originally structured on Product School's Three Horizons. The following week labels preserve the September plan; execute the work in §0 order and use TASKS for completion status. The original gates describe domain/demo maturity, not prerequisites blocking every platform experiment.
 
 ### Week 0 — Foundations (~4 hours, this week)
 
@@ -137,15 +198,15 @@ Structured on Product School's AI-compressed Three Horizons — H1 ship (0–4 w
 
 ---
 
-## 4. Architecture decisions to lock in week 1
+## 4. Architecture decisions — amended 1 October
 
-These are cheap now and expensive later. Each one is what makes the H3 collaborative layer a configuration change instead of a rebuild.
+Retain the storage and portability choices. Enforce permissions in code and isolate runtime state; future multi-user support requires its own design and tests.
 
 | Decision | Choice | Rationale |
 |---|---|---|
-| **Storage** | Plain markdown + git | Multi-user via git rather than a database — sufficient to small-team scale, portable, auditable, and the diff history *is* your audit trail |
-| **Access classification** | `classification: public\|internal\|client` in frontmatter, from the very first note | RBAC later becomes a filter, not a migration. Costs seconds now. |
-| **Vault roots** | Separate `personal/` and `shared/` from day one | Never have to untangle them under time pressure |
+| **Storage** | Plain markdown + git | Portable knowledge and change history; durable jobs and access-control state live outside the vault. Git alone is neither authorization nor an independent backup |
+| **Access classification** | `classification: public\|internal\|client` in frontmatter, from the very first note | Labels inform authorization; enforce scoped roots, tools and write permissions before content reaches a model. `client` remains prohibited |
+| **Vault roots** | Keep current PARA roots; define permitted corpora and a canonical writer | Separate shared roots only when T10 is taken up; no directory migration in this amendment |
 | **Skills** | Portable `SKILL.md` files, never tool-locked config | Open standard across Claude Code, Copilot, Cursor, Codex, OpenCode and others — no lock-in, and *demonstrating* portability is itself a credibility beat |
 | **Retrieval** | Agentic file search. **No vector store initially.** | Right for a personal corpus. Add RAG only on a named trigger (corpus scale, sub-second latency need, synonym-heavy search) — see `03_Product_School_Playbook.md` §6.1 |
 | **Client data** | **Never enters the system.** Demo on synthetic or anonymised material | Non-negotiable. Demoing trustworthiness using another client's confidential data is an instant, unrecoverable credibility failure. |
@@ -159,11 +220,11 @@ Since you're driving it live, design the narrative in week 0 and let it pull the
 
 | Beat | Content | Time |
 |---|---|---|
-| **1 · Cold open** | Give the system a real task in the client's domain. It executes in your method and voice. | 60 sec |
+| **1 · Cold open** | Capture by voice and answer from cited evidence; use the established running domain or a synthetic professional example. | 60 sec |
 | **2 · "But how do I know it works?"** | Golden dataset → eval dashboard → regression history. **The differentiator.** | 3 min |
 | **3 · "And when it's unsure?"** | Deliberately trigger a low-confidence case. Watch it decline, explain, and escalate. | 90 sec |
 | **4 · "And is it safe?"** | Governance one-pager: autonomy ceilings, memory TTL, audit trail, regulatory exposure | 3 min |
-| **5 · "How does this scale to my team?"** | Multi-user layer, S.M.A.R.T. memory, RBAC via classification | 2 min |
+| **5 · "Can you operate it?"** | Show scoped agent roles, an interrupted job, recovery and measured service behavior; multi-user is a later extension | 2 min |
 | **6 · Close: judgment, not tools** | The decision rules — agentic vs RAG, open-weight vs frontier, agent vs RPA — each with the evidence you used | 2 min |
 
 **Beat 3 is the one people remember.** A system that visibly declines to answer is more persuasive than one that always does. Rehearse it deliberately.
@@ -174,29 +235,29 @@ Since you're driving it live, design the narrative in week 0 and let it pull the
 
 ## 6. Deliberately out of scope
 
-Naming these protects the timeline. Each has a real argument for it and a better argument for "not in these 13 weeks."
+Amended scope protects the S1–S6 delivery sequence; essential local hosting and remote access are now included.
 
 | Not building | Why |
 |---|---|
-| **Self-hosted VPS / Cloudron / n8n** (webinar's week 3) | Adds operational risk to a live demo and proves nothing a client cares about. Revisit in month 4+ if a workflow genuinely needs to run while you're away. |
+| **Unnecessary orchestration platforms / public VPS deployment** | Start with one controlled local host. Add infrastructure only for a measured availability or workflow requirement. |
 | **A dozen MCP servers** | Direct file access covers the vault. Every server added is attack surface and a tool-selection ambiguity — both documented failure modes. |
 | **Vector RAG** | Wrong tool at this corpus size. Add on a named trigger. |
 | **Full knowledge migration** | Collector's fallacy. Migrate what the showcase workflow needs. |
-| **Local model inference** | Capability drop is real, and the Air is fanless — it throttles under sustained load. Wrong risk to take into a live demo. |
-| **A second showcase workflow** | Depth over breadth. One workflow, provably excellent. |
+| **Full local inference on every client device** | Initial design uses one controlled inference host; local inference on that host is required at S2. |
+| **Additional production domains and human users** | Preserve running as the domain; wiki maintenance is shared platform work. A small synthetic professional example is allowed for transfer demonstration at S6. |
 
 ---
 
 ## 7. What you'll actually instrument
 
-Four metrics, tracked from week 3. Be able to *speak* to the rest.
+Retain the original aspirations below, qualified by the evaluation contract in §0. Instrument the platform from S2 and report running results separately.
 
 | Instrument | Target | Why this one |
 |---|---|---|
-| **Hallucination rate** | <1% | Core credibility number |
-| **Eval regression** | 100% of changes stay positive on the golden set | Cheapest discipline, highest payoff |
-| **HITL %** | Trending down, not flat | Your compounding proof — the difference between scaling and compounding |
-| **Recall accuracy** | ≥85% | Once retrieval is live |
+| **Unsupported claims** | Original aspiration <1%; report observed counts, denominator and uncertainty | A small set cannot certify a population rate; no unsupported certainty |
+| **Eval regression** | Required suites pass; changes in quality, safety and latency reviewed before release | Frozen final set and independent expected outputs prevent circular scoring |
+| **Avoidable exceptions** | Trend down on comparable workloads; mandatory approvals reported separately | Preserve the human knowledge gate |
+| **Retrieval recall** | Initial target ≥85% on a labelled evidence set, with denominator and sample size | Measure citation support and abstention separately |
 
 Deliberately *not* instrumented at this volume: drift velocity per week, confidence distribution, inference ROI, deflection rate. They need volume you won't have. **Know the numbers, explain why you're not tracking them yet** — that distinction reads as judgment. Claiming a weekly drift figure on a personal system reads as theatre, and a sharp client CTO will catch it.
 
@@ -206,29 +267,32 @@ Deliberately *not* instrumented at this volume: drift velocity per week, confide
 
 | Risk | Likelihood | Mitigation |
 |---|---|---|
-| **Scope creep into infrastructure** | High — it's the fun part | §6 is a contract with yourself. Server work is month 4+. |
-| **Golden dataset never gets written** | High — it's the boring part | It's the week-3 gate. Nothing proceeds without it. 150 rows is ~4 hours. |
+| **Scope creep into infrastructure** | High | One inference host first; benchmark before hardware purchases; avoid unneeded platforms. |
+| **Evaluation work stalls** | High | Continue running labels alongside platform suites; reserve untouched acceptance cases. Do not block read-only platform experiments on 150 running labels. |
 | **Vault becomes a reading list** | Medium | Six-week check: has anything *shipped* out of the system? If not, stop capturing. |
 | **Demo fails live** | Medium | Rehearse twice, fixed dataset, recorded fallback, one planned honest failure |
-| **Client data leaks in** | Low but severe | Classification frontmatter from note one; synthetic data for all demos |
-| **Model landscape shifts mid-build** | Certain | Decision is week 9 and documented as dated — it's a decision record, not an assumption. Vendor retention policy has already reversed once in 2026. |
+| **Client data leaks in** | Severe | Enforce reachable-source boundaries and output checks; preserve exclusions; use synthetic professional demos. |
+| **Model landscape shifts mid-build** | Expected | Benchmark at S2, pin model/runtime versions and rerun regressions before upgrades. |
 
 ---
 
-## 9. Still open
+## 9. Still open — tracked in OPEN_QUESTIONS
 
-1. **The showcase workflow itself** (task 0.4). I can help you pick it — tell me 3–4 things you do repeatedly and I'll pressure-test which is most demoable and most measurable.
-2. **Your firm's AI policy.** Still the one input I can't research. It constrains §4's client-data rule and the governance one-pager.
-3. **MacBook Air RAM.** Only matters if you want a local-inference story in the demo — which I'd advise against, but it's your call.
-4. **Whether a colleague is available for the week-10 two-person test.** If not, I'll design a single-user simulation of the multi-user layer instead — weaker, but workable.
+- Hardware capacity, actual device/OS coverage, host availability and offline expectations (OQ-4, OQ-14).
+- Weekly build time, hardware budget and acceptance targets (OQ-15).
+- Source retention/storage mapping and concrete schema (OQ-13); final tool choices follow benchmarks.
+- F3 quality-work semantics for long runs with tempo work (OQ-16).
+- Colleague participation is parked with T10 (OQ-3), not a current delivery blocker.
+
+Showcase selection and the firm's-policy question were resolved (D14–D16). Do not reopen them as prerequisites.
 
 ---
 
-## 10. Immediate next actions
+## 10. Immediate next actions — amended 1 October
 
-1. Revoke the Telegram bot token via BotFather
-2. Run the *"last 30 days"* prompt
-3. Come back with 3–4 candidate workflows and we'll choose the showcase one together
-4. Then I'll scaffold the vault, `AGENTS.md`, and the first `SKILL.md` with you
+1. P1.1: inspect the current Mac's hardware and available capacity without changing it.
+2. P1.2/P1.3: resolve device/time/budget questions and record measurable acceptance criteria and data boundaries.
+3. T9/P2.1: benchmark local models against a bounded question-answering set; start the read-only slice.
+4. Continue T3.1 batch 04 independently; T2.6 follows the 4 October race. P3.4/P3.5 track calculation and evaluation corrections.
 
-*Written 7 September 2026. Revisit monthly — the Three Horizons are compressed, and so is this plan.*
+*Originally written 7 September 2026; amended 1 October 2026. Original rationale and work packages retained. Current sequence: §0 and TASKS.*

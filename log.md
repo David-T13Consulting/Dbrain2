@@ -20,3 +20,6 @@ M1 orphans 3 · M2 broken links 1 (Obsidian's Welcome.md placeholder) · M3 not 
 
 ## [2026-10-01] lint | fix M5 (classification frontmatter)
 David approved: `classification: internal` added to 13 notes in `10 Projects/AI Second Brain/`, `public` to Welcome.md. Root `CLAUDE.md` stub exempt (recorded in lint-checklist). M5 now 0.
+
+## [2026-10-01] decision | Amend build plan for local, remote and multi-agent operation
+David requested amendments, reordering, missing steps and contradiction fixes without replacing the plan. Added S1–S6 and P tasks; retained original rationale/work packages, T IDs, completed work and decision history. Local benchmarking moves first; running evaluation continues alongside; additional human users deferred. Added source provenance, exact-patch approval, scoped tools, voice/text access, durable jobs, independent recovery and operational evidence. Reconciled planning summaries/capture guidance; data-policy v0.3 updates implementation timing and clarifies enforcement without expanding allowed data. D45–D48 and session 7 record the change. Updated index entries for the amended project summaries. This change implements documentation only; reviewed code issues remain open tasks.

@@ -17,7 +17,7 @@ Not an engineer or designer, but works with them and can hold an informed techni
 
 ## This project in one line
 
-Build a personal AI system that works — and that stands up as **live, screen-shared proof of expertise** in front of a consulting client, by **December 2026**.
+Build an Obsidian second brain with a local model, access across devices by text and voice, and measurable multi-agent operation. Demonstrate building, operating and maintaining it by the December 2026 target; re-estimate dates after hardware/time assessment. Current sequence: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0.
 
 > Sits inside the **"Learning AI"** Claude Project, which carries two workstreams: this one (primary), and the Product School **Vibe Coding** training — a working app + deck using Lovable / Supabase / GitHub / Google Analytics. Different stack, different deliverable, status unconfirmed (OQ-5b). Don't blend them.
 
@@ -30,7 +30,7 @@ Build a personal AI system that works — and that stands up as **live, screen-s
 | Decision | Answer | Set |
 |---|---|---|
 | Showcase format | Live system I drive, screen-shared | 7 Sep |
-| "Collaborative" means | Humans sharing a governed system **first**, multi-agent second | 7 Sep |
+| Access and collaboration | David across devices first, then measured multi-agent execution; additional humans deferred | Amended 1 Oct, D45 |
 | Security anchor | Generic but strict — tightest common denominator | 7 Sep |
 | Horizon | 3 months (≈ Dec 2026) | 7 Sep |
 
@@ -45,7 +45,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 
 | File | What |
 |---|---|
-| `04_Roadmap.md` | ⭐ **The plan.** 13 weeks, H1/H2/H3 |
+| `04_Roadmap.md` | ⭐ **The plan.** S1–S6 delivery gates; original H1/H2/H3 retained as history |
 | `03_Product_School_Playbook.md` | Frameworks, thresholds, checklists to reuse |
 | `02_Critical_Assessment.md` | Why the webinar's plan was changed |
 | `01_Key_Topics_Summary.md` | What the webinar said (1 correction applied) |
@@ -60,13 +60,13 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 | **Product School** | His AI Product Strategy + Advanced Agents courses — source of the rigour layer |
 | **Golden dataset** | 150-row labelled truth set, versioned in git. *"Your receipts."* The core showcase artifact |
 | **Reliability contract** | Metric / target / measurement / alert-threshold table for a workflow |
-| **Confidence UX** | 3 bands: >90% full answer · 50–90% softened · <50% withhold + escalate |
-| **HITL** | Human-in-the-loop. Must be a *shrinking queue*, not permanent babysitting |
+| **Evidence UX** | Supported / incomplete / conflicting / withheld. Existing skill confidence scores remain heuristic; preserve escalation until reviewed |
+| **HITL** | Mandatory knowledge approvals stay; measure avoidable exception handling separately |
 | **Showcase workflow** | Strava session classification → weekly assessment → race readiness (D14/D15). Skills in `90 System/skills/` |
 | **Agentic search** | Agent greps/reads files directly. Our retrieval choice. Not vector RAG |
 | **ZDR** | Zero data retention |
 | **S.M.A.R.T. memory** | Scoped · Monitored · Auditable · Retrievable · Timed |
-| **H1 / H2 / H3** | Three Horizons, AI-compressed: ship 0–4wk · validate 1–3mo · explore 3–6mo |
+| **S1–S6 / H1–H3** | Current delivery gates / historical work-package labels. Running evaluation proceeds alongside platform work |
 
 → Full decoder ring: `memory/glossary.md`
 
@@ -75,13 +75,15 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 1. **No client-confidential data enters this system.** Demos run on synthetic/anonymised material.
 2. **No secrets in the vault.** One live credential was already found in source material.
 3. **Depth over breadth.** One showcase workflow, provably excellent.
-4. **Out of scope until month 4+:** self-hosted server, MCP server sprawl, vector RAG, local inference.
+4. **Current scope (D45–D48):** local inference and controlled hosting now; remote text/voice next; multi-agent execution measured against a baseline. Defer MCP sprawl, unneeded vector infrastructure and additional human users. Knowledge writes remain approval-gated.
 5. **Six-week honesty check:** has anything shipped *out* of the system? If not, stop capturing.
 6. Every note gets `classification: public|internal|client` in frontmatter, from note one.
 7. **Large files (media, PDFs, recordings) never enter the vault.** They live outside it, ungit-tracked, with a pointer note (path + summary) left in the vault. See `00_Source_Material.md` for the current example.
 8. **Fact-check before adding anything to the vault.** Claude proposes, David confirms — before any fact, note, or inference about him becomes structured knowledge (Projects / Areas / Resources). Raw `capture:` drops into `00 Inbox` are exempt (unprocessed by design); the gate applies at triage, when something moves from Inbox into the structured vault. Claude helps structure the second brain; it does not populate it unilaterally.
 
 ## Capture protocol (Dispatch / voice / on the go)
+
+Dispatch is the interim route; the local remote text/voice service is planned for S4, not yet implemented.
 
 If a message starts with **`capture:`** or is clearly a raw thought dump:
 

@@ -9,14 +9,24 @@ classification: internal
 
 ## 🔴 Blocking
 
-*Nothing currently blocking.*
+No blocker to the read-only hardware inventory. Device/availability requirements and acceptance targets block final service design, not planning or bounded experiments. See OQ-4/OQ-14/OQ-15.
 
 ## 🟡 Needed soon
 
-### OQ-3 · Is a colleague available for the week-10 two-person test?
-**Blocks:** T10 design (multi-user layer)
-**Owner:** David
-If not, I'll design a single-user simulation of the multi-user layer instead — weaker, but workable. Decide by week 8.
+### OQ-3 · Colleague for a future two-person test (parked)
+**Affects:** T10 after S6 · **Owner:** David. Additional human users no longer precede multi-agent work. Revisit when the personal service is reliable; no simulated multi-user claim in the initial demo.
+
+### OQ-4 · Current Mac hardware and capacity
+**Blocks:** local-model sizing (T9/S2) · **Owner:** read-only inventory P1.1. Record chip, RAM, available storage and relevant resource limits. Benchmark sustained workloads before deciding whether the Air is sufficient; no hardware purchase implied.
+
+### OQ-14 · Devices, access and host availability
+**Blocks:** final S2/S4 design · **Owner:** David, P1.2. Which phone/tablet/laptop operating systems must work? Must the service run while the Air travels or sleeps? Working architecture is one controlled inference host with remote clients and offline capture; confirm availability expectations and any stricter offline-inference requirement.
+
+### OQ-15 · Time, budget and measurable service targets
+**Blocks:** calendar commitments and acceptance runs · **Owner:** David, P1.2/P1.3/T6. Weekly build time, possible hardware budget, acceptable query/voice latency, recovery time and tolerable data loss remain unspecified. Define numeric targets before acceptance runs; December remains a target, not a validated schedule.
+
+### OQ-16 · What counts as quality work in F3?
+**Blocks:** P3.5 rule change only · **Owner:** David. The weekly script flags no quality for `long` + `tempo_block`. The flag is broader than strict tempo and also occurs on easy runs. Decide the qualifying evidence before changing F3; preserve and version historical expectations.
 
 ### OQ-5b · Is the Vibe Coding deliverable still active?
 **Blocks:** nothing today, but determines whether a second workstream needs planning
@@ -30,32 +40,23 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 **Owner:** David · a 30-min solo all-out effort (LTHR = average HR of the last 20 min). Re-check zones against the golden dataset afterwards.
 
 ### OQ-7 · Should the post-race recovery window scale with race size?
-**Affects:** rubric I6b (currently a flat 14 days after any race)
+**Affects:** rubric I6 (current D27: 7 days after races up to 21 km; 14 after marathon/ultra/mountain). The former flat-window description was stale.
 **Owner:** decide from held-out batches. If short races (10 km) wrongly turn easy runs into "recovery", scale the window by km-effort.
 
 ### OQ-8 · Project instructions in claude.ai are stale
 **Owner:** David · they still point to `~/Desktop/AI_SecondBrain_Project/`; the vault has been `~/Documents/Dbrain2/10 Projects/AI Second Brain/` since 8 Sep. Replacement text is at the bottom of the project doc `claude/ai-second-brain-project.md`.
 
 ### OQ-11 · Second domain: family logistics inputs (parked)
-**Blocks:** nothing until the H1 gate · **Owner:** David. Context: `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`
+**Blocks:** nothing in S1–S6; additional production domains remain parked · **Owner:** David. Context: `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`
 - Where does each source live (commune trash calendar, school menus, kids' activity schedules: site, portal, email)?
-- Who else would use it (second user for week 10)?
+- Who else would use it if the deferred multi-user extension is taken up?
 - David's rule on children's data (proposal: minimised, first names/initials only, never demoed; synthetic family for demos)
 
-### OQ-12 · Is the wiki governance framing a second showcase, or a wrapper?
-**Affects:** D42, "depth over breadth" · **Owner:** David
-Claude's reading: Strava classification and weekly assessment stay the one showcase. The gate plus audit log (supervised ingest, `log.md`) is how you show it is governed. If you want the wiki itself as a second showcase, that is a scope change and needs a roadmap decision.
+### OQ-12 · Wiki versus domain showcase — resolved 1 Oct
+D47: running remains the established domain; supervised wiki maintenance is shared platform work. Demonstrate the complete lifecycle, with a small synthetic professional example at S6. This is the explicit scope amendment, not an additional production domain.
 
-### OQ-13 · Raw layer and wiki scope
-**Affects:** D41–D44 · **Owner:** David
-(a) Triaged Inbox items: move to a permanent raw/archive area (gist's immutable raw layer), or delete after triage? (b) Does the wiki cover the whole vault, or only `30 Resources`? Default if unanswered: Inbox items archived in `40 Archive/raw`, wiki covers 10–40 and 90.
-
-## 🟢 Nice to know
-
-### OQ-4 · How much RAM does the MacBook Air have?
-**Affects:** whether a local-inference story is available for the demo
-**Owner:** David · one command: `system_profiler SPHardwareDataType | grep Memory`
-My recommendation is against local inference for a live demo regardless — the Air is fanless and throttles under sustained load — but it's your call.
+### OQ-13 · Durable source storage, retention and schema
+**Blocks:** P3.1 implementation; design in P1.3 · **Owner:** David. The amended plan preserves source evidence after approved triage and covers approved knowledge across PARA, with 90 System as schema/policy. Still choose the physical source location, retention/deletion rules (including audio and backups), stable IDs and minimum metadata. No automatic move to `40 Archive/raw`; inbox items remain untouched until requested triage.
 
 ---
 
@@ -68,7 +69,7 @@ My recommendation is against local inference for a live demo regardless — the 
 | R8 | (was OQ-2) What does the firm's AI policy say? | No firm above Tower13. David's rule (D16): every contract must state his AI agent use explicitly, or the engagement stays out. Follow-up is T0.7 | 29 Sep |
 | R7 | (was OQ-1) What is the showcase workflow? | **"Classify each run's session type from raw Strava data, roll a week into a coaching assessment — trend, effort adequacy, race-goal trajectory."** H1 = classification + trend/effort (checkable core). H2 = goal-trajectory judgment with confidence bands. Ground truth for the golden dataset comes from David labeling his own historical runs | 8 Sep |
 | R1 | Showcase format? | Live system I drive, screen-shared | 7 Sep |
-| R2 | "Collaborative" — which sense? | Humans sharing first, multi-agent second | 7 Sep |
+| R2 | "Collaborative" — which sense? | Original: humans first; amended by D45 on 1 Oct to multi-device personal service, then agents, additional humans later | 7 Sep / 1 Oct |
 | R3 | Which sector to anchor security on? | Generic but strict, specialise later | 7 Sep |
 | R4 | Timeline to client-ready? | 3 months | 7 Sep |
 | R5 | Can Claude reach Apple Notes? | No — protected location, no API, no connector. Export to markdown is the route (and the better answer anyway) | 7 Sep |

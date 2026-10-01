@@ -3,16 +3,60 @@ classification: internal
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 1 Oct 2026 (session 6) · **Phase:** Week 0 — Foundations · **Target:** client-ready December 2026
+**Updated:** 1 Oct 2026 (session 7) · **Phase:** S1 architecture alignment; running validation in parallel · **Target:** December 2026, schedule to re-estimate
 
 ---
 
 ## ▶ Next action
 
-> **T3.1 batch 04: 20 held-out runs (rows 41–60), ~25–30 min.** First held-out score of rubric v1.4. **T2.6** after Sunday: Dinant chip time. T0.7 before the next contract.
+> **P1.1: inspect the current Mac's hardware and available capacity, read-only.** Then P1.2/P1.3 define access requirements and acceptance criteria for the local benchmark.
 
-After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
-Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
+**Parallel domain action:** T3.1 batch 04 (rows 41–60) scores rubric v1.4 blind. T2.6 follows 4 October; T0.7 precedes the next contract. T0.6, T1.2 and T1.4 are already complete.
+
+## Current execution order — S1–S6
+
+Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0, D45–D48. Existing T IDs and completed work below are preserved. Week headings below are historical groupings, not execution order. P IDs fill gaps; references to T IDs schedule existing tasks without duplicate completion records. No stage passes merely because its checklist exists.
+
+### S1 · Align architecture
+- [x] **P1.0** Amend the roadmap and reconcile tracking pages, preserving historical decisions and completed tasks. ✅ 1 Oct; documentation only.
+- [ ] **P1.1** Inventory hardware, RAM, storage and capacity read-only; resolve OQ-4. Avoid unnecessary machine identifiers.
+- [ ] **P1.2** Confirm devices/OSs, remote/offline expectations, host availability, weekly time and budget (OQ-14/OQ-15). No purchase implied.
+- [ ] **P1.3** Record data flow, scoped roots/tools, initial corpus and acceptance targets: quality, latency, recovery time and acceptable data loss. Define source retention/schema and code/runtime separation (OQ-13). Begin T6/T8.
+
+### S2 · Prove local read-only answers
+- [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. Does not wait for all T3.1 labels.
+- [ ] **P2.2** After runtime selection in T9, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access.
+- [ ] **P2.3** Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
+- Existing tasks: **T9** moves here; **T4.1/T5/T6** begin with platform evaluation, redacted traces and service targets.
+
+### S3 · Supervised wiki maintenance
+- [ ] **P3.1** Implement agreed durable source IDs/versions, original evidence, derived claims, contradictions and review state. Preserve approved captures after triage under the agreed retention policy.
+- [ ] **P3.2** Implement pending patches with evidence, exact diff, base revision and approval binding. Test rejected proposals and stale approvals after intervening edits.
+- [ ] **P3.3** After T4.2, implement one deterministic writer: allowed paths, schema/link/classification validation, approved commit plus index/log updates. Test malicious source instructions, path escape and unauthorized writes.
+- [ ] **P3.4** Independently regression-test and fix reviewed issues: `load-only` counted as runs (check both scripts), stream/moving-time coverage, per-activity zones, missing history vs inactivity, stale classifier instructions/examples. No code fixes are made by this amendment.
+- [ ] **P3.5** Resolve OQ-16 before changing F3 quality-work semantics. Test strict tempo evidence versus the broad flag; version rule and expected-label changes.
+- [ ] **P3.6** Freeze final running acceptance cases; preserve historical scores and label corrections; score arithmetic against independent expected outputs. Existing confidence values are heuristic, not calibrated probabilities.
+- Existing tasks: **T4.2 → T4.3** gates runtime writes; **T3/T4.1** running validation continues alongside. **T7** adds evidence-state UI; existing skill escalation behavior stays until separately reviewed.
+
+### S4 · Remote text and voice
+- [ ] **P4.1** Implement private authenticated access and mobile text UI for agreed devices; keep the inference endpoint private. Specify canonical writer, vault sync and conflict policy separately.
+- [ ] **P4.2** Add durable capture queue, pending/failure states, idempotent retries and cancellation. Test airplane mode, host sleep/restart and interrupted uploads without duplicate captures.
+- [ ] **P4.3** Add local push-to-talk transcription and speech output; test French, English, mixed speech, names and noise. Define audio retention/deletion before recording.
+- [ ] **P4.4** Test away from home on each agreed device class. Replace the interim Dispatch dependency and update CAPTURE only after the new route passes.
+
+### S5 · Measurable multi-agent execution
+- Existing task: **T11** introduces coordinator, curator and evidence checker with distinct permissions. The writer is deterministic; roles may share a model sequentially.
+- [ ] **P5.1** Compare task success and unsupported-claim detection against the single-agent baseline, including latency and memory cost.
+- [ ] **P5.2** Implement persistent jobs, bounded retries/time/tool budgets, cancellation and traceable handoffs. Test tool denial, checker failure, crash/resume and duplicate-write prevention.
+
+### S6 · Operate and demonstrate
+- [ ] **P6.1** Back up vault, source storage and required runtime state independently; restore after working-copy loss within T6 objectives. Distinguish rollback, sync and backup.
+- [ ] **P6.2** Pin releases/model/runtime versions; document reproducible setup, restart, upgrade/rollback and incident handling. Run regressions before upgrades.
+- [ ] **P6.3** Complete latency/error/queue/resource monitoring; verify redaction, access denial and retention. Instrumentation begins at S2.
+- [ ] **P6.4** Package architecture, traces, evaluations and synthetic professional fixtures for a public-safe code/demo repository. Keep the personal vault private; publication requires its own authorization.
+- Existing tasks: complete **T5/T6/T8/T12/T13** with normal, abstention, approved-update, failure and recovery demos. **T10** remains parked until the personal service is reliable.
+
+**Exit evidence:** roadmap §0. Hardware/tools and numeric service targets remain open until measured or confirmed.
 
 ---
 
@@ -23,18 +67,19 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 - [x] Write `90 System/lint-checklist.md` and run the baseline ✅ 1 Oct
 - [x] **Decide on the 15 notes without `classification:`** ✅ 1 Oct, applied as proposed. Proposal: `internal` for project notes, Welcome.md `public`, the root CLAUDE.md stub exempt (one line, imports AGENTS.md)
 - [ ] Triage the two Inbox items (`assistant-scope-ideas`, `how-to-automate-pm-job`) at the next weekly pass, and run lint then
-- [ ] Answer OQ-12 (showcase framing) and OQ-13 (raw layer, wiki scope)
-- [ ] Revisit agent-run lint and index/log appends by agents after T4.2
+- [x] Resolve OQ-12 via D47: running is the domain; supervised wiki maintenance is shared platform work. ✅ 1 Oct
+- [ ] Resolve remaining OQ-13 storage/retention/schema details at P1.3/P3.1.
+- [ ] Automate lint at S3; corrections/index/log changes stay approval-gated. Read-only inspection is available now.
 
 ---
 
 ## Week 0 — Foundations
 
-*Everything here blocks H1. Target: complete by 14 Sep.*
+*Historical foundations: gate met 29 Sep. T0.7 remains future-only; original 14 Sep deadline is superseded.*
 
 - [x] **T0.1 · Revoke the Telegram bot token** ✅ done 8 Sep `5 min` `🔴 security`
   Token `8842032811:AAFH…` is in `00_Source_Material/Product_School/Product School - Advanced Agents.pdf` (p.2). Revoke via BotFather → `/mybots` → select → API Token → Revoke.
-- [x] **T0.2 · Rotate the four Zoom recording passcodes** `10 min` `🔴 security` ✅ **closed 29 Sep — mitigated, not rotated.** Recordings are Product School's, not David's to rotate. Exposure contained: the PDF stays outside the vault, ungit-tracked (rule 7).
+- [x] **T0.2 · Rotate the four Zoom recording passcodes** `10 min` `🔴 security` ✅ **closed 29 Sep — mitigated, not rotated.** Recordings are Product School's, not David's to rotate. PDF remains outside the vault, ungit-tracked (rule 7). **1 Oct qualification:** this location alone does not prove access isolation; verify reachable roots in P1.3 without exposing credentials.
   Same PDF. Lower severity than the token but they're recordings of paid course content.
 - [x] **T0.3 · Run the 30-day audit prompt** `20 min` ✅ **closed 29 Sep — superseded.** Its only purpose was evidence for T0.4, which was locked 8 Sep from David's actual recent topics.
   In ChatGPT/Claude: *"Look at my last 30 days of conversations. Where am I spending most of my time, and what from that list should be automated?"* Evidence-led input to T0.4. (Source: Advanced Agents, Day 2.)
@@ -86,7 +131,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 
 ### Week 3 — Golden dataset ⭐
 - [ ] **T3.1** Draft golden dataset v1 — 150 rows `4 h` `⭐ the showcase artifact`
-  🟡 **In progress (29 Sep):** batch 01 (10 runs) labelled → **dev set**, used to tune rubric v1.2 (D25). Remaining work, all **held-out**:
+  🟡 **Updated 1 Oct:** batches 01–03 (50 runs) are now development data. Batch 04 is fresh for v1.4. P3.6 reserves final acceptance cases. Historical held-out scores below describe the versions originally tested:
   - [x] Batch 02 · 20 runs ✅ 30 Sep. First held-out score of v1.2: terrain 17/20 (85%), intent 10/20 (50%). Sampling order fixed in `03_Golden/heldout-order.md` (seed 20260930)
   - [x] Rubric v1.3 + classify-session v0.4 ✅ 30 Sep (D27–D32). Batch 02 is now dev
   - [x] Batch 03 · 20 runs ✅ 30 Sep. v1.3 held-out: terrain 18/20, intent 14/20, tempo_block 14/20, vertical 16/20
@@ -100,9 +145,9 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 - [ ] **T3.3** Commit as `golden-dataset.md`, versioned like code `15 min`
 
 ### Week 4 — Evals + write access
-- [ ] **T4.1** Wire LLM-as-judge scoring against the golden set `3 h`
-- [ ] **T4.2** Test backup/rollback — deliberately break something and restore it `1 h`
-- [ ] **T4.3** Only after T4.2 passes: enable agent **write** access, confined to approved dirs `30 min`
+- [ ] **T4.1** Wire versioned evaluations: independent deterministic checks first; rubric-based model judges with human spot checks for judgment. Begin platform suites at S2 and running suites alongside T3.
+- [ ] **T4.2** Before S3 runtime writes, test bad-change rollback and independent restore on a disposable copy against T6 objectives. P6.1 extends recovery testing to deployment.
+- [ ] **T4.3** After T4.2 passes, enable the scoped deterministic writer for approved patches with base-revision/path validation. No blanket autonomous-write permission.
 
 **H1 gate — all four must be true:**
 1. Three skills pass their stated thresholds
@@ -114,27 +159,27 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 
 ## H2 · Weeks 5–9 — Validate
 
-- [ ] **T5** Eval dashboard — metrics, judge setup, drift alerts, UX hooks `1 wk`
+- [ ] **T5** Eval dashboard: start results/redacted traces at S2, complete at S6. Separate platform/running suites, mandatory approvals and avoidable exceptions; avoid unsupported drift claims.
   Test: *can you screen-share it in a sales call?* If not, it isn't done.
-- [ ] **T6** Reliability contract — metric/target/measurement/alert-threshold + escalation paths `1 wk`
-- [ ] **T7** Confidence UX — 3 bands, visible reasoning, override surface, corrections feed back `1 wk`
+- [ ] **T6** Reliability contract: set targets before acceptance runs at S1/S2; include latency, recovery time/data loss, measurements, alerts and escalation. Verify at S6.
+- [ ] **T7** Evidence UX at S3: supported/incomplete/conflicting/withheld, concise evidence/citations, overrides and reviewed corrections. Existing skill confidence scores are heuristic; preserve escalation until reviewed.
   Build the low-confidence path deliberately — you will demo it on purpose.
-- [ ] **T8** Governance one-pager — scope, autonomy boundaries, escalation triggers, audit cadence, regulatory exposure, agent topology `1 wk`
-- [ ] **T9** Model + hosting decision, benchmarked against your own golden dataset `1 wk`
-  2–3 options: one frontier, one open-weight, one EU-hosted. Document with the trade-off grid.
+- [ ] **T8** Governance one-pager: begin boundaries/data flow at S1, update with actual roles and permissions, review at S6. Include retention, escalation, authorization and agent topology.
+- [ ] **T9 · S2** Benchmark local models on the current Mac against platform cases and available running development cases. Record quality, sustained latency, memory/context settings; decide hosting on evidence.
+  External comparisons are optional and require explicit authorization; never a production fallback or prerequisite.
 
-**H2 gate:** "How do you know it works?" answered with a screen. HITL% trending down. Governance one-pager survives a hostile read.
+**Retained validation gate:** screen-shareable results, avoidable exceptions measured separately from mandatory approvals, governance review. Current delivery gates are roadmap §0.
 
 ---
 
 ## H3 · Weeks 10–13 — Collaborate & package
 
-- [ ] **T10** Multi-user layer — shared vs personal roots, RBAC as metadata filter, S.M.A.R.T. memory `1 wk`
-  Get a second real human in. Two people working beats ten people designed.
-- [ ] **T11** Second agent + supervisor/critic pattern, A2A logging, autonomy ceilings `1 wk`
-  Only after naming the boundary you hit (skills / tools / evals).
-- [ ] **T12** Security hardening + shadow-AI audit on yourself `1 wk`
-- [ ] **T13** Demo build + rehearsal — twice through, no unexplained failures `1 wk`
+- [ ] **T10 · Parked after S6** Additional human users: scoped roots, enforced authorization and concurrency/sync tests. Metadata alone is not RBAC. Resolve OQ-3 first.
+  A real second-user test is required when this extension is taken up; it does not block the personal service.
+- [ ] **T11 · S5** Coordinator, curator and evidence checker with scoped tools, handoff traces and explicit autonomy limits. Compare with the single-agent baseline (P5.1).
+  Name the quality or permission boundary each role addresses; implement bounded resumable execution (P5.2).
+- [ ] **T12** Permissions/redaction from S2, source-injection/write tests before S3, remote-access checks before S4 exposure. Complete security/operational audit at S6.
+- [ ] **T13 · S6** Rehearse twice: voice capture, cited answer, reviewed update, agent trace, controlled failure and recovery. Permitted running data and synthetic professional fixtures.
 
 ---
 
@@ -145,7 +190,7 @@ Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unbl
 - [ ] Migrate Apple Notes → markdown (export route; no API exists)
 - [ ] Retrieve the 4 Product School capstone tools from the LMS (Strategy Assembler, AI Bet Evaluator, Roadmap Builder, Pitch Builder)
 - [ ] Decide relationship between this project and the Vibe Coding app+deck deliverable → OQ-5
-- [ ] Self-hosted server evaluation — month 4+, only if an async workflow justifies it
+- [ ] Infrastructure beyond the single controlled host: only on measured availability/workload need. Required local hosting evaluation is T9 at S2.
 
 ---
 

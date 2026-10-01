@@ -10,12 +10,12 @@ PARA structure:
 - `20 Areas` — ongoing responsibilities, no end state.
 - `30 Resources` — reference material, topic-based.
 - `40 Archive` — inactive projects/areas, kept for record.
-- `90 System` — notes about the system itself (this file, templates). The agent-facing rules live in `/AGENTS.md` at the vault root, with `/CLAUDE.md` importing them..
+- `90 System` — notes about the system itself (this file, templates). The agent-facing rules live in `/AGENTS.md` at the vault root, with `/CLAUDE.md` importing them.
 
 ## Rules
 - Every note carries `classification: public | internal | client` in frontmatter. No exceptions, from note one.
 - No client-confidential data enters this vault. Synthetic/anonymised material only.
-- Agent access is **read-only** until Week 4 (T4.2 rollback test passes). No MCP write access before then.
+- Agent access is **read-only by default**; David may authorize specific edits in a session. Runtime writes are planned for S3 only after T4.2 rollback/restore tests, through a scoped writer applying approved patches. No blanket write permission follows from passing a test.
 - **Large files never enter the vault.** Media, PDFs, recordings, anything bulky: keep them in a plain
   folder elsewhere on disk, never git-tracked, and leave a pointer note in the vault (path + one-line
   summary) so they stay findable. Example: `10 Projects/AI Second Brain/00_Source_Material.md`.

@@ -11,6 +11,8 @@ classification: internal
 
 ## How it works with Dispatch
 
+**Interim route (1 Oct amendment):** this describes the existing capture approach, not a deployed local service. Roadmap S4 / P4.1–P4.4 adds private remote text, local transcription/speech output and durable offline capture. Validate device behavior before replacing this route.
+
 Dispatch lets you message Claude from your phone; the work runs on your Mac and results come back to you. It is **one continuous conversation**, reachable from phone or desktop.
 
 ```
@@ -73,7 +75,7 @@ tags: []
 [Faithful transcription of what you said.]
 ```
 
-`classification` defaults to `internal`. If the capture mentions anything client-specific it must be marked `client` — and per the standing rules, client-confidential material does not belong in this system at all.
+`classification` defaults to `internal` only for permitted captures. Reject and flag prohibited client/counterparty material before writing; do not store it with a `client` tag. For unclear classification, stop and ask under AGENTS.md.
 
 ---
 
@@ -81,13 +83,13 @@ tags: []
 
 Capture without triage is a junk drawer. **Weekly, 20 minutes:**
 
-1. Open `00_Inbox/`, oldest first
+1. Open `00 Inbox/`, oldest first
 2. For each note, one of four fates:
    - **Act** → becomes a task in `TASKS.md`
    - **File** → move into the vault, add real frontmatter and links
    - **Merge** → fold into an existing note
-   - **Delete** → most captures. This is fine and expected.
-3. Empty the inbox. An inbox that never empties is a reading list.
+   - **Delete** → only on approval; preserve source evidence needed by filed/merged knowledge. Source retention/storage is being specified at P1.3/P3.1 (OQ-13).
+3. Resolve each capture through approved triage; moving it out of the inbox must not destroy the only evidence for a derived claim.
 
 **The six-week check:** if the inbox is growing and nothing has shipped *out* of the system, stop capturing and start producing. That's the collector's fallacy, and it's the most common way a second brain quietly fails.
 

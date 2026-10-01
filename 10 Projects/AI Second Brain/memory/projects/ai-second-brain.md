@@ -4,7 +4,7 @@ classification: internal
 # Project — AI Second Brain
 
 **Also called:** the second brain, the AI system, the showcase system
-**Status:** Active · Week 0 of 13 · Started 7 Sep 2026 · Target Dec 2026
+**Status:** Active · S1 architecture alignment; running validation alongside · Started 7 Sep 2026 · Target Dec 2026, to re-estimate
 **Location:** `~/Documents/Dbrain2/10 Projects/AI Second Brain/`
 
 ## What it is
@@ -34,17 +34,17 @@ Two of three land on Obsidian-style plain-markdown central memory, independently
 
 ## Shape of the plan
 
-13 weeks on compressed Three Horizons. Week 0 foundations → H1 ship (weeks 1–4, ending in a golden dataset and wired evals) → H2 validate (5–9, the artifacts that make it credible) → H3 collaborate (10–13, multi-user then multi-agent, then demo rehearsal).
+Amended 1 Oct (D45–D48): S1 architecture → S2 local read-only answers → S3 supervised wiki updates → S4 remote text/voice → S5 measured multi-agent execution → S6 operations/demo. Original H1/H2/H3 work packages remain as history; additional human users are deferred.
 
 Full detail: `04_Roadmap.md`. Never summarise it from memory — read it.
 
 ## The critical path
 
-**Everything depends on choosing the showcase workflow** (OQ-1 / T0.4). Without it there are no skills, no golden dataset, no evals, no demo. It must have a checkable right answer or the whole instrumentation thesis collapses.
+Running was selected (D14/D15); the wiki is shared platform work (D47). Next: inventory the Mac, define acceptance criteria and benchmark local retrieval/answers. Running labels continue independently; no requirement to finish all 150 before platform experiments.
 
 ## What would make this fail
 
-1. Scope creep into infrastructure — the server work is fun and proves nothing
-2. The golden dataset never getting written because it's boring
+1. Building infrastructure without measured need; start with one controlled inference host
+2. Claiming reliability without separate platform/domain evaluation and an untouched acceptance set
 3. The vault becoming a reading list (collector's fallacy)
 4. Client-confidential data entering the system

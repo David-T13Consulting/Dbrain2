@@ -1,10 +1,12 @@
 ---
 classification: internal
-version: 0.2
-status: confirmed by David 29 Sep 2026
+version: 0.3
+status: scope confirmed 29 Sep 2026; implementation schedule amended at David's request 1 Oct 2026
 ---
 
 # Data policy — Dbrain2 / AI Second Brain
+
+**v0.3 scheduling clarification (1 Oct):** align T9, write gates and trace masking with roadmap S1–S6. Permitted data, exclusions and contract rules are unchanged.
 
 **Red line, in one sentence:** No client or counterparty confidential information, no secrets, and no
 sensitive data about anyone other than me ever enters this system. Everything else is tiered, and
@@ -43,7 +45,7 @@ The `client` tag exists so the rule can be checked (a note carrying it is a viol
 
 - Assume the default commercial API terms: **inputs and outputs are kept for about 30 days** unless a ZDR agreement exists (see `02_Critical_Assessment.md` §3).
 - Anything sent to a model API must therefore be something I would accept being stored by that provider for 30 days, which means `public` or `internal` only.
-- The provider and hosting choice gets re-checked against this policy at T9 (week 9).
+- The model/hosting choice is checked at T9 (now S2), and again before any external-provider comparison or integration. Verify actual provider terms before use; local operation has no silent cloud fallback.
 
 ## 6 · Tower13 commercial material and contracts
 
@@ -65,10 +67,10 @@ contract says so, nothing about that engagement goes into the system, **includin
 | Control | Now | Planned |
 |---|---|---|
 | Classification frontmatter on every note | ✅ convention | Lint check (H1) |
-| Agent access | Read-only | Write access limited to approved folders after the T4.2 rollback test |
+| Agent access | Read-only default; specific session edits only when authorized | Scoped deterministic writer at S3 after T4.2 restore/rollback tests; exact-patch approval remains required |
 | Secret scanning | Manual | Pre-commit scan (H1) |
-| Client material physically unreachable | Kept outside any folder an agent can reach | — |
-| PII in traces | n/a | Masking once tracing exists (week 12) |
+| Client material physically unreachable | Required boundary; outside-vault location alone is not proof | Verify allowed/reachable roots in P1.3 without reading prohibited material |
+| PII in traces | n/a | Redaction/retention from the first traces at S2; verify at S6 |
 
 ## 8 · Changing this policy
 

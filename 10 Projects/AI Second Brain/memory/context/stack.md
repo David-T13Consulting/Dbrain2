@@ -5,6 +5,8 @@ classification: internal
 
 ## Environment
 
+Recorded environment, not a fresh inventory. Verify installed tools, reachable roots and capacity in P1.1/P1.3; an external archive is not automatically inaccessible to agents.
+
 | | |
 |---|---|
 | **Machine** | MacBook Air (`macbook-air-local`), macOS, Apple Silicon. RAM unknown — OQ-4 |
@@ -21,9 +23,9 @@ classification: internal
 | Knowledge store | Plain markdown + git | Decided (D9) |
 | Retrieval | Agentic file search — no vector store | Decided (D5) |
 | Skills format | `SKILL.md` (portable open standard) | Decided |
-| Agent instructions | Hand-written `AGENTS.md` in the vault | Week 1 (T1.2) |
-| Model + hosting | **Undecided by design** — benchmarked week 9 against own golden set | Deferred (D8) |
-| Server / VPS | Out of scope until month 4+ | Decided (D6) |
+| Agent instructions | `AGENTS.md` with root CLAUDE import | Completed T1.2, 29 Sep |
+| Model + hosting | Local candidates benchmarked on current Mac at S2; hardware choice follows evidence | Planned T9; D45 supersedes D8 timing |
+| Inference host / remote access | One controlled local host; private remote access at S4; no unnecessary VPS/platforms | Planned; D45 amends D6 |
 | MCP servers | None for now. Direct file access suffices | Decided |
 | Vector DB | None initially. Trigger conditions in playbook §6.1 | Decided (D5) |
 
@@ -31,13 +33,13 @@ classification: internal
 
 1. **No client-confidential data in the system.** Demos use synthetic or anonymised material.
 2. **No secrets in the vault.** One live Telegram token was already found in the source PDFs (T0.1).
-3. Every note carries `classification: public|internal|client` in frontmatter from note one — makes H3 RBAC a filter rather than a rebuild.
+3. Every note carries `classification: public|internal|client` in frontmatter from note one; labels inform authorization but tools must enforce actual root/path permissions.
 4. Depth over breadth: one showcase workflow, provably excellent.
 
 ## Known environmental gotchas
 
 - **Dispatch requires the Mac awake with Claude Desktop open.** Capture from the phone won't execute against a sleeping machine. Belt-and-braces: a native voice memo as buffer. See `CAPTURE.md`.
-- The Air is **fanless** — it throttles on sustained load. A reason local inference is a poor bet for a live demo.
+- Benchmark sustained latency, memory and context limits on the actual Air before judging local feasibility (P1.1/T9); fanless design alone does not settle the choice.
 - The remote-device bridge drops occasionally. If a file write fails, the content is still in the chat; re-commit when the link returns.
 - Large PDFs: extract text on-device with `pdftotext` rather than staging 50MB files. `pdftotext`, `pdfinfo`, `qpdf`, `gs`, `python3` + `pypdf` are all available on the device.
 

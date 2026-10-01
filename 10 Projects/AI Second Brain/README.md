@@ -5,7 +5,7 @@ classification: internal
 
 Building a personal AI system that works — and that stands up as proof of expertise in front of a client.
 
-**Goal:** a live, instrumented, governed AI system, demonstrable in a client conversation by **December 2026**.
+**Goal:** an Obsidian second brain using a local model, reachable across devices by voice and text, with measurable multi-agent operation. December 2026 remains the demo target, subject to hardware/time assessment.
 **Thesis:** the personal system is the substrate. The eval and governance layer is the product. *Governance = GTM.*
 
 ---
@@ -17,7 +17,7 @@ Building a personal AI system that works — and that stands up as proof of expe
 3. **`TASKS.md`** — ▶ Next action is at the top
 4. **`OPEN_QUESTIONS.md`** — anything now answerable?
 
-**Right now:** Week 0 of 13. T0.1, T1.1, T1.3, T1.5 done. Next action is T0.4 — choose the showcase workflow.
+**Right now:** S1 architecture alignment. Foundations are complete; three running skills are drafted and 50 labelled runs are development data. Next platform action: P1.1 hardware inventory. Parallel domain action: T3.1 batch 04. See [[10 Projects/AI Second Brain/TASKS|TASKS]].
 
 ---
 
@@ -41,14 +41,14 @@ material (large binaries) lives *outside* the vault entirely and isn't git-track
 │       ├── 01_Key_Topics_Summary.md      ← what the webinar covered
 │       ├── 02_Critical_Assessment.md     ← webinar vs. current practice
 │       ├── 03_Product_School_Playbook.md ← frameworks, checklists, metrics
-│       ├── 04_Roadmap.md                 ← ⭐ THE PLAN — 13 weeks
+│       ├── 04_Roadmap.md                 ← ⭐ THE PLAN — S1–S6 + original history
 │       ├── memory/                       ← long-term memory
 │       │   ├── glossary.md               ← decoder ring, 3 vocabularies
 │       │   ├── projects/ai-second-brain.md
 │       │   └── context/stack.md          ← environment, tool decisions, gotchas
 │       ├── 02_Architecture/              ← design decisions (data-policy.md goes here)
-│       ├── 04_Model_Config/              ← week 9
-│       └── 05_App_Prototype/             ← if/when there's code
+│       ├── 04_Model_Config/              ← planned benchmark records, S2
+│       └── 05_App_Prototype/             ← original placeholder; runtime repo planned outside vault
 ├── 20 Areas/
 ├── 30 Resources/
 ├── 40 Archive/
@@ -71,7 +71,13 @@ material (large binaries) lives *outside* the vault entirely and isn't git-track
 
 Two of the three land on Obsidian-style plain-markdown central memory, independently. That convergence is the reason to trust the substrate choice.
 
-## The 13 weeks at a glance
+## Current delivery order
+
+S1 architecture → S2 local read-only answers → S3 supervised wiki updates → S4 remote text/voice → S5 measured multi-agent execution → S6 operations/demo. Running validation continues alongside; T10 additional users is deferred. Code/runtime/source locations are planned boundaries, not migrations completed by the amendment.
+
+## Original 13-week framing — historical reference
+
+The table below preserves the September plan; roadmap §0 and TASKS now govern order and dependencies.
 
 | Horizon | Weeks | Outcome |
 |---|---|---|
@@ -85,8 +91,8 @@ Two of the three land on Obsidian-style plain-markdown central memory, independe
 1. **No client-confidential data enters this system.** Demos run on synthetic or anonymised material.
 2. **No secrets in the vault.** One live credential has already been found in the source material.
 3. **Depth over breadth.** One showcase workflow, provably excellent.
-4. **Out of scope until month 4+:** self-hosted server, MCP server sprawl, vector RAG, local inference.
+4. **Current scope (D45–D48):** local inference and controlled hosting now; remote text/voice next; multi-agent execution measured against a baseline. Defer MCP sprawl, unneeded vector infrastructure and additional human users. Knowledge writes remain approval-gated.
 5. **Six-week honesty check:** has anything shipped *out* of the system? If not, stop capturing.
 6. **Large files never enter the vault** — outside, ungit-tracked, with a maintained pointer note.
 
-*Last updated: 8 September 2026*
+*Last updated: 1 October 2026 — amended, original framing retained.*

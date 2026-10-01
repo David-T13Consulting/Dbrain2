@@ -27,7 +27,7 @@ Three sources, three vocabularies. This is the full list; the ~20 most-used live
 | **PARA** | Projects / Areas / Resources / Archive — folder taxonomy from Building a Second Brain |
 | **IPCRA** | Prisme One's framework for structuring static context. Referenced in the webinar but never fully shown |
 | **Agentic search** | Agent greps and reads files directly at runtime. **Our retrieval choice** |
-| **RAG** | Retrieval-Augmented Generation — embed, index, vector-lookup. Not used here initially; see `03_Product_School_Playbook.md` §6.1 for the trigger conditions |
+| **RAG** | Retrieval-Augmented Generation; retrieval can use file/lexical search or vectors. Initial implementation uses index/file search; additional infrastructure requires measured need |
 | **Just-in-time retrieval** | Keep lightweight references (paths), load content through tools at runtime, rather than pre-loading |
 | **Context rot** | Model performance degrading as the context window fills |
 
@@ -40,8 +40,8 @@ Three sources, three vocabularies. This is the full list; the ~20 most-used live
 | **Eval regression** | % of changes that keep scores positive on the golden set. Target 100% |
 | **LLM-as-a-judge** | Automated scoring calibrated against the gold set. *"Who judges the judge? Your golden dataset"* |
 | **Reliability contract** | Metric / target / measurement / alert-threshold table, committed to the repo |
-| **Confidence UX** | Three bands: >90% full answer · 50–90% softened, no hard commitments · <50% withhold + escalate |
-| **HITL** | Human-in-the-loop. Must be a *shrinking queue*, not permanent babysitting |
+| **Confidence / evidence UX** | Original course bands are historical. Current UI plan: supported/incomplete/conflicting/withheld. Existing skill confidence scores are heuristic, with escalation preserved until reviewed |
+| **HITL** | Human-in-the-loop; mandatory knowledge approvals stay. Track avoidable exceptions separately (D48) |
 | **Hallucination rate** | % of responses unsupported by context. Target <1%; >5% very bad |
 | **Drift velocity** | Rate of accuracy decay. <0.5%/week good. Not instrumented at our volume |
 | **Recall accuracy** | % of relevant facts the retriever finds. ≥85% |
@@ -86,7 +86,7 @@ Three sources, three vocabularies. This is the full list; the ~20 most-used live
 | **Model cascading** | Route cheap queries to cheap models, expensive ones to frontier models. Margin protection |
 | **Collector's fallacy** | Capturing information and mistaking it for having learned it. The main way second brains fail |
 | **Slow burn** | Prisme One: Capturer → Accumuler → Exécuter |
-| **Showcase workflow** | The one task the system will do excellently for the demo. Not yet chosen — OQ-1 |
+| **Showcase workflow** | Running classification → weekly assessment → readiness (D14/D15); supervised wiki maintenance is shared platform work (D47) |
 
 ## People & tools mentioned in sources
 
@@ -94,7 +94,7 @@ Three sources, three vocabularies. This is the full list; the ~20 most-used live
 |---|---|
 | **Eliott Meunier** | Creator of Prisme One |
 | **Obsidian** | Markdown knowledge base app. Recommended independently by both Prisme One and Product School |
-| **Cloudron** | Self-hosting platform. Out of scope until month 4+ |
+| **Cloudron** | Self-hosting platform. Not selected; add only for measured need (roadmap §6) |
 | **n8n** | Workflow automation. Out of scope for now |
 | **NocoDB / Supabase** | Open-source database layers (dynamic context) |
 | **Langflow** | Visual agent builder used in the Advanced Agents course |

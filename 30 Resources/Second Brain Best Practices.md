@@ -47,7 +47,7 @@ RAG re-derives knowledge from raw documents on every question. The LLM Wiki **co
 | Dataview | Dynamic tables from YAML frontmatter | Fits our frontmatter discipline |
 | Marp | Slides from wiki content | Later, relevant to the showcase |
 | Git | History, branching, collaboration for free | Already in place |
-| **qmd** (local markdown search, BM25 + vector + LLM re-rank, CLI + MCP server) | Search once the index is not enough | **Out of scope until month 4+.** Violates rules 4 (no vector RAG, no MCP sprawl) |
+| **qmd** (local markdown search, BM25 + vector + LLM re-rank, CLI + MCP server) | Search once the index is not enough | Deferred until retrieval measurements justify additional search. Start with index/file search; no requirement to add vectors or MCP |
 
 ## Fit with Dbrain2
 | Pattern element | Our vault | Assessment |
@@ -55,22 +55,22 @@ RAG re-derives knowledge from raw documents on every question. The LLM Wiki **co
 | Raw sources, immutable | `00 Inbox` + source archive outside vault | Close. Inbox gets triaged, raw is permanent. Decide whether triaged inbox items move to a raw/archive area |
 | Wiki, LLM-owned | PARA `10/20/30/40`, David populates | **Softer conflict than first thought.** The gist itself endorses supervised, one-source-at-a-time ingest, which matches rule 8 (Claude proposes, David confirms). What we reject is the *unsupervised* variant |
 | Schema | `AGENTS.md` + `CLAUDE.md` | Aligned. The gist expects it to evolve |
-| `index.md` | None vault-wide | **Gap.** Cheapest high-value addition, and it is our retrieval layer (agentic search, no RAG) |
-| `log.md` | `PROGRESS.md` session log only | **Gap.** Adopt the parseable `## [date] op | title` prefix |
-| Lint | Not defined | **Gap.** Fold into weekly triage, with a countable output |
-| File answers back | Not defined | **Gap.** Good query answers should become notes, via the rule 8 gate |
-| Agent writes | Read-only until Week 4 (T4.2) | Pattern cannot be fully adopted before then |
+| `index.md` | Created 1 Oct, D41 | Maintain with approved changes; source navigation plus file search |
+| `log.md` | Created 1 Oct, D41 | Parseable operation history; project session history remains in PROGRESS |
+| Lint | Checklist and baseline added 1 Oct | Weekly read-only reporting; fixes require approval; automation planned at S3 |
+| File answers back | Defined in AGENTS.md, D44 | Propose useful answers as notes through the approval gate |
+| Agent writes | Read-only default; explicitly approved session edits allowed | Runtime writer planned at S3 after T4.2; exact changes remain approval-gated |
 | `classification:` frontmatter | Mandatory on every note | **Our addition.** Not in the gist. This is the regulated-industry differentiator |
 | Human in the loop | Rule 8 | The gist allows it explicitly ("possibly with humans in the loop reviewing updates") for team/business use |
 
 ## Decisions (David, 1 Oct 2026) — logged as D41–D44 in PROGRESS.md
 1. **D41 · index.md + log.md at vault root, gated.** Created today. Claude proposes entries, David approves (rule 8). Log prefix `## [date] op | title`.
-2. **D42 · Supervised ingest as the governance demo.** "LLM Wiki with a human gate and an audit log". Interpretation to confirm (OQ-12): the Strava workflow stays the content, the wiki's gate and log are the governance wrapper, so depth over breadth holds.
-3. **D43 · Lint = weekly triage step, manual checklist.** `90 System/lint-checklist.md`, read-only, countable. Agent-run lint waits until Week 4 is passed.
+2. **D42 · Supervised ingest as the governance demo.** "LLM Wiki with a human gate and an audit log". Clarified by D47: running stays the established domain; supervised wiki maintenance is shared platform work. OQ-12 resolved.
+3. **D43 · Lint = weekly triage step, manual checklist.** `90 System/lint-checklist.md`, read-only, countable. Read-only inspection is available now; scheduled automation is planned at S3, with fixes still approval-gated.
 4. **D44 · File good answers back via the rule 8 gate.** Added to AGENTS.md "Wiki operations".
-5. **qmd and any search layer: deferred to month 4+.** Not a new decision: it follows standing rule 4.
+5. **Search tooling:** the original month-4 deferral is superseded by the 1 Oct plan amendment. Add tooling on measured retrieval need; no tool selected.
 
 ## Open questions
 - (resolved 1 Oct) Gist URL captured.
-- Does Dbrain2 want a separate `raw/` layer, or is Inbox + archive enough? (OQ-13)
-- Scope: wiki the whole vault, or only `30 Resources`? (OQ-13)
+- Durable source evidence is planned; physical storage and retention details remain open (OQ-13).
+- Scope clarified by D47: approved PARA knowledge; 90 System holds schema/policy. Start with a bounded corpus, not a full migration.

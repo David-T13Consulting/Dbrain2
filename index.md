@@ -16,7 +16,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/TASKS|TASKS]] — task list with the next action at the top · internal
 - [[10 Projects/AI Second Brain/OPEN_QUESTIONS|OPEN_QUESTIONS]] — what blocks work and who can answer · internal
 - [[10 Projects/AI Second Brain/CAPTURE|CAPTURE]] — on-the-go capture protocol · internal
-- [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] — the 13-week plan (H1/H2/H3) · internal
+- [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] — S1–S6 delivery plan for local inference, remote voice/text, governed wiki updates and operations; original H1/H2/H3 retained · internal
 - [[10 Projects/AI Second Brain/03_Product_School_Playbook|03_Product_School_Playbook]] — frameworks, thresholds and checklists from Product School · internal
 - [[10 Projects/AI Second Brain/02_Critical_Assessment|02_Critical_Assessment]] — why the webinar's plan was changed · internal
 - [[10 Projects/AI Second Brain/01_Key_Topics_Summary|01_Key_Topics_Summary]] — what the webinar said · internal
@@ -25,6 +25,9 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/02_Architecture/success-thresholds|success-thresholds]] — pass thresholds for the three showcase skills · internal
 - [[10 Projects/AI Second Brain/03_Golden/heldout-order|heldout-order]] — reproducible sampling order for the held-out golden runs · internal
 - [[10 Projects/AI Second Brain/03_Golden/labels-batch-01|labels-batch-01]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-02|02]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-03|03]] — David's golden-dataset labels, one batch per note · internal
+- [[10 Projects/AI Second Brain/README|project README]] — project overview and current delivery order · internal
+- [[10 Projects/AI Second Brain/memory/context/stack|stack]] — recorded environment and planned runtime choices; inventory pending · internal
+- [[10 Projects/AI Second Brain/memory/projects/ai-second-brain|project memory]] — purpose, current sequence and dependencies · internal
 - [[10 Projects/AI Second Brain/memory/glossary|glossary]] — decoder ring for project terms · internal
 
 ## 20 Areas
@@ -44,4 +47,4 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[90 System/skills/classify-session/SKILL|classify-session]], [[90 System/skills/weekly-assessment/SKILL|weekly-assessment]], [[90 System/skills/race-readiness/SKILL|race-readiness]] — the three showcase skills · internal
 
 ## Not yet indexed
-`10 Projects/AI Second Brain/memory/context/stack.md`, `memory/projects/ai-second-brain.md`, `README.md`, `Welcome.md`.
+`Welcome.md`.

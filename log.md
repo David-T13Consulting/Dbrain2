@@ -67,3 +67,6 @@ Not done here: the branch deletions and the push. D50 is the convention; the cle
 
 ## [2026-10-01] decision | Standing home for bulky source material (D51)
 David approved: `~/Documents/Source_Material/<project-or-topic>/` is the one place for large binaries, outside the vault and git. The AI Second Brain archive moved there from `~/Desktop/AI_SecondBrain_Project/` (checksum-verified, 70 files, 239MB). Pointer note `00_Source_Material.md`, project README, `stack.md`, glossary and the `90 System/README.md` large-files rule updated to the new path.
+
+## [2026-10-01] ingest | Product School (3 courses) → 30 Resources/Product School
+David overrode the "propose, don't populate" rule for this ingest and chose `public` classification. 11 notes from the three Apple Notes PDF exports (AI Product Strategy, Advanced Agents, Product Strategy), own words, no secrets copied. Pointer note flags credentials in the Advanced Agents PDF (revoke and redact).

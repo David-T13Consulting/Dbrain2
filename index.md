@@ -109,6 +109,21 @@ Maintained model understanding, primary-source snapshots and separate local meas
 - [[30 Resources/Local AI/benchmark-ledger|benchmark ledger]] — dated publisher scores and local results, kept distinct · internal
 - [[30 Resources/Local AI/sources|source register]] — pinned model cards and external evidence archive · internal
 
+## 30 Resources — Product School
+Own-words notes from David's three Product School courses (AI Product Strategy, Advanced Agents, Product Strategy). All `public` · draft, written 1 Oct 2026.
+- [[30 Resources/Product School/README|README]] — hub, reading order, cross-cutting themes · public · draft
+- [[30 Resources/Product School/ai-strategy-bet-and-moat|ai-strategy-bet-and-moat]] — archetypes, moat diagnostic, flywheel, kill switch · public · draft
+- [[30 Resources/Product School/ai-unit-economics-and-pricing|ai-unit-economics-and-pricing]] — margin compression, model cascading, pricing models · public · draft
+- [[30 Resources/Product School/ai-trust-evals-and-reliability|ai-trust-evals-and-reliability]] — golden datasets, confidence UX, reliability contract · public · draft
+- [[30 Resources/Product School/ai-governance-and-compounding|ai-governance-and-compounding]] — governance as GTM, agent locks, shadow AI audit · public · draft
+- [[30 Resources/Product School/ai-roadmap-and-board-pitch|ai-roadmap-and-board-pitch]] — horizons, AI metrics, living strategy repo · public · draft
+- [[30 Resources/Product School/advanced-agents-design-and-teams|advanced-agents-design-and-teams]] — anatomy, patterns, multi-agent archetypes · public · draft
+- [[30 Resources/Product School/advanced-agents-memory-tools-evals-deploy|advanced-agents-memory-tools-evals-deploy]] — memory, RAG, MCP, four eval types, rollout · public · draft
+- [[30 Resources/Product School/product-strategy-vision-and-prioritisation|product-strategy-vision-and-prioritisation]] — strategy frameworks, OKRs, RICE/WSJF, roadmaps · public · draft
+- [[30 Resources/Product School/product-strategy-leading-teams-and-influence|product-strategy-leading-teams-and-influence]] — feedback, charter, stakeholders, negotiation · public · draft
+- [[30 Resources/Product School/product-strategy-financials-and-ai-leadership|product-strategy-financials-and-ai-leadership]] — unit economics, kill criteria, AI leverage · public · draft
+- [[30 Resources/Product School/sources|sources]] — pointer note and caveats · public · draft
+
 ## 90 System
 - [[90 System/weekly-local-model-review|weekly local-model review]] — procedure, prepared task prompt and pending scheduler activation · internal
 - [[90 System/README|README]] — vault conventions for humans · internal

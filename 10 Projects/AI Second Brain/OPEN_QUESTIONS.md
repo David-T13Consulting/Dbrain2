@@ -49,7 +49,7 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 **Affects:** rubric I6 (current D27: 7 days after races up to 21 km; 14 after marathon/ultra/mountain). The former flat-window description was stale.
 **Owner:** decide from held-out batches. If short races (10 km) wrongly turn easy runs into "recovery", scale the window by km-effort.
 
-### OQ-8 · Project instructions in claude.ai are stale
+### OQ-8 · Project instructions in claude.ai are stale — ✅ RESOLVED 1 Oct 2026 (David pasted the revised text; vault path, Source_Material location and D50 git convention)
 **Owner:** David · they still point to `~/Desktop/AI_SecondBrain_Project/`; the vault has been `~/Documents/Dbrain2/10 Projects/AI Second Brain/` since 8 Sep. Replacement text is at the bottom of the project doc `claude/ai-second-brain-project.md`.
 
 ### OQ-11 · Second domain: family logistics inputs (parked)

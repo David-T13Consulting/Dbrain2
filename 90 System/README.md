@@ -17,7 +17,7 @@ PARA structure:
 - No client-confidential data enters this vault. Synthetic/anonymised material only.
 - Agent access is **read-only by default**; David may authorize specific edits in a session. Runtime writes are planned for S3 only after T4.2 rollback/restore tests, through a scoped writer applying approved patches. No blanket write permission follows from passing a test.
 - **Large files never enter the vault.** Media, PDFs, recordings, anything bulky: keep them in a plain
-  folder elsewhere on disk, never git-tracked, and leave a pointer note in the vault (path + one-line
+  folder elsewhere on disk (standing home: `~/Documents/Source_Material/<project-or-topic>/`), never git-tracked, and leave a pointer note in the vault (path + one-line
   summary) so they stay findable. Example: `10 Projects/AI Second Brain/00_Source_Material.md`.
   Update the pointer note if the file ever moves — a stale path is worse than no note.
 - **Fact-check before adding anything.** Nothing becomes structured knowledge (Projects / Areas /

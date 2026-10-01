@@ -89,7 +89,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 *Historical foundations: gate met 29 Sep. T0.7 remains future-only; original 14 Sep deadline is superseded.*
 
 - [x] **T0.1 · Revoke the Telegram bot token** ✅ done 8 Sep `5 min` `🔴 security`
-  Token `8842032811:AAFH…` is in `00_Source_Material/Product_School/Product School - Advanced Agents.pdf` (p.2). Revoke via BotFather → `/mybots` → select → API Token → Revoke.
+  Token `8842032811:AAFH…` is in `~/Documents/Source_Material/AI_Second_Brain/Product_School/Product School - Advanced Agents.pdf` (p.2). Revoke via BotFather → `/mybots` → select → API Token → Revoke.
 - [x] **T0.2 · Rotate the four Zoom recording passcodes** `10 min` `🔴 security` ✅ **closed 29 Sep — mitigated, not rotated.** Recordings are Product School's, not David's to rotate. PDF remains outside the vault, ungit-tracked (rule 7). **1 Oct qualification:** this location alone does not prove access isolation; verify reachable roots in P1.3 without exposing credentials.
   Same PDF. Lower severity than the token but they're recordings of paid course content.
 - [x] **T0.3 · Run the 30-day audit prompt** `20 min` ✅ **closed 29 Sep — superseded.** Its only purpose was evidence for T0.4, which was locked 8 Sep from David's actual recent topics.
@@ -207,6 +207,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 ## Knowledge base follow-ups
 
+- [ ] **Product School / NN/g follow-ups** (1 Oct): 🔴 revoke the bot token and redact meeting passcodes in the Advanced Agents PDF (all copies); export Apple Notes "Vibe Coding", "AI Product Management", "ProdSchool - MCPs" to PDF and ingest; ingest remaining NN/g decks (done 1 Oct: journey mapping, personas, persuasion, lean UX; workshops are image-only, needs OCR; ~20 other folders remain); review draft notes and promote status; git agent to commit the handoff entry.
 - [ ] **SAFe KB follow-up** (non-roadmap, 1 Oct): verify 6.0 / 2024+ deltas against primary sources; close the AI-Native gaps listed on `ai-native-safe.md` (12 CSFs, Sense and Respond activities, robots-blocked framework pages, Summit recordings); optional pass on toolkit videos. See OQ-17.
 
 ---

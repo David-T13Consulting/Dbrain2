@@ -55,10 +55,10 @@ material (large binaries) lives *outside* the vault entirely and isn't git-track
 └── 90 System/                            ← vault-wide conventions, read this too
     └── README.md
 
-~/Desktop/AI_SecondBrain_Project/         ← NOT the vault. Source archive only.
-└── 00_Source_Material/                   ← 239MB — 67 webinar screenshots + 3 course PDFs
-                                             not git-tracked, already distilled into the summary
-                                             docs above. Findable via 00_Source_Material.md.
+~/Documents/Source_Material/              ← NOT the vault. Standing home for all bulky source material.
+└── AI_Second_Brain/                      ← 239MB — 67 webinar screenshots + 3 course PDFs
+    ├── Prisme_One_Webinar/                  not git-tracked, already distilled into the summary
+    └── Product_School/                      docs above. Findable via 00_Source_Material.md.
 ```
 
 ## The three sources

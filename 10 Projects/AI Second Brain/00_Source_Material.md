@@ -8,7 +8,7 @@ classification: internal
 `01_Key_Topics_Summary.md`, `02_Critical_Assessment.md`, `03_Product_School_Playbook.md`.
 Kept as a reference archive in case something needs re-checking against the original.
 
-**Path:** `~/Desktop/AI_SecondBrain_Project/00_Source_Material/`
+**Path:** `~/Documents/Source_Material/AI_Second_Brain/` (moved from `~/Desktop/AI_SecondBrain_Project/00_Source_Material/` on 1 Oct 2026, D51)
 
 | Subfolder | Contents |
 |---|---|
@@ -21,3 +21,4 @@ pointer note like this — path + one-line contents summary — kept here in the
 session (or you) can always find them. **Keep this note's path current if the archive ever moves.**
 
 *Written 8 Sep 2026, when project tracking moved into the vault (D12).*
+*Moved 1 Oct 2026 (D51): checksum-verified copy, old Desktop folder retired. `~/Documents/Source_Material/` is now the standing home for all bulky source material, one subfolder per project or topic.*

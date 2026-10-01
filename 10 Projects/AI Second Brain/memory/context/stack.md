@@ -10,7 +10,7 @@ Recorded environment, not a fresh inventory. Verify installed tools, reachable r
 | | |
 |---|---|
 | **Machine** | MacBook Air, Apple M2, 24 GiB RAM, 8 CPU cores, macOS 27.2; measured 1 Oct (OQ-4 resolved). See [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|benchmark]] |
-| **Connected folders** | `~/Documents/Dbrain2` (the vault, git-tracked) and `~/Desktop/AI_SecondBrain_Project` (source-material archive, not git-tracked) |
+| **Connected folders** | `~/Documents/Dbrain2` (the vault, git-tracked) and `~/Documents/Source_Material` (bulky source material, outside the vault, not git-tracked; moved from `~/Desktop/AI_SecondBrain_Project` on 1 Oct, D51) |
 | **Project root** | `~/Documents/Dbrain2/10 Projects/AI Second Brain/` |
 | **Timezone** | Europe/Brussels |
 | **Reachable via Claude** | Desktop files, shell (sandboxed to connected folders), built-in browser, Chrome extension, Dispatch from phone |

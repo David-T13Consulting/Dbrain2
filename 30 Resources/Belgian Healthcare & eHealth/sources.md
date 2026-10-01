@@ -67,8 +67,46 @@ Retrieved and read in full as PDFs on 1 October 2026. These are the basis of
 | **8** — interpretative rules | Emergency-care exclusion; *aide-soignant* delegation | M.B. 24.9.2025 | `…/SiteCollectionDocuments/nomenclatureart08_interpretation.pdf` |
 | **15** — interpretative rules | Surgery: the 100%/50% distinct-operative-field rule, K120/N200/I200 hospital threshold | M.B. 24.6.2003 | `…/SiteCollectionDocuments/nomenclatureart15_interpretation.pdf` |
 
-All paths are relative to `https://www.inami.fgov.be`. Article 15's own text and articles 5, 17 and 24
-were **not** retrieved — see the gaps list.
+All paths are relative to `https://www.inami.fgov.be`.
+
+### Full corpus retrieval (1 October 2026)
+
+A second pass retrieved the **complete nomenclature**: all **63 article texts** and **45 interpretative-rule
+documents**, totalling ~4.9 million characters, then mined for rule-bearing language. This is the basis of
+[[nomenclature-map]], [[billing-engine-rule-model]] and the eight per-profession pages.
+
+| Resource | URL pattern |
+|---|---|
+| Article index | `/fr/nomenclature/nomenclature-textes` |
+| Article page (per article) | `/fr/nomenclature/nomenclature-textes/nomenclature-article-<n>` — where `<n>` is `1`…`37`, `14-a`…`14-n`, `17bis`, `17ter`, `17quater`, `24bis`, `27-1`, `28-ss-1-7`, `28-ss-8`, `28-1`, `29-1`, `33bis`, `33ter`, `35bis` |
+| Article text PDF | `/SiteCollectionDocuments/nomenclatureart<NN>_<YYYYMMDD>_<nn>.pdf` — **the current version is the link with a single date**; historical versions carry a second (end) date, and `_portee` files are scope documents |
+| Interpretative rules PDF | `/SiteCollectionDocuments/nomenclatureart<NN>_interpretation.pdf` — a stable, guessable pattern |
+
+**Current versions confirmed read** include art. 1 (1.11.2025), 2 (1.7.2026), **7 (1.7.2026)**,
+**8 (1.9.2026)**, 9 (1.7.2026), 5/6 (1.6.2026), 17 (1.7.2026), 20 (1.9.2026), 24 (1.9.2026),
+26 (1.9.2026), 28/1 (1.7.2026), 30 (1.5.2024), 31 (1.8.2026), **36 (1.9.2026)**, **37 (1.9.2026)**.
+
+**Six articles could not be retrieved in a current version** — the article page offered no open-ended
+PDF, so a dated one was taken: **27, 28 §1–7, 28 §8, 29, 35, 35bis**, some dating from **2012–2014**.
+Anything drawn from these is flagged in [[billing-rules-devices-and-aids]] and must be re-checked.
+
+**Correction made during this pass.** An earlier draft cited physiotherapy `560011` as the lead 30-minute
+session code, from the text in force since 2014. The current 1 July 2026 text leads with a **`567xxx`
+series** (including a new intake code at the first session of a treatment) and retains `560011` as a
+§10-limited fallback. Both affected pages were corrected. The lesson is recorded in
+[[billing-engine-rule-model]]: reference data needs effective dates, and so does the rule set.
+
+### Mining method
+
+Rule-bearing sentences were extracted by pattern across the whole corpus — cumulation prohibitions and
+allowances, frequency caps, minimum intervals, age conditions, médecin-conseil agreement, prescription
+requirements, reductions, supplements, time-of-day and operative-field language — then counted per article
+to locate complexity, and read in context before being written up. Counts appear in [[nomenclature-map]].
+**648 numbered *règles interprétatives*** exist across the 45 interpretative documents.
+
+Derived artefacts (extracted text, per-article rule counts) were kept in the session scratchpad and are
+**not** in the vault: they are reproducible from the URL patterns above, and the vault's large-file rule
+applies.
 
 Secondary, used only for orientation and explicitly flagged in the page: INAMI/Le Spécialiste coverage
 of urgent-visit supplements and the consultation/vaccination cumulation reminder; Medi-Sphere on
@@ -166,5 +204,9 @@ Collected from the *Gaps and figures to verify* sections across the pages. The l
 6. **Therapeutic-link durations** by type.
 7. **The 7th vs 8th premium parameter** distinction for medical-home GPs.
 8. **Legal basis mapping** under GDPR for each processing purpose.
-9. **Key-letter monetary values** and the coefficient → euro conversion mechanism.
-10. **Nomenclature articles 5 (dentists), 15 text, 17 (imaging), 24 (clinical biology)** — not retrieved.
+9. **Key-letter monetary values** — the conversion mechanism is confirmed (art. 1 §3: a conventionally
+   fixed euro value per letter) but the values themselves were not retrieved.
+10. **Article 24's complete numbered application-rule list** — the single largest remaining extraction
+   job, and the highest value for a laboratory billing engine.
+11. **Current versions of articles 27, 28 §1–7, 28 §8, 29, 35, 35bis.**
+12. **Coefficients for article 36 (speech therapy) R-letter codes** — rules captured, values not.

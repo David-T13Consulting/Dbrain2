@@ -14,6 +14,14 @@ from the primary texts.
 Everything below is from the official INAMI nomenclature articles and their *règles interprétatives*,
 retrieved 1 October 2026 — see [[sources]]. Versions are stated per article because they differ.
 
+> **This page is the primer.** It covers the cross-cutting concepts using four professions as worked
+> examples. For the complete picture: [[nomenclature-map]] maps all 63 articles to professions and key
+> letters; [[billing-engine-rule-model]] specifies the 19 constraint types an engine must implement; and
+> there is a page per profession — [[billing-rules-physicians]], [[billing-rules-physiotherapy]],
+> [[billing-rules-nursing]], [[billing-rules-dental]], [[billing-rules-midwifery]],
+> [[billing-rules-speech-therapy]], [[billing-rules-labs-and-imaging]],
+> [[billing-rules-devices-and-aids]].
+
 ## How a code resolves to a fee
 
 A nomenclature line has three parts:
@@ -103,7 +111,8 @@ coefficient**.
 
 | Code | Service | Coefficient |
 |---|---|---|
-| `560011` | Individual session, average personal input **30 minutes** | **M 24** |
+| `567011` / `567055` | Individual session, average personal input **30 minutes** (lead codes in the current 1.7.2026 text) | **M 24** |
+| `560011` | Individual session, 30 minutes — fallback where §10 limitations block `567011` | M 24 |
 | `560523` | Individual session, average personal input 15 minutes | M 12 |
 | `560696` | Individual session, 15 min: **2nd session of the day** per §11 | **M 12** |
 | `561396` | Same, in another setting | M 12 |
@@ -115,6 +124,10 @@ So **M 24 → M 12 is literally 50%**. But read the descriptions before calling 
 session is specified at *30 minutes* of personal input and the second-of-day code at *15 minutes*. It
 is half the coefficient for half the specified time — a different, shorter service, not a discount on
 the same one.
+
+*(Corrected 1 Oct 2026: an earlier draft of this page cited `560011` as the lead 30-minute code, from the
+text in force since 2014. The current 1 July 2026 text leads with a `567xxx` series and keeps `560011`
+as a §10-limited fallback. Detail: [[billing-rules-physiotherapy]].)*
 
 The conditions on it are strict, and they are a workflow specification (article 7, §§11–12):
 

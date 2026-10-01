@@ -31,7 +31,9 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
 - Lint weekly with `90 System/lint-checklist.md`. Report findings read-only; fix only what David approves.
 
 ## Multi-agent work
-- Cowork (Claude desktop) edits files but never runs git. Claude Code / Codex do all git work: branch, commit, push, PR.
+- Cowork (Claude desktop) edits files but never runs git. Claude Code / Codex do all git work.
+- **Commit straight to `master`; keep history linear.** Create a branch only for genuinely speculative work that may be discarded, and delete it as soon as it lands. Branch-per-agent is not the convention: on 1 Oct 2026 it produced two stale branches and a wandering HEAD in a single day, with no review benefit, because only one agent commits and the history never diverges.
+- Before switching branches or deleting one, check for another agent's uncommitted work in the tree.
 - Cowork lists its uncommitted changes in `90 System/handoff.md`. Before your own work, commit those as their own commit, then clear the entry.
 - Never commit, revert or overwrite another agent's uncommitted files unless they are in the handoff. If unsure, stop and ask David.
 

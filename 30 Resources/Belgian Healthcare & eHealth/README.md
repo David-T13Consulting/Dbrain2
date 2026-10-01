@@ -23,7 +23,10 @@ or vendor. See [[sources]] for the full source register and [[#What this deliber
 | 1 | [[institutions-and-actors]] | Who the players are and who decides what |
 | 2 | [[reimbursement-and-financial-flows]] | How money actually moves: nomenclature, fee-for-service vs forfait, DMG |
 | 3 | [[mycarenet-services-and-flows]] | The billing and administrative rails, message by message |
-| 4 | [[billing-rules-and-cumulation]] | The nomenclature as a rules engine: cumulation, same-day rules, place and time |
+| 4 | [[billing-rules-and-cumulation]] | Cross-cutting primer: the four same-day patterns, place, time, qualification |
+| 4a | [[nomenclature-map]] | **All 63 articles**, mapped to professions and key letters, with rule density |
+| 4b | [[billing-engine-rule-model]] | **The engine spec**: 19 constraint types, evaluation order, schemas, test cases |
+| 4c | Per profession | [[billing-rules-physicians]] · [[billing-rules-physiotherapy]] · [[billing-rules-nursing]] · [[billing-rules-dental]] · [[billing-rules-midwifery]] · [[billing-rules-speech-therapy]] · [[billing-rules-labs-and-imaging]] · [[billing-rules-devices-and-aids]] |
 | 5 | [[ehealth-platform-and-apis]] | The federal technical platform and its ~80 APIs |
 | 6 | [[identity-access-and-consent]] | Who is allowed to see a record, and how that is proven |
 | 7 | [[clinical-data-sharing-and-standards]] | KMEHR, FHIR, hubs, Sumehr, VIDIS, Recip-e |
@@ -66,7 +69,9 @@ or vendor. See [[sources]] for the full source register and [[#What this deliber
 11. **The nomenclature is a rules engine, not a price list.** The same clinical act carries different
     codes by qualification, place, time of day and what else was billed that day — and "a second
     service on the same day" is handled four incompatible ways across doctors, surgery,
-    physiotherapy and nursing. See [[billing-rules-and-cumulation]].
+    physiotherapy and nursing. **The key letter encodes the profession; paired code numbers encode
+    ambulatory vs hospitalised.** All 63 articles are mapped in [[nomenclature-map]]; the 19 constraint
+    types a billing engine must implement are specified in [[billing-engine-rule-model]].
 
 ## How to use this with a build
 

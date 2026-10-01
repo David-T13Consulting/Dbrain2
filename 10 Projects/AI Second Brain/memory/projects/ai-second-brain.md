@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # Project — AI Second Brain
 
 **Also called:** the second brain, the AI system, the showcase system

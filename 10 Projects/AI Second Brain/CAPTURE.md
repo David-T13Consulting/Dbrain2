@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # Capture Protocol — talking to the system on the go
 
 **Purpose:** get a thought out of your head and into the vault with zero friction, while walking, between meetings, or anywhere you aren't at the desk.

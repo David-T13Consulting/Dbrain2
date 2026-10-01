@@ -1,6 +1,9 @@
+---
+classification: internal
+---
 # Tasks — AI Second Brain Project
 
-**Updated:** 30 Sep 2026 (session 5) · **Phase:** Week 0 — Foundations · **Target:** client-ready December 2026
+**Updated:** 1 Oct 2026 (session 6) · **Phase:** Week 0 — Foundations · **Target:** client-ready December 2026
 
 ---
 
@@ -10,6 +13,18 @@
 
 After that: T0.6 (check firm's AI policy — needs you, not me). T0.2 and T0.3 closed 29 Sep.
 Then T1.2 (`AGENTS.md`, by hand) and T1.4 (bounded knowledge migration) are unblocked — both were waiting on T0.4.
+
+---
+
+## LLM Wiki adoption (D41–D44, 1 Oct)
+
+- [x] Create `index.md` and `log.md` at the vault root ✅ 1 Oct
+- [x] Add "Wiki operations" to AGENTS.md ✅ 1 Oct
+- [x] Write `90 System/lint-checklist.md` and run the baseline ✅ 1 Oct
+- [x] **Decide on the 15 notes without `classification:`** ✅ 1 Oct, applied as proposed. Proposal: `internal` for project notes, Welcome.md `public`, the root CLAUDE.md stub exempt (one line, imports AGENTS.md)
+- [ ] Triage the two Inbox items (`assistant-scope-ideas`, `how-to-automate-pm-job`) at the next weekly pass, and run lint then
+- [ ] Answer OQ-12 (showcase framing) and OQ-13 (raw layer, wiki scope)
+- [ ] Revisit agent-run lint and index/log appends by agents after T4.2
 
 ---
 

@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # Context — stack, environment, constraints
 
 ## Environment

@@ -1,6 +1,9 @@
+---
+classification: internal
+---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 30 Sep 2026 · **Updated by:** Claude (session 5)
+**Last updated:** 1 Oct 2026 · **Updated by:** Claude (session 6)
 
 ---
 
@@ -97,12 +100,27 @@ Append-only. Each entry: what, why, and what would change it.
 | D38 | 30 Sep | **Batch 03 #1 relabelled** intervals → long: David, "most likely misclick". Recorded as a ground-truth correction, not a rubric change | Laps showed no reps | — |
 | D39 | 30 Sep | **Unknown-gear cut-off 25 m/km** (G2): ≥25 → trail, <25 → road | David chose 25 after 75 was checked against his labels (75 would flip two trail runs to road); 25 fits all three batch 03 unknown-gear rows | Unknown-gear rows near 25 disagree |
 | D40 | 30 Sep | **Long = over 15 km** (road, trail); km-effort over 15 on mountain terrain. **A long run can also be tempo** → `long` + `tempo_block` (David: "a 15+ km long run can also be tempo"). Scoring rule for the golden set: David's `tempo` on a run over 15 km counts as agreement when v1.x outputs `long` + `tempo_block`; labelling from batch 04 offers "Long with tempo" as its own answer so he never has to choose | Replaces the 75 min / 2 h durations. Checked on dev rows: km-effort only in the mountains, otherwise the 11 km / 458 m easy trail run of 4 Aug 2026 would become long | A >15 km run that David calls tempo has no tempo block in the data |
+| D41 | 1 Oct | **`index.md` and `log.md` at the vault root, gated by rule 8.** Claude proposes each entry, David approves. Log prefix `## [YYYY-MM-DD] op | title`. Index is the retrieval layer (agentic search, no vector RAG). Seeded from file names and existing summaries | Karpathy's LLM Wiki gist: the index replaces embedding RAG at moderate scale, the log gives a greppable timeline. Vault had neither. David chose "both now, gated" | Approval overhead per entry slows the Strava work |
+| D42 | 1 Oct | **Supervised ingest = the governance demo:** "LLM Wiki with a human gate and an audit log". Reading to confirm (OQ-12): the Strava workflow stays the showcase content, and the gate plus log are the governance wrapper | The gist allows supervised, one-source-at-a-time ingest. That is rule 8 turned into a demo, and it fits Governance = GTM. Risk: competes with "depth over breadth" if treated as a second showcase | OQ-12 answer says it is a second showcase, or H1 slips |
+| D43 | 1 Oct | **Lint = weekly triage step with a manual checklist** (`90 System/lint-checklist.md`), read-only, countable. Agent-run lint after Week 4 (T4.2) | Gist lint: orphans, contradictions, stale claims, missing pages, gaps. Counts make it measurable. First baseline run: 15 notes lack `classification:` (rule 3) | Checklist yields no findings for 4 weeks |
+| D44 | 1 Oct | **Good query answers get filed back as notes, through the rule 8 gate.** Added to AGENTS.md under "Wiki operations" together with the index/log/ingest/lint rules | The gist's compounding effect depends on answers not disappearing into chat. The gate keeps David as the populator | Triage load becomes the bottleneck |
 
 ---
 
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 6 — 1 Oct 2026 · Claude
+**Summary:** adopted the Karpathy LLM Wiki pattern in governed form. D41–D44 logged. Two Inbox/Resources notes created, vault-root `index.md` and `log.md` added, AGENTS.md gained a "Wiki operations" section, lint checklist written and run once.
+**Did:**
+- Inbox: dropped "how to automate the PM job" (French PM-agent guide) verbatim. Unprocessed.
+- `30 Resources/Second Brain Best Practices.md` (draft): digest of the Karpathy gist (primary) and Tina Huang's video (secondary). Superseded an AI-written CLAUDE.md template and a 150–200 page scale claim. Qmd and any search layer stay deferred to month 4+ (rule 4).
+- David decided D41–D44 by multiple choice (all four recommended options).
+- Created `index.md`, `log.md`, `90 System/lint-checklist.md`. Edited AGENTS.md (hand-written v1 from D17): added 5 lines under "Wiki operations".
+- Baseline lint: 15 notes missing `classification:`, 3 orphans, 0 secrets, 0 large files. Nothing fixed.
+- David approved the M5 fix: 13 project notes → `internal`, Welcome.md → `public`, root CLAUDE.md stub exempt. M5 = 0. Committed.
+**Pick up at:** T3.1 batch 04 unchanged as the next labelling action. First weekly lint due with the next triage.
 
 ### Session 5 — 30 Sep 2026 · Claude
 **Summary:** held-out scores v1.2 → v1.3: intent 50% → 75%, terrain 85% → 90%. D27–D40 logged. Rubric v1.4, classify-session v0.5, dated baseline (zones + Strava pace predictions), monthly pace-check scheduled task (1st of month, 08:52). Session closed by David (tired).

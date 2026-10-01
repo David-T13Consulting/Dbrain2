@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # Glossary — the decoder ring
 
 Three sources, three vocabularies. This is the full list; the ~20 most-used live in `CLAUDE.md`.

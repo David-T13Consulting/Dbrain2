@@ -23,6 +23,13 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
 - Link notes with `[[wikilinks]]`.
 - After each change David approves, commit with a message saying what changed and why.
 
+## Wiki operations
+- `index.md` (vault root) catalogs the notes in 10–40 and 90. `log.md` is append-only; each entry starts `## [YYYY-MM-DD] op | title`.
+- Appending to either for a change David approved this session counts as part of that change.
+- Ingest one source at a time: discuss takeaways with David, propose the pages to create or update, wait for approval, then write, update `index.md` and append to `log.md`.
+- Query: read `index.md` first, then the pages. If an answer is worth keeping, propose it as a note (classification and sources included) and file it only after David confirms.
+- Lint weekly with `90 System/lint-checklist.md`. Report findings read-only; fix only what David approves.
+
 ## Where to start
 - Active work lives in `10 Projects/<name>/`. Read that project's CLAUDE.md or README first.
 - Conventions written for humans are in `90 System/README.md`.

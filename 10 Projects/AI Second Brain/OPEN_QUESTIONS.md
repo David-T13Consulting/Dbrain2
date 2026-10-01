@@ -1,6 +1,9 @@
+---
+classification: internal
+---
 # Open Questions
 
-**Updated:** 30 Sep 2026 · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 1 Oct 2026 · Open questions block work. Resolve them or explicitly park them.
 
 ---
 
@@ -38,6 +41,14 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 - Where does each source live (commune trash calendar, school menus, kids' activity schedules: site, portal, email)?
 - Who else would use it (second user for week 10)?
 - David's rule on children's data (proposal: minimised, first names/initials only, never demoed; synthetic family for demos)
+
+### OQ-12 · Is the wiki governance framing a second showcase, or a wrapper?
+**Affects:** D42, "depth over breadth" · **Owner:** David
+Claude's reading: Strava classification and weekly assessment stay the one showcase. The gate plus audit log (supervised ingest, `log.md`) is how you show it is governed. If you want the wiki itself as a second showcase, that is a scope change and needs a roadmap decision.
+
+### OQ-13 · Raw layer and wiki scope
+**Affects:** D41–D44 · **Owner:** David
+(a) Triaged Inbox items: move to a permanent raw/archive area (gist's immutable raw layer), or delete after triage? (b) Does the wiki cover the whole vault, or only `30 Resources`? Default if unanswered: Inbox items archived in `40 Archive/raw`, wiki covers 10–40 and 90.
 
 ## 🟢 Nice to know
 

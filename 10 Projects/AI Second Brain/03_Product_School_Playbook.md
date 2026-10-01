@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # Product School — Digested Playbook
 
 **Source:** three course printouts (AI Product Strategy, Advanced Agents, Product Strategy), Sept 2026, with your own annotations.

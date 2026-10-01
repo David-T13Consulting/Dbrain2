@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # AI Second-Brain Project
 
 Building a personal AI system that works — and that stands up as proof of expertise in front of a client.

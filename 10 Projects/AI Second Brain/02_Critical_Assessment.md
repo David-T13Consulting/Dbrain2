@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # Critical Assessment — Webinar Roadmap vs. Current Best Practice
 
 **Purpose:** stress-test `01_Key_Topics_Summary.md` and `README.md` against what top sources actually recommend as of September 2026.

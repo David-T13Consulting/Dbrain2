@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # AI Webinar — Key Topics Summary
 
 **Source:** 67 screenshots captured Sept 2–4, 2026, from a French-language webinar/bootcamp called **"Prisme One" / "OS IA"** (creator: Eliott Meunier). Content spans two related sessions: a strategy webinar on building a personal AI operating system, and a bootcamp curriculum walkthrough (4 weeks + hackathon) plus a follow-up session on organizational impact.

@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # The Roadmap — Personal AI System, Client-Demonstrable in 3 Months
 
 **Supersedes** §5 of `02_Critical_Assessment.md`.

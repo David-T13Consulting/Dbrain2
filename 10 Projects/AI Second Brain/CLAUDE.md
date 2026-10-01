@@ -1,3 +1,6 @@
+---
+classification: internal
+---
 # Working Memory — AI Second Brain Project
 
 > **START HERE** if you are a Claude session entering this folder.

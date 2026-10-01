@@ -19,7 +19,7 @@ Not an engineer or designer, but works with them and can hold an informed techni
 
 Build an Obsidian second brain with a local model, access across devices by text and voice, and measurable multi-agent operation. Demonstrate building, operating and maintaining it by the December 2026 target; re-estimate dates after hardware/time assessment. Current sequence: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0.
 
-> Sits inside the **"Learning AI"** Claude Project, which carries two workstreams: this one (primary), and the Product School **Vibe Coding** training — a working app + deck using Lovable / Supabase / GitHub / Google Analytics. Different stack, different deliverable, status unconfirmed (OQ-5b). Don't blend them.
+> Sits inside the **"Learning AI"** Claude Project. **One workstream: this one.** The Product School **Vibe Coding** training (app + deck on Lovable / Supabase) was archived on 1 Oct 2026 (D62, OQ-5b) — it is not live work. If it revives it gets its own project folder. Historical references to a second workstream come from D10, which D62 supersedes.
 
 **The thesis:** the personal system is the substrate; the eval + governance layer is the product. *Governance = GTM.*
 
@@ -31,8 +31,13 @@ Build an Obsidian second brain with a local model, access across devices by text
 |---|---|---|
 | Showcase format | Live system I drive, screen-shared | 7 Sep |
 | Access and collaboration | David across devices first, then measured multi-agent execution; additional humans deferred | Amended 1 Oct, D45 |
+| Devices | iPhone · iPad · MacBook Air committed. Apple Watch and Tesla browser are S4 stretch | 1 Oct, D52 |
+| Hosting | Dedicated **always-on** host (Mac mini class, 24–32 GB, €800–1,500); the Air becomes a client. Not yet purchased; 32 GB recommended | 1 Oct, D53 |
+| Offline | Capture only — durable queue. No on-device inference initially | 1 Oct, D54 |
+| Capacity | 20+ h/week sustained | 1 Oct, D55 |
+| Service targets | Text p95 < 8 s · voice to first word < 5 s · RTO < 8 h · RPO zero confirmed captures | 1 Oct, D56 |
 | Security anchor | Generic but strict — tightest common denominator | 7 Sep |
-| Horizon | 3 months (≈ Dec 2026) | 7 Sep |
+| Horizon | 3 months (≈ Dec 2026); schedulable at D55 capacity | 7 Sep |
 
 ## Where this fits
 
@@ -77,7 +82,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 3. **Depth over breadth.** One showcase workflow, provably excellent.
 4. **Current scope (D45–D48):** local inference and controlled hosting now; remote text/voice next; multi-agent execution measured against a baseline. Defer MCP sprawl, unneeded vector infrastructure and additional human users. Knowledge writes remain approval-gated.
 5. **Six-week honesty check:** has anything shipped *out* of the system? If not, stop capturing.
-6. Every note gets `classification: public|internal|client` in frontmatter, from note one.
+6. Every note gets `classification: public|internal|client` in frontmatter, from note one. **New notes also carry `source`, `review_status`, `note_type` and `created`/`updated`** (D59). Retrofitting the 114 existing notes is P1.4, held until OQ-20 decides whether `classification` splits into separate domain/sensitivity/processing/sharing axes.
 7. **Large files (media, PDFs, recordings) never enter the vault.** They live outside it, ungit-tracked, with a pointer note (path + summary) left in the vault. See `00_Source_Material.md` for the current example.
 8. **Fact-check before adding anything to the vault.** Claude proposes, David confirms — before any fact, note, or inference about him becomes structured knowledge (Projects / Areas / Resources). Raw `capture:` drops into `00 Inbox` are exempt (unprocessed by design); the gate applies at triage, when something moves from Inbox into the structured vault. Claude helps structure the second brain; it does not populate it unilaterally.
 

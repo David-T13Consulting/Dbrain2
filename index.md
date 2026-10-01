@@ -130,7 +130,7 @@ Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–
 - [[30 Resources/NNg UX/ux-strategy|ux-strategy]] · [[30 Resources/NNg UX/ux-research-and-usability-testing|ux-research-and-usability-testing]] · [[30 Resources/NNg UX/measuring-ux|measuring-ux]] · [[30 Resources/NNg UX/leading-ux-teams-and-cross-functional-work|leading-ux-teams-and-cross-functional-work]] · [[30 Resources/NNg UX/journey-mapping|journey-mapping]] · [[30 Resources/NNg UX/personas|personas]] · [[30 Resources/NNg UX/persuasive-design-and-trust|persuasive-design-and-trust]] · [[30 Resources/NNg UX/lean-ux-and-agile|lean-ux-and-agile]] · [[30 Resources/NNg UX/ux-workshops|ux-workshops]] (stub) · [[30 Resources/NNg UX/ux-in-the-ai-era-2026|ux-in-the-ai-era-2026]] · [[30 Resources/NNg UX/sources|sources]] · public · draft
 
 ## 90 System
-- [[90 System/weekly-local-model-review|weekly local-model review]] — procedure, prepared task prompt and pending scheduler activation · internal
+- [[90 System/weekly-local-model-review|weekly local-model review]] — procedure, prepared task prompt and the activation/operating record; scheduled Thu 09:00 since 1 Oct, first-run evidence pending · internal
 - [[90 System/README|README]] — vault conventions for humans · internal
 - [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the git agent to commit · internal
 - [[90 System/lint-checklist|lint-checklist]] — weekly wiki health check, with countable results · internal

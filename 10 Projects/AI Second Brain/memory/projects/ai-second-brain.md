@@ -4,7 +4,7 @@ classification: internal
 # Project — AI Second Brain
 
 **Also called:** the second brain, the AI system, the showcase system
-**Status:** Active · S1 architecture alignment; running validation alongside · Started 7 Sep 2026 · Target Dec 2026, to re-estimate
+**Status:** Active · S1 closed on requirements (D52–D59), S2 next; running validation alongside · Started 7 Sep 2026 · Target Dec 2026, schedulable at 20+ h/week (D55)
 **Location:** `~/Documents/Dbrain2/10 Projects/AI Second Brain/`
 
 ## What it is
@@ -40,7 +40,11 @@ Full detail: `04_Roadmap.md`. Never summarise it from memory — read it.
 
 ## The critical path
 
-Running was selected (D14/D15); the wiki is shared platform work (D47). Next: inventory the Mac, define acceptance criteria and benchmark local retrieval/answers. Running labels continue independently; no requirement to finish all 150 before platform experiments.
+Running was selected (D14/D15); the wiki is shared platform work (D47). Hardware is inventoried and the S1 requirements are closed (D52–D59): a dedicated always-on host replaces the Air, offline is capture-only, targets are text p95 < 8 s and voice-to-first-word < 5 s, RTO 8 h, RPO zero confirmed captures.
+
+Next: **S2 — the scoped read-only query service and local model adapter**, built on the Air and measured against those targets. The host purchase gates sustained-performance numbers, not the build. Running labels continue independently; no requirement to finish all 150 before platform experiments.
+
+One workstream only: Vibe Coding was archived 1 Oct (D62).
 
 ## What would make this fail
 

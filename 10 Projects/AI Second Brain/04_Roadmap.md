@@ -3,7 +3,9 @@ classification: internal
 ---
 # The Roadmap — Local Personal AI System, Operated and Demonstrated
 
-**Amended 1 October 2026 at David's request.** The original rationale, H1/H2/H3 work packages and completed work are retained below. The delivery order in §0 replaces the original week-by-week schedule. December 2026 remains the target; dates will be re-estimated after the hardware benchmark and available weekly time are known. This amendment authorizes planning changes, not implementation or purchases.
+**Amended 1 October 2026 at David's request.** The original rationale, H1/H2/H3 work packages and completed work are retained below. The delivery order in §0 replaces the original week-by-week schedule.
+
+**Requirements closed later the same day (session 12, D52–D59):** devices, host availability, weekly capacity, numeric service targets and the source/metadata schema are now decided and recorded in §0. December 2026 is a schedulable target at 20+ h/week. Planning changes only — the always-on host is specified but not purchased.
 
 **Supersedes** §5 of `02_Critical_Assessment.md`.
 **Built from three sources:** the Prisme One webinar (personal architecture), Product School (rigour and commercial framing), and current published practice (mechanics, security, regulation).
@@ -14,14 +16,19 @@ classification: internal
 |---|---|
 | **Showcase format** | A live system you drive — screen-shared, real tasks, in front of a client |
 | **Access and collaboration** | David across devices first; measurable multi-agent execution next; additional human users deferred until the personal service is reliable |
+| **Devices** (D52) | Committed: iPhone, iPad, MacBook Air. S4 stretch: Apple Watch, Tesla in-car browser — same private endpoint, no architectural change |
+| **Availability** (D53) | Answers any time, any place. A dedicated always-on host (Mac mini class, 24–32 GB, €800–1,500) replaces the Air as inference host; the Air becomes a client |
+| **Offline** (D54) | Capture only: durable queue, idempotent retries, visible pending state. No on-device inference in the initial target |
+| **Capacity** (D55) | 20+ hours per week, sustained |
 | **Security anchor** | Generic but strict — design to the tightest common denominator |
-| **Horizon** | December 2026 target, subject to measured capacity and delivery gates |
+| **Horizon** | December 2026 — schedulable at the D55 capacity, still subject to delivery gates |
+| **Service targets** (D56) | Cited text answer p95 **< 8 s** · voice push-to-talk to first spoken word **< 5 s** · recovery time **< 8 h** · recovery point **zero confirmed captures** |
 
 ## 0. Current delivery order — amendment of 1 October 2026
 
 **Outcome:** an Obsidian second brain for personal and permitted professional use, running a local model, reachable across devices through text and voice, with evidence that David can build, operate and maintain it. Keep the running workflow as the established domain; supervised wiki maintenance is the shared platform. A small synthetic professional example later demonstrates transfer without importing client information.
 
-**Working architecture:** one inference host David controls, with authenticated clients on phone, tablet and laptop. Benchmark the current MacBook Air first. Dedicated hardware, models, runtime, networking and speech tools remain choices to evaluate; none is purchased, installed or selected by this amendment. Offline capture is required; full offline inference on every device is not part of the initial target.
+**Working architecture:** one inference host David controls, with authenticated clients on phone, tablet and laptop. **D53 settled the host question:** an always-on requirement rules out a travelling laptop, so the host is dedicated hardware and the Air becomes a client. Benchmark on the Air to choose the model and size memory, then confirm on the host — T9 is now "which spec and which model meet the D56 targets", not "Air or host". Models, runtime, networking and speech tools remain choices to evaluate; nothing is purchased, installed or selected by this amendment. Offline capture is required; full offline inference on every device is not part of the initial target.
 
 ### Six delivery stages
 
@@ -43,8 +50,8 @@ Security, evaluation and observability begin in S1/S2 and continue through all s
 | Layer | Plan |
 |---|---|
 | Inbox | Raw, unprocessed capture; triage remains a separate action |
-| Durable sources | Preserve approved original text or source records after triage; binary/audio content stays outside the vault under the existing policy; use stable IDs, hashes/versions and configurable locations rather than desktop paths alone |
-| Approved knowledge | Keep PARA and wikilinks in 10–40; add a minimal schema for note type, sources, review status and dates where used; retain facts, interpretations and unresolved contradictions distinctly |
+| Durable sources | Preserve approved original text or source records after triage; binary/audio content stays outside the vault at `~/Documents/Source_Material/<project-or-topic>/` (D51). Stable IDs are `src-<YYYYMMDDTHHmm>-<short content hash>` (D57). Voice audio is deleted on successful transcription, making the transcript the retained original evidence (D58) |
+| Approved knowledge | Keep PARA and wikilinks in 10–40. Minimum frontmatter (D59): `classification`, `source`, `review_status`, `note_type`, `created`/`updated` — new notes now, retrofit as P1.4 once OQ-20 settles whether `classification` splits into separate domain/sensitivity/processing/sharing axes. Retain facts, interpretations and unresolved contradictions distinctly |
 | System instructions | 90 System holds policy, schema, templates and readable procedures; AGENTS.md stays the vault authority |
 | Application code | Plan a separate repository for runtime, tools, tests, deployment and synthetic fixtures; current scripts remain in place until a separately authorized migration establishes one source of truth |
 | Runtime state | Queues, pending patches, caches, temporary audio and redacted traces outside the vault; retention and recovery rules defined before collection |
@@ -61,7 +68,7 @@ Classification informs access control but is not an access-control mechanism. En
 
 - Version corpus, model/quantization, prompts, rules, runtime and test inputs together for reproducibility. Maintain development sets and an untouched final acceptance set; tuning on a batch moves it to development.
 - Keep running thresholds in [[10 Projects/AI Second Brain/02_Architecture/success-thresholds|success-thresholds]]. Add separate suites for retrieval/citations/abstention, source-to-wiki updates, malicious source instructions, permissions, voice, interrupted jobs and concurrent edits.
-- Define numeric latency, quality and recovery targets before acceptance runs (P1.3/T6); report p50/p95 latency, peak memory, sample counts and test conditions. Set recovery-time and acceptable-data-loss objectives before restore drills.
+- Numeric targets are set (D56): text p95 < 8 s, voice to first word < 5 s, RTO < 8 h, RPO zero confirmed captures. Report p50/p95 latency, **peak memory** (it drives the 24 vs 32 GB host call), sample counts and test conditions — never an average alone. The < 5 s voice target is expected to be the first to come under pressure, since ASR, retrieval, generation and speech share one always-on box; S4 reports the real p95 and renegotiates rather than treating a miss as failure.
 - Score deterministic calculations against independent expected results. Use a model judge only where judgment is needed, with a documented rubric and human spot checks.
 - Use evidence states (supported, incomplete, conflicting, withheld) in the new UI. Existing skill confidence values are heuristic scores, not calibrated probabilities; preserve existing escalation behavior until any skill change is separately approved.
 - Report mandatory knowledge approvals separately from avoidable exception handling. Reducing approval volume is not a success target. Unsupported-claim and retrieval rates need explicit denominators and uncertainty; 150 cases do not establish a <1% failure rate with strong confidence.

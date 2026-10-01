@@ -3,24 +3,29 @@ classification: internal
 ---
 # Open Questions
 
-**Updated:** 1 Oct 2026 · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 1 Oct 2026 (session 12) · Open questions block work. Resolve them or explicitly park them.
 
 ---
 
 ## 🔴 Blocking
 
-No blocker to the read-only hardware inventory. Device/availability requirements and acceptance targets block final service design, not planning or bounded experiments. See OQ-4/OQ-14/OQ-15.
+Nothing blocks S2 implementation. Requirements and targets closed 1 Oct (D52–D59). The always-on host purchase (D53) gates sustained-performance *numbers*, not the build: implement on the Air, confirm on the host.
 
 ## 🟡 Needed soon
 
-### OQ-18 · Activate weekly model review and bound local benchmarking
-**Affects:** M4/M6 · **Owner:** David for scheduler access and resource preferences; assistant for task setup when available. Weekly source/benchmark review is requested. Procedure and task prompt are ready in [[90 System/weekly-local-model-review]], proposed Thursday 09:00 Europe/Brussels. No scheduler tool is exposed here, and desktop app access was denied. Activate in the desktop local-project scheduler and verify its first run; do not describe the checklist as active automation. Decide a time/download/storage budget before recurring local model downloads or compute-heavy comparisons. Until then weekly research can update published results and propose bounded tests, not silently upgrade models.
+### OQ-18 · Activate weekly model review — ✅ RESOLVED 1 Oct 2026
+David activated the weekly review in the desktop local-project scheduler (D60). M4 closed. **Two threads remain open but block nothing:** the task ID and first-run output still need pasting into [[90 System/weekly-local-model-review]]'s activation record, and the first two runs should be reviewed before the cadence is relied on. The download/storage budget for M6 is still unset — weekly research may update published results and propose bounded tests, but not silently upgrade models or pull weights.
 
-### OQ-17 · SAFe knowledge base: licence and currency before client use
-The SAFe pages are built from lapsed-licence 5.1 toolkits (own-words synthesis, `internal`). Before any client-facing use: re-obtain current assets (SAFe membership / SPC)? And verify AI-Native SAFe (June 2026) and the 2024+ Disciplines against framework.scaledagile.com. Owner: David. See `30 Resources/SAFe/sources.md`.
+### OQ-17 · SAFe knowledge base currency — ⛔ CLOSED 1 Oct 2026, not resolved (D61)
+David's call: the 5.1-era content is too old to be worth re-verifying, so the check will not be done. **The question is closed, not answered — so the constraint it was protecting against now stands permanently:** the SAFe pages are historical reference only and **must not be used client-facing**. Nobody has verified them against AI-Native SAFe (June 2026) or the 2024+ Disciplines. If a client engagement ever needs current SAFe material, re-obtaining the assets (membership / SPC) is a prerequisite, not an option. See `30 Resources/SAFe/sources.md`.
 
 ### OQ-19 · Product School and NN/g notes: review, credentials, remaining sources
 Notes are `public`/draft and in David's own-words synthesis; course figures are instructor heuristics. Needs: credential redaction in the Advanced Agents PDF (🔴), export of three unreadable Apple Notes, decision whether to ingest remaining NN/g decks. Opened 1 Oct.
+
+### OQ-20 · Should `classification` split into separate axes before the schema is retrofitted?
+**Blocks:** P1.4 only (the D59 frontmatter retrofit across 114 notes) · **Owner:** David.
+The `pro-private-split` capture of 1 Oct argues the single `classification` axis is too coarse: `internal` currently covers both business material *and* David's health data, and permits both cloud processing and demos of his own data. It proposes four independent dimensions — **domain** (personal/professional) · **sensitivity** (ordinary/sensitive) · **processing permission** (local-only/approved external) · **sharing permission** (private/approved for demo) — plus access enforced in the application rather than by labels.
+D59 deliberately kept the minimum schema narrow. If the split is likely to be accepted, design the schema once against the final shape and retrofit after; if not, P1.4 can proceed as specified. Either way the capture's **access-matrix proposal is a genuine S1 design item** that P1.3 did not cover, and the capture itself authorises no policy change: expanding what may enter the vault needs a deliberate edit to [[10 Projects/AI Second Brain/02_Architecture/data-policy|data-policy]]. Source: `00 Inbox/2026-10-01-1441-pro-private-split.md`, untriaged.
 
 ### OQ-3 · Colleague for a future two-person test (parked)
 **Affects:** T10 after S6 · **Owner:** David. Additional human users no longer precede multi-agent work. Revisit when the personal service is reliable; no simulated multi-user claim in the initial demo.
@@ -28,19 +33,17 @@ Notes are `public`/draft and in David's own-words synthesis; course figures are 
 ### OQ-4 · Current Mac hardware and capacity
 **Resolved 1 Oct by read-only measurement:** M2, 24 GiB RAM, 8 CPU cores; about 90 GiB free before download. Initial local benchmark ran successfully but exposed answer-quality failures. See [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|measurement record]]. Model selection, availability and sustained performance remain open; no purchase proposed.
 
-### OQ-14 · Devices, access and host availability
-**Blocks:** final S2/S4 design · **Owner:** David, P1.2. Which phone/tablet/laptop operating systems must work? Must the service run while the Air travels or sleeps? Working architecture is one controlled inference host with remote clients and offline capture; confirm availability expectations and any stricter offline-inference requirement.
+### OQ-14 · Devices, access and host availability — ✅ RESOLVED 1 Oct 2026
+**D52:** iPhone, iPad and the MacBook Air are committed clients; Apple Watch and the Tesla in-car browser are S4 stretch surfaces on the same private endpoint (the Watch needs a companion app or Shortcut; the Tesla has no CarPlay). **D53:** the service must answer any time, any place, so a dedicated always-on host (Mac mini class, 24–32 GB) replaces the Air as the inference host and the Air becomes a client. **D54:** offline means capture only — durable queue, idempotent retries, visible pending state; no on-device inference in the initial target.
 
-### OQ-15 · Time, budget and measurable service targets
-**Blocks:** calendar commitments and acceptance runs · **Owner:** David, P1.2/P1.3/T6. Weekly build time, possible hardware budget, acceptable query/voice latency, recovery time and tolerable data loss remain unspecified. Define numeric targets before acceptance runs; December remains a target, not a validated schedule.
+### OQ-15 · Time, budget and measurable service targets — ✅ RESOLVED 1 Oct 2026
+**D55:** 20+ hours a week sustained, which makes December 2026 schedulable. **D53:** €800–1,500 for the always-on host (purchase itself still a separate decision; 32 GB recommended over 24 GB because model, retrieval, local ASR and local TTS must be resident together before S5 adds roles). **D56:** cited text answer p95 < 8 s · voice push-to-talk to first spoken word < 5 s · recovery time < 8 h · recovery point zero confirmed captures. Report p50/p95 with sample counts and conditions. ⚠️ The < 5 s voice target is the likeliest to break; S4 reports the real p95 and renegotiates.
 
 ### OQ-16 · What counts as quality work in F3?
 **Blocks:** P3.5 rule change only · **Owner:** David. The weekly script flags no quality for `long` + `tempo_block`. The flag is broader than strict tempo and also occurs on easy runs. Decide the qualifying evidence before changing F3; preserve and version historical expectations.
 
-### OQ-5b · Is the Vibe Coding deliverable still active?
-**Blocks:** nothing today, but determines whether a second workstream needs planning
-**Owner:** David
-Project scope now formally covers both workstreams (D10). What's still unknown is whether the Vibe Coding app + deck is live work, already delivered, or abandoned. If it's live, it needs its own tasks and timeline — the tool stack (Lovable / Supabase) shares nothing with the second-brain build.
+### OQ-5b · Is the Vibe Coding deliverable still active? — ✅ RESOLVED 1 Oct 2026
+**Archived (D62).** Not live work. This project carries one workstream: the second brain. Supersedes D10's two-workstream scope. Nothing was moved to `40 Archive/` because it existed only as scope references in the tracking files — there were never any Vibe Coding notes. The `30 Resources/Product School/` notes are genuine knowledge and stay. If David revives it, it gets its own project folder rather than a share of this one.
 
 ---
 
@@ -64,10 +67,13 @@ Project scope now formally covers both workstreams (D10). What's still unknown i
 ### OQ-12 · Wiki versus domain showcase — resolved 1 Oct
 D47: running remains the established domain; supervised wiki maintenance is shared platform work. Demonstrate the complete lifecycle, with a small synthetic professional example at S6. This is the explicit scope amendment, not an additional production domain.
 
-### OQ-13 · Durable source storage, retention and schema
-**Partly resolved 1 Oct (D49, David):** the wiki covers the entire vault (PARA + 90 System). Triage moves the processed content to Projects/Areas/Resources/Archive/System by purpose; the verbatim capture moves untouched to `40 Archive/Inbox/` and the new note cites it in `source:`. Moves happen only at requested triage.
-**Still open:** retention/deletion (incl. audio, backups), stable IDs, minimum metadata.
-**Blocks:** P3.1 implementation; design in P1.3 · **Owner:** David. The amended plan preserves source evidence after approved triage and covers approved knowledge across PARA, with 90 System as schema/policy. Still choose the physical source location, retention/deletion rules (including audio and backups), stable IDs and minimum metadata. No automatic move to `40 Archive/raw`; inbox items remain untouched until requested triage.
+### OQ-13 · Durable source storage, retention and schema — ✅ RESOLVED 1 Oct 2026
+**D49 (routing):** the wiki covers the entire vault (PARA + 90 System). Triage moves processed content to Projects/Areas/Resources/Archive/System by purpose; the verbatim capture moves untouched to `40 Archive/Inbox/` and the new note cites it in `source:`. Moves happen only at requested triage.
+**D51 (physical location):** bulky material lives at `~/Documents/Source_Material/<project-or-topic>/`, outside the vault and git.
+**D57 (IDs):** `src-<YYYYMMDDTHHmm>-<short content hash>` — survives renames and triage moves, and the hash detects duplicates and silent edits.
+**D58 (audio retention):** deleted on successful transcription; the transcript becomes the retained original evidence. Consequence accepted: transcription quality is now an evidence-integrity concern, and the captures are bilingual.
+**D59 (metadata):** `classification` + `source` + `review_status` + `note_type` + `created`/`updated`, on new notes; retrofit is P1.4, gated on OQ-20.
+⚠️ **Not covered by these decisions, and still to be designed in T8/P6.1:** retention and deletion for *backups and git history* — removing a note does not remove earlier copies from either.
 
 ---
 

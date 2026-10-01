@@ -3,15 +3,17 @@ classification: internal
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 1 Oct 2026 (session 10) · **Phase:** S1 architecture alignment; running validation in parallel · **Target:** December 2026, schedule to re-estimate
+**Updated:** 1 Oct 2026 (session 12) · **Phase:** S1 closed on requirements (D52–D59); S2 next · **Target:** December 2026, now schedulable at 20+ h/week (D55)
 
 ---
 
 ## ▶ Next action
 
-> **P1.2/P1.3: settle devices, host availability and measurable service targets.** P1.1 is complete. Two local candidates and a first retrieval baseline are recorded in [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|the continuation report]]. Next independent work: close corpus/French retrieval gaps, independently review labels, compare another family and activate weekly model review (M4).
+> **P2.2: build the scoped read-only query service and local model adapter**, measured against the D56 targets (text p95 < 8 s). P1.2/P1.3 are closed — devices, always-on hosting, capacity, latency/recovery targets and the provenance schema are all decided (D52–D59). The always-on host purchase (D53) gates sustained-performance numbers, not the implementation: build on the Air, measure on the host. Also open: close corpus/French retrieval gaps (M5) and independently review the provisional labels.
 
 **Parallel domain action:** T3.1 batch 04 (rows 41–60) scores rubric v1.4 blind. T2.6 follows 4 October; T0.7 precedes the next contract. T0.6, T1.2 and T1.4 are already complete.
+
+**Action for David:** paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60) · decide the host purchase (D53, 32 GB recommended) · answer OQ-20 before the D59 retrofit is scheduled.
 
 ## Current execution order — S1–S6
 
@@ -20,8 +22,9 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 ### S1 · Align architecture
 - [x] **P1.0** Amend the roadmap and reconcile tracking pages, preserving historical decisions and completed tasks. ✅ 1 Oct; documentation only.
 - [x] **P1.1** Hardware inventoried 1 Oct: M2, 24 GiB RAM, 8 CPU cores, about 90 GiB free before download. OQ-4 resolved; first supplied-evidence local benchmark complete. See [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|measurement record]]. T9/P2 gates remain open.
-- [ ] **P1.2** Confirm devices/OSs, remote/offline expectations, host availability, weekly time and budget (OQ-14/OQ-15). No purchase implied.
-- [ ] **P1.3** Record data flow, scoped roots/tools, initial corpus and acceptance targets: quality, latency, recovery time and acceptable data loss. Define source retention/schema and code/runtime separation (OQ-13). Begin T6/T8.
+- [x] **P1.2** Devices/OSs, offline expectations, host availability, weekly time and budget. ✅ 1 Oct, structured interview → **D52** (iPhone/iPad/Air committed; Watch and Tesla browser are S4 stretch) · **D53** (always-on dedicated host, Mac mini class 24–32 GB, €800–1,500; 32 GB recommended; purchase still a separate decision) · **D54** (offline = capture only) · **D55** (20+ h/week). OQ-14 and the capacity half of OQ-15 resolved.
+- [x] **P1.3** Acceptance targets and source schema. ✅ 1 Oct → **D56** (text p95 < 8 s · voice to first word < 5 s · RTO < 8 h · RPO zero confirmed captures) · **D57** (source IDs `src-<YYYYMMDDTHHmm>-<hash>`) · **D58** (audio deleted on successful transcription) · **D59** (minimum frontmatter). OQ-13 and OQ-15 resolved. ⚠️ Still to document as part of T8, not blocking S2: the data-flow diagram, scoped roots/tools enumeration, bounded initial corpus and code/runtime separation.
+- [ ] **P1.4** Retrofit the D59 frontmatter (`source`, `review_status`, `note_type`, `created`/`updated`) across the 114 existing structured notes. **Unscheduled — do not start before OQ-20 is answered**, since splitting `classification` into separate axes would change the target schema. Current coverage: 7 notes have `source`, 10 have `created`, none have `review_status` or `note_type`.
 
 ### S2 · Prove local read-only answers
 - [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels.
@@ -65,7 +68,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] **M1** Create a dated, sourced model guide across language/vision/code, ASR, TTS, images and retrieval. ✅ 1 Oct; [[30 Resources/Local AI/README]].
 - [x] **M2** Record a second local candidate and first bounded lexical-retrieval experiment. ✅ 1 Oct; [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|results and limitations]]. This is development evidence, not P2 acceptance.
 - [x] **M3** Prepare weekly research/benchmark review procedure, source revisions and scheduling prompt. ✅ [[90 System/weekly-local-model-review]].
-- [ ] **M4** Activate and verify weekly local-project scheduling (proposed Thu 09:00 Europe/Brussels; next review 8 Oct); record automation ID and first successful output. No active job yet; OQ-18.
+- [x] **M4** Weekly local-project scheduling activated by David ✅ 1 Oct (D60, OQ-18 resolved). ⚠️ Open thread, not a blocker: the task ID and first-run output still need pasting into [[90 System/weekly-local-model-review]]'s activation record. Review the first two runs before relying on the cadence.
 - [ ] **M5** Extend retrieval corpus with authoritative D49 retention evidence; compare controlled bilingual query expansion. Review expected evidence independently; retain original failures and untouched provisional cases.
 - [ ] **M6** Compare another model family under comparable conditions. Set separate voice fixtures and local benchmark resource budgets before downloading additional modality models. Published benchmark review can proceed without downloads.
 
@@ -176,7 +179,8 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [ ] **T7** Evidence UX at S3: supported/incomplete/conflicting/withheld, concise evidence/citations, overrides and reviewed corrections. Existing skill confidence scores are heuristic; preserve escalation until reviewed.
   Build the low-confidence path deliberately — you will demo it on purpose.
 - [ ] **T8** Governance one-pager: begin boundaries/data flow at S1, update with actual roles and permissions, review at S6. Include retention, escalation, authorization and agent topology.
-- [ ] **T9 · S2** Benchmark local models on the current Mac against platform cases and available running development cases. Record quality, sustained latency, memory/context settings; decide hosting on evidence.
+- [ ] **T9 · S2** Benchmark local models against platform cases and available running development cases. Record quality, sustained latency, memory/context settings.
+  **Rewritten 1 Oct (session 12):** this task used to ask "Air versus dedicated host, decided on evidence." D53 already answered it — an always-on requirement rules out a travelling laptop — so a gate phrased that way could no longer fail. The live question is now **which host spec and which model meet the D56 targets**: measure on the Air to choose the model and to size memory, then confirm on the host once it exists. Report peak memory explicitly, since it drives the 24 vs 32 GB call.
   External comparisons are optional and require explicit authorization; never a production fallback or prerequisite.
 
 **Retained validation gate:** screen-shareable results, avoidable exceptions measured separately from mandatory approvals, governance review. Current delivery gates are roadmap §0.
@@ -200,7 +204,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 - [ ] Migrate Apple Notes → markdown (export route; no API exists)
 - [ ] Retrieve the 4 Product School capstone tools from the LMS (Strategy Assembler, AI Bet Evaluator, Roadmap Builder, Pitch Builder)
-- [ ] Decide relationship between this project and the Vibe Coding app+deck deliverable → OQ-5
+- [x] ~~Decide relationship between this project and the Vibe Coding app+deck deliverable~~ ✅ 1 Oct: **archived** (D62, OQ-5b resolved). One workstream — the second brain. If it revives it gets its own project folder.
 - [ ] Infrastructure beyond the single controlled host: only on measured availability/workload need. Required local hosting evaluation is T9 at S2.
 
 ---
@@ -208,7 +212,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 ## Knowledge base follow-ups
 
 - [ ] **Product School / NN/g follow-ups** (1 Oct): 🔴 revoke the bot token and redact meeting passcodes in the Advanced Agents PDF (all copies); export Apple Notes "Vibe Coding", "AI Product Management", "ProdSchool - MCPs" to PDF and ingest; ingest remaining NN/g decks (done 1 Oct: journey mapping, personas, persuasion, lean UX; workshops are image-only, needs OCR; ~20 other folders remain); review draft notes and promote status; git agent to commit the handoff entry.
-- [ ] **SAFe KB follow-up** (non-roadmap, 1 Oct): verify 6.0 / 2024+ deltas against primary sources; close the AI-Native gaps listed on `ai-native-safe.md` (12 CSFs, Sense and Respond activities, robots-blocked framework pages, Summit recordings); optional pass on toolkit videos. See OQ-17.
+- [x] ~~**SAFe KB follow-up**: verify 6.0 / 2024+ deltas, close AI-Native gaps~~ **Closed 1 Oct without doing it (D61, David's call):** the 5.1-era content is too old to be worth re-verifying. ⚠️ **Consequence: the SAFe pages are historical reference only and must not be used client-facing** — nobody has checked them against AI-Native SAFe or the 2024+ Disciplines. Re-obtaining current assets is a prerequisite if a client engagement ever needs them.
 
 ---
 

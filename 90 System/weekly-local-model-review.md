@@ -3,13 +3,15 @@ classification: internal
 created: 2026-10-01
 last_reviewed: 2026-10-01
 next_review: 2026-10-08
-automation_status: not activated
+automation_status: activated 2026-10-01 (D60); task ID and first-run evidence pending
 ---
 # Weekly local-model review
 
 Owner: David. Research and documentation can be delegated to an assistant; deployment remains evidence-gated. Requested 1 October 2026. Knowledge hub: [[30 Resources/Local AI/README]].
 
-**Scheduling status:** not active. Proposed cadence is Thursday 09:00, `Europe/Brussels`, first review 8 October 2026. No scheduler API is exposed in this session, and computer-use access to the desktop ChatGPT/Codex app was denied. No automation ID or next-run confirmation exists. This checklist is not a running job.
+**Scheduling status: activated by David on 1 October 2026** in the desktop local-project scheduler (D60, OQ-18 resolved). Cadence Thursday 09:00 `Europe/Brussels`, first review 8 October 2026.
+
+⚠️ **Not yet evidenced.** The task ID, confirmed timezone, next-run time and first actual output have not been recorded here — David to paste them into the activation record below. Until a run has produced output, treat the cadence as configured rather than proven, and review the first two runs before relying on it.
 
 The [official scheduled-task documentation](https://learn.chatgpt.com/docs/automations?surface=app) explains that local-project tasks need the computer on and desktop app running; the IDE/CLI has no Scheduled management interface. Web tasks cannot directly update a local folder. Activate in the desktop app with the vault as the project, then verify timezone, next run, permissions and a test output. Local model benchmarking and this assistant's online research are different workloads; the maintenance assistant is not being represented as a local model.
 
@@ -36,6 +38,7 @@ Copy into a desktop local-project scheduled task, using the proposed timezone/ca
 |---|---|---|
 | 2026-10-01 | Initial research/manual execution of the review's documentation workflow completed | [[30 Resources/Local AI/benchmark-ledger]] and pinned source register |
 | 2026-10-01 | Scheduler activation blocked | No callable scheduler tool; desktop app access denied by computer-use tool |
-| Pending | Create task and verify first run | Record task ID, timezone, next run and actual output here |
+| 2026-10-01 | Task created in the desktop local-project scheduler by David | D60; task ID and next-run confirmation **still to be pasted here** |
+| Pending | Verify first run (due 8 Oct 2026) | Record actual output, duration and any missed/failed run. Review the first two runs before relying on the cadence |
 
 Weekly monitoring does not mean upgrading weekly. Candidate promotion requires the project's regression/acceptance gates and rollback plan.

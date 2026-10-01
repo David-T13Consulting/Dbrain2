@@ -12,7 +12,7 @@ Three sources, three vocabularies. This is the full list; the ~20 most-used live
 | **Prisme One** | French AI bootcamp / community by Eliott Meunier. Source of the personal architecture (vault, skills, context layers). Screenshots: `~/Documents/Source_Material/AI_Second_Brain/Prisme_One_Webinar/` |
 | **OS IA** | Prisme One's name for the whole personal AI operating system |
 | **Product School** | Certification provider. Two relevant courses here: *AI Product Strategy* and *Advanced Agents*. A third, *Product Strategy*, is mostly general PM |
-| **Vibe Coding** | A *different* Product School stream — the one the Claude Project instructions reference (Lovable/Supabase/GitHub). Relationship to this project is OQ-5 |
+| **Vibe Coding** | A *different* Product School stream (Lovable/Supabase/GitHub). **Archived 1 Oct 2026 (D62)** — not live work, not part of this project's scope. Never had vault notes of its own |
 
 ## Architecture
 

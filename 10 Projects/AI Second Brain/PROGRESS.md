@@ -132,6 +132,13 @@ Newest first. One entry per working session — what happened, what changed, whe
 **Coordination:** D49 handoff committed separately as fe43f6f. Subsequent Cowork/healthcare/SAFe changes left separate; this commit contains only benchmark work and its tracking.
 **Next:** answer P1.2/P1.3 requirements, build retrieval baseline and compare another local candidate on defined development/acceptance splits. Running labels continue independently.
 
+### Session 8 — 1 Oct 2026 · Claude (Cowork)
+**Authorization:** David asked to pull SAFe knowledge into Resources for his Product Leader / Program Manager / Transformation Consultant roles, approved all 17 pages, chose toolkits as source despite licence risk, asked for 6.0+ currency.
+**Changed:** created `30 Resources/SAFe/` (17 notes, `internal`, draft); updated `index.md`, `log.md`, `90 System/handoff.md`. Toolkits extracted to a temp folder outside the vault, then deleted; nothing copied in (rule 5, pointer in `sources.md`).
+**Found:** SAFe moved twice since the 5.1 toolkits — Oct 2024 "SAFe Disciplines" restructure and AI-Native SAFe (23 Jun 2026). AI-Native details are secondary-source only. A read-only `git status` left an empty `.git/index.lock` (no delete permission at the time); removed after David granted delete access. Cowork should avoid git commands entirely.
+**Also:** added `30 Resources/SAFe/ai-native-safe.md` (dedicated AI-Native SAFe page, claims tiered A/B/C, gaps listed).
+**Pick up at:** git agent commits the handoff entry. OQ-17 (SAFe licence / AI-Native verification) when David wants client use.
+
 ### Session 7 — 1 Oct 2026 · Codex
 **Authorization:** David asked to amend, reorder and extend the existing build plan, preserving it and fixing contradictions. Planning/documentation scope only.
 **Changed:** added S1–S6 to the roadmap; retained original rationale/work packages, T IDs and completed checkboxes; added P tasks for local QA, supervised updates, remote voice/text, bounded agents and operations. Reconciled current-state summaries, open questions and scheduling references. D45–D48 appended; historical decision/session entries preserved.

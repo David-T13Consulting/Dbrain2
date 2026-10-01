@@ -205,6 +205,12 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 ---
 
+## Knowledge base follow-ups
+
+- [ ] **SAFe KB follow-up** (non-roadmap, 1 Oct): verify 6.0 / 2024+ deltas against primary sources; close the AI-Native gaps listed on `ai-native-safe.md` (12 CSFs, Sense and Respond activities, robots-blocked framework pages, Summit recordings); optional pass on toolkit videos. See OQ-17.
+
+---
+
 ## Conventions
 
 `🔴` security-sensitive · `⭐` high-leverage · `T0.x` week-0 · time estimates are working time, not elapsed.

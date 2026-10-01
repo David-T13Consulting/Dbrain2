@@ -67,6 +67,27 @@ Industry knowledge base on Belgian ambulatory healthcare — institutional, fina
 - [[30 Resources/Belgian Healthcare & eHealth/glossary|glossary]] — acronym decoder, plus a message-number quick reference · public · draft
 - [[30 Resources/Belgian Healthcare & eHealth/sources|sources]] — source register by reliability tier, pointer note for the local spec archive, coverage gaps · public · draft
 
+### SAFe
+Working knowledge base on the Scaled Agile Framework for three lenses (Product Leader, Program Manager, Transformation Consultant). Synthesised from David's SAFe 5.1 toolkits (KPMG US archive, licence lapsed; David accepted the risk) and updated to 6.0 / 2024+ / AI-Native terminology. The AI-Native page uses public web sources only. All `internal` · draft, written 1 Oct 2026.
+- [[30 Resources/SAFe/README|README]] — hub: version stance, reading order, twelve things that matter, lens routes · internal · draft
+- [[30 Resources/SAFe/principles-and-mindset|principles-and-mindset]] — core values (5.1 vs 6.0), House of Lean, 10 principles, flow accelerators, dual operating system · internal · draft
+- [[30 Resources/SAFe/configurations-and-competencies|configurations-and-competencies]] — four configurations, Essential SAFe 10 success factors, 7 competencies → 5 Disciplines · internal · draft
+- [[30 Resources/SAFe/roles|roles]] — role map, content/technical/process authority, RACI, casting attributes, managers' role · internal · draft
+- [[30 Resources/SAFe/events-and-cadence|events-and-cadence]] — every team/ART/solution/portfolio event with timebox, owner, I/O; anti-patterns · internal · draft
+- [[30 Resources/SAFe/artifacts-and-backlogs|artifacts-and-backlogs]] — backlog hierarchy, enablers, Kanbans and exit criteria, planning artifacts, WSJF · internal · draft
+- [[30 Resources/SAFe/product-management-and-po|product-management-and-po]] — PM/PO system, need-to-story flow, INVEST, 10 splitting patterns, release on demand · internal · draft
+- [[30 Resources/SAFe/pi-planning-and-execution|pi-planning-and-execution]] — readiness, 2-day agenda, objectives/BV, ROAM, confidence vote, I&A, predictability, distributed · internal · draft
+- [[30 Resources/SAFe/lean-portfolio-management|lean-portfolio-management]] — collaborations, lean budgets, 4 guardrails, participatory budgeting, epics, LPM events, CapEx/OpEx · internal · draft
+- [[30 Resources/SAFe/lean-agile-leadership|lean-agile-leadership]] — leadership dimensions, Kotter ↔ roadmap, managers, CLC, OA, "without" diagnostic · internal · draft
+- [[30 Resources/SAFe/transformation-playbook|transformation-playbook]] — 12-step roadmap, LACE canvas, VSAIW, VSMW, team charter, failure patterns · internal · draft
+- [[30 Resources/SAFe/metrics-and-assessments|metrics-and-assessments]] — outcomes/flow/competency, six flow metrics, predictability, Measure and Grow · internal · draft
+- [[30 Resources/SAFe/devops-and-architecture|devops-and-architecture]] — CALMR, CDP, architect roles, Conway/topologies, runway, big-system practices · internal · draft
+- [[30 Resources/SAFe/regulated-environments|regulated-environments]] — compliance in flow, V&V, Lean QMS, banking/medtech mapping, objections · internal · draft
+- [[30 Resources/SAFe/facilitation-checklists|facilitation-checklists]] — prepare/run/after/if-wrong sheets per event; PI Planning and I&A checklists · internal · draft
+- [[30 Resources/SAFe/ai-native-safe|ai-native-safe]] — AI-Native SAFe (Jun 2026): four shifts, outcomes, teams/ARTs, AI Value Architect, PI Outcome Planning / Sense and Respond, CIDP, AI governance, 5-phase roadmap, training, critique; claims tiered A/B/C · internal · draft
+- [[30 Resources/SAFe/glossary|glossary]] — 5.1 → 6.0 rename table, acronyms, AI-Native terms · internal · draft
+- [[30 Resources/SAFe/sources|sources]] — pointer note to the toolkit archive, inventory, licence position, current-version sources, gaps · internal · draft
+
 ## 30 Resources — Local AI
 Maintained model understanding, primary-source snapshots and separate local measurements; reviewed 1 Oct 2026. Weekly automation pending activation.
 - [[30 Resources/Local AI/README|Local AI hub]] — reading route, evidence labels and project shortlist · internal

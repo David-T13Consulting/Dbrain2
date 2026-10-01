@@ -53,6 +53,21 @@ Adopted 1 Oct 2026 (D-cowork-1, final number assigned by the lead). Design recor
 - Never commit, revert or overwrite another agent's uncommitted files unless they are in the
   handoff. If unsure, stop and ask David.
 
+## Model policy
+Adopted 1 Oct 2026 (D-cowork-2, final number assigned by the lead). David sets this policy; config files apply it; agents do not pick models outside it.
+
+| Lane | Model | Where it is set |
+|---|---|---|
+| Cowork: thinking, specs, briefs | Strongest Claude model (Opus) | App model picker (David) |
+| Claude Code: lead | Opus | `.claude/settings.json` in the vault (git-tracked) |
+| Claude Code subagents: search, tagging, simple checks | Smaller Claude model | `model:` field in each subagent definition |
+| **Codex: reviewer** | **GPT-6 Astra, highest reasoning effort** | `review` profile in `~/.codex/config.toml`; the lead calls `codex exec --profile review` |
+
+- The review is independent because it uses a different vendor's model. Do not swap the reviewer to a Claude model.
+- Every brief records the model ID(s) actually used, under Review and Outcome.
+- This is about the agents that build the vault. The local runtime model (T9 / P2.2) is chosen by evals against D56, not by this policy.
+- Change this table only on David's decision.
+
 ## Where to start
 - Active work lives in `10 Projects/<name>/`. Read that project's CLAUDE.md or README first.
 - Conventions written for humans are in `90 System/README.md`.

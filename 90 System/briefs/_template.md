@@ -3,6 +3,7 @@ classification: internal
 task: P2.2            # TASKS.md ID
 owner: "@code"        # @code | @codex | @cowork | @david
 status: open          # open | claimed | in-review | done
+models: []            # model IDs actually used, e.g. [opus-…, gpt-6-astra (review)]
 created: YYYY-MM-DD
 ---
 # <task title>

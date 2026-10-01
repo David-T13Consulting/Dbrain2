@@ -1,0 +1,41 @@
+---
+classification: internal
+created: 2026-10-01
+last_reviewed: 2026-10-01
+next_review: 2026-10-08
+automation_status: not activated
+---
+# Weekly local-model review
+
+Owner: David. Research and documentation can be delegated to an assistant; deployment remains evidence-gated. Requested 1 October 2026. Knowledge hub: [[30 Resources/Local AI/README]].
+
+**Scheduling status:** not active. Proposed cadence is Thursday 09:00, `Europe/Brussels`, first review 8 October 2026. No scheduler API is exposed in this session, and computer-use access to the desktop ChatGPT/Codex app was denied. No automation ID or next-run confirmation exists. This checklist is not a running job.
+
+The [official scheduled-task documentation](https://learn.chatgpt.com/docs/automations?surface=app) explains that local-project tasks need the computer on and desktop app running; the IDE/CLI has no Scheduled management interface. Web tasks cannot directly update a local folder. Activate in the desktop app with the vault as the project, then verify timezone, next run, permissions and a test output. Local model benchmarking and this assistant's online research are different workloads; the maintenance assistant is not being represented as a local model.
+
+## Weekly procedure
+
+1. Read `AGENTS.md`, `index.md`, the Local AI hub, last ledger entry and source register. Use the handoff rules; never bundle another assistant's edits into this task.
+2. Check the original publishers listed in [[30 Resources/Local AI/sources]], their model collections/release notes, and runtime releases. Look for new relevant models, revised benchmark recipes, corrected results, license changes, regressions and deprecations. Prefer downloadable artifacts suitable for the use case over announcements.
+3. For each material change, retrieve the primary source, record date/revision and benchmark conditions, then amend the relevant capability page and append a dated ledger entry. Keep previous measurements; mark superseded interpretations. If nothing changes, append a brief “checked; no material change” record with coverage and gaps.
+4. Distinguish reported benchmarks from independently reproduced results. Include inference budget, quantization, language and harness; missing details remain explicit. Never invent a result to fill a weekly row.
+5. Produce a shortlist of at most two next local candidates with concrete reasons. Do not automatically download model weights, upgrade runtimes, change the active model or expand data access. Run local comparisons only in an authorized, bounded experiment; otherwise record “local benchmark not run this week” and why.
+6. Check classifications, source links, wikilinks, stale dates and contradictions. Update the source register/index as needed, append `log.md`, and commit only this task's changes. Read changes back and summarize the implications for S2/S4/S5.
+
+If the Mac was asleep or the job failed, show the missed date and error; perform one catch-up review when available, without fabricating intervening checks. Pause on inaccessible sources, conflicting license claims or corpus-policy violations; unaffected sources can still be reviewed. Review the first two successful scheduled runs before relying on the cadence.
+
+## Prepared task prompt
+
+Copy into a desktop local-project scheduled task, using the proposed timezone/cadence above:
+
+> Maintain the Local AI knowledge base in `/Users/davidduchesne/Documents/Dbrain2` weekly. Read AGENTS.md and index.md first, then 90 System/weekly-local-model-review.md and 30 Resources/Local AI/README.md. Follow that procedure. David requested weekly updates to these model notes and the benchmark ledger; scope factual documentation changes to 30 Resources/Local AI, this runbook's review/status dates, index.md and append-only log.md. Do not change vault policy, other knowledge domains, production configuration or personal facts. Research current primary sources for local text/vision/coding, image generation/editing, ASR, TTS and retrieval models. Preserve dated evidence and record exact artifacts, licenses, benchmark methods, uncertainty and Mac relevance. Keep publisher claims separate from local measurements. Do not download model weights, install software, run unbounded benchmarks, publish, send messages or make purchases. Report promising local experiments for a separate bounded run. Commit only the scoped authorized documentation changes; preserve unrelated work and report any blocked action. Return changed notes, meaningful model/benchmark changes, unresolved contradictions, what was not checked and the next review date. If nothing materially changed, record that honestly. Never claim a local benchmark ran without saved outputs.
+
+## Activation and operating record
+
+| Date | Event | Evidence |
+|---|---|---|
+| 2026-10-01 | Initial research/manual execution of the review's documentation workflow completed | [[30 Resources/Local AI/benchmark-ledger]] and pinned source register |
+| 2026-10-01 | Scheduler activation blocked | No callable scheduler tool; desktop app access denied by computer-use tool |
+| Pending | Create task and verify first run | Record task ID, timezone, next run and actual output here |
+
+Weekly monitoring does not mean upgrading weekly. Candidate promotion requires the project's regression/acceptance gates and rollback plan.

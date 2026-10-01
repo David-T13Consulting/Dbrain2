@@ -3,13 +3,13 @@ classification: internal
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 1 Oct 2026 (session 7) · **Phase:** S1 architecture alignment; running validation in parallel · **Target:** December 2026, schedule to re-estimate
+**Updated:** 1 Oct 2026 (session 10) · **Phase:** S1 architecture alignment; running validation in parallel · **Target:** December 2026, schedule to re-estimate
 
 ---
 
 ## ▶ Next action
 
-> **P1.2/P1.3: settle devices, host availability and measurable service targets.** P1.1 is complete. Next independent experiment: P2.1 retrieval baseline and another local candidate in T9; first benchmark recorded in [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|local benchmark]].
+> **P1.2/P1.3: settle devices, host availability and measurable service targets.** P1.1 is complete. Two local candidates and a first retrieval baseline are recorded in [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|the continuation report]]. Next independent work: close corpus/French retrieval gaps, independently review labels, compare another family and activate weekly model review (M4).
 
 **Parallel domain action:** T3.1 batch 04 (rows 41–60) scores rubric v1.4 blind. T2.6 follows 4 October; T0.7 precedes the next contract. T0.6, T1.2 and T1.4 are already complete.
 
@@ -24,7 +24,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [ ] **P1.3** Record data flow, scoped roots/tools, initial corpus and acceptance targets: quality, latency, recovery time and acceptable data loss. Define source retention/schema and code/runtime separation (OQ-13). Begin T6/T8.
 
 ### S2 · Prove local read-only answers
-- [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. Does not wait for all T3.1 labels.
+- [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels.
 - [ ] **P2.2** After runtime selection in T9, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access.
 - [ ] **P2.3** Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
 - Existing tasks: **T9** moves here; **T4.1/T5/T6** begin with platform evaluation, redacted traces and service targets.
@@ -57,6 +57,17 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - Existing tasks: complete **T5/T6/T8/T12/T13** with normal, abstention, approved-update, failure and recovery demos. **T10** remains parked until the personal service is reliable.
 
 **Exit evidence:** roadmap §0. Hardware/tools and numeric service targets remain open until measured or confirmed.
+
+---
+
+## Local model knowledge and weekly maintenance
+
+- [x] **M1** Create a dated, sourced model guide across language/vision/code, ASR, TTS, images and retrieval. ✅ 1 Oct; [[30 Resources/Local AI/README]].
+- [x] **M2** Record a second local candidate and first bounded lexical-retrieval experiment. ✅ 1 Oct; [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|results and limitations]]. This is development evidence, not P2 acceptance.
+- [x] **M3** Prepare weekly research/benchmark review procedure, source revisions and scheduling prompt. ✅ [[90 System/weekly-local-model-review]].
+- [ ] **M4** Activate and verify weekly local-project scheduling (proposed Thu 09:00 Europe/Brussels; next review 8 Oct); record automation ID and first successful output. No active job yet; OQ-18.
+- [ ] **M5** Extend retrieval corpus with authoritative D49 retention evidence; compare controlled bilingual query expansion. Review expected evidence independently; retain original failures and untouched provisional cases.
+- [ ] **M6** Compare another model family under comparable conditions. Set separate voice fixtures and local benchmark resource budgets before downloading additional modality models. Published benchmark review can proceed without downloads.
 
 ---
 

@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 1 Oct 2026 · **Updated by:** Codex (session 9, hardware/benchmark)
+**Last updated:** 1 Oct 2026 · **Updated by:** Codex (session 10, local models/retrieval)
 
 ---
 
@@ -15,13 +15,13 @@ classification: internal
 | **Schedule** | Original 13-week ordering superseded by S1–S6; re-estimate after hardware/time assessment |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset 50/150 runs labelled (all dev now); rubric v1.4 awaiting its held-out test (batch 04) |
-| **Dependencies** | Hardware measured; device/time/budget/acceptance decisions open. First local candidate benchmarked, not accepted. Running labels continue independently |
-| **Next action** | P1.2/P1.3 requirements/targets; P2.1 retrieval baseline and T9 comparison. Parallel: T3.1 batch 04; T2.6 after 4 Oct |
+| **Dependencies** | Hardware measured; device/time/budget/acceptance decisions open. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
+| **Next action** | P1.2/P1.3 requirements/targets; improve retrieval, compare another family and activate weekly model review. Parallel: T3.1 batch 04; T2.6 after 4 Oct |
 | **Action for David** | Paste updated project instructions into claude.ai → project settings (see session 2 log). Still open. |
 
 ### Original work-package progress — retained snapshot
 
-Current platform gates S1–S6 are not yet passed. P1.0/P1.1 are complete; an isolated supplied-evidence local-model experiment has run, but retrieval/service acceptance remains open. The historical snapshot below is not a percentage-complete estimate for the new scope.
+Current platform gates S1–S6 are not yet passed. P1.0/P1.1 are complete; supplied-evidence comparisons and a bounded retrieval experiment have run, but retrieval/service acceptance remains open. The historical snapshot below is not a percentage-complete estimate for the new scope.
 
 ```
 Week 0  Foundations    █████████░  90%   (T0.7 contract clause: future-only)
@@ -117,6 +117,13 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 10 — 1 Oct 2026 · Codex
+**Authorization:** David asked to continue the local experiments, document local models across modalities, and maintain weekly benchmark updates.
+**Changed:** eight notes in `30 Resources/Local AI/`, weekly review runbook, and a second local evaluation report. Pinned 17 publisher model-card revisions; kept published scores separate from local measurements. Preserved a small external evidence archive, with scripts and raw results.
+**Measured:** Qwen3.5-4B Q4_K_M, eight same-prompt development requests (median 7.41 s; valid citation IDs in 1/8). Ten retrieval development requests (median generation API time 6.14 s; evidence retrieved for 6/7 in-corpus answerable questions). French search missed evidence; missing archival policy led to a wrong cited answer. Six provisional cases reserved and not run. Neither candidate accepted; P2.1/P2.3/T9 remain open.
+**Operations:** temporary localhost server stopped. Weekly task prompt ready, but no active automation: no exposed scheduler tool and desktop app access denied. SAFe handoff staging was rejected by automatic approval review; its queue and edits were preserved. This work's commit must exclude them and Obsidian settings.
+**Next:** activate the weekly local-project review, define bounded benchmark time/download budgets, add D49 evidence and bilingual query handling, independently review evaluation labels, then compare another model family. Requirements OQ-14/OQ-15 remain open.
 
 ### Session 9 — 1 Oct 2026 · Codex, hardware and local benchmark
 **Scope:** David said proceed with hardware assessment/benchmark, then resume after the usage-limit interruption. Completed P1.1, with OQ-4 answered by measurement. Local candidates and service targets remain open.

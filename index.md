@@ -11,6 +11,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[AGENTS]] — rules for any agent working in this vault (read-only default, propose don't populate, wiki operations) · internal
 
 ## 10 Projects — AI Second Brain
+- [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|local comparison and retrieval, 1 Oct]] — second model, lexical retrieval baseline, failures and preserved evidence · internal
 - [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|local benchmark, 1 Oct]] — measured M2/24 GiB hardware and first local-model development results; limitations and external artifact pointers · internal
 - [[10 Projects/AI Second Brain/CLAUDE|CLAUDE]] — working memory for the project; read first · internal
 - [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] — current state, decision log (append-only), session log · internal
@@ -66,7 +67,19 @@ Industry knowledge base on Belgian ambulatory healthcare — institutional, fina
 - [[30 Resources/Belgian Healthcare & eHealth/glossary|glossary]] — acronym decoder, plus a message-number quick reference · public · draft
 - [[30 Resources/Belgian Healthcare & eHealth/sources|sources]] — source register by reliability tier, pointer note for the local spec archive, coverage gaps · public · draft
 
+## 30 Resources — Local AI
+Maintained model understanding, primary-source snapshots and separate local measurements; reviewed 1 Oct 2026. Weekly automation pending activation.
+- [[30 Resources/Local AI/README|Local AI hub]] — reading route, evidence labels and project shortlist · internal
+- [[30 Resources/Local AI/model-fundamentals|model fundamentals]] — weights, runtimes, quantization, memory and agents · internal
+- [[30 Resources/Local AI/text-and-vision|text and vision]] — language, reasoning, code and image understanding candidates · internal
+- [[30 Resources/Local AI/speech-models|speech models]] — ASR/TTS, French/English voice pipeline and tests · internal
+- [[30 Resources/Local AI/image-models|image models]] — generation/editing capabilities, limits and licensing distinctions · internal
+- [[30 Resources/Local AI/retrieval-models|retrieval models]] — lexical search, embeddings, rerankers and measured gaps · internal
+- [[30 Resources/Local AI/benchmark-ledger|benchmark ledger]] — dated publisher scores and local results, kept distinct · internal
+- [[30 Resources/Local AI/sources|source register]] — pinned model cards and external evidence archive · internal
+
 ## 90 System
+- [[90 System/weekly-local-model-review|weekly local-model review]] — procedure, prepared task prompt and pending scheduler activation · internal
 - [[90 System/README|README]] — vault conventions for humans · internal
 - [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the git agent to commit · internal
 - [[90 System/lint-checklist|lint-checklist]] — weekly wiki health check, with countable results · internal

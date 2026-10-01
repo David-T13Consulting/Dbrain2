@@ -13,6 +13,9 @@ No blocker to the read-only hardware inventory. Device/availability requirements
 
 ## 🟡 Needed soon
 
+### OQ-18 · Activate weekly model review and bound local benchmarking
+**Affects:** M4/M6 · **Owner:** David for scheduler access and resource preferences; assistant for task setup when available. Weekly source/benchmark review is requested. Procedure and task prompt are ready in [[90 System/weekly-local-model-review]], proposed Thursday 09:00 Europe/Brussels. No scheduler tool is exposed here, and desktop app access was denied. Activate in the desktop local-project scheduler and verify its first run; do not describe the checklist as active automation. Decide a time/download/storage budget before recurring local model downloads or compute-heavy comparisons. Until then weekly research can update published results and propose bounded tests, not silently upgrade models.
+
 ### OQ-3 · Colleague for a future two-person test (parked)
 **Affects:** T10 after S6 · **Owner:** David. Additional human users no longer precede multi-agent work. Revisit when the personal service is reliable; no simulated multi-user claim in the initial demo.
 

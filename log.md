@@ -70,3 +70,9 @@ David approved: `~/Documents/Source_Material/<project-or-topic>/` is the one pla
 
 ## [2026-10-01] ingest | Product School (3 courses) → 30 Resources/Product School
 David overrode the "propose, don't populate" rule for this ingest and chose `public` classification. 11 notes from the three Apple Notes PDF exports (AI Product Strategy, Advanced Agents, Product Strategy), own words, no secrets copied. Pointer note flags credentials in the Advanced Agents PDF (revoke and redact).
+
+## [2026-10-01] ingest | NN/g UX → 30 Resources/NNg UX
+7 notes from six UX Conference decks (2015–17, text extracted on the Mac; decks stay outside the vault) plus 2025–26 nngroup.com articles, tagged [2015–17]/[2026]. Journey mapping, personas, workshops, persuasion, lean UX not yet ingested.
+
+## [2026-10-01] ingest | NN/g round 2 → 30 Resources/NNg UX
+Added journey-mapping, personas, persuasive-design-and-trust, lean-ux-and-agile and a ux-workshops stub (decks image-only). 2026 update note extended with synthetic-users and digital-twin research. README and sources updated.

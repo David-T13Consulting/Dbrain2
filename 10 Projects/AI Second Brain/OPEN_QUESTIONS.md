@@ -19,6 +19,9 @@ No blocker to the read-only hardware inventory. Device/availability requirements
 ### OQ-17 · SAFe knowledge base: licence and currency before client use
 The SAFe pages are built from lapsed-licence 5.1 toolkits (own-words synthesis, `internal`). Before any client-facing use: re-obtain current assets (SAFe membership / SPC)? And verify AI-Native SAFe (June 2026) and the 2024+ Disciplines against framework.scaledagile.com. Owner: David. See `30 Resources/SAFe/sources.md`.
 
+### OQ-19 · Product School and NN/g notes: review, credentials, remaining sources
+Notes are `public`/draft and in David's own-words synthesis; course figures are instructor heuristics. Needs: credential redaction in the Advanced Agents PDF (🔴), export of three unreadable Apple Notes, decision whether to ingest remaining NN/g decks. Opened 1 Oct.
+
 ### OQ-3 · Colleague for a future two-person test (parked)
 **Affects:** T10 after S6 · **Owner:** David. Additional human users no longer precede multi-agent work. Revisit when the personal service is reliable; no simulated multi-user claim in the initial demo.
 

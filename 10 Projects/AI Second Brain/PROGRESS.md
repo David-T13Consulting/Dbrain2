@@ -119,6 +119,9 @@ Append-only. Each entry: what, why, and what would change it.
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
 
+### Session 11 — 1 Oct 2026 · Claude (Cowork), knowledge ingest
+David overrode the "propose, don't populate" rule and chose `public` classification. Ingested the three Product School courses (AI Product Strategy, Advanced Agents, Product Strategy) as 11 own-words notes in `30 Resources/Product School/`, and six NN/g conference decks (2015–17) plus 2025–26 nngroup.com articles as 7 notes in `30 Resources/NNg UX/`. `index.md`, `log.md` and `90 System/handoff.md` updated; links and secret scan verified. Flagged: the Advanced Agents PDF contains live credentials (revoke and redact). Not done: Apple Notes Vibe Coding, AI Product Management, ProdSchool - MCPs (unreadable; need PDF export); NN/g journey mapping, personas, workshops, persuasion, lean UX decks. Uncommitted: awaits git agent via handoff.
+
 ### Session 10 — 1 Oct 2026 · Codex
 **Authorization:** David asked to continue the local experiments, document local models across modalities, and maintain weekly benchmark updates.
 **Changed:** eight notes in `30 Resources/Local AI/`, weekly review runbook, and a second local evaluation report. Pinned 17 publisher model-card revisions; kept published scores separate from local measurements. Preserved a small external evidence archive, with scripts and raw results.

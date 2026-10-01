@@ -124,6 +124,11 @@ Own-words notes from David's three Product School courses (AI Product Strategy, 
 - [[30 Resources/Product School/product-strategy-financials-and-ai-leadership|product-strategy-financials-and-ai-leadership]] — unit economics, kill criteria, AI leverage · public · draft
 - [[30 Resources/Product School/sources|sources]] — pointer note and caveats · public · draft
 
+## 30 Resources — NNg UX
+Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–26 nngroup.com articles. All `public` · draft, written 1 Oct 2026.
+- [[30 Resources/NNg UX/README|README]] — hub, not-yet-ingested decks · public · draft
+- [[30 Resources/NNg UX/ux-strategy|ux-strategy]] · [[30 Resources/NNg UX/ux-research-and-usability-testing|ux-research-and-usability-testing]] · [[30 Resources/NNg UX/measuring-ux|measuring-ux]] · [[30 Resources/NNg UX/leading-ux-teams-and-cross-functional-work|leading-ux-teams-and-cross-functional-work]] · [[30 Resources/NNg UX/journey-mapping|journey-mapping]] · [[30 Resources/NNg UX/personas|personas]] · [[30 Resources/NNg UX/persuasive-design-and-trust|persuasive-design-and-trust]] · [[30 Resources/NNg UX/lean-ux-and-agile|lean-ux-and-agile]] · [[30 Resources/NNg UX/ux-workshops|ux-workshops]] (stub) · [[30 Resources/NNg UX/ux-in-the-ai-era-2026|ux-in-the-ai-era-2026]] · [[30 Resources/NNg UX/sources|sources]] · public · draft
+
 ## 90 System
 - [[90 System/weekly-local-model-review|weekly local-model review]] — procedure, prepared task prompt and pending scheduler activation · internal
 - [[90 System/README|README]] — vault conventions for humans · internal

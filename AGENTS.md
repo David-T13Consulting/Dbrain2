@@ -31,11 +31,27 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
 - Lint weekly with `90 System/lint-checklist.md`. Report findings read-only; fix only what David approves.
 
 ## Multi-agent work
-- Cowork (Claude desktop) edits files but never runs git. Claude Code / Codex do all git work.
-- **Commit straight to `master`; keep history linear.** Create a branch only for genuinely speculative work that may be discarded, and delete it as soon as it lands. Branch-per-agent is not the convention: on 1 Oct 2026 it produced two stale branches and a wandering HEAD in a single day, with no review benefit, because only one agent commits and the history never diverges.
-- Before switching branches or deleting one, check for another agent's uncommitted work in the tree.
-- Cowork lists its uncommitted changes in `90 System/handoff.md`. Before your own work, commit those as their own commit, then clear the entry.
-- Never commit, revert or overwrite another agent's uncommitted files unless they are in the handoff. If unsure, stop and ask David.
+Adopted 1 Oct 2026 (D-cowork-1, final number assigned by the lead). Design record: `40 Archive/agent-orchestration-proposal.md`.
+- **Lanes.** Cowork: capture, specs, research, briefs; never runs git (to inspect the tree it may
+  run only `git --no-optional-locks status`, because a plain `git status` leaves a stale
+  `index.lock` that its sandbox cannot remove). Claude Code: lead, build, integration, git,
+  session-close bookkeeping. Codex: independent reviewer and scoped side tasks given to it by
+  the lead; never commits.
+- **One queue.** Every open task in TASKS.md has an owner tag (@cowork @code @codex @david).
+  Work handed between agents needs a brief in `90 System/briefs/<task-id>.md` (template:
+  `_template.md`). Touch only the files the brief lists.
+- **Commit straight to `master`; keep history linear.** Only the lead commits. Branch only
+  for speculative work and delete the branch when it lands (D50).
+- **Review before commit.** The lead runs Codex read-only on each diff against these rules
+  and records its findings in the brief. Codex gets the rules and the diff, not the lead's reasoning.
+- **IDs.** Only the lead hands out final D-, OQ- and session numbers. Other agents use
+  provisional IDs (`D-cowork-1`); the lead renumbers them and logs the mapping in `log.md`.
+- **Tracking files.** PROGRESS.md, TASKS.md and OPEN_QUESTIONS.md are updated by the lead.
+  Other agents put their updates in the brief or in `handoff.md`.
+- Cowork lists its uncommitted changes in `90 System/handoff.md`; the lead commits them
+  first, as their own commit, then clears the entry.
+- Never commit, revert or overwrite another agent's uncommitted files unless they are in the
+  handoff. If unsure, stop and ask David.
 
 ## Where to start
 - Active work lives in `10 Projects/<name>/`. Read that project's CLAUDE.md or README first.

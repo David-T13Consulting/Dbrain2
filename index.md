@@ -30,6 +30,13 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/memory/projects/ai-second-brain|project memory]] — purpose, current sequence and dependencies · internal
 - [[10 Projects/AI Second Brain/memory/glossary|glossary]] — decoder ring for project terms · internal
 
+## 10 Projects — Healthcare Practice OS
+Placeholder name; brand undecided. Research scaffolding only — no venture strategy has been approved into the vault.
+- [[10 Projects/Healthcare Practice OS/README|README]] — project container, scope boundaries, what is deliberately excluded · internal
+- [[10 Projects/Healthcare Practice OS/05_Research/README|05_Research/README]] — research admissibility gate, third-party minimisation, D49 filing routes, per-interview template · internal
+- [[10 Projects/Healthcare Practice OS/05_Research/interview-guide-physio|interview-guide-physio]] — physiotherapist discovery guide, grounded in article 7 mechanics · internal
+- [[10 Projects/Healthcare Practice OS/05_Research/interview-guide-nurse|interview-guide-nurse]] — nurse discovery guide, grounded in article 8 forfait scoring and fund-initiated messages · internal
+
 ## 20 Areas
 - [[20 Areas/Running/athlete-baseline|athlete-baseline]] — dated HR zones and race paces; source of truth for the skills · internal
 - [[20 Areas/Running/race-goals|race-goals]] — David's race goals · internal

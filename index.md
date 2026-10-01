@@ -11,6 +11,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[AGENTS]] — rules for any agent working in this vault (read-only default, propose don't populate, wiki operations) · internal
 
 ## 10 Projects — AI Second Brain
+- [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|local benchmark, 1 Oct]] — measured M2/24 GiB hardware and first local-model development results; limitations and external artifact pointers · internal
 - [[10 Projects/AI Second Brain/CLAUDE|CLAUDE]] — working memory for the project; read first · internal
 - [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] — current state, decision log (append-only), session log · internal
 - [[10 Projects/AI Second Brain/TASKS|TASKS]] — task list with the next action at the top · internal

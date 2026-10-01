@@ -9,7 +9,7 @@ Recorded environment, not a fresh inventory. Verify installed tools, reachable r
 
 | | |
 |---|---|
-| **Machine** | MacBook Air (`macbook-air-local`), macOS, Apple Silicon. RAM unknown — OQ-4 |
+| **Machine** | MacBook Air, Apple M2, 24 GiB RAM, 8 CPU cores, macOS 27.2; measured 1 Oct (OQ-4 resolved). See [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|benchmark]] |
 | **Connected folders** | `~/Documents/Dbrain2` (the vault, git-tracked) and `~/Desktop/AI_SecondBrain_Project` (source-material archive, not git-tracked) |
 | **Project root** | `~/Documents/Dbrain2/10 Projects/AI Second Brain/` |
 | **Timezone** | Europe/Brussels |
@@ -24,7 +24,7 @@ Recorded environment, not a fresh inventory. Verify installed tools, reachable r
 | Retrieval | Agentic file search — no vector store | Decided (D5) |
 | Skills format | `SKILL.md` (portable open standard) | Decided |
 | Agent instructions | `AGENTS.md` with root CLAUDE import | Completed T1.2, 29 Sep |
-| Model + hosting | Local candidates benchmarked on current Mac at S2; hardware choice follows evidence | Planned T9; D45 supersedes D8 timing |
+| Model + hosting | Qwen3-4B Q4_K_M / llama.cpp b11146 tested locally; quality failures remain | Initial T9 evidence only; no final choice. Temporary server stopped |
 | Inference host / remote access | One controlled local host; private remote access at S4; no unnecessary VPS/platforms | Planned; D45 amends D6 |
 | MCP servers | None for now. Direct file access suffices | Decided |
 | Vector DB | None initially. Trigger conditions in playbook §6.1 | Decided (D5) |

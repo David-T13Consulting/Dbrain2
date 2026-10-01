@@ -9,7 +9,7 @@ classification: internal
 
 ## ▶ Next action
 
-> **P1.1: inspect the current Mac's hardware and available capacity, read-only.** Then P1.2/P1.3 define access requirements and acceptance criteria for the local benchmark.
+> **P1.2/P1.3: settle devices, host availability and measurable service targets.** P1.1 is complete. Next independent experiment: P2.1 retrieval baseline and another local candidate in T9; first benchmark recorded in [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|local benchmark]].
 
 **Parallel domain action:** T3.1 batch 04 (rows 41–60) scores rubric v1.4 blind. T2.6 follows 4 October; T0.7 precedes the next contract. T0.6, T1.2 and T1.4 are already complete.
 
@@ -19,7 +19,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 ### S1 · Align architecture
 - [x] **P1.0** Amend the roadmap and reconcile tracking pages, preserving historical decisions and completed tasks. ✅ 1 Oct; documentation only.
-- [ ] **P1.1** Inventory hardware, RAM, storage and capacity read-only; resolve OQ-4. Avoid unnecessary machine identifiers.
+- [x] **P1.1** Hardware inventoried 1 Oct: M2, 24 GiB RAM, 8 CPU cores, about 90 GiB free before download. OQ-4 resolved; first supplied-evidence local benchmark complete. See [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|measurement record]]. T9/P2 gates remain open.
 - [ ] **P1.2** Confirm devices/OSs, remote/offline expectations, host availability, weekly time and budget (OQ-14/OQ-15). No purchase implied.
 - [ ] **P1.3** Record data flow, scoped roots/tools, initial corpus and acceptance targets: quality, latency, recovery time and acceptable data loss. Define source retention/schema and code/runtime separation (OQ-13). Begin T6/T8.
 

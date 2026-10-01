@@ -17,7 +17,7 @@ No blocker to the read-only hardware inventory. Device/availability requirements
 **Affects:** T10 after S6 · **Owner:** David. Additional human users no longer precede multi-agent work. Revisit when the personal service is reliable; no simulated multi-user claim in the initial demo.
 
 ### OQ-4 · Current Mac hardware and capacity
-**Blocks:** local-model sizing (T9/S2) · **Owner:** read-only inventory P1.1. Record chip, RAM, available storage and relevant resource limits. Benchmark sustained workloads before deciding whether the Air is sufficient; no hardware purchase implied.
+**Resolved 1 Oct by read-only measurement:** M2, 24 GiB RAM, 8 CPU cores; about 90 GiB free before download. Initial local benchmark ran successfully but exposed answer-quality failures. See [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|measurement record]]. Model selection, availability and sustained performance remain open; no purchase proposed.
 
 ### OQ-14 · Devices, access and host availability
 **Blocks:** final S2/S4 design · **Owner:** David, P1.2. Which phone/tablet/laptop operating systems must work? Must the service run while the Air travels or sleeps? Working architecture is one controlled inference host with remote clients and offline capture; confirm availability expectations and any stricter offline-inference requirement.

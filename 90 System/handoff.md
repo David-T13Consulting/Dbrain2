@@ -3,17 +3,11 @@ classification: internal
 ---
 # Handoff queue (Cowork → git agent)
 
-Cowork edits files but cannot run git (D49). It lists uncommitted changes here. The git agent (Claude Code / Codex) commits each entry as its own commit with the suggested message, on a branch per the multi-agent rules, then deletes the entry. Empty queue = nothing pending.
+Cowork edits files but cannot run git (D49). It lists uncommitted changes here. The git agent (Claude Code / Codex) commits each entry as its own commit with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Empty queue = nothing pending.
 
-## [2026-10-01] History note, no file change
-Local `master` is 2 commits ahead of `origin/master` and unpushed: `ec28796` (Cowork, LLM Wiki D41–D44) and `d4eed10` (Codex, roadmap S1–S6). Linear, no conflict. Recommended: do not rewrite history; push it as a branch (e.g. `integration/2026-10-01`) and open one PR into `master`.
+## [2026-10-01] Status note, no file change
+Queue processed. Both SAFe entries were committed on 1 Oct 2026 (`3036a9a`, as one commit — their edits to `index.md`, `log.md`, `PROGRESS.md` and `TASKS.md` were interleaved in the tree and could not be split without reconstructing intermediate states).
 
-## [2026-10-01] SAFe knowledge base (ingest)
-Files: `30 Resources/SAFe/` (17 new notes), `index.md`, `log.md`, `90 System/handoff.md`, `10 Projects/AI Second Brain/PROGRESS.md` (session 8), `OPEN_QUESTIONS.md` (OQ-17), `TASKS.md` (KB follow-up)
-Suggested message: `ingest: SAFe knowledge base in 30 Resources/SAFe (17 notes, internal), from 5.1 toolkits updated to 6.0`
+The earlier version of this note recommended pushing a branch and opening a PR into `master`. **That advice is superseded by D50:** commit straight to `master`, keep history linear, branch only for genuinely speculative work. No PR has ever been opened on this repo and `origin` carries only `master`.
 
-## [2026-10-01] AI-Native SAFe page
-Files: `30 Resources/SAFe/ai-native-safe.md` (new); `30 Resources/SAFe/README.md`, `glossary.md`, `events-and-cadence.md`, `roles.md`, `sources.md`; `index.md`; `log.md`; `90 System/handoff.md`; `10 Projects/AI Second Brain/PROGRESS.md`, `TASKS.md`
-Suggested message: `ingest: AI-Native SAFe page (tiered sources) + cross-links in SAFe KB`
-Commit after the "SAFe knowledge base (ingest)" entry above. Both can be one PR.
-
+Current state: `master` holds everything and is ahead of `origin/master`, unpushed. The two stale topic branches (`integration/2026-10-01`, fully merged; `codex/local-model-knowledge-2026-10-01`, one commit ahead) are being pruned as part of the same cleanup. Push awaits David's review of `git diff origin/master..master`.

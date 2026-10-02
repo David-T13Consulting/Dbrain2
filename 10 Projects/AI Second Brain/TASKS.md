@@ -27,8 +27,8 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [ ] **P1.4** Retrofit the D59 frontmatter (`source`, `review_status`, `note_type`, `created`/`updated`) across the 114 existing structured notes. **Unscheduled — do not start before OQ-20 is answered**, since splitting `classification` into separate axes would change the target schema. Current coverage: 7 notes have `source`, 10 have `created`, none have `review_status` or `note_type`.
 
 ### S2 · Prove local read-only answers
-- [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels.
-- [ ] **P2.2** After runtime selection in T9, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access.
+- [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels. `@codex` — the independent case review is briefed in [[90 System/briefs/P2.1-review|P2.1-review]].
+- [ ] **P2.2** After runtime selection in T9, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]].
 - [ ] **P2.3** Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
 - Existing tasks: **T9** moves here; **T4.1/T5/T6** begin with platform evaluation, redacted traces and service targets.
 
@@ -149,7 +149,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
   - [x] Batch 02 · 20 runs ✅ 30 Sep. First held-out score of v1.2: terrain 17/20 (85%), intent 10/20 (50%). Sampling order fixed in `03_Golden/heldout-order.md` (seed 20260930)
   - [x] Rubric v1.3 + classify-session v0.4 ✅ 30 Sep (D27–D32). Batch 02 is now dev
   - [x] Batch 03 · 20 runs ✅ 30 Sep. v1.3 held-out: terrain 18/20, intent 14/20, tempo_block 14/20, vertical 16/20
-  - [ ] Batch 04 · 20 runs (scores v1.4)
+  - [ ] Batch 04 · 20 runs (scores v1.4) `@cowork @david`
   - [ ] Batch 05 · 20 runs
   - [ ] Batch 06 · 20 runs
   - [ ] Weeks · ~30 weekly assessments (~1 min each, split into 2 sessions)

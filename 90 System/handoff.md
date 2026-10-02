@@ -5,7 +5,15 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue: 1 entry (below).** Latest batch processed 1 Oct 2026 (session 13). Three entries became three commits:
+**Queue: empty.** Latest batch processed 2 Oct 2026 (session 14). One entry became one commit:
+
+| Entry | Commit | Note |
+|---|---|---|
+| Two new briefs: P2.2 read-only query service (`@code`), P2.1 independent case review (`@codex`) | `2092ff2` | Committed verbatim. The TASKS.md owner tags the entry asked for are the lead's own work and land separately |
+
+The entry was committed after the lead's own staged renumbering (`01562e1`), not before it, because `90 System/briefs/P2.2.md` → "Step 0" told the lead to finish that interrupted commit first. No files overlapped, so both stayed separable.
+
+Previous batch, 1 Oct 2026 (session 13). Three entries became three commits:
 
 | Entry | Commit | Note |
 |---|---|---|
@@ -25,12 +33,4 @@ Previous batch, 1 Oct 2026 (session 12). Four entries became three commits:
 
 `index.md`, `log.md`, `PROGRESS.md` and `OPEN_QUESTIONS.md` each held edits belonging to more than one entry; they were split hunk by hunk and the working tree was verified byte-identical to Cowork's final versions afterwards.
 
-Everything is pushed; `master` and `origin/master` match. The two stale topic branches are gone and history is linear, per D50.
-
-## Pending — Cowork, 2 Oct 2026
-
-| Entry | Files | Suggested commit message |
-|---|---|---|
-| Two new briefs for parallel work while David labels batch 04 | `90 System/briefs/P2.2.md`, `90 System/briefs/P2.1-review.md`, this file | `Add briefs: P2.2 read-only query service (@code), P2.1 independent case review (@codex)` |
-
-Lead: please also tag P2.2 `@code`, P2.1 review `@codex`, T3.1 batch 04 `@cowork @david` in TASKS.md. Note: `00 Inbox/2026-10-01 New-project scaffold.md` is untracked and not from this Cowork session.
+History is linear and the two stale topic branches are gone, per D50. **Not pushed:** `master` is ahead of `origin/master` by several commits (the D63–D65 work of sessions 13 and 14). The session-13 note that said everything was pushed was wrong — that applied to the session-12 batch only.

@@ -9,7 +9,7 @@ classification: internal
 
 ## 🔴 Blocking
 
-**Four of the five blockers raised in session 14 are answered; one is open.** Requirements and targets are closed (D52–D59), and the always-on host purchase (D53) still gates sustained-performance *numbers* rather than the build.
+**All five blockers raised in session 14 are answered.** The last of them, item 4, came through the queue as Q5 on 2 Oct; the other four David answered directly to the lead before the queue went live. Requirements and targets are closed (D52–D59), and the always-on host purchase (D53) still gates sustained-performance *numbers* rather than the build.
 
 Under **D68** (single front door) questions for David no longer live here: they go to [[90 System/for-david|for-david]], and the lead records the answers in PROGRESS and the briefs.
 
@@ -18,10 +18,10 @@ Under **D68** (single front door) questions for David no longer live here: they 
 | 1 | Reviewer effort — `high` or the highest available? | `high` stays standard, `ultra` only when lead and reviewer are both stuck. `AGENTS.md` wording corrected | D64, closed |
 | 2 | How should the lead invoke the reviewer? | Install the standalone Codex CLI. Done: `~/.local/bin/codex`, 0.160.0, and `codex exec --profile review` now works as documented | D64, closed |
 | 3 | Authorise the runtime repository for application code? | Yes — `~/Documents/dbrain-runtime/`, new, local, not pushed | [[90 System/briefs/P2.2\|P2.2 brief]] |
-| 4 | **Open.** May Codex *read* the 6 reserved retrieval cases to check their labels? | — | Queue entry **Q5** in [[90 System/for-david\|for-david]]. `P2.1-review` is `blocked-on-david` |
+| 4 | May Codex *read* the 6 reserved retrieval cases to check their labels? | **Yes, read-only** — no model is run on them. Answered via queue entry Q5, 2 Oct | [[90 System/briefs/P2.1-review\|P2.1-review]], now `open` |
 | 5 | Who scores batch 04? | `@cowork`. Already done and validated by David the same day — terrain 100% · intent 65% · `tempo_block` 40% · vertical 90% | T3.1, PROGRESS |
 
-**Numbering, stated once so it stops drifting.** Items 1–5 keep the order in which the lead originally **listed** them as blockers — which is the order D68's "Done when" 4 assumes — not the order anyone asked them. The lead put items 1, 2, 3 and 5 to David directly; **item 4 it did not ask, and it has no record of whether Cowork or Codex did.** So **item 5 (the scoring owner) is the answered one**, exactly as that brief predicted, and **item 4 (the reserved cases) is the one still open**. In the queue, item 4 is entry **Q5**, because the queue numbers entries in the order they were written. A sixth question, **Q6**, was opened later by D68 itself and has no item number here, since it blocks nothing in this file.
+**Numbering, stated once so it stops drifting.** Items 1–5 keep the order in which the lead originally **listed** them as blockers — which is the order D68's "Done when" 4 assumes — not the order anyone asked them. The lead put items 1, 2, 3 and 5 to David directly; **item 4 it did not ask** — it went through the queue as Q5 instead, under D68, and David answered it there. So **item 5 (the scoring owner) is the answered one**, exactly as that brief predicted, and **item 4 (the reserved cases) was the last to be settled** — answered 2 Oct as queue entry **Q5**, numbered that way because the queue numbers entries in the order they were written. A sixth question, **Q6**, was opened later by D68 itself and has no item number here, since it blocks nothing in this file.
 
 ## 🟡 Needed soon
 

@@ -158,3 +158,14 @@ Scored by Cowork after the labels were locked, validated by David the same day: 
 The failures are not random, and they are the argument for the v2 taxonomy (D67). The `tempo_block` rule fires on sustained Z3+ effort, so it marked races and steady long runs as tempo blocks where David did not — exactly the race/tempo collision D66 settled by decision and v2 settles by construction. Intent misses cluster the same way: runs David called `tempo` scored as `intervals` because reps with jog recoveries match I3 first, and runs he called `long` scored as `easy` because they fell just under the 15 km line. Format, intensity and context are being forced through one axis.
 
 Recorded caveat, and David's own follow-up: Cowork both prepared and scored this batch, so the scoring is not vendor-independent. He asked for an independent Codex re-score, which is now a follow-up under T3.1.
+
+## [2026-10-02] maintenance | First answers through the front door: D68 closed, P2.1 unblocked
+David answered both open queue entries in one pass, batched by Cowork, which is the first real use of the D68 front door and the first evidence it works. The answers arrived at the lead as a handoff entry (`54afc3f`) rather than as separate conversations.
+
+**Q5 — may Codex read the 6 reserved retrieval cases to check their labels? Yes, read-only; no model is run on them.** This was the question most worth not guessing: the P2.1 brief asks Codex to review all 16 cases while forbidding any model to run on the 6 reserved ones, and the lead's own reading was that reading is not running. That reading turned out to be right, but a wrong guess would have burned the held-out set irreversibly, and there would have been no way to undo it. `P2.1-review` is now `open` and part A can be handed to Codex. Part B still needs a permitted test path, so it stays behind.
+
+**Q6 — does anything need to change on David's side to keep interactive Codex sessions away from him? No.** He will not run interactive Codex on this vault, so D68 is sufficient and no config change was made. That closes D68's last open condition and the brief is `done`.
+
+Worth recording about D68's own closure, because it is the argument for the rule: the lead's first draft *assumed* this answer and closed the brief; the second queued the question but still marked the brief done. The review caught both. The condition is met because David answered it, not because the lead reasoned its way to the same answer and called that agreement.
+
+Q5 and Q6 are cleared from the queue's Answered table now that they are recorded in their briefs, per D68.

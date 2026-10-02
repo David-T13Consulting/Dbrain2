@@ -2,7 +2,7 @@
 classification: internal
 task: D68
 owner: "@code"
-status: blocked-on-david
+status: done
 models: [claude-opus-5 (lead), gpt-6-astra (review)]
 created: 2026-10-02
 ---
@@ -48,7 +48,7 @@ provisional ID, found no secrets and no classification violations, and returned 
 
 | # | Finding | Severity | Action |
 |---|---|---|---|
-| 1 | "Done when" 3 was declined rather than done: the brief requires that any habit change on David's side be put in the queue as a question, not assumed away | **high** | **Fixed over two rounds.** First by adding **Q6** to `for-david.md`; then, when the reviewer pointed out Q6 said "nothing is blocked … D68 closes either way", by accepting the consequence: Done when 3 is *unresolved*, so this brief is **`blocked-on-david`**, not `done`. Option (c) was also dropped from Q6, since it would have changed a policy David had already approved |
+| 1 | "Done when" 3 was declined rather than done: the brief requires that any habit change on David's side be put in the queue as a question, not assumed away | **high** | **Fixed over two rounds, then answered.** First by adding **Q6** to `for-david.md`; then, when the reviewer pointed out Q6 said "nothing is blocked … D68 closes either way", by accepting the consequence and setting the brief `blocked-on-david`. Option (c) was dropped from Q6, since it would have changed a policy David had already approved. David answered Q6 on 2 Oct — nothing changes on his side — and the brief closed |
 | 2 | The correction to Cowork's queue asserted the reserved-case question was "never put to him" without evidence, and the P2.1 brief said "Raised with David" | medium | **Fixed consistently** across the queue, this Outcome, `handoff.md` and `log.md`: the claim is now only that **the lead did not ask it**, with no record either way of whether Cowork or Codex did. The entry stays open because that is the safe default on held-out data, not because anyone established it was never asked |
 | 3 | "Done when" 4 specified a Q1–Q4 mapping that the implementation does not follow | medium | **Fixed, and the lead's own error found in the process.** It had swapped items 4 and 5 in the OPEN_QUESTIONS table, then concluded the brief's premise was wrong. The brief was right: item 5 (scoring owner) is the answered one. Original order restored; the only real divergence is that item 4's queue entry is numbered Q5, because the queue numbers entries in writing order |
 | 4 | Scope creep: P2.2 edits and PROGRESS changes beyond the decision row are outside this brief's Files in scope | medium | **Scope basis recorded for each group, not split.** Three bases: this brief (the `AGENTS.md` bullets, the template, `for-david.md`, the decision row); Cowork's handoff entry, which explicitly asks the lead to tick T3.1, add the scores to PROGRESS and mark T3.4 unblocked; and David's own 2 Oct authorisation, which is what the P2.2 edit records. `PROGRESS.md`, `log.md` and `index.md` carry interleaved edits from all three, so separating them would mean reconstructing intermediate file states — the same situation the handoff records for `667902e` and `2db69fc`, and resolved the same way: one commit, with the reason written down |
@@ -57,9 +57,14 @@ provisional ID, found no secrets and no classification violations, and returned 
 | 7 | `log.md` omitted the `D-cowork-6 → D68` mapping; P2.1 still said D64/D65 block Step 0 although both are committed | low | **Fixed in both files** |
 
 ## Outcome
-**The `AGENTS.md` change is in force, 2 Oct 2026 (session 14), but the brief is `blocked-on-david`,** because
-its own "Done when" 3 asks something only David can answer (Q6). The rule applies regardless; the status tracks
-the paperwork, not whether the policy is live.
+**Done, 2 Oct 2026 (session 14).** The `AGENTS.md` change went in force first; the brief then sat
+`blocked-on-david` on its own "Done when" 3 until David answered **Q6** through the queue: *nothing changes on
+his side — he will not run interactive Codex on this vault, so D68 is enough.* That closes the last condition.
+
+**The front door worked on its first use, in both directions.** Q5 and Q6 were written by the lead, batched and
+put to David by Cowork, answered in one pass, and came back to the lead as a handoff entry (`54afc3f`) rather
+than as separate conversations. Neither was asked directly by the lead or by Codex, which is the rule — Cowork
+asking him is the design, not an exception to it.
 
 1. The two bullets are in `AGENTS.md` after the stop conditions, **verbatim** except the provisional ID
    `D-cowork-6` which the lead replaced with **D68**, as D63 requires.
@@ -67,15 +72,18 @@ the paperwork, not whether the policy is live.
    to `for-david.md`". **Hard rule 6 at the top of `AGENTS.md` was deliberately left alone** — "When unsure,
    stop and ask" governs the agent's conduct toward whoever is in the session, including Cowork itself, and
    rewriting it to point at a queue would be a wider change than this brief authorises.
-3. **Unresolved — this is why the brief is `blocked-on-david`.** Codex already runs only as `codex exec` called
-   by the lead, never interactively, and D64 made that invocation work from the documented command, so nothing
-   is needed on the lead's side. But the lead controls its own calls, not whether David opens an interactive
-   Codex session, and this condition asks whether anything must change on his side. It is **Q6** in
-   `for-david.md`. The first draft of this Outcome assumed the answer and closed the brief; the second queued
-   the question but still called the brief done. Both were wrong, and the brief now waits.
+3. **Resolved by David via Q6.** Codex already runs only as `codex exec` called by the lead, never
+   interactively, and D64 made that invocation work from the documented command, so nothing was needed on the
+   lead's side. The open half was David's: he answered that nothing changes there either — he will not run
+   interactive Codex on this vault. So no config change was made, and none is needed.
+
+   Worth keeping, because it is the whole argument for D68: the first draft of this Outcome *assumed* that
+   answer and closed the brief; the second queued the question but still called the brief done. Both were wrong,
+   and the review caught both. The condition is met because David answered it, not because the lead reasoned
+   its way to the same conclusion.
 4. Done. The five blocking items in OPEN_QUESTIONS now point at `for-david.md`, and **the brief's premise was
-   right**: item 5, the batch-04 scoring owner, is the answered one, and item 4, the reserved cases, is still
-   open. An earlier draft of this Outcome claimed the premise was wrong — it had swapped items 4 and 5 in the
+   right**: item 5, the batch-04 scoring owner, is the answered one, and item 4, the reserved cases, was the last
+   to be settled — answered through the queue as Q5 on 2 Oct. An earlier draft of this Outcome claimed the premise was wrong — it had swapped items 4 and 5 in the
    OPEN_QUESTIONS table and then reasoned from its own mistake. Corrected: the original order is restored, and
    the only real divergence is that item 4's queue entry is numbered **Q5**, because the queue numbers entries
    in the order they were written rather than the order they were originally listed.

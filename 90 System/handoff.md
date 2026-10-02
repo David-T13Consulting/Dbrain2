@@ -5,7 +5,19 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue: empty.** Latest batch processed 2 Oct 2026 (session 14). Three entries became three commits:
+**Queue: 1 entry.**
+
+| Entry | Files | Suggested commit message |
+|---|---|---|
+| Batch 04 scored against rubric v1.4 by Cowork, validated by David 2 Oct. Terrain 100% · intent 65% · tempo_block 40% · vertical 90% | `10 Projects/AI Second Brain/03_Golden/labels-batch-04.md` | `Golden dataset: score batch 04 against rubric v1.4 (held-out, validated by David)` |
+
+Tracking for the lead:
+- Tick T3.1 batch 04 as scored; the scoring owner was `@cowork` (David, 2 Oct).
+- Add the batch 04 held-out scores to PROGRESS.
+- The v1 held-out test is now closed, so **T3.4 (taxonomy v2) is unblocked**.
+- Suggested follow-up for David: an independent Codex re-score of batch 04 (the caveat is in the file).
+
+Latest batch processed 2 Oct 2026 (session 14). Three entries became three commits:
 
 | Entry | Commit | Note |
 |---|---|---|

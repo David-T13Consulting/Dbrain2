@@ -1,6 +1,6 @@
 ---
 classification: internal
-status: HELD-OUT batch (test set, D25). Prepared by Cowork 2 Oct 2026, blind: facts only, no skill predictions. Labelled by David 2 Oct 2026 (one run per screen). Scores rubric v1.4 — NOT YET SCORED.
+status: HELD-OUT batch (test set, D25). Prepared by Cowork 2 Oct 2026, blind: facts only, no skill predictions. Labelled by David 2 Oct 2026 (one run per screen). Scored against rubric v1.4 by Cowork 2 Oct 2026; scores validated by David the same day.
 ---
 # Golden dataset: labelling batch 04 (held-out, 20 runs)
 
@@ -37,4 +37,50 @@ Labels: terrain = road | trail | mountain · intent = race | intervals | hills |
 
 **Label process.** One run per screen, fixed answer options, no skill output shown. Run 1 was asked again after a confusing two-part form. After all 20 were labelled, and **before any scoring**, Cowork ran a schema/cross-batch consistency check on 4 rows (13, 18, 19, 20) without seeing any rubric output. David changed all 4. The first labels are kept in the Note column; scoring should report both, the way batch 03 handled D38.
 
-**Scoring:** not yet done. Apply rubric v1.4 / classify-session as written, after these labels (locked 2 Oct 2026).
+## Blind scoring: rubric v1.4 vs David. **Held-out.** Validated by David 2 Oct 2026
+Applied by Cowork as written, after all labels were locked. Values from the baseline rows in effect on each run's date (LTHR 166: Z3 149–156, Z4 157–165; marathon pace 5:10).
+
+| # | David | v1.4 | Terrain | Intent | tempo_block (D / v1.4) | vertical (D / v1.4) | Why v1.4 differs |
+|---|---|---|---|---|---|---|---|
+| 1 | road · tempo | road · intervals | ✅ | ❌ | yes / no ❌ | no / no ✅ | 8 work reps with jog recoveries → I3. Reps are excluded from tempo_block |
+| 2 | road · easy | road · easy | ✅ | ✅ | no / no ✅ | no / no ✅ | |
+| 3 | road · long | road · long | ✅ | ✅ | yes / yes ✅ | no / no ✅ | |
+| 4 | trail · race | trail · race | ✅ | ✅ | no / yes ❌ | no / yes ❌ | 3 h at Z3+; D66 not yet in the rule text. Godinne 30%, Captage 32% → vertical |
+| 5 | road · tempo | road · intervals | ✅ | ❌ | yes / no ❌ | no / no ✅ | 3 work reps with jogs → I3; longest continuous effort 10 min |
+| 6 | trail · easy | trail · easy | ✅ | ✅ | no / no ✅ | no / no ✅ | |
+| 7 | road · long | road · long | ✅ | ✅ | no / no ✅ | no / no ✅ | |
+| 8 | road · long | road · long | ✅ | ✅ | no / yes ❌ | no / no ✅ | HR 152–163 throughout (Z3+) |
+| 9 | road · race | road · race | ✅ | ✅ | no / yes ❌ | no / no ✅ | Z4 throughout; D66 not yet in the rule |
+| 10 | road · easy | road · easy | ✅ | ✅ | no / yes ❌ | no / no ✅ | Avg HR 150 (Z3) for 55 min |
+| 11 | road · race | road · tempo | ✅ | ❌ | no / yes ❌ | no / no ✅ | Event named only in a segment, not the title/description → not I1. 24 min faster than MP → I5 |
+| 12 | mountain · long | mountain · easy | ✅ | ❌ | no / yes ❌ | yes / yes ✅ | Watch 8.7 km → km-effort 12.6 (description's 13 km would give 16.9 → long). 20 min at HR 150–155 |
+| 13 | trail · hills | trail · hills | ✅ | ✅ | no / no ✅ | yes / yes ✅ | David's first label (intervals) would have missed |
+| 14 | road · long | road · long | ✅ | ✅ | no / yes ❌ | no / yes ❌ | Last 3 km @5:04, HR 159 = 15.2 min. Two climbs ≥30 m at ≥8% |
+| 15 | road · race | road · race | ✅ | ✅ | no / yes ❌ | no / no ✅ | D66 not yet in the rule |
+| 16 | trail · long | trail · easy | ✅ | ❌ | no / yes ❌ | no / no ✅ | 14.7 km is not over 15 → not I4. Avg HR 151 for 94 min |
+| 17 | road · easy | road · easy | ✅ | ✅ | no / no ✅ | no / no ✅ | 16 days after the marathon, outside the I6 window |
+| 18 | road · intervals | road · intervals | ✅ | ✅ | no / no ✅ | no / no ✅ | |
+| 19 | road · easy | road · unsure | ✅ | ❌ | no / yes ❌ | no / no ✅ | Avg HR 163 = Z4, so not I7. Slower than MP, and the Z4 tempo test is off-road only → I8. 38 min at Z4+ |
+| 20 | trail · long | trail · easy | ✅ | ❌ | no / no ✅ | yes / yes ✅ | 14.4 km → not I4. Only 2 of 4 climbs reach Z4 → not I2(a) |
+
+| | Final labels | Pre-check labels | Threshold |
+|---|---|---|---|
+| **Terrain** | **20/20 = 100%** | 20/20 | ≥95% ✅ |
+| **Intent** | **13/20 = 65%** (1 unsure) | 12/20 = 60% | ≥85% ❌ |
+| **tempo_block** | **8/20 = 40%** (11/20 = 55% if D66 applied) | 7/20 | — |
+| **vertical** | **18/20 = 90%** | 17/20 | — |
+
+Against batch 03 (v1.3): terrain 90 → 100% · intent 75 → 65% · tempo_block 70 → 40% · vertical 80 → 90%.
+
+### Findings
+1. Terrain is solved on fresh data (D35, D39).
+2. Most intent misses are what taxonomy v2 targets (T3.4, D67):
+   - threshold reps forced into tempo vs intervals (#1, #5);
+   - just under the 15 km long cut-off (#12, #16, #20);
+   - a race named only in a segment (#11);
+   - no rule covers Z4 on road (#19).
+3. tempo_block fails: "Z3+ for 15 min" fires on ordinary steady runs (#8, #10, #16), and races aren't excluded yet (D66). This supports replacing the flag with minutes in each intensity (v2).
+4. **Caveats.** HR continuity was judged from lap/segment averages, not streams; #10, #12 and #20 are borderline. Vertical was judged from named segments. The scorer also prepared the facts and ran the label consistency check, so this is not a fully independent score. A Codex re-score would make it cleaner for the demo.
+
+This is the last held-out test of the v1 schema. Batches 01–04 become development data for v2 (T3.4).
+

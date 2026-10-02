@@ -4,7 +4,7 @@ task: D65
 owner: "@code"
 status: open
 created: 2026-10-01
-models: []
+models: []   # no model ID recorded for the lost session-13 pass; this brief's own review has not run
 ---
 # Add stop conditions and a retry limit to the lead loop (D65)
 
@@ -46,5 +46,17 @@ Write down when the lead loop ends and cap retries, so a run can never loop fore
 - Do not start this until D63 and D64 are committed: they edit the same file.
 
 ## Review
+**Not yet reviewed in a form that survives.** Session 13 ran a second Codex pass over this brief but never
+wrote the findings down before it ended, and the D63 brief's Outcome pointed here for them. They are lost. The D63 brief records that session's reviews as `gpt-6-astra` at effort `high`, so that was almost certainly the model, but **the findings themselves were never written and cannot be recovered** — so no model ID is claimed for them here.
+Session 14 did not invent them: this brief will get a fresh review of its actual `AGENTS.md` diff before it
+is committed.
 
 ## Outcome
+**Not started — `open`, and correctly so.** Constraint: "Do not start this until D63 and D64 are committed:
+they edit the same file." D63 is committed (`01562e1`). **D64 is not** — its review returned two blockers
+that belong to David (reviewer effort `high` versus "highest"; the documented `codex exec --profile review`
+command not working as typed). So this brief waits, per its own constraint and per the stop conditions it
+defines.
+
+One thing to flag when it does land, as the brief's Constraints invite: the "Codex consulted after the 2nd
+failure" threshold is Cowork's reading of "when blocked", not David's words. Nothing has tested it yet.

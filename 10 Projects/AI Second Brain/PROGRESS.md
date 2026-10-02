@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 1 Oct 2026 · **Updated by:** Claude Code (session 12, S1 requirements interview)
+**Last updated:** 2 Oct 2026 · **Updated by:** Claude Code (session 14, lead loop)
 
 ---
 
@@ -14,10 +14,10 @@ classification: internal
 | **Phase** | S1 architecture alignment — requirements and targets settled (D52–D59); S2 is next. Running validation in parallel |
 | **Schedule** | Original 13-week ordering superseded by S1–S6. Hardware and weekly time are now both known (P1.1, D55), so December 2026 is schedulable rather than aspirational — a dated S2–S6 plan has not been drawn up yet |
 | **Target** | Client-ready demo, December 2026 |
-| **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset 50/150 runs labelled (all dev now); rubric v1.4 awaiting its held-out test (batch 04) |
+| **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled — 50 dev (batches 01–03) plus batch 04, labelled held-out on 2 Oct and **not yet scored** against rubric v1.4 |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
 | **Next action** | S2: scoped read-only query service and local model adapter, measured against D56 targets. Host decision (D53) gates sustained-performance numbers, not the implementation. Parallel: T3.1 batch 04; T2.6 after 4 Oct |
-| **Action for David** | Paste the weekly-review task ID and first-run output into `90 System/weekly-local-model-review.md` (D60). Decide the always-on host purchase (D53; 32 GB recommended). Answer OQ-20 before the D59 retrofit is scheduled. |
+| **Action for David** | **Five answers unblock the lead loop (session 14):** reviewer effort `high` or highest (D64) · how the lead should invoke the reviewer (D64) · authorise the `~/Documents/dbrain-runtime/` repository P2.2 needs · may Codex *read* the 6 reserved retrieval cases to check their labels (P2.1) · who scores batch 04. All five are listed in [[10 Projects/AI Second Brain/OPEN_QUESTIONS|OPEN_QUESTIONS]]. Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). Answer OQ-20 before the D59 retrofit is scheduled, OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
 
@@ -124,12 +124,36 @@ Append-only. Each entry: what, why, and what would change it.
 | D60 | 1 Oct | **Weekly local-model review is active** (David activated it in the desktop scheduler). M4 closed, OQ-18 resolved. Task ID and first-run output still to be pasted into the runbook's activation record | David confirmed activation. The evidence row stays open rather than being filled with an invented ID | The first two scheduled runs do not actually produce output |
 | D61 | 1 Oct | **OQ-17 closed without the SAFe currency check** — the 5.1-era content is too old to be worth re-verifying. **Consequence: the SAFe pages are historical reference only and must not be used client-facing**, since nobody has checked them against AI-Native SAFe or the 2024+ Disciplines | David's call: the effort does not pay back. Closing the question is not the same as resolving it, so the constraint it was protecting against is recorded instead | A client engagement actually needs current SAFe material, which means re-obtaining the assets first |
 | D62 | 1 Oct | **Vibe Coding workstream archived.** The project carries one workstream: the second brain. Supersedes D10's two-workstream scope; resolves OQ-5b. No files to move — it existed only as scope references, and the Product School resource notes are genuine knowledge that stays | The app + deck deliverable is not live work. Carrying it in scope made every status read ambiguous | David revives it, in which case it gets its own project folder rather than a share of this one |
+| D63 | 1 Oct | **One lead, one queue for the three build agents.** Claude Code is the lead (build, integration, git, bookkeeping); Cowork captures, specs and briefs and never runs git; Codex reviews read-only and never commits. Every open task in TASKS.md carries an owner tag, work handed between agents needs a brief in `90 System/briefs/`, and only the lead assigns final D-, OQ- and session numbers | Three agents were writing into one tree with no owner, which produced two stale branches, tangled uncommitted work and provisional IDs nobody renumbered. Option B (the committing agent and the integrating agent are the same) was chosen over a separate integrator | The review gate proves too slow to be worth it, or a second agent needs commit rights |
+| D64 | 1 Oct | **Build-agent models follow a policy David sets:** Opus for Cowork and the lead, smaller Claude models for simple subagents, GPT-6 Astra at the highest reasoning effort as the independent reviewer; config files apply it, agents do not pick models outside it. **The decision stands; its implementation is `in-review`** — see [[90 System/briefs/D64-model-policy\|D64 brief]]: the reviewer runs, but only by absolute path, and `high` versus "highest" effort is unreconciled | Removes the per-session model choice from David, keeps the review independent by using a different vendor's model, and makes model use traceable through each brief's `models:` field | A model is retired, or reviews prove too slow or too costly |
+| D65 | 1 Oct | **The lead loop has explicit stop conditions** — no `open` `@code` brief left, a failed review, a decision that belongs to David, or a `blocked` brief — **and a retry limit:** at most 5 attempts per failing step, a read-only Codex debugging opinion after the 2nd failure, then `blocked`. **Not yet written into `AGENTS.md`:** it lands after D64 closes, because both edit the same section | An interactive run otherwise decides for itself when it is done, and an unattended run (option B, not yet adopted) needs this before it is safe | Runs stall on "a decision for David" too often |
+| D66 | 2 Oct | **A race is not a `tempo_block`.** Races are labelled `tempo_block = no` whatever the effort, and the batch 04 labels stand as David gave them. The `tempo_block` definition in the rubric and [[30 Resources/Running/session-types\|session-types]] must state the exclusion explicitly — but only **after** rubric v1.4 is scored on batch 04, so the held-out test is not contaminated | Race is already its own intent; counting a race as a tempo block as well would blur both labels. David decided it during the batch 04 labelling rather than leaving it as an open question. Written by Cowork as provisional `D-cowork-4`, renumbered by the lead | The scored batch shows the exclusion costs more than it buys |
 
 ---
 
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 14 — 2 Oct 2026 · Claude Code, lead loop
+**Authorization:** David: "pick up the loop."
+
+**Did:** finished session 13's interrupted integration commit (`01562e1`, the D63–D65 renumbering), committed Cowork's queued briefs verbatim (`2092ff2`), cleared the queue and tagged the first owners (`8fb68d0`). Then **restored the review gate** and ran it: Codex (`gpt-6-astra`, effort `high`, read-only) reviewed the three commits and this session's D64 diff.
+
+**Found:** the review gate could not be run from the command `AGENTS.md` documents, and the cause was `PATH`. The `codex` CLI is not missing; it ships inside the ChatGPT desktop app at `/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex` (0.159.2), and `~/.codex/review.config.toml` already existed from 1 Oct. The profile looked absent because 0.159.2 moved profiles out of `config.toml` into separate `<name>.config.toml` files. Two things stay separate here: session 13 *did* run reviews, so the gate was never dead, but it was not reproducible from the documented command — and whether the profile *complies* with the policy is still open, since it runs effort `high` where `AGENTS.md` says the highest. Also found: three commits in this session were made **before** the gate was restored, so Codex reviewed them after the fact rather than before; its findings are recorded and nothing in them was a blocker.
+
+**Decided:** nothing new. D63–D65 were David's decisions of 1 Oct and are only now recorded in this log — the gap Codex's review flagged.
+
+**Blocked, for David:** D64 cannot close (two blockers: `high` versus "highest" effort, and the documented `codex exec --profile review` command not working as typed). D65 waits on D64. **P2.2 cannot start** — its Step 0 requires D65 landed, and Codex raised a blocker on the brief itself: it directs creating a repository it says is not yet authorised.
+
+**Pick up at:** David's five answers (D64 effort · reviewer invocation · P2.2 repository authorisation · the P2.1 reserved-case reading question · batch-04 scoring owner), then D65 → P2.2.
+
+### Session 13 — 1 Oct 2026 · Claude Code, orchestration adoption
+**Authorization:** David approved the orchestration proposal and the model policy, and asked for them to be adopted.
+
+**Did:** committed Cowork's three handoff entries verbatim (`08ea191`, `1931d8e`, `892146e`), splitting `AGENTS.md` and `_template.md` hunk by hunk because they held edits belonging to two entries, then cleared the queue (`27ef6be`). Ran the first Codex review and recorded five should-fix findings in the D63 brief. Set up `~/.codex/review.config.toml`.
+
+**Did not finish:** the integration commit was staged but never made, the session-close bookkeeping (this log, `log.md`, `index.md`, owner tags) was never written, and the D64 and D65 briefs were left with empty Review and Outcome sections while the D63 brief pointed at them. Session 14 closed the commit, the bookkeeping and the dangling pointers. Still open from D63: the owner tags, and D64's two questions.
 
 ### Session 12 — 1 Oct 2026 · Claude Code, S1 requirements interview
 **Authorization:** David asked to pick up the implementation plan, then to run the P1.2/P1.3 questions as a structured interview and record the result.

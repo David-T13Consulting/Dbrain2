@@ -3,7 +3,7 @@ classification: internal
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 1 Oct 2026 (session 12) · **Phase:** S1 closed on requirements (D52–D59); S2 next · **Target:** December 2026, now schedulable at 20+ h/week (D55)
+**Updated:** 2 Oct 2026 (session 14) · **Phase:** S1 closed on requirements (D52–D59); S2 next · **Target:** December 2026, now schedulable at 20+ h/week (D55)
 
 ---
 
@@ -149,12 +149,16 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
   - [x] Batch 02 · 20 runs ✅ 30 Sep. First held-out score of v1.2: terrain 17/20 (85%), intent 10/20 (50%). Sampling order fixed in `03_Golden/heldout-order.md` (seed 20260930)
   - [x] Rubric v1.3 + classify-session v0.4 ✅ 30 Sep (D27–D32). Batch 02 is now dev
   - [x] Batch 03 · 20 runs ✅ 30 Sep. v1.3 held-out: terrain 18/20, intent 14/20, tempo_block 14/20, vertical 16/20
-  - [ ] Batch 04 · 20 runs (scores v1.4) `@cowork @david`
+  - [x] Batch 04 · 20 runs **labelled** ✅ 2 Oct (David, blind, one run per screen; prepared by Cowork) — **not yet scored** against rubric v1.4. Labels: [[10 Projects/AI Second Brain/03_Golden/labels-batch-04|labels-batch-04]]
+    - [ ] **Score batch 04 blind against rubric v1.4.** Owner **not settled** — Cowork's handoff proposed `@cowork` or `@code` and left the choice open. Nobody touches `90 System/skills/classify-session/` before the scoring runs, or the held-out test is contaminated.
+    - Label process (Cowork, 2 Oct): intent was asked as one question with fixed options, after a two-part form confused run 1 and it had to be re-asked. A pre-scoring consistency check changed rows 13, 18, 19 and 20; the original labels are kept in the Note column, so **report scores both ways, as D38 did**.
+    - Label distribution: intent — race 4 · long 7 · easy 5 · tempo 2 · intervals 1 · hills 1. Terrain — road 13 · trail 6 · mountain 1. All four races (rows 4, 9, 11, 15) are labelled `tempo_block = no`, which **D66** confirms is correct: a race is a race, not a tempo block.
   - [ ] Batch 05 · 20 runs
   - [ ] Batch 06 · 20 runs
   - [ ] Weeks · ~30 weekly assessments (~1 min each, split into 2 sessions)
   - [ ] Race times backtest (automatic from results; past readiness verdicts **not** labelled, because of hindsight bias)
   Columns: Input · Expected output · Edge case? · Judge type (rule/LLM). 20–30% edge cases.
+- [ ] **After batch 04 is scored:** state the race exclusion explicitly in the `tempo_block` definition (rubric and [[30 Resources/Running/session-types|session-types]]), per D66. Deliberately **not** done before scoring — editing the rubric first would contaminate the held-out test.
 - [ ] **T3.2** Add adversarial rows (≥3) and note coverage gaps `1 h`
 - [ ] **T3.3** Commit as `golden-dataset.md`, versioned like code `15 min`
 
@@ -219,4 +223,6 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 ## Conventions
 
 `🔴` security-sensitive · `⭐` high-leverage · `T0.x` week-0 · time estimates are working time, not elapsed.
+
+`@code` `@cowork` `@codex` `@david` = owner tag (D63). **Owner tags are incomplete:** only P2.1 and P2.2 carry one, and batch 04's scoring is deliberately left unowned pending David. D63 requires every open task to have an owner, and the rest still need assigning — several are David's call, so session 14 did not guess them.
 Tick items as you go. Add anything that surfaces — an unrecorded task is a lost task.

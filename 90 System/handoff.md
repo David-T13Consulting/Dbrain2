@@ -9,22 +9,22 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 
 | Entry | Files | Suggested commit message |
 |---|---|---|
-| T3.1 batch 04 prepared (rows 41–60, blind) and labelled by David, 2 Oct | `10 Projects/AI Second Brain/03_Golden/labels-batch-04.md` (new), this file | `Golden dataset: batch 04 labelled (held-out, rubric v1.4 not yet scored)` |
+| Taxonomy v2 proposal brief. David chose option B on 2 Oct (provisional **D-cowork-5**: split `intent` into format × intensity × context, aligned with Runna/Strava/Campus/Garmin). Spec still needs his approval | `90 System/briefs/T3.5-taxonomy-v2.md` (new), this file | `Add taxonomy v2 proposal brief (D-cowork-5, option B)` |
 
-**Tracking updates for the lead (Cowork session, 2 Oct 2026). Write these into PROGRESS / TASKS / OPEN_QUESTIONS:**
-- TASKS T3.1: batch 04 labelled ✅ 2 Oct, **not scored yet**. Next: score rubric v1.4 blind against these labels. It's running-domain work; owner `@cowork` or `@code`, and nobody touches `classify-session/` before then.
-- Label process: intent asked as a single question with fixed options. A two-part intent form confused run 1, which was re-asked. A pre-scoring consistency check changed 4 rows (13, 18, 19, 20); the original labels are kept in the Note column. Report scores both ways, like D38.
-- Label distribution: race 4 · long 7 · easy 5 · tempo 2 · intervals 1 · hills 1. Terrain: road 13 · trail 6 · mountain 1. Races (4, 9, 11, 15) all have tempo_block = no. **Decided by David, 2 Oct (provisional D-cowork-4):** a race is a race, not a tempo block. Races get `tempo_block = no` whatever the effort, and the batch 04 labels stand. Why: race is its own intent, and counting it twice would blur both labels. The rubric/session-types definition of `tempo_block` should state the exclusion explicitly, but only *after* v1.4 is scored on batch 04, so the held-out test isn't contaminated. No new OQ is needed.
+Lead: please record D-cowork-5 and assign the task ID. Sequencing in the brief: v1.4 is scored on batch 04 **first**, so don't touch `classify-session/` or `session-types.md` before that.
 
----
-
-Latest batch processed 2 Oct 2026 (session 14). One entry became one commit:
+Latest batch processed 2 Oct 2026 (session 14). Two entries became two commits:
 
 | Entry | Commit | Note |
 |---|---|---|
-| Two new briefs: P2.2 read-only query service (`@code`), P2.1 independent case review (`@codex`) | `2092ff2` | Committed verbatim. The TASKS.md owner tags the entry asked for are the lead's own work and land separately |
+| T3.1 batch 04 prepared blind (rows 41–60) and labelled by David, 2 Oct | `d0505d0` | Committed with the files and message the entry specified. The lead's first message claimed `labels-batch-04.md` was not named in the entry's file list and had been committed as a judgement call — wrong: the entry names it explicitly. The lead had read this file *before* Cowork added the file list and did not re-check after Cowork revised it mid-session. Codex's review caught it and the message was amended (hence the hash change from `6eb3919`). No scope exception was ever needed |
+| Two new briefs: P2.2 read-only query service (`@code`), P2.1 independent case review (`@codex`) | `2092ff2` | Committed verbatim. The [[10 Projects/AI Second Brain/TASKS|TASKS]] owner tags the entry asked for are the lead's own work and landed separately in `8fb68d0` |
 
-The entry was committed after the lead's own staged renumbering (`01562e1`), not before it, because `90 System/briefs/P2.2.md` → "Step 0" told the lead to finish that interrupted commit first. No files overlapped, so both stayed separable.
+The briefs entry was committed after the lead's own staged renumbering (`01562e1`), not before it, because `90 System/briefs/P2.2.md` → "Step 0" told the lead to finish that interrupted commit first. No files overlapped, so both stayed separable. Codex flagged the ordering: a Cowork brief does not override "the lead commits handoff entries first", so it is on the list for David.
+
+**The tracking updates were all applied in session 14.** Batch 04 is ticked as labelled-not-scored in [[10 Projects/AI Second Brain/TASKS|TASKS]] with the label-process and distribution notes; the race/`tempo_block` call David made during labelling is recorded as **D66** (Cowork's provisional `D-cowork-4`, renumbered by the lead per D63) with the rubric-wording follow-up deferred until after scoring; a session-14 entry is in [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] and a `label` entry in [[log]]. No open question was raised, as the entry said none was needed.
+
+**One thing Cowork left open and the lead did not guess:** who scores batch 04. The entry proposed "`@cowork` or `@code`" without choosing. [[10 Projects/AI Second Brain/TASKS|TASKS]] records the owner as unsettled and it is on the list for David.
 
 Previous batch, 1 Oct 2026 (session 13). Three entries became three commits:
 

@@ -3,13 +3,23 @@ classification: internal
 ---
 # Open Questions
 
-**Updated:** 1 Oct 2026 (session 12) · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 2 Oct 2026 (session 14) · Open questions block work. Resolve them or explicitly park them.
 
 ---
 
 ## 🔴 Blocking
 
-Nothing blocks S2 implementation. Requirements and targets closed 1 Oct (D52–D59). The always-on host purchase (D53) gates sustained-performance *numbers*, not the build: implement on the Air, confirm on the host.
+**Five answers block the lead loop (raised 2 Oct, session 14).** Requirements and targets themselves are closed (D52–D59), and the always-on host purchase (D53) still gates sustained-performance *numbers* rather than the build — but S2 implementation cannot start until these are answered. All five are David's; none was guessed.
+
+| # | Question | Holds up | Where it is written up |
+|---|---|---|---|
+| 1 | Does the reviewer run at effort `high`, or must it be the highest available? `AGENTS.md` says highest; the profile and David's own 1 Oct note say `high` is standard with `ultra` kept for when lead and reviewer are both stuck | D64, and therefore D65 and P2.2 | [[90 System/briefs/D64-model-policy\|D64 brief]] |
+| 2 | How should the lead invoke the reviewer? The documented `codex exec --profile review` does not work as typed — either symlink the bundled CLI into `~/.local/bin`, or record the absolute path in `AGENTS.md` | D64, and therefore D65 and P2.2 | [[90 System/briefs/D64-model-policy\|D64 brief]] |
+| 3 | Authorise (or redirect) the `~/Documents/dbrain-runtime/` repository for application code. The P2.2 brief tells the agent to create it while saying it is not yet authorised, so the lead stopped rather than create first and ask later | P2.2, the whole of S2 | [[90 System/briefs/P2.2\|P2.2 brief]], finding 6 |
+| 4 | May Codex *read* the 6 reserved retrieval cases in order to check their labels? The brief asks it to review all 16 while forbidding any model to run on those 6 | P2.1's independent review | [[90 System/briefs/P2.1-review\|P2.1 brief]], finding 9 |
+| 5 | Who scores batch 04 — `@cowork` or `@code`? Cowork proposed both and chose neither | T3.1, and the rubric v1.4 verdict | [[10 Projects/AI Second Brain/TASKS\|TASKS]], T3.1 |
+
+These are decisions, not research questions: each is a one-line answer. They are recorded here rather than as numbered OQs because they are gates on work in flight, not open design questions — D66 is the precedent, where David answered within the session and no OQ was needed.
 
 ## 🟡 Needed soon
 

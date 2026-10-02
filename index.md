@@ -3,7 +3,7 @@ classification: internal
 ---
 # Index
 
-Catalog of the vault's structured notes (`10 Projects`, `20 Areas`, `30 Resources`, `90 System`). `00 Inbox` is excluded: nothing there is triaged. Updated on every ingest; history in [[log]].
+Catalog of the vault's structured notes (`10 Projects`, `20 Areas`, `30 Resources`, `40 Archive`, `90 System`). `00 Inbox` is excluded: nothing there is triaged. Updated on every ingest; history in [[log]].
 
 Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 from file names and existing summaries, so entries describe what a note is, not what it concludes.
 
@@ -26,7 +26,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/02_Architecture/data-policy|data-policy]] — three-tier data policy and red lines · internal
 - [[10 Projects/AI Second Brain/02_Architecture/success-thresholds|success-thresholds]] — pass thresholds for the three showcase skills · internal
 - [[10 Projects/AI Second Brain/03_Golden/heldout-order|heldout-order]] — reproducible sampling order for the held-out golden runs · internal
-- [[10 Projects/AI Second Brain/03_Golden/labels-batch-01|labels-batch-01]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-02|02]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-03|03]] — David's golden-dataset labels, one batch per note · internal
+- [[10 Projects/AI Second Brain/03_Golden/labels-batch-01|labels-batch-01]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-02|02]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-03|03]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-04|04]] — David's golden-dataset labels, one batch per note. 01–03 are development data; **04 is the held-out test for rubric v1.4 and is not yet scored** · internal
 - [[10 Projects/AI Second Brain/README|project README]] — project overview and current delivery order · internal
 - [[10 Projects/AI Second Brain/memory/context/stack|stack]] — recorded environment and planned runtime choices; inventory pending · internal
 - [[10 Projects/AI Second Brain/memory/projects/ai-second-brain|project memory]] — purpose, current sequence and dependencies · internal
@@ -129,10 +129,14 @@ Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–
 - [[30 Resources/NNg UX/README|README]] — hub, not-yet-ingested decks · public · draft
 - [[30 Resources/NNg UX/ux-strategy|ux-strategy]] · [[30 Resources/NNg UX/ux-research-and-usability-testing|ux-research-and-usability-testing]] · [[30 Resources/NNg UX/measuring-ux|measuring-ux]] · [[30 Resources/NNg UX/leading-ux-teams-and-cross-functional-work|leading-ux-teams-and-cross-functional-work]] · [[30 Resources/NNg UX/journey-mapping|journey-mapping]] · [[30 Resources/NNg UX/personas|personas]] · [[30 Resources/NNg UX/persuasive-design-and-trust|persuasive-design-and-trust]] · [[30 Resources/NNg UX/lean-ux-and-agile|lean-ux-and-agile]] · [[30 Resources/NNg UX/ux-workshops|ux-workshops]] (stub) · [[30 Resources/NNg UX/ux-in-the-ai-era-2026|ux-in-the-ai-era-2026]] · [[30 Resources/NNg UX/sources|sources]] · public · draft
 
+## 40 Archive
+- [[40 Archive/agent-orchestration-proposal|agent-orchestration-proposal]] — the design record behind D63: why one lead and one queue, and the options not taken · internal
+
 ## 90 System
 - [[90 System/weekly-local-model-review|weekly local-model review]] — procedure, prepared task prompt and the activation/operating record; scheduled Thu 09:00 since 1 Oct, first-run evidence pending · internal
 - [[90 System/README|README]] — vault conventions for humans · internal
-- [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the git agent to commit · internal
+- [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the lead to commit · internal
+- `90 System/briefs/` — one brief per task handed between agents (D63). [[90 System/briefs/_template|_template]] · [[90 System/briefs/D63-adopt-orchestration|D63]] · [[90 System/briefs/D64-model-policy|D64]] · [[90 System/briefs/D65-stop-conditions|D65]] · [[90 System/briefs/P2.2|P2.2]] · [[90 System/briefs/P2.1-review|P2.1-review]] · all internal
 - [[90 System/lint-checklist|lint-checklist]] — weekly wiki health check, with countable results · internal
 - [[90 System/skills/classify-session/SKILL|classify-session]], [[90 System/skills/weekly-assessment/SKILL|weekly-assessment]], [[90 System/skills/race-readiness/SKILL|race-readiness]] — the three showcase skills · internal
 

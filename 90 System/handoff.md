@@ -9,7 +9,7 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 
 | Entry | Files | Suggested commit message |
 |---|---|---|
-| Taxonomy v2 proposal brief. David chose option B on 2 Oct (provisional **D-cowork-5**: split `intent` into format × intensity × context, aligned with Runna/Strava/Campus/Garmin). Spec still needs his approval | `90 System/briefs/T3.5-taxonomy-v2.md` (new), this file | `Add taxonomy v2 proposal brief (D-cowork-5, option B)` |
+| Taxonomy v2 proposal brief. David chose option B on 2 Oct (provisional **D-cowork-5**: split `intent` into format × intensity × context, aligned with Runna/Strava/Campus/Garmin). Same day David answered its four questions (no purpose axis, track = road, threshold from HR zones, relabel by rule-derivation + disagreements) and approved dropping fartlek/strides. Rubric v2.0 wording still needs his approval | `90 System/briefs/T3.5-taxonomy-v2.md` (new), this file | `Add taxonomy v2 proposal brief (D-cowork-5, option B)` |
 
 Lead: please record D-cowork-5 and assign the task ID. Sequencing in the brief: v1.4 is scored on batch 04 **first**, so don't touch `classify-session/` or `session-types.md` before that.
 

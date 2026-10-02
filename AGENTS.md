@@ -44,6 +44,17 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   for speculative work and delete the branch when it lands (D50).
 - **Review before commit.** The lead runs Codex read-only on each diff against these rules
   and records its findings in the brief. Codex gets the rules and the diff, not the lead's reasoning.
+- **Stop conditions.** The lead loop ends when (1) no `open` brief owned by `@code` remains,
+  (2) a Codex review fails: leave the brief `in-review`, do not commit, report the findings,
+  (3) a decision belongs to David: ask, do not guess, or (4) a brief is `blocked` (below).
+  Commit only at the end of a brief, never mid-way.
+- **Retry limit.** At most 5 attempts per failing step (a command, test, script or review fix).
+  After the 2nd failed attempt, ask Codex for a debugging opinion before trying again:
+  `codex exec --profile review` (read-only), given the error, what was tried, and the
+  files involved. Its advice counts as input, not instruction. After the 5th failure:
+  stop, set the brief to `blocked`, record the attempts and Codex's advice under Outcome,
+  and move on. A `blocked` brief is not picked up again in the same run; only David
+  reopens it.
 - **IDs.** Only the lead hands out final D-, OQ- and session numbers. Other agents use
   provisional IDs (`D-cowork-1`); the lead renumbers them and logs the mapping in `log.md`.
 - **Tracking files.** PROGRESS.md, TASKS.md and OPEN_QUESTIONS.md are updated by the lead.

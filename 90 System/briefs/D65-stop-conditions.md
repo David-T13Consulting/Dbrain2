@@ -1,12 +1,14 @@
 ---
 classification: internal
-task: D-cowork-3
+task: D65
 owner: "@code"
 status: open
 created: 2026-10-01
 models: []
 ---
-# Add stop conditions and a retry limit to the lead loop (D-cowork-3)
+# Add stop conditions and a retry limit to the lead loop (D65)
+
+> Written by Cowork as provisional **D-cowork-3**; renumbered to **D65** by the lead in session 13.
 
 ## Goal
 Write down when the lead loop ends and cap retries, so a run can never loop forever, so a run never decides "done" by itself, and option B (scheduled runs) has a safe base if it is adopted later.
@@ -17,7 +19,7 @@ Write down when the lead loop ends and cap retries, so a run can never loop fore
 - PROGRESS.md (decision row), `log.md`, this brief
 
 ## Inputs / context to read first
-- `AGENTS.md` → "Multi-agent work", as committed under D-cowork-1
+- [[AGENTS]] → "Multi-agent work", as committed under D63
 
 ## Done when
 1. These bullets sit directly after "Review before commit" in `AGENTS.md`:
@@ -35,13 +37,13 @@ Write down when the lead loop ends and cap retries, so a run can never loop fore
      reopens it.
    ```
 2. Final decision number assigned. Row: *The lead loop has explicit stop conditions (empty queue, failed review, a decision for David, a blocked brief) and a retry limit: at most 5 attempts per failing step, a read-only Codex (Astra) debugging opinion after the 2nd failure, then `blocked`.* Why: an interactive run otherwise decides for itself when it is done, and an unattended run (option B, not yet adopted) needs this before it is safe. Revisit if runs stall on (3) too often.
-3. Reviewed by Codex (review profile) and committed **after** D-cowork-1 and D-cowork-2.
+3. Reviewed by Codex (review profile) and committed **after** D63 and D64.
 
 ## Constraints
 - Approved by David on 1 Oct. Do not reword the meaning of the conditions or the limits (5 attempts; Codex consulted after the 2nd failure: that threshold is Cowork's reading of "when blocked", so flag it if it proves wrong).
 - Also add `blocked` to the status list in `90 System/briefs/_template.md`.
 - The Codex debugging calls and the Codex review are separate, fresh `codex exec` runs. The review must not be given the debugging conversation, so it stays independent.
-- Do not start this until D-cowork-1 and D-cowork-2 are committed: they edit the same file.
+- Do not start this until D63 and D64 are committed: they edit the same file.
 
 ## Review
 

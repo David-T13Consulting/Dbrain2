@@ -31,7 +31,7 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
 - Lint weekly with `90 System/lint-checklist.md`. Report findings read-only; fix only what David approves.
 
 ## Multi-agent work
-Adopted 1 Oct 2026 (D-cowork-1, final number assigned by the lead). Design record: `40 Archive/agent-orchestration-proposal.md`.
+Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-proposal|agent-orchestration-proposal]].
 - **Lanes.** Cowork: capture, specs, research, briefs; never runs git (to inspect the tree it may
   run only `git --no-optional-locks status`, because a plain `git status` leaves a stale
   `index.lock` that its sandbox cannot remove). Claude Code: lead, build, integration, git,
@@ -54,7 +54,7 @@ Adopted 1 Oct 2026 (D-cowork-1, final number assigned by the lead). Design recor
   handoff. If unsure, stop and ask David.
 
 ## Model policy
-Adopted 1 Oct 2026 (D-cowork-2, final number assigned by the lead). David sets this policy; config files apply it; agents do not pick models outside it.
+Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents do not pick models outside it.
 
 | Lane | Model | Where it is set |
 |---|---|---|

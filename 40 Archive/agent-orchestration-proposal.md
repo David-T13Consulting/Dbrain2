@@ -9,7 +9,7 @@ updated: 2026-10-01
 ---
 # Proposal: one lead, one queue for the three build agents (Cowork · Claude Code · Codex)
 
-> **Status: APPROVED by David, 1 Oct 2026** (provisional ID **D-cowork-1**; the lead assigns the final D-number). Decisions: option B (Claude Code as lead) · Codex as reviewer · this record archived once adopted. §5 is now live in `AGENTS.md`.
+> **Status: APPROVED by David, 1 Oct 2026**, adopted as **D63** (written as provisional `D-cowork-1` until the lead renumbered it at integration, session 13). Decisions: option B (Claude Code as lead) · Codex as reviewer · this record archived once adopted. §5 is now live in `AGENTS.md`.
 
 ## 1 · The problem as stated
 

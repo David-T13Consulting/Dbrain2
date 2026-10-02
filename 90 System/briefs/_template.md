@@ -12,5 +12,5 @@ created: YYYY-MM-DD
 ## Inputs / context to read first
 ## Done when (checkable)
 ## Constraints (vault rules that especially apply)
-## Review   ← filled by Codex: findings, verdict
+## Review   ← filled by the lead from Codex's read-only review: findings, verdict, model used
 ## Outcome  ← filled by owner: commit hash, open issues

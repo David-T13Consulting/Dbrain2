@@ -5,7 +5,20 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue: empty.** Latest batch processed 2 Oct 2026 (session 14). One entry became one commit:
+**Queue: 1 entry.**
+
+| Entry | Files | Suggested commit message |
+|---|---|---|
+| T3.1 batch 04 prepared (rows 41–60, blind) and labelled by David, 2 Oct | `10 Projects/AI Second Brain/03_Golden/labels-batch-04.md` (new), this file | `Golden dataset: batch 04 labelled (held-out, rubric v1.4 not yet scored)` |
+
+**Tracking updates for the lead (Cowork session, 2 Oct 2026). Write these into PROGRESS / TASKS / OPEN_QUESTIONS:**
+- TASKS T3.1: batch 04 labelled ✅ 2 Oct, **not scored yet**. Next: score rubric v1.4 blind against these labels. It's running-domain work; owner `@cowork` or `@code`, and nobody touches `classify-session/` before then.
+- Label process: intent asked as a single question with fixed options. A two-part intent form confused run 1, which was re-asked. A pre-scoring consistency check changed 4 rows (13, 18, 19, 20); the original labels are kept in the Note column. Report scores both ways, like D38.
+- Label distribution: race 4 · long 7 · easy 5 · tempo 2 · intervals 1 · hills 1. Terrain: road 13 · trail 6 · mountain 1. Races (4, 9, 11, 15) all have tempo_block = no. **Decided by David, 2 Oct (provisional D-cowork-4):** a race is a race, not a tempo block. Races get `tempo_block = no` whatever the effort, and the batch 04 labels stand. Why: race is its own intent, and counting it twice would blur both labels. The rubric/session-types definition of `tempo_block` should state the exclusion explicitly, but only *after* v1.4 is scored on batch 04, so the held-out test isn't contaminated. No new OQ is needed.
+
+---
+
+Latest batch processed 2 Oct 2026 (session 14). One entry became one commit:
 
 | Entry | Commit | Note |
 |---|---|---|

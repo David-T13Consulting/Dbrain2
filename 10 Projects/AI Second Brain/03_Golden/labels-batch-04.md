@@ -1,0 +1,40 @@
+---
+classification: internal
+status: HELD-OUT batch (test set, D25). Prepared by Cowork 2 Oct 2026, blind: facts only, no skill predictions. Labelled by David 2 Oct 2026 (one run per screen). Scores rubric v1.4 — NOT YET SCORED.
+---
+# Golden dataset: labelling batch 04 (held-out, 20 runs)
+
+**Sampling:** rows 41–60 of `heldout-order.md` (seed 20260930). Nothing hand-picked.
+**Shoes:** road = 28636543 / 21087212 · trail = 25832441 · unlisted = gear not in the baseline.
+**Context** = a named event within 14 days before or after the run.
+`tempo_block` = the run contains ≥15 min at race effort. `vertical` = the run contains steep climbing work (Tiennes / Citadelle type). Terrain is the surface; mountain only for real mountains (D31).
+Climb figures: gain / horizontal distance of named Strava segments (approximate). Paces = moving time / distance.
+
+| # | Strava id | Date | Name | Shoes | km | Moving | Climb m (m/km) | Avg HR | Structure seen in data | Context | Terrain | Intent | tempo_block | vertical | Note |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 15253871864 | Sun 27 Jul 2025 | Morning Run (Les Mathes, FR) | unlisted | 10.3 | 1:01:51 | 39 (4) | 148 | 2.0 km @6:30 (HR 133) · then 4 × (1 km @4:53–5:07 + 500 m @4:32–4:38), 60 s and 2 min jog recoveries; HR 150–158 on the reps · 1.0 km @5:59 (HR 150). Flat seafront | – | road | tempo | yes | no | First answer was easy + intervals (two-part form, Cowork's fault); re-asked, David: tempo |
+| 2 | 15964589886 | Sun 28 Sep 2025 | Sunday Morning Run (Wissant, FR) | road | 6.3 | 35:28 | 62 (10) | 141 | Single lap, steady 5:36/km, max HR 154 | – | road | easy | no | no |  |
+| 3 | 17550730723 | Sat 28 Feb 2026 | Morning Run | road | 28.5 | 2:32:39 | 98 (3) | 152 | Laps 7.0 km @5:32 (HR 148) · 7.0 @5:26 (152) · 13.2 @5:10 (155) · 1.3 @5:53 (147). Flat Meuse/Sambre towpaths | – | road | long | yes | no |  |
+| 4 | 16468045808 | Sat 15 Nov 2025 | Festival demi trail Yvoir (TrailRun). Description: "DNF" | trail | 25.7 | 3:12:31 | 996 (39) | 157 | Single lap. Climbs: Rue des Loges 121 m at 9% (HR 157), Bauche 102 m at 12% (157), Climb Godinne 61 m at 30% (170), Captage d'eau 51 m at 32% (168), Tricointe 91 m at 10% (164), Deuxième côte 97 m at 8% (169). Max HR 175 | Race day (Yvoir) | trail | race | no | no |  |
+| 5 | 15064654783 | Thu 10 Jul 2025 | "Tempo 2-1-1" | unlisted | 8.5 | 48:08 | 46 (5) | 153 | 2.0 km @5:51 (HR 141) · 2.0 km @5:01 (162) · 2 min jog · 1.0 km @4:45 (160) · 1.5 min jog · 1.0 km @4:49 (161) · 1.5 min jog · 2.0 km @6:17 climbing 43 m (157) | – | road | tempo | yes | no |  |
+| 6 | 19220360796 | Tue 7 Jul 2026 | Evening Run (Fernelmont) | trail | 10.0 | 1:04:21 | 216 (22) | 134 | Single lap, steady 6:25/km, max HR 162. Climbs: Petit Bois 20 m at 4% (HR 144), Pente Hard 14 m at 13% (139) | – | trail | easy | no | no |  |
+| 7 | 16233404169 | Thu 23 Oct 2025 | "15km Easy Run" (Encinitas, US). Runna: "no faster than 5:25/km" | road | 15.3 | 1:27:12 | 104 (7) | 141 | Single lap, steady 5:42/km, max HR 155 | – | road | long | no | no |  |
+| 8 | 13460341272 | Sun 26 Jan 2025 | Afternoon Run | road | 20.0 | 1:43:40 | 159 (8) | 155 | Single lap, 5:11/km average; HR 152–163 on every segment, max 169. One 32 m climb at 9% (HR 159) | – | road | long | no | no |  |
+| 9 | 18078583253 | Sun 12 Apr 2026 | "Marathon Namur" | road | 42.7 | 3:49:52 | 136 (3) | 161 | Single lap. Profondeville → Jambes 11.6 km @5:20 (HR 164) · Île de Dave → Grands Malades 7.9 km @5:36 (160) · last 5.8 km @6:04 (158). Max HR 178 | Race day (Marathon Namur) | road | race | no | no |  |
+| 10 | 18639417454 | Sat 23 May 2026 | Morning Run | road | 10.3 | 56:42 | 76 (7) | 150 | Laps 10.0 km @5:33 (HR 150) · 0.35 km @5:40 (156). One 32 m climb at 9% (HR 159) | 8 days before 20 km de Bruxelles | road | easy | no | no |  |
+| 11 | 19098496881 | Sun 28 Jun 2026 | Morning Run | road | 8.7 | 45:55 (elapsed 1:56:55) | 133 (15) | 153 | 1.8 km @6:45 (HR 139) · ~1 h stopped · 5.2 km @4:32 matching the "Jogging Erpent Village" segment (HR 161, max 175) · 1.6 km @5:12 (147) | – | road | race | no | no |  |
+| 12 | 19306953571 | Tue 14 Jul 2026 | Morning Trail Run (Tignes, FR). Description: "13km, 1h50" | trail | 8.7 | 1:18:17 (elapsed 1:50:04) | 387 (44) per GPS | 151 | Watch recorded 8.7 km; description says 13 km. Climbs: Arête de Fresse 120 m at 7% (HR 144), Greben 138 m at 12% (153), Vallon du Paquis 221 m at 18% (155). Long descent from Pas de Tovière. High altitude, no power data. Max HR 174 | – | mountain | long | no | yes |  |
+| 13 | 18665762352 | Tue 26 May 2026 | Evening Run (TrailRun) | trail | 9.0 | 1:10:12 | 389 (43) | 139 | 2.8 km downhill (HR 124) · 6 × (30 s hard / 30 s easier), all on the Tienne des Biches at 13–21% (HR rising to ~156; sensor slow first min) · 600 m descent · same 6 × 30/30 again (HR 162–170) · 600 m descent · 750 m slow climb, 106 m at 13% (HR 135) · 2 × 1.0 km @4:17 / 4:20 on the flat (HR 154 / 159), 2.5 min easy between · 0.5 km cool-down | 5 days before 20 km de Bruxelles · 12 days before Namuraid | trail | hills | no | yes | Consistency check 2 Oct (before scoring): first label intervals → hills, consistent with batch 03 #5/#18 |
+| 14 | 16193602454 | Sun 19 Oct 2025 | "Comme à la maison" (Encinitas, US) | road | 15.0 | 1:21:21 | 205 (14) | 148 | 12.0 km @5:31 (HR 145), including Glencrest climb 79 m at 12% (HR 162) and Annie's 67 m at 9% (162) · then 3.0 km @5:04 (HR 159) | – | road | long | no | no |  |
+| 15 | 18727313156 | Sun 31 May 2026 | "20km BXXX" (Brussels) | road | 20.2 | 1:36:37 | 182 (9) | 163 | Laps 6.0 km @4:57 (HR 161) · 4.0 @4:54 (160) · 7.0 @4:39 (164) · 1.8 @4:54 climbing 40 m (169) · 1.2 @4:40 (172). Max HR 175 | Race day (20 km de Bruxelles) · 7 days before Namuraid | road | race | no | no |  |
+| 16 | 19363929131 | Sat 18 Jul 2026 | Afternoon Run (TrailRun, Viverone, IT). Description: "🥵🥵" | trail | 14.7 | 1:34:12 | 128 (9) | 151 | Single lap, 6:24/km, lakeside, max HR 168. No power data | – | trail | long | no | no |  |
+| 17 | 18287703395 | Tue 28 Apr 2026 | Morning Run (Ostend) | road | 8.1 | 44:33 | 12 (2) | 148 | Single lap, steady 5:33/km on the seafront, max HR 164 | – | road | easy | no | no |  |
+| 18 | 17275935237 | Tue 3 Feb 2026 | Evening Run (Jambes track). Description: "🐌" | road | 10.3 | 59:16 (elapsed 1:20:01) | 53 (5) | 139 | First 5.1 km lap contains repeated 200 m track laps at ~4:00–4:25/km and stops (elapsed 45 min vs 31 moving), HR 136–148 · 0.84 km @4:08 (148) · 200 m jog · 1.05 km @4:16 (144) · 200 m jog · 3.0 km @5:57 (141). Max HR 156 | – | road | intervals | no | no | Consistency check 2 Oct (before scoring): tempo_block yes → no (longest effort ~4 min) |
+| 19 | 13399037067 | Sun 19 Jan 2025 | Afternoon Run (Mogán, ES) | unlisted | 10.3 | 56:54 | 187 (18) | 163 | 3.4 km @5:35 (HR 154) · 6.9 km @5:29 (HR 167, max 177). Cliff path climb 72 m at 7% (HR 167) | – | road | easy | no | no | Consistency check 2 Oct (before scoring): first label tempo (tempo_block no) → easy |
+| 20 | 15516953673 | Tue 19 Aug 2025 | Evening Run (Gesves) | trail | 14.4 | 1:46:49 | 617 (43) | 149 | Single lap, 7:26/km. Bois de Gesves short climb ×4 (59 m at 18%; HR 150 / 162 / 160 / 154), Bois de Gesves long climb 104 m at 7% (154). Max HR 175 | 11 days before Epicutrail (Gesves) | trail | long | no | yes | Consistency check 2 Oct (before scoring): vertical no → yes (4 × 59 m at 18%) |
+
+Labels: terrain = road | trail | mountain · intent = race | intervals | hills | long | tempo | recovery | easy | can't tell | not a run · flags = yes | no
+
+**Label process.** One run per screen, fixed answer options, no skill output shown. Run 1 was asked again after a confusing two-part form. After all 20 were labelled, and **before any scoring**, Cowork ran a schema/cross-batch consistency check on 4 rows (13, 18, 19, 20) without seeing any rubric output. David changed all 4. The first labels are kept in the Note column; scoring should report both, the way batch 03 handled D38.
+
+**Scoring:** not yet done. Apply rubric v1.4 / classify-session as written, after these labels (locked 2 Oct 2026).

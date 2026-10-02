@@ -5,7 +5,15 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue: empty.** Both entries processed in session 14:
+**Queue: 1 entry.**
+
+| Entry | Files | Suggested commit message |
+|---|---|---|
+| David answered Q5 (Codex may read the 6 reserved cases, read-only) and Q6 (nothing to change on his side, so D68 can close) via Cowork | `90 System/for-david.md` | `Record David's answers to Q5 and Q6 (P2.1 unblocked, D68 closable)` |
+
+For the lead: unblock P2.1-review, close D68, then clear Q5/Q6 from the Answered table once they are recorded.
+
+Previous: both entries processed in session 14:
 
 | Entry | Commit | Note |
 |---|---|---|

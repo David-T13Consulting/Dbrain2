@@ -5,11 +5,12 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue: 1 entry.**
+**Queue: 2 entries.**
 
 | Entry | Files | Suggested commit message |
 |---|---|---|
 | Batch 04 scored against rubric v1.4 by Cowork, validated by David 2 Oct. Terrain 100% · intent 65% · tempo_block 40% · vertical 90% | `10 Projects/AI Second Brain/03_Golden/labels-batch-04.md` | `Golden dataset: score batch 04 against rubric v1.4 (held-out, validated by David)` |
+| Single front door (D-cowork-6, David chose option A on 2 Oct): new decision queue + brief for the AGENTS.md change, which is the lead's own work | `90 System/for-david.md` (new), `90 System/briefs/D-cowork-6-single-front-door.md` (new), this file | `Add single-front-door decision queue and brief (D-cowork-6)` |
 
 Tracking for the lead:
 - Tick T3.1 batch 04 as scored; the scoring owner was `@cowork` (David, 2 Oct).

@@ -5,15 +5,15 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue: 1 entry.**
+**Queue: empty.** Latest batch processed 2 Oct 2026 (session 14). Three entries became three commits:
 
-| Entry | Files | Suggested commit message |
+| Entry | Commit | Note |
 |---|---|---|
-| Taxonomy v2 proposal brief. David chose option B on 2 Oct (provisional **D-cowork-5**: split `intent` into format × intensity × context, aligned with Runna/Strava/Campus/Garmin). Same day David answered its four questions (no purpose axis, track = road, threshold from HR zones, relabel by rule-derivation + disagreements) and approved dropping fartlek/strides. Rubric v2.0 wording still needs his approval | `90 System/briefs/T3.5-taxonomy-v2.md` (new), this file | `Add taxonomy v2 proposal brief (D-cowork-5, option B)` |
+| Taxonomy v2 proposal brief (provisional `D-cowork-5` / `T3.5`) | `9c7ed8b` | Committed verbatim with Cowork's own message and provisional IDs, then renumbered by the lead in the following commit: **`T3.5` → `T3.4`** (next free task ID) and **`D-cowork-5` → `D67`**. The brief stays a *proposal*: David approved option B and its five sub-points, but the rubric v2.0 wording still needs him, per rule 8 |
 
-Lead: please record D-cowork-5 and assign the task ID. Sequencing in the brief: v1.4 is scored on batch 04 **first**, so don't touch `classify-session/` or `session-types.md` before that.
+The taxonomy brief's sequencing is recorded in [[10 Projects/AI Second Brain/TASKS|TASKS]] as given: **score rubric v1.4 on batch 04 first**, because that is the last held-out test of the v1 schema. Nothing in `classify-session/` or `session-types.md` may move before then.
 
-Latest batch processed 2 Oct 2026 (session 14). Two entries became two commits:
+The other two entries of the same day:
 
 | Entry | Commit | Note |
 |---|---|---|

@@ -159,6 +159,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
   - [ ] Race times backtest (automatic from results; past readiness verdicts **not** labelled, because of hindsight bias)
   Columns: Input · Expected output · Edge case? · Judge type (rule/LLM). 20–30% edge cases.
 - [ ] **After batch 04 is scored:** state the race exclusion explicitly in the `tempo_block` definition (rubric and [[30 Resources/Running/session-types|session-types]]), per D66. Deliberately **not** done before scoring — editing the rubric first would contaminate the held-out test.
+- [ ] **T3.4 · Session taxonomy v2 (D67)** `@cowork` — proposal in [[90 System/briefs/T3.4-taxonomy-v2|T3.4-taxonomy-v2]]. Splits the mixed `intent` axis into terrain · format · dominant intensity · stacking context flags. **Approved in principle; the rubric v2.0 wording still needs David.** Strict sequence: score v1.4 on batch 04 first, then approve v2.0 wording, then rewrite the rubric and re-derive batches 01–04 by rule as v2 *development* data (05–06 become the first v2 held-out tests). v1.x scores stay in the record and are not comparable.
 - [ ] **T3.2** Add adversarial rows (≥3) and note coverage gaps `1 h`
 - [ ] **T3.3** Commit as `golden-dataset.md`, versioned like code `15 min`
 

@@ -55,6 +55,14 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   stop, set the brief to `blocked`, record the attempts and Codex's advice under Outcome,
   and move on. A `blocked` brief is not picked up again in the same run; only David
   reopens it.
+- **One front door (D68).** Only Cowork asks David. Claude Code and Codex never
+  ask him directly: they add an entry to `90 System/for-david.md` (from, brief, question,
+  options with the recommended one first, what it blocks, urgency), set the brief to
+  `blocked-on-david`, and continue with other work. Cowork walks David through the open
+  entries at the start of each session and writes the answers into the queue and the
+  brief. The lead turns answers into decisions and commits. Stop condition (3) means
+  "write to the queue", not "ask".
+- The lead clears answered entries once they are recorded in PROGRESS or the brief.
 - **IDs.** Only the lead hands out final D-, OQ- and session numbers. Other agents use
   provisional IDs (`D-cowork-1`); the lead renumbers them and logs the mapping in `log.md`.
 - **Tracking files.** PROGRESS.md, TASKS.md and OPEN_QUESTIONS.md are updated by the lead.
@@ -62,7 +70,7 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
 - Cowork lists its uncommitted changes in `90 System/handoff.md`; the lead commits them
   first, as their own commit, then clears the entry.
 - Never commit, revert or overwrite another agent's uncommitted files unless they are in the
-  handoff. If unsure, stop and ask David.
+  handoff. If unsure, stop and add it to `for-david.md`.
 
 ## Model policy
 Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents do not pick models outside it.

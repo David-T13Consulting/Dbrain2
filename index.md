@@ -136,7 +136,8 @@ Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–
 - [[90 System/weekly-local-model-review|weekly local-model review]] — procedure, prepared task prompt and the activation/operating record; scheduled Thu 09:00 since 1 Oct, first-run evidence pending · internal
 - [[90 System/README|README]] — vault conventions for humans · internal
 - [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the lead to commit · internal
-- `90 System/briefs/` — one brief per task handed between agents (D63). [[90 System/briefs/_template|_template]] · [[90 System/briefs/D63-adopt-orchestration|D63]] · [[90 System/briefs/D64-model-policy|D64]] · [[90 System/briefs/D65-stop-conditions|D65]] · [[90 System/briefs/P2.2|P2.2]] · [[90 System/briefs/P2.1-review|P2.1-review]] · [[90 System/briefs/T3.4-taxonomy-v2|T3.4-taxonomy-v2]] · all internal
+- [[90 System/for-david|for-david]] — the single decision queue: every question for David, from any agent (D68) · internal
+- `90 System/briefs/` — one brief per task handed between agents (D63). [[90 System/briefs/_template|_template]] · [[90 System/briefs/D63-adopt-orchestration|D63]] · [[90 System/briefs/D64-model-policy|D64]] · [[90 System/briefs/D65-stop-conditions|D65]] · [[90 System/briefs/P2.2|P2.2]] · [[90 System/briefs/P2.1-review|P2.1-review]] · [[90 System/briefs/T3.4-taxonomy-v2|T3.4-taxonomy-v2]] · [[90 System/briefs/D68-single-front-door|D68]] · all internal
 - [[90 System/lint-checklist|lint-checklist]] — weekly wiki health check, with countable results · internal
 - [[90 System/skills/classify-session/SKILL|classify-session]], [[90 System/skills/weekly-assessment/SKILL|weekly-assessment]], [[90 System/skills/race-readiness/SKILL|race-readiness]] — the three showcase skills · internal
 

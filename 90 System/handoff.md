@@ -5,20 +5,18 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-**Queue: 2 entries.**
+**Queue: empty.** Both entries processed in session 14:
 
-| Entry | Files | Suggested commit message |
+| Entry | Commit | Note |
 |---|---|---|
-| Batch 04 scored against rubric v1.4 by Cowork, validated by David 2 Oct. Terrain 100% · intent 65% · tempo_block 40% · vertical 90% | `10 Projects/AI Second Brain/03_Golden/labels-batch-04.md` | `Golden dataset: score batch 04 against rubric v1.4 (held-out, validated by David)` |
-| Single front door (D-cowork-6, David chose option A on 2 Oct): new decision queue + brief for the AGENTS.md change, which is the lead's own work | `90 System/for-david.md` (new), `90 System/briefs/D-cowork-6-single-front-door.md` (new), this file | `Add single-front-door decision queue and brief (D-cowork-6)` |
+| Batch 04 scored against rubric v1.4 by Cowork, validated by David | `29c1b72` | Committed verbatim. Terrain 100% · intent 65% · `tempo_block` 40% · vertical 90% |
+| Single front door: decision queue + brief (provisional `D-cowork-6`) | `7c63c02` | Committed verbatim with the provisional ID, then renumbered to **D68** and implemented by the lead in the following commit |
 
-Tracking for the lead:
-- Tick T3.1 batch 04 as scored; the scoring owner was `@cowork` (David, 2 Oct).
-- Add the batch 04 held-out scores to PROGRESS.
-- The v1 held-out test is now closed, so **T3.4 (taxonomy v2) is unblocked**.
-- Suggested follow-up for David: an independent Codex re-score of batch 04 (the caveat is in the file).
+All the tracking asked for is applied: T3.1 batch 04 is ticked as scored with the held-out result and the D19 thresholds it misses, the scores are in [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]], **T3.4 is marked unblocked**, and David's suggested independent Codex re-score is recorded as a follow-up under T3.1 with the reason it matters (Cowork both prepared and scored the batch, so it is not vendor-independent).
 
-Latest batch processed 2 Oct 2026 (session 14). Three entries became three commits:
+**One correction to `for-david.md`.** Its *Answered* table listed David's four direct answers as reviewer effort, the CLI fix, the runtime repo and *Codex reading the reserved cases*. The last is wrong: the fourth was the batch-04 scoring owner. **The lead can only state that it did not ask the reserved-case question — it has no record either way of whether Cowork or Codex did.** Leaving a held-out-data question open is the safe default, so it is now **Q5**, open, and `P2.1-review` is `blocked-on-david`.
+
+Earlier the same session, three entries became three commits:
 
 | Entry | Commit | Note |
 |---|---|---|

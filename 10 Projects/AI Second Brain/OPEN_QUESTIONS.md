@@ -9,17 +9,19 @@ classification: internal
 
 ## 🔴 Blocking
 
-**Five answers block the lead loop (raised 2 Oct, session 14).** Requirements and targets themselves are closed (D52–D59), and the always-on host purchase (D53) still gates sustained-performance *numbers* rather than the build — but S2 implementation cannot start until these are answered. All five are David's; none was guessed.
+**Four of the five blockers raised in session 14 are answered; one is open.** Requirements and targets are closed (D52–D59), and the always-on host purchase (D53) still gates sustained-performance *numbers* rather than the build.
 
-| # | Question | Holds up | Where it is written up |
+Under **D68** (single front door) questions for David no longer live here: they go to [[90 System/for-david|for-david]], and the lead records the answers in PROGRESS and the briefs.
+
+| # | Question | Answer | Where it is recorded |
 |---|---|---|---|
-| 1 | Does the reviewer run at effort `high`, or must it be the highest available? `AGENTS.md` says highest; the profile and David's own 1 Oct note say `high` is standard with `ultra` kept for when lead and reviewer are both stuck | D64, and therefore D65 and P2.2 | [[90 System/briefs/D64-model-policy\|D64 brief]] |
-| 2 | How should the lead invoke the reviewer? The documented `codex exec --profile review` does not work as typed — either symlink the bundled CLI into `~/.local/bin`, or record the absolute path in `AGENTS.md` | D64, and therefore D65 and P2.2 | [[90 System/briefs/D64-model-policy\|D64 brief]] |
-| 3 | Authorise (or redirect) the `~/Documents/dbrain-runtime/` repository for application code. The P2.2 brief tells the agent to create it while saying it is not yet authorised, so the lead stopped rather than create first and ask later | P2.2, the whole of S2 | [[90 System/briefs/P2.2\|P2.2 brief]], finding 6 |
-| 4 | May Codex *read* the 6 reserved retrieval cases in order to check their labels? The brief asks it to review all 16 while forbidding any model to run on those 6 | P2.1's independent review | [[90 System/briefs/P2.1-review\|P2.1 brief]], finding 9 |
-| 5 | Who scores batch 04 — `@cowork` or `@code`? Cowork proposed both and chose neither | T3.1, and the rubric v1.4 verdict | [[10 Projects/AI Second Brain/TASKS\|TASKS]], T3.1 |
+| 1 | Reviewer effort — `high` or the highest available? | `high` stays standard, `ultra` only when lead and reviewer are both stuck. `AGENTS.md` wording corrected | D64, closed |
+| 2 | How should the lead invoke the reviewer? | Install the standalone Codex CLI. Done: `~/.local/bin/codex`, 0.160.0, and `codex exec --profile review` now works as documented | D64, closed |
+| 3 | Authorise the runtime repository for application code? | Yes — `~/Documents/dbrain-runtime/`, new, local, not pushed | [[90 System/briefs/P2.2\|P2.2 brief]] |
+| 4 | **Open.** May Codex *read* the 6 reserved retrieval cases to check their labels? | — | Queue entry **Q5** in [[90 System/for-david\|for-david]]. `P2.1-review` is `blocked-on-david` |
+| 5 | Who scores batch 04? | `@cowork`. Already done and validated by David the same day — terrain 100% · intent 65% · `tempo_block` 40% · vertical 90% | T3.1, PROGRESS |
 
-These are decisions, not research questions: each is a one-line answer. They are recorded here rather than as numbered OQs because they are gates on work in flight, not open design questions — D66 is the precedent, where David answered within the session and no OQ was needed.
+**Numbering, stated once so it stops drifting.** Items 1–5 keep the order in which the lead originally **listed** them as blockers — which is the order D68's "Done when" 4 assumes — not the order anyone asked them. The lead put items 1, 2, 3 and 5 to David directly; **item 4 it did not ask, and it has no record of whether Cowork or Codex did.** So **item 5 (the scoring owner) is the answered one**, exactly as that brief predicted, and **item 4 (the reserved cases) is the one still open**. In the queue, item 4 is entry **Q5**, because the queue numbers entries in the order they were written. A sixth question, **Q6**, was opened later by D68 itself and has no item number here, since it blocks nothing in this file.
 
 ## 🟡 Needed soon
 

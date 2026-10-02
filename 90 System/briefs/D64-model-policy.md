@@ -2,7 +2,7 @@
 classification: internal
 task: D64
 owner: "@code"
-status: in-review
+status: done
 created: 2026-10-01
 models: [claude-opus-5 (lead), gpt-6-astra (review)]
 ---
@@ -24,8 +24,8 @@ Make the AGENTS.md "Model policy" section true in configuration, so no session n
 
 ## Done when
 1. `.claude/settings.json` pins the lead's default model. It contains no secrets.
-2. `codex exec --profile review` runs GPT-6 Astra at the highest reasoning effort with a read-only sandbox. Proved by one dry run on a trivial diff, with its output pasted under Outcome.
-3. The policy has a final decision number (after D63). Decision row: *Build-agent models follow a policy David sets: Opus for Cowork and the lead, smaller Claude models for simple subagents, GPT-6 Astra at highest reasoning effort as the independent reviewer; config files apply it.* Why: removes per-session model choice from David, keeps the review independent, makes model use traceable. Revisit when a model is retired or reviews prove too slow or costly.
+2. `codex exec --profile review` runs GPT-6 Astra at effort `high` with a read-only sandbox. Proved by one dry run on a trivial diff, with its output pasted under Outcome. *(Amended 2 Oct from "the highest reasoning effort" to `high`, on David's decision — see Outcome §3. The original wording and the config disagreed, and he resolved it in favour of the config.)*
+3. The policy has a final decision number (after D63). Decision row: *Build-agent models follow a policy David sets: Opus for Cowork and the lead, smaller Claude models for simple subagents, GPT-6 Astra as the independent reviewer at effort `high`; config files apply it.* *(Same amendment as item 2.)* Why: removes per-session model choice from David, keeps the review independent, makes model use traceable. Revisit when a model is retired or reviews prove too slow or costly.
 4. Codex has reviewed the diff (the first review using the new profile), and the change is committed.
 
 ## Constraints
@@ -43,12 +43,11 @@ only, not the lead's reasoning. Findings bearing on this brief:
 | 3, 4 | This brief's Review, Outcome and `models:` were empty although the work had been done | Fixed here |
 
 ## Outcome
-**Not done — `in-review`.** The review above returned two blockers that are David's to settle, so per the
-D65 stop conditions this brief is not closed and nothing here is committed. What follows is what session 14
-observed and did in the working tree, with the command that produced each claim, so David can verify rather
-than take it on trust.
+**Closing with this commit, 2 Oct 2026 (session 14).** Both blockers the first review raised were David's, and
+he answered both the same session. `status: done` is set on the understanding that this commit lands; if it
+does not, the brief is back to `in-review`. What follows is what was done, with the command behind each claim.
 
-**1 · Condition 1 is met, but held out of git.** `.claude/settings.json` is written in the working tree and left **untracked**, because the review failed and stop condition (2) says the change does not get committed. It will be committed when David answers the two questions below:
+**1 · The lead's model is pinned.** `.claude/settings.json` (new, git-tracked, no secrets):
 
 ```json
 {
@@ -56,44 +55,67 @@ than take it on trust.
 }
 ```
 
-The alias `opus` is used rather than a pinned `claude-opus-5`, so the policy line "the lead runs Opus" stays
-true when a new Opus ships. Per-session traceability stays where the template already puts it: each brief's
-`models:` field records the model IDs actually used. **This is the lead's choice, not David's instruction** —
-if he wants the exact ID pinned instead, it is a one-line change.
+The alias `opus` is used rather than a pinned `claude-opus-5`, so "the lead runs Opus" stays true when a new
+Opus ships. Per-session traceability stays where the template already puts it: each brief's `models:` field
+records the IDs actually used.
 
-**2 · Condition 2 is partly met, and the gap is David's call.** The "`codex` CLI is not on `PATH`" note in
-the D63 brief had one cause: the `PATH`. The CLI is not missing — it ships inside the ChatGPT desktop app.
+**2 · The reviewer runs from the documented command.** David chose to install the standalone CLI rather than
+point at the copy bundled in the ChatGPT desktop app:
 
-| Claim | Evidence (session 14) |
+| Step | Evidence |
 |---|---|
-| Binary location | `/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex`, found with `find /Applications/ChatGPT.app -type f -name 'codex*'` |
-| Version | `codex --version` → `codex-cli 0.159.2` |
-| Not on `PATH` | `command -v codex` → absent; `$PATH` contains no Codex directory |
-| Profile format | `codex exec --help` → `-p, --profile <CONFIG_PROFILE_V2>  Layer $CODEX_HOME/<name>.config.toml on top of the base user config`. In 0.159.2 a profile is a **separate file**, not a `[profiles.review]` section in `config.toml`. Grepping `config.toml` for that section is what made the profile look absent on 1 Oct |
-| Profile contents | `~/.codex/review.config.toml`, dated 1 Oct — correct in form, though whether `high` satisfies "highest" is question 1 below, so "already correct" would be too strong: `model = "gpt-6-astra"`, `model_reasoning_effort = "high"`, `sandbox_mode = "read-only"`, `approval_policy = "never"`, no secrets |
+| Install | `npm install -g --prefix ~/.local @openai/codex`. A plain `npm install -g` failed with `EACCES` on `/usr/local/lib/node_modules`; the user-prefix install needs no `sudo` and `~/.local/bin` is already on `PATH` |
+| On `PATH` | `command -v codex` → `/Users/davidduchesne/.local/bin/codex`; `codex --version` → `codex-cli 0.160.0` |
+| Documented command works | `codex exec --profile review` on a trivial diff — transcript below |
 
-Dry run on a trivial diff (a `nmae` → `name` typo fix), verbatim:
+Dry run through the documented command, on a trivial diff (a `nmae` → `name` typo fix), verbatim:
 
 ```
-model: gpt-6-astra · provider: openai · approval: never · sandbox: read-only · reasoning effort: high
-Yes. It fixes a typo: `nmae` would raise a `NameError`, while `name` correctly references the
-function's parameter.
+$ codex exec --profile review --skip-git-repo-check "Review this trivial diff in one or two sentences.
+  Does it fix a bug?
+  --- a/greet.py
+  +++ b/greet.py
+  @@ -1,2 +1,2 @@
+   def greet(name):
+  -    return \"Hello \" + nmae
+  +    return \"Hello \" + name"
+
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+session id: 01a0fd36-063e-7f30-8c81-f1679ff87902
+
+codex
+Yes. It fixes a typo that caused a `NameError` for the undefined variable `nmae`; the function now
+correctly uses its `name` parameter.
 ```
 
-So the reviewer runs, and it reviewed its own enabling diff. But it runs **only by absolute path**:
-`codex exec --profile review`, the command `AGENTS.md` and these briefs all specify, still fails as typed.
+What had actually been wrong, recorded so it is not re-diagnosed: the CLI was never missing — it ships inside
+the ChatGPT app at `/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex` (0.159.2) and was used
+by absolute path for every review in this session. Two separate traps: it was not on `PATH`, and from 0.159 a
+profile is **its own file** (`$CODEX_HOME/<name>.config.toml`) rather than a `[profiles.review]` section in
+`config.toml`, so grepping `config.toml` made a perfectly good profile look absent. Both are now noted in
+`AGENTS.md`.
 
-**3 · Condition 3 is partly met.** The decision number D64 is assigned, and session 14 wrote its PROGRESS
-decision row and `log.md` entry — the *decision* is on the record, and was David's on 1 Oct regardless of
-whether the config lands. What is **not** done is the *implementation* that row depends on: the config change
-is held out of git, and the row says so rather than implying the policy is fully in force.
+**3 · Reasoning effort: resolved in favour of the config, and `AGENTS.md` changed.** David confirmed `high` is
+the standard review level, with `ultra` reserved for when the lead and the reviewer are both stuck — which is
+what `~/.codex/review.config.toml` already said. The model-policy table now reads "GPT-6 Astra at effort
+`high`, escalating to `ultra` only when the lead and the reviewer are both stuck". `AGENTS.md` was outside
+this brief's Files in scope; David's decision is what authorised the edit, and the table says it changes only
+on his decision.
 
-**4 · Condition 4 is not met.** The closing diff was reviewed (above) and the review did not pass, so there
-is no commit.
+**4 · Condition 3.** D64's decision row and `log.md` entry are written, and the row no longer carries the
+"implementation in review" caveat.
 
-### Two decisions for David
+**5 · Condition 4.** Reviewed by Codex (`gpt-6-astra`, effort `high`, read-only) before commit, twice:
 
-| # | Question | Why it is his and not the lead's |
+| Attempt | Verdict | What happened |
 |---|---|---|
-| 1 | **Reasoning effort: is `high` the review standard, or must it be the highest available?** `AGENTS.md` says "highest reasoning effort"; the profile runs `high`; `review.config.toml` records his own 1 Oct instruction that `high` is standard and `ultra` is for when lead and reviewer are both stuck. Either the `AGENTS.md` wording changes to match, or the profile changes to `ultra`. | The model-policy table says it changes only on David's decision, and the two records disagree about what he decided |
-| 2 | **How should the lead invoke the reviewer?** Either symlink the bundled binary into `~/.local/bin` (already on `PATH`, so the documented command works), or amend `AGENTS.md` to record the absolute path. | The symlink is outside the vault and outside this brief's Files in scope; amending `AGENTS.md`'s model policy is his call |
+| 1 | changes required, 2 blockers | Effort `high` versus "highest", and the documented command not working. **Not committed** — the stop conditions doing their job before they are even written into `AGENTS.md`. Raised with David |
+| 2 | changes requested, 3 medium | The dry-run transcript had been summarised instead of pasted; "Done when" items 2 and 3 still said "highest"; and the Outcome and `log.md` declared closure before the commit existed. All three are fixed above and in `log.md` |
+
+Condition 4 is met when this commit lands. Nothing in it was committed before its review.
+
+**Consequence for the next session:** the review gate is now reproducible from the command `AGENTS.md`
+documents. Nothing else in the loop needs the absolute path.

@@ -61,9 +61,10 @@ Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents 
 | Cowork: thinking, specs, briefs | Strongest Claude model (Opus) | App model picker (David) |
 | Claude Code: lead | Opus | `.claude/settings.json` in the vault (git-tracked) |
 | Claude Code subagents: search, tagging, simple checks | Smaller Claude model | `model:` field in each subagent definition |
-| **Codex: reviewer** | **GPT-6 Astra, highest reasoning effort** | `review` profile in `~/.codex/config.toml`; the lead calls `codex exec --profile review` |
+| **Codex: reviewer** | **GPT-6 Astra at effort `high`**, escalating to `ultra` only when the lead and the reviewer are both stuck | `~/.codex/review.config.toml`; the lead calls `codex exec --profile review` |
 
 - The review is independent because it uses a different vendor's model. Do not swap the reviewer to a Claude model.
+- Reviewer setup (D64, David 2 Oct): the standalone CLI is installed at `~/.local/bin/codex`, not the copy bundled inside the ChatGPT app. From Codex CLI 0.159 a profile is **its own file** (`$CODEX_HOME/<name>.config.toml`), not a `[profiles.<name>]` section in `config.toml` — look in the right place before concluding the profile is missing.
 - Every brief records the model ID(s) actually used, under Review and Outcome.
 - This is about the agents that build the vault. The local runtime model (T9 / P2.2) is chosen by evals against D56, not by this policy.
 - Change this table only on David's decision.

@@ -112,3 +112,14 @@ The reason is that `intent` mixes format, intensity and context, and five decisi
 Consequence worth naming: under v2 the whole intensity axis depends on LTHR, so the LTHR re-test (**OQ-6**) stops being a nice-to-have.
 
 ID mapping, per the multi-agent rules: `D-cowork-5` → **D67**, and the brief's provisional `T3.5` → **T3.4**, the next free task ID. Cowork's brief was committed verbatim with its provisional IDs (`9c7ed8b`) before the lead renumbered it, so the queue entry and the renumbering stay separable in history.
+
+## [2026-10-02] maintenance | D64 closed: the review gate is reproducible
+David answered the two questions that had blocked D64, and the brief is `done`.
+
+**Reviewer invocation.** He chose to install the standalone Codex CLI rather than depend on the copy bundled inside the ChatGPT desktop app. Installed with `npm install -g --prefix ~/.local @openai/codex` — a plain global install failed with `EACCES` on `/usr/local/lib/node_modules`, and the user-prefix route needs no `sudo` because `~/.local/bin` is already on `PATH`. `codex --version` → `codex-cli 0.160.0`, and `codex exec --profile review` now runs from the command `AGENTS.md` documents: `model: gpt-6-astra · sandbox: read-only · reasoning effort: high`.
+
+**Reasoning effort.** `AGENTS.md` had promised the "highest" reasoning effort while the profile ran `high`. David confirmed the profile was right: `high` is the standard review level, `ultra` is for when the lead and the reviewer are both stuck. The model-policy table now says so. The table changes only on David's decision, and this was one.
+
+Two traps recorded in `AGENTS.md` so they are not re-diagnosed: the bundled CLI is not on `PATH`, and from Codex CLI 0.159 a profile is **its own file** (`$CODEX_HOME/<name>.config.toml`) rather than a `[profiles.<name>]` section in `config.toml` — which is why a perfectly good `review` profile looked absent on 1 Oct and again at the start of session 14.
+
+`.claude/settings.json` lands with this change, pinning the lead to the `opus` alias rather than a specific `claude-opus-5`, so the policy line stays true across Opus releases; per-session model IDs live in each brief's `models:` field. The first attempt at this change was **not** committed, because its review returned two blockers — the stop conditions doing their job before they are even written into `AGENTS.md`.

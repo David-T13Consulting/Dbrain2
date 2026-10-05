@@ -4,7 +4,7 @@ note_type: queue
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-05
 ---
 # For David: the single decision queue
 
@@ -24,6 +24,10 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 
 | ID | Date | Answer |
 |---|---|---|
+| Q9 | 5 Oct | **D53 host purchase deferred; the MacBook Air is the inference host until David buys the always-on host.** Build and measure P2.2 on the Air; sustained-performance and always-on numbers wait for the host. Anything scheduled locally (e.g. the weekly model review) runs only when the Air is awake with the app open (David, via Cowork) |
+| Q10 | 5 Oct | **OQ-20 → split `classification` into four axes before the P1.4 retrofit:** domain (personal/professional) · sensitivity (ordinary/sensitive) · processing permission (local-only/approved external) · sharing permission (private/approved for demo). Labels only; **no vault split now**. Retrofit once against this shape, defaults derived mechanically from the current label and folder, David reviews edge cases (health, family). Labels inform controls and never grant access by themselves; any widening of what may enter the vault still needs a deliberate `data-policy` edit. Unblocks P1.4 (David, via Cowork) |
+| Q11 | 5 Oct | Weekly local-model review → **record the task ID and first-run output together after the 8 Oct run**, not before. Air must be awake with the app open Thu 09:00 (David, via Cowork) |
+| Q12 | 5 Oct | `00 Inbox/2026-10-01 New-project scaffold.md` → **park untouched**: stays in the Inbox, unprocessed. Lead gives it an owner tag (`@david`, triage later) so it stops being flagged as unowned. No brief, no guardrail work from it for now (David, via Cowork) |
 | Q8 | 2 Oct | *(The lead raised this as Q7, but Q7 was already taken by the results-location answer, so Cowork renumbered it.)* **(b) Yes, re-fetch now, and set the M6 standing budget:** agents may use **up to 20 GB** of disk for local model weights and runtimes, **stored outside the vault, hash-pinned, and only for models named in a brief.** Re-fetching llama.cpp + Qwen3-4B Q4_K_M (~2.5 GB, hash-verified against the 1 Oct record) is within it. Downloads beyond 20 GB, or of models no brief names, still come back to David (David, via Cowork) |
 | Q1–Q4 | 2 Oct | **Corrected by the lead.** The four David actually answered directly to Claude Code, before this queue went live, were: reviewer invocation (install the standalone CLI), reviewer effort (`high` stays standard), the runtime repository (`~/Documents/dbrain-runtime/` authorised) and the batch-04 scoring owner. Recorded in PROGRESS and the D64 / P2.2 briefs. **Codex reading the reserved cases was *not* among them** — it went through this queue as **Q5** instead, and David answered it on 2 Oct (yes, read-only). Historical note: while Q5 was open the lead could only state that *it* had not asked the question |
 | Q0 | 2 Oct | Who scores batch 04 → `@cowork`. Done and validated by David the same day |

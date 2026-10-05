@@ -23,6 +23,10 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 
 | ID | Date | Answer |
 |---|---|---|
+| Q44 | 5 Oct | **Token-bearing `~/Desktop/Ask Brain.shortcut` → delete it and rotate the token.** The lead deleted the file; **David to run `./mvp/make-token.sh --rotate`, paste the new token into the Shortcut header, and restart `Ask Brain.command`** (David, directly to the lead) |
+| Q43 | 5 Oct | **`Claude outputs/make-ask-brain-shortcut.sh` → move into `dbrain-runtime`.** Moved to `mvp/make-shortcut.sh`, changed to keep the signed Shortcut only in a private temp folder that is deleted at the end; the vault folder removed. Goes through the MVP review (David, directly to the lead) |
+| Q42 | 5 Oct | **Delete the duplicate Qwen3-4B in `/private/tmp` → yes.** Deleted after the Application Support copy matched its pin; 2.5 GB freed. `measure.sh` and the sweep script still point at the old path: updated with P2.2 next run (David, directly to the lead) |
+| Q41 | 5 Oct | **P2.2 label rule → keep it narrow:** only `classification:` (lowercase key) with value `public` or `internal`, optionally quoted; anything else stops. Resolves P2.2 round I finding 2: document, don't widen (David, directly to the lead) |
 | Q36 | 5 Oct | **MVP-phone, Air asleep → known limitation.** The Shortcut hangs (no server, no client timeout) instead of showing "offline" within 10 s. Accepted on the Air host; the always-on Mac mini removes it; no workaround work. The brief's Done-when is amended for the Air (David, via Cowork) |
 | Q35 | 5 Oct | **MVP startup → (c): Terminal login item now** (`mvp/Ask Brain.command`: restarts the model or service if either stops, keeps the Air awake on power; one Terminal window stays open). **No launchd + Full Disk Access for the system Python.** Later, with the Mac mini: a dedicated signed helper with Documents access only (David, via Cowork) |
 | Q32 | 5 Oct | **MVP priority: ask the second brain from the iPhone ASAP, with the Air as host.** Network = **Tailscale** (private, no public endpoint). Brief `MVP-phone` (Cowork) pulls an S4 slice into S2 (David, via Cowork) |

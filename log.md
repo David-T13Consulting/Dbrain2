@@ -169,3 +169,6 @@ David answered both open queue entries in one pass, batched by Cowork, which is 
 Worth recording about D68's own closure, because it is the argument for the rule: the lead's first draft *assumed* this answer and closed the brief; the second queued the question but still marked the brief done. The review caught both. The condition is met because David answered it, not because the lead reasoned its way to the same answer and called that agreement.
 
 Q5 and Q6 are cleared from the queue's Answered table now that they are recorded in their briefs, per D68.
+
+## [2026-10-05] decision | D70: two-tier stops, amending D65
+David answered Q27: a failed review whose blockers are all bookkeeping (owner tags, frontmatter, tracking text, IDs) no longer ends the lead loop. The lead fixes it in the same run and re-reviews once. Substantive blockers (security, data boundaries, correctness, policy wording) still end it, and the retry limit is unchanged. Written into [[AGENTS]] after the D65 stop conditions; D65's own wording stays, with condition (2) narrowed to substantive blockers.

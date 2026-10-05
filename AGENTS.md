@@ -45,9 +45,14 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
 - **Review before commit.** The lead runs Codex read-only on each diff against these rules
   and records its findings in the brief. Codex gets the rules and the diff, not the lead's reasoning.
 - **Stop conditions.** The lead loop ends when (1) no `open` brief owned by `@code` remains,
-  (2) a Codex review fails: leave the brief `in-review`, do not commit, report the findings,
+  (2) a Codex review fails on a substantive blocker (security, data boundaries, correctness,
+  policy wording): leave the brief `in-review`, do not commit, report the findings,
   (3) a decision belongs to David: ask, do not guess, or (4) a brief is `blocked` (below).
   Commit only at the end of a brief, never mid-way.
+- **Two-tier stops (D70, amends (2)).** If every blocker in a failed review is bookkeeping only
+  (owner tags, frontmatter, tracking text, IDs), fix it in the same run and re-review once.
+  If that re-review fails, or raises a substantive blocker, stop as in (2). The retry limit
+  still applies.
 - **Retry limit.** At most 5 attempts per failing step (a command, test, script or review fix).
   After the 2nd failed attempt, ask Codex for a debugging opinion before trying again:
   `codex exec --profile review` (read-only), given the error, what was tried, and the

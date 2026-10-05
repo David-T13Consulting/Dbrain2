@@ -9,6 +9,8 @@ models: [gpt-6-astra (review)]   # the lost session-13 pass has no recorded mode
 # Add stop conditions and a retry limit to the lead loop (D65)
 
 > Written by Cowork as provisional **D-cowork-3**; renumbered to **D65** by the lead in session 13.
+>
+> **Amended 5 Oct by D70 (Q27):** condition (2) now applies to substantive blockers; a review that fails only on bookkeeping is fixed in the same run and re-reviewed once. See [[AGENTS]].
 
 ## Goal
 Write down when the lead loop ends and cap retries, so a run can never loop forever, so a run never decides "done" by itself, and option B (scheduled runs) has a safe base if it is adopted later.

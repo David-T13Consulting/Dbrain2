@@ -16,7 +16,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-_(none open)_
+| Q30 | lead (Claude Code), 5 Oct | [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6\|S2–S6 plan]] | **D53 host purchase deadline.** The plan needs the always-on host ordered by **Fri 16 Oct** to have it set up in W4 (26 Oct) | **(a) Order by 16 Oct, 32 GB as already recommended (recommended)** · (b) Order after the T9/M6 result is in (about 16 Oct), sized by its peak memory: same deadline, more evidence · (c) Keep the Air as host until S4: S2–S3 run on the Air, host confirmation slips to S4 | S2 acceptance on the real host; S3 onwards | this week. **5 Oct, David via Cowork: evaluating a 64 GB purchase today; not decided yet.** Cowork noted: answer speed tracks memory bandwidth (chip tier), not RAM size; check the bandwidth of the exact configuration before buying |
 
 ## Answered
 Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is recorded in [[90 System/briefs/P2.1-review\|P2.1-review]] (Codex may read the 6 reserved cases, read-only) and Q6 in [[90 System/briefs/D68-single-front-door\|D68]], which it closed.
@@ -24,6 +24,9 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 | ID | Date | Answer |
 |---|---|---|
 | Q35 | 5 Oct | **MVP startup → (c): Terminal login item now** (`mvp/Ask Brain.command`: restarts the model or service if either stops, keeps the Air awake on power; one Terminal window stays open). **No launchd + Full Disk Access for the system Python.** Later, with the Mac mini: a dedicated signed helper with Documents access only (David, via Cowork) |
+| Q29 | 5 Oct | **Demo-ready date: Fri 18 Dec 2026** (option a). Fixes the end of the S2–S6 plan (David, via Cowork) |
+| Q31 | 5 Oct | **Cut order approved as listed:** (1) S5 → evidence checker only · (2) spoken answers become stretch, voice capture stays · (3) away-from-home tests on iPhone + Air only · (4) public package after the demo. Never cut: restore drill, permission and stale-approval tests, no-cloud-fallback, controlled failure (David, via Cowork) |
+| Q28 | 5 Oct | **Owner tags: T8 governance one-pager → `@cowork`** (Cowork drafts, David edits, the lead supplies technical facts); P4.4, T13, Inbox triage and the race-times backtest stay as the lead tagged them. Remove the ⚑ marks (David, via Cowork) |
 | Q26 | 5 Oct | **Wave task owners (D69 apply review, blocker 1):** wave 1 → `@david` (capture, gated on P1.4), wave 2 → `@code` (gates are build/test work), as the lead proposed (David, via Cowork) |
 | Q25 | 5 Oct | **Revised data-policy v0.4 text (Q24 fixes 1–3) approved.** Lead: apply to `data-policy.md` as v0.4 (D69), with PROGRESS/TASKS/OPEN_QUESTIONS/index bookkeeping. David will approve Claude Code's edit of `data-policy.md` when its permission check asks (David, via Cowork) |
 | Q24 | 5 Oct | **Data-policy v0.4 → fix all three Codex points before applying.** Cowork revised `D-cowork-7` the same day: (1) waves govern material added from 5 Oct; existing ordinary personal material is relabelled in P1.4, with anything now wave 2 flagged to David; (2) gate (e) = deletion rule tested across working copy, git history **and backups**; a purgeable repo covers git only; (3) minimise **before** capture, no town or neighbourhood, non-compliant captures deleted at triage. Approval of the revised text is Q25 (David, via Cowork) |

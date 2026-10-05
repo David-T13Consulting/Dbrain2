@@ -24,6 +24,7 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 
 | ID | Date | Answer |
 |---|---|---|
+| Q21 | 5 Oct | **P2.2 support label → (a) keep strict until T4.1:** no answer is marked `supported` without the automatic fact-check; every answer still shows its citations and why it isn't supported. Word overlap alone never upgrades an answer (David, via Cowork) |
 | Q22 | 5 Oct | **T2.6 → Dinant chip time 1:39:06** (David first typed 1:38:06 and corrected it immediately; 1:39:06 is right). Cowork wrote it into `readiness-calls.md`: in range (1:38:54–1:45:01), 12 s inside the fast edge, 2:51 faster than mid. T2.6 can be ticked (David, via Cowork) |
 | Q20 | 5 Oct | **Data-policy v0.4 text in `D-cowork-7-personal-data-waves` approved as written** (waves + children's §3a). Lead: apply to data-policy.md as v0.4, give it a final D-number, and record it in PROGRESS (David, via Cowork) |
 | Q18 | 5 Oct | **Personal data enters in gated waves, as proposed:** wave 0 (own training/HR, in force) · wave 1 ordinary personal after the P1.4 four-axis retrofit · wave 2 sensitive/local-only only after five gates (local answers without cloud fallback, cloud agents can't reach the files, synthetic leak test, trace redaction, git/backup deletion rule) · never: others' sensitive data, client, secrets. Cowork drafted data-policy v0.4 as brief `D-cowork-7-personal-data-waves` for David to approve (David, via Cowork) |

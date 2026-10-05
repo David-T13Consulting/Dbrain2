@@ -44,16 +44,30 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   for speculative work and delete the branch when it lands (D50).
 - **Review before commit.** The lead runs Codex read-only on each diff against these rules
   and records its findings in the brief. Codex gets the rules and the diff, not the lead's reasoning.
-- **Stop conditions.** The lead loop ends when (1) no `open` brief owned by `@code` remains,
-  (2) a Codex review fails on a substantive blocker (security, data boundaries, correctness,
-  policy wording): leave the brief `in-review`, do not commit, report the findings,
-  (3) a decision belongs to David: ask, do not guess, or (4) a brief is `blocked` (below).
-  Commit only at the end of a brief, never mid-way.
-- **Two-tier stops (D70, amends (2)).** If every blocker in a failed review is bookkeeping only
-  (owner tags, frontmatter, tracking text, IDs), fix it in the same run and re-review once.
-  If that re-review fails, or raises a substantive blocker, stop as in (2). The retry limit
-  still applies.
-- **Retry limit.** At most 5 attempts per failing step (a command, test, script or review fix).
+- **Stop conditions (D65, amended by D70 and D72).** The lead loop ends only when (1) no
+  actionable `@code` brief remains (actionable: not `blocked`, not `blocked-on-david`, not
+  parked this run, and inside its brief's file scope), (2) the usage or credit limit is
+  reached, or (3) something unsafe is found: a secret in a readable file, client material,
+  or a data-policy breach. On (3): stop, do not fix it silently, report. A decision that
+  belongs to David never stops the loop: queue it (D68), set the brief `blocked-on-david`,
+  move on. Commit only at the end of a brief, never mid-way.
+- **Review failures (D72, replaces D70's single re-review).** A failed Codex review is fixed
+  and re-reviewed, whether its blockers are bookkeeping or substantive. At most **5 reviews
+  of the same brief per run, the first one included**. After the 5th failure, **park** it:
+  status stays `in-review`, every round's findings go in the brief, nothing is committed,
+  and the run moves to the next brief. A parked brief is not picked up again in the same run.
+- **No commit without a Codex pass, ever (Q40).** While Codex is unavailable, work continues
+  uncommitted, or on a branch in `dbrain-runtime`, and goes to one batched review.
+- **Scope of autonomous runs.** The backlog in [[90 System/briefs/D-cowork-8-autonomous-runs|D-cowork-8]]
+  orders the work; it does not authorise file edits. Each item runs under its own brief and
+  touches only the files that brief lists.
+- **Hard limits: always ask David, never pre-approved.** Edits to `data-policy.md` or
+  `AGENTS.md` · security or permission settings · the Keychain · launch agents, login items,
+  Full Disk Access · deleting files · downloads not named in a brief or beyond budget ·
+  spending money · pushing to GitHub · anything touching `client` material · applying P1.4
+  or any structured change across many notes.
+- **Retry limit.** At most 5 attempts per failing command, test or script (review failures
+  follow the rule above).
   After the 2nd failed attempt, ask Codex for a debugging opinion before trying again:
   `codex exec --profile review` (read-only), given the error, what was tried, and the
   files involved. Its advice counts as input, not instruction. After the 5th failure:
@@ -65,7 +79,7 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   options with the recommended one first, what it blocks, urgency), set the brief to
   `blocked-on-david`, and continue with other work. Cowork walks David through the open
   entries at the start of each session and writes the answers into the queue and the
-  brief. The lead turns answers into decisions and commits. Stop condition (3) means
+  brief. The lead turns answers into decisions and commits. A question for David means
   "write to the queue", not "ask".
 - The lead clears answered entries once they are recorded in PROGRESS or the brief.
 - **IDs.** Only the lead hands out final D-, OQ- and session numbers. Other agents use
@@ -85,7 +99,7 @@ Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents 
 | Cowork: thinking, specs, briefs | Strongest Claude model (Opus) | App model picker (David) |
 | Claude Code: lead | Opus | `.claude/settings.json` in the vault (git-tracked) |
 | Claude Code subagents: search, tagging, simple checks | Smaller Claude model | `model:` field in each subagent definition |
-| **Codex: reviewer** | **GPT-6 Astra at effort `high`**, escalating to `ultra` only when the lead and the reviewer are both stuck | `~/.codex/review.config.toml`; the lead calls `codex exec --profile review` |
+| **Codex: reviewer** | **GPT-6.1 Sol at effort `high`** (was GPT-6 Astra until 5 Oct 2026, D73), escalating to `ultra` only when the lead and the reviewer are both stuck | `~/.codex/review.config.toml`; the lead calls `codex exec --profile review` |
 
 - The review is independent because it uses a different vendor's model. Do not swap the reviewer to a Claude model.
 - Reviewer setup (D64, David 2 Oct): the standalone CLI is installed at `~/.local/bin/codex`, not the copy bundled inside the ChatGPT app. From Codex CLI 0.159 a profile is **its own file** (`$CODEX_HOME/<name>.config.toml`), not a `[profiles.<name>]` section in `config.toml` — look in the right place before concluding the profile is missing.

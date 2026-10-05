@@ -23,10 +23,6 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 
 | ID | Date | Answer |
 |---|---|---|
-| Q37 | 5 Oct | **Substantive review failure → fix and re-review up to the 5-attempt retry limit, then park the brief and continue the run** (amends D65 (2) / D70). Brief `D-cowork-8-autonomous-runs` (David, via Cowork) |
-| Q38 | 5 Oct | **Bookkeeping-only failures → up to 5 fix-and-re-review rounds** (replaces D70's single re-review) (David, via Cowork) |
-| Q39 | 5 Oct | **Pre-approved safe command allowlist** for Claude Code; hard-limit actions always ask (list in `D-cowork-8`) (David, via Cowork) |
-| Q40 | 5 Oct | **No commit without a Codex pass, ever;** while Codex is limited, work continues uncommitted for one batched review (David, via Cowork) |
 | Q36 | 5 Oct | **MVP-phone, Air asleep → known limitation.** The Shortcut hangs (no server, no client timeout) instead of showing "offline" within 10 s. Accepted on the Air host; the always-on Mac mini removes it; no workaround work. The brief's Done-when is amended for the Air (David, via Cowork) |
 | Q35 | 5 Oct | **MVP startup → (c): Terminal login item now** (`mvp/Ask Brain.command`: restarts the model or service if either stops, keeps the Air awake on power; one Terminal window stays open). **No launchd + Full Disk Access for the system Python.** Later, with the Mac mini: a dedicated signed helper with Documents access only (David, via Cowork) |
 | Q32 | 5 Oct | **MVP priority: ask the second brain from the iPhone ASAP, with the Air as host.** Network = **Tailscale** (private, no public endpoint). Brief `MVP-phone` (Cowork) pulls an S4 slice into S2 (David, via Cowork) |

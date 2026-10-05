@@ -181,3 +181,6 @@ The lead drafted the comparison brief: Qwen3-4B (baseline, a full contender), Qw
 
 ## [2026-10-05] brief | MVP-phone (P2.4): ask the vault from the iPhone
 Cowork's brief for David's Q32–Q34: Tailscale, an Apple Shortcut and a read-only `/ask` service on the Air over the whole vault. The lead built it on branch `mvp-phone` in `dbrain-runtime`; David ran the acceptance checks on Wi-Fi and 4G (Q36 accepts the Air-asleep limitation). A `client` note now pauses the service instead of being skipped, with two known gaps that close only with P2.2 (open in its round I). The code stays uncommitted until the parked P2.2 work passes review. Brief: [[90 System/briefs/MVP-phone|MVP-phone (P2.4)]].
+
+## [2026-10-05] plan | Dated S2–S6 plan and TASKS owner tags
+The lead drafted a dated plan for 5 Oct to Fri 18 Dec (David's Q29), with decision deadlines, a slippage rule and the cut order David approved (Q31); the MVP-phone slice is P2.4 in S2. Every open task in TASKS now carries an owner tag under David's default rule (Q17), T8 goes to `@cowork` (Q28), P3.5 is marked subsumed by T3.4 (Q14), T2.6 is ticked (Q22), and the six-week honesty check is set for about 19 Oct. The plan is proposed, not approved as a whole; Q30 (host purchase) is still open. Plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|Delivery plan S2–S6]].

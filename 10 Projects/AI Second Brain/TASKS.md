@@ -3,17 +3,19 @@ classification: internal
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 2 Oct 2026 (session 14) · **Phase:** S1 closed on requirements (D52–D59); S2 next · **Target:** December 2026, now schedulable at 20+ h/week (D55)
+**Updated:** 5 Oct 2026 (session 17) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 ---
 
 ## ▶ Next action
 
-> **P2.2: build the scoped read-only query service and local model adapter**, measured against the D56 targets (text p95 < 8 s). P1.2/P1.3 are closed — devices, always-on hosting, capacity, latency/recovery targets and the provenance schema are all decided (D52–D59). The always-on host purchase (D53) gates sustained-performance numbers, not the implementation: build on the Air, measure on the host. Also open: close corpus/French retrieval gaps (M5) and independently review the provisional labels.
+> **P2.2: fix the three findings open after review round I (padded frontmatter fence, quoted and capitalised labels, unhashable YAML keys), re-review, then make the first `dbrain-runtime` commit.** The service is built and measured (run B: p95 42.1 s on the Air against the D56 target of 8 s); it is parked under review, not unbuilt. **Then:** the MVP-phone (P2.4) code review and merge, and the T9/M6 model comparison (brief committed).
 
-**Parallel domain action:** T3.1 batch 04 (rows 41–60) scores rubric v1.4 blind. T2.6 follows 4 October; T0.7 precedes the next contract. T0.6, T1.2 and T1.4 are already complete.
+**Parallel domain action:** batch 04 is scored (2 Oct); its independent Codex re-score waits for Cowork's fixes to the re-score brief. T3.4 rubric v2.0 wording (`@cowork`, David approves). T2.6 is done (Dinant, Q22). T0.7 precedes the next contract.
 
-**Action for David:** paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60) · decide the host purchase (D53, 32 GB recommended) · answer OQ-20 before the D59 retrofit is scheduled.
+**Action for David:** paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] after the 8 Oct run (D60, Q11) · decide the host purchase (D53; Q30 open, a 64 GB host under evaluation) · finish the MVP-phone acceptance checks (P2.4).
+
+- [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct** (six weeks after 7 Sep): has anything shipped *out* of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS.
 
 ## Current execution order — S1–S6
 
@@ -24,39 +26,40 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] **P1.1** Hardware inventoried 1 Oct: M2, 24 GiB RAM, 8 CPU cores, about 90 GiB free before download. OQ-4 resolved; first supplied-evidence local benchmark complete. See [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|measurement record]]. T9/P2 gates remain open.
 - [x] **P1.2** Devices/OSs, offline expectations, host availability, weekly time and budget. ✅ 1 Oct, structured interview → **D52** (iPhone/iPad/Air committed; Watch and Tesla browser are S4 stretch) · **D53** (always-on dedicated host, Mac mini class 24–32 GB, €800–1,500; 32 GB recommended; purchase still a separate decision) · **D54** (offline = capture only) · **D55** (20+ h/week). OQ-14 and the capacity half of OQ-15 resolved.
 - [x] **P1.3** Acceptance targets and source schema. ✅ 1 Oct → **D56** (text p95 < 8 s · voice to first word < 5 s · RTO < 8 h · RPO zero confirmed captures) · **D57** (source IDs `src-<YYYYMMDDTHHmm>-<hash>`) · **D58** (audio deleted on successful transcription) · **D59** (minimum frontmatter). OQ-13 and OQ-15 resolved. ⚠️ Still to document as part of T8, not blocking S2: the data-flow diagram, scoped roots/tools enumeration, bounded initial corpus and code/runtime separation.
-- [ ] **P1.4** *(Gates personal-data wave 1, D69; flags any existing note that would now be wave 2 for David.)* Retrofit the D59 frontmatter (`source`, `review_status`, `note_type`, `created`/`updated`) across the 114 existing structured notes. **Unscheduled. OQ-20 was answered 5 Oct (queue Q10):** `classification` splits into four axes (domain · sensitivity · processing · sharing), labels only, no vault split, so the retrofit targets that shape once. Current coverage: 7 notes have `source`, 10 have `created`, none have `review_status` or `note_type`.
+- [ ] **P1.4** `@code` *(Gates personal-data wave 1, D69; flags any existing note that would now be wave 2 for David.)* Retrofit the D59 frontmatter (`source`, `review_status`, `note_type`, `created`/`updated`) across the 114 existing structured notes. **Scheduled W1 (S2–S6 plan) for a brief and a dry-run diff report only; applying the retrofit waits for David's approval (rule 8, hard limit). OQ-20 was answered 5 Oct (queue Q10):** `classification` splits into four axes (domain · sensitivity · processing · sharing), labels only, no vault split, so the retrofit targets that shape once. Current coverage: 7 notes have `source`, 10 have `created`, none have `review_status` or `note_type`.
 
 ### S2 · Prove local read-only answers
 - [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels. `@codex` — the independent case review is briefed in [[90 System/briefs/P2.1-review|P2.1-review]].
-- [ ] **P2.2** After runtime selection in T9, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]].
-- [ ] **P2.3** Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
+- [ ] **P2.2** Behind a swappable model adapter, so T9 stays open, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]].
+- [ ] **P2.3** `@code` Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
+- [ ] **P2.4** `@code` **MVP-phone (S4 slice pulled into S2, David Q32–Q34, 5 Oct):** ask from the iPhone over Tailscale with an Apple Shortcut; `/ask` on the Air calls the P2.2 service over the whole vault, read-only, bearer token in the Keychain. Brief: [[90 System/briefs/MVP-phone|MVP-phone]]. Branch `mvp-phone` in `dbrain-runtime`; merge after Codex review.
 - Existing tasks: **T9** moves here; **T4.1/T5/T6** begin with platform evaluation, redacted traces and service targets.
 
 ### S3 · Supervised wiki maintenance
-- [ ] **P3.1** Implement agreed durable source IDs/versions, original evidence, derived claims, contradictions and review state. Preserve approved captures after triage under the agreed retention policy.
-- [ ] **P3.2** Implement pending patches with evidence, exact diff, base revision and approval binding. Test rejected proposals and stale approvals after intervening edits.
-- [ ] **P3.3** After T4.2, implement one deterministic writer: allowed paths, schema/link/classification validation, approved commit plus index/log updates. Test malicious source instructions, path escape and unauthorized writes.
-- [ ] **P3.4** Independently regression-test and fix reviewed issues: `load-only` counted as runs (check both scripts), stream/moving-time coverage, per-activity zones, missing history vs inactivity, stale classifier instructions/examples. No code fixes are made by this amendment.
-- [ ] **P3.5** Resolve OQ-16 before changing F3 quality-work semantics. Test strict tempo evidence versus the broad flag; version rule and expected-label changes.
-- [ ] **P3.6** Freeze final running acceptance cases; preserve historical scores and label corrections; score arithmetic against independent expected outputs. Existing confidence values are heuristic, not calibrated probabilities.
+- [ ] **P3.1** `@code` Implement agreed durable source IDs/versions, original evidence, derived claims, contradictions and review state. Preserve approved captures after triage under the agreed retention policy.
+- [ ] **P3.2** `@code` Implement pending patches with evidence, exact diff, base revision and approval binding. Test rejected proposals and stale approvals after intervening edits.
+- [ ] **P3.3** `@code` After T4.2, implement one deterministic writer: allowed paths, schema/link/classification validation, approved commit plus index/log updates. Test malicious source instructions, path escape and unauthorized writes.
+- [ ] **P3.4** `@code` Independently regression-test and fix reviewed issues: `load-only` counted as runs (check both scripts), stream/moving-time coverage, per-activity zones, missing history vs inactivity, stale classifier instructions/examples. No code fixes are made by this amendment.
+- [ ] **P3.5** `@cowork` **Subsumed by T3.4 (David, Q14, 5 Oct):** the quality-work definition lands in the rubric v2.0 wording. Kept for history: resolve OQ-16 before changing F3 quality-work semantics. Test strict tempo evidence versus the broad flag; version rule and expected-label changes.
+- [ ] **P3.6** `@code` Freeze final running acceptance cases; preserve historical scores and label corrections; score arithmetic against independent expected outputs. Existing confidence values are heuristic, not calibrated probabilities.
 - Existing tasks: **T4.2 → T4.3** gates runtime writes; **T3/T4.1** running validation continues alongside. **T7** adds evidence-state UI; existing skill escalation behavior stays until separately reviewed.
 
 ### S4 · Remote text and voice
-- [ ] **P4.1** Implement private authenticated access and mobile text UI for agreed devices; keep the inference endpoint private. Specify canonical writer, vault sync and conflict policy separately.
-- [ ] **P4.2** Add durable capture queue, pending/failure states, idempotent retries and cancellation. Test airplane mode, host sleep/restart and interrupted uploads without duplicate captures.
-- [ ] **P4.3** Add local push-to-talk transcription and speech output; test French, English, mixed speech, names and noise. Define audio retention/deletion before recording.
-- [ ] **P4.4** Test away from home on each agreed device class. Replace the interim Dispatch dependency and update CAPTURE only after the new route passes.
+- [ ] **P4.1** `@code` *(Private authenticated access built early as P2.4; uncommitted until P2.2 lands, acceptance incomplete.)* Implement private authenticated access and mobile text UI for agreed devices; keep the inference endpoint private. Specify canonical writer, vault sync and conflict policy separately.
+- [ ] **P4.2** `@code` Add durable capture queue, pending/failure states, idempotent retries and cancellation. Test airplane mode, host sleep/restart and interrupted uploads without duplicate captures.
+- [ ] **P4.3** `@code` Add local push-to-talk transcription and speech output; test French, English, mixed speech, names and noise. Define audio retention/deletion before recording.
+- [ ] **P4.4** `@code` Test away from home on each agreed device class. Replace the interim Dispatch dependency and update CAPTURE only after the new route passes.
 
 ### S5 · Measurable multi-agent execution
 - Existing task: **T11** introduces coordinator, curator and evidence checker with distinct permissions. The writer is deterministic; roles may share a model sequentially.
-- [ ] **P5.1** Compare task success and unsupported-claim detection against the single-agent baseline, including latency and memory cost.
-- [ ] **P5.2** Implement persistent jobs, bounded retries/time/tool budgets, cancellation and traceable handoffs. Test tool denial, checker failure, crash/resume and duplicate-write prevention.
+- [ ] **P5.1** `@code` Compare task success and unsupported-claim detection against the single-agent baseline, including latency and memory cost.
+- [ ] **P5.2** `@code` Implement persistent jobs, bounded retries/time/tool budgets, cancellation and traceable handoffs. Test tool denial, checker failure, crash/resume and duplicate-write prevention.
 
 ### S6 · Operate and demonstrate
-- [ ] **P6.1** Back up vault, source storage and required runtime state independently; restore after working-copy loss within T6 objectives. Distinguish rollback, sync and backup.
-- [ ] **P6.2** Pin releases/model/runtime versions; document reproducible setup, restart, upgrade/rollback and incident handling. Run regressions before upgrades.
-- [ ] **P6.3** Complete latency/error/queue/resource monitoring; verify redaction, access denial and retention. Instrumentation begins at S2.
-- [ ] **P6.4** Package architecture, traces, evaluations and synthetic professional fixtures for a public-safe code/demo repository. Keep the personal vault private; publication requires its own authorization.
+- [ ] **P6.1** `@code` Back up vault, source storage and required runtime state independently; restore after working-copy loss within T6 objectives. Distinguish rollback, sync and backup.
+- [ ] **P6.2** `@code` Pin releases/model/runtime versions; document reproducible setup, restart, upgrade/rollback and incident handling. Run regressions before upgrades.
+- [ ] **P6.3** `@code` Complete latency/error/queue/resource monitoring; verify redaction, access denial and retention. Instrumentation begins at S2.
+- [ ] **P6.4** `@code` Package architecture, traces, evaluations and synthetic professional fixtures for a public-safe code/demo repository. Keep the personal vault private; publication requires its own authorization.
 - Existing tasks: complete **T5/T6/T8/T12/T13** with normal, abstention, approved-update, failure and recovery demos. **T10** remains parked until the personal service is reliable.
 
 **Exit evidence:** roadmap §0. Hardware/tools and numeric service targets remain open until measured or confirmed.
@@ -69,8 +72,8 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] **M2** Record a second local candidate and first bounded lexical-retrieval experiment. ✅ 1 Oct; [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|results and limitations]]. This is development evidence, not P2 acceptance.
 - [x] **M3** Prepare weekly research/benchmark review procedure, source revisions and scheduling prompt. ✅ [[90 System/weekly-local-model-review]].
 - [x] **M4** Weekly local-project scheduling activated by David ✅ 1 Oct (D60, OQ-18 resolved). ⚠️ Open thread, not a blocker: the task ID and first-run output still need pasting into [[90 System/weekly-local-model-review]]'s activation record. Review the first two runs before relying on the cadence.
-- [ ] **M5** Extend retrieval corpus with authoritative D49 retention evidence; compare controlled bilingual query expansion. Review expected evidence independently; retain original failures and untouched provisional cases.
-- [ ] **M6** Compare another model family under comparable conditions. Set separate voice fixtures and local benchmark resource budgets before downloading additional modality models. Published benchmark review can proceed without downloads.
+- [ ] **M5** `@code` Extend retrieval corpus with authoritative D49 retention evidence; compare controlled bilingual query expansion. Review expected evidence independently; retain original failures and untouched provisional cases.
+- [ ] **M6** `@code` Compare another model family under comparable conditions. Set separate voice fixtures and local benchmark resource budgets before downloading additional modality models. Published benchmark review can proceed without downloads.
 
 ---
 
@@ -80,10 +83,10 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] Add "Wiki operations" to AGENTS.md ✅ 1 Oct
 - [x] Write `90 System/lint-checklist.md` and run the baseline ✅ 1 Oct
 - [x] **Decide on the 15 notes without `classification:`** ✅ 1 Oct, applied as proposed. Proposal: `internal` for project notes, Welcome.md `public`, the root CLAUDE.md stub exempt (one line, imports AGENTS.md)
-- [ ] Triage the two Inbox items (`assistant-scope-ideas`, `how-to-automate-pm-job`) at the next weekly pass, and run lint then
+- [ ] `@cowork` Triage the two Inbox items (`assistant-scope-ideas`, `how-to-automate-pm-job`) at the next weekly pass, and run lint then
 - [x] Resolve OQ-12 via D47: running is the domain; supervised wiki maintenance is shared platform work. ✅ 1 Oct
-- [ ] Resolve remaining OQ-13 retention/IDs/metadata details at P1.3/P3.1 (routing and provenance settled by D49, 1 Oct).
-- [ ] Automate lint at S3; corrections/index/log changes stay approval-gated. Read-only inspection is available now.
+- [ ] `@code` Resolve remaining OQ-13 retention/IDs/metadata details at P1.3/P3.1 (routing and provenance settled by D49, 1 Oct).
+- [ ] `@code` Automate lint at S3; corrections/index/log changes stay approval-gated. Read-only inspection is available now.
 
 ---
 
@@ -113,7 +116,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] **T0.5 · Write `data-policy.md`** `45 min` ✅ **done 29 Sep** — v0.1 in `02_Architecture/data-policy.md`. §6 (Tower13 commercial) provisional pending T0.6.
   Three tiers (public / internal / client-confidential), red lines, what may never enter the system. Save to `02_Architecture/`.
 - [x] **T0.6 · Check your firm's AI policy** `30 min` ✅ **closed 29 Sep — replaced by a rule (D16).** There's no firm policy above Tower13. David set the rule instead: every contract must state his AI agent use explicitly, and engagements without that stay out of the system entirely. data-policy.md → v0.2.
-- [ ] **T0.7 · Add an AI-use disclosure clause to the Tower13 contract template, and to live contracts at renewal** `1 h` `needs David + lawyer review`
+- [ ] **T0.7 · Add an AI-use disclosure clause to the Tower13 contract template, and to live contracts at renewal** `@david` `1 h` `needs David + lawyer review`
   David has no live contracts (29 Sep), so this only applies going forward: the clause goes in the template before the next engagement is signed. Claude can draft; a Belgian lawyer should check it.
 
 **Week 0 gate:** you can state the showcase workflow and your red lines in one sentence each. Showcase workflow ✅ done (T0.4). Red lines ✅ done (T0.5, 29 Sep).
@@ -141,10 +144,10 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] **T2.3** Write `SKILL.md` #2 `1.5 h` ✅ **29 Sep, v0.2 approved** (median baseline, D23) → `90 System/skills/weekly-assessment/` (SKILL.md + compute_week.py) + `30 Resources/Running/weekly-flags.md` (D22)
 - [x] **T2.4** Write `SKILL.md` #3 `1.5 h` ✅ **29 Sep, v0.1 drafted and smoke-tested** → `90 System/skills/race-readiness/` + `30 Resources/Running/readiness-rules.md` + `20 Areas/Running/readiness-calls.md` (D24). Time threshold approved.
 - [x] **T2.5 · Log David's blind call for Dinant, then run race-readiness live** ✅ 29 Sep: David borderline / 1:35 → skill borderline (0.60), 1:38:54–1:45:01. Verdict agrees.
-- [ ] **T2.6 · After 4 Oct: add Dinant chip time to `readiness-calls.md`, score the range** `2 min` `David`
+- [x] **T2.6 · After 4 Oct: add Dinant chip time to `readiness-calls.md`, score the range** `2 min` `David` ✅ 5 Oct (Q22): chip 1:39:06, in range (1:38:54–1:45:01), committed `ee43923`
 
 ### Week 3 — Golden dataset ⭐
-- [ ] **T3.1** Draft golden dataset v1 — 150 rows `4 h` `⭐ the showcase artifact`
+- [ ] **T3.1** `@cowork` Draft golden dataset v1 — 150 rows `4 h` `⭐ the showcase artifact`
   🟡 **Updated 1 Oct:** batches 01–03 (50 runs) are now development data. Batch 04 is fresh for v1.4. P3.6 reserves final acceptance cases. Historical held-out scores below describe the versions originally tested:
   - [x] Batch 02 · 20 runs ✅ 30 Sep. First held-out score of v1.2: terrain 17/20 (85%), intent 10/20 (50%). Sampling order fixed in `03_Golden/heldout-order.md` (seed 20260930)
   - [x] Rubric v1.3 + classify-session v0.4 ✅ 30 Sep (D27–D32). Batch 02 is now dev
@@ -157,20 +160,20 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
     - **This closes the last held-out test of the v1 schema, so T3.4 (taxonomy v2) is unblocked.**
     - Label process (Cowork, 2 Oct): intent was asked as one question with fixed options, after a two-part form confused run 1 and it had to be re-asked. A pre-scoring consistency check changed rows 13, 18, 19 and 20; the original labels are kept in the Note column, so **report scores both ways, as D38 did**.
     - Label distribution: intent — race 4 · long 7 · easy 5 · tempo 2 · intervals 1 · hills 1. Terrain — road 13 · trail 6 · mountain 1. All four races (rows 4, 9, 11, 15) are labelled `tempo_block = no`, which **D66** confirms is correct: a race is a race, not a tempo block.
-  - [ ] Batch 05 · 20 runs
-  - [ ] Batch 06 · 20 runs
-  - [ ] Weeks · ~30 weekly assessments (~1 min each, split into 2 sessions)
-  - [ ] Race times backtest (automatic from results; past readiness verdicts **not** labelled, because of hindsight bias)
+  - [ ] `@cowork` Batch 05 · 20 runs
+  - [ ] `@cowork` Batch 06 · 20 runs
+  - [ ] `@cowork` Weeks · ~30 weekly assessments (~1 min each, split into 2 sessions)
+  - [ ] `@code` Race times backtest (automatic from results; past readiness verdicts **not** labelled, because of hindsight bias)
   Columns: Input · Expected output · Edge case? · Judge type (rule/LLM). 20–30% edge cases.
-- [ ] **After batch 04 is scored:** state the race exclusion explicitly in the `tempo_block` definition (rubric and [[30 Resources/Running/session-types|session-types]]), per D66. Deliberately **not** done before scoring — editing the rubric first would contaminate the held-out test.
+- [ ] `@cowork` **After batch 04 is scored:** state the race exclusion explicitly in the `tempo_block` definition (rubric and [[30 Resources/Running/session-types|session-types]]), per D66. Deliberately **not** done before scoring — editing the rubric first would contaminate the held-out test.
 - [ ] **T3.4 · Session taxonomy v2 (D67)** `@cowork` — proposal in [[90 System/briefs/T3.4-taxonomy-v2|T3.4-taxonomy-v2]]. Splits the mixed `intent` axis into terrain · format · dominant intensity · stacking context flags. **Approved in principle; the rubric v2.0 wording still needs David.** Strict sequence: score v1.4 on batch 04 first, then approve v2.0 wording, then rewrite the rubric and re-derive batches 01–04 by rule as v2 *development* data (05–06 become the first v2 held-out tests). v1.x scores stay in the record and are not comparable.
-- [ ] **T3.2** Add adversarial rows (≥3) and note coverage gaps `1 h`
-- [ ] **T3.3** Commit as `golden-dataset.md`, versioned like code `15 min`
+- [ ] **T3.2** `@cowork` Add adversarial rows (≥3) and note coverage gaps `1 h`
+- [ ] **T3.3** `@code` Commit as `golden-dataset.md`, versioned like code `15 min`
 
 ### Week 4 — Evals + write access
-- [ ] **T4.1** Wire versioned evaluations: independent deterministic checks first; rubric-based model judges with human spot checks for judgment. Begin platform suites at S2 and running suites alongside T3.
-- [ ] **T4.2** Before S3 runtime writes, test bad-change rollback and independent restore on a disposable copy against T6 objectives. P6.1 extends recovery testing to deployment.
-- [ ] **T4.3** After T4.2 passes, enable the scoped deterministic writer for approved patches with base-revision/path validation. No blanket autonomous-write permission.
+- [ ] **T4.1** `@code` Wire versioned evaluations: independent deterministic checks first; rubric-based model judges with human spot checks for judgment. Begin platform suites at S2 and running suites alongside T3.
+- [ ] **T4.2** `@code` Before S3 runtime writes, test bad-change rollback and independent restore on a disposable copy against T6 objectives. P6.1 extends recovery testing to deployment.
+- [ ] **T4.3** `@code` After T4.2 passes, enable the scoped deterministic writer for approved patches with base-revision/path validation. No blanket autonomous-write permission.
 
 **H1 gate — all four must be true:**
 1. Three skills pass their stated thresholds
@@ -182,13 +185,13 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 ## H2 · Weeks 5–9 — Validate
 
-- [ ] **T5** Eval dashboard: start results/redacted traces at S2, complete at S6. Separate platform/running suites, mandatory approvals and avoidable exceptions; avoid unsupported drift claims.
+- [ ] **T5** `@code` Eval dashboard: start results/redacted traces at S2, complete at S6. Separate platform/running suites, mandatory approvals and avoidable exceptions; avoid unsupported drift claims.
   Test: *can you screen-share it in a sales call?* If not, it isn't done.
-- [ ] **T6** Reliability contract: set targets before acceptance runs at S1/S2; include latency, recovery time/data loss, measurements, alerts and escalation. Verify at S6.
-- [ ] **T7** Evidence UX at S3: supported/incomplete/conflicting/withheld, concise evidence/citations, overrides and reviewed corrections. Existing skill confidence scores are heuristic; preserve escalation until reviewed.
+- [ ] **T6** `@code` Reliability contract: set targets before acceptance runs at S1/S2; include latency, recovery time/data loss, measurements, alerts and escalation. Verify at S6.
+- [ ] **T7** `@code` Evidence UX at S3: supported/incomplete/conflicting/withheld, concise evidence/citations, overrides and reviewed corrections. Existing skill confidence scores are heuristic; preserve escalation until reviewed.
   Build the low-confidence path deliberately — you will demo it on purpose.
-- [ ] **T8** Governance one-pager: begin boundaries/data flow at S1, update with actual roles and permissions, review at S6. Include retention, escalation, authorization and agent topology.
-- [ ] **T9 · S2** Benchmark local models against platform cases and available running development cases. Record quality, sustained latency, memory/context settings.
+- [ ] **T8** `@cowork` (Q28) Governance one-pager: begin boundaries/data flow at S1, update with actual roles and permissions, review at S6. Include retention, escalation, authorization and agent topology.
+- [ ] **T9 · S2** `@code` Benchmark local models against platform cases and available running development cases. Record quality, sustained latency, memory/context settings.
   **Rewritten 1 Oct (session 12):** this task used to ask "Air versus dedicated host, decided on evidence." D53 already answered it — an always-on requirement rules out a travelling laptop — so a gate phrased that way could no longer fail. The live question is now **which host spec and which model meet the D56 targets**: measure on the Air to choose the model and to size memory, then confirm on the host once it exists. Report peak memory explicitly, since it drives the 24 vs 32 GB call.
   External comparisons are optional and require explicit authorization; never a production fallback or prerequisite.
 
@@ -198,31 +201,31 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 ## H3 · Weeks 10–13 — Collaborate & package
 
-- [ ] **T10 · Parked after S6** Additional human users: scoped roots, enforced authorization and concurrency/sync tests. Metadata alone is not RBAC. Resolve OQ-3 first.
+- [ ] **T10 · Parked after S6** `@code` Additional human users: scoped roots, enforced authorization and concurrency/sync tests. Metadata alone is not RBAC. Resolve OQ-3 first.
   A real second-user test is required when this extension is taken up; it does not block the personal service.
-- [ ] **T11 · S5** Coordinator, curator and evidence checker with scoped tools, handoff traces and explicit autonomy limits. Compare with the single-agent baseline (P5.1).
+- [ ] **T11 · S5** `@code` Coordinator, curator and evidence checker with scoped tools, handoff traces and explicit autonomy limits. Compare with the single-agent baseline (P5.1).
   Name the quality or permission boundary each role addresses; implement bounded resumable execution (P5.2).
-- [ ] **T12** Permissions/redaction from S2, source-injection/write tests before S3, remote-access checks before S4 exposure. Complete security/operational audit at S6.
-- [ ] **T13 · S6** Rehearse twice: voice capture, cited answer, reviewed update, agent trace, controlled failure and recovery. Permitted running data and synthetic professional fixtures.
+- [ ] **T12** `@code` Permissions/redaction from S2, source-injection/write tests before S3, remote-access checks before S4 exposure. Complete security/operational audit at S6.
+- [ ] **T13 · S6** `@code` Rehearse twice: voice capture, cited answer, reviewed update, agent trace, controlled failure and recovery. Permitted running data and synthetic professional fixtures.
 
 ---
 
 ## Backlog / someday
 
-- [ ] **Second domain: choose after the H1 gate** (see `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`). Proposed: family logistics, then knowledge digest. Parked questions: OQ-11
+- [ ] `@david` **Second domain: choose after the H1 gate** (see `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`). Proposed: family logistics, then knowledge digest. Parked questions: OQ-11
 - [ ] **Personal data wave 1** `@david` (D69, Q26; data-policy §4a): ordinary personal material, first use case kids' schedules without names (§3a). **Gated on P1.4** plus a lint check of the four axes on new notes. Data, not a feature: no family-logistics build before the H1 gate.
 - [ ] **Personal data wave 2** `@code` (D69, Q26; data-policy §4a): health beyond training, finances, journal; local-only. Gated on all five: (a) P2.2/P2.3 local answers with no cloud fallback · (b) access test proving cloud agents cannot reach the files (T12) · (c) synthetic leak test (T12) · (d) trace redaction live (T12) · (e) deletion rule tested on working copy, git history and backups (T8/P6.1).
 
-- [ ] Migrate Apple Notes → markdown (export route; no API exists)
-- [ ] Retrieve the 4 Product School capstone tools from the LMS (Strategy Assembler, AI Bet Evaluator, Roadmap Builder, Pitch Builder)
+- [ ] `@david` Migrate Apple Notes → markdown (export route; no API exists)
+- [ ] `@david` Retrieve the 4 Product School capstone tools from the LMS (Strategy Assembler, AI Bet Evaluator, Roadmap Builder, Pitch Builder)
 - [x] ~~Decide relationship between this project and the Vibe Coding app+deck deliverable~~ ✅ 1 Oct: **archived** (D62, OQ-5b resolved). One workstream — the second brain. If it revives it gets its own project folder.
-- [ ] Infrastructure beyond the single controlled host: only on measured availability/workload need. Required local hosting evaluation is T9 at S2.
+- [ ] `@code` Infrastructure beyond the single controlled host: only on measured availability/workload need. Required local hosting evaluation is T9 at S2.
 
 ---
 
 ## Knowledge base follow-ups
 
-- [ ] **Product School / NN/g follow-ups** (1 Oct): 🔴 revoke the bot token and redact meeting passcodes in the Advanced Agents PDF (all copies); export Apple Notes "Vibe Coding", "AI Product Management", "ProdSchool - MCPs" to PDF and ingest; ingest remaining NN/g decks (done 1 Oct: journey mapping, personas, persuasion, lean UX; workshops are image-only, needs OCR; ~20 other folders remain); review draft notes and promote status; git agent to commit the handoff entry.
+- [ ] `@david` **Product School / NN/g follow-ups** (1 Oct): 🔴 revoke the bot token and redact meeting passcodes in the Advanced Agents PDF (all copies); export Apple Notes "Vibe Coding", "AI Product Management", "ProdSchool - MCPs" to PDF and ingest; ingest remaining NN/g decks (done 1 Oct: journey mapping, personas, persuasion, lean UX; workshops are image-only, needs OCR; ~20 other folders remain); review draft notes and promote status; git agent to commit the handoff entry.
 - [x] ~~**SAFe KB follow-up**: verify 6.0 / 2024+ deltas, close AI-Native gaps~~ **Closed 1 Oct without doing it (D61, David's call):** the 5.1-era content is too old to be worth re-verifying. ⚠️ **Consequence: the SAFe pages are historical reference only and must not be used client-facing** — nobody has checked them against AI-Native SAFe or the 2024+ Disciplines. Re-obtaining current assets is a prerequisite if a client engagement ever needs them.
 
 ---
@@ -231,5 +234,5 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 `🔴` security-sensitive · `⭐` high-leverage · `T0.x` week-0 · time estimates are working time, not elapsed.
 
-`@code` `@cowork` `@codex` `@david` = owner tag (D63). **Owner tags are incomplete:** only P2.1 and P2.2 carry one, and batch 04's scoring is deliberately left unowned pending David. D63 requires every open task to have an owner, and the rest still need assigning — several are David's call, so session 14 did not guess them.
+`@code` `@cowork` `@codex` `@david` = owner tag (D63). **Every open task carries one since 5 Oct**, assigned by David's default rule (Q17): build/test/infra (P*, T4–T13, M*) → `@code` · independent reviews and re-scores → `@codex` · labelling, rubric wording, briefs, research → `@cowork` · personal/admin → `@david`. David confirmed the five edge cases on 5 Oct (Q28): T8 → `@cowork`, the other four as tagged.
 Tick items as you go. Add anything that surfaces — an unrecorded task is a lost task.

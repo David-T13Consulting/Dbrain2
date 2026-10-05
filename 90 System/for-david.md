@@ -18,11 +18,13 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 |---|---|---|---|---|---|---|
 | Q30 | lead (Claude Code), 5 Oct | [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6\|S2–S6 plan]] | **D53 host purchase deadline.** The plan needs the always-on host ordered by **Fri 16 Oct** to have it set up in W4 (26 Oct) | **(a) Order by 16 Oct, 32 GB as already recommended (recommended)** · (b) Order after the T9/M6 result is in (about 16 Oct), sized by its peak memory: same deadline, more evidence · (c) Keep the Air as host until S4: S2–S3 run on the Air, host confirmation slips to S4 | S2 acceptance on the real host; S3 onwards | this week. **5 Oct, David via Cowork: evaluating a 64 GB purchase today; not decided yet.** Cowork noted: answer speed tracks memory bandwidth (chip tier), not RAM size; check the bandwidth of the exact configuration before buying |
 
+
 ## Answered
 Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is recorded in [[90 System/briefs/P2.1-review\|P2.1-review]] (Codex may read the 6 reserved cases, read-only) and Q6 in [[90 System/briefs/D68-single-front-door\|D68]], which it closed.
 
 | ID | Date | Answer |
 |---|---|---|
+| Q54 | 5 Oct | **Permissions: allow all Bash commands, keep the hard-limit asks.** Cowork edited `.claude/settings.json` at David's request: `"Bash"` added to allow; ask rules removed for runtime code files (`dbrain/config, scope, outpath, index, adapter, serve, trace .py`, `mvp/**`, `experiments/**`, `measure.sh`), since Codex reviews every change before commit. Ask rules kept: AGENTS.md, CLAUDE.md, data policy, `.claude/`, `.gitignore`, `.git/`, `~/.codex`, `secret_scan.sh`, `rm`, `security`, `launchctl`, `sudo`, `wget`, `huggingface-cli`, `open`, git push/reset/rm/clean/branch-delete/config. Force-push stays denied (David, via Cowork) |
 | Q44 | 5 Oct | **Token-bearing `~/Desktop/Ask Brain.shortcut` → delete it and rotate the token.** The lead deleted the file; **David to run `./mvp/make-token.sh --rotate`, paste the new token into the Shortcut header, and restart `Ask Brain.command`** (David, directly to the lead) |
 | Q43 | 5 Oct | **`Claude outputs/make-ask-brain-shortcut.sh` → move into `dbrain-runtime`.** Moved to `mvp/make-shortcut.sh`, changed to keep the signed Shortcut only in a private temp folder that is deleted at the end; the vault folder removed. Goes through the MVP review (David, directly to the lead) |
 | Q42 | 5 Oct | **Delete the duplicate Qwen3-4B in `/private/tmp` → yes.** Deleted after the Application Support copy matched its pin; 2.5 GB freed. `measure.sh` and the sweep script still point at the old path: updated with P2.2 next run (David, directly to the lead) |

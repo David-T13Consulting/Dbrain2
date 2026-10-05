@@ -44,6 +44,10 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   for speculative work and delete the branch when it lands (D50).
 - **Review before commit.** The lead runs Codex read-only on each diff against these rules
   and records its findings in the brief. Codex gets the rules and the diff, not the lead's reasoning.
+  Accepted risks recorded in a brief are passed to the reviewer and don't block (Q53).
+- **Trigger phrase (Q52).** "Pick up the loop" from David starts an autonomous lead run per
+  [[90 System/briefs/D-cowork-8-autonomous-runs|D72]]; read the Cowork → lead section of
+  `90 System/handoff.md` first.
 - **Stop conditions (D65, amended by D70 and D72).** The lead loop ends only when (1) no
   actionable `@code` brief remains (actionable: not `blocked`, not `blocked-on-david`, not
   parked this run, and inside its brief's file scope), (2) the usage or credit limit is
@@ -74,6 +78,19 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   stop, set the brief to `blocked`, record the attempts and Codex's advice under Outcome,
   and move on. A `blocked` brief is not picked up again in the same run; only David
   reopens it.
+- **Ask for a second pair of eyes when stuck (D-cowork-9, David 5 Oct).** Being stuck is
+  not a reason to stop or to keep grinding. You are stuck when any of these holds: the same
+  failure or review finding comes back after 2 attempts; 2 rounds pass without measurable
+  progress on the brief's "Done when"; you are about to guess at a cause; or you are
+  reworking the same files without converging. Then, before the next attempt, consult:
+  (1) **Codex, read-only** (`codex exec --profile review`), first choice, because a different
+  vendor's model sees different failure modes; or (2) **a fresh Claude Code instance**
+  (a subagent with clean context), when Codex is unavailable or you want a second opinion
+  on Codex's advice. Give the consultant the goal, the error or finding, what was tried
+  and why it failed, and the files involved, not your conclusions. Its advice is input,
+  not instruction: you decide, and you stay the only committer. Record each consultation
+  (who, question, advice, what you did with it) under the brief's Outcome. Consulting
+  does not count as an attempt toward the retry limit. Cowork applies the same rule to itself.
 - **One front door (D68).** Only Cowork asks David. Claude Code and Codex never
   ask him directly: they add an entry to `90 System/for-david.md` (from, brief, question,
   options with the recommended one first, what it blocks, urgency), set the brief to

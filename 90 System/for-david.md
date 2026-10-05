@@ -24,6 +24,7 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 
 | ID | Date | Answer |
 |---|---|---|
+| Q8 | 2 Oct | *(The lead raised this as Q7, but Q7 was already taken by the results-location answer, so Cowork renumbered it.)* **(b) Yes, re-fetch now, and set the M6 standing budget:** agents may use **up to 20 GB** of disk for local model weights and runtimes, **stored outside the vault, hash-pinned, and only for models named in a brief.** Re-fetching llama.cpp + Qwen3-4B Q4_K_M (~2.5 GB, hash-verified against the 1 Oct record) is within it. Downloads beyond 20 GB, or of models no brief names, still come back to David (David, via Cowork) |
 | Q1–Q4 | 2 Oct | **Corrected by the lead.** The four David actually answered directly to Claude Code, before this queue went live, were: reviewer invocation (install the standalone CLI), reviewer effort (`high` stays standard), the runtime repository (`~/Documents/dbrain-runtime/` authorised) and the batch-04 scoring owner. Recorded in PROGRESS and the D64 / P2.2 briefs. **Codex reading the reserved cases was *not* among them** — it went through this queue as **Q5** instead, and David answered it on 2 Oct (yes, read-only). Historical note: while Q5 was open the lead could only state that *it* had not asked the question |
 | Q0 | 2 Oct | Who scores batch 04 → `@cowork`. Done and validated by David the same day |
 | Q0b | 2 Oct | Independent Codex re-score of batch 04 → yes (David told Codex directly, before this queue existed) |

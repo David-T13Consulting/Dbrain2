@@ -34,8 +34,9 @@ David's call: the 5.1-era content is too old to be worth re-verifying, so the ch
 ### OQ-19 · Product School and NN/g notes: review, credentials, remaining sources
 Notes are `public`/draft and in David's own-words synthesis; course figures are instructor heuristics. Needs: credential redaction in the Advanced Agents PDF (🔴), export of three unreadable Apple Notes, decision whether to ingest remaining NN/g decks. Opened 1 Oct.
 
-### OQ-20 · Should `classification` split into separate axes before the schema is retrofitted?
-**Blocks:** P1.4 only (the D59 frontmatter retrofit across 114 notes) · **Owner:** David.
+### OQ-20 · Should `classification` split into separate axes before the schema is retrofitted? — ✅ RESOLVED 5 Oct 2026
+**Answer (David, queue Q10):** yes, four axes before the P1.4 retrofit: domain (personal/professional) · sensitivity (ordinary/sensitive) · processing permission (local-only/approved external) · sharing permission (private/approved for demo). **Labels only, no vault split now.** Retrofit once against this shape, defaults derived mechanically from the current label and folder, David reviews edge cases (health, family). Labels inform controls and never grant access by themselves. Unblocks P1.4. Data-policy v0.4 (D69) uses these axes and revisits the split at wave 2.
+*Original question, kept:* **Blocks:** P1.4 only (the D59 frontmatter retrofit across 114 notes) · **Owner:** David.
 The `pro-private-split` capture of 1 Oct argues the single `classification` axis is too coarse: `internal` currently covers both business material *and* David's health data, and permits both cloud processing and demos of his own data. It proposes four independent dimensions — **domain** (personal/professional) · **sensitivity** (ordinary/sensitive) · **processing permission** (local-only/approved external) · **sharing permission** (private/approved for demo) — plus access enforced in the application rather than by labels.
 D59 deliberately kept the minimum schema narrow. If the split is likely to be accepted, design the schema once against the final shape and retrofit after; if not, P1.4 can proceed as specified. Either way the capture's **access-matrix proposal is a genuine S1 design item** that P1.3 did not cover, and the capture itself authorises no policy change: expanding what may enter the vault needs a deliberate edit to [[10 Projects/AI Second Brain/02_Architecture/data-policy|data-policy]]. Source: `00 Inbox/2026-10-01-1441-pro-private-split.md`, untriaged.
 
@@ -74,7 +75,7 @@ D59 deliberately kept the minimum schema narrow. If the split is likely to be ac
 **Blocks:** nothing in S1–S6; additional production domains remain parked · **Owner:** David. Context: `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`
 - Where does each source live (commune trash calendar, school menus, kids' activity schedules: site, portal, email)?
 - Who else would use it if the deferred multi-user extension is taken up?
-- David's rule on children's data (proposal: minimised, first names/initials only, never demoed; synthetic family for demos)
+- ~~David's rule on children's data~~ ✅ answered 5 Oct (D69): data-policy v0.4 §3a. No names, initials or identifying places, minimised before capture, never demoed, manual capture only. Kids' schedules may enter as wave-1 data once P1.4 is done; the domain itself stays parked.
 
 ### OQ-12 · Wiki versus domain showcase — resolved 1 Oct
 D47: running remains the established domain; supervised wiki maintenance is shared platform work. Demonstrate the complete lifecycle, with a small synthetic professional example at S6. This is the explicit scope amendment, not an additional production domain.

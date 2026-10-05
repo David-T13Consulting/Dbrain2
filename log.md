@@ -172,3 +172,6 @@ Q5 and Q6 are cleared from the queue's Answered table now that they are recorded
 
 ## [2026-10-05] decision | D70: two-tier stops, amending D65
 David answered Q27: a failed review whose blockers are all bookkeeping (owner tags, frontmatter, tracking text, IDs) no longer ends the lead loop. The lead fixes it in the same run and re-reviews once. Substantive blockers (security, data boundaries, correctness, policy wording) still end it, and the retry limit is unchanged. Written into [[AGENTS]] after the D65 stop conditions; D65's own wording stays, with condition (2) narrowed to substantive blockers.
+
+## [2026-10-05] decision | D69: data policy v0.4, personal data in gated waves
+Cowork's provisional `D-cowork-7` is renumbered **D69**. David approved the text as Q20, asked for Codex's three review points to be fixed first (Q24), and approved the revised text as Q25. The lead applied it to [[10 Projects/AI Second Brain/02_Architecture/data-policy|data-policy]] as v0.4: §3a sets the children's-data rule and §4a the waves. Wave 0 is in force, wave 1 waits for P1.4, and wave 2 waits for five tested gates. OQ-11's children's question is closed and the second domain stays parked. Brief: [[90 System/briefs/D-cowork-7-personal-data-waves|D69 personal-data waves]].

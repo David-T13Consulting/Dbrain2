@@ -1,10 +1,12 @@
 ---
 classification: internal
-version: 0.3
-status: scope confirmed 29 Sep 2026; implementation schedule amended at David's request 1 Oct 2026
+version: 0.4
+status: scope confirmed 29 Sep 2026; implementation schedule amended at David's request 1 Oct 2026; personal-data waves and children's rule approved by David 5 Oct 2026 (D69)
 ---
 
 # Data policy — Dbrain2 / AI Second Brain
+
+**v0.4 (5 Oct, D69):** personal data beyond training/HR enters in gated waves (§4a), and children's data has its own rule (§3a). Approved by David as Q20, revised after review and approved again as Q25. The red line and §2 are unchanged.
 
 **v0.3 scheduling clarification (1 Oct):** align T9, write gates and trace masking with roadmap S1–S6. Permitted data, exclusions and contract rules are unchanged.
 
@@ -34,12 +36,37 @@ The `client` tag exists so the rule can be checked (a note carrying it is a viol
 
 - Allowed in a minimised form: first name plus the context needed. Nothing sensitive (see §2.4).
 - Notes that mention a third party are never screen-shared in a demo.
+- Children: §3a applies instead, and it is stricter (no first names).
+
+## 3a · Children's data
+
+1. **No names, initials or nicknames.** Use neutral labels ("child A", "child B") or none at all.
+2. **No identifying places.** No school, club or gym names, no addresses, **no town or neighbourhood**. Use generic nouns ("school", "climbing club").
+2a. **Minimise before capture, not at triage.** Combinations can identify a child even without names (times + activity + town). Capture only what the logistics need: day, time, activity type, what to bring. A capture that breaks §3a is deleted at triage, not cleaned up and kept.
+3. **No health, behaviour, performance or photos** of children, whatever the tier (extends §2.4).
+4. **Never shown in a demo.** Demos use a synthetic family.
+5. **Manual capture only** for now (Inbox → triage). No portal, email or website integrations before month 4 (no MCP sprawl).
+6. Logistics only: what, when, what to bring or prepare. This feeds the parked second domain (OQ-11) as **data, not a built feature**. No family-logistics features until the H1 gate.
 
 ## 4 · My own special-category data (Strava / heart rate)
 
 - Heart rate and training data count as health data under GDPR Art. 9. It is **my** data, used with my explicit choice.
 - Tier: `internal`. It may be sent to a model API and shown in demos.
 - In a demo, say this out loud: *"This is special-category data. I chose to use my own, and here's what that means for yours."* That's part of the governance story, not something to hide.
+
+## 4a · Personal data beyond training: waves
+
+**Effective date:** the waves govern material **added from 5 Oct 2026**. Ordinary personal material already in the vault under v0.3 (profile, goals) stays; P1.4 relabels it on the four axes and flags anything that would now be wave 2 for David to keep, move or remove.
+
+| Wave | Content | Labels (OQ-20 axes: domain · sensitivity · processing · sharing) | Gate before entry |
+|---|---|---|---|
+| 0 (in force) | David's own training and HR data | personal · sensitive · approved external · approved for demo (§4, David's explicit choice) | none, already permitted |
+| 1 | Ordinary personal material: routines, family logistics without names, reading, goals, non-financial planning | personal · ordinary · approved external · private | **P1.4 four-axis retrofit complete** and the lint check validates the four axes on new notes |
+| 2 | Sensitive personal material: health beyond training, finances, journal | personal · sensitive · **local-only** · private | All five: (a) P2.2/P2.3 local query service answers with no silent cloud fallback; (b) cloud agents (Cowork, Claude Code, Codex, claude.ai Project) **cannot reach** wave-2 files, verified by an access test, not by labels; (c) synthetic sensitive-note leak test passes (titles, search, listings, logs, traces, agent handoffs); (d) trace redaction live; (e) a deletion rule decided **and tested** that removes an item from the working copy, git history **and every backup** (T8/P6.1) |
+| never | Others' sensitive data, client material, secrets | §2, unchanged | — |
+
+- Labels inform controls; they never grant access by themselves.
+- **Known tension:** gate (b) will probably need a separate local-only store outside the paths granted to cloud agents. That revisits OQ-20 (labels only, no vault split) **at wave 2, not now**. A separate purgeable repo would help with gate (e) for git history only; backups still need their own deletion rule.
 
 ## 5 · Model providers
 

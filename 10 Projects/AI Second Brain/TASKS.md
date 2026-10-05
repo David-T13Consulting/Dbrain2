@@ -9,7 +9,7 @@ classification: internal
 
 ## ▶ Next action
 
-> **P2.2: fix the three findings open after review round I (padded frontmatter fence, quoted and capitalised labels, unhashable YAML keys), re-review, then make the first `dbrain-runtime` commit.** The service is built and measured (run B: p95 42.1 s on the Air against the D56 target of 8 s); it is parked under review, not unbuilt. **Then:** the MVP-phone (P2.4) code review and merge, and the T9/M6 model comparison (brief committed).
+> **P2.2: review rounds P–Q: **PASS, committed**.** Round O's two label-check findings are accepted risks (Q53). The service is built and measured (run B: p95 42.1 s on the Air against the D56 target of 8 s). **Then:** the MVP-phone (P2.4) date fix, review and merge, then the order in David's Q51.
 
 **Parallel domain action:** batch 04 is scored (2 Oct); its independent Codex re-score waits for Cowork's fixes to the re-score brief. T3.4 rubric v2.0 wording (`@cowork`, David approves). T2.6 is done (Dinant, Q22). T0.7 precedes the next contract.
 
@@ -30,7 +30,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 ### S2 · Prove local read-only answers
 - [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels. `@codex` — the independent case review is briefed in [[90 System/briefs/P2.1-review|P2.1-review]].
-- [ ] **P2.2** Behind a swappable model adapter, so T9 stays open, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]].
+- [ ] **P2.2** Behind a swappable model adapter, so T9 stays open, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]]. Label check redesigned as an allowlist, Q46 applied; round O's two findings accepted as risks (Q53); rounds P–Q: **PASS, committed**.
 - [ ] **P2.3** `@code` Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
 - [ ] **P2.4** `@code` **MVP-phone (S4 slice pulled into S2, David Q32–Q34, 5 Oct):** ask from the iPhone over Tailscale with an Apple Shortcut; `/ask` on the Air calls the P2.2 service over the whole vault, read-only, bearer token in the Keychain. Brief: [[90 System/briefs/MVP-phone|MVP-phone]]. Branch `mvp-phone` in `dbrain-runtime`; merge after Codex review.
 - Existing tasks: **T9** moves here; **T4.1/T5/T6** begin with platform evaluation, redacted traces and service targets.

@@ -18,24 +18,26 @@ Define when and under which gates personal data beyond training/HR may enter Dbr
 ## Proposed policy text (for David to approve or edit, rule 8 / policy §8)
 
 ### Waves
+**Effective date (Q24 fix 1):** the waves govern material **added from 5 Oct 2026**. Ordinary personal material already in the vault under v0.3 (profile, goals) stays; P1.4 relabels it on the four axes and flags anything that would now be wave 2 for David to keep, move or remove.
 
 | Wave | Content | Labels (Q10 axes: domain · sensitivity · processing · sharing) | Gate before entry |
 |---|---|---|---|
 | 0 (in force) | David's own training and HR data | personal · sensitive · approved external · approved for demo (§4, David's explicit choice) | none, already permitted |
 | 1 | Ordinary personal material: routines, family logistics without names, reading, goals, non-financial planning | personal · ordinary · approved external · private | **P1.4 four-axis retrofit complete** and the lint check validates the four axes on new notes |
-| 2 | Sensitive personal material: health beyond training, finances, journal | personal · sensitive · **local-only** · private | All five: (a) P2.2/P2.3 local query service answers with no silent cloud fallback; (b) cloud agents (Cowork, Claude Code, Codex, claude.ai Project) **cannot reach** wave-2 files, verified by an access test, not by labels; (c) synthetic sensitive-note leak test passes (titles, search, listings, logs, traces, agent handoffs); (d) trace redaction live; (e) deletion rule for git history and backups decided |
+| 2 | Sensitive personal material: health beyond training, finances, journal | personal · sensitive · **local-only** · private | All five: (a) P2.2/P2.3 local query service answers with no silent cloud fallback; (b) cloud agents (Cowork, Claude Code, Codex, claude.ai Project) **cannot reach** wave-2 files, verified by an access test, not by labels; (c) synthetic sensitive-note leak test passes (titles, search, listings, logs, traces, agent handoffs); (d) trace redaction live; (e) a deletion rule decided **and tested** that removes an item from the working copy, git history **and every backup** (T8/P6.1) |
 | never | Others' sensitive data, client material, secrets | policy §2, unchanged | — |
 
 ### Children's data rule (new §3a)
 1. **No names, initials or nicknames.** Use neutral labels ("child A", "child B") or none at all.
-2. **No identifying places.** No school, club or gym names, no addresses. Use generic nouns ("school", "climbing club").
+2. **No identifying places.** No school, club or gym names, no addresses, **no town or neighbourhood**. Use generic nouns ("school", "climbing club").
+2a. **Minimise before capture, not at triage (Q24 fix 3).** Combinations can identify a child even without names (times + activity + town). Capture only what the logistics need: day, time, activity type, what to bring. A capture that breaks §3a is deleted at triage, not cleaned up and kept.
 3. **No health, behaviour, performance or photos** of children, whatever the tier (extends §2.4).
 4. **Never shown in a demo.** Demos use a synthetic family.
 5. **Manual capture only** for now (Inbox → triage). No portal, email or website integrations before month 4 (no MCP sprawl).
 6. Logistics only: what, when, what to bring or prepare. This feeds the parked second domain (OQ-11) as **data, not a built feature**. No family-logistics features until the H1 gate.
 
 ### Known tension
-Gate (b) will probably need a separate local-only store outside the paths granted to cloud agents. That revisits Q10 (labels only, no vault split) **at wave 2, not now**. A separate purgeable repo would also satisfy gate (e).
+Gate (b) will probably need a separate local-only store outside the paths granted to cloud agents. That revisits Q10 (labels only, no vault split) **at wave 2, not now**. A separate purgeable repo would help with gate (e) for git history only; backups still need their own deletion rule.
 
 ## Files in scope (once approved)
 - `10 Projects/AI Second Brain/02_Architecture/data-policy.md` → v0.4 (the lead edits; only David changes policy)
@@ -53,5 +55,11 @@ Gate (b) will probably need a separate local-only store outside the paths grante
 - Labels inform controls; they never grant access by themselves.
 
 ## Review
-**David approved the proposed text as written on 5 Oct 2026 (queue Q20).**
+**David approved the proposed text as written on 5 Oct 2026 (queue Q20).** Codex raised three points (Q24); David chose **fix all first** (5 Oct). Cowork revised the text the same day: effective date (fix 1), gate (e) wording (fix 2), minimise before capture + no town (fix 3). **David approved the revised text on 5 Oct (Q25). Ready for the lead to apply.**
 ## Outcome
+**Session 16 (5 Oct), lead: not applied; `blocked-on-david` (Q24).** Committed as a record in `e1728f0` (Codex:
+PASS with should-fixes). Applying v0.4 to `data-policy.md` was attempted and **refused by Claude Code's permission
+check** (the policy file counts as a shared resource), so nothing in `data-policy.md`, PROGRESS, TASKS or
+OPEN_QUESTIONS changed. Three wording points from Codex's review need David before or after applying (Q24). Lead
+bookkeeping still to do when applying: D69 for this decision (`D-cowork-7` → D69 in `log.md`), D59 fields here,
+PROGRESS added to Files in scope, `index.md` entry.

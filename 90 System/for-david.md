@@ -16,7 +16,6 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-
 _(none open)_
 
 ## Answered
@@ -24,6 +23,9 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 
 | ID | Date | Answer |
 |---|---|---|
+| Q25 | 5 Oct | **Revised data-policy v0.4 text (Q24 fixes 1–3) approved.** Lead: apply to `data-policy.md` as v0.4 (D69), with PROGRESS/TASKS/OPEN_QUESTIONS/index bookkeeping. David will approve Claude Code's edit of `data-policy.md` when its permission check asks (David, via Cowork) |
+| Q24 | 5 Oct | **Data-policy v0.4 → fix all three Codex points before applying.** Cowork revised `D-cowork-7` the same day: (1) waves govern material added from 5 Oct; existing ordinary personal material is relabelled in P1.4, with anything now wave 2 flagged to David; (2) gate (e) = deletion rule tested across working copy, git history **and backups**; a purgeable repo covers git only; (3) minimise **before** capture, no town or neighbourhood, non-compliant captures deleted at triage. Approval of the revised text is Q25 (David, via Cowork) |
+| Q23 | 5 Oct | **P2.2 raw measurement data location.** David asked why it would sit outside the vault at all and set the principle: **as lean as possible while keeping proper security boundaries.** Cowork's explanation: raw traces and reports stay out of the vault because (i) the vault is the corpus, so measurements inside it get measured (the run A bug), (ii) every cloud agent reads the vault, and traces contain corpus excerpts and prompts, (iii) bulky files stay out of the vault (project rule). Applying David's leanness principle: **(b) move raw data into a git-ignored folder inside `dbrain-runtime/`**, one location fewer than `Dbrain2-artifacts/`; the dated summary note stays in `02_Architecture/` (Q7). **Confirmed by David** (David, via Cowork) |
 | Q21 | 5 Oct | **P2.2 support label → (a) keep strict until T4.1:** no answer is marked `supported` without the automatic fact-check; every answer still shows its citations and why it isn't supported. Word overlap alone never upgrades an answer (David, via Cowork) |
 | Q22 | 5 Oct | **T2.6 → Dinant chip time 1:39:06** (David first typed 1:38:06 and corrected it immediately; 1:39:06 is right). Cowork wrote it into `readiness-calls.md`: in range (1:38:54–1:45:01), 12 s inside the fast edge, 2:51 faster than mid. T2.6 can be ticked (David, via Cowork) |
 | Q20 | 5 Oct | **Data-policy v0.4 text in `D-cowork-7-personal-data-waves` approved as written** (waves + children's §3a). Lead: apply to data-policy.md as v0.4, give it a final D-number, and record it in PROGRESS (David, via Cowork) |

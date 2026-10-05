@@ -23,6 +23,7 @@ Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is re
 
 | ID | Date | Answer |
 |---|---|---|
+| Q35 | 5 Oct | **MVP startup → (c): Terminal login item now** (`mvp/Ask Brain.command`: restarts the model or service if either stops, keeps the Air awake on power; one Terminal window stays open). **No launchd + Full Disk Access for the system Python.** Later, with the Mac mini: a dedicated signed helper with Documents access only (David, via Cowork) |
 | Q26 | 5 Oct | **Wave task owners (D69 apply review, blocker 1):** wave 1 → `@david` (capture, gated on P1.4), wave 2 → `@code` (gates are build/test work), as the lead proposed (David, via Cowork) |
 | Q25 | 5 Oct | **Revised data-policy v0.4 text (Q24 fixes 1–3) approved.** Lead: apply to `data-policy.md` as v0.4 (D69), with PROGRESS/TASKS/OPEN_QUESTIONS/index bookkeeping. David will approve Claude Code's edit of `data-policy.md` when its permission check asks (David, via Cowork) |
 | Q24 | 5 Oct | **Data-policy v0.4 → fix all three Codex points before applying.** Cowork revised `D-cowork-7` the same day: (1) waves govern material added from 5 Oct; existing ordinary personal material is relabelled in P1.4, with anything now wave 2 flagged to David; (2) gate (e) = deletion rule tested across working copy, git history **and backups**; a purgeable repo covers git only; (3) minimise **before** capture, no town or neighbourhood, non-compliant captures deleted at triage. Approval of the revised text is Q25 (David, via Cowork) |

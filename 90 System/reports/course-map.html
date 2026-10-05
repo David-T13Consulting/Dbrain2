@@ -1,0 +1,246 @@
+<title>Second Brain Course Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a trail-race course profile. Stages are aid stations, the gates are checkpoints; one column, summary first. */
+:root{
+  --bg:#f3f5f2; --surface:#ffffff; --fg:#1d2420; --muted:#5d6a62; --line:#cfd8d1;
+  --contour:#9fb3a5; --done:#2f6b4f; --blaze:#c8322b; --warn:#b7791f; --soft:#e6ece7;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121715; --surface:#1a211e; --fg:#e4ebe6; --muted:#9aa89f; --line:#2e3833;
+  --contour:#41544a; --done:#5fb38a; --blaze:#ef5a4f; --warn:#e0a84a; --soft:#202925; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121715; --surface:#1a211e; --fg:#e4ebe6; --muted:#9aa89f; --line:#2e3833;
+  --contour:#41544a; --done:#5fb38a; --blaze:#ef5a4f; --warn:#e0a84a; --soft:#202925; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:980px;margin:0 auto;padding-inline:20px;padding-block:28px 56px;display:flex;flex-direction:column;gap:34px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:.01em;text-wrap:balance;margin:0}
+h1{font-size:2.6rem;line-height:1}
+h2{font-size:1.55rem;text-transform:uppercase;letter-spacing:.06em}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font:500 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.blaze{display:inline-flex;flex-direction:column;width:14px;height:20px;border-radius:2px;overflow:hidden;vertical-align:-3px;margin-right:8px;border:1px solid var(--line)}
+.blaze i{flex:1;background:#fff}.blaze i+i{background:var(--blaze)}
+header{display:flex;flex-direction:column;gap:10px}
+header p.lede{max-width:65ch;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.stat b{font:600 1.9rem/1 var(--display);font-variant-numeric:tabular-nums}
+.stat span{font-size:.85rem;color:var(--muted)}
+.stat.alert b{color:var(--blaze)}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px}
+.profile{overflow-x:auto}
+.profile svg{display:block;min-width:640px;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--muted);margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:22px;height:4px;border-radius:2px;display:inline-block}
+.timebar{display:flex;flex-direction:column;gap:8px}
+.track{position:relative;height:14px;border-radius:7px;background:var(--soft);border:1px solid var(--line);overflow:hidden}
+.track .gone{position:absolute;inset:0 auto 0 0;width:21%;background:var(--done)}
+.ticks{display:flex;justify-content:space-between;font:400 .74rem/1 var(--mono);color:var(--muted)}
+.section{display:flex;flex-direction:column;gap:14px}
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:820px){.stages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.stages{grid-template-columns:1fr}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.stage.now{border-color:var(--blaze);box-shadow:inset 0 3px 0 var(--blaze)}
+.stage .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.code{font:600 1.4rem/1 var(--display)}
+.chip{font:500 .7rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:4px 7px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.chip.done{color:var(--done)}.chip.now{color:var(--blaze)}.chip.ahead{color:var(--muted)}.chip.wait{color:var(--warn)}
+.stage p{font-size:.88rem;color:var(--muted)}
+.stage .exit{font-size:.82rem;border-top:1px dashed var(--line);padding-top:8px}
+.stage .exit em{font-style:normal;color:var(--fg);font-weight:500}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+td.num{font-variant-numeric:tabular-nums;font-family:var(--mono);white-space:nowrap}
+.tablewrap{overflow-x:auto}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+ul.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+ul.plain li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start}
+.dot{width:10px;height:10px;border-radius:50%;margin-top:7px;background:var(--muted)}
+.dot.b{background:var(--blaze)}.dot.w{background:var(--warn)}.dot.g{background:var(--done)}
+.small{font-size:.85rem;color:var(--muted)}
+footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow"><span class="blaze"><i></i><i></i></span>Dbrain2 · status at 2 Oct 2026, 19:00</div>
+  <h1>Second Brain Course Map</h1>
+  <p class="lede">Where the build stands, the checkpoints already passed, and the climb that's left before the December demo. Two tracks run side by side: the <strong>platform</strong> (stages S1–S6) and the <strong>running showcase</strong> (golden dataset and rubric).</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>S2</b><span>current stage, at the start line</span></div>
+  <div class="stat"><b>Wk 4/17</b><span>7 Sep → end of Dec</span></div>
+  <div class="stat"><b>70/150</b><span>golden-dataset runs labelled</span></div>
+  <div class="stat alert"><b>6</b><span>things waiting on you</span></div>
+</div>
+
+<section class="section">
+  <h2>Course profile</h2>
+  <div class="panel profile">
+    <svg viewBox="0 0 900 260" role="img" aria-label="Six stages drawn as a rising course profile. S1 is done, S2 is starting, S3 to S6 are ahead.">
+      <g stroke="var(--contour)" stroke-width="1" fill="none" opacity=".55">
+        <path d="M0 230 C150 225 300 215 450 190 S750 120 900 95"/>
+        <path d="M0 245 C150 242 300 235 450 215 S750 150 900 128"/>
+      </g>
+      <path d="M40 220 L170 200 L300 175" fill="none" stroke="var(--done)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M300 175 L430 140 L560 120 L690 90 L820 62" fill="none" stroke="var(--fg)" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round" opacity=".55"/>
+      <path d="M40 220 L170 200 L300 175 L430 140 L560 120 L690 90 L820 62 L820 250 L40 250 Z" fill="var(--soft)" opacity=".7"/>
+      <g font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--muted)">
+        <text x="40" y="244">7 Sep start</text>
+        <text x="780" y="244">Dec demo</text>
+      </g>
+      <g font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="600" font-size="20">
+        <circle cx="40" cy="220" r="7" fill="var(--done)"/>
+        <circle cx="170" cy="200" r="9" fill="var(--done)"/><text x="170" y="182" text-anchor="middle" fill="var(--fg)">S1</text>
+        <circle cx="300" cy="175" r="11" fill="var(--blaze)"/><circle cx="300" cy="175" r="4" fill="var(--surface)"/>
+        <text x="300" y="155" text-anchor="middle" fill="var(--blaze)">S2 · you are here</text>
+        <circle cx="430" cy="140" r="8" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/><text x="430" y="122" text-anchor="middle" fill="var(--fg)">S3</text>
+        <circle cx="560" cy="120" r="8" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/><text x="560" y="102" text-anchor="middle" fill="var(--fg)">S4</text>
+        <circle cx="690" cy="90" r="8" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/><text x="690" y="72" text-anchor="middle" fill="var(--fg)">S5</text>
+        <circle cx="820" cy="62" r="9" fill="var(--surface)" stroke="var(--blaze)" stroke-width="3"/><text x="820" y="44" text-anchor="middle" fill="var(--fg)">S6</text>
+      </g>
+      <g font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="var(--muted)" text-anchor="middle">
+        <text x="170" y="222">Align</text><text x="300" y="200">Local answers</text>
+        <text x="430" y="163">Wiki writes</text><text x="560" y="143">Text + voice</text>
+        <text x="690" y="113">Multi-agent</text><text x="820" y="84">Operate + demo</text>
+      </g>
+    </svg>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--done)"></i>Passed</span>
+      <span><i class="sw" style="background:var(--blaze)"></i>Current checkpoint</span>
+      <span><i class="sw" style="background:var(--fg);opacity:.5"></i>Ahead. Order is fixed, dates are not set yet</span>
+    </div>
+  </div>
+  <div class="timebar">
+    <div class="track" aria-label="About 21 percent of the calendar to the December target has elapsed"><div class="gone"></div></div>
+    <div class="ticks"><span>7 Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>31 Dec</span></div>
+    <p class="small">Calendar used so far: about a fifth. Platform stages passed: one of six. The remaining five have no dates yet. That's the main schedule risk, and the lead has been asked to draft dates once P2.2 shows a real build pace.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Platform track · S1–S6</h2>
+  <div class="stages">
+    <div class="stage"><div class="top"><span class="code">S1 · Align</span><span class="chip done">Done 1 Oct</span></div>
+      <p>Devices, always-on hosting, 20+ h/week, service targets and source schema decided (D52–D59).</p>
+      <p class="exit"><em>Leftover:</em> data-flow diagram and scoped-roots list (T8), not blocking.</p></div>
+    <div class="stage now"><div class="top"><span class="code">S2 · Local answers</span><span class="chip now">Starting</span></div>
+      <p>P2.2 query service: cited answers or abstentions from a fixed corpus, local model only. Briefed and unblocked; not started (no runtime repo yet). P2.1 Codex case review unblocked.</p>
+      <p class="exit"><em>Exit:</em> reproducible local Q&amp;A with citations and abstentions; p50/p95 latency and peak memory measured.</p></div>
+    <div class="stage"><div class="top"><span class="code">S3 · Wiki writes</span><span class="chip ahead">Ahead</span></div>
+      <p>One source safely updates notes: exact patch, approval bound to it, one deterministic writer.</p>
+      <p class="exit"><em>Exit:</em> rejection changes nothing; stale approval refused; rollback and restore shown.</p></div>
+    <div class="stage"><div class="top"><span class="code">S4 · Text + voice</span><span class="chip wait">Needs host</span></div>
+      <p>Private access from iPhone, iPad and Air; durable capture queue; local speech in and out.</p>
+      <p class="exit"><em>Exit:</em> works away from home; captures survive host or network loss; voice first word &lt; 5 s.</p></div>
+    <div class="stage"><div class="top"><span class="code">S5 · Multi-agent</span><span class="chip ahead">Ahead</span></div>
+      <p>Coordinator, curator and evidence checker with scoped tools, measured against the single-agent baseline.</p>
+      <p class="exit"><em>Exit:</em> checker benefit and cost measured; denied actions stay denied; resume without double writes.</p></div>
+    <div class="stage"><div class="top"><span class="code">S6 · Operate + demo</span><span class="chip ahead">December</span></div>
+      <p>Monitoring, backup and restore drills, pinned versions, public-safe demo repo, two rehearsals.</p>
+      <p class="exit"><em>Exit:</em> two repeatable demos, each with a controlled failure and recovery.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Running showcase track</h2>
+  <div class="panel tablewrap">
+    <table>
+      <thead><tr><th>Checkpoint</th><th>Result</th><th>State</th></tr></thead>
+      <tbody>
+        <tr><td>Week 0 gate: workflow and red lines</td><td>Met 29 Sep</td><td><span class="chip done">Done</span></td></tr>
+        <tr><td>Three skills: classify, weekly assessment, race readiness</td><td>Drafted and smoke-tested</td><td><span class="chip done">Done</span></td></tr>
+        <tr><td>Batch 03 held-out (rubric v1.3)</td><td class="num">terrain 90% · intent 75%</td><td><span class="chip done">Done</span></td></tr>
+        <tr><td>Batch 04 held-out (rubric v1.4), last test of v1</td><td class="num">terrain 100% · intent 65% · tempo 40% · vertical 90%</td><td><span class="chip done">2 Oct</span></td></tr>
+        <tr><td>Codex independent re-score of batch 04</td><td>Briefed in this lint</td><td><span class="chip ahead">Queued</span></td></tr>
+        <tr><td>Taxonomy v2: format × intensity × context (D67)</td><td>Approved in principle; rubric v2.0 wording next</td><td><span class="chip now">Next</span></td></tr>
+        <tr><td>Relabel batches 01–04 under v2 by rule; you resolve disagreements</td><td>About an hour of your time, rough estimate</td><td><span class="chip ahead">Ahead</span></td></tr>
+        <tr><td>Batches 05–06: first held-out tests of v2</td><td>40 runs</td><td><span class="chip ahead">Ahead</span></td></tr>
+        <tr><td>~30 weekly assessments, then race-time backtest</td><td>Completes the 150-row golden dataset</td><td><span class="chip ahead">Ahead</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="two">
+  <section class="section">
+    <h2>Next checkpoints</h2>
+    <div class="panel">
+      <ul class="plain">
+        <li><i class="dot b"></i><div><strong>4 Oct · Dinant half.</strong> Add your chip time to score the race-readiness call (T2.6).</div></li>
+        <li><i class="dot b"></i><div><strong>First local cited answer (P2.2).</strong> Starts on your next "pick up the loop".</div></li>
+        <li><i class="dot w"></i><div><strong>Rubric v2.0 wording.</strong> I write it; you approve it.</div></li>
+        <li><i class="dot w"></i><div><strong>~19 Oct · Six-week honesty check.</strong> Has anything shipped out of the system? (Rule 5)</div></li>
+        <li><i class="dot"></i><div><strong>Dated S2–S6 plan.</strong> After P2.2 shows the real build pace.</div></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Waiting on you</h2>
+    <div class="panel">
+      <ul class="plain">
+        <li><i class="dot b"></i><div><strong>Host purchase (D53).</strong> Gates sustained-performance numbers and all of S4. 32 GB recommended.</div></li>
+        <li><i class="dot b"></i><div><strong>Threshold heart-rate re-test (OQ-6).</strong> The whole v2 intensity axis depends on it.</div></li>
+        <li><i class="dot w"></i><div><strong>Dinant chip time (T2.6),</strong> after Sunday.</div></li>
+        <li><i class="dot w"></i><div><strong>Classification axes (OQ-20)</strong> before the frontmatter retrofit of 114 notes.</div></li>
+        <li><i class="dot"></i><div><strong>Weekly model review:</strong> paste the task ID and first-run output (D60).</div></li>
+        <li><i class="dot"></i><div><strong>Agent-question trigger:</strong> parked in the Inbox, options A/B/C.</div></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<section class="section">
+  <h2>Lint result · 2 Oct</h2>
+  <div class="two">
+    <div class="panel">
+      <h3>Fixed now</h3>
+      <ul class="plain" style="margin-top:10px">
+        <li><i class="dot g"></i><div>P2.2 allowlist pointed at folders no dev case covers. It now matches the corpus the 10 cases were written against.</div></li>
+        <li><i class="dot g"></i><div>P2.2 still carried stale text: Step 0, "repo not authorised", the batch 04 warning. Updated.</div></li>
+        <li><i class="dot g"></i><div>The Codex re-score you approved had no brief, so the lead couldn't hand it over. Brief written: Codex sees the facts, not your labels or my scores.</div></li>
+        <li><i class="dot g"></i><div>Where P2.2 writes its results: decided (Q7), a draft vault note you confirm later.</div></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Flagged to the lead</h3>
+      <ul class="plain" style="margin-top:10px">
+        <li><i class="dot w"></i><div>TASKS and PROGRESS still list batch 04 scoring as "next".</div></li>
+        <li><i class="dot w"></i><div>TASKS says P2.2 waits for T9; the brief says build now and keep T9 open.</div></li>
+        <li><i class="dot w"></i><div>P3.5 (quality-work definition) overlaps taxonomy v2. Merge them so it isn't defined twice.</div></li>
+        <li><i class="dot w"></i><div>Script fixes (P3.4, Codex part B) should wait for the v2 wording.</div></li>
+        <li><i class="dot w"></i><div>D63 brief still "in review"; honesty check not in TASKS; one unowned Inbox file.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Who runs what</h2>
+  <div class="panel tablewrap">
+    <table>
+      <thead><tr><th>Agent</th><th>Role</th><th>Next item</th><th>Starts when</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cowork</strong></td><td>Your only contact. Specs, briefs, labelling sessions</td><td>Rubric v2.0 wording (T3.4)</td><td>Your next Cowork session</td></tr>
+        <tr><td><strong>Claude Code</strong></td><td>Lead: builds, commits, records decisions</td><td>Commit the lint entry, then P2.2</td><td>You say "pick up the loop"</td></tr>
+        <tr><td><strong>Codex</strong></td><td>Independent reviewer, called by the lead</td><td>P2.1 case review, batch 04 re-score</td><td>The lead calls it</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>Built by Cowork from the vault on 2 Oct 2026: <code>04_Roadmap.md</code> §0, TASKS, PROGRESS, OPEN_QUESTIONS, the briefs and <code>for-david.md</code>. Stage dates after S1 aren't set. This page shows order and state, not a schedule.</footer>
+</div>

@@ -7,11 +7,13 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 
 > ## ⛔ Cowork → lead, 6 Oct (amended 11:45) — hold still applies; M1 done; next: briefs entry, then M2 when it's open
 > David's hold stays in force: no Q51 priorities, no D72 backlog, no T9, no MVP code, no new briefs.
+> **Update after session 24 (Cowork):** the M2 amendment is reworked: Q62 (a) `~/Archive/medispring-infi` plus a reachability check; the freeze is confirmed through Cowork and recorded in Outcome; the should-fixes are applied. In (a), review this amendment; on a pass, commit it and run M2.
+> **Update after session 25 (Cowork):** Q63 answered (b). `data-policy.md` v0.5 is in the working tree, with the exact wording David approved (hard limit satisfied). In (a), review and commit it with its PROGRESS decision row and the M2 amendment (including your session 25 fixes). Then run M2.
 > 1. On "pick up the loop":
 >    - **(a)** Review the briefs entry (M2 and L1 now; session 22 findings addressed: Q60 answered (one push each at the end of M2), `_snapshots` outputs in scope, medispring-infi excluded from git checks with a filesystem-only check, eight folders, L1 Review/Outcome filled). Commit it on a pass.
 >    - **(b)** Then, **only if `M2-move-and-repoint.md` says `status: open`**, run M2 from step 1. M2 step 1 needs David at the Mac; Cowork sets the status to `open` when he is.
 >    - Otherwise stop after (a).
-> **Session location (David, 6 Oct):** for M2 the lead runs in Terminal from `~/Work` (pointer: `~/Work/CLAUDE.md`), not inside either repo, because M2 moves them. Use absolute paths throughout. The vault's `.claude/settings.json` allowlist doesn't load from there, so expect permission prompts; David is at the Mac to answer them.
+> **Session location (David, 6 Oct, amended):** for M2 the lead runs in **VS Code with only `~/Work` open** (no `claude` CLI in Terminal; pointer `~/Work/CLAUDE.md`), not inside either repo, because M2 moves them. VS Code stays open; every other VS Code window, the Claude desktop app and the ChatGPT app are closed. Use absolute paths. The vault's `.claude/settings.json` allowlist doesn't load from `~/Work`, so expect permission prompts; David is at the Mac to answer them.
 > 2. **Not allowed:**
 >    - git commands inside medispring-infi;
 >    - pushing Equipe-5;

@@ -3,7 +3,7 @@ classification: internal
 task: M2 (provisional; lead assigns the final ID)
 owner: "@code"
 status: open   # Q61 (a) answered 6 Oct: run from ~/Work in Terminal
-models: []
+models: ["claude-opus-5-5 (lead)", "gpt-6.1-sol (review)"]
 created: 2026-10-06
 ---
 # Move the repos to ~/Work and re-point every path
@@ -111,4 +111,6 @@ All git repos live in `~/Work`, outside iCloud, unchanged and with nothing lost,
 
 ## Review
 - **Brief review, session 23, round 1 (Codex `gpt-6.1-sol`, high, read-only): FAIL.** Blockers: `log.md` and the other closing records weren't in Files in scope; step 4 compared status alone against a pre-move file that also held the hash. Should-fix: "only copy" of the parked work ignored the Phase 0 copy; the handoff note came after the commit; L1 lacked model IDs; for-david's summary still called Q60 new. All fixed by the lead (separate status and head files, closing records listed, note moved before review).
+- **Round 2: PASS**, committed `fa1a0f9`. Two should-fixes, recorded under Outcome.
 ## Outcome
+- **Session 23 (6 Oct):** models: lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (high, read-only). Not started. The step 1 freeze is not met. Obsidian and the MVP service (port 8765) were stopped, but VS Code, the Claude desktop app and the ChatGPT/Codex app were running, and the lead itself runs inside VS Code with `~/Documents/Dbrain2` as its working folder. Queued as **Q61**; nothing moved, no snapshot written. **Q61 answered by David via Cowork (6 Oct):** the lead runs M2 in Terminal from `~/Work` (step 0, pointer `~/Work/CLAUDE.md`), with absolute paths; the vault's `.claude/settings.json` doesn't load from there, so expect permission prompts. Cowork set the status back to `open`. Should-fix from brief review round 2, to apply when M2 runs: the intro (line 11) and status must agree; L1's D-b row still points to the removed Phase 3 (L1 is closed; fix it in the lint follow-up brief).

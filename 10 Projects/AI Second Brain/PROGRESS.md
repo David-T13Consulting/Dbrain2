@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 22, lead loop, M1 remainder)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 23, lead loop, M2 brief)
 
 ---
 
@@ -16,7 +16,7 @@ classification: internal
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | M1 (back up and push every repo) is **done** (6 Oct, session 22): every repo in scope is pushed to private GitHub, gate met. **Next: M2, the move off iCloud, with David at the Mac** (Cowork opens it), after Cowork fixes the M2/L1 review blockers and David answers Q60 (push approval for M2). Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | M1 is **done** (session 22); the M2 brief is committed (`fa1a0f9`, session 23). **Next: M2, the move off iCloud**, from a new lead session in Terminal started in `~/Work` (Q61, David): David quits VS Code and the other agent apps, then says "pick up the loop". Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, `~/Documents/dbrain-runtime/` authorised, batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -142,6 +142,17 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 23 — 6 Oct 2026 · Claude Code, lead loop, M2 brief
+**Authorization:** "pick up the loop" (D72), scoped by Cowork's 11:45 amendment in the handoff: (a) review the briefs entry (M2, L1) and commit it on a pass; (b) run M2 only if its status is `open`. **Ended by Cowork's directive,** not one of D72's three stop conditions. M2 is actionable, but David's answer to Q61 puts it in a Terminal session started in `~/Work`, not this VS Code one; everything else is under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; every review checked the data policy.
+
+**What changed for David:** the M2 brief (the move off iCloud) is reviewed and committed, with his push approval (Q60) in it. The move itself didn't start. Step 1 has him quit VS Code, but the lead runs inside VS Code from the folder being moved. He chose (Q61): Claude Code in Terminal, started in `~/Work`.
+
+- **Briefs entry (M2, L1, Q60 answer, handoff header):** round 1 FAIL (`log.md` and closing records outside M2's scope; step 4's status diff compared against a file that also held the hash). The lead fixed both blockers and the four should-fixes in Cowork's handoff files rather than return them, since David was at the Mac. Round 2 PASS, committed `fa1a0f9`. Round 2's two should-fixes are recorded in M2's Outcome.
+- **M2:** `open` on arrival; freeze check failed (VS Code, Claude desktop app, ChatGPT/Codex app running; Obsidian and the MVP service stopped). Nothing moved, no snapshot written. Q61 queued, then answered by David via Cowork during the close (Terminal in `~/Work`); recorded in M2 (step 0), M2 back to `open`.
+- **Not done:** M2, everything under the 08:57 hold.
+
+**Pick up at:** David quits VS Code, the Claude desktop app and the ChatGPT app, opens Terminal, `cd ~/Work && claude`, says "pick up the loop" → M2 from step 0.
 
 ### Session 22 — 6 Oct 2026 · Claude Code, lead loop, M1 remainder
 **Authorization:** "pick up the loop" (D72), scoped by Cowork's 10:50 amendment in the handoff: finish M1 if Q57 and Q58 are answered (both were, (a)), review the briefs entry (M1, M2, L1) and commit it on a pass, then stop. **Ended by that directive**, not by one of D72's three stop conditions. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; every review checked the data policy.

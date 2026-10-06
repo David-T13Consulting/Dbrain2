@@ -12,7 +12,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (6 Oct, session 22):** M1 is done: every repo is backed up on private GitHub, ui-design-agent and the model manifest included. Q60 (push approval for M2) is answered: one push of each repo at the end of M2. Summary in [[log]].
+**Since you last looked (6 Oct, session 23):** the M2 brief passed review and is committed (`fa1a0f9`). M2 itself did not start in that session: the lead was running inside VS Code, which M2's step 1 closes. You answered Q61 via Cowork: the lead runs M2 from Terminal in `~/Work`. Summary in [[log]].
 
 ## Open
 
@@ -22,12 +22,10 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 | Q56 | lead (Claude Code), 6 Oct | [[90 System/briefs/MVP-phone\|MVP-phone]] | **`dbrain-runtime/mvp/make-shortcut.sh` (Q43) writes the bearer token into temporary Shortcut files** while it builds and signs the Shortcut, and deletes them with `rm -rf` at the end. Codex's review counts temporary files as a breach of "the token is never in a file". The lead left it out of the MVP commit; it is untracked and unused (your Shortcut is already rebuilt, Q44) | **(a) Retire it: build the Shortcut by hand from Cowork's recipe, and the lead deletes the script with your OK (recommended)** · (b) Keep it uncommitted for a future rebuild, used only by you · (c) Rework it so the token is pasted by you into the Shortcut, never written by the script; then review and commit | nothing: the MVP commit goes ahead without it | whenever |
 
 ## Answered
-Cleared once recorded, per D68. **Q5 and Q6 were cleared on 2 Oct** — Q5 is recorded in [[90 System/briefs/P2.1-review\|P2.1-review]] (Codex may read the 6 reserved cases, read-only) and Q6 in [[90 System/briefs/D68-single-front-door\|D68]], which it closed.
+Cleared once recorded, per D68. **Q59, Q60 and Q61 were cleared on 6 Oct (session 23)**: all three are recorded in [[90 System/briefs/M2-move-and-repoint|M2]] (Q59 and Q60 in `fa1a0f9`, Q61 in `1879615`). **Q5 and Q6 were cleared on 2 Oct** — Q5 is recorded in [[90 System/briefs/P2.1-review\|P2.1-review]] (Codex may read the 6 reserved cases, read-only) and Q6 in [[90 System/briefs/D68-single-front-door\|D68]], which it closed.
 
 | ID | Date | Answer |
 |---|---|---|
-| Q60 | 6 Oct | **(a)** One push each of Dbrain2 and dbrain-runtime at the end of M2, after the Codex pass, no force-push. Recorded in M2 step 8 (David, via Cowork) |
-| Q59 | 6 Oct | **(a)** Drop the uncommitted `additionalDirectories` entry; Cowork removed it from `.claude/settings.json` on 6 Oct at David's instruction. M2 adds the `~/Work` paths and the models folder in its path rewrite (David, via Cowork) |
 | Q55 | 5 Oct | **Review tiers (D-cowork-10) approved as drafted, with one amendment:** recording David's answers (Q-rows, PROGRESS, log entries that restate a decision) is **Tier 1, not Tier 0**: Codex checks the answer was recorded faithfully. Open point 2: calibration bar **90% agreement over 20 samples**. Open point 3: **yes**, Codex-only notes carry `review_status: codex-reviewed`. Lead: apply to AGENTS.md (one diff for David to approve) (David, via Cowork) |
 | Q54 | 5 Oct | **Permissions: allow all Bash commands, keep the hard-limit asks.** Cowork edited `.claude/settings.json` at David's request: `"Bash"` added to allow; ask rules removed for runtime code files (`dbrain/config, scope, outpath, index, adapter, serve, trace .py`, `mvp/**`, `experiments/**`, `measure.sh`), since Codex reviews every change before commit. Ask rules kept: AGENTS.md, CLAUDE.md, data policy, `.claude/`, `.gitignore`, `.git/`, `~/.codex`, `secret_scan.sh`, `rm`, `security`, `launchctl`, `sudo`, `wget`, `huggingface-cli`, `open`, git push/reset/rm/clean/branch-delete/config. Force-push stays denied (David, via Cowork) |
 | Q52 | 5 Oct | **Yes: record "pick up the loop" in AGENTS.md** (start an autonomous run per D72; read the handoff's Cowork → lead section first). Same AGENTS.md diff as the stuck rule (Q45), so David approves once (David, via Cowork) |

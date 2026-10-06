@@ -3,13 +3,13 @@ classification: internal
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 6 Oct 2026 (session 25) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 6 Oct 2026 (session 26) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 ---
 
 ## ▶ Next action
 
-> **Stopped for clean-up (David, 6 Oct 08:57; brief [[90 System/briefs/L1-lint-cleanup|L1]]).** No new work until David lifts it in writing. Released 10:05: **M1** (back up and push every repo) is done (6 Oct, session 22): every repo in scope is on private GitHub, gate met. **Next:** M2, the move off iCloud (replaces L1 phases 2–6): brief committed (`fa1a0f9`, push approved by Q60); it runs from a lead session in VS Code with only `~/Work` open (Q61, amended) with David present. **Blocked on Q63** (session 25): Q62 answered (archive to `~/Archive`), but §7 needs the archive provably out of agents' reach; David chooses split it off M2 (recommended), a temporary §7 exception, or enforcement first. **Then:** MVP-phone (P2.4, parked after round 9; consult first) and the Q51 order. P2.2 is done (`4b5e91f`, runtime `c8b3b7b`); T9 was stopped after 2 of 9 blocks, no result.
+> **Stopped for clean-up (David, 6 Oct 08:57; brief [[90 System/briefs/L1-lint-cleanup|L1]]).** No new work until David lifts it in writing. Released 10:05: **M1** (back up and push every repo) is done (6 Oct, session 22): every repo in scope is on private GitHub, gate met. **Next:** M2, the move off iCloud (replaces L1 phases 2–6): brief committed (`fa1a0f9`, push approved by Q60); it runs from a lead session in VS Code with only `~/Work` open (Q61, amended) with David present. Q63 answered (b): data policy v0.5, D75, committed with the M2 amendment (`53e655d`). **Blocked on Q64** (session 26): freeze broken by the Claude desktop app (Cowork's VM had both repos open); David quits it, then "pick up the loop". **Then:** MVP-phone (P2.4, parked after round 9; consult first) and the Q51 order. P2.2 is done (`4b5e91f`, runtime `c8b3b7b`); T9 was stopped after 2 of 9 blocks, no result.
 
 **Parallel domain action:** batch 04 is scored (2 Oct); its independent Codex re-score waits for Cowork's fixes to the re-score brief. T3.4 rubric v2.0 wording (`@cowork`, David approves). T2.6 is done (Dinant, Q22). T0.7 precedes the next contract.
 

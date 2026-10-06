@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 25, lead loop, M2 not started)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 26, lead loop, M2 stopped at freeze)
 
 ---
 
@@ -16,7 +16,7 @@ classification: internal
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | M1 is **done** (session 22); the M2 brief is committed (`fa1a0f9`, session 23). **Next: M2, the move off iCloud**, from a lead session in VS Code with only `~/Work` open (Q61 as amended). Q63 answered (b): temporary §7 exception for `~/Archive/medispring-infi`, data policy v0.5 (D75). Session 26 reviews the policy and M2 amendment, commits on a pass, then runs M2. Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | M1 is **done** (session 22); the M2 brief is committed (`fa1a0f9`, session 23). **Next: M2, the move off iCloud**, from a lead session in VS Code with only `~/Work` open (Q61 as amended). Q63 answered (b): temporary §7 exception for `~/Archive/medispring-infi`, data policy v0.5 (D75), committed with the M2 amendment (`53e655d`, session 26). **Blocked on Q64:** M2 stopped at its freeze check because the Claude desktop app (Cowork's VM) had both repos open; David quits it, then "pick up the loop". Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, `~/Documents/dbrain-runtime/` authorised, batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -143,6 +143,17 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 26 — 6 Oct 2026 · Claude Code, lead loop, M2 stopped at freeze
+**Authorization:** "pick up the loop" (D72), scoped by Cowork's update after session 25: review data policy v0.5 with its PROGRESS decision row and the M2 amendment, commit on a pass, then run M2. Run from VS Code with `~/Work` as the working directory. **Ended by stop condition (1):** M2 is `blocked-on-david` (Q64) after its step 1 stop rule; everything else is under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; the reviews checked the data policy.
+
+**What changed for David:** his §7 exception is now policy: data policy v0.5, decision D75, committed with the final M2 brief (`53e655d`). The move itself stopped at the safety check before anything was touched: the Claude desktop app was open again, and Cowork's virtual machine had files open inside both repos M2 moves. He quits the app, then says "pick up the loop" (Q64).
+
+- **Entry review:** round 1 FAIL (check (ii) let a root inside the archive pass and Cowork's roots weren't realpath-tested; no pre-move collision check, so `mv` could nest into an existing folder or follow a symlink). The lead fixed both and three should-fixes; round 2 PASS. The lead added D75 (below) per §8. Committed `53e655d`.
+- **M2:** step 0 met; **step 1 freeze broken** (Claude desktop app started 12:20:21; its VM holds `Dbrain2/.git/objects` and `dbrain-runtime` files open). Stopped per step 1: nothing moved, no snapshot, `~/Archive` not created. Q64 queued.
+- **Not done:** M2 steps 2–9, everything under the 08:57 hold.
+
+**Pick up at:** Cowork records Q64; David quits the Claude desktop app (Cmd-Q); "pick up the loop" in the VS Code `~/Work` window → the lead re-checks the freeze and runs M2 from step 2.
 
 ### Session 25 — 6 Oct 2026 · Claude Code, lead loop, M2 not started
 **Authorization:** "pick up the loop" (D72), scoped by Cowork's update to the 11:45 block: review the reworked M2 amendment; on a pass, commit it and run M2. Run from VS Code with `~/Work` as the working folder. **Ended by stop condition (1):** no actionable `@code` brief left; M2 is `blocked-on-david` (Q63), everything else under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; the reviews checked the data policy.

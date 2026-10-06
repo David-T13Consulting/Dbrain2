@@ -2,8 +2,8 @@
 classification: internal
 task: M3
 owner: "@code"
-status: open
-models: [claude-opus-5-5 (Cowork, draft)]
+status: blocked-on-david   # lead, 6 Oct (session 29): step 2 stop rule, Q71
+models: ["claude-opus-5-5 (Cowork, draft; lead)", "gpt-6.1-sol (Codex consult, high)"]
 created: 2026-10-06
 ---
 # M3 · Archive ui-design-agent, claude-blueprint and agentic-ios-app
@@ -41,3 +41,7 @@ No deletion, no force-push, no commit inside the three repos. Reversible only.
 **Lead review of Cowork's entry (Q65, Q66, this brief, handoff block), 6 Oct (session 28), Codex `gpt-6.1-sol` (review profile), high, read-only.** Round 1 FAIL on this brief: (1) `find ~ -maxdepth 3` would traverse `~/Archive/medispring-infi`, which data policy v0.5 forbids agents to list; (2) a recursive `grep` over `~/.codex` would read its credential store (`auth.json`). Should-fix: name the repository in `gh repo view`; include VS Code in step 2; and, in the handoff, the BENCH check (`--help` doesn't load `dev.json`), the committed M2 follow-up row, and the old block's "no push beyond M2" line. The lead fixed step 2 (named files only, no credential stores, no traversal into `~/Archive`) and step 4 here; the handoff points go in the lead's close note.
 
 ## Outcome
+**6 Oct (session 29), lead `claude-opus-5-5`. Stopped at step 2 (its stop rule); nothing moved, nothing archived on GitHub.**
+- **Step 1 pre-flight: PASS.** ui-design-agent `d4dfc44` (branch `claude/design-system-scaffold-RvDiy`), claude-blueprint `3ed6463` (`feature/new-branch`), agentic-ios-app `fac922b` (`main`): working trees clean, 0 ahead; every local branch tracks an upstream with nothing ahead; no stashes. GitHub repos: `David-T13Consulting/UI-Design-Agent`, `CLAUDE-Blueprint`, `agentic-ios-app`.
+- **Step 2 reference check: hits.** `~/.claude/settings.json`: 13 lines, `Read(...)` allow rules and additional directories for `~/Documents/UI-Design-Agent/...` and `~/dev/ui-design-agent/...`. VS Code `globalStorage/storage.json`: 7 lines, recent-workspace entries for `~/Documents/CLAUDE-Blueprint`, `~/Documents/UI-Design-Agent`, `~/dev/claude-blueprint`. All other named files: 0 hits (both `~/.codex` profiles, `~/.claude/settings.local.json`, the vault's `.claude/settings*.json`, VS Code `settings.json`, 7 launch agents). No symlinks in `~/Work` (depth 3); `~` depth 1 only `Google Drive`. Every referenced path is absent on disk (moved by M1/M2), and none points at `~/Work/<name>`, so the move would not change them.
+- **Consultation (D74), Codex `gpt-6.1-sol` (review profile), high, read-only:** asked whether these are "live hits" under step 2's rule. Advice: **STOP**. The `~/.claude/settings.json` entries are permission grants in active user-level configuration; they are ineffective while the paths are absent, but the brief's exception covers only `settings.local.json`. The VS Code entries can count as history. The lead followed the advice: no edit to the settings file (hard limit), M3 `blocked-on-david`, **Q71** in for-david.

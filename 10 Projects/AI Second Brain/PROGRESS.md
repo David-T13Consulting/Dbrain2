@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 27, lead loop, M2 done)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 29, lead loop, Q65 clean-up run; M3 stopped, Q71)
 
 ---
 
@@ -16,7 +16,7 @@ classification: internal
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | M1 done; **M2 done** (6 Oct, session 27), with follow-ups handed to Cowork (reconnection, claude.ai and weekly-task texts, the `Dbrain2-artifacts` move): every repo lives in `~/Work`, off iCloud; the medispring-infi archive is in `~/Archive` under data policy v0.5 (D75); paths re-pointed, all gates and the smoke test passed; the closing commits and one push per repo follow the Codex pass of these records. **Next:** M2's follow-ups (Cowork reconnect and its claude.ai and weekly-task texts, the `Dbrain2-artifacts` move with its deferred path rewrite, clean-up with David's OK), then David lifts the 08:57 hold. Answer quality is the next thing David will feel: on 6 Oct both phone answers cited the right note but were wrong (P2.5, T9). Host decision (D53) gates sustained-performance numbers |
+| **Next action** | **Q65 clean-up run (session 29):** David's answers committed, review tiers in AGENTS.md (D77), the three Inbox captures committed, both repos pushed (0 ahead). **M3 stopped at its step 2 reference check (Q71):** stale `Read` rules for old ui-design-agent paths in `~/.claude/settings.json`. **The 08:57 hold stays:** David set its lift on this run ending clean, and M3 is not done. **Next:** David answers Q71 via Cowork; the lead runs M3; then David lifts the hold. After that, answer quality (P2.5, T9) is what he will feel first. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, the `dbrain-runtime` repository authorised (now `~/Work/dbrain-runtime/`), batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -145,6 +145,22 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 29 — 6 Oct 2026 · Claude Code, lead loop, Q65 clean-up run
+**Authorization:** "pick up the loop" from David, directly to the lead in this session, with the run's steps listed: verify his Q70 fix; commit his answers; Q55/Q65 step 3 with Q68 (a) (D77); Inbox; one push per repo, no force; M3 per its brief and stop rules; close. Out of scope: the parked MVP-phone code, `.claude/settings.local.json`, T9, P2.5 work, the Q51 order. Run from VS Code with `~/Work` open. **Ended by stop condition (1):** after M3 went `blocked-on-david` (Q71), no actionable `@code` brief remains under the hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+
+**What changed for David:** the review tiers he approved are now the rules (D77): bookkeeping will stop waiting on Codex once the pre-commit check exists, and Tier 2 work comes back to him, batched, plus a 1-in-5 sample of Tier 1 commits for calibration. His fix to the project-alignment capture worked: the counterparty is gone and the capture passed review. Everything is pushed to GitHub. **The hold stays:** M3 stopped at its own safety check (Q71), and he set the hold's lift on this run ending clean.
+
+- **Q70:** line 34 of `00 Inbox/2026-10-06-1505-project-alignment-1to1.md` no longer names the counterparty or its agreements (checked by the lead, then by Codex in the Inbox review).
+- **Committed:** `9013735` David's answers Q67/Q68, Q70 note (round 1 FAIL: Q70 option (c) implied outside-the-vault was enough under §7; fixed; round 2 PASS) · `7b73210` Cowork's weekly course map and Q69 (PASS; should-fixes for Cowork's next refresh in the commit message) · `4dde18c` AGENTS.md review tiers, **D77** (PASS, every change matches Q65 and Q68 (a) word for word) · `451ed03` Inbox: Q12 scaffold note (`@david` in TASKS), eurouter, project-alignment (PASS) · this close.
+- **Pushed (Q65):** Dbrain2 `7b8053d..451ed03`, dbrain-runtime `44abb90..1fd0c53` (the M2 follow-up). Both 0 ahead. This close commit is pushed too, under David's step 6 ("final commit and push").
+- **M3:** pre-flight PASS (all three clean, 0 ahead, no stashes); step 2 found 13 `Read` rules and directories for absent ui-design-agent paths in `~/.claude/settings.json` and 7 VS Code recent-workspace entries. Codex, consulted under D74, advised STOP (permission grants in active config; the brief exempts only `settings.local.json`). Nothing moved or archived. **Q71.**
+- **Hold:** David's 6 Oct instruction: the 08:57 hold lifts when this run ends clean (all steps done, both repos 0 ahead, only the documented parked items uncommitted). Not met (M3). Not recorded as a decision; the lift is recorded when it happens.
+- **Q65 (David, 6 Oct, via Cowork), recorded here:** the AGENTS.md text approved exactly as shown (applied as D77 with Q68 (a)); commit the five Cowork drafts and the M2 follow-up (done in session 28); one push per repo after those commits, no force (done this run); David emptied the `_to_delete` folders and updated the weekly model-review task prompt to `~/Work/Dbrain2` himself; the hold stays until he lifts it after this run.
+- **Answers recorded and cleared:** Q65 (above), Q66 (M3), Q67 (P3.0, now `open`, held), Q68 (D-cowork-10, D77), Q70 (here).
+- **Uncommitted, documented:** runtime parked MVP-phone code, `mvp/make-shortcut.sh` (Q56), `experiments/t9_compare.py`; vault `.claude/settings.local.json` is untracked by design.
+
+**Pick up at:** Q71 with David (Cowork), then M3 from step 3; then David lifts the hold. Should-fixes waiting: Cowork's course-map refresh, the project-alignment capture at triage, the S2–S6 plan to the Q50/Q51 order (held).
 
 ### Session 27 — 6 Oct 2026 · Claude Code, lead loop, M2 done
 **Authorization:** David's "I just switched off cowork" after session 26's close, taken as his answer to Q64 (a) and a restart of the loop (D72); Cowork was off, so it came directly to the lead. Run from VS Code with `~/Work` as the working directory. **Ended by stop condition (1)** after M2: no other actionable `@code` brief; everything else is under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.

@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 21, lead loop, M1 only)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 22, lead loop, M1 remainder)
 
 ---
 
@@ -16,7 +16,7 @@ classification: internal
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | M1 (back up and push every repo) ran to its gate on 6 Oct except ui-design-agent (Q58) and the runtime model manifest (Q57). **Next: M2, the move off iCloud, with David at the Mac** (Cowork opens it). Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | M1 (back up and push every repo) is **done** (6 Oct, session 22): every repo in scope is pushed to private GitHub, gate met. **Next: M2, the move off iCloud, with David at the Mac** (Cowork opens it), after Cowork fixes the M2/L1 review blockers and David answers Q60 (push approval for M2). Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, `~/Documents/dbrain-runtime/` authorised, batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -142,6 +142,19 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 22 — 6 Oct 2026 · Claude Code, lead loop, M1 remainder
+**Authorization:** "pick up the loop" (D72), scoped by Cowork's 10:50 amendment in the handoff: finish M1 if Q57 and Q58 are answered (both were, (a)), review the briefs entry (M1, M2, L1) and commit it on a pass, then stop. **Ended by that directive**, not by one of D72's three stop conditions. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; every review checked the data policy.
+
+**What changed for David:** everything in M1's scope is now backed up on private GitHub, including ui-design-agent's 31 leftover files and a manifest that lets the four local models be downloaded again and verified by hash. M2 (the move off iCloud) can't lose committed work. Its brief still needs Cowork's fixes and David's answer on pushing (Q60).
+
+**Did:**
+- **M1 remainder:** `models/MANIFEST.md` and `.DS_Store` ignore in dbrain-runtime (`6c7763e`, Codex PASS, its license should-fix applied); ui-design-agent's 31 entries committed as they are (`d4dfc44`, Codex PASS); both pushed, no force. Secret scans clean. Gate met; M1 `done` (counts in the brief).
+- **Briefs entry (M1, M2, L1): Codex FAIL** on re-review. Prior findings 2–8 resolved; finding 1 (M1 step 2 said "commit") fixed by the lead. New blockers, all in M2: push approval scope (Q60), `~/Work/_snapshots/` outputs not in Files in scope, medispring-infi inspected despite being move-only. **M1 is committed with this close; M2 and L1 go back to Cowork, uncommitted.**
+- **Queued for David:** Q60. Q57 and Q58 recorded in M1 and cleared from the queue.
+- **Not done:** M2, L1, everything under the 08:57 hold.
+
+**Pick up at:** Cowork fixes M2 (three blockers, one should-fix) and L1 (two should-fixes) → one fresh review → commit. David answers Q60. Then M2 with David present.
 
 ### Session 21 — 6 Oct 2026 · Claude Code, lead loop, M1 only
 **Authorization:** "pick up the loop" (D72), scoped by Cowork's 10:05 release in the handoff: brief M1 to its gate, plus the briefs entry (M1, M2, L1) on a Codex pass; nothing else. **Ended by that directive** (run M1 to its gate, then stop), not by one of D72's three stop conditions. **The gate is not fully met:** ui-design-agent keeps 31 uncommitted files (Q58) and dbrain-runtime an undocumented `.DS_Store`; M1 is `blocked-on-david`.

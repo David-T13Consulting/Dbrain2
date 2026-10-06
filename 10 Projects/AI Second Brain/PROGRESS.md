@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 2 Oct 2026 · **Updated by:** Claude Code (session 14, lead loop)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 20, lead loop, stopped for clean-up)
 
 ---
 
@@ -11,8 +11,8 @@ classification: internal
 
 | | |
 |---|---|
-| **Phase** | S1 architecture alignment — requirements and targets settled (D52–D59); S2 is next. Running validation in parallel |
-| **Schedule** | Original 13-week ordering superseded by S1–S6. Hardware and weekly time are now both known (P1.1, D55), so December 2026 is schedulable rather than aspirational — a dated S2–S6 plan has not been drawn up yet |
+| **Phase** | S1 requirements settled; S1 exit evidence incomplete (P1.3 data-flow diagram, roots/tools list); S2 under way: P2.2 query service committed (`4b5e91f`, runtime `c8b3b7b`); MVP-phone parked; repo clean-up and the move off iCloud (brief L1) before new work. Running validation in parallel |
+| **Schedule** | Original 13-week ordering superseded by S1–S6. Dated S2–S6 plan exists, proposed (`f9c014e`); demo-ready Fri 18 Dec 2026 (Q29) |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
@@ -134,6 +134,7 @@ Append-only. Each entry: what, why, and what would change it.
 | D69 | 5 Oct | **Data policy v0.4: personal data beyond training/HR enters in gated waves, and children's data gets its own rule.** Wave 0 (own training/HR) is in force; wave 1 (ordinary personal, e.g. family logistics without names) waits for the P1.4 four-axis retrofit and a lint check on the axes; wave 2 (health beyond training, finances, journal; local-only) waits for five gates: local answers with no cloud fallback, cloud agents provably unable to reach the files, a synthetic leak test, trace redaction, and a tested deletion rule covering working copy, git history and backups. The waves govern material added from 5 Oct; existing personal notes are relabelled in P1.4. New §3a: no names, initials, nicknames, identifying places or town; minimise before capture; no health, behaviour, performance or photos; never demoed; manual capture only; logistics only. Approved by David as Q20, revised after Codex's review (Q24) and approved again as Q25. Written by Cowork as provisional `D-cowork-7`, renumbered by the lead | David wants kids' schedules in the system (Q19) without loosening the red line; gating each wave on controls that are tested, not on labels, keeps sensitive material out until the system can actually protect it | A wave-2 gate proves impossible without a vault split, which would reopen OQ-20 |
 | D72 | 5 Oct | **Autonomous runs: review failures park, they don't stop the run.** A failed Codex review is fixed and re-reviewed, bookkeeping or substantive, up to 5 reviews of the same brief per run (the first included); then the brief is parked `in-review` with its findings and the run moves on. The loop stops only when no actionable `@code` brief remains, the usage limit is reached, or something unsafe is found. No commit without a Codex pass, ever. Hard-limit actions always ask David. A pre-approved command and edit allowlist in `.claude/settings.json` (edits to AGENTS.md, data-policy and `.claude/` still ask). Replaces D70's single re-review; amends D65 | David's answers Q37–Q40 (brief `D-cowork-8-autonomous-runs`, provisional `D-cowork-8`, renumbered by the lead); David approved the drafts and pre-approved edits in both repos. Runs were ending on small, fixable findings and on prompts for safe commands; the review gate itself is unchanged | A parked brief turns out to hide a real problem the run should have stopped on, or the allowlist lets through something on the hard-limit list |
 | D73 | 5 Oct | **Reviewer model: Codex GPT-6.1 Sol (`gpt-6.1-sol`) at effort `high`**, replacing GPT-6 Astra; `ultra` stays the escalation. Set in `~/.codex/review.config.toml` and the AGENTS.md model-policy table. Still a different vendor from the build agents, as D64 requires | David's decision, 5 Oct. Briefs keep `gpt-6-astra` for the rounds it actually ran | The new model's reviews prove weaker or unavailable; David changes it back |
+| D74 | 5 Oct | **Second pair of eyes when stuck; "pick up the loop"; accepted risks don't block.** When the same failure or finding returns after 2 attempts, 2 rounds pass without progress, the lead is about to guess, or it is reworking the same files without converging, it consults Codex read-only (or a fresh Claude Code instance) before the next attempt; advice is input, recorded in the brief, not counted toward retries (Q45). "Pick up the loop" from David starts an autonomous lead run per D72, reading the handoff's Cowork → lead section first (Q52). Accepted risks recorded in a brief are passed to the reviewer and don't block (Q53). AGENTS.md, committed `c56bd74`; Cowork's provisional `D-cowork-9`, renumbered by the lead | David's answers Q45, Q52, Q53 (via Cowork). Session 19's P2.2 rounds converged only once Codex was consulted as an adviser, not as a reviewer | Consultations turn into a way of deferring decisions, or accepted-risk lists start to cover blockers |
 | D71 | 5 Oct | **One-off exception to the wave-1 gate (D69): four logistics captures may enter `00 Inbox` before P1.4** — kids' school lunch menus, household waste calendar, child A climbing, child A scouts. Minimised per §3a, labelled on the four OQ-20 axes, originals not kept; triage still waits for P1.4. The gate stands for everything else | David wanted the MVP-phone test to answer real family logistics now; a named, bounded exception keeps the gate meaningful instead of quietly opening it. Granted by David via Cowork, recorded by the lead from the handoff | A further capture is added under "the same exception": that would be a second exception, which needs its own answer |
 
 ---
@@ -141,6 +142,37 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 20 — 5–6 Oct 2026 (night to morning) · Claude Code, lead loop; stopped for clean-up
+**Authorization:** "pick up the loop" (D72). **Ended by David's directive of 6 Oct 08:57** (handoff ⛔ block, brief L1): finish the current step, do L1 phases 0–1 only, then stop. Not one of D72's three stop conditions; David's directive overrides the run.
+
+**What changed for David:** the query service under the phone (P2.2) is committed at last (runtime `c8b3b7b`), so the code that answers is now versioned and reviewed. **The phone itself is unchanged:** the date fix ("menu tomorrow") is built but parked after its fifth failed review, so his Shortcut still runs yesterday's code.
+
+**Did:**
+- **P2.2:** round O's two findings accepted as risks (Q53); round P failed on two false sentences in the bookkeeping, fixed; **round Q PASS** (Codex `gpt-6.1-sol`, high, read-only). Committed: runtime `c8b3b7b` (first commit), vault `4b5e91f`.
+- **Handoff entries reviewed (one batch):** Q54 settings `377757e`, AGENTS.md Q45/Q52/Q53 (D74) `c56bd74`, Q46 `d4fae04` passed and were committed. P2.5, P4.1, P3.0 briefs and Q13 failed on blockers (findings in the Lead → Cowork note in the handoff).
+- **MVP-phone:** review rounds 5–9 on the runtime code (display fixes, date awareness). Rounds 5–8's blockers were fixed; round 9's three are open; after round 7 the lead consulted Codex (D74) and redesigned logging (only server-generated text in logs and error replies) and date reading (components, composition, "unclear" asks again, the asked date always stated). Round 9, the fifth, failed on three more date forms → **parked**, uncommitted (brief). `mvp/make-shortcut.sh` is left out: it writes the token into temporary files (Q56 for David).
+- **T9 (started before the stop directive):** pre-download manifest; the three named models downloaded from pinned revisions and hash-verified (disk 15.65 GB (decimal; the four model files 15.59 GB, runtime copies 0.06 GB) of the 20 GB budget; Qwen3.5-4B re-fetched because `/private/tmp` had been cleared); all four load on b11146; Qwen3.5 needs the server's `--reasoning off`. The 9-block run was **stopped after 2 blocks** on David's directive: no result, evidence kept in `dbrain-runtime/artifacts/t9-2026-10-06/`.
+- **L1 Phase 0:** 0 dataless files after forcing the 12 `* 2` copies local; `git fsck --full` exit 0 in both repos (no missing or corrupt objects; vault: 316 dangling blobs, 16 dangling trees, 1 dangling commit, plus "bad sha1 file" for the 12 `* 2` names; runtime: 74 dangling blobs); all 12 `* 2` copies identical to their originals; bundles of both repos verified in `~/Work/_snapshots/`; uncommitted files copied there with their paths.
+
+- **L1 Phase 1 (6 Oct):** handoff reconciled with git; D-e and D-c applied as David approved; one Codex batch review with a verdict per item. **Committed:** MVP-phone parked record + Q56 `5117908` · AGENTS.md `D-cowork-9` → `D74` `e00c4a4` · the four wave-1 captures, lunch with D71 `b7db7da`, waste `28d3697`, climbing `88eef41`, scouts `a53a6d7`. **Parked, uncommitted:** this bookkeeping (B1: handoff reconcile, this entry, D74 row, header, P2.2 `done`, TASKS, Q13–Q17), after five reviews, each on a different inaccurate statement, all fixed: §3a values quoted in lead handoff text; a missing Lead → Cowork note; the fsck summary; the disk figure; a session 19 claim. **Failed, back to Cowork:** L1 brief, the 5 Oct lint log entry, D-cowork-10 + checklist + Q55, P2.5/P4.1/P3.0 with Q47–Q51 (findings in the handoff note). *(Later on 6 Oct: the lint entry, fixed by Cowork, passed a fresh review and is committed, `0f81cac`.)*
+
+**Incident (lead):** the round 7 bookkeeping for MVP-phone ran inside a backgrounded command, stopped on an assertion and went unnoticed, so rounds 7–8 were missing from the brief until round 9's review caught it. Bookkeeping edits now run in the foreground and are checked.
+
+**Pick up at (after David lifts the stop):** L1 Phase 2 (with David present) → MVP-phone (consult first; the parked brief's note) → Q51 order. Uncommitted items and why: the Lead → Cowork note of 6 Oct in `90 System/handoff.md`.
+
+### Session 19 — 5 Oct 2026 (late evening) · Claude Code, lead loop
+**Authorization:** "pick up the loop" (autonomous run per D72; Cowork's handoff directives Q46 read first).
+
+**What changed for David:** the phone's "What's on the menu tomorrow?" now answers correctly in testing (Tue 6 Oct, cites the lunch note), and every dated answer starts with its date. **This isn't on his phone yet:** nothing could be committed, because the query service under it (P2.2) was parked after five failed reviews this run. The label check behind it is now an allowlist that skips odd notes instead of stopping every question (Q46).
+
+**Did:** P2.2 rounds K–O (Codex `gpt-6.1-sol`, high, read-only): after K failed, consulted Codex (D-cowork-9) and redesigned the label check as an allowlist (round L passed); applied Q46 (skip and trace; a recognisable `client` label still stops); rounds M, N and O failed on progressively narrower forms → **parked**, two findings open (brief). MVP-phone: date awareness in `serve.py`, tests on a fixed date, smoke run d on the real model (p50 9.9 s, p95 13.0 s, 11/14 expected). Handoff note to Cowork; Q52 queued.
+
+**Incident:** a lead script emptied `TASKS.md` (opened for writing before reading); restored from `f9c014e` and the lead's edits reapplied; no other work lost.
+
+**Pick up at:** P2.2 round O findings (brief) → one review → first `dbrain-runtime` commit → MVP-phone review and merge (display fixes + dates) → Cowork's Q51 order (voice step A, P2.5 …). Nothing from this session is committed.
+
+Superseded the same evening: session 20 passed round Q and committed P2.2 (`4b5e91f`, runtime `c8b3b7b`).
 
 ### Session 14 — 2 Oct 2026 · Claude Code, lead loop
 **Authorization:** David: "pick up the loop."

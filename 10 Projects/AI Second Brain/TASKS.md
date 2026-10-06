@@ -3,13 +3,13 @@ classification: internal
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 5 Oct 2026 (session 17) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 6 Oct 2026 (session 20) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 ---
 
 ## ▶ Next action
 
-> **P2.2: review rounds P–Q: **PASS, committed**.** Round O's two label-check findings are accepted risks (Q53). The service is built and measured (run B: p95 42.1 s on the Air against the D56 target of 8 s). **Then:** the MVP-phone (P2.4) date fix, review and merge, then the order in David's Q51.
+> **Stopped for clean-up (David, 6 Oct 08:57; brief [[90 System/briefs/L1-lint-cleanup|L1]]).** No new work until David lifts it in writing: L1 Phase 2 (the move off iCloud) needs David present. **Then:** MVP-phone (P2.4, parked after round 9; consult first) and the Q51 order. P2.2 is done (`4b5e91f`, runtime `c8b3b7b`); T9 was stopped after 2 of 9 blocks, no result.
 
 **Parallel domain action:** batch 04 is scored (2 Oct); its independent Codex re-score waits for Cowork's fixes to the re-score brief. T3.4 rubric v2.0 wording (`@cowork`, David approves). T2.6 is done (Dinant, Q22). T0.7 precedes the next contract.
 
@@ -30,7 +30,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 
 ### S2 · Prove local read-only answers
 - [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels. `@codex` — the independent case review is briefed in [[90 System/briefs/P2.1-review|P2.1-review]].
-- [ ] **P2.2** Behind a swappable model adapter, so T9 stays open, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]]. Label check redesigned as an allowlist, Q46 applied; round O's two findings accepted as risks (Q53); rounds P–Q: **PASS, committed**.
+- [x] **P2.2** ✅ 5 Oct (`4b5e91f`, runtime `c8b3b7b`). Behind a swappable model adapter, so T9 stays open, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]]. Label check redesigned as an allowlist, Q46 applied; round O's two findings accepted as risks (Q53); rounds P–Q: **PASS, committed**.
 - [ ] **P2.3** `@code` Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
 - [ ] **P2.4** `@code` **MVP-phone (S4 slice pulled into S2, David Q32–Q34, 5 Oct):** ask from the iPhone over Tailscale with an Apple Shortcut; `/ask` on the Air calls the P2.2 service over the whole vault, read-only, bearer token in the Keychain. Brief: [[90 System/briefs/MVP-phone|MVP-phone]]. Code (display fixes and date awareness) on top of P2.2's `c8b3b7b` in `dbrain-runtime`; Codex review round 5 failed (five blockers, fixed); rounds 6–8 failed and were fixed (logging and date reading redesigned after a Codex consultation); round 9, the fifth, failed on three date forms → **parked 6 Oct, uncommitted** (brief). David's phone gets it after a restart of `Ask Brain.command`.
 - Existing tasks: **T9** moves here; **T4.1/T5/T6** begin with platform evaluation, redacted traces and service targets.
@@ -191,7 +191,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [ ] **T7** `@code` Evidence UX at S3: supported/incomplete/conflicting/withheld, concise evidence/citations, overrides and reviewed corrections. Existing skill confidence scores are heuristic; preserve escalation until reviewed.
   Build the low-confidence path deliberately — you will demo it on purpose.
 - [ ] **T8** `@cowork` (Q28) Governance one-pager: begin boundaries/data flow at S1, update with actual roles and permissions, review at S6. Include retention, escalation, authorization and agent topology.
-- [ ] **T9 · S2** `@code` Benchmark local models against platform cases and available running development cases. Record quality, sustained latency, memory/context settings.
+- [ ] **T9 · S2** `@code` *(6 Oct: the three candidates named in the [[90 System/briefs/T9-M6-model-comparison|T9/M6 brief]] are downloaded and hash-verified, 15.65 GB (decimal; the four model files 15.59 GB, runtime copies 0.06 GB) of the 20 GB budget; the run was stopped after 2 of 9 blocks by David's clean-up directive, so there is no result yet. Restart the protocol from block 1.)* Benchmark local models against platform cases and available running development cases. Record quality, sustained latency, memory/context settings.
   **Rewritten 1 Oct (session 12):** this task used to ask "Air versus dedicated host, decided on evidence." D53 already answered it — an always-on requirement rules out a travelling laptop — so a gate phrased that way could no longer fail. The live question is now **which host spec and which model meet the D56 targets**: measure on the Air to choose the model and to size memory, then confirm on the host once it exists. Report peak memory explicitly, since it drives the 24 vs 32 GB call.
   External comparisons are optional and require explicit authorization; never a production fallback or prerequisite.
 

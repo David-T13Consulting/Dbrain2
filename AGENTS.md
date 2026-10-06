@@ -78,7 +78,7 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   stop, set the brief to `blocked`, record the attempts and Codex's advice under Outcome,
   and move on. A `blocked` brief is not picked up again in the same run; only David
   reopens it.
-- **Ask for a second pair of eyes when stuck (D-cowork-9, David 5 Oct).** Being stuck is
+- **Ask for a second pair of eyes when stuck (D74, David 5 Oct).** Being stuck is
   not a reason to stop or to keep grinding. You are stuck when any of these holds: the same
   failure or review finding comes back after 2 attempts; 2 rounds pass without measurable
   progress on the brief's "Done when"; you are about to guess at a cause; or you are

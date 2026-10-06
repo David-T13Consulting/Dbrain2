@@ -41,7 +41,7 @@ Build an Obsidian second brain with a local model, access across devices by text
 
 ## Where this fits
 
-This folder (`~/Documents/Dbrain2/10 Projects/AI Second Brain/`) is project tracking *about* the build,
+This folder (`~/Work/Dbrain2/10 Projects/AI Second Brain/`) is project tracking *about* the build,
 living inside the vault it tracks, per PARA (`10 Projects` = active work with an end state).
 The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `90 System` — see
 `../../90 System/README.md` for the vault-wide conventions.
@@ -92,8 +92,8 @@ Dispatch is the interim route; the local remote text/voice service is planned fo
 
 If a message starts with **`capture:`** or is clearly a raw thought dump:
 
-1. Write it to `00 Inbox/YYYY-MM-DD-HHmm-<slug>.md` **at the vault root** (`~/Documents/Dbrain2/00 Inbox/`, not inside this project folder)
-2. Use the frontmatter template in `~/Documents/Dbrain2/00 Inbox/README.md`
+1. Write it to `00 Inbox/YYYY-MM-DD-HHmm-<slug>.md` **at the vault root** (`~/Work/Dbrain2/00 Inbox/`, not inside this project folder)
+2. Use the frontmatter template in `~/Work/Dbrain2/00 Inbox/README.md`
 3. Transcribe faithfully — light cleanup of dictation artifacts only
 4. **Do not** process, expand, research, or ask follow-up questions
 5. Confirm in one line: what was captured and where

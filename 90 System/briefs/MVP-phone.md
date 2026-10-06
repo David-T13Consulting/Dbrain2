@@ -22,7 +22,7 @@ David can ask a question on his iPhone, typed or dictated, at home or on 4G, and
 - **Host: the MacBook Air** until the always-on host arrives (Q30 open).
 
 ## Files in scope
-- `~/Documents/dbrain-runtime/`: `dbrain/serve.py`, the whole-vault profile in `dbrain/config.py`, the opt-in hooks in `scope.py`, `index.py`, `answer.py`, `trace.py`, `mvp/`, `tests/test_serve.py`, `experiments/mvp_smoke.py` and `experiments/sandbox-smoke.sb`; `artifacts/` for logs and traces (git-ignored).
+- `~/Work/dbrain-runtime/`: `dbrain/serve.py`, the whole-vault profile in `dbrain/config.py`, the opt-in hooks in `scope.py`, `index.py`, `answer.py`, `trace.py`, `mvp/`, `tests/test_serve.py`, `experiments/mvp_smoke.py` and `experiments/sandbox-smoke.sb`; `artifacts/` for logs and traces (git-ignored).
 - `~/Library/Application Support/dbrain/` (pinned model and runtime copy, outside the vault).
 - This brief; `90 System/for-david.md`; TASKS P2.4 and P4.1; the S2–S6 plan; `index.md` and `log.md` entries.
 

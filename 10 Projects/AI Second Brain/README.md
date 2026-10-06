@@ -23,12 +23,12 @@ Building a personal AI system that works — and that stands up as proof of expe
 
 ## Where things live
 
-This project-tracking folder sits **inside the vault it tracks** (`~/Documents/Dbrain2/10 Projects/AI Second Brain/`),
+This project-tracking folder sits **inside the vault it tracks** (`~/Work/Dbrain2/10 Projects/AI Second Brain/`),
 per PARA — an active project with an end state belongs under `10 Projects`. One exception: raw source
 material (large binaries) lives *outside* the vault entirely and isn't git-tracked. See `00_Source_Material.md`.
 
 ```
-~/Documents/Dbrain2/                      ← the vault (Obsidian, git-tracked)
+~/Work/Dbrain2/                           ← the vault (Obsidian, git-tracked)
 ├── 00 Inbox/                             ← captures land here (root level, not project-scoped)
 ├── 10 Projects/
 │   └── AI Second Brain/                  ← you are here

@@ -69,7 +69,7 @@ D59 deliberately kept the minimum schema narrow. If the split is likely to be ac
 **Owner:** decide from held-out batches. If short races (10 km) wrongly turn easy runs into "recovery", scale the window by km-effort.
 
 ### OQ-8 · Project instructions in claude.ai are stale — ✅ RESOLVED 1 Oct 2026 (David pasted the revised text; vault path, Source_Material location and D50 git convention)
-**Owner:** David · they still point to `~/Desktop/AI_SecondBrain_Project/`; the vault has been `~/Documents/Dbrain2/10 Projects/AI Second Brain/` since 8 Sep. Replacement text is at the bottom of the project doc `claude/ai-second-brain-project.md`.
+**Owner:** David · they still point to `~/Desktop/AI_SecondBrain_Project/`; the vault is `~/Work/Dbrain2/10 Projects/AI Second Brain/` (since 6 Oct, M2; `~/Documents/Dbrain2/` from 8 Sep). Replacement text is at the bottom of the project doc `claude/ai-second-brain-project.md`.
 
 ### OQ-11 · Second domain: family logistics inputs (parked)
 **Blocks:** nothing in S1–S6; additional production domains remain parked · **Owner:** David. Context: `00 Inbox/2026-09-30-1447-assistant-scope-ideas.md`

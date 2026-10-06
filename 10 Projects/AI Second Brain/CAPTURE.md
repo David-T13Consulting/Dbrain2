@@ -27,7 +27,7 @@ Start the message with **`capture:`** — then just talk.
 > *"capture: the governance one-pager should probably lead with regulatory exposure not scope, because that's what a CISO reads first"*
 
 Claude will:
-1. Write it to `~/Documents/Dbrain2/00 Inbox/YYYY-MM-DD-HHmm-<slug>.md` (the vault root, not this project folder)
+1. Write it to `~/Work/Dbrain2/00 Inbox/YYYY-MM-DD-HHmm-<slug>.md` (the vault root, not this project folder)
 2. Transcribe faithfully — cleaning up only dictation artifacts ("um", doubled words, mangled punctuation)
 3. **Not** process, expand, research, or ask follow-up questions
 4. Reply with one line: what was captured, where it went

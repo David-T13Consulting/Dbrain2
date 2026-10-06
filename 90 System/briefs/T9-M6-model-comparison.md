@@ -74,7 +74,7 @@ Stated here in full, independent of the P2.2 results note, which is **uncommitte
 - **Boundaries:** network blocked (sandbox profile as in run B), provider keys unset, outputs only to `dbrain-runtime/artifacts/` through the write guard.
 
 ## Files in scope
-- `~/Documents/dbrain-runtime/` (code, experiments, `artifacts/`); model files outside the vault next to the existing ones.
+- `~/Work/dbrain-runtime/` (code, experiments, `artifacts/`); model files outside the vault next to the existing ones.
 - A new dated results note in `10 Projects/AI Second Brain/02_Architecture/` (`review_status: draft`, as Q7), with its `index.md` / `log.md` entries.
 - This brief; TASKS T9 and M6 lines; `90 System/for-david.md` (the result and the duplicate-file question go to the queue).
 - **Not in scope until David confirms:** `30 Resources/Local AI/` (benchmark ledger, text-and-vision). Q8 authorises bounded downloads and Q7 a draft results note; neither authorises new structured knowledge in 30 Resources (rule 8). The lead proposes those rows in the queue.

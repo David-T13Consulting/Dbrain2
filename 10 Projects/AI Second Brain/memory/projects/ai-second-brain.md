@@ -5,7 +5,7 @@ classification: internal
 
 **Also called:** the second brain, the AI system, the showcase system
 **Status:** Active · S1 closed on requirements (D52–D59), S2 next; running validation alongside · Started 7 Sep 2026 · Target Dec 2026, schedulable at 20+ h/week (D55)
-**Location:** `~/Documents/Dbrain2/10 Projects/AI Second Brain/`
+**Location:** `~/Work/Dbrain2/10 Projects/AI Second Brain/`
 
 ## What it is
 

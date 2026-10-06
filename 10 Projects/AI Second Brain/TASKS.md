@@ -84,6 +84,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] Write `90 System/lint-checklist.md` and run the baseline ✅ 1 Oct
 - [x] **Decide on the 15 notes without `classification:`** ✅ 1 Oct, applied as proposed. Proposal: `internal` for project notes, Welcome.md `public`, the root CLAUDE.md stub exempt (one line, imports AGENTS.md)
 - [ ] `@cowork` Triage the two Inbox items (`assistant-scope-ideas`, `how-to-automate-pm-job`) at the next weekly pass, and run lint then
+- [ ] `@david` Triage `00 Inbox/2026-10-01 New-project scaffold.md` later (Q12: parked untouched, no brief and no guardrail work from it for now). Its `source:` line is not valid YAML; fix it at triage, not before
 - [x] Resolve OQ-12 via D47: running is the domain; supervised wiki maintenance is shared platform work. ✅ 1 Oct
 - [ ] `@code` Resolve remaining OQ-13 retention/IDs/metadata details at P1.3/P3.1 (routing and provenance settled by D49, 1 Oct).
 - [ ] `@code` Automate lint at S3; corrections/index/log changes stay approval-gated. Read-only inspection is available now.

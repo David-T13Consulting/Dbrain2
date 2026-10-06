@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 24, lead loop, M2 not started)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 25, lead loop, M2 not started)
 
 ---
 
@@ -16,7 +16,7 @@ classification: internal
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | M1 is **done** (session 22); the M2 brief is committed (`fa1a0f9`, session 23). **Next: M2, the move off iCloud**, from a lead session in VS Code with only `~/Work` open (Q61 as amended). **Blocked on Q62** (session 24): M2 moves medispring-infi into `~/Work/_archive/`, which is inside that session's workspace; David chooses where the archive goes, Cowork fixes the amendment's front-door finding, then "pick up the loop". Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | M1 is **done** (session 22); the M2 brief is committed (`fa1a0f9`, session 23). **Next: M2, the move off iCloud**, from a lead session in VS Code with only `~/Work` open (Q61 as amended). **Blocked on Q63** (session 25): Q62 is answered (archive to `~/Archive`), but no check the agents can run proves they are blocked from it, and data-policy §7 requires that now. David chooses: split medispring-infi off M2 (recommended), a temporary §7 exception (§8: PROGRESS decision + policy v0.5), or verified enforcement first; then "pick up the loop". Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, `~/Documents/dbrain-runtime/` authorised, batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -142,6 +142,17 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 25 — 6 Oct 2026 · Claude Code, lead loop, M2 not started
+**Authorization:** "pick up the loop" (D72), scoped by Cowork's update to the 11:45 block: review the reworked M2 amendment; on a pass, commit it and run M2. Run from VS Code with `~/Work` as the working folder. **Ended by stop condition (1):** no actionable `@code` brief left; M2 is `blocked-on-david` (Q63), everything else under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; the reviews checked the data policy.
+
+**What changed for David:** nothing moved. His Q62 answer (archive to `~/Archive`) and the freeze confirmation are recorded. The review then found the core problem: the agents run as David with shell access, so no check they run can prove they are blocked from the archive, and data-policy §7 requires that now. David decides (Q63): move the other seven folders now and split medispring-infi off (recommended), grant a temporary §7 exception (a policy change under §8), or require verified enforcement first.
+
+- **Amendment review 2: FAIL** (1 of 5 this run). The front-door blocker and the three session 24 should-fixes are resolved. New blockers: the reachability check doesn't prove unreachability; the post-move check and "locks stay for clean-up" gave agents access to the archive. The lead fixed blocker 2 and both should-fixes in Cowork's working-tree brief and proposed a fail-closed check over configured roots (not yet re-reviewed); blocker 1's remainder is David's call (Q63). The close then failed two reviews: Q63 framed a §7 exception as plain risk acceptance and its option (b) overstated the sandbox; then the brief didn't record that round. Both fixed; the third close review (4 of 5 this run) is the one this commit carries. Rounds in M2's Review.
+- **Committed:** the lead's records and Cowork's for-david answers (Q62, Q56). The M2 step amendment and the handoff header line stay uncommitted until a review passes.
+- **Not done:** M2, everything under the 08:57 hold.
+
+**Pick up at:** David answers Q63 via Cowork; Cowork amends M2 to match (under (a), drop the medispring-infi move; under (b), the §8 decision and policy diff first) and sets `open`; "pick up the loop" → review the amendment, commit on a pass, run M2.
 
 ### Session 24 — 6 Oct 2026 · Claude Code, lead loop, M2 not started
 **Authorization:** "pick up the loop" (D72), scoped by Cowork's amended 11:45 block in the handoff: (a) review the briefs entry, commit on a pass; (b) run M2 if its status is `open`. Run from VS Code with `~/Work` as the working folder (Cowork's amended step 0, uncommitted; the committed step 0 still says Terminal). **Ended by stop condition (1):** no actionable `@code` brief remains; M2 is `blocked-on-david` (Q62) and everything else is under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; the review checked the data policy.

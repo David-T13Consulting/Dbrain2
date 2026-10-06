@@ -234,3 +234,8 @@ Detail: dbrain-runtime `6c7763e`, ui-design-agent `d4dfc44`, both pushed, no for
 **Ended by:** Cowork's directive (M2 runs from a Terminal session in `~/Work`, Q61), not one of D72's stop conditions.
 **What changed for David:** the plan for moving the repos off iCloud (M2) is reviewed and committed, including his approval of one push per repo at the end (Q60). The move didn't start: M2 begins by quitting VS Code, and the lead itself runs inside VS Code from the folder being moved. David chose (Q61): the lead runs it from Claude Code in Terminal, started in `~/Work`.
 Detail: briefs entry `fa1a0f9` (M2, L1 closed, Q60): Codex `gpt-6.1-sol` (high, read-only) round 1 FAIL, fixed by the lead, round 2 PASS. Nothing moved, no snapshot written. Findings in [[90 System/briefs/M2-move-and-repoint|M2]].
+
+## [2026-10-06] brief | M2 not started: archive location goes to David (Q62)
+**Ended by:** stop condition (1), no actionable `@code` brief left: M2 is `blocked-on-david` (Q62); everything else is under the 08:57 hold.
+**What changed for David:** nothing moved. Cowork's new wording for M2 (lead runs in VS Code with only `~/Work` open) failed review: M2 would place the medispring-infi archive inside `~/Work`, the folder the agents now work from, although the brief promises no agent access to it. David chooses where the archive goes (Q62); then M2 can run.
+Detail: Codex `gpt-6.1-sol` (high, read-only) FAIL on Cowork's amendment (M2 steps 0–1, handoff header), left uncommitted; second blocker: step 1's "check with David" bypasses D68. Freeze state and findings in [[90 System/briefs/M2-move-and-repoint|M2]].

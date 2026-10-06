@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 23, lead loop, M2 brief)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 24, lead loop, M2 not started)
 
 ---
 
@@ -16,7 +16,7 @@ classification: internal
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | M1 is **done** (session 22); the M2 brief is committed (`fa1a0f9`, session 23). **Next: M2, the move off iCloud**, from a new lead session in Terminal started in `~/Work` (Q61, David): David quits VS Code and the other agent apps, then says "pick up the loop". Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | M1 is **done** (session 22); the M2 brief is committed (`fa1a0f9`, session 23). **Next: M2, the move off iCloud**, from a lead session in VS Code with only `~/Work` open (Q61 as amended). **Blocked on Q62** (session 24): M2 moves medispring-infi into `~/Work/_archive/`, which is inside that session's workspace; David chooses where the archive goes, Cowork fixes the amendment's front-door finding, then "pick up the loop". Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, `~/Documents/dbrain-runtime/` authorised, batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -142,6 +142,17 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 24 — 6 Oct 2026 · Claude Code, lead loop, M2 not started
+**Authorization:** "pick up the loop" (D72), scoped by Cowork's amended 11:45 block in the handoff: (a) review the briefs entry, commit on a pass; (b) run M2 if its status is `open`. Run from VS Code with `~/Work` as the working folder (Cowork's amended step 0, uncommitted; the committed step 0 still says Terminal). **Ended by stop condition (1):** no actionable `@code` brief remains; M2 is `blocked-on-david` (Q62) and everything else is under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; the review checked the data policy.
+
+**What changed for David:** nothing moved. Before starting M2, the lead had Cowork's new wording for steps 0–1 (VS Code with only `~/Work` open) reviewed. Codex found that M2 would put the medispring-infi archive inside the very folder the agents now work from, although the brief promises no agent access to it. David picks where the archive goes (Q62); then M2 can run.
+
+- **(a) Briefs entry:** already committed in session 23 (`fa1a0f9`). Cowork's later amendment (M2 status comment and steps 0–1, the handoff header's session-location line) was reviewed: **FAIL**, left uncommitted. Blockers: medispring-infi under `~/Work` (Q62); step 1's "check with David" bypasses D68 (Cowork's wording fix). Should-fixes in M2's Review.
+- **(b) M2:** `open` on arrival, not started because its amended steps failed review. Freeze state checked read-only: Obsidian, the Claude desktop app, the ChatGPT app and the MVP service not running; a ChatGPT background helper and the VS Code Codex extension's idle app-server running; no process held files in either repo. No snapshot written. Status → `blocked-on-david`.
+- **Not done:** M2, everything under the 08:57 hold.
+
+**Pick up at:** David answers Q62 via Cowork; Cowork updates M2 (archive location, freeze confirmation via Cowork, should-fixes) and sets it `open`; David says "pick up the loop" in the VS Code `~/Work` window.
 
 ### Session 23 — 6 Oct 2026 · Claude Code, lead loop, M2 brief
 **Authorization:** "pick up the loop" (D72), scoped by Cowork's 11:45 amendment in the handoff: (a) review the briefs entry (M2, L1) and commit it on a pass; (b) run M2 only if its status is `open`. **Ended by Cowork's directive,** not one of D72's three stop conditions. M2 is actionable, but David's answer to Q61 puts it in a Terminal session started in `~/Work`, not this VS Code one; everything else is under the 08:57 hold. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; every review checked the data policy.

@@ -43,7 +43,7 @@ header p.lede{max-width:65ch;color:var(--muted)}
 .sw{width:22px;height:4px;border-radius:2px;display:inline-block}
 .timebar{display:flex;flex-direction:column;gap:8px}
 .track{position:relative;height:14px;border-radius:7px;background:var(--soft);border:1px solid var(--line);overflow:hidden}
-.track .gone{position:absolute;inset:0 auto 0 0;width:21%;background:var(--done)}
+.track .gone{position:absolute;inset:0 auto 0 0;width:25%;background:var(--done)}
 .ticks{display:flex;justify-content:space-between;font:400 .74rem/1 var(--mono);color:var(--muted)}
 .section{display:flex;flex-direction:column;gap:14px}
 .stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
@@ -75,22 +75,22 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
 
 <div class="wrap">
 <header>
-  <div class="eyebrow"><span class="blaze"><i></i><i></i></span>Dbrain2 · status at 2 Oct 2026, 19:00</div>
+  <div class="eyebrow"><span class="blaze"><i></i><i></i></span>Dbrain2 · status at 6 Oct 2026, 15:24</div>
   <h1>Second Brain Course Map</h1>
   <p class="lede">Where the build stands, the checkpoints already passed, and the climb that's left before the December demo. Two tracks run side by side: the <strong>platform</strong> (stages S1–S6) and the <strong>running showcase</strong> (golden dataset and rubric).</p>
 </header>
 
 <div class="stats">
-  <div class="stat"><b>S2</b><span>current stage, at the start line</span></div>
-  <div class="stat"><b>Wk 4/17</b><span>7 Sep → end of Dec</span></div>
+  <div class="stat"><b>S2</b><span>current stage, paused by the clean-up hold</span></div>
+  <div class="stat"><b>Wk 5/17</b><span>7 Sep → end of Dec</span></div>
   <div class="stat"><b>70/150</b><span>golden-dataset runs labelled</span></div>
-  <div class="stat alert"><b>6</b><span>things waiting on you</span></div>
+  <div class="stat alert"><b>8</b><span>things waiting on you</span></div>
 </div>
 
 <section class="section">
   <h2>Course profile</h2>
   <div class="panel profile">
-    <svg viewBox="0 0 900 260" role="img" aria-label="Six stages drawn as a rising course profile. S1 is done, S2 is starting, S3 to S6 are ahead.">
+    <svg viewBox="0 0 900 260" role="img" aria-label="Six stages drawn as a rising course profile. S1 decisions are settled with its exit evidence still open, S2 is in progress, S3 to S6 are ahead.">
       <g stroke="var(--contour)" stroke-width="1" fill="none" opacity=".55">
         <path d="M0 230 C150 225 300 215 450 190 S750 120 900 95"/>
         <path d="M0 245 C150 242 300 235 450 215 S750 150 900 128"/>
@@ -121,36 +121,36 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <div class="legend">
       <span><i class="sw" style="background:var(--done)"></i>Passed</span>
       <span><i class="sw" style="background:var(--blaze)"></i>Current checkpoint</span>
-      <span><i class="sw" style="background:var(--fg);opacity:.5"></i>Ahead. Order is fixed, dates are not set yet</span>
+      <span><i class="sw" style="background:var(--fg);opacity:.5"></i>Ahead. Order is fixed; dates are proposed, not approved</span>
     </div>
   </div>
   <div class="timebar">
-    <div class="track" aria-label="About 21 percent of the calendar to the December target has elapsed"><div class="gone"></div></div>
+    <div class="track" aria-label="About 25 percent of the calendar to the December target has elapsed"><div class="gone"></div></div>
     <div class="ticks"><span>7 Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>31 Dec</span></div>
-    <p class="small">Calendar used so far: about a fifth. Platform stages passed: one of six. The remaining five have no dates yet. That's the main schedule risk, and the lead has been asked to draft dates once P2.2 shows a real build pace.</p>
+    <p class="small">Calendar used so far: about a quarter. Platform stages fully passed: none yet, because S1's exit evidence (data-flow diagram, scoped-roots list) is still open. The lead has drafted a dated S2–S6 plan, but it is proposed, not approved, and has no slack. Its first deadline is the host order by Fri 16 Oct. Only the demo-ready date, Fri 18 Dec, is decided.</p>
   </div>
 </section>
 
 <section class="section">
   <h2>Platform track · S1–S6</h2>
   <div class="stages">
-    <div class="stage"><div class="top"><span class="code">S1 · Align</span><span class="chip done">Done 1 Oct</span></div>
-      <p>Devices, always-on hosting, 20+ h/week, service targets and source schema decided (D52–D59).</p>
-      <p class="exit"><em>Leftover:</em> data-flow diagram and scoped-roots list (T8), not blocking.</p></div>
-    <div class="stage now"><div class="top"><span class="code">S2 · Local answers</span><span class="chip now">Starting</span></div>
-      <p>P2.2 query service: cited answers or abstentions from a fixed corpus, local model only. Briefed and unblocked; not started (no runtime repo yet). P2.1 Codex case review unblocked.</p>
+    <div class="stage"><div class="top"><span class="code">S1 · Align</span><span class="chip wait">Exit open</span></div>
+      <p>Devices, always-on hosting, 20+ h/week, service targets and source schema decided 1 Oct (D52–D59). The last map called this done; the exit evidence isn't complete yet.</p>
+      <p class="exit"><em>Still open:</em> data-flow diagram and scoped-roots list (T8, Cowork), not blocking S2.</p></div>
+    <div class="stage now"><div class="top"><span class="code">S2 · Local answers</span><span class="chip now">In progress</span></div>
+      <p>P2.2 query service done 5 Oct (first runtime commit). The phone slice (P2.4) works for you but is parked, uncommitted, after five failed reviews. Phone answers cite the right note yet answer wrongly (P2.5). The model comparison (T9) stopped after 2 of 9 blocks, no result. Proposed exit: 23 Oct.</p>
       <p class="exit"><em>Exit:</em> reproducible local Q&amp;A with citations and abstentions; p50/p95 latency and peak memory measured.</p></div>
     <div class="stage"><div class="top"><span class="code">S3 · Wiki writes</span><span class="chip ahead">Ahead</span></div>
       <p>One source safely updates notes: exact patch, approval bound to it, one deterministic writer.</p>
       <p class="exit"><em>Exit:</em> rejection changes nothing; stale approval refused; rollback and restore shown.</p></div>
     <div class="stage"><div class="top"><span class="code">S4 · Text + voice</span><span class="chip wait">Needs host</span></div>
-      <p>Private access from iPhone, iPad and Air; durable capture queue; local speech in and out.</p>
+      <p>Private access from iPhone, iPad and Air; durable capture queue; local speech in and out. The phone-access slice was pulled forward into S2. The host decision (Q30) is still open.</p>
       <p class="exit"><em>Exit:</em> works away from home; captures survive host or network loss; voice first word &lt; 5 s.</p></div>
     <div class="stage"><div class="top"><span class="code">S5 · Multi-agent</span><span class="chip ahead">Ahead</span></div>
       <p>Coordinator, curator and evidence checker with scoped tools, measured against the single-agent baseline.</p>
       <p class="exit"><em>Exit:</em> checker benefit and cost measured; denied actions stay denied; resume without double writes.</p></div>
     <div class="stage"><div class="top"><span class="code">S6 · Operate + demo</span><span class="chip ahead">December</span></div>
-      <p>Monitoring, backup and restore drills, pinned versions, public-safe demo repo, two rehearsals.</p>
+      <p>Monitoring, backup and restore drills, pinned versions, public-safe demo repo, two rehearsals. Demo-ready date fixed: Fri 18 Dec (Q29).</p>
       <p class="exit"><em>Exit:</em> two repeatable demos, each with a controlled failure and recovery.</p></div>
   </div>
 </section>
@@ -165,8 +165,9 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
         <tr><td>Three skills: classify, weekly assessment, race readiness</td><td>Drafted and smoke-tested</td><td><span class="chip done">Done</span></td></tr>
         <tr><td>Batch 03 held-out (rubric v1.3)</td><td class="num">terrain 90% · intent 75%</td><td><span class="chip done">Done</span></td></tr>
         <tr><td>Batch 04 held-out (rubric v1.4), last test of v1</td><td class="num">terrain 100% · intent 65% · tempo 40% · vertical 90%</td><td><span class="chip done">2 Oct</span></td></tr>
-        <tr><td>Codex independent re-score of batch 04</td><td>Briefed in this lint</td><td><span class="chip ahead">Queued</span></td></tr>
-        <tr><td>Taxonomy v2: format × intensity × context (D67)</td><td>Approved in principle; rubric v2.0 wording next</td><td><span class="chip now">Next</span></td></tr>
+        <tr><td>Dinant half: race-readiness call scored (T2.6)</td><td class="num">chip 1:39:06 · in range 1:38:54–1:45:01</td><td><span class="chip done">5 Oct</span></td></tr>
+        <tr><td>Codex independent re-score of batch 04</td><td>Brief needs Cowork's fixes first (facts-only export, pre-check labels)</td><td><span class="chip ahead">Queued</span></td></tr>
+        <tr><td>Taxonomy v2: format × intensity × context (D67)</td><td>Approved in principle; rubric v2.0 wording next (now also carries the quality-work and recovery rules)</td><td><span class="chip now">Next</span></td></tr>
         <tr><td>Relabel batches 01–04 under v2 by rule; you resolve disagreements</td><td>About an hour of your time, rough estimate</td><td><span class="chip ahead">Ahead</span></td></tr>
         <tr><td>Batches 05–06: first held-out tests of v2</td><td>40 runs</td><td><span class="chip ahead">Ahead</span></td></tr>
         <tr><td>~30 weekly assessments, then race-time backtest</td><td>Completes the 150-row golden dataset</td><td><span class="chip ahead">Ahead</span></td></tr>
@@ -180,11 +181,11 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <h2>Next checkpoints</h2>
     <div class="panel">
       <ul class="plain">
-        <li><i class="dot b"></i><div><strong>4 Oct · Dinant half.</strong> Add your chip time to score the race-readiness call (T2.6).</div></li>
-        <li><i class="dot b"></i><div><strong>First local cited answer (P2.2).</strong> Starts on your next "pick up the loop".</div></li>
-        <li><i class="dot w"></i><div><strong>Rubric v2.0 wording.</strong> I write it; you approve it.</div></li>
+        <li><i class="dot b"></i><div><strong>Clean-up run finishes, then you lift the hold.</strong> Stopped today at the Q70 breach; push, M3 archive and close records still to do (Q65).</div></li>
+        <li><i class="dot b"></i><div><strong>Thu 8 Oct · weekly model review runs.</strong> Then paste its task ID and first output (D60, Q11).</div></li>
+        <li><i class="dot b"></i><div><strong>Fri 16 Oct · host order and model choice.</strong> Proposed deadline (Q30); T9 restarts from block 1 first.</div></li>
         <li><i class="dot w"></i><div><strong>~19 Oct · Six-week honesty check.</strong> Has anything shipped out of the system? (Rule 5)</div></li>
-        <li><i class="dot"></i><div><strong>Dated S2–S6 plan.</strong> After P2.2 shows the real build pace.</div></li>
+        <li><i class="dot"></i><div><strong>Fri 23 Oct · S2 exit, proposed.</strong> Only if you approve the dated plan.</div></li>
       </ul>
     </div>
   </section>
@@ -192,37 +193,38 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <h2>Waiting on you</h2>
     <div class="panel">
       <ul class="plain">
-        <li><i class="dot b"></i><div><strong>Host purchase (D53).</strong> Gates sustained-performance numbers and all of S4. 32 GB recommended.</div></li>
-        <li><i class="dot b"></i><div><strong>Threshold heart-rate re-test (OQ-6).</strong> The whole v2 intensity axis depends on it.</div></li>
-        <li><i class="dot w"></i><div><strong>Dinant chip time (T2.6),</strong> after Sunday.</div></li>
-        <li><i class="dot w"></i><div><strong>Classification axes (OQ-20)</strong> before the frontmatter retrofit of 114 notes.</div></li>
-        <li><i class="dot"></i><div><strong>Weekly model review:</strong> paste the task ID and first-run output (D60).</div></li>
-        <li><i class="dot"></i><div><strong>Agent-question trigger:</strong> parked in the Inbox, options A/B/C.</div></li>
+        <li><i class="dot b"></i><div><strong>Data-policy breach in an Inbox capture (Q70), today.</strong> A counterparty is named in an uncommitted note; it stopped the lead's run. Rewrite, delete or move it: your OK.</div></li>
+        <li><i class="dot b"></i><div><strong>Host purchase (Q30, D53),</strong> by 16 Oct. You're weighing 64 GB; check the configuration's memory bandwidth too.</div></li>
+        <li><i class="dot b"></i><div><strong>Review tiers (Q68).</strong> Two AGENTS.md rules conflict with the text you approved; AGENTS.md is unchanged until you choose.</div></li>
+        <li><i class="dot b"></i><div><strong>Lift the 6 Oct clean-up hold</strong> once the lead's clean-up run is finished (stopped at Q70).</div></li>
+        <li><i class="dot w"></i><div><strong>MVP-phone acceptance checks (P2.4).</strong></div></li>
+        <li><i class="dot w"></i><div><strong>Weekly model review:</strong> paste the task ID and first-run output after 8 Oct (D60).</div></li>
+        <li><i class="dot"></i><div><strong>Voice capture vs data policy §7 (Q67).</strong> Only affects P3.0 Part 1.</div></li>
+        <li><i class="dot"></i><div><strong>Course map: classification exemption for HTML sources (Q69).</strong> Whenever.</div></li>
       </ul>
     </div>
   </section>
 </div>
 
 <section class="section">
-  <h2>Lint result · 2 Oct</h2>
+  <h2>Lint result · 6 Oct</h2>
   <div class="two">
     <div class="panel">
       <h3>Fixed now</h3>
       <ul class="plain" style="margin-top:10px">
-        <li><i class="dot g"></i><div>P2.2 allowlist pointed at folders no dev case covers. It now matches the corpus the 10 cases were written against.</div></li>
-        <li><i class="dot g"></i><div>P2.2 still carried stale text: Step 0, "repo not authorised", the batch 04 warning. Updated.</div></li>
-        <li><i class="dot g"></i><div>The Codex re-score you approved had no brief, so the lead couldn't hand it over. Brief written: Codex sees the facts, not your labels or my scores.</div></li>
-        <li><i class="dot g"></i><div>Where P2.2 writes its results: decided (Q7), a draft vault note you confirm later.</div></li>
+        <li><i class="dot g"></i><div>Nothing in the briefs: the lead was editing the vault during this check, so every finding went to the lead rather than risk a clash.</div></li>
+        <li><i class="dot g"></i><div>This map: S1 no longer shown as done, the stale P2.2 text is gone, and the parked agent-question capture is no longer counted as waiting on you (last review's findings).</div></li>
+        <li><i class="dot g"></i><div>Clean checks: no missing or <code>client</code> classification, no stale Inbox items, no large files, no secret-like strings.</div></li>
       </ul>
     </div>
     <div class="panel">
       <h3>Flagged to the lead</h3>
       <ul class="plain" style="margin-top:10px">
-        <li><i class="dot w"></i><div>TASKS and PROGRESS still list batch 04 scoring as "next".</div></li>
-        <li><i class="dot w"></i><div>TASKS says P2.2 waits for T9; the brief says build now and keep T9 open.</div></li>
-        <li><i class="dot w"></i><div>P3.5 (quality-work definition) overlaps taxonomy v2. Merge them so it isn't defined twice.</div></li>
-        <li><i class="dot w"></i><div>Script fixes (P3.4, Codex part B) should wait for the v2 wording.</div></li>
-        <li><i class="dot w"></i><div>D63 brief still "in review"; honesty check not in TASKS; one unowned Inbox file.</div></li>
+        <li><i class="dot w"></i><div>Index drift is growing: 11 notes missing from <code>index.md</code> (8 last week), 4 orphans.</div></li>
+        <li><i class="dot w"></i><div>T9 brief still says "starts after P2.2 is committed"; TASKS says stopped at block 2 of 9, restart from block 1.</div></li>
+        <li><i class="dot w"></i><div>MVP-phone brief says <code>in-review</code>; TASKS and PROGRESS say parked. D63 has been <code>in-review</code> since 2 Oct.</div></li>
+        <li><i class="dot w"></i><div>The dated plan's W1 row is stale (P2.2 "parked") and voice still sits in S4, against Q50/Q51.</div></li>
+        <li><i class="dot w"></i><div>PROGRESS "Action for David" still opens with session-14 items and "32 GB recommended" while Q30 weighs 64 GB.</div></li>
       </ul>
     </div>
   </div>
@@ -234,13 +236,13 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <table>
       <thead><tr><th>Agent</th><th>Role</th><th>Next item</th><th>Starts when</th></tr></thead>
       <tbody>
-        <tr><td><strong>Cowork</strong></td><td>Your only contact. Specs, briefs, labelling sessions</td><td>Rubric v2.0 wording (T3.4)</td><td>Your next Cowork session</td></tr>
-        <tr><td><strong>Claude Code</strong></td><td>Lead: builds, commits, records decisions</td><td>Commit the lint entry, then P2.2</td><td>You say "pick up the loop"</td></tr>
-        <tr><td><strong>Codex</strong></td><td>Independent reviewer, called by the lead</td><td>P2.1 case review, batch 04 re-score</td><td>The lead calls it</td></tr>
+        <tr><td><strong>Cowork</strong></td><td>Your only contact. Specs, briefs, labelling sessions</td><td>Fix the batch 04 re-score brief, then rubric v2.0 wording (T3.4)</td><td>After you lift the hold</td></tr>
+        <tr><td><strong>Claude Code</strong></td><td>Lead: builds, commits, records decisions</td><td>Resume the clean-up run: two passed commits, push, M3, close records</td><td>After your Q70 answer; new work after the hold lifts</td></tr>
+        <tr><td><strong>Codex</strong></td><td>Independent reviewer, called by the lead</td><td>Reviews every lead commit; P2.1 case review, batch 04 re-score queued</td><td>The lead calls it</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<footer>Built by Cowork from the vault on 2 Oct 2026: <code>04_Roadmap.md</code> §0, TASKS, PROGRESS, OPEN_QUESTIONS, the briefs and <code>for-david.md</code>. Stage dates after S1 aren't set. This page shows order and state, not a schedule.</footer>
+<footer>Built by Cowork from the vault on 6 Oct 2026: <code>04_Roadmap.md</code> §0, TASKS, PROGRESS, OPEN_QUESTIONS, the briefs and <code>for-david.md</code>. Stage dates after S1 are proposed, not approved, except the 18 Dec demo date. This page shows order and state, not a schedule.</footer>
 </div>

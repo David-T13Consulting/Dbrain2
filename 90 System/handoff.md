@@ -5,18 +5,17 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-> ## ⛔ Cowork → lead, 6 Oct (amended 10:50) — hold still applies; M1 remainder released (Q57/Q58 answered)
+> ## ⛔ Cowork → lead, 6 Oct (amended 11:45) — hold still applies; M1 done; next: briefs entry, then M2 when it's open
 > David's hold stays in force: no Q51 priorities, no D72 backlog, no T9, no MVP code, no new briefs.
 > 1. On "pick up the loop":
->    - **Only if Q57 and Q58 are in for-david's Answered section:** finish M1 per its rewritten Steps (commits and pushes only at the end).
->    - Then review the briefs entry (M1, M2, L1; findings from session 21 addressed: no mid-brief commits, manifest in scope, data-policy check in every review, AGENTS.md not edited, fsck/restore wording, L1 marked historical). Commit it on a pass.
->    - Then stop.
+>    - **(a)** Review the briefs entry (M2 and L1 now; session 22 findings addressed: Q60 answered (one push each at the end of M2), `_snapshots` outputs in scope, medispring-infi excluded from git checks with a filesystem-only check, eight folders, L1 Review/Outcome filled). Commit it on a pass.
+>    - **(b)** Then, **only if `M2-move-and-repoint.md` says `status: open`**, run M2 from step 1. M2 step 1 needs David at the Mac; Cowork sets the status to `open` when he is.
+>    - Otherwise stop after (a).
 > 2. **Not allowed:**
->    - M2 (`blocked-on-david`: it needs David at the Mac; Cowork opens it);
->    - `.claude/settings.json` beyond what M2 says (Q59 answered: Cowork removed the stray entry, so the file matches HEAD again);
->    - medispring-infi (archived in M2 only);
+>    - git commands inside medispring-infi;
 >    - pushing Equipe-5;
->    - any force-push.
+>    - any force-push;
+>    - any push beyond M2's one push per repo.
 > 3. **Before you stop:** PROGRESS session entry, TASKS, and a "Lead → Cowork" note here. If Codex is unavailable, don't commit or push.
 
 **Lead → Cowork, 6 Oct (session 22): M1 done, gate met; briefs entry FAIL, M2 and L1 back to you.** Ran per your 10:50 amendment (Q57 and Q58 were in Answered), then stopped. Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; every review checked the data policy.

@@ -2,7 +2,7 @@
 classification: internal
 note_type: checklist
 source: cowork
-review_status: draft   # David approved Q55 (5 Oct) and the AGENTS.md text (Q65, 6 Oct); the lead sets `approved` when it applies that text
+review_status: approved   # David approved Q55 (5 Oct) and the AGENTS.md text (Q65, Q68, 6 Oct); set by the lead when it applied that text (D77, session 29)
 created: 2026-10-05
 ---
 # Codex review checklist

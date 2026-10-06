@@ -1,9 +1,9 @@
 ---
 classification: internal
-task: D-cowork-10     # provisional; the lead assigns the final D-number
+task: D77             # was provisional D-cowork-10; final number assigned by the lead, 6 Oct (session 29)
 owner: "@code"        # David approved 5 Oct (Q55, with amendment); lead applies, David approves the AGENTS.md diff
-status: open
-models: [claude-opus-5-5 (Cowork, draft)]
+status: open          # lead, 6 Oct (session 29): AGENTS.md text applied (D77); pre-commit check, calibration file and ~/.codex prompt wait for the hold to lift
+models: ["claude-opus-5-5 (Cowork, draft; lead)", "gpt-6.1-sol (Codex reviewer, high)"]
 created: 2026-10-05
 ---
 # Review tiers: cut review load without weakening the hard gates
@@ -79,8 +79,8 @@ Codex classifies every finding as `blocker`, `should-fix` or `nit` using the che
 - **Held (lead, 6 Oct):** Q65 releases only the AGENTS.md text, the checklist's `review_status` and their bookkeeping. The pre-commit check, the calibration file and the `~/.codex` prompt wait until David lifts the 6 Oct hold.
 
 ## Done when (checkable)
-- [ ] David approves, amends or rejects Q55.
-- [ ] AGENTS.md carries the approved text; final D-number logged.
+- [x] David approves, amends or rejects Q55.
+- [x] AGENTS.md carries the approved text; final D-number logged.
 - [ ] Pre-commit check blocks a test commit containing a fake token and a `classification: client` note, and passes a clean one.
 - [ ] `codex exec --profile review` receives the checklist and the brief's proposed tier with every review.
 - [ ] First weekly digest produced with the 1-in-5 sample; calibration file started.
@@ -117,4 +117,11 @@ Codex classifies every finding as `blocker`, `should-fix` or `nit` using the che
 **The handoff bullet ("Cowork lists its uncommitted changes…") → replace with:**
 > - Cowork lists its uncommitted changes in `90 System/handoff.md`; the lead commits Tier 0 entries together as one bookkeeping commit and Tier 1–2 entries each as their own commit, then clears the entry.
 
+### Approved conforming edits (Q68 (a), David 6 Oct 15:45)
+Verbatim from the lead's Q68 entry (session 28), which David approved as option (a); in AGENTS.md "you/your" reads "David/David's".
+> (1) "**Review before commit.** The lead runs Codex read-only on every diff the review tiers send to it (Tier 1–2 always; Tier 0 until the pre-commit check is installed) against these rules and records its findings in the brief." (rest of the bullet unchanged); (2) ingest: "…propose the pages to create or update, and wait for your approval of Tier 2 content (Tier 0–1 pages follow Review tiers); then write, update `index.md` and append to `log.md`." Query: "…propose it as a note (classification and sources included); file it after you confirm if it is Tier 2, otherwise under Review tiers."
+
 ## Outcome
+**6 Oct (session 28), lead `claude-opus-5-5`, reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.** The lead applied the approved text to AGENTS.md (provisional ID renumbered D77), with a PROGRESS decision row, a `log.md` mapping entry and the checklist set to `approved`. **Review FAIL; nothing committed.** Codex confirmed all five edits match the approved text word for word, but found (1) the existing "Review before commit" bullet still sends *each* diff to Codex, which contradicts Tier 0 once the pre-commit check exists; (2) the existing Wiki-operations lines on ingest and query still require David's confirmation for every note, which leaves Tier 1's "Codex pass, then commit" ambiguous; (3) the lead's log entry said "only" some categories reach David, omitting `unverified`, `escalate` and calibration samples. (1) and (2) need AGENTS.md wording David has not approved (hard limit), so they are **Q68** in for-david; (3) is the lead's own wording, to fix when the change lands. The lead restored AGENTS.md, PROGRESS, `log.md` and the checklist to their committed state, so no unapproved rule text sits in the working tree; D77 is not assigned yet. **Next run:** once Q68 is answered, apply the approved text plus the Q68 answer in one diff, assign the D-number, set the checklist to `approved`, review, commit.
+
+**6 Oct (session 29), lead `claude-opus-5-5`, reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.** After Q68 (a), the lead applied the Q65 text and the two Q68 edits to AGENTS.md in one diff, word for word (lines wrapped in AGENTS.md style; provisional ID renumbered **D77**), set the checklist to `review_status: approved`, added the D77 row to PROGRESS and the mapping to `log.md` (session 28's finding (3) fixed: the log names every route to David). Review: see below. Still open under this brief, held by the 6 Oct hold: the pre-commit check (§3), `90 System/reports/review-calibration.md`, and the `~/.codex` prompt. Review round 1 **PASS** (every AGENTS.md change matches the approved text after line wrapping; no other change). Should-fix applied: quoted `models:` entries, ticked the first two Done-when items; Q68's row is cleared at this run's close.

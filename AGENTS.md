@@ -12,7 +12,7 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
    and sensitive data about anyone but David. If you find any, stop and flag it.
    Full policy: `10 Projects/AI Second Brain/02_Architecture/data-policy.md`.
 3. Every note has `classification: public | internal | client` in its frontmatter. A note tagged `client` is a violation, so flag it.
-4. **Propose, don't populate.** Nothing enters 10–40 as structured knowledge until David confirms it.
+4. **Propose, don't populate, for Tier 2.** Domain claims, decisions David has not yet taken, rule changes and client-facing content enter 10–40 only after David confirms. Tier 0 and Tier 1 changes follow "Review tiers" below. Every factual claim cites a source or is tagged `unverified`.
 5. Large files (PDFs, media, recordings) never go in the vault. Leave a pointer note (path and one-line summary) instead.
 6. **When unsure, stop and ask.** This covers ambiguous requests, missing data and unclear classification. Don't guess.
 
@@ -26,8 +26,8 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
 ## Wiki operations
 - `index.md` (vault root) catalogs the notes in 10–40 and 90. `log.md` is append-only; each entry starts `## [YYYY-MM-DD] op | title`.
 - Appending to either for a change David approved this session counts as part of that change.
-- Ingest one source at a time: discuss takeaways with David, propose the pages to create or update, wait for approval, then write, update `index.md` and append to `log.md`.
-- Query: read `index.md` first, then the pages. If an answer is worth keeping, propose it as a note (classification and sources included) and file it only after David confirms.
+- Ingest one source at a time: discuss takeaways with David, propose the pages to create or update, and wait for David's approval of Tier 2 content (Tier 0–1 pages follow Review tiers); then write, update `index.md` and append to `log.md`.
+- Query: read `index.md` first, then the pages. If an answer is worth keeping, propose it as a note (classification and sources included); file it after David confirms if it is Tier 2, otherwise under Review tiers.
 - Lint weekly with `90 System/lint-checklist.md`. Report findings read-only; fix only what David approves.
 
 ## Multi-agent work
@@ -36,14 +36,17 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   run only `git --no-optional-locks status`, because a plain `git status` leaves a stale
   `index.lock` that its sandbox cannot remove). Claude Code: lead, build, integration, git,
   session-close bookkeeping. Codex: independent reviewer and scoped side tasks given to it by
-  the lead; never commits.
+  the lead; never commits. The lead may run read-only subagents in parallel; only the lead
+  writes files in a run.
 - **One queue.** Every open task in TASKS.md has an owner tag (@cowork @code @codex @david).
   Work handed between agents needs a brief in `90 System/briefs/<task-id>.md` (template:
   `_template.md`). Touch only the files the brief lists.
 - **Commit straight to `master`; keep history linear.** Only the lead commits. Branch only
   for speculative work and delete the branch when it lands (D50).
-- **Review before commit.** The lead runs Codex read-only on each diff against these rules
-  and records its findings in the brief. Codex gets the rules and the diff, not the lead's reasoning.
+- **Review before commit.** The lead runs Codex read-only on every diff the review tiers send
+  to it (Tier 1–2 always; Tier 0 until the pre-commit check is installed) against these rules
+  and records its findings in the brief. Codex gets the rules and the diff, not the lead's
+  reasoning.
   Accepted risks recorded in a brief are passed to the reviewer and don't block (Q53).
 - **Trigger phrase (Q52).** "Pick up the loop" from David starts an autonomous lead run per
   [[90 System/briefs/D-cowork-8-autonomous-runs|D72]]; read the Cowork → lead section of
@@ -56,12 +59,24 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   belongs to David never stops the loop: queue it (D68), set the brief `blocked-on-david`,
   move on. Commit only at the end of a brief, never mid-way.
 - **Review failures (D72, replaces D70's single re-review).** A failed Codex review is fixed
-  and re-reviewed, whether its blockers are bookkeeping or substantive. At most **5 reviews
-  of the same brief per run, the first one included**. After the 5th failure, **park** it:
-  status stays `in-review`, every round's findings go in the brief, nothing is committed,
-  and the run moves to the next brief. A parked brief is not picked up again in the same run.
-- **No commit without a Codex pass, ever (Q40).** While Codex is unavailable, work continues
-  uncommitted, or on a branch in `dbrain-runtime`, and goes to one batched review.
+  and re-reviewed, whether its blockers are bookkeeping or substantive. Only `blocker` findings
+  fail a review; `should-fix` and `nit` findings are logged in the brief and do not trigger
+  another round. At most **5 reviews of the same brief per run, the first one included**. After
+  the 5th failure, **park** it: status stays `in-review`, every round's findings go in the
+  brief, nothing is committed, and the run moves to the next brief. A parked brief is not
+  picked up again in the same run.
+- **Review tiers (D77, Q55).** Tier 0 (handoff bookkeeping, frontmatter/link/format fixes,
+  Inbox captures, lint file moves): deterministic checks only. Tier 1 (briefs, drafts, specs,
+  skills, eval scripts, runtime code outside the security boundary, notes in 10–40 with no Tier
+  2 claim, and recording David's answers, where Codex checks they were recorded faithfully):
+  Codex pass against `90 System/codex-review-checklist.md`, then commit. Tier 1 notes in 10–40
+  carry `review_status: codex-reviewed`. Tier 2 (domain claims, decisions David has not yet
+  taken, rule changes, client-facing, security-boundary code, `unverified`, Codex `escalate`):
+  Codex pass and David's batched approval. When in doubt, the higher tier; Codex may raise a
+  tier, never lower it. The deterministic pre-commit check runs on every commit; **until it is
+  installed, Tier 0 also gets a Codex pass.** While Codex is unavailable, Tier 1–2 work waits
+  uncommitted for one batched review. Calibration: David samples 1 in 5 Tier 1 commits until
+  agreement is at least 90% over 20 samples, then 1 in 10.
 - **Scope of autonomous runs.** The backlog in [[90 System/briefs/D-cowork-8-autonomous-runs|D-cowork-8]]
   orders the work; it does not authorise file edits. Each item runs under its own brief and
   touches only the files that brief lists.
@@ -103,8 +118,9 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   provisional IDs (`D-cowork-1`); the lead renumbers them and logs the mapping in `log.md`.
 - **Tracking files.** PROGRESS.md, TASKS.md and OPEN_QUESTIONS.md are updated by the lead.
   Other agents put their updates in the brief or in `handoff.md`.
-- Cowork lists its uncommitted changes in `90 System/handoff.md`; the lead commits them
-  first, as their own commit, then clears the entry.
+- Cowork lists its uncommitted changes in `90 System/handoff.md`; the lead commits Tier 0
+  entries together as one bookkeeping commit and Tier 1–2 entries each as their own commit,
+  then clears the entry.
 - Never commit, revert or overwrite another agent's uncommitted files unless they are in the
   handoff. If unsure, stop and add it to `for-david.md`.
 

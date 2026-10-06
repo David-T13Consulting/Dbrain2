@@ -68,7 +68,7 @@ Six additional cases were reserved in a separate file and **never executed**. Th
 
 ## Preserved artifacts and reproduction
 
-Durable external directory: `/Users/davidduchesne/Documents/Dbrain2-artifacts/local-models/2026-10-01/` — benchmark inputs, scripts, raw responses, measurements, manual review, public model-card snapshots and metadata. Root `SHA256SUMS.json` inventories the evidence. No weights or runtime binaries were copied into this archive or the vault.
+Durable external directory: `/Users/davidduchesne/Documents/Source_Material/AI_Second_Brain/local-models/2026-10-01/` (moved from `~/Documents/Dbrain2-artifacts/` on 6 Oct 2026) — benchmark inputs, scripts, raw responses, measurements, manual review, public model-card snapshots and metadata. Root `SHA256SUMS.json` inventories the evidence. No weights or runtime binaries were copied into this archive or the vault.
 
 Within `benchmark/`: original baseline files, `prompt-v2/`, `qwen35-v2/` and `retrieval-v1/`. `continuation_manual_review.json` explains the corrected retrieval denominator and observed failures. The saved runners retain the exact temporary paths used for execution: copy to a fresh experiment directory, adjust output/root paths explicitly and verify the frozen cases/prompt before a rerun. Do not append a new run to old `results.jsonl`.
 

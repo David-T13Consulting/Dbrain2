@@ -42,7 +42,7 @@ Primary publisher model cards retrieved 1 October 2026. Revision links preserve 
 
 ## Preserved evidence outside Obsidian
 
-`/Users/davidduchesne/Documents/Dbrain2-artifacts/local-models/2026-10-01/` — small research/evaluation archive with `SHA256SUMS.json`.
+`/Users/davidduchesne/Documents/Source_Material/AI_Second_Brain/local-models/2026-10-01/` (moved from `~/Documents/Dbrain2-artifacts/` on 6 Oct 2026) — small research/evaluation archive with `SHA256SUMS.json`.
 
 - `model-cards/manifest.json`: full repository revisions, metadata timestamps, source URLs and retrieval success.
 - `model-cards/`: pinned READMEs and publisher API metadata for the 17 entries above. Supplemental live web pages were consulted but are not all copied here.

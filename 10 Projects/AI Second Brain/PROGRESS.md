@@ -3,7 +3,7 @@ classification: internal
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 20, lead loop, stopped for clean-up)
+**Last updated:** 6 Oct 2026 · **Updated by:** Claude Code (session 21, lead loop, M1 only)
 
 ---
 
@@ -16,7 +16,7 @@ classification: internal
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | P2.2: review rounds P–Q: **PASS, committed** (round O's two label-check findings accepted as risks, Q53; run B p95 42.1 s against the D56 target of 8 s). Next: P2.4 MVP-phone date fix, review and merge, then the order in David's Q51 (voice step A, P2.5, T9). Host decision (D53) gates sustained-performance numbers |
+| **Next action** | M1 (back up and push every repo) ran to its gate on 6 Oct except ui-design-agent (Q58) and the runtime model manifest (Q57). **Next: M2, the move off iCloud, with David at the Mac** (Cowork opens it). Hold of 6 Oct 08:57 still applies: no Q51 priorities, no T9, no MVP code until David lifts it. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, `~/Documents/dbrain-runtime/` authorised, batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -143,6 +143,23 @@ Append-only. Each entry: what, why, and what would change it.
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
 
+### Session 21 — 6 Oct 2026 · Claude Code, lead loop, M1 only
+**Authorization:** "pick up the loop" (D72), scoped by Cowork's 10:05 release in the handoff: brief M1 to its gate, plus the briefs entry (M1, M2, L1) on a Codex pass; nothing else. **Ended by that directive** (run M1 to its gate, then stop), not by one of D72's three stop conditions. **The gate is not fully met:** ui-design-agent keeps 31 uncommitted files (Q58) and dbrain-runtime an undocumented `.DS_Store`; M1 is `blocked-on-david`.
+
+**What changed for David:** GitHub now holds a private copy of the vault's 50 unpushed commits (plus this run's), the runtime code (new private repo `dbrain-runtime`) and the claude-blueprint leftovers. So the move off iCloud (M2) can't lose committed work. **Not backed up:** ui-design-agent's 31 leftover files, because a test fixture may contain a real patient's name (Q58), and the parked uncommitted work (it moves with `mv` in M2).
+
+**Did:**
+- **M1 step 1:** re-check matched Cowork's snapshot except two covered cases (brief Outcome).
+- **B1 bookkeeping** (session 20, the 6 Oct findings fixed): Codex PASS, committed `1c5038c`.
+- **Secret scans** clean on every range and file set pushed.
+- **Pushed:** `dbrain-runtime` to the new private repo (`main`, `c8b3b7b`); claude-blueprint `3ed6463` on `feature/new-branch` (Codex PASS); the vault with this close commit.
+- **Briefs entry (M1, M2, L1): Codex FAIL**, 4 blockers (mid-brief commits; manifest outside scope; review limited to scope and secrets; M2 asks David directly). Back to Cowork, uncommitted. The lead ran M1 within those findings: full data-policy review on every item, no manifest.
+- **ui-design-agent: Codex FAIL** on the fixture; not committed, not pushed (Q58).
+- **Queued for David:** Q57 (model manifest scope), Q58 (the fixture).
+- **Not done (outside the release):** Cowork's new `.claude/settings.json` handoff entry (permission settings; not in the 10:05 release); M2; everything under the 08:57 hold.
+
+**Pick up at:** David answers Q58 (and Q57) via Cowork → the lead finishes M1 for ui-design-agent. Cowork fixes the M1/M2/L1 blockers → one fresh review → commit. Then M2 with David present.
+
 ### Session 20 — 5–6 Oct 2026 (night to morning) · Claude Code, lead loop; stopped for clean-up
 **Authorization:** "pick up the loop" (D72). **Ended by David's directive of 6 Oct 08:57** (handoff ⛔ block, brief L1): finish the current step, do L1 phases 0–1 only, then stop. Not one of D72's three stop conditions; David's directive overrides the run.
 
@@ -164,7 +181,7 @@ Newest first. One entry per working session — what happened, what changed, whe
 ### Session 19 — 5 Oct 2026 (late evening) · Claude Code, lead loop
 **Authorization:** "pick up the loop" (autonomous run per D72; Cowork's handoff directives Q46 read first).
 
-**What changed for David:** the phone's "What's on the menu tomorrow?" now answers correctly in testing (Tue 6 Oct, cites the lunch note), and every dated answer starts with its date. **This isn't on his phone yet:** nothing could be committed, because the query service under it (P2.2) was parked after five failed reviews this run. The label check behind it is now an allowlist that skips odd notes instead of stopping every question (Q46).
+**What changed for David:** the phone's "What's on the menu tomorrow?" now answers correctly in testing (Tue 6 Oct, cites the lunch note), and every dated answer starts with its date. **This isn't on his phone yet:** nothing could be committed, because the query service under it (P2.2) was parked after five reviews this run, four of them failed (round L passed before Q46 changed the check). The label check behind it is now an allowlist that skips odd notes instead of stopping every question (Q46).
 
 **Did:** P2.2 rounds K–O (Codex `gpt-6.1-sol`, high, read-only): after K failed, consulted Codex (D-cowork-9) and redesigned the label check as an allowlist (round L passed); applied Q46 (skip and trace; a recognisable `client` label still stops); rounds M, N and O failed on progressively narrower forms → **parked**, two findings open (brief). MVP-phone: date awareness in `serve.py`, tests on a fixed date, smoke run d on the real model (p50 9.9 s, p95 13.0 s, 11/14 expected). Handoff note to Cowork; Q52 queued.
 

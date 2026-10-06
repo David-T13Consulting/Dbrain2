@@ -2,7 +2,7 @@
 classification: internal
 task: M2 (provisional; lead assigns the final ID)
 owner: "@code"
-status: open   # David at the Mac, 6 Oct (Cowork)
+status: open   # Q61 (a) answered 6 Oct: run from ~/Work in Terminal
 models: []
 created: 2026-10-06
 ---
@@ -50,6 +50,7 @@ All git repos live in `~/Work`, outside iCloud, unchanged and with nothing lost,
 - `Dbrain2-artifacts` references become `~/Documents/Source_Material/AI Second Brain/`. Cowork moves that folder itself after this brief.
 
 ## Steps
+0. **Run from `~/Work`, not from inside a repo** (Terminal, `cd ~/Work && claude`; pointer in `~/Work/CLAUDE.md`). A session started inside Dbrain2 or dbrain-runtime loses its working directory when the folder moves. Use absolute paths.
 1. **Freeze (David):** quit Obsidian and VS Code, stop `Ask Brain.command` and the MVP service, close every other Claude Code, Codex and Cowork session.
 2. **Pre-flight:**
    - `find ~/Documents/Dbrain2 ~/Documents/dbrain-runtime -flags +dataless | wc -l` must be 0. If it isn't, force the download (`find … -type f -exec cat {} + > /dev/null`) and check again.

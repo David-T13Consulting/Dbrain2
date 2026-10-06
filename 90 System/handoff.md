@@ -11,6 +11,7 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 >    - **(a)** Review the briefs entry (M2 and L1 now; session 22 findings addressed: Q60 answered (one push each at the end of M2), `_snapshots` outputs in scope, medispring-infi excluded from git checks with a filesystem-only check, eight folders, L1 Review/Outcome filled). Commit it on a pass.
 >    - **(b)** Then, **only if `M2-move-and-repoint.md` says `status: open`**, run M2 from step 1. M2 step 1 needs David at the Mac; Cowork sets the status to `open` when he is.
 >    - Otherwise stop after (a).
+> **Session location (David, 6 Oct):** for M2 the lead runs in Terminal from `~/Work` (pointer: `~/Work/CLAUDE.md`), not inside either repo, because M2 moves them. Use absolute paths throughout. The vault's `.claude/settings.json` allowlist doesn't load from there, so expect permission prompts; David is at the Mac to answer them.
 > 2. **Not allowed:**
 >    - git commands inside medispring-infi;
 >    - pushing Equipe-5;

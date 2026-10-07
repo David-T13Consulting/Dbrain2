@@ -2,7 +2,7 @@
 classification: internal
 task: P2.4               # MVP-phone; S4 slice pulled into S2 (lead, 5 Oct)
 owner: "@code"
-status: blocked-on-david
+status: in-review
 models: ["claude-opus-5-5 (lead, build; red-team subagent, session 31)", "gpt-6.1-sol (review rounds 1-16, consultations)"]
 created: 2026-10-05
 updated: 2026-10-07
@@ -143,6 +143,9 @@ Codex `gpt-6.1-sol`, effort `high`, read-only (David switched the review profile
 - *History:* until session 20 the code sat uncommitted on an unborn `mvp-phone` HEAD, waiting for P2.2. P2.2 passed (round Q) and became `dbrain-runtime`'s first commit on `main`, `c8b3b7b`; with no separate branch history to keep, the MVP code is committed straight onto `main` on a pass (D50: commit straight to the default branch; branches only for speculative work).
 ## David's decision on the parked date work (Q72, 7 Oct, via Cowork)
 David tried the working-tree build on his phone ("not too bad") and chose **(a): ship the supported forms only**; every other date-like text gets the plain "couldn't read the date" reply. **Next run:** the lead runs **one** review of the round-14 fix under the accepted-risk list below and commits on a pass; the Q72 answer is David's Tier 2 approval (security boundary). If a blocker remains: one fix and one re-review, then stop and queue a question, no further rounds (run rule set by Cowork in the run B block of [[90 System/handoff]]; David's answer itself covers the review and the commit on a pass). **Blockers:** a wrong date shown as right with no `unclear` and no "(Asked about …)" label; any weakening of contract A (sanitised errors), the `client` stop (423, no model call), the cloud refusal, scope or the write guard. **Should-fix, not blocking:** a phrasing outside the supported list that is flagged `unclear`; the wording of the `unclear` message; rare locale forms. **Out of this brief:** widening what dates the phone understands moves to [[90 System/briefs/P2.6-date-resolution|P2.6]]. **Not a date bug (David's one miss, 7 Oct):** the answer said the section David named does not exist although the cited row showed a meeting that Saturday; that is retrieval and answer wording, logged in [[90 System/briefs/P2.5-answer-accuracy|P2.5]].
+
+## David's decision after run B (Q73, 7 Oct, via Cowork): option (b)
+Accept the two named open gaps (French seasons after an elided article, "pour l'hiver" and "d'été"; "wintertime") as risks moved to [[90 System/briefs/P2.6-date-resolution|P2.6]]. **Run C:** one review of the working tree, **no further fix.** **Blockers:** any security finding (contract A, the `client` stop, 423 with no model call, the cloud refusal, scope, the write guard, a secret) and a **supported** form resolved to the wrong date. **Named, accepted, not blocking:** the two gaps above. **New unlabelled-date wording** beyond them: do not fix, do not commit; list it and stop (Cowork asks David). On a pass: commit to `main` (D50), push per D79, set this brief `done`, queue David's phone re-check.
 
 ## Outcome
 **Session 32 (7 Oct), lead (`claude-opus-5-5`), run B: one review and one re-review, both FAIL (one blocker each); nothing committed in `dbrain-runtime`; Q73.**

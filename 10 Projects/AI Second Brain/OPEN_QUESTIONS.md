@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Open Questions
 
-**Updated:** 7 Oct 2026 (session 34): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q30, Q69, Q75, Q76; Q74 answered and cleared, D84 and D85) · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 7 Oct 2026 (session 35): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q30, Q69, Q77; Q75 and Q76 answered and cleared, D86–D88) · Open questions block work. Resolve them or explicitly park them.
 
 ---
 

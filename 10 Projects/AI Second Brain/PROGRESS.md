@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 7 Oct 2026 · **Updated by:** Claude Code (session 34, lead loop, run D: Q74 recorded (D84, D85); MVP-phone review FAIL on new wordings, Q76; settings gap Q75; uncommitted, Tier 2)
+**Last updated:** 7 Oct 2026 · **Updated by:** Claude Code (session 35, lead loop, run E: Q75/Q76 recorded (D86–D88); MVP-phone committed and pushed; branch protection refused (Q77); P2.6 files in scope)
 
 ---
 
@@ -12,12 +12,12 @@ review_status: codex-reviewed
 
 | | |
 |---|---|
-| **Phase** | S1 requirements settled; S1 exit evidence incomplete (P1.3 data-flow diagram, roots/tools list); S2 under way: P2.2 query service committed (`4b5e91f`, runtime `c8b3b7b`); MVP-phone parked; repos moved off iCloud to `~/Work` (M2, done 6 Oct); clean-up done, hold lifted (D81); run A (MVP-phone dates) under way. Running validation in parallel |
+| **Phase** | S1 requirements settled; S1 exit evidence incomplete (P1.3 data-flow diagram, roots/tools list); S2 under way: P2.2 query service committed (`4b5e91f`, runtime `c8b3b7b`); MVP-phone committed (P2.4, runtime `53e5740`); repos moved off iCloud to `~/Work` (M2, done 6 Oct); clean-up done, hold lifted (D81); P2.6 and P2.7 next. Running validation in parallel |
 | **Schedule** | Original 13-week ordering superseded by S1–S6. Dated S2–S6 plan exists, proposed (`f9c014e`); demo-ready Fri 18 Dec 2026 (Q29) |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | **The 08:57 hold is lifted (D81, 7 Oct).** Run A (session 31) built fail-closed date reading for the phone; it was **parked** after five reviews, uncommitted. **David answered Q72 (a) (D82):** ship the supported forms only. **Run B (session 32):** the review and the one re-review each failed on one gap (seasons; then French seasons after an apostrophe), fixed once; nothing committed in the runtime; Q73 answered (b) (D83). **Run C (session 33):** the one review found six more season and period wordings with no date label; nothing committed; Q74 answered (a) (D84). **Run D (session 34):** the one review found eight wordings outside that class (French day numbers, named days); nothing committed; **Q76** for David. Force-push gap in the new settings: **Q75**. Widening date reading is P2.6 (proposed). **Then:** answer quality (P2.5, T9), in the Q51 order as Cowork names each item. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | **The 08:57 hold is lifted (D81, 7 Oct).** Run A (session 31) built fail-closed date reading for the phone; it was **parked** after five reviews, uncommitted. **David answered Q72 (a) (D82):** ship the supported forms only. **Run B (session 32):** the review and the one re-review each failed on one gap (seasons; then French seasons after an apostrophe), fixed once; nothing committed in the runtime; Q73 answered (b) (D83). **Run C (session 33):** the one review found six more season and period wordings with no date label; nothing committed; Q74 answered (a) (D84). **Run D (session 34):** the one review found eight wordings outside that class (French day numbers, named days); Q75 and Q76 answered (a) (D86–D88). **Run E (session 35): the phone code is committed and pushed** (review round 19 PASS); David's phone re-check is queued. GitHub refused force-push protection on the private repos: **Q77**. P2.6's files in scope are listed; its evaluation waits for David's phrase-set validation. P2.7 waits for his data-policy approval. Widening date reading is P2.6 (proposed). **Then:** answer quality (P2.5, T9), in the Q51 order as Cowork names each item. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, the `dbrain-runtime` repository authorised (now `~/Work/dbrain-runtime/`), batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -157,6 +157,20 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 35 — 7 Oct 2026 · Claude Code, lead loop, run E (records; branch protection; MVP-phone; P2.6 files in scope)
+**Authorization:** "pick up the loop" from David; the handoff's Cowork → lead block of 7 Oct ~18:30 releases run E (records batch incl. settings, branch protection with `gh`, one MVP-phone review that blocks only on security or a wrong supported date, P2.6 files in scope on paper, close, commit and push). **Ended by** the block's end (all steps run). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+
+**What changed for David:** his phone's date reading is committed and pushed: plain dates are read and labelled "(Asked about …)", other date pointers ask again, and wordings it does not read (seasons, named days, some French number words) are answered with no label, as he accepted (D87). He gets it after a restart of `Ask Brain.command`; the re-check questions are in TASKS. GitHub would not block force pushes on his private repos without a paid plan, so that choice comes back to him (Q77).
+
+- **Records:** `2891b51`, one batch: run D's held records and close, Cowork's Q75/Q76 answers and P2.7 brief, `.claude/settings.json` (kept as is, Q75 (a)), D86–D88, P2.7 in TASKS, Q75/Q76 cleared. Tier 2, approved by Q75 (a)/Q76 (a). Review round 1 FAIL (P2.7 gave agents access to the failure store; P2.7 frontmatter broke YAML; protection claimed before it was set), fixed; round 2 PASS.
+- **Branch protection:** `gh api … /protection` refused on both repos (HTTP 403: "Upgrade to GitHub Pro or make this repository public"); not retried, nothing changed; **Q77**.
+- **MVP-phone:** 202 tests, three green runs; secret scan clean. Review round 19 **PASS** under Q76 (no security finding; no supported date wrong; 2,004 supported-date cases checked by the reviewer); 19 unread wordings listed in P2.6; one should-fix (the `mvp/README.md` line saying any other date-like text asks again overstates coverage), left for P2.6 (no fix this run). Committed `53e5740` on `main`, pushed; 0 ahead / 0 behind. Brief `done`.
+- **P2.6:** files in scope listed (evaluation phase, integration phase, bookkeeping, out-of-scope); Codex reviewed the list only (see the brief's Review).
+- **Untouched:** `02_Architecture/client-tier-workspace-requirements.md`, `experiments/t9_compare.py`, `.claude/settings.local.json`.
+- **Push:** runtime pushed with `53e5740` (0 ahead / 0 behind); the vault is pushed (non-force) right after this close commit and checked for 0 ahead / 0 behind.
+
+**Pick up at:** David's phone re-check, phrase-set validation, Q77 and the P2.7 data-policy text (via Cowork). Then P2.6's evaluation as Cowork names it.
 
 ### Session 34 — 7 Oct 2026 · Claude Code, lead loop, run D (Q74 records; MVP-phone review)
 **Authorization:** "pick up the loop" from David; the handoff's Cowork → lead block of 7 Oct ~17:55 releases run D: commit Cowork's Q74 records and settings change, one review of the MVP-phone working tree with no fix and commit on a pass, P2.6's files-in-scope list on paper, close, commit and push without asking. **Ended by** that block's own rule: the review found new unlabelled-date wordings outside the season/period class, so list them and stop. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.

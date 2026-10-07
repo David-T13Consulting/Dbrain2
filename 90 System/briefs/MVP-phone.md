@@ -2,8 +2,8 @@
 classification: internal
 task: P2.4               # MVP-phone; S4 slice pulled into S2 (lead, 5 Oct)
 owner: "@code"
-status: in-review
-models: ["claude-opus-5-5 (lead, build; red-team subagent, session 31)", "gpt-6.1-sol (review rounds 1-16, consultations)"]
+status: blocked-on-david
+models: ["claude-opus-5-5 (lead, build; red-team subagent, session 31)", "gpt-6.1-sol (review rounds 1-17, consultations)"]
 created: 2026-10-05
 updated: 2026-10-07
 source: for-david Q32–Q36; David's acceptance run via Cowork (handoff, 5 Oct)
@@ -139,6 +139,7 @@ Codex `gpt-6.1-sol`, effort `high`, read-only (David switched the review profile
 
   | 15 | *Run B (session 32), the one review allowed (Q72).* **Deviation:** run B said to review the round-14 fix as it stood; before the review the lead also closed the open "on the first if possible?" by class, so the review covered that change too: with no date read, "the/le/la + first/second/third/premier" always asks again (except "second brain"). Finding: seasons ("this winter", "in summer", "cet été", "au printemps") passed with no date read and no label; Codex showed an October menu answer for a winter question | blocker | The one fix allowed: season words (EN, FR, "season", "saison") join the words that ask again when no date was read; "a été" (the verb) excluded. Tests; three green runs; secret scan clean |
   | 16 | *Run B re-review, the last allowed.* Round 15's reproducers fixed; French seasons after an elided article ("pour l'hiver", "pour l'été", "à l'automne", "Menu d'été ?") and "wintertime" still pass: the tokenizer keeps "l'hiver" as one word and the season check compares whole words | blocker | **Not fixed (run rule: stop after one fix and one re-review).** Uncommitted; **Q73** for David |
+  | 17 | *Run C (session 33), the one review allowed (Q73 (b)), no fix.* No security finding: contract A's sanitised diagnostics, the 423 `client` stop with zero model calls and the non-local endpoint refusal were checked in memory; no secret patterns. No supported form resolved wrong. **NEW-WORDING (six):** "What is on the school lunch menu in summertime?", "Climbing in springtime?", "Lunch menu at Eastertime?", "Menu à la mi-saison ?", "Menu au solstice ?", "Lunch menu at midsummer?": each read no date and reached retrieval and the model (HTTP 200, `incomplete`) with no "(Asked about …)" label and no ask-again. Cause named by the reviewer: season and period words are matched as whole tokens from a fixed list (`dbrain/serve.py` around line 531), so "-time" compounds other than "wintertime", hyphenated "mi-saison" and words not on the list pass | blocker (new wording, Q73 rule) | **Not fixed, not committed (Q73 (b): list and stop).** **Q74** for David |
   Verified by the reviewer across rounds 10–16: round 9's three blockers closed; contract A, the 423 `client` stop, the cloud refusal and the scope and write guards held; no credential-shaped strings; nothing refers to `make-shortcut.sh`.
 - *History:* until session 20 the code sat uncommitted on an unborn `mvp-phone` HEAD, waiting for P2.2. P2.2 passed (round Q) and became `dbrain-runtime`'s first commit on `main`, `c8b3b7b`; with no separate branch history to keep, the MVP code is committed straight onto `main` on a pass (D50: commit straight to the default branch; branches only for speculative work).
 ## David's decision on the parked date work (Q72, 7 Oct, via Cowork)
@@ -148,6 +149,12 @@ David tried the working-tree build on his phone ("not too bad") and chose **(a):
 Accept the two named open gaps (French seasons after an elided article, "pour l'hiver" and "d'été"; "wintertime") as risks moved to [[90 System/briefs/P2.6-date-resolution|P2.6]]. **Run C:** one review of the working tree, **no further fix.** **Blockers:** any security finding (contract A, the `client` stop, 423 with no model call, the cloud refusal, scope, the write guard, a secret) and a **supported** form resolved to the wrong date. **Named, accepted, not blocking:** the two gaps above. **New unlabelled-date wording** beyond them: do not fix, do not commit; list it and stop (Cowork asks David). On a pass: commit to `main` (D50), push per D79, set this brief `done`, queue David's phone re-check.
 
 ## Outcome
+**Session 33 (7 Oct), lead (`claude-opus-5-5`), run C: one review, FAIL on new wordings; nothing committed in `dbrain-runtime`; Q74.**
+- **What David gets:** nothing new. The working tree is the same as after run B; his phone runs it after a restart of `Ask Brain.command`. Besides the two gaps he accepted, six more season and period wordings get an answer with no date label (row 17).
+- **Evidence:** 202 tests, three full runs green in a row before the review; secret scan clean. Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only: Tier 2 confirmed; no security finding; verdict fail on six NEW-WORDING reproducers.
+- **Not done, by the run rule:** no fix, no commit, no push in `dbrain-runtime`; P2.6's files-in-scope list (run C step 3) was not started, because the stop came first.
+- **Open:** Q74; status `blocked-on-david`.
+
 **Session 32 (7 Oct), lead (`claude-opus-5-5`), run B: one review and one re-review, both FAIL (one blocker each); nothing committed in `dbrain-runtime`; Q73.**
 - **What David gets:** unchanged on his phone until he restarts `Ask Brain.command`; after a restart, "on the first if possible?" and season questions ("menu this winter?", "cet été ?") ask again instead of answering for an unlabelled day. Still open: a French season after "l'" or "d'" ("pour l'hiver") and "wintertime" are answered with no date label.
 - **Files (working tree):** `dbrain/serve.py` (`_leftover`: the low-ordinal rule; `_SEASONS`, `_AVOIR`), `tests/test_serve.py` (cases in `test_with_no_date_read_any_date_pointer_asks_again`). 202 tests, green in all nine full runs this session (no hang seen; the hang from session 31 is not diagnosed). Secret scan clean.

@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 7 Oct 2026 · **Updated by:** Claude Code (session 32, lead loop, run B: MVP-phone review and re-review FAIL, Q73)
+**Last updated:** 7 Oct 2026 · **Updated by:** Claude Code (session 33, lead loop, run C: Q73 recorded (D83); MVP-phone review FAIL on new wordings, Q74)
 
 ---
 
@@ -17,7 +17,7 @@ review_status: codex-reviewed
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | **The 08:57 hold is lifted (D81, 7 Oct).** Run A (session 31) built fail-closed date reading for the phone; it was **parked** after five reviews, uncommitted. **David answered Q72 (a) (D82):** ship the supported forms only. **Run B (session 32):** the review and the one re-review each failed on one gap (seasons; then French seasons after an apostrophe), fixed once; nothing committed in the runtime; **Q73** for David. Widening date reading is P2.6 (proposed). **Then:** answer quality (P2.5, T9), in the Q51 order as Cowork names each item. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | **The 08:57 hold is lifted (D81, 7 Oct).** Run A (session 31) built fail-closed date reading for the phone; it was **parked** after five reviews, uncommitted. **David answered Q72 (a) (D82):** ship the supported forms only. **Run B (session 32):** the review and the one re-review each failed on one gap (seasons; then French seasons after an apostrophe), fixed once; nothing committed in the runtime; Q73 answered (b) (D83). **Run C (session 33):** the one review found six more season and period wordings with no date label; nothing committed; **Q74** for David. Widening date reading is P2.6 (proposed). **Then:** answer quality (P2.5, T9), in the Q51 order as Cowork names each item. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, the `dbrain-runtime` repository authorised (now `~/Work/dbrain-runtime/`), batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -152,6 +152,20 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 33 — 7 Oct 2026 · Claude Code, lead loop, run C (Q73 records; MVP-phone review)
+**Authorization:** David's "relance le loop" (read as "pick up the loop"); the handoff's Cowork → lead block of 7 Oct ~17:30 releases run C: commit Cowork's Q73 records, one review of the MVP-phone working tree with no fix and commit on a pass, P2.6's files-in-scope list on paper, close. Run from VS Code. **Ended by** that block's own rule: the review found new unlabelled-date wordings, so list them and stop. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+
+**What changed for David:** his Q73 choice is on record (D83). The phone code is still not committed: the review found no security problem and no supported date read wrongly, but six more season and period wordings ("summertime", "springtime", "Eastertime", "mi-saison", "solstice", "midsummer") get an answer with no date label. He decides the way out (Q74). Nothing changes on his phone until he restarts `Ask Brain.command`.
+
+- **Records:** `2b463b1` Cowork's Q73 records and the P2.6 phrase-set draft; `f51ccea` D83, index and log. Tier 1, round 1 PASS; should-fixes: two on the phrase-set draft (row W1 is labelled an accepted gap but was fixed in round 15; the generated-text invariant does not cover `NONE` and ranges), left for Cowork; one on `log.md`, applied.
+- **MVP-phone:** review (round 17) FAIL on six NEW-WORDING reproducers; not fixed, not committed, per Q73 (b). Contract A, the `client` stop, the cloud refusal and the secret check held. Details in [[90 System/briefs/MVP-phone|MVP-phone]].
+- **Tests:** 202, three full runs green in a row; secret scan clean.
+- **Not done:** step 3 (P2.6 files in scope), because the stop came first.
+- **Untouched:** `02_Architecture/client-tier-workspace-requirements.md` (untracked, not in the handoff), `experiments/t9_compare.py`, `.claude/settings.local.json`.
+- **Push (D79):** the lead pushes the vault after this commit and checks 0 ahead / 0 behind; `dbrain-runtime` has no new commit.
+
+**Pick up at:** Q74 (via Cowork). Then P2.6's files in scope (run C step 3) or the Q51 order as Cowork names it.
 
 ### Session 32 — 7 Oct 2026 · Claude Code, lead loop, run B (Q72 records; MVP-phone review)
 **Authorization:** "pick up the loop" from David; the handoff's Cowork → lead block of 7 Oct ~17:00 releases run B: commit Cowork's Q72 records, one review of the MVP-phone round-14 fix and commit on a pass (if a blocker remains: one fix, one re-review, then stop and queue a question), close. Run from VS Code with `~/Work` open. **Ended by** that block's own stop rule: the re-review failed. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.

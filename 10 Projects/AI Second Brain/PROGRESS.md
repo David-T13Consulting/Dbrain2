@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 7 Oct 2026 · **Updated by:** Claude Code (session 31, lead loop, run A: MVP-phone dates parked)
+**Last updated:** 7 Oct 2026 · **Updated by:** Claude Code (session 32, lead loop, run B: MVP-phone review and re-review FAIL, Q73)
 
 ---
 
@@ -17,7 +17,7 @@ review_status: codex-reviewed
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | **The 08:57 hold is lifted (D81, 7 Oct).** Run A (session 31) built fail-closed date reading for the phone; it was **parked** after five reviews, uncommitted. **David answered Q72 (a) (D82):** ship the supported forms only. **Run B:** one review of the round-14 fix and commit on a pass, then David's phone re-check; widening date reading is P2.6 (proposed). **Then:** answer quality (P2.5, T9), in the Q51 order as Cowork names each item. Host decision (D53) gates sustained-performance numbers |
+| **Next action** | **The 08:57 hold is lifted (D81, 7 Oct).** Run A (session 31) built fail-closed date reading for the phone; it was **parked** after five reviews, uncommitted. **David answered Q72 (a) (D82):** ship the supported forms only. **Run B (session 32):** the review and the one re-review each failed on one gap (seasons; then French seasons after an apostrophe), fixed once; nothing committed in the runtime; **Q73** for David. Widening date reading is P2.6 (proposed). **Then:** answer quality (P2.5, T9), in the Q51 order as Cowork names each item. Host decision (D53) gates sustained-performance numbers |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, the `dbrain-runtime` repository authorised (now `~/Work/dbrain-runtime/`), batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -151,6 +151,19 @@ Append-only. Each entry: what, why, and what would change it.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 32 — 7 Oct 2026 · Claude Code, lead loop, run B (Q72 records; MVP-phone review)
+**Authorization:** "pick up the loop" from David; the handoff's Cowork → lead block of 7 Oct ~17:00 releases run B: commit Cowork's Q72 records, one review of the MVP-phone round-14 fix and commit on a pass (if a blocker remains: one fix, one re-review, then stop and queue a question), close. Run from VS Code with `~/Work` open. **Ended by** that block's own stop rule: the re-review failed. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+
+**What changed for David:** his Q72 choice is on record (D82), and the next step for understanding more date wordings has its own brief (P2.6). The phone code is still not committed: the review found that season questions ("menu this winter?") were answered for an unlabelled day; that is fixed in the working tree, but the re-review found the same gap in French after an apostrophe ("pour l'hiver") and in "wintertime". He decides the way out (Q73). Nothing changes on his phone until he restarts `Ask Brain.command`.
+
+- **Records:** `9e3b4c6` Cowork's Q72 records and the P2.6 brief; `e0f442e` D82, P2.6 in TASKS (`@code`, blocked), index and log. Tier 1: round 1 and 2 ESCALATE (unsourced capability claims in P2.6, rewritten as evaluation questions), round 3 PASS. One should-fix left for Cowork in P2.6 (the expected outcome for date-free questions).
+- **MVP-phone:** **deviation:** before the review (run B said review the round-14 fix as it stood) the lead closed the open "on the first if possible?" by class (no date read + "the first/second/third" → ask again; not "second brain"). Review (round 15) FAIL: seasons → fixed (season words ask again when no date was read; "a été" excluded). Re-review (round 16) FAIL: French elided seasons and "wintertime". Stopped per the run rule; nothing committed in `dbrain-runtime`. Contract A, the `client` stop, the cloud refusal, scope and write guard held in both reviews. Details in [[90 System/briefs/MVP-phone|MVP-phone]].
+- **Tests:** 202, nine full runs green, no hang seen this session (session 31's intermittent hang not reproduced, not diagnosed). Secret scan clean.
+- **Untouched:** `02_Architecture/client-tier-workspace-requirements.md` (untracked, not in the handoff), `experiments/t9_compare.py`, `.claude/settings.local.json`.
+- **Push (D79):** the lead pushes the vault after this commit and checks 0 ahead / 0 behind; `dbrain-runtime` has no new commit.
+
+**Pick up at:** Q73 (via Cowork). Then P2.6 or the Q51 order as Cowork names it.
 
 ### Session 31 — 7 Oct 2026 · Claude Code, lead loop, run A (MVP-phone dates)
 **Authorization:** "pick up the loop" from David, twice (with a break in between at his request); the handoff's Cowork → lead block of 7 Oct 11:30 releases run A: records of the hold lift, then MVP-phone (P2.4) fail-closed dates only, then close and stop. Run from VS Code with `~/Work` open. **Ended by** the run block's own limit (e): the fifth failed review parks the brief and stops the run, with Q72 queued. **Deviation from step 2(e):** after the fifth failure the lead still applied the round 14 fix to the working tree and ran the tests (about eight runs) before stopping; (e) says park and stop. The fix is unreviewed. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only; one read-only Claude Code subagent (red team).

@@ -58,7 +58,6 @@
       "Bash(wget:*)",
       "Bash(huggingface-cli:*)",
       "Bash(open:*)",
-      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push:*)",
       "Bash(git -C /Users/davidduchesne/Work/Dbrain2 reset:*)",
       "Bash(git -C /Users/davidduchesne/Work/Dbrain2 rm:*)",
       "Bash(git -C /Users/davidduchesne/Work/Dbrain2 clean:*)",
@@ -71,7 +70,6 @@
       "Bash(git -C /Users/davidduchesne/Work/Dbrain2 filter-branch:*)",
       "Bash(git -C /Users/davidduchesne/Work/Dbrain2 update-ref:*)",
       "Bash(git -C /Users/davidduchesne/Work/Dbrain2 config:*)",
-      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push:*)",
       "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime reset:*)",
       "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime rm:*)",
       "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime clean:*)",
@@ -84,7 +82,6 @@
       "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime filter-branch:*)",
       "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime update-ref:*)",
       "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime config:*)",
-      "Bash(git push:*)",
       "Bash(git reset:*)",
       "Bash(git rm:*)",
       "Bash(git clean:*)",
@@ -95,7 +92,16 @@
     "deny": [
       "Bash(git push --force:*)",
       "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push --force:*)",
-      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push --force:*)"
+      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force-with-lease:*)",
+      "Bash(git push --force-if-includes:*)",
+      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push -f:*)",
+      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push --force-with-lease:*)",
+      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push --force-if-includes:*)",
+      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push -f:*)",
+      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push --force-with-lease:*)",
+      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push --force-if-includes:*)"
     ],
     "additionalDirectories": [
       "/Users/davidduchesne/Work/dbrain-runtime",

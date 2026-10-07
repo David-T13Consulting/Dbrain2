@@ -268,3 +268,7 @@ Detail: `9013735`, `7b73210`, `4dde18c`, `451ed03`, this close; Codex `gpt-6.1-s
 **Ended by:** stop condition (1): M3 done; nothing else actionable under the 08:57 hold.
 **What changed for David:** ui-design-agent, claude-blueprint and agentic-ios-app are out of `~/Work`'s top level (now in `~/Work/_archive/`) and archived on GitHub, read-only and reversible. The only active project repos in `~/Work` are the vault and the runtime. Every step of his 6 Oct clean-up run is done; the hold lifts when he says so.
 Detail: `a0e0726` (Cowork's Q71 entry, Codex `gpt-6.1-sol` (high, read-only) PASS); step 2 re-check matched the session 29 list; fsck exit 0 and heads unchanged for all three; `isArchived=true` for all three. Q71 cleared. Not pushed. Findings in [[90 System/briefs/M3-archive-three-repos|M3]].
+
+## [2026-10-07] decision | Push is part of Done (D79); tracking files carry review_status (D80); dead settings lines removed
+**What changed for David:** runs now end pushed: every repo committed, pushed and in sync, without waiting for him (D79). The 13 dead ui-design-agent lines are gone from his user-level Claude Code settings; nothing else in that file changed. PROGRESS, TASKS and OPEN_QUESTIONS now carry `review_status: codex-reviewed` (D80).
+Detail: David's answers directly to the lead, 7 Oct (session 30). AGENTS.md's hard-limit list still names "pushing to GitHub"; it changes only with his approval of the exact edit.

@@ -12,7 +12,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (7 Oct, session 30):** with your Q71 answer, **M3 is done**: ui-design-agent, claude-blueprint and agentic-ios-app are in `~/Work/_archive/` and archived on GitHub (D78). Every step of your 6 Oct clean-up run is now done; **the hold stays until you lift it**. The vault's two session 30 commits are not pushed: say so if you want them pushed. `~/.claude/settings.json` still has the 13 dead lines for you to tidy when you like. Summary in [[log]].
+**Since you last looked (7 Oct, session 30):** with your Q71 answer, **M3 is done**: ui-design-agent, claude-blueprint and agentic-ios-app are in `~/Work/_archive/` and archived on GitHub (D78). Every step of your 6 Oct clean-up run is now done; **the hold stays until you lift it**. Your 7 Oct answers are applied: the lead now pushes at the end of every run (D79; this run's commits will be pushed after review and commit; push pending), the 13 dead lines are gone from `~/.claude/settings.json`, and tracking files carry `review_status` (D80). Summary in [[log]].
 
 ## Open
 

@@ -1,5 +1,6 @@
 ---
 classification: internal
+review_status: codex-reviewed
 ---
 # Tasks — AI Second Brain Project
 
@@ -9,7 +10,7 @@ classification: internal
 
 ## ▶ Next action
 
-> **Stopped for clean-up (David, 6 Oct 08:57; brief [[90 System/briefs/L1-lint-cleanup|L1]]).** No new work until David lifts it in writing. Released 10:05: **M1** (back up and push every repo) is done (6 Oct, session 22): every repo in scope is on private GitHub, gate met. **M2 done** (6 Oct, session 27): repos in `~/Work`, off iCloud; medispring-infi archive in `~/Archive` (data policy v0.5, D75); paths re-pointed; D76. **Q65 clean-up run (session 29):** answers, review tiers (D77) and Inbox committed; both repos pushed; M2 follow-up done (`1fd0c53`). **M3 done** (7 Oct, session 30, D78): ui-design-agent, claude-blueprint and agentic-ios-app in `~/Work/_archive/` and archived on GitHub ([[90 System/briefs/M3-archive-three-repos|brief]]). **Next:** `@david` lifts the hold and OKs a push of the vault's session 30 commits. **Then:** MVP-phone (P2.4, parked after round 9; consult first) and the Q51 order. P2.2 is done (`4b5e91f`, runtime `c8b3b7b`); T9 was stopped after 2 of 9 blocks, no result.
+> **Stopped for clean-up (David, 6 Oct 08:57; brief [[90 System/briefs/L1-lint-cleanup|L1]]).** No new work until David lifts it in writing. Released 10:05: **M1** (back up and push every repo) is done (6 Oct, session 22): every repo in scope is on private GitHub, gate met. **M2 done** (6 Oct, session 27): repos in `~/Work`, off iCloud; medispring-infi archive in `~/Archive` (data policy v0.5, D75); paths re-pointed; D76. **Q65 clean-up run (session 29):** answers, review tiers (D77) and Inbox committed; both repos pushed; M2 follow-up done (`1fd0c53`). **M3 done** (7 Oct, session 30, D78): ui-design-agent, claude-blueprint and agentic-ios-app in `~/Work/_archive/` and archived on GitHub ([[90 System/briefs/M3-archive-three-repos|brief]]). This run's commits will be pushed after review and commit; push pending, per D79 (Definition of Done includes the push). **Next:** `@david` lifts the hold. **Then:** MVP-phone (P2.4, parked after round 9; consult first) and the Q51 order. P2.2 is done (`4b5e91f`, runtime `c8b3b7b`); T9 was stopped after 2 of 9 blocks, no result.
 
 **Parallel domain action:** batch 04 is scored (2 Oct); its independent Codex re-score waits for Cowork's fixes to the re-score brief. T3.4 rubric v2.0 wording (`@cowork`, David approves). T2.6 is done (Dinant, Q22). T0.7 precedes the next contract.
 

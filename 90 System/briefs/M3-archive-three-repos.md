@@ -2,7 +2,7 @@
 classification: internal
 task: M3
 owner: "@code"
-status: open   # Cowork, 7 Oct: David answered Q71 (a); step 2 amended below
+status: done   # lead, 7 Oct (session 30): steps 1–5 done; D78
 models: ["claude-opus-5-5 (Cowork, draft; lead)", "gpt-6.1-sol (Codex consult, high)"]
 created: 2026-10-06
 ---
@@ -27,18 +27,23 @@ They are not part of the second-brain work. Archiving keeps `~/Work` down to liv
 5. **Record:** Outcome below (before/after heads, gh results), a PROGRESS decision row (final D-number), `log.md`, handoff note.
 
 ## Files in scope
-This brief; `log.md`; PROGRESS; TASKS; `90 System/handoff.md`; `90 System/for-david.md` (clear Q66). Outside the vault: the three folders' location only. No edits inside the three repos.
+This brief; `log.md`; PROGRESS; TASKS; OPEN_QUESTIONS (its "Updated" line only; added 7 Oct by the lead, per Cowork's committed 09:55 handoff note "close records (PROGRESS, TASKS, OPEN_QUESTIONS)"); `90 System/handoff.md`; `90 System/for-david.md` (clear Q66, cleared 6 Oct; and Q71, 7 Oct). Outside the vault: the three folders' location only. No edits inside the three repos.
 
 ## Done when
-- [ ] Three folders in `~/Work/_archive/`, fsck clean, heads unchanged.
-- [ ] All three `isArchived: true` on GitHub.
-- [ ] No live reference left (step 2 output recorded).
+- [x] Three folders in `~/Work/_archive/`, fsck clean, heads unchanged.
+- [x] All three `isArchived: true` on GitHub.
+- [x] No live reference left (step 2 output recorded; the 13 exempt Q71 lines and 7 VS Code history entries remain, both outside the rule).
 
 ## Constraints
 No deletion, no force-push, no commit inside the three repos. Reversible only.
 
 ## Review
 **Lead review of Cowork's entry (Q65, Q66, this brief, handoff block), 6 Oct (session 28), Codex `gpt-6.1-sol` (review profile), high, read-only.** Round 1 FAIL on this brief: (1) `find ~ -maxdepth 3` would traverse `~/Archive/medispring-infi`, which data policy v0.5 forbids agents to list; (2) a recursive `grep` over `~/.codex` would read its credential store (`auth.json`). Should-fix: name the repository in `gh repo view`; include VS Code in step 2; and, in the handoff, the BENCH check (`--help` doesn't load `dev.json`), the committed M2 follow-up row, and the old block's "no push beyond M2" line. The lead fixed step 2 (named files only, no credential stores, no traversal into `~/Archive`) and step 4 here; the handoff points go in the lead's close note.
+
+**Lead review of Cowork's Q71 entry (this brief's status, step 2 amendment and 7 Oct note; for-david Q71; handoff note), 7 Oct (session 30), Codex `gpt-6.1-sol` (review profile), high, read-only, Tier 1:** PASS, no findings. The first call hung (no output after 41 minutes, 0% CPU; stdin was left open) and was killed; the rerun with stdin closed and a 15-minute cap passed. Committed `a0e0726`.
+
+**Close records (session 30), Codex `gpt-6.1-sol` (review profile), high, read-only, Tier 1.** Round 1 FAIL. Blocker: OPEN_QUESTIONS changed but was not in Files in scope, and scope still said "clear Q66" (fixed above, citing the 09:55 handoff note). Should-fix, logged, not applied: D77 says changed Tier 1 notes in 10–40 carry `review_status: codex-reviewed`; PROGRESS, TASKS and OPEN_QUESTIONS have never carried it, so whether tracking files fall under that line goes to Cowork. Nit, applied: "out of `~/Work`" now reads "out of `~/Work`'s top level".
+Round 2 PASS: round 1 findings resolved or logged; one nit (extra blank line at end of file) applied.
 
 ## Outcome
 **6 Oct (session 29), lead `claude-opus-5-5`. Stopped at step 2 (its stop rule); nothing moved, nothing archived on GitHub.**
@@ -47,3 +52,10 @@ No deletion, no force-push, no commit inside the three repos. Reversible only.
 - **Consultation (D74), Codex `gpt-6.1-sol` (review profile), high, read-only:** asked whether these are "live hits" under step 2's rule. Advice: **STOP**. The `~/.claude/settings.json` entries are permission grants in active user-level configuration; they are ineffective while the paths are absent, but the brief's exception covers only `settings.local.json`. The VS Code entries can count as history. The lead followed the advice: no edit to the settings file (hard limit), M3 `blocked-on-david`, **Q71** in for-david.
 
 **7 Oct, Cowork: Q71 answered (a) by David.** Run M3 as written with the step 2 exemption above. David tidies `~/.claude/settings.json` himself later, or approves an exact diff. The lead re-runs step 2 first and stops on any hit not in the Outcome list above.
+
+**7 Oct (session 30), lead `claude-opus-5-5`. M3 done; Q71 recorded here and cleared from for-david.**
+- **Step 1 pre-flight (re-run): PASS.** Same heads as session 29, working trees clean, every local branch tracking its upstream with nothing ahead, no stashes; `~/Work/_archive/<name>` absent for all three.
+- **Step 2 reference check (re-run): no hit outside the session 29 list.** `~/.claude/settings.json` 13 lines (exempt, Q71 (a); not edited); VS Code `storage.json` 7 recent-workspace entries (history); every other named file 0 hits (`~/.claude/CLAUDE.md` absent; `dbrain-runtime` has no `.claude/settings*.json`). Symlinks: none in `~/Work` (depth 3); `~` depth 1 only `Google Drive`. The four old paths are still absent.
+- **Step 3 move: PASS.** `mv` to `~/Work/_archive/<name>` after the target-absent and real-parent check. Source gone, target present, `git fsck --full` exit 0, HEAD unchanged: ui-design-agent `d4dfc448e878daf8ad446b0bc0cbf970cad4374d`, claude-blueprint `3ed646326f7dfd541ac02e7b3b77109781bc3536`, agentic-ios-app `fac922b552af4707be9b320c1ee3d649b2f2209f`. `~/Work` now holds `CLAUDE.md`, `Dbrain2`, `dbrain-runtime`, `_archive`, `_external`, `_snapshots`.
+- **Step 4 GitHub: PASS.** Before: `David-T13Consulting/UI-Design-Agent`, `CLAUDE-Blueprint`, `agentic-ios-app` all `isArchived=false`, private. `gh repo archive --yes` exit 0 for each; after: all three `isArchived=true`. Reversible with `gh repo unarchive`.
+- **Step 5 record:** this Outcome, PROGRESS D78 and session 30, `log.md`, TASKS, OPEN_QUESTIONS, for-david (Q71 cleared), handoff note. No deletion, no force-push, no commit inside the three repos.

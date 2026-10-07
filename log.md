@@ -263,3 +263,8 @@ Detail: AGENTS.md carries the Q65 text and the two Q68 (a) conforming edits word
 **Ended by:** stop condition (1): M3 is `blocked-on-david` (Q71); everything else is under the 08:57 hold.
 **What changed for David:** his answers and the review tiers (D77) are committed, the project-alignment capture passed review after his fix (Q70 closed), and both repos are pushed to GitHub (0 ahead). M3 stopped at its own reference check: his user-level Claude Code settings still allow reads of the old ui-design-agent paths, which needs his explicit approval to change (Q71). So the hold stays, as he set it.
 Detail: `9013735`, `7b73210`, `4dde18c`, `451ed03`, this close; Codex `gpt-6.1-sol` (high, read-only) PASS on each (one FAIL round on `9013735`, fixed). Pushed Dbrain2 to `451ed03`, dbrain-runtime to `1fd0c53`. Q65–Q68, Q70 cleared. Findings in [[90 System/briefs/M3-archive-three-repos|M3]] and [[90 System/briefs/D-cowork-10-review-tiers|D-cowork-10]].
+
+## [2026-10-07] migration | M3 done: three inactive repos archived (D78)
+**Ended by:** stop condition (1): M3 done; nothing else actionable under the 08:57 hold.
+**What changed for David:** ui-design-agent, claude-blueprint and agentic-ios-app are out of `~/Work`'s top level (now in `~/Work/_archive/`) and archived on GitHub, read-only and reversible. The only active project repos in `~/Work` are the vault and the runtime. Every step of his 6 Oct clean-up run is done; the hold lifts when he says so.
+Detail: `a0e0726` (Cowork's Q71 entry, Codex `gpt-6.1-sol` (high, read-only) PASS); step 2 re-check matched the session 29 list; fsck exit 0 and heads unchanged for all three; `isArchived=true` for all three. Q71 cleared. Not pushed. Findings in [[90 System/briefs/M3-archive-three-repos|M3]].

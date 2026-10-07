@@ -3,7 +3,7 @@ classification: internal
 ---
 # Open Questions
 
-**Updated:** 6 Oct 2026 (session 29): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q30, Q69, Q71) · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 7 Oct 2026 (session 30): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q30, Q69) · Open questions block work. Resolve them or explicitly park them.
 
 ---
 

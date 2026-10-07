@@ -4,13 +4,13 @@ review_status: codex-reviewed
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 7 Oct 2026 (session 30) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 7 Oct 2026 (session 31) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 ---
 
 ## ▶ Next action
 
-> **Clean-up done; hold lifted (David, 7 Oct, D81).** M1, M2, the Q65 run and M3 are done ([[90 System/briefs/L1-lint-cleanup|L1]], [[90 System/briefs/M3-archive-three-repos|M3]]); repos in `~/Work`, pushed per D79. **Now (run A, Cowork 7 Oct 11:30):** MVP-phone (P2.4), fail-closed date reading, only. **Then:** the Q51 order, as Cowork names each item. P2.2 is done (`4b5e91f`, runtime `c8b3b7b`); T9 was stopped after 2 of 9 blocks, no result (next run, David present).
+> **Clean-up done; hold lifted (David, 7 Oct, D81).** M1, M2, the Q65 run and M3 are done ([[90 System/briefs/L1-lint-cleanup|L1]], [[90 System/briefs/M3-archive-three-repos|M3]]); repos in `~/Work`, pushed per D79. **Run A (session 31):** MVP-phone (P2.4) fail-closed dates built, parked after five reviews, uncommitted; **Q72** `@david`. **Then:** the Q51 order, as Cowork names each item. P2.2 is done (`4b5e91f`, runtime `c8b3b7b`); T9 was stopped after 2 of 9 blocks, no result (next run, David present).
 
 **Parallel domain action:** batch 04 is scored (2 Oct); its independent Codex re-score waits for Cowork's fixes to the re-score brief. T3.4 rubric v2.0 wording (`@cowork`, David approves). T2.6 is done (Dinant, Q22). T0.7 precedes the next contract.
 
@@ -33,7 +33,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [ ] **P2.1** Build retrieval/citation/abstention cases with independent expected evidence and an untouched acceptance subset; establish index/file-search baseline. **Started 1 Oct:** 26 chunks / 10 dev cases, coverage and faithfulness failures recorded; six provisional cases reserved, independent review still needed. Does not wait for all T3.1 labels. `@codex` — the independent case review is briefed in [[90 System/briefs/P2.1-review|P2.1-review]].
 - [x] **P2.2** ✅ 5 Oct (`4b5e91f`, runtime `c8b3b7b`). Behind a swappable model adapter, so T9 stays open, implement a scoped read-only query service and local model adapter. Disable silent cloud fallback; verify normal inference without provider access. `@code` — brief: [[90 System/briefs/P2.2|P2.2]]. Label check redesigned as an allowlist, Q46 applied; round O's two findings accepted as risks (Q53); rounds P–Q: **PASS, committed**.
 - [ ] **P2.3** `@code` Measure quality, p50/p95 latency, memory and sustained performance; pin corpus/model/runtime/prompt versions. Recommend Air versus dedicated host on evidence.
-- [ ] **P2.4** `@code` **MVP-phone (S4 slice pulled into S2, David Q32–Q34, 5 Oct):** ask from the iPhone over Tailscale with an Apple Shortcut; `/ask` on the Air calls the P2.2 service over the whole vault, read-only, bearer token in the Keychain. Brief: [[90 System/briefs/MVP-phone|MVP-phone]]. Code (display fixes and date awareness) on top of P2.2's `c8b3b7b` in `dbrain-runtime`; Codex review round 5 failed (five blockers, fixed); rounds 6–8 failed and were fixed (logging and date reading redesigned after a Codex consultation); round 9, the fifth, failed on three date forms → **parked 6 Oct, uncommitted** (brief). David's phone gets it after a restart of `Ask Brain.command`.
+- [ ] **P2.4** `@code` **MVP-phone (S4 slice pulled into S2, David Q32–Q34, 5 Oct):** ask from the iPhone over Tailscale with an Apple Shortcut; `/ask` on the Air calls the P2.2 service over the whole vault, read-only, bearer token in the Keychain. Brief: [[90 System/briefs/MVP-phone|MVP-phone]]. Code (display fixes and date awareness) on top of P2.2's `c8b3b7b` in `dbrain-runtime`; Codex review round 5 failed (five blockers, fixed); rounds 6–8 failed and were fixed (logging and date reading redesigned after a Codex consultation); round 9, the fifth, failed on three date forms → **parked 6 Oct, uncommitted** (brief). **Session 31 (7 Oct):** fail-closed date reading built (the other date wordings tested → "date not understood"; coverage not proven complete: "on the first if possible?" still passes, open); rounds 10–14 failed on one wording class each, fixed; **parked again** (D72), uncommitted, Tier 2 → **Q72** for David. Next: the intermittent endpoint-test hang, then one review and commit on (a). David's phone gets it after a restart of `Ask Brain.command`.
 - Existing tasks: **T9** moves here; **T4.1/T5/T6** begin with platform evaluation, redacted traces and service targets.
 
 ### S3 · Supervised wiki maintenance

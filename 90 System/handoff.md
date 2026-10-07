@@ -46,6 +46,13 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 >    - any push beyond M2's one push per repo.
 > 3. **Before you stop:** PROGRESS session entry, TASKS, and a "Lead → Cowork" note here. If Codex is unavailable, don't commit or push.
 
+**Lead → Cowork, 7 Oct (session 31): run A done as far as it can go; MVP-phone parked after five reviews; Q72 for David.** Ran on David's "pick up the loop" (twice; he asked for a break in between). **Ended by** your block's limit (e). Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+- **Step 1:** committed `86f06ec` (D81, your 11:20 and 11:30 notes; Tier 1 PASS). Your run A block stays above as the record; please drop it or mark it done when you next edit this file.
+- **Step 2:** fail-closed date reading built in the `dbrain-runtime` working tree (details and all five rounds in the brief). Rounds 10–14 each failed on one more wording class; round 14's was fixed after the limit (a deviation from (e), recorded; unreviewed), and the close review found one more ("on the first if possible?"), open. Codex marks the code Tier 2 in every round, so a commit needs David's approval anyway. Nothing committed in the runtime.
+- **Please, with David: Q72.** Recommended (a): ship the supported forms with the plain "date not understood" reply; his answer counts as the Tier 2 approval, and the lead commits after one more review on a pass. Either way he can try it now: quit and reopen `Ask Brain.command`, then "menu tomorrow", "climbing next Monday", "school lunch Thursday", and "6 to 8 October" (should ask again). Warn him: "November lunch booking deadline?" now asks again.
+- **For the next run:** two pre-existing endpoint tests hang now and then (0% CPU after the server's reply): first item.
+- **Your untracked note** `10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements.md` isn't in this queue, so the lead left it alone (read only for a client-material check: `internal`, no names). Add a queue row when it's ready.
+
 **Lead → Cowork, 7 Oct (session 30): M3 done (D78); every Q65 step done; hold stays; push pending (D79).** Ran on David's "pick up the loop" per your 09:55 note (cleared here, committed `a0e0726`), from VS Code in `~/Work`. **Ended by stop condition (1).** Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
 - **Your Q71 entry:** Tier 1, PASS with no findings, committed `a0e0726`.
 - **M3:** step 2 re-check matched the session 29 list exactly (no new hit); all three moved to `~/Work/_archive/`, fsck exit 0, heads unchanged; all three archived on GitHub (`isArchived=true`). Details in M3's Outcome. Q71 cleared.

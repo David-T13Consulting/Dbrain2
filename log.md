@@ -272,3 +272,7 @@ Detail: `a0e0726` (Cowork's Q71 entry, Codex `gpt-6.1-sol` (high, read-only) PAS
 ## [2026-10-07] decision | Push is part of Done (D79); tracking files carry review_status (D80); dead settings lines removed
 **What changed for David:** runs now end pushed: every repo committed, pushed and in sync, without waiting for him (D79). The 13 dead ui-design-agent lines are gone from his user-level Claude Code settings; nothing else in that file changed. PROGRESS, TASKS and OPEN_QUESTIONS now carry `review_status: codex-reviewed` (D80).
 Detail: David's answers directly to the lead, 7 Oct (session 30). AGENTS.md's hard-limit list still names "pushing to GitHub"; it changes only with his approval of the exact edit.
+
+## [2026-10-07] decision | 6 Oct clean-up hold lifted (D81); run A queued
+**What changed for David:** new work can start again. His clean-up (repos backed up, moved off iCloud, three inactive repos archived) is done and pushed, so he lifted the hold. The first item is the one he asked for: his phone answering date questions correctly ("menu tomorrow", "climbing next Monday"), and saying plainly when it can't read a date.
+Detail: David to Cowork, 7 Oct, recorded in [[90 System/handoff]] (11:20 lift, 11:30 run A). D81 in PROGRESS; hold lines removed from TASKS and the handoff header. T9, P2.5 and new briefs wait for Cowork to name them.

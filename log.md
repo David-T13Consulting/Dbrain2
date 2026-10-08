@@ -328,3 +328,7 @@ Detail: `8990bbe`, `51f332f`, `f4b09ab`, `a8a641f` and this close. Codex `gpt-6.
 ## [2026-10-08] decision | Host sizing option B: 48–64 GB, up to €4,000, layer 6 kept (D95); T9 window Fri 9 or Mon 12 Oct (D96)
 **What changed for David:** the host he buys after T9 is now a 48–64 GB machine with up to €4,000 to spend, so a 14–30B model can still run on it later. How much memory is fixed by a formula agreed before the measurement. T9 runs on Friday morning with him present if today's readiness check passes, otherwise on Monday.
 Detail: David to Cowork, 8 Oct 09:11/09:18, recorded in D95 (supersedes D53's range and budget; refines D92) and D96, from the 8 Oct ~09:35 block of [[90 System/handoff]].
+
+## [2026-10-08] build | T9 readiness: runner reviewed and committed; pins and loads verified; GO for Friday (Q81)
+**What changed for David:** the model comparison is ready to run on Friday morning with him present, if he confirms (Q81). Nothing was scored. The script that runs it was tightened before use, so a run that drifts from its frozen setup now stops instead of producing a misleading result.
+Detail: runtime `ae934d5` (Codex rounds 1–3 FAIL, round 4 PASS); four models and b11146 match their SHA-256 pins and load under the no-network sandbox; corpus `878a08ea6f57` (data policy v0.6, AGENTS push wording); three dev-case points listed in [[90 System/briefs/T9-M6-model-comparison|T9/M6]].

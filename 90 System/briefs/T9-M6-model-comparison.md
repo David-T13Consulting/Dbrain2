@@ -2,10 +2,10 @@
 classification: internal
 task: T9 / M6
 owner: "@code"
-status: open               # passed review 5 Oct; starts only after P2.2 is committed
-models: ["claude-opus-5-5 (lead, draft)", "gpt-6.1-sol (review rounds 1-3)"]
+status: blocked-on-david   # Q81: GO for Fri 9 Oct needs David present (D96); ready 8 Oct, nothing scored
+models: ["claude-opus-5-5 (lead, draft; readiness 8 Oct)", "gpt-6.1-sol (review rounds 1-3; runner review rounds 1-4, 8 Oct)"]
 created: 2026-10-05
-updated: 2026-10-05
+updated: 2026-10-08
 source: TASKS T9 and M6; D56; D64; Q8 (M6 budget); P2.2 run B and the 5 Oct latency sweep
 review_status: proposed
 note_type: decision
@@ -110,3 +110,17 @@ Reviewer: Codex `gpt-6.1-sol`, effort `high`, read-only; David switched the revi
 **Round 3 (5 Oct, `gpt-6.1-sol`): PASS.** No blocker. Should-fixes applied before commit: RSS sampling and window frozen; which blocks count stated; the log summary matched to the latency-band rule. Nit: review history kept together with per-round models.
 
 ## Outcome
+**6 Oct:** run `2026-10-06-a` stopped after 2 of 9 blocks by David's clean-up directive; no result. Its two blocks are void for the comparison (the runner has since changed); the protocol restarts from block 1.
+
+**Readiness, 8 Oct (session 37; handoff 8 Oct ~09:35, item 2). Nothing scored.**
+- **Runner:** `experiments/t9_compare.py` (the 6 Oct draft) reviewed against this brief: rounds 1–3 FAIL (8, 5, 4 blockers: timeouts and malformed replies lost their timing, the server ran outside the no-network sandbox, the network check failed open, unrestricted output paths, no check of code/corpus/cases against the manifest, incomplete RSS measurement, warm-up not required), all fixed; **round 4 PASS**, no findings. Committed `ae934d5` on `main`, pushed. The protocol text is unchanged; the runner now enforces it. A run whose code, corpus (as each request used it), request signature or case contents differ from its pre-run manifest stops as void.
+- **Pins:** the four model files and `llama-server` b11146 match their full SHA-256 pins (`7485fe6f…`, `00fe7986…`, `676c3507…`, `33e7a72c…`; runtime `41df13c1…`). No download.
+- **Loads on b11146 under the sandbox, warm-up answered** (dry check `artifacts/t9/dry-2026-10-08-final`, from the clean `ae934d5` checkout; warm-up only, no dev case run): B0 6.6 s, C1 7.7 s, C2 6.9 s, C3 12.5 s; whole-process peak RSS during load and warm-up about 3.0, 3.0, 5.1 and 4.7 GiB (not the scored peak). Network denial proven by a loopback probe (EPERM inside the profile, connected outside).
+- **Pipeline vs the 6 Oct pin:** runtime `c8b3b7b` → `53e5740` changed only paths (vault, bench) and added the MVP service; request signature unchanged (`3e00bced79dc`).
+- **Corpus:** version `d2059877f5ba` → `878a08ea6f57`: `data-policy.md` (v0.6: version note, §7a failure store) and `AGENTS.md` (push wording) changed; the roadmap did not. **Dev-case re-check, the rule unchanged:**
+  - `client_policy`: expected answer unchanged (No: local inference does not relax the policy); its fragment now sits in `data-policy.md:7-20` (lines shifted by the v0.6 note). New distractor: §7a ("a local store on the host … readable only by the local model and by David") could tempt a "yes, if local" answer; it is about failed questions, not client files. A retrieval miss already on 6 Oct.
+  - `media_storage`: the §7a chunk (`data-policy.md:107-110`) also contains "outside the vault", so a model citing §7a would match the fragment with evidence about the failure store, not about PDFs. The judges' gate 2 (evidence must support the claim) applies.
+  - `source_retention`: its fragment (`40 Archive/Inbox/`) has never been in this three-file corpus (checked back to 1 Oct), so no model can cite it; a miss on 6 Oct too. Not new; it costs every model the same case.
+  - The other seven (two of them abstention cases, with no fragment): unchanged; fragments present.
+- **Go/no-go (by 18:00, in [[90 System/for-david]]): GO for Fri 9 Oct**, on the window conditions: Air plugged in and quiet, the phone service (`Ask Brain.command`, its own model server on 18087) stopped for the window, about 60 min (9 blocks with 180 s cool-downs), up to about 2 h with drift re-runs.
+

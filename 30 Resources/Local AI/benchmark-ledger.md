@@ -1,8 +1,8 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-01
-next_review: 2026-10-08
+last_reviewed: 2026-10-08
+next_review: 2026-10-15
 ---
 # Local AI benchmark ledger
 
@@ -32,6 +32,32 @@ No comparable local image or speech-synthesis benchmark exists yet. Leave those 
 | Qwen3.5-4B, lexical retrieval + explicit-citation prompt | 10 | 6.14 / 7.97 s | 8/10 | Different questions/context/prompt; not directly comparable |
 
 All are development runs, not held-out acceptance. Timings are generation API latency, not full voice/remote interaction. A syntactically valid citation can support a wrong claim: the archival answer demonstrates that failure. The last row's retrieval evidence coverage was 6/7 in-corpus answerable questions, qualitatively reviewed by Codex.
+
+## 2026-10-08 — weekly review (first scheduled run)
+
+Checked 8 Oct from primary sources (Hugging Face model APIs/cards, GitHub release pages). **No missed weeks.** Evidence type: **publisher-reported or registry metadata only; nothing reproduced locally.** Local benchmark not run this week: no authorized bounded experiment was set up, and the run may not download weights.
+
+**Unchanged:** all 17 pinned repositories in [[30 Resources/Local AI/sources]] still resolve to the revisions recorded on 1 Oct, with the same declared licenses. No corrected results, deprecations or license changes found for them.
+
+**New or changed (watchlist and others):**
+
+| Item | Observation (retrieved 8 Oct) | Evidence type / limits |
+|---|---|---|
+| TwIL-LM3-Pro (webAI) | Source repo `4214aaa4`, last modified 2026-09-30; card edits since creation on 3 Sep only add comparison rows (Qwen3.5-4B, a VibeThinker variant) and rename the model. Benchmarks, **vendor-only**: Track A (formal logic, n=200 per lane, greedy, 2048 new tokens, thinking on, seed 42) macro gate 0.5539 vs 0.4313 for its Granite 4.2 3B base, Qwen3-8B 0.5336, with the card itself calling the lead over Qwen3-8B within sampling noise. Track B (held-out, n=300 per dataset, greedy, thinking off, vLLM): 10-dataset macro 0.7901 vs 0.7942 base; does not lead the table. Harness: bf16, vLLM 0.19.1 on one H200; throughput ~11.1 answers/s. Scores measured inside 8,192 tokens | Publisher-reported, not reproduced. Card states code and tool-use were not run; FOL translation exact match 0.0100; `rule_induction` parses 56.5% |
+| TwIL-LM3-Pro formats | The official source repo itself ships GGUF (Q4_K_M 2.09 GiB, Q5_K_M, Q6_K, Q8_0, F16) plus bf16 safetensors. LiteRT-LM bundle repo (`bb30df2e`, created 2026-10-01): INT4 2.19 GB, INT8 3.76 GB, context capped at 4,096, requires LiteRT-LM 0.16+. Bundle card reports **no scores**, only a Linux-CPU smoke test; no device speed measured. Community GGUF (mradermacher) remains static quants only | Corrects the 2 Oct watchlist wording "official bundles are LiteRT-LM only": GGUF is official. llama.cpp guidance in card: `--temp 0`, `-cnv`, at least 2048 output tokens (thinking block) |
+| TwIL-LM3-Pro license | `webAI Non-Commercial License ver. 1.0` unchanged. LICENSE.md text read: grant limited to "non-commercial research and educational purposes only"; no commercial option and no internal-business-use clause; derivatives must carry the same limit; termination on breach. No commercial tier found | Not legal advice. **A December consulting demo is not clearly covered**; David to decide. Needs a `for-david.md` entry from the lead (outside this task's scope) |
+| TwIL-LM3 / TwIL-LM / TwIL-LM2 (webAI) | TwIL-LM3 (3.08B, SmolLM3-3B base, same non-commercial license, GGUF available); card mentions TwIL-LM3.1 and an unreleased TwIL-LM3\*. TwIL-LM2 created 29 Sep (Granite 3.3 2B base). Smaller and older siblings of Pro | Publisher-reported; no independent evaluation found. Not shortlisted |
+| webAI other | Granite 4.2 8B mirrors and three LoRA adapters (analyst/builder/researcher; no license tag) created 30 Sep; webAI-ColVec1.1-4b/8b visual-document retrievers (Qwen3.5-based, license `other`, Aug). webai.com shows only "Private Preview is Live"; no pricing, licensing, pinning or multi-device pooling information | Unverified; platform claims still unevidenced |
+| Qwen-Image-2.1-PE-T2I / PE-I2I | Created 20 Sep. Fine-tuned Qwen3.5-VL 9B (BF16) that rewrites vague generation/edit instructions into precise prompts for Qwen-Image-2.1. Qwen Research License. No benchmarks; CUDA/transformers instructions only. Parent `Qwen-Image-2.1` unchanged (`d26bb612`) | Publisher metadata; extra 9B model on top of the 7B generator is a memory cost on a 24 GiB Mac |
+| Qwen-Drive-1.0-4B | Created 27 Aug, Apache-2.0, driving-specific VLM on Qwen3.5-4B; general ability reported roughly on par with the base (MMBench 85.5 vs 87.1, MMMU 72.7 vs 73.4) | Author-reported. Not relevant to this project |
+| Runtimes | llama.cpp: pre-release b11435 (6 Oct) and release tagged v0.6.0 (5 Oct) per the releases page; notes mention Gemma 4 prefetch work and Apple-GPU Metal flash-attention / matmul kernels (publisher claim up to ~3x for speculative and batched decoding). mlx-lm latest read v0.31.3 (22 Apr; adds Gemma 4 in 0.31.2); whisper.cpp v1.9.4 (11 Sep). | Release pages read through a summarizing fetch, not release notes line by line; GitHub API returned 403. Our measured llama.cpp build is not compared or upgraded |
+
+**Shortlist for a separate bounded run (no weights downloaded here):**
+
+1. **TwIL-LM3-Pro Q4_K_M or Q8_0 GGUF (official repo), research use only.** Reason: only candidate with a plausible edge on rule application and evidence checking (S5), small enough for the M2. Conditions: David resolves the license question first; hash-pinned download inside the M6 budget; same cases as Qwen3.5-4B; at least 2048 output tokens, temp 0; reject if it cannot answer plainly outside formal logic, since the card says it is not a general assistant.
+2. **Gemma 4 E4B-it (Apache-2.0, unchanged revision `ee0ef602`).** Reason: a different model family against the Qwen baselines, which the 1 Oct report asked for; llama.cpp and mlx-lm both list Gemma 4 support. Compare citation support, French/English and latency on the frozen cases.
+
+**Gaps:** IBM Granite, Gemma 4 12B assistant variant card, Kokoro/Whisper/Parakeet release notes beyond revision/date checks, Stability, Microsoft, Apple and other publishers outside the register were not reviewed. No image/ASR/TTS recipe changes could be assessed from metadata alone.
 
 ## What future weekly entries must record
 

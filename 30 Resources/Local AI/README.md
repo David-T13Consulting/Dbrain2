@@ -1,15 +1,15 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-01
-next_review: 2026-10-08
+last_reviewed: 2026-10-08
+next_review: 2026-10-15
 status: maintained research; deployment choices provisional
 ---
 # Local AI — understanding and choosing models
 
 Local AI is a collection of components, not one model that does everything. This guide connects current, verified model releases to the second-brain build. It is a representative shortlist, not an exhaustive leaderboard or a claim that every entry is the latest release.
 
-David requested this knowledge base and weekly benchmark updates on 1 October 2026. **The initial research is complete; automatic weekly execution is not active.** See [[90 System/weekly-local-model-review]] for the prepared task and activation requirements.
+David requested this knowledge base and weekly benchmark updates on 1 October 2026. **The initial research is complete; the weekly review was activated by David on 1 October (D60) and its first scheduled run was 8 October.** See [[90 System/weekly-local-model-review]] for the procedure and operating record.
 
 ## Read in this order
 
@@ -36,6 +36,13 @@ These are engineering recommendations, not accepted deployment decisions.
 | Multi-agent operation | Roles may share one model sequentially | Measured checker benefit, bounded jobs, permissions and failure recovery |
 
 The measured host is an M2 Mac with 24 GiB unified memory. This supports small-model experiments; it does not prove that several models can run together acceptably. The current build order remains [[10 Projects/AI Second Brain/04_Roadmap|S1–S6]]. Larger model downloads, runtime upgrades and rollout remain separate from weekly research.
+
+## Next local candidates (8 Oct shortlist)
+
+1. TwIL-LM3-Pro GGUF, research use only, pending David's decision on its non-commercial license.
+2. Gemma 4 E4B-it, as a second model family against the Qwen baselines.
+
+Both need a separate, authorized, bounded run; no local benchmark ran on 8 Oct. Detail in [[30 Resources/Local AI/benchmark-ledger]].
 
 ## Evidence labels
 

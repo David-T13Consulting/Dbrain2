@@ -1,8 +1,8 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-01
-next_review: 2026-10-08
+last_reviewed: 2026-10-08
+next_review: 2026-10-15
 automation_status: activated 2026-10-01 (D60); task ID and first-run evidence pending
 ---
 # Weekly local-model review
@@ -50,6 +50,7 @@ Copy into a desktop local-project scheduled task, using the proposed timezone/ca
 | 2026-10-01 | Initial research/manual execution of the review's documentation workflow completed | [[30 Resources/Local AI/benchmark-ledger]] and pinned source register |
 | 2026-10-01 | Scheduler activation blocked | No callable scheduler tool; desktop app access denied by computer-use tool |
 | 2026-10-01 | Task created in the desktop local-project scheduler by David | D60; task ID and next-run confirmation **still to be pasted here** |
+| 2026-10-08 | First scheduled run (Thu), session `session_01Dyiwy1hfwHSo73fG8E1Vjx` | Ran in a cloud session through the linked-computer tools; origin unreachable (no credentials), so branch `cowork/local-model-review-2026-10-08` is local only. Output: ledger entry 2026-10-08 and the notes in [[30 Resources/Local AI/benchmark-ledger]]. No missed run. Task ID and timezone still not pasted |
 | Pending | Verify first run (due 8 Oct 2026) | Record actual output, duration and any missed/failed run. Review the first two runs before relying on the cadence |
 
 Weekly monitoring does not mean upgrading weekly. Candidate promotion requires the project's regression/acceptance gates and rollback plan.

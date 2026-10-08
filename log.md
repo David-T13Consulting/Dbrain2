@@ -372,3 +372,7 @@ Detail: Tier 2 rule change, approved by David's explicit instruction. D103 in [[
 ## [2026-10-08] review | Weekly review and EmbeddingGemma 2 note pass review; queued for David (Q82)
 **What changed for David:** both model-research pieces are corrected and pass review; they wait for his content approval (Q82) before they land in the vault.
 Detail: weekly review fixes on branch `cowork/local-model-review-2026-10-08` `f6f8979` (A1–A7, sources checked online; Codex PASS round 1); `30 Resources/Local AI/embeddinggemma-2-evaluation.md` still uncommitted (Codex FAIL round 1 on a benchmark-comparability claim, fixed; PASS round 2). Codex `gpt-6.1-sol` (high, read-only).
+
+## [2026-10-08] review | Weekly local-model review (first scheduled run)
+**What changed for David:** all 17 pinned model revisions are unchanged. New this week: TwIL-LM3-Pro's official repo ships GGUF (the watchlist said LiteRT-LM only), and its license is non-commercial research/education only, so it cannot be assumed usable for the December consulting demo. Added Qwen-Image-2.1 prompt-rewriter companions and runtime notes. Shortlist: TwIL-LM3-Pro (after your license decision) and Gemma 4 E4B. Local benchmark not run this week.
+Detail: [[30 Resources/Local AI/benchmark-ledger]], [[30 Resources/Local AI/sources]]. Branch `cowork/local-model-review-2026-10-08` (local; origin unreachable). Next review 15 Oct.

@@ -1,14 +1,14 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-01
-next_review: 2026-10-08
+last_reviewed: 2026-10-08
+next_review: 2026-10-15
 ---
 # Models for text, reasoning, code and visual understanding
 
 Vision-language models read images and produce answers about them. This does not make them image generators. OCR/document understanding also needs validation: a fluent answer can misread a number or omit a table row.
 
-Capability descriptions below are publisher-reported; suitability and limitations are engineering assessments unless marked measured. All listed checkpoints declare Apache-2.0 in their model metadata checked on 1 October. Exact revisions: [[30 Resources/Local AI/sources]].
+Capability descriptions below are publisher-reported; suitability and limitations are engineering assessments unless marked measured. All listed checkpoints declare Apache-2.0 in their model metadata checked on 1 October, except TwIL-LM3-Pro (webAI Non-Commercial License 1.0, checked 8 October). Exact revisions: [[30 Resources/Local AI/sources]].
 
 | Model / checkpoint | Strengths and useful work | Weaknesses / selection implications | Local status |
 |---|---|---|---|
@@ -19,6 +19,7 @@ Capability descriptions below are publisher-reported; suitability and limitation
 | **[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)** | Newer verified family entry; publisher emphasizes coding, research, professional tasks and image/video understanding | Considerably more memory; thinking and agent loops add latency. On this busy 24 GiB host, fit/performance need a separate experiment | Watchlist; not downloaded or selected |
 | **[Qwen3-Coder-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct)** | Coding and tool-use specialization; useful comparator for a future code agent | All experts count toward weight storage. Code benchmarks do not establish faithful note synthesis, safe actions or useful French voice interaction | Watchlist; not a lightweight 3B deployment |
 
+| **[TwIL-LM3-Pro](https://huggingface.co/webAI-Official/TwIL-LM3-Pro)** (webAI, Granite 4.2 3B fine-tune) | Formal-logic reasoning (3.66B, text only); GGUF and LiteRT-LM builds | **Non-commercial license**; "not a general assistant"; vendor-only benchmarks (see ledger 8 Oct); thinking needs 2048+ output tokens; LiteRT bundles capped at 4,096 context | Watchlist, shortlisted for a bounded S5 trial **after David resolves the license**; not downloaded |
 Qwen3.5-4B is being tested because of size and runtime fit, not because it is the newest Qwen generation. Do not infer that an architecture announcement or a Transformers integration proves downloadable small checkpoints exist.
 
 ## How to choose for the vault

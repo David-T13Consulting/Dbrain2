@@ -1,8 +1,8 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-01
-next_review: 2026-10-08
+last_reviewed: 2026-10-08
+next_review: 2026-10-15
 ---
 # Local speech recognition and speech output
 

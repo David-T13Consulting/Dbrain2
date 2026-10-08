@@ -1,8 +1,8 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-01
-next_review: 2026-10-08
+last_reviewed: 2026-10-08
+next_review: 2026-10-15
 ---
 # Local image generation and editing
 
@@ -15,6 +15,7 @@ All capability claims below come from the linked publishers. **None has been ben
 | **[FLUX.2 klein 4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)** | Compact generation plus multi-reference editing; suitable candidate for interactive image work | Publisher reports roughly 13 GB VRAM for its consumer-GPU setup. That is not a 13 GB total application budget or proof of sub-second generation on an M2 | Apache-2.0 for **4B**; do not transfer this to the 9B variant |
 | **[Z-Image-Turbo](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)** | 6B distilled generator, eight function evaluations; publisher emphasizes realistic images and English/Chinese text | Published sub-second latency uses an H800. French typography and Apple runtime support need tests; Turbo and editing/base variants have distinct roles | Apache-2.0 |
 | **[Qwen-Image-2.1](https://huggingface.co/Qwen/Qwen-Image-2.1)** | Recently verified generation/editing entry; native RGBA/transparency, local edits and multiple reference images | 7B refers to the visual generation component, not necessarily the whole pipeline. New dependencies and Apple fit are unverified | **Qwen Research License**, custom; do not assume prior Qwen image licenses carry forward |
+| **[Qwen-Image-2.1-PE-I2I / PE-T2I](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I)** | Companion prompt-rewriter (fine-tuned Qwen3.5-VL 9B, BF16) that turns vague edit or generation instructions into precise prompts for Qwen-Image-2.1; created 20 Sep 2026 | Adds a 9B model to the 7B generator; no benchmarks reported; CUDA/transformers examples only, Apple fit unverified | Qwen Research License (as reported 8 Oct); same caution as the parent |
 | **[FLUX.1 schnell](https://huggingface.co/black-forest-labs/FLUX.1-schnell)** | Established 12B few-step text-to-image baseline | Larger weights than compact candidates; fast sampling does not imply low total memory. Keep as a historical comparator rather than assuming it is current best | Apache-2.0; distinct from FLUX.1 dev terms |
 
 Check the exact license file before selecting a professional-use artifact; model availability and permission to deploy it are separate questions. No legal conclusion about the custom Qwen license is made here.

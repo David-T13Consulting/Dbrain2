@@ -1,8 +1,8 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-01
-next_review: 2026-10-08
+last_reviewed: 2026-10-08
+next_review: 2026-10-15
 ---
 # Local AI source register
 
@@ -51,5 +51,23 @@ Primary publisher model cards retrieved 1 October 2026. Revision links preserve 
 No model weights, audio, images or runtime binaries live in the vault. The evidence archive is durable relative to temporary storage, but an independent backup/restore policy is still a project task. A preserved source snapshot is evidence, never an instruction to execute embedded installation commands.
 
 Scope limits: this review prioritizes feasible personal-system components. It does not survey every available model, certify licensing, reproduce publisher benchmarks or establish Apple compatibility for every candidate. Unknowns are research tasks, not implied successes.
+
+## Weekly check — 8 October 2026
+
+All 17 repositories above were re-queried through the Hugging Face model API: the commit `sha` and declared license match the revisions in the table (no change since 1 Oct). Last-modified dates observed: Qwen3.8-27B 2026-08-14, Gemma 4 E4B 2026-07-20, Qwen3.5-4B 2026-03-02, Qwen-Image-2.1 2026-09-30 (same sha), Parakeet v3 2026-08-05, Ministral 3 8B 2026-07-15, others earlier.
+
+New primary sources reviewed this week (not pinned in the table, because not yet candidates for adoption; API `sha` shown):
+
+| Source | Revision / date | License |
+|---|---|---|
+| [`webAI-Official/TwIL-LM3-Pro`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro) | `4214aaa4020c`, modified 2026-09-30 | webAI Non-Commercial License 1.0 (`other`) |
+| [`webAI-Official/TwIL-LM3-Pro-LiteRT-LM`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro-LiteRT-LM) | `bb30df2e79d4`, created 2026-10-01 | same |
+| [`mradermacher/TwIL-LM3-Pro-GGUF`](https://huggingface.co/mradermacher/TwIL-LM3-Pro-GGUF) | community static quants; no date shown | same (declared) |
+| [`webAI-Official/TwIL-LM3`](https://huggingface.co/webAI-Official/TwIL-LM3) | modified 2026-10-01 | same |
+| [`Qwen/Qwen-Image-2.1-PE-I2I`](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I) | created 2026-09-20 | Qwen Research License |
+| [`Qwen/Qwen-Drive-1.0-4B`](https://huggingface.co/Qwen/Qwen-Drive-1.0-4B) | created 2026-08-27 | apache-2.0 |
+| [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases), [mlx-lm releases](https://github.com/ml-explore/mlx-lm/releases), [whisper.cpp releases](https://github.com/ggml-org/whisper.cpp/releases) | read 8 Oct (see ledger) | MIT / MIT / MIT (not re-verified) |
+
+Evidence archive: no new model-card snapshots were saved outside the vault this week; the findings above come from live pages retrieved 8 Oct and should be re-fetched before relying on them.
 
 Related: [[30 Resources/Local AI/README]] · [[90 System/weekly-local-model-review]]

@@ -5,7 +5,8 @@ review_status: codex-reviewed
 # Working Memory — AI Second Brain Project
 
 > **START HERE** if you are a Claude session entering this folder.
-> Read this file → then `PROGRESS.md` (state) → then `TASKS.md` (what's next).
+> Read this file → then `PROGRESS.md` (state, last three sessions) → then `TASKS.md` (open items, one line each) → then `../../90 System/handoff.md` (open entries) and `../../90 System/for-david.md` (open questions).
+> Look up decisions in `DECISIONS.md`. Open the archives (`PROGRESS-archive.md`, `TASKS-archive.md`, `../../90 System/for-david-archive.md`, closed handoff entries in `../../log.md`) only when you need history.
 > Deep detail lives in `memory/`. Don't re-read the source material unless asked.
 
 ## Me
@@ -57,6 +58,8 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 | `01_Key_Topics_Summary.md` | What the webinar said (1 correction applied) |
 | `00_Source_Material.md` | Pointer to the raw source archive (screenshots, PDFs) — kept outside the vault, not git-tracked |
 | `TASKS.md` · `PROGRESS.md` · `OPEN_QUESTIONS.md` | State — read these to resume |
+| `DECISIONS.md` | The decision log (D1 onwards); the lead appends new rows here |
+| `PROGRESS-archive.md` · `TASKS-archive.md` | Sessions 1–35 and the pre-8 Oct task list, verbatim; history only |
 
 ## Terms
 
@@ -106,7 +109,8 @@ Triage happens later, in a deliberate weekly pass. Capture ≠ processing.
 ## Session close protocol
 
 Before ending any working session, update:
-- `PROGRESS.md` — session log entry, current state, any decision made
+- `PROGRESS.md` — session log entry and current state; move the oldest session to `PROGRESS-archive.md` so three remain
+- `DECISIONS.md` — any decision made
 - `TASKS.md` — tick what's done, add what surfaced
 - `OPEN_QUESTIONS.md` — resolve or add
 

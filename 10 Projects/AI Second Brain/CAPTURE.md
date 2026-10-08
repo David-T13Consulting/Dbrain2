@@ -41,7 +41,7 @@ That's it. No decisions required from you while walking.
 | `capture: …` | Raw dump to inbox. No processing. |
 | `task: …` | Appends to `TASKS.md` backlog |
 | `question: …` | Appends to `OPEN_QUESTIONS.md` |
-| `decision: … because …` | Appends to the decision log in `PROGRESS.md` |
+| `decision: … because …` | Appends to the decision log in `DECISIONS.md` |
 | *"what's next?"* | Reads `TASKS.md`, replies with the next action only |
 | *"where am I?"* | Two-line status from `PROGRESS.md` |
 

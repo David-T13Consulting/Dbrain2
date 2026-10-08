@@ -16,8 +16,11 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|local comparison and retrieval, 1 Oct]] — second model, lexical retrieval baseline, failures and preserved evidence · internal
 - [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|local benchmark, 1 Oct]] — measured M2/24 GiB hardware and first local-model development results; limitations and external artifact pointers · internal
 - [[10 Projects/AI Second Brain/CLAUDE|CLAUDE]] — working memory for the project; read first · internal
-- [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] — current state, decision log (append-only), session log · internal
-- [[10 Projects/AI Second Brain/TASKS|TASKS]] — task list with the next action at the top · internal
+- [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] — current state, metrics, last three sessions · internal
+- [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]] — the decision log, D1 onwards (append-only) · internal
+- [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]] — sessions 1–35, verbatim · internal
+- [[10 Projects/AI Second Brain/TASKS|TASKS]] — open items, one line each, next action at the top · internal
+- [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]] — snapshot of the task list before 8 Oct: done items, legacy plan, original wording · internal
 - [[10 Projects/AI Second Brain/OPEN_QUESTIONS|OPEN_QUESTIONS]] — what blocks work and who can answer · internal
 - [[10 Projects/AI Second Brain/CAPTURE|CAPTURE]] — on-the-go capture protocol · internal
 - [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] — S1–S6 delivery plan for local inference, remote voice/text, governed wiki updates and operations; original H1/H2/H3 retained · internal
@@ -146,6 +149,7 @@ Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–
 - [[90 System/README|README]] — vault conventions for humans · internal
 - [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the lead to commit · internal
 - [[90 System/for-david|for-david]] — the single decision queue: every question for David, from any agent (D68) · internal
+- [[90 System/for-david-archive|for-david-archive]] — answered entries up to 8 Oct, verbatim · internal
 - `90 System/briefs/` — one brief per task handed between agents (D63). [[90 System/briefs/_template|_template]] · [[90 System/briefs/D63-adopt-orchestration|D63]] · [[90 System/briefs/D64-model-policy|D64]] · [[90 System/briefs/D65-stop-conditions|D65]] · [[90 System/briefs/P2.2|P2.2]] · [[90 System/briefs/P2.1-review|P2.1-review]] · [[90 System/briefs/T3.4-taxonomy-v2|T3.4-taxonomy-v2]] · [[90 System/briefs/D68-single-front-door|D68]] · [[90 System/briefs/D-cowork-7-personal-data-waves|D69 personal-data waves]] · [[90 System/briefs/T9-M6-model-comparison|T9-M6 model comparison]] · [[90 System/briefs/MVP-phone|MVP-phone (P2.4)]] · [[90 System/briefs/M1-backup-push|M1 backup and push]] · [[90 System/briefs/P2.6-date-resolution|P2.6 date resolution]] (proposed) · [[90 System/briefs/P2.6-phrase-set|P2.6 phrase set]] (draft, for David to validate) · [[90 System/briefs/P2.7-failure-capture-loop|P2.7 failure-capture loop]] (proposed) · [[90 System/briefs/Q77-force-push-deny-list|Q77 force-push deny list]] (draft, for David's OK) · [[90 System/briefs/project-alignment|project alignment]] (parked until P2.5 progresses) · [[90 System/briefs/M6b-embedding-eval|M6b embedding test]] (after T9/M6) · all internal
 - [[90 System/lint-checklist|lint-checklist]] — weekly wiki health check, with countable results · internal
 - [[90 System/skills/classify-session/SKILL|classify-session]], [[90 System/skills/weekly-assessment/SKILL|weekly-assessment]], [[90 System/skills/race-readiness/SKILL|race-readiness]] — the three showcase skills · internal

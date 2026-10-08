@@ -13,7 +13,7 @@ Building a personal AI system that works — and that stands up as proof of expe
 ## 🚀 Resuming? Start here
 
 1. **`CLAUDE.md`** — who, what, standing rules *(a Claude session should read this first)*
-2. **`PROGRESS.md`** — current state, decision log, last session
+2. **`PROGRESS.md`** — current state, last three sessions (decisions in `DECISIONS.md`)
 3. **`TASKS.md`** — ▶ Next action is at the top
 4. **`OPEN_QUESTIONS.md`** — anything now answerable?
 

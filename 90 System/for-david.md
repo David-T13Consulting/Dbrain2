@@ -18,6 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
+| Q83 | lead (Claude Code), 8 Oct, session 38 | D104; [[90 System/handoff]] 13:50 entry | **May the lead delete the local review branch with `git branch -D`?** `-d` refuses ("not fully merged") only because the commits were cherry-picked with new hashes; the branch's content is identical on `master` (`061766b`). | **(a) Recommended:** yes, `-D` for this branch only · (b) David deletes it himself | Closing D104 | whenever |
 
 ## Answered (since 8 Oct)
 

@@ -742,3 +742,11 @@ Previous batch, 1 Oct 2026 (session 12). Four entries became three commits:
 `index.md`, `log.md`, `PROGRESS.md` and `OPEN_QUESTIONS.md` each held edits belonging to more than one entry; they were split hunk by hunk and the working tree was verified byte-identical to Cowork's final versions afterwards.
 
 History is linear and the two stale topic branches are gone, per D50. **Not pushed:** `master` is ahead of `origin/master` by several commits (the D63–D65 work of sessions 13 and 14). The session-13 note that said everything was pushed was wrong — that applied to the session-12 batch only.
+
+## [2026-10-08] session | Session 38: Q82 landed (D104); tracking files split per David's layout
+**What changed for David:** the weekly review and the EmbeddingGemma 2 note are in the vault; the files every session reads are a fraction of their old size, with nothing deleted; the old review branch waits for him to delete it. T9 is next.
+Detail: `8c661a4`, `fe9d899`, `f2751c1` and this close; Codex `gpt-6.1-sol` (high, read-only). [[10 Projects/AI Second Brain/PROGRESS]] session 38.
+
+## [2026-10-08] decision | Q83 queued: local review branch needs `-D`
+**What changed for David:** the old review branch could not be deleted the safe way, because its commits were copied onto master under new names; its content is all on master. He decides whether the lead force-deletes it locally (Q83) and deletes the GitHub copy himself.
+Detail: Cowork's 13:50 handoff entry (David, 13:49); `git branch -d` refused; [[90 System/for-david]] Q83.

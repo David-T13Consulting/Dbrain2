@@ -83,7 +83,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` Automate lint at S3; fixes stay approval-gated
 - [ ] `@cowork` **Project-alignment**, parked until P2.5 shows progress; touches many notes, so David approves the exact diff (hard limit) — [[90 System/briefs/project-alignment|brief]]
 - [ ] `@cowork` **Client-tier vault scaffold**, week of 12 Oct, after T0.7 is drafted; needs David's folder grant; a separate vault, never inside Dbrain2; no build work in Dbrain2 or the runtime from this task — [[10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements|requirements]]
-- [ ] `@david` Delete branch `cowork/local-model-review-2026-10-08` (local and origin); the settings refused the lead (D104)
+- [ ] `@david` Branch `cowork/local-model-review-2026-10-08`: delete it on GitHub; answer Q83 (local `-D`, since `-d` refuses after the cherry-pick) (D104)
 
 ## Backlog / someday
 - [ ] `@david` Second domain, after the H1 gate (OQ-11)

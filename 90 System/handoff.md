@@ -46,6 +46,44 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 > 5. **P2.7 build is unblocked** by the policy approval; sequence it after P2.4 follow-ups per TASKS. Untracked, leave alone: `.claude/settings.local.json`.
 > 6. **Added 8 Oct (Cowork): commit the client-tier requirements note** `10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements.md` (new, `internal`, `review_status: proposed`, names no client or person; Tier 1 client-material check before commit). Message: `Add client-tier workspace requirements (proposed)`. Then add to TASKS, all **week of 12 Oct**, not before: (a) widen **T0.7** to "Tower13 subcontract AI-use clause + processing annex, Belgian lawyer review, signed before 2 Nov" (`@cowork` draft, `@david` + lawyer); (b) new **client-tier vault scaffold** (`@cowork`, needs David's folder grant, after T0.7 is drafted); (c) link R3–R7 (recording pipeline) to P4.3 as a pull-forward candidate, decision after T9/M6. No build work.
 
+**Lead → Cowork, 8 Oct (session 37): review findings on your 8 Oct model content, for you to fix.** Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only. Both pieces are Tier 2 (model claims): after your fixes the lead re-reviews, then David approves the content (Q78 (a), D101), then the lead lands them. Nothing landed; the branch `cowork/local-model-review-2026-10-08` (`f25aa64`) and `30 Resources/Local AI/embeddinggemma-2-evaluation.md` are untouched. When you fix the branch content, leave the edits uncommitted in the working tree (no git) and list them in this queue; the lead lands them with the ledger sentence you asked for (3b). Findings as given (A = `f25aa64`, B = the EmbeddingGemma note):
+
+> **A — Weekly local-model review**
+>
+> **Tier check:** Tier 2 confirmed: model, benchmark and licence claims. Q78(a) permits this content review and later landing by the lead; it does not approve the content or model deployment. Locations below refer to `f25aa64`.
+>
+> | # | Check | file:line | Finding | Severity |
+> |---|---|---|---|---|
+> | 1 | R4 — Provenance | `30 Resources/Local AI/benchmark-ledger.md:49`; `sources.md:66` | The TwIL-LM2 creation-date/base-model claims have no matching source in the register. “Publisher-reported” is attribution, not a citation or `unverified` tag. Add the exact TwIL-LM2 repository/API citation and revision; distinguish it from the older model named TwIL-LM2 in `webAI-Official/TwIL-LM`. | blocker |
+> | 2 | R4 — Benchmark conditions | `30 Resources/Local AI/benchmark-ledger.md:46` | The cited [TwIL-LM3-Pro card](https://huggingface.co/webAI-Official/TwIL-LM3-Pro) specifies a retry at 4,096 tokens for truncated Track A rows and a 4,096-token Track B generation cap. Include these. Also describe 11.1 answers/s as the card’s derived throughput measure, rather than measured request completion throughput. | should-fix |
+> | 3 | R4/R7 — Shortlist and eligibility | `30 Resources/Local AI/benchmark-ledger.md:57`; `README.md:42` | “Only candidate with a plausible edge” overstates the evidence for S5 evidence checking. Frame it as an unverified transfer hypothesis from formal-logic results. Explicitly preserve T9’s watchlist-only status: David’s preference alone does not establish a licence allowing the commercial demo, amend T9’s candidates or authorize a download. | should-fix |
+> | 4 | R4 — Source coverage | `30 Resources/Local AI/image-models.md:18`; `sources.md:67` | The combined PE-I2I/PE-T2I claim links only PE-I2I. Add the [PE-T2I card](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I) and each artifact’s revision/date. | should-fix |
+> | 5 | R7/R9 — Weekly procedure | `index.md:104`; `90 System/weekly-local-model-review.md:14` and `:54` | The index still says activation is pending; the runbook still says first output is absent and first-run verification is pending. Reconcile these with the new operating record. Record duration, or explicitly “not recorded.” Coverage gaps are disclosed, but metadata checks do not complete the required publisher-collection/release-note review. | should-fix |
+> | 6 | R7/R9 — Requested landing addition | `30 Resources/Local AI/benchmark-ledger.md:55` | Add the requested sentence before “Shortlist,” citing `for-david.md`’s recorded answer: David calls the POC non-commercial and wants the model in the demo; licence coverage remains unresolved, with written webAI confirmation or a lawyer’s read advisable. This agrees with the restriction in [LICENSE §3.3](https://huggingface.co/webAI-Official/TwIL-LM3-Pro/blob/main/LICENSE.md). | should-fix |
+> | 7 | R10 — Rendering | `30 Resources/Local AI/text-and-vision.md:21` | The blank line separates the TwIL row from the Markdown table. Remove it. | nit |
+>
+> No prohibited data or classification violation found. The two-candidate limit and separate experiment authorization are preserved. Cowork’s earlier git violation is already addressed by Q78’s recovery route.
+>
+> **Verdict: fail** — finding 1 is a Tier 2 provenance blocker. Correct and re-review before David’s batched approval.
+>
+> **B — EmbeddingGemma 2 desk evaluation**
+>
+> **Tier check:** Tier 2 confirmed: model specifications, benchmark interpretation and licence claims.
+>
+> | # | Check | file:line | Finding | Severity |
+> |---|---|---|---|---|
+> | 1 | R4 — Source contradiction | `30 Resources/Local AI/embeddinggemma-2-evaluation.md:37` and `:40` | The [Google card](https://huggingface.co/google/embeddinggemma-2) labels **both** 78.68 and 68.76 “MTEB code v1.” Remove the assertion that their benchmark versions differ. Remaining harness/comparability uncertainty can still be stated. | blocker |
+> | 2 | R4 — Missing provenance | `30 Resources/Local AI/embeddinggemma-2-evaluation.md:19`, `:21`, `:38` and `:47` | Cite the unnamed secondary press source or tag the launch date `unverified`. Add explicit sources for predecessor licence/English-score claims and Qwen specifications/scores: [EmbeddingGemma-300m](https://huggingface.co/google/embeddinggemma-300m), [Qwen3-Embedding-0.6B](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B). The EmbeddingGemma 2 link does not support all these claims. | blocker |
+> | 3 | R4 — Unsupported negative claim | `30 Resources/Local AI/embeddinggemma-2-evaluation.md:40` | “No French-specific or note-retrieval result exists for either” exceeds the documented search. Say “none reported in the sources reviewed,” with citations, or tag it `unverified`. | blocker |
+> | 4 | R4/R10 — Interpretation | `30 Resources/Local AI/embeddinggemma-2-evaluation.md:40` and `:46` | Describe the 0.21-point gain as having **unknown statistical significance**; no variability estimate is supplied. A squash obscures earlier history but does not make the pinned commit mutable—distinguish that from changes to `main`. | should-fix |
+> | 5 | R7/R10 — Execution boundary | `30 Resources/Local AI/embeddinggemma-2-evaluation.md:49`–`:54` | Link M6b explicitly as the execution authority. Align the proposal with its label allowlist, separate corpus passes, network blocking, manifest requirements and output locations. M6b now records David’s scoped budget/environment approval; this desk note should neither grant nor redefine it. | should-fix |
+> | 6 | R7 — Note conventions | `30 Resources/Local AI/embeddinggemma-2-evaluation.md:1` | The new note lacks `source` and `note_type`, required by the project’s D59 convention. | should-fix |
+>
+> No prohibited data or classification violation found. The note explicitly gates downloads and installation; it authorizes neither.
+>
+> **Verdict: fail** — findings 1–3 block readiness for David’s batched approval. No files changed.
+> exit 0
+
 **Open carry-overs from runs A–E (lead, 8 Oct, session 36).** The run A–E blocks (Cowork → lead, 7 Oct 11:20 to 18:30) and the lead's session 31–35 notes were pruned once executed and committed; their record is in PROGRESS (sessions 31–35, D81–D88), `log.md` and git. Still open from them:
 - **For Cowork:** check the P2.7 wording the lead changed in session 35 (digest, class and synthetic equivalent only; no agent reads the failure store) is still what you meant ([[90 System/briefs/P2.7-failure-capture-loop|P2.7]]).
 - **For Cowork:** phrase-set should-fix from session 33: W1 ("menu this winter?") is labelled an accepted Q73 gap but was fixed in round 15, so it is a fixed regression case ([[90 System/briefs/P2.6-phrase-set|P2.6-phrase-set]]). The invariant point is tracked in P2.6's Review.

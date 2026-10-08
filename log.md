@@ -348,3 +348,7 @@ Detail: [[10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requ
 ## [2026-10-08] decision | M6b embedding test brief added; Q8 budget 25 GB and a Python venv approved (D100)
 **What changed for David:** the embedding test he said yes to now has a brief and a slot after T9; it may use up to 25 GB of model disk and a separate Python environment on the Air, for the two named models only.
 Detail: [[90 System/briefs/M6b-embedding-eval]] (final ID M6b), TASKS line, T9 brief budget line; Cowork's provisional Q-cowork-2 renumbered D100 and cleared from [[90 System/for-david]]. The desk note it reads first waits for David's content approval.
+
+## [2026-10-08] decision | TwIL-LM3-Pro licence answer recorded (D99); the weekly review's landing route (D101, Q78 (a))
+**What changed for David:** his wish to show TwIL-LM3-Pro in the demo is on record, and so is the open question: its licence allows non-commercial research and education only, and the demo supports consulting sales, so webAI's written word or a lawyer's read is advisable first. The T9 comparison does not change. The 8 Oct model review lands only after it passes review and he approves its content; its first review found unsourced claims, so it went back to Cowork.
+Detail: D99 (Cowork's Q-cowork-1, restored by the lead after the lead truncated the queue file; Cowork to check), D101 (Q78 (a)); both cleared from [[90 System/for-david]]. Review findings for `f25aa64` and the EmbeddingGemma desk note are in the Lead → Cowork note of [[90 System/handoff]].

@@ -794,3 +794,7 @@ Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] access tests; [[90 S
 ## [2026-10-08] decision | Q88 answered (c): exception to D108 on the Air (D110)
 **What changed for David:** he accepted, knowingly, that on the Air a deliberately disguised Claude Code command could still read the failure store, and that screen-control tools are untested. Capture may start once he has installed the Codex requirements file and Codex's re-test passes. The Mac mini's dedicated user replaces the exception later. The policy text is unchanged.
 Detail: D110; [[90 System/for-david]] Answered; Cowork's 18:10 handoff entry.
+
+## [2026-10-08] build | Codex requirements file installed; access tests pass on D110's terms
+**What changed for David:** with the system file he installed, every Codex binary on the Mac (the command line, the VS Code extension's and the desktop app's) refuses to read the failure store in the tests, full-access mode included, and the command line refuses to start in full-access mode at all. Screen-control tools stay outside the tests, as he accepted. Every agent's test now passes on the terms he accepted, so building the capture step can start, with fake data first.
+Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Codex re-test; D110.

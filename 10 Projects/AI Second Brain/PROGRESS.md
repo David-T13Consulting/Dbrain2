@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 8 Oct 2026 · **Updated by:** Claude Code (session 38, lead loop: Q81 and D103 recorded; weekly review and EmbeddingGemma note landed (Q82 (a), D104); maintenance split of the tracking files)
+**Last updated:** 8 Oct 2026 · **Updated by:** Claude Code (session 39, T9/M6 run, judged and reported; Q84, Q85 queued)
 
 ---
 
@@ -17,7 +17,7 @@ review_status: codex-reviewed
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | **T9/M6 with David, per [[90 System/briefs/T9-M6-model-comparison\|T9/M6]] (D102)**, before P2.7 (D94). Its result sizes the host: option B, 48–64 GB, up to €4,000, by the D95 rule, ordered by Fri 16 Oct. Then M6b (D100), then P2.7 on David's go. **Session 38 (8 Oct):** the 8 Oct weekly review and the EmbeddingGemma 2 desk note are in the vault (Q82 (a), D104); the tracking files are split per David's layout (decisions in [[10 Projects/AI Second Brain/DECISIONS\|DECISIONS]], older sessions and tasks in the archives). Open with David: delete branch `cowork/local-model-review-2026-10-08` (the settings refused the lead); phone re-check (P2.4); P2.6 phrase set; TwIL-LM3-Pro licence (D99). Earlier history: [[10 Projects/AI Second Brain/PROGRESS-archive\|PROGRESS-archive]] |
+| **Next action** | **T9/M6 ran 8 Oct (session 39): the rule picks C2, Gemma 4 E4B** ([[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08\|results]]). David decides the default model (Q84) and the host, ordered by Fri 16 Oct (Q85, D95). Then M6b (D100), then P2.7 on David's go. **Session 38 (8 Oct):** the 8 Oct weekly review and the EmbeddingGemma 2 desk note are in the vault (Q82 (a), D104); the tracking files are split per David's layout (decisions in [[10 Projects/AI Second Brain/DECISIONS\|DECISIONS]], older sessions and tasks in the archives). Open with David: delete branch `cowork/local-model-review-2026-10-08` (the settings refused the lead); phone re-check (P2.4); P2.6 phrase set; TwIL-LM3-Pro licence (D99). Earlier history: [[10 Projects/AI Second Brain/PROGRESS-archive\|PROGRESS-archive]] |
 | **Action for David** | **All six session-14 questions are answered and recorded** — his standing actions below are unaffected: D64 closed, the `dbrain-runtime` repository authorised (now `~/Work/dbrain-runtime/`), batch 04 scored by `@cowork`, and Q5/Q6 answered through the [[90 System/for-david|for-david]] queue on its first use — Codex may read the 6 reserved cases read-only (P2.1 unblocked), and nothing changes on David's side for interactive Codex (D68 closed). Then: paste the weekly-review task ID and first-run output into [[90 System/weekly-local-model-review|weekly-local-model-review]] (D60). Decide the always-on host purchase (D53; 32 GB recommended). OQ-20 is answered (queue Q10, 5 Oct); OQ-21 was not needed — David decided it himself as D66. |
 
 ### Original work-package progress — retained snapshot
@@ -59,7 +59,7 @@ Not yet instrumented as a service. Start platform measurement at S2; retain runn
 
 ## Decisions and older sessions
 
-Moved verbatim on 8 Oct 2026 (session 38, David's maintenance layout): [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]] holds D1 onwards. Sessions 1–35 are in [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]]; this file keeps the last three sessions.
+Moved verbatim on 8 Oct 2026 (session 38, David's maintenance layout): [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]] holds D1 onwards. Sessions 1–36 are in [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]]; this file keeps the last three sessions.
 Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 
 
@@ -68,6 +68,19 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 39 — 8 Oct 2026 · Claude Code, T9/M6 run with David (handoff item 2)
+**Authorization:** David, about 14:00: "start T9 following handoff item 2 and the frozen protocol", confirming the window conditions (on power, lid open, Low Power Mode off, `Ask Brain.command` stopped, nothing heavy, no Codex during the run); `caffeinate -dimsu` around the whole run; pins re-checked against `dry-2026-10-08-final` before block 1; after T9, `.claude/settings.local.json` into `.gitignore`. **Ended by** the instruction's end: T9 measured, judged and reported; the choice is David's. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+
+**What changed for David:** T9 is done. The frozen rule picks **Gemma 4 E4B (C2)**: the only one of the four that never cited evidence wrongly, and the fastest (p95 10.1 s on the Air, still over the 8 s target). Two decisions are his: adopt it as the default (Q84), and which host to order by 16 Oct (Q85: Mac mini M5 Pro 64 GB / 1 TB recommended, €3,649). The Air was free again at 14:46.
+
+- **Run `2026-10-08-a`:** 14:00:53–14:45:45, 9/9 blocks ok, no drift (−0.3 %), all pins matched before block 1 and the pre-run manifest equals the dry one except its start time. Results note [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|t9-model-comparison-2026-10-08]] (draft, Q7).
+- **Judging:** the lead's verdicts were saved before Codex ran; Codex judged a masked packet blind. Safety: B0, C1 fail (both judges), C3 fails (one Codex-only finding; the pick is the same either way), C2 passes, Q 5/8. Disagreements listed in the note for David.
+- **D95 sizing (Q85):** the pick alone sizes to 22.8 GB (→ 24 GB); the 48–64 GB band rests on layer 6, which has no named model; TTS and service memory are `unverified` estimates.
+- **`.gitignore`:** `.claude/settings.local.json` added (it was already ignored by David's global git ignore on this Mac, not by the repo).
+- **Not done:** the handoff's branch entry still waits on Q83 (`-D`). A `caffeinate -ims` (PID 53896) from an earlier session was running before this run and was left alone.
+
+**Pick up at:** Q84 and Q85 with David (host order by 16 Oct); then M6b (D100); P2.7 on David's go.
 
 ### Session 38 — 8 Oct 2026 · Claude Code, lead loop (Q81/D103 records; Q82 landing; tracking-file maintenance)
 **Authorization:** "pick up the loop" from David, with Q82 (a) ("approve both; land per D101") and his maintenance layout (8 Oct 11:10). **Ended by** the instruction's end: everything before T9 is done; T9 (handoff item 2) and item 6 remain, in a fresh session. The run stalled from about 11:25 until David resumed it, past the 12:40 stop and D102's 13:00 slot; one Codex call (about 13:25–13:47) ran after 13:00, while T9 had not started. On David's "ignore timing, finalize anything needed before T9", the TASKS review and this close were finished. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
@@ -100,22 +113,6 @@ Newest first. One entry per working session — what happened, what changed, whe
 - **Push:** runtime `ae934d5` pushed; the vault is pushed (non-force) after this close commit and checked for 0 ahead / 0 behind.
 
 **Pick up at:** Q81 (T9 Friday or Monday, with David); Cowork's fixes to the model content, then re-review and David's content OK; the week of 12 Oct items (T0.7, client-vault scaffold).
-
-### Session 36 — 8 Oct 2026 · Claude Code, lead loop (records; prune; Q77 draft; lint exemption; client-tier note)
-**Authorization:** "pick up the loop" from David, with the handoff's 7 Oct ~19:30 block (items 1–6), a prune of executed blocks (runs A–E), and commit and push. **Ended by** David's 09:11 order (D94): items 1–4, 6 and the prune, then stop; item 5 (P2.7) not started. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
-
-**What changed for David:** his failure-store text is now policy (v0.6), and AGENTS.md says the lead pushes without asking. The exact force-push deny list waits for his OK (Q79). The client-tier note passed review but carries legal points nobody has checked yet (tagged `unverified`), so it waits for his OK too (Q80). The weekly model review committed to a side branch on its own; he decides how it lands (Q78). No host is bought until T9/M6 (deadline 16 Oct), and T9 needs a window with him.
-
-- **Item 1:** `8990bbe`, records batch (AGENTS.md, data-policy v0.6, for-david, handoff; D89–D93; five answers cleared; Q78). Tier 2, approved by David. Review round 1 FAIL (D93 claimed applied; Q78 tier too low), fixed; round 2 PASS.
-- **Prune:** `51f332f`, "Prune executed handoff blocks (runs A–E)"; three open items carried over. Tier 0; round 1 FAIL (session 32 note missed), fixed; round 2 PASS.
-- **Item 2:** `f4b09ab`, [[90 System/briefs/Q77-force-push-deny-list|Q77 deny list]] draft (13 wildcard rules) and Q79; settings unchanged. Round 1 FAIL (a final `:*` is Claude Code's trailing-wildcard suffix), fixed; round 2 PASS.
-- **Item 3:** `a8a641f`, lint M5 exemption for HTML render sources. Round 1 PASS.
-- **Item 4:** Q30 (b) in TASKS (no purchase; 16 Oct deadline; T9/M6 sizes it).
-- **Item 6:** client-tier note, `note_type: requirements` (David's option). Review raised it to **Tier 2** (uncited legal and contract claims): the lead tagged them `unverified`, cited the whole-vault indexing, and marked the R3 audio timing as a proposed rule that differs from D58; round 3 PASS. **Not committed**: it and its index line wait for David (Q80). The three TASKS entries (T0.7 widened, client-vault scaffold, R3–R7 → P4.3) are in, all for the week of 12 Oct.
-- **Weekly review incident (Q78):** at 09:03 the scheduled Cowork review created `cowork/local-model-review-2026-10-08`, switched this working tree to it and committed there (now `f25aa64`), sweeping in one lead log entry, which it later removed. The lead pointed HEAD back at `master` (`git symbolic-ref`, no file changed) and left the branch untouched. Cowork kept editing during the run (an Inbox capture deleted, `20 Areas/Tower13/`, `30 Resources/AI Vendors/`, a `project-alignment` brief, a handoff entry, a provisional queue entry): none of it is in this run's commits; the lead's read-only check found all three new notes `internal`.
-- **Push:** the vault is pushed (non-force) right after this close commit and checked for 0 ahead / 0 behind; runtime unchanged this run.
-
-**Pick up at:** Cowork's handoff block with David's decisions; Q78, Q79, Q80; scheduling T9 with David.
 
 
 ---

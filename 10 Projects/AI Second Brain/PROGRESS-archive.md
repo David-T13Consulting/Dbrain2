@@ -1,14 +1,30 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35, moved verbatim 8 Oct 2026 (session 38)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39)
 review_status: codex-reviewed
 created: 2026-09-07
 updated: 2026-10-08
 ---
-# Progress archive — sessions 1–35
+# Progress archive — sessions 1–36
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 36 — 8 Oct 2026 · Claude Code, lead loop (records; prune; Q77 draft; lint exemption; client-tier note)
+**Authorization:** "pick up the loop" from David, with the handoff's 7 Oct ~19:30 block (items 1–6), a prune of executed blocks (runs A–E), and commit and push. **Ended by** David's 09:11 order (D94): items 1–4, 6 and the prune, then stop; item 5 (P2.7) not started. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+
+**What changed for David:** his failure-store text is now policy (v0.6), and AGENTS.md says the lead pushes without asking. The exact force-push deny list waits for his OK (Q79). The client-tier note passed review but carries legal points nobody has checked yet (tagged `unverified`), so it waits for his OK too (Q80). The weekly model review committed to a side branch on its own; he decides how it lands (Q78). No host is bought until T9/M6 (deadline 16 Oct), and T9 needs a window with him.
+
+- **Item 1:** `8990bbe`, records batch (AGENTS.md, data-policy v0.6, for-david, handoff; D89–D93; five answers cleared; Q78). Tier 2, approved by David. Review round 1 FAIL (D93 claimed applied; Q78 tier too low), fixed; round 2 PASS.
+- **Prune:** `51f332f`, "Prune executed handoff blocks (runs A–E)"; three open items carried over. Tier 0; round 1 FAIL (session 32 note missed), fixed; round 2 PASS.
+- **Item 2:** `f4b09ab`, [[90 System/briefs/Q77-force-push-deny-list|Q77 deny list]] draft (13 wildcard rules) and Q79; settings unchanged. Round 1 FAIL (a final `:*` is Claude Code's trailing-wildcard suffix), fixed; round 2 PASS.
+- **Item 3:** `a8a641f`, lint M5 exemption for HTML render sources. Round 1 PASS.
+- **Item 4:** Q30 (b) in TASKS (no purchase; 16 Oct deadline; T9/M6 sizes it).
+- **Item 6:** client-tier note, `note_type: requirements` (David's option). Review raised it to **Tier 2** (uncited legal and contract claims): the lead tagged them `unverified`, cited the whole-vault indexing, and marked the R3 audio timing as a proposed rule that differs from D58; round 3 PASS. **Not committed**: it and its index line wait for David (Q80). The three TASKS entries (T0.7 widened, client-vault scaffold, R3–R7 → P4.3) are in, all for the week of 12 Oct.
+- **Weekly review incident (Q78):** at 09:03 the scheduled Cowork review created `cowork/local-model-review-2026-10-08`, switched this working tree to it and committed there (now `f25aa64`), sweeping in one lead log entry, which it later removed. The lead pointed HEAD back at `master` (`git symbolic-ref`, no file changed) and left the branch untouched. Cowork kept editing during the run (an Inbox capture deleted, `20 Areas/Tower13/`, `30 Resources/AI Vendors/`, a `project-alignment` brief, a handoff entry, a provisional queue entry): none of it is in this run's commits; the lead's read-only check found all three new notes `internal`.
+- **Push:** the vault is pushed (non-force) right after this close commit and checked for 0 ahead / 0 behind; runtime unchanged this run.
+
+**Pick up at:** Cowork's handoff block with David's decisions; Q78, Q79, Q80; scheduling T9 with David.
 
 ### Session 35 — 7 Oct 2026 · Claude Code, lead loop, run E (records; branch protection; MVP-phone; P2.6 files in scope)
 **Authorization:** "pick up the loop" from David; the handoff's Cowork → lead block of 7 Oct ~18:30 releases run E (records batch incl. settings, branch protection with `gh`, one MVP-phone review that blocks only on security or a wrong supported date, P2.6 files in scope on paper, close, commit and push). **Ended by** the block's end (all steps run). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.

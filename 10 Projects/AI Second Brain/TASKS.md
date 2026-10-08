@@ -10,8 +10,8 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 
 ## ▶ Next action
 
-- [ ] `@code` **T9 · S2 model comparison, today 13:00 with David (D102)**, before P2.7 (D94); result sizes the host, ordered by 16 Oct (D95) — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
-- [ ] `@david` **After T9:** host order inside €4,000 (D95) · go for P2.7 · phone re-check after restarting `Ask Brain.command` (P2.4) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
+- [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
+- [ ] `@david` **After T9:** adopt the default model (Q84) · host order inside €4,000 by 16 Oct (Q85, D95) · go for P2.7 · phone re-check after restarting `Ask Brain.command` (P2.4) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
 - [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct:** has anything shipped out of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS
 
 ## S1 · Align architecture
@@ -73,7 +73,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 
 ## Local model knowledge
 - [ ] `@code` **M5** Retrieval corpus with D49 retention evidence; bilingual query expansion; expected evidence reviewed independently; keep original failures and untouched provisional cases
-- [ ] `@code` **M6** Another model family under comparable conditions (with T9); set separate voice fixtures and resource budgets before downloading any other modality model — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
+- [x] `@code` **M6** Another model family under comparable conditions (with T9): Gemma 4 E4B and Ministral 3 8B measured 8 Oct; set separate voice fixtures and resource budgets before downloading any other modality model — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline, after T9, never alongside it (D94, D100); downloads only as pinned in the brief's manifest — [[90 System/briefs/M6b-embedding-eval|M6b]]
 
 ## Wiki and vault upkeep

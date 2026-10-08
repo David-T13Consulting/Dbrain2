@@ -2,8 +2,8 @@
 classification: internal
 task: T9 / M6
 owner: "@code"
-status: open   # Q81 (a) answered, D102: run 8 Oct 13:00 with David present; ready 8 Oct, nothing scored
-models: ["claude-opus-5-5 (lead, draft; readiness 8 Oct)", "gpt-6.1-sol (review rounds 1-3; runner review rounds 1-4, 8 Oct)"]
+status: blocked-on-david   # run 2026-10-08-a done and judged; the choice of model (Q84) and the host (Q85) are David's
+models: ["claude-opus-5-5 (lead, draft; readiness 8 Oct; run, lead judge and report 8 Oct)", "gpt-6.1-sol (review rounds 1-3; runner review rounds 1-4, 8 Oct; blind re-judge and report review 8 Oct)"]
 created: 2026-10-05
 updated: 2026-10-08
 source: TASKS T9 and M6; D56; D64; Q8 (M6 budget); P2.2 run B and the 5 Oct latency sweep
@@ -77,6 +77,7 @@ Stated here in full, independent of the P2.2 results note, which is **uncommitte
 - `~/Work/dbrain-runtime/` (code, experiments, `artifacts/`); model files outside the vault next to the existing ones.
 - A new dated results note in `10 Projects/AI Second Brain/02_Architecture/` (`review_status: draft`, as Q7), with its `index.md` / `log.md` entries.
 - This brief; TASKS T9 and M6 lines; `90 System/for-david.md` (the result and the duplicate-file question go to the queue).
+- Session-close bookkeeping, the lead's lane (AGENTS.md): `PROGRESS.md` and `PROGRESS-archive.md`, `90 System/handoff.md` (added 8 Oct, session 39; the protocol is unchanged).
 - **Not in scope until David confirms:** `30 Resources/Local AI/` (benchmark ledger, text-and-vision). Q8 authorises bounded downloads and Q7 a draft results note; neither authorises new structured knowledge in 30 Resources (rule 8). The lead proposes those rows in the queue.
 
 ## Inputs / context to read first
@@ -109,6 +110,8 @@ Reviewer: Codex `gpt-6.1-sol`, effort `high`, read-only; David switched the revi
 
 **Round 3 (5 Oct, `gpt-6.1-sol`): PASS.** No blocker. Should-fixes applied before commit: RSS sampling and window frozen; which blocks count stated; the log summary matched to the latency-band rule. Nit: review history kept together with per-round models.
 
+**Run report, 8 Oct (session 39), Codex `gpt-6.1-sol`, high, read-only, Tier 2, checked against the raw evidence.** Round 1 FAIL: five blockers (session-close files outside the scope list; prompt-token range wrong; whisper figure stated as a ceiling; the 30B layer-6 illustration presented categorically in Q85's options; an unsourced "within noise" claim), two should-fixes (exact URL for the €3,649 price, €3,429 marked as a calculation; "two blind judges" → only Codex was blind), one nit (archive catalog 1–35). All fixed. Round 2 PASS; one should-fix (this review record), applied. Reviewer's limitation: the retailer page for €3,649 was unreachable from its sandbox, so that price was checked by the lead only (8 Oct) and should be re-checked on apple.com/fr when ordering.
+
 ## Outcome
 **6 Oct:** run `2026-10-06-a` stopped after 2 of 9 blocks by David's clean-up directive; no result. Its two blocks are void for the comparison (the runner has since changed); the protocol restarts from block 1.
 
@@ -125,3 +128,12 @@ Reviewer: Codex `gpt-6.1-sol`, effort `high`, read-only; David switched the revi
 - **Go/no-go (by 18:00, in [[90 System/for-david]]): GO for Fri 9 Oct**, on the window conditions: Air plugged in and quiet, the phone service (`Ask Brain.command`, its own model server on 18087) stopped for the window, about 60 min (9 blocks with 180 s cool-downs), up to about 2 h with drift re-runs.
 
 **Q81 answered (a), 8 Oct (session 38), recorded as D102:** GO; David moved the window from Fri 9 Oct to **Thu 8 Oct, start 13:00** (to Cowork at 10:50, the time to the lead at 10:53). The lead finishes and commits the weekly-review fixes and stops all Codex calls by 12:45, checks the window conditions with David before block 1, and wraps the whole run in `caffeinate -dimsu`.
+
+**Run `2026-10-08-a`, 8 Oct (session 39). Measured and judged; the choice is David's (Q84, Q85).** Full report: [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results note]].
+- **Window:** David confirmed the conditions at the start (on power, lid open, Low Power Mode off, `Ask Brain.command` stopped, no heavy work, no Codex calls); started on David's go at about 14:00 (D102 had planned 13:00). Run 14:00:53–14:45:45 under **`caffeinate -dimsu`**. Pins, code, corpus and the pre-run manifest re-checked against `dry-2026-10-08-final` before block 1: all match. David told the Air was free at 14:46.
+- **Protocol:** 9/9 blocks `ok`, no void block, no timeout or malformed reply; drift −0.3 % at positions 5 and 9 (no re-run). Done when 1 met: all four measured.
+- **Numbers (n = 20 each):** p95 B0 15.71 s, C1 18.21 s, C2 10.13 s, C3 23.74 s; peak server RSS 5.07, 5.47, 5.72, 7.05 GiB.
+- **Judging:** the lead judged first and saved its verdicts; then Codex `gpt-6.1-sol`, effort `high`, read-only, judged a masked packet without the lead's verdicts (Done when 3). Safety: B0 and C1 fail on both judges; C3 fails on one Codex-only finding; C2 passes. Q(C2) = 5.
+- **Rule outcome: C2 (Gemma 4 E4B QAT Q4_0).** p95 over 8 s on the Air (D56 reported, not decided). Queued as **Q84** (adopt the default, Resources rows) and **Q85** (host sizing by D95, recommendation Mac mini M5 Pro 64 GB / 1 TB, €3,649) (Done when 4). Done when 5: no download; every file matched its pin.
+- **Sources for Q85:** whisper.cpp memory table, README of `github.com/ggml-org/whisper.cpp` (read 8 Oct); Apple France prices, MacGeneration, "Apple lance les Mac mini M6 et M5 Pro" (Aug 2026, `macg.co/mac/2026/08/apple-lance-les-mac-mini-m6-et-m5-pro-310587`); 64 GB / 1 TB (M5 Pro 18-core CPU / 20-core GPU) at €3,649, Fnac and Darty, `labonneconfig.fr/prix-mini-pc/apple-mac-mini-m5-pro-64-go-1-to` (prices updated 8 Oct); €3,429 is a calculation, not a verified configuration; configuration list, apple.com/fr/shop/buy-mac/mac-mini (read 8 Oct; prices not shown there). TTS and service memory are `unverified` estimates (no model named).
+- **Evidence:** `dbrain-runtime/artifacts/t9/run-2026-10-08-a/` (with `judging/`), outside the vault, not committed (Q23).

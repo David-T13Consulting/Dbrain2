@@ -12,13 +12,14 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 
 ## 10 Projects — AI Second Brain
 - [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|Delivery plan S2–S6]] — dated weeks 5 Oct–18 Dec, decision deadlines, slippage rule and cut order; proposed, not approved (Q29–Q31) · internal
+- [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|T9/M6 model comparison, 8 Oct]] — four local models under the frozen protocol on the Air: p50/p95, tok/s, peak RSS, per-case verdicts of two independent judges (Codex blind to the lead's), the rule applied step by step (pick C2, Gemma 4 E4B); draft (Q7) · internal
 - [[10 Projects/AI Second Brain/02_Architecture/p2.2-query-service-2026-10-05|P2.2 query service, 5 Oct]] — first local-model runs of the scoped read-only query service: p95 42.1 s against the 8 s target, answer-by-answer quality, network-blocked evidence; draft (Q7) · internal
 - [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|local comparison and retrieval, 1 Oct]] — second model, lexical retrieval baseline, failures and preserved evidence · internal
 - [[10 Projects/AI Second Brain/02_Architecture/local-benchmark-2026-10-01|local benchmark, 1 Oct]] — measured M2/24 GiB hardware and first local-model development results; limitations and external artifact pointers · internal
 - [[10 Projects/AI Second Brain/CLAUDE|CLAUDE]] — working memory for the project; read first · internal
 - [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] — current state, metrics, last three sessions · internal
 - [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]] — the decision log, D1 onwards (append-only) · internal
-- [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]] — sessions 1–35, verbatim · internal
+- [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]] — sessions 1–36, verbatim · internal
 - [[10 Projects/AI Second Brain/TASKS|TASKS]] — open items, one line each, next action at the top · internal
 - [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]] — snapshot of the task list before 8 Oct: done items, legacy plan, original wording · internal
 - [[10 Projects/AI Second Brain/OPEN_QUESTIONS|OPEN_QUESTIONS]] — what blocks work and who can answer · internal

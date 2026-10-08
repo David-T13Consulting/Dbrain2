@@ -27,6 +27,7 @@ Purpose: keep the vault healthy as it grows (D43). Claude runs it read-only and 
 
 ## Exemptions
 - Root `CLAUDE.md`: one-line stub (`@AGENTS.md`) that only imports AGENTS.md. Exempt from M5.
+- HTML render sources (for example `90 System/reports/course-map.html`): YAML frontmatter would show on the rendered page, so they carry none. Exempt from M5. Each takes the classification of the procedure note that owns it ([[90 System/reports/course-map-procedure|course-map-procedure]] for the course map); an HTML source with no owning procedure note is an M5 finding (Q69 (a), D93).
 
 ## Reporting
 One table: check · count · fixed · skipped. Track the trend over weeks. Target for M1–M5, M7, M8: zero, or each exception explained.

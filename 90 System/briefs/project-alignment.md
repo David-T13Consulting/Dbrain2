@@ -6,10 +6,12 @@ processing: approved-external
 sharing: private
 source: Cowork session with David, 6 Oct 2026 (idea from David; proposal and read-only audit by Cowork)
 created: 2026-10-06
-review_status: unreviewed
+review_status: reviewed
+status: parked             # until P2.5 (answer accuracy) shows progress; then a short brief (David, 6 Oct)
+updated: 2026-10-08
 owner: "@david"
 ---
- # Idea: align vault projects, Claude projects and Finder "AI Projects"
+# Idea: align vault projects, Claude projects and Finder "AI Projects"
 
 **David (6 Oct):** "I should have a 1:1 relationship between my Obsidian projects (in the vault), my Claude projects (in the Claude app) and my 'AI projects' in Finder."
 **Timing (David agreed):** park until P2.5 (answer accuracy) shows progress; run as a short brief after that. Touches frontmatter on many notes → hard limit, David approves the exact diff.
@@ -43,3 +45,10 @@ Rejected: strict 1:1:1 (forces Claude projects that aren't needed; impossible fo
 - **Odoo DMI (Claude project) = `10 Projects/Healthcare Practice OS` (vault): same project/concept.** Shared slug to be chosen when the brief runs (brand name is still an open decision per that README).
 - **Hackathon: archive.** Finder: Cowork moved `~/Documents/AI Projects/Hackathon` to `~/Documents/AI Projects/_Archive/Hackathon` (8 files, nothing deleted). Claude project: David archives it in the app. Repo already in `~/Work/_archive/agentic-hackathon`.
 - **Tower13:** David asked where it should live; Cowork proposed `20 Areas/Tower13/` (pending David's confirmation).
+
+## Triage, 8 Oct 2026 (David approved Cowork's proposal)
+- **Tower13 home confirmed:** `20 Areas/Tower13/` created with a boundary: internal Tower13 material only. Client-tier work goes to the separate client-tier vault; what the data policy allows (§3 minimised mentions, §6 own notes under a disclosing contract) follows the policy ([[20 Areas/Tower13/README|Tower13]]).
+- **LinkedIn gap = a priority call, not a filing issue.** Personal brand is governing priority 1; it does not wait for this brief.
+- **This note** moved from `00 Inbox/` to `90 System/briefs/` as a parked brief seed; a TASKS line tracks it.
+- **Open, David's call:** if not already handled under Q13, delete the duplicate Product School PDF (unredacted passcodes) in `~/Documents/AI Projects/_Archive/Hackathon/`.
+

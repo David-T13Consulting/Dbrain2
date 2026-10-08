@@ -332,3 +332,7 @@ Detail: David to Cowork, 8 Oct 09:11/09:18, recorded in D95 (supersedes D53's ra
 ## [2026-10-08] build | T9 readiness: runner reviewed and committed; pins and loads verified; GO for Friday (Q81)
 **What changed for David:** the model comparison is ready to run on Friday morning with him present, if he confirms (Q81). Nothing was scored. The script that runs it was tightened before use, so a run that drifts from its frozen setup now stops instead of producing a misleading result.
 Detail: runtime `ae934d5` (Codex rounds 1–3 FAIL, round 4 PASS); four models and b11146 match their SHA-256 pins and load under the no-network sandbox; corpus `878a08ea6f57` (data policy v0.6, AGENTS push wording); three dev-case points listed in [[90 System/briefs/T9-M6-model-comparison|T9/M6]].
+
+## [2026-10-08] triage | Inbox: project-alignment brief parked; Tower13 area; EUrouter resource
+**What changed for David:** two of his 6 Oct captures are triaged as he decided. The project-alignment idea is a parked brief (until answer accuracy improves). EUrouter is a resource note with what its site says and the questions to answer before any use (a T0.7 candidate). Tower13 has an area that holds structure only, never anything about a client.
+Detail: `00 Inbox/2026-10-06-1505-project-alignment-1to1.md` → [[90 System/briefs/project-alignment]] (rename); EUrouter capture archived verbatim to `40 Archive/Inbox/` (D49) instead of deleted, cited from [[30 Resources/AI Vendors/eurouter]]; [[20 Areas/Tower13/README]]; the empty `ideas/` folder removed. Handoff 8 Oct ~09:35, item 3.

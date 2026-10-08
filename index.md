@@ -44,6 +44,7 @@ Placeholder name; brand undecided. Research scaffolding only — no venture stra
 ## 20 Areas
 - [[20 Areas/Running/athlete-baseline|athlete-baseline]] — dated HR zones and race paces; source of truth for the skills · internal
 - [[20 Areas/Running/race-goals|race-goals]] — David's race goals · internal
+- [[20 Areas/Tower13/README|Tower13]] — David's consulting practice: structure and the client-tier boundary only, no client named · internal
 - [[20 Areas/Running/readiness-calls|readiness-calls]] — David's blind race-readiness calls, logged before any output · internal
 
 ## 30 Resources
@@ -100,6 +101,9 @@ Working knowledge base on the Scaled Agile Framework for three lenses (Product L
 - [[30 Resources/SAFe/glossary|glossary]] — 5.1 → 6.0 rename table, acronyms, AI-Native terms · internal · draft
 - [[30 Resources/SAFe/sources|sources]] — pointer note to the toolkit archive, inventory, licence position, current-version sources, gaps · internal · draft
 
+## 30 Resources — AI Vendors
+- [[30 Resources/AI Vendors/eurouter|EUrouter]] — EU API gateway to frontier models: what its site says (8 Oct), open questions; T0.7 candidate · internal
+
 ## 30 Resources — Local AI
 Maintained model understanding, primary-source snapshots and separate local measurements; reviewed 1 Oct 2026. Weekly automation pending activation.
 - [[30 Resources/Local AI/README|Local AI hub]] — reading route, evidence labels and project shortlist · internal
@@ -132,6 +136,7 @@ Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–
 - [[30 Resources/NNg UX/ux-strategy|ux-strategy]] · [[30 Resources/NNg UX/ux-research-and-usability-testing|ux-research-and-usability-testing]] · [[30 Resources/NNg UX/measuring-ux|measuring-ux]] · [[30 Resources/NNg UX/leading-ux-teams-and-cross-functional-work|leading-ux-teams-and-cross-functional-work]] · [[30 Resources/NNg UX/journey-mapping|journey-mapping]] · [[30 Resources/NNg UX/personas|personas]] · [[30 Resources/NNg UX/persuasive-design-and-trust|persuasive-design-and-trust]] · [[30 Resources/NNg UX/lean-ux-and-agile|lean-ux-and-agile]] · [[30 Resources/NNg UX/ux-workshops|ux-workshops]] (stub) · [[30 Resources/NNg UX/ux-in-the-ai-era-2026|ux-in-the-ai-era-2026]] · [[30 Resources/NNg UX/sources|sources]] · public · draft
 
 ## 40 Archive
+- `40 Archive/Inbox/` — verbatim raw captures after triage (D49), cited from the notes made from them; not listed one by one
 - [[40 Archive/agent-orchestration-proposal|agent-orchestration-proposal]] — the design record behind D63: why one lead and one queue, and the options not taken · internal
 
 ## 90 System
@@ -139,7 +144,7 @@ Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–
 - [[90 System/README|README]] — vault conventions for humans · internal
 - [[90 System/handoff|handoff]] — queue of Cowork changes waiting for the lead to commit · internal
 - [[90 System/for-david|for-david]] — the single decision queue: every question for David, from any agent (D68) · internal
-- `90 System/briefs/` — one brief per task handed between agents (D63). [[90 System/briefs/_template|_template]] · [[90 System/briefs/D63-adopt-orchestration|D63]] · [[90 System/briefs/D64-model-policy|D64]] · [[90 System/briefs/D65-stop-conditions|D65]] · [[90 System/briefs/P2.2|P2.2]] · [[90 System/briefs/P2.1-review|P2.1-review]] · [[90 System/briefs/T3.4-taxonomy-v2|T3.4-taxonomy-v2]] · [[90 System/briefs/D68-single-front-door|D68]] · [[90 System/briefs/D-cowork-7-personal-data-waves|D69 personal-data waves]] · [[90 System/briefs/T9-M6-model-comparison|T9-M6 model comparison]] · [[90 System/briefs/MVP-phone|MVP-phone (P2.4)]] · [[90 System/briefs/M1-backup-push|M1 backup and push]] · [[90 System/briefs/P2.6-date-resolution|P2.6 date resolution]] (proposed) · [[90 System/briefs/P2.6-phrase-set|P2.6 phrase set]] (draft, for David to validate) · [[90 System/briefs/P2.7-failure-capture-loop|P2.7 failure-capture loop]] (proposed) · [[90 System/briefs/Q77-force-push-deny-list|Q77 force-push deny list]] (draft, for David's OK) · all internal
+- `90 System/briefs/` — one brief per task handed between agents (D63). [[90 System/briefs/_template|_template]] · [[90 System/briefs/D63-adopt-orchestration|D63]] · [[90 System/briefs/D64-model-policy|D64]] · [[90 System/briefs/D65-stop-conditions|D65]] · [[90 System/briefs/P2.2|P2.2]] · [[90 System/briefs/P2.1-review|P2.1-review]] · [[90 System/briefs/T3.4-taxonomy-v2|T3.4-taxonomy-v2]] · [[90 System/briefs/D68-single-front-door|D68]] · [[90 System/briefs/D-cowork-7-personal-data-waves|D69 personal-data waves]] · [[90 System/briefs/T9-M6-model-comparison|T9-M6 model comparison]] · [[90 System/briefs/MVP-phone|MVP-phone (P2.4)]] · [[90 System/briefs/M1-backup-push|M1 backup and push]] · [[90 System/briefs/P2.6-date-resolution|P2.6 date resolution]] (proposed) · [[90 System/briefs/P2.6-phrase-set|P2.6 phrase set]] (draft, for David to validate) · [[90 System/briefs/P2.7-failure-capture-loop|P2.7 failure-capture loop]] (proposed) · [[90 System/briefs/Q77-force-push-deny-list|Q77 force-push deny list]] (draft, for David's OK) · [[90 System/briefs/project-alignment|project alignment]] (parked until P2.5 progresses) · all internal
 - [[90 System/lint-checklist|lint-checklist]] — weekly wiki health check, with countable results · internal
 - [[90 System/skills/classify-session/SKILL|classify-session]], [[90 System/skills/weekly-assessment/SKILL|weekly-assessment]], [[90 System/skills/race-readiness/SKILL|race-readiness]] — the three showcase skills · internal
 

@@ -364,3 +364,7 @@ Detail: `10 Projects/AI Second Brain/CLAUDE.md`, Confirmed parameters → Hostin
 ## [2026-10-08] decision | Q81 (a) recorded: T9 runs today at 13:00 (D102)
 **What changed for David:** the model comparison runs this afternoon at 13:00 instead of Friday morning, with him present; the lead checks the window conditions with him before the first block.
 Detail: D102 in [[10 Projects/AI Second Brain/PROGRESS]]; Q81 cleared from [[90 System/for-david]]; [[90 System/briefs/T9-M6-model-comparison|T9/M6]] set `open`. Cowork's 8 Oct ~11:00 handoff block committed with it.
+
+## [2026-10-08] decision | Keep the Mac awake during lead loops on power (D103)
+**What changed for David:** while a lead loop runs on mains power, the Mac no longer sleeps; the keep-awake stops when the loop closes.
+Detail: Tier 2 rule change, approved by David's explicit instruction. D103 in [[10 Projects/AI Second Brain/PROGRESS]]; standing rule 9 in `10 Projects/AI Second Brain/CLAUDE.md`. AGENTS.md gets the rule only after the T9 run (frozen corpus).

@@ -86,6 +86,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 6. Every note gets `classification: public|internal|client` in frontmatter, from note one. **New notes also carry `source`, `review_status`, `note_type` and `created`/`updated`** (D59). Retrofitting the 114 existing notes is P1.4, held until OQ-20 decides whether `classification` splits into separate domain/sensitivity/processing/sharing axes.
 7. **Large files (media, PDFs, recordings) never enter the vault.** They live outside it, ungit-tracked, with a pointer note (path + summary) left in the vault. See `00_Source_Material.md` for the current example.
 8. **Fact-check before adding anything to the vault.** Claude proposes, David confirms — before any fact, note, or inference about him becomes structured knowledge (Projects / Areas / Resources). Raw `capture:` drops into `00 Inbox` are exempt (unprocessed by design); the gate applies at triage, when something moves from Inbox into the structured vault. Claude helps structure the second brain; it does not populate it unilaterally.
+9. **Keep the Mac awake during lead loops on power (D103).** At loop start, if `pmset -g batt` shows AC Power, start `caffeinate -ims` in the background, note its PID, and kill it at loop close (`-s` holds only on AC). T9 still wraps its own run in `caffeinate -dimsu`.
 
 ## Capture protocol (Dispatch / voice / on the go)
 

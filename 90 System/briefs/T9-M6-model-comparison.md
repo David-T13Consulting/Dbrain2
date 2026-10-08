@@ -24,7 +24,7 @@ Choose the local model for the P2.2 query service from three named candidates an
 | 2 | Gemma 4 E4B instruction-tuned, QAT Q4_0, text weights only (`gemma-4-E4B_q4_0-it.gguf`, `676c3507…`) | Google (official repo `google/gemma-4-E4B-it-qat-q4_0-gguf`, rev `4b4a2c1d`) | 5.15 GB | **Another family (M6).** Quantization-aware trained by the publisher; Google's model card presents QAT as preserving quality at Q4 better than post-hoc quantization. That is the publisher's rationale, which this comparison tests, not a finding |
 | 3 | Ministral 3 8B Instruct 2512 Q4_K_M (`Ministral-3-8B-Instruct-2512-Q4_K_M.gguf`, `33e7a72c…`) | Mistral (official repo `mistralai/Ministral-3-8B-Instruct-2512-GGUF`, rev `0102285a`) | 5.20 GB | **Another family (M6)**, French/English, larger: tests whether 8B buys quality worth its latency |
 
-**Budget (Q8: up to 20 GB of disk for model weights and runtimes, outside the vault, hash-pinned, only models named in a brief).** Counted as disk occupied, not bytes downloaded:
+**Budget (Q8: up to 20 GB of disk for model weights and runtimes, outside the vault, hash-pinned, only models named in a brief; raised to 25 GB in total on 8 Oct for M6b's two embedding models, D100: T9/M6's own share stays as counted below).** Counted as disk occupied, not bytes downloaded:
 
 | Item | GB |
 |---|---:|

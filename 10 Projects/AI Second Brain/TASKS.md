@@ -79,6 +79,7 @@ Approved planning amendment: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap
 - [x] **M4** Weekly local-project scheduling activated by David ✅ 1 Oct (D60, OQ-18 resolved). ⚠️ Open thread, not a blocker: the task ID and first-run output still need pasting into [[90 System/weekly-local-model-review]]'s activation record. Review the first two runs before relying on the cadence.
 - [ ] **M5** `@code` Extend retrieval corpus with authoritative D49 retention evidence; compare controlled bilingual query expansion. Review expected evidence independently; retain original failures and untouched provisional cases.
 - [ ] **M6** `@code` Compare another model family under comparable conditions. Set separate voice fixtures and local benchmark resource budgets before downloading additional modality models. Published benchmark review can proceed without downloads.
+- [ ] **M6b** `@code` **Retrieval test: EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs the lexical baseline** (David, 8 Oct). Brief: [[90 System/briefs/M6b-embedding-eval|M6b]]. **After T9/M6 (D94), never alongside it** (contention would corrupt T9's latency). David approved the Q8 budget at 25 GB and an isolated Python venv on the Air for the two named models only (D100); downloads only as pinned in the brief's manifest.
 
 ---
 

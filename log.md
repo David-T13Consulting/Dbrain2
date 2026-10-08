@@ -344,3 +344,7 @@ Detail: `.claude/settings.json`: 12 prefix rules replaced by the 13 wildcard rul
 ## [2026-10-08] decision | Client-tier workspace requirements approved and committed (D98, Q80 (a))
 **What changed for David:** his requirements note for the separate client-tier vault is now part of the vault, as he approved it. Its legal points (recording consent, data minimisation, what a client contract names) are still marked unchecked until the lawyer review in T0.7. Nothing gets built from it until a brief says so.
 Detail: [[10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements]] (`review_status: approved`), index entry, TASKS links, EUrouter link; Q80 cleared from [[90 System/for-david]].
+
+## [2026-10-08] decision | M6b embedding test brief added; Q8 budget 25 GB and a Python venv approved (D100)
+**What changed for David:** the embedding test he said yes to now has a brief and a slot after T9; it may use up to 25 GB of model disk and a separate Python environment on the Air, for the two named models only.
+Detail: [[90 System/briefs/M6b-embedding-eval]] (final ID M6b), TASKS line, T9 brief budget line; Cowork's provisional Q-cowork-2 renumbered D100 and cleared from [[90 System/for-david]]. The desk note it reads first waits for David's content approval.

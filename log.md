@@ -782,3 +782,7 @@ Detail: [[10 Projects/AI Second Brain/PROGRESS]] session 39; [[90 System/for-dav
 ## [2026-10-08] decision | Q85, Q86, Q87 answered (a): host D107, failure-store deny rules D108, hang fix D109
 **What changed for David:** his host is chosen (Mac mini M5 Pro, 64 GB, 1 TB, from Apple Belgium through his SRL; he orders it by 16 Oct). Agents get deny rules for the failure store, proven by an access test before anything is captured. The test-hang fix is approved and is committed next.
 Detail: [[90 System/for-david]] Answered; D107–D109; Cowork's 17:06 handoff entry.
+
+## [2026-10-08] build | Test-hang fix committed (D109); P2.7 leak check committed
+**What changed for David:** the approved test-hang fix is in. The leak check that guards what cloud agents may read about his failed questions is built, passed review on its fourth round, and is committed: it reads no real question.
+Detail: runtime `3cbbd40` and `d62fdf7`; [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review; [[90 System/briefs/MVP-phone|MVP-phone]].

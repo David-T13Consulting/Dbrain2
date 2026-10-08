@@ -19,7 +19,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/CLAUDE|CLAUDE]] — working memory for the project; read first · internal
 - [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] — current state, metrics, last three sessions · internal
 - [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]] — the decision log, D1 onwards (append-only) · internal
-- [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]] — sessions 1–36, verbatim · internal
+- [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]] — sessions 1–37, verbatim · internal
 - [[10 Projects/AI Second Brain/TASKS|TASKS]] — open items, one line each, next action at the top · internal
 - [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]] — snapshot of the task list before 8 Oct: done items, legacy plan, original wording · internal
 - [[10 Projects/AI Second Brain/OPEN_QUESTIONS|OPEN_QUESTIONS]] — what blocks work and who can answer · internal

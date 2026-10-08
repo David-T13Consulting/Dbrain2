@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 8 Oct 2026 · **Updated by:** Claude Code (session 39: T9/M6; C2 default; data policy v0.7; P2.7 started and parked; Q85–Q87 queued)
+**Last updated:** 8 Oct 2026 · **Updated by:** Claude Code (session 40: Q85–Q87 as D107–D109; hang fix; P2.7 leak check; D108 access tests; Q88)
 
 ---
 
@@ -59,7 +59,7 @@ Not yet instrumented as a service. Start platform measurement at S2; retain runn
 
 ## Decisions and older sessions
 
-Moved verbatim on 8 Oct 2026 (session 38, David's maintenance layout): [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]] holds D1 onwards. Sessions 1–36 are in [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]]; this file keeps the last three sessions.
+Moved verbatim on 8 Oct 2026 (session 38, David's maintenance layout): [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]] holds D1 onwards. Sessions 1–37 are in [[10 Projects/AI Second Brain/PROGRESS-archive|PROGRESS-archive]]; this file keeps the last three sessions.
 Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 
 
@@ -68,6 +68,19 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 40 — 8 Oct 2026 · Claude Code, lead (Q85–Q87 recorded; hang fix; P2.7 leak check; D108 access tests)
+**Authorization:** David, 8 Oct: commit Cowork's 17:06 entry and record Q85–Q87 (all (a)) as decisions; then commit the Q87 fix; resume P2.7 stage L with a fresh review budget and commit it; apply the Q86 deny rules and run the access test for each agent, no capture code until every agent fails to read the planted file. **Ended by** something needing David (Q88). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+
+**What changed for David:** his host is decided (D107; he orders it by 16 Oct). The test-hang fix and the leak check are in. Under its main config and review profile, Codex is now kept out of the failure store by its sandbox (its full-access mode and computer-use plugins are not covered); Claude Code only partly (a disguised command gets through) and Cowork is untested, so nothing is captured yet: Q88.
+
+- **Records:** `7824bd4`, D107 (host), D108 (deny rules), D109 (hang fix): [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+- **Step 1:** runtime `3cbbd40` (hang fix, D109).
+- **Step 2:** [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] stage L, four review rounds this run (FAIL, FAIL, FAIL, PASS), runtime `d62fdf7`; records `a846110`.
+- **Step 3:** deny rules in `~/.claude/settings.json` (+ hook) and `~/.codex/config.toml`, `review.config.toml` (backups `*.bak-2026-10-08-d108`); access tests; records and **Q88** ([[90 System/for-david]]) `228fd37`. The first hook pattern blocked the lead's own commands naming the P2.7 brief (narrowed); the first review-profile edit broke its TOML for a few minutes (fixed, retested).
+- **Not done:** P2.7 stage C (capture) waits for Q88; M6b after P2.7. The planted test file stays in the store folder for future access tests.
+
+**Pick up at:** David's Q88; Cowork's own access test; then stage C as Q88 decides; then M6b.
 
 ### Session 39 — 8 Oct 2026 · Claude Code, T9/M6 run with David (handoff item 2)
 **Authorization:** David, about 14:00: "start T9 following handoff item 2 and the frozen protocol", confirming the window conditions (on power, lid open, Low Power Mode off, `Ask Brain.command` stopped, nothing heavy, no Codex during the run); `caffeinate -dimsu` around the whole run; pins re-checked against `dry-2026-10-08-final` before block 1; after T9, `.claude/settings.local.json` into `.gitignore`. **Ended by** the instruction's end: T9 measured, judged and reported; the choice is David's. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
@@ -101,23 +114,6 @@ Newest first. One entry per working session — what happened, what changed, whe
 - **Push:** pending after this close commit (non-force).
 
 **Pick up at:** T9/M6 with David (fresh session); then M6b; P2.7 on David's go.
-
-### Session 37 — 8 Oct 2026 · Claude Code, lead loop (09:35 block; T9 readiness; Q79/Q80; triage; M6b; queue)
-**Authorization:** "pick up the loop" from David, with Q79 (a) and Q80 (a); the handoff's 8 Oct ~09:35 block first (records, T9 readiness with a go/no-go by 18:00, Inbox triage), then Q79/Q80 and the client-tier note, then the queued entries (Q78/`f25aa64`, EmbeddingGemma, M6b). No P2.7. **Ended by** the instruction's end (all items run). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
-
-**What changed for David:** T9 can run on Friday morning with him (Q81); nothing was scored. His host can be a 48–64 GB machine up to €4,000. The agents now refuse force pushes in the forms he approved. His client-tier requirements note is in the vault, its legal points still marked for the lawyer. Two captures are triaged (a parked project-alignment brief; an EUrouter resource), and Tower13 has an area. The embedding test has a brief and a slot after T9. The weekly model review and the EmbeddingGemma note went back to Cowork for sources before he is asked to approve them.
-
-- **09:35 item 1:** `54a511f`, D95 (host option B) and D96 (T9 window). Round 1 PASS.
-- **09:35 item 2, T9 readiness:** the runner `t9_compare.py` (the 6 Oct draft) failed review three times (8, 5, 4 blockers: timeouts and malformed replies lost, server outside the sandbox, network check failing open, unchecked manifest, incomplete RSS, unpinned cases); rewritten, round 4 PASS; runtime `ae934d5`, pushed. Four models and b11146 match their SHA-256 pins; all load and answer the warm-up under the no-network sandbox (dry check, nothing scored). Dev cases re-checked on corpus `878a08ea6f57`: three points listed in the T9 brief, rule unchanged. `da3be79`; **Q81 GO**.
-- **09:35 item 3:** `3a7f819`, Inbox triage. The EUrouter capture was archived to `40 Archive/Inbox/` (D49) instead of `git rm` (deleting files is a hard limit). Rounds: FAIL (uncited legal framing; boundary stricter than the policy), escalate (question 4 proposed an answer), PASS.
-- **Q79:** `8034de8`, deny list applied (D97), Tier 2 PASS. **Q80:** `1cf0bfc`, client-tier note committed (D98), PASS.
-- **M6b:** `d19b409` (D100: Q8 budget 25 GB, venv), round 1 FAIL (scope), round 2 PASS. **D99/D101:** `182b9df` (TwIL licence answer; Q78 route), PASS.
-- **Weekly review `f25aa64` and the EmbeddingGemma desk note:** Codex content pass FAIL (Tier 2 provenance: TwIL-LM2 claims unsourced; the EmbeddingGemma note misreads the MTEB versions, one claim unsourced, one negative claim unsupported). Findings in [[90 System/handoff]] for Cowork; nothing landed; branch untouched.
-- **Incident (the lead's):** a Python edit opened `90 System/for-david.md` for writing before reading it and truncated the file, wiping Cowork's uncommitted edits there (Q78 annotation, Q-cowork-1, Q-cowork-2). Restored from the lead's verbatim copy of 09:38 (Q-cowork-1's last words may differ); any later Cowork edit there is lost. Committed versions were never affected. Cowork asked to check. Every later edit in the run read before writing.
-- **Not done:** project CLAUDE.md's Hosting row (24–32 GB, €800–1,500) is stale after D95; a CLAUDE.md edit asks David, so it is left for Cowork to queue.
-- **Push:** runtime `ae934d5` pushed; the vault is pushed (non-force) after this close commit and checked for 0 ahead / 0 behind.
-
-**Pick up at:** Q81 (T9 Friday or Monday, with David); Cowork's fixes to the model content, then re-review and David's content OK; the week of 12 Oct items (T0.7, client-vault scaffold).
 
 
 ---

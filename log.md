@@ -754,3 +754,7 @@ Detail: Cowork's 13:50 handoff entry (David, 13:49); `git branch -d` refused; [[
 ## [2026-10-08] experiment | T9/M6 run 2026-10-08-a: the rule picks C2 (Gemma 4 E4B); Q84, Q85 queued
 **What changed for David:** the model comparison is done. Of four local models, only Gemma 4 E4B never cited evidence wrongly, and it is also the fastest (p95 10.1 s on the Air, over the 8 s target that the host must meet). He decides whether it becomes the default (Q84) and which host to order by 16 Oct (Q85; Mac mini M5 Pro 64 GB / 1 TB recommended, €3,649).
 Detail: run 14:00:53–14:45:45 under `caffeinate -dimsu`, 9/9 blocks, no drift; lead `claude-opus-5-5` and Codex `gpt-6.1-sol` (blind) as judges. [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08]], [[90 System/briefs/T9-M6-model-comparison|T9/M6]], [[90 System/for-david]]. Also: `.claude/settings.local.json` added to `.gitignore` (David, after T9).
+
+## [2026-10-08] decision | Q85 revised: Belgium, ex VAT through the SRL; Carlsbad compared
+**What changed for David:** the host comparison now uses Belgian prices without VAT, since his SRL gets the VAT back. Under tax assumptions still to be checked (California sales tax not recoverable, import VAT recoverable, no duty), the same Mac mini bought in Carlsbad costs about €49–64 more, and a late-October purchase would delay set-up. The recommendation stays the same machine, bought in Belgium (€3,032 ex VAT).
+Detail: [[90 System/for-david]] Q85; prices and sources in [[90 System/briefs/T9-M6-model-comparison|T9/M6]] Outcome.

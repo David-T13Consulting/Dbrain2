@@ -324,3 +324,7 @@ Detail: David to Cowork, 7 Oct ~19:30, recorded in D89–D93; the five answers c
 **Ended by:** David's 09:11 order: items 1–4, 6 and the prune, then stop; P2.7 not started.
 **What changed for David:** his failure-store text is policy and AGENTS.md says the lead pushes without asking. Three OKs wait for him: the exact force-push deny list (Q79), the client-tier note, whose legal points are tagged `unverified` (Q80), and how the weekly model review's side branch lands (Q78). No host until T9/M6 (deadline 16 Oct); T9 needs a window with him.
 Detail: `8990bbe`, `51f332f`, `f4b09ab`, `a8a641f` and this close. Codex `gpt-6.1-sol` (high, read-only). The scheduled weekly review switched the working tree to its own branch mid-run; the lead moved HEAD back to `master`, nothing lost.
+
+## [2026-10-08] decision | Host sizing option B: 48–64 GB, up to €4,000, layer 6 kept (D95); T9 window Fri 9 or Mon 12 Oct (D96)
+**What changed for David:** the host he buys after T9 is now a 48–64 GB machine with up to €4,000 to spend, so a 14–30B model can still run on it later. How much memory is fixed by a formula agreed before the measurement. T9 runs on Friday morning with him present if today's readiness check passes, otherwise on Monday.
+Detail: David to Cowork, 8 Oct 09:11/09:18, recorded in D95 (supersedes D53's range and budget; refines D92) and D96, from the 8 Oct ~09:35 block of [[90 System/handoff]].

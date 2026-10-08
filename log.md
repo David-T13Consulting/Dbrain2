@@ -368,3 +368,7 @@ Detail: D102 in [[10 Projects/AI Second Brain/PROGRESS]]; Q81 cleared from [[90 
 ## [2026-10-08] decision | Keep the Mac awake during lead loops on power (D103)
 **What changed for David:** while a lead loop runs on mains power, the Mac no longer sleeps; the keep-awake stops when the loop closes.
 Detail: Tier 2 rule change, approved by David's explicit instruction. D103 in [[10 Projects/AI Second Brain/PROGRESS]]; standing rule 9 in `10 Projects/AI Second Brain/CLAUDE.md`. AGENTS.md gets the rule only after the T9 run (frozen corpus).
+
+## [2026-10-08] review | Weekly review and EmbeddingGemma 2 note pass review; queued for David (Q82)
+**What changed for David:** both model-research pieces are corrected and pass review; they wait for his content approval (Q82) before they land in the vault.
+Detail: weekly review fixes on branch `cowork/local-model-review-2026-10-08` `f6f8979` (A1–A7, sources checked online; Codex PASS round 1); `30 Resources/Local AI/embeddinggemma-2-evaluation.md` still uncommitted (Codex FAIL round 1 on a benchmark-comparability claim, fixed; PASS round 2). Codex `gpt-6.1-sol` (high, read-only).

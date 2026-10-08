@@ -1,5 +1,6 @@
 ---
 classification: internal
+review_status: codex-reviewed
 ---
 # Working Memory — AI Second Brain Project
 
@@ -32,7 +33,7 @@ Build an Obsidian second brain with a local model, access across devices by text
 | Showcase format | Live system I drive, screen-shared | 7 Sep |
 | Access and collaboration | David across devices first, then measured multi-agent execution; additional humans deferred | Amended 1 Oct, D45 |
 | Devices | iPhone · iPad · MacBook Air committed. Apple Watch and Tesla browser are S4 stretch | 1 Oct, D52 |
-| Hosting | Dedicated **always-on** host (Mac mini class, 24–32 GB, €800–1,500); the Air becomes a client. Not yet purchased; 32 GB recommended | 1 Oct, D53 |
+| Hosting | Dedicated **always-on** host; the Air becomes a client. **48–64 GB, budget up to €4,000**, a 14–30B model kept possible (Q47 layer 6), which needs a named target model. RAM ≥ (T9 pick's peak RSS at production context + whisper + TTS + service + 6 GB) × 1.3, next configuration up. Not yet purchased; ordered after the T9/M6 result, by Fri 16 Oct | 1 Oct, D53; 7 Oct, D92; 8 Oct, D95 ([[10 Projects/AI Second Brain/PROGRESS\|PROGRESS]]) |
 | Offline | Capture only — durable queue. No on-device inference initially | 1 Oct, D54 |
 | Capacity | 20+ h/week sustained | 1 Oct, D55 |
 | Service targets | Text p95 < 8 s · voice to first word < 5 s · RTO < 8 h · RPO zero confirmed captures | 1 Oct, D56 |

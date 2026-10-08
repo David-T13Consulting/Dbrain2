@@ -356,3 +356,7 @@ Detail: D99 (Cowork's Q-cowork-1, restored by the lead after the lead truncated 
 ## [2026-10-08] session | Session 37: T9 ready, GO for Friday (Q81); deny list applied; client-tier note, triage and M6b committed; model content back to Cowork
 **What changed for David:** T9 can run Friday morning with him; the host can be 48–64 GB up to €4,000; force pushes are refused in the forms he approved; his client-tier note, the Tower13 area, the EUrouter resource and the M6b test brief are in the vault. The weekly model review and the EmbeddingGemma note need sources before he approves them. The lead truncated the decision queue file mid-run by mistake; Cowork's uncommitted lines there were restored from a copy, and Cowork will check them.
 Detail: vault `54a511f`, `da3be79`, `3a7f819`, `8034de8`, `1cf0bfc`, `d19b409`, `182b9df` and this close; runtime `ae934d5`. D95–D101. Codex `gpt-6.1-sol` (high, read-only).
+
+## [2026-10-08] decision | Project CLAUDE.md Hosting row updated to D95
+**What changed for David:** the project's start-here file now gives the host he chose (48–64 GB, up to €4,000, ordered after T9 by 16 Oct) instead of the old 24–32 GB range.
+Detail: `10 Projects/AI Second Brain/CLAUDE.md`, Confirmed parameters → Hosting, per D92 and D95 in [[10 Projects/AI Second Brain/PROGRESS]]; `review_status: codex-reviewed` added; edit approved by David directly to the lead, 8 Oct.

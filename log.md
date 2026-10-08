@@ -360,3 +360,7 @@ Detail: vault `54a511f`, `da3be79`, `3a7f819`, `8034de8`, `1cf0bfc`, `d19b409`, 
 ## [2026-10-08] decision | Project CLAUDE.md Hosting row updated to D95
 **What changed for David:** the project's start-here file now gives the host he chose (48–64 GB, up to €4,000, ordered after T9 by 16 Oct) instead of the old 24–32 GB range.
 Detail: `10 Projects/AI Second Brain/CLAUDE.md`, Confirmed parameters → Hosting, per D92 and D95 in [[10 Projects/AI Second Brain/PROGRESS]]; `review_status: codex-reviewed` added; edit approved by David directly to the lead, 8 Oct.
+
+## [2026-10-08] decision | Q81 (a) recorded: T9 runs today at 13:00 (D102)
+**What changed for David:** the model comparison runs this afternoon at 13:00 instead of Friday morning, with him present; the lead checks the window conditions with him before the first block.
+Detail: D102 in [[10 Projects/AI Second Brain/PROGRESS]]; Q81 cleared from [[90 System/for-david]]; [[90 System/briefs/T9-M6-model-comparison|T9/M6]] set `open`. Cowork's 8 Oct ~11:00 handoff block committed with it.

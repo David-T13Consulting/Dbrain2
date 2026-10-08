@@ -2,7 +2,7 @@
 classification: internal
 task: T9 / M6
 owner: "@code"
-status: blocked-on-david   # Q81: GO for Fri 9 Oct needs David present (D96); ready 8 Oct, nothing scored
+status: open   # Q81 (a) answered, D102: run 8 Oct 13:00 with David present; ready 8 Oct, nothing scored
 models: ["claude-opus-5-5 (lead, draft; readiness 8 Oct)", "gpt-6.1-sol (review rounds 1-3; runner review rounds 1-4, 8 Oct)"]
 created: 2026-10-05
 updated: 2026-10-08
@@ -124,3 +124,4 @@ Reviewer: Codex `gpt-6.1-sol`, effort `high`, read-only; David switched the revi
   - The other seven (two of them abstention cases, with no fragment): unchanged; fragments present.
 - **Go/no-go (by 18:00, in [[90 System/for-david]]): GO for Fri 9 Oct**, on the window conditions: Air plugged in and quiet, the phone service (`Ask Brain.command`, its own model server on 18087) stopped for the window, about 60 min (9 blocks with 180 s cool-downs), up to about 2 h with drift re-runs.
 
+**Q81 answered (a), 8 Oct (session 38), recorded as D102:** GO; David moved the window from Fri 9 Oct to **Thu 8 Oct, start 13:00** (to Cowork at 10:50, the time to the lead at 10:53). The lead finishes and commits the weekly-review fixes and stops all Codex calls by 12:45, checks the window conditions with David before block 1, and wraps the whole run in `caffeinate -dimsu`.

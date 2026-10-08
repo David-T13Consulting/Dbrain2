@@ -17,6 +17,8 @@ A language model cannot reliably answer from a note it never receives. Improve s
 
 **[Qwen3-Embedding-0.6B](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B)** is a multilingual embedding candidate: publisher specifications include 32K context, up to 1,024-dimensional vectors and instruction-aware queries. Apache-2.0. It creates representations, not cited answers.
 
+**EmbeddingGemma 2** (Google, Apache-2.0) is a second embedding candidate, read from publisher pages only: see [[30 Resources/Local AI/embeddinggemma-2-evaluation|the 8 Oct desk evaluation]]. Its local test is defined by [[90 System/briefs/M6b-embedding-eval|M6b]].
+
 **[Qwen3-Reranker-0.6B](https://huggingface.co/Qwen/Qwen3-Reranker-0.6B)** is a candidate for ranking query/document pairs. Apache-2.0. A relevance score is not a probability that the answer is true. Neither model is installed or locally tested here.
 
 Seen 8 Oct, not evaluated: webAI's [ColVec1.1 4B/8B](https://huggingface.co/webAI-Official/webAI-ColVec1.1-4b) multi-vector visual-document retrievers (Qwen3.5 based, license `other`, updated Aug 2026). They embed page images, which conflicts with the current plain-markdown, no-vector-RAG stack; record only.

@@ -376,3 +376,7 @@ Detail: weekly review fixes on branch `cowork/local-model-review-2026-10-08` `f6
 ## [2026-10-08] review | Weekly local-model review (first scheduled run)
 **What changed for David:** all 17 pinned model revisions are unchanged. New this week: TwIL-LM3-Pro's official repo ships GGUF (the watchlist said LiteRT-LM only), and its license is non-commercial research/education only, so it cannot be assumed usable for the December consulting demo. Added Qwen-Image-2.1 prompt-rewriter companions and runtime notes. Shortlist: TwIL-LM3-Pro (after your license decision) and Gemma 4 E4B. Local benchmark not run this week.
 Detail: [[30 Resources/Local AI/benchmark-ledger]], [[30 Resources/Local AI/sources]]. Branch `cowork/local-model-review-2026-10-08` (local; origin unreachable). Next review 15 Oct.
+
+## [2026-10-08] ingest | Q82 (a): weekly review landed; EmbeddingGemma 2 desk evaluation added
+**What changed for David:** both model-research pieces he approved are now in the vault: the 8 Oct weekly review (17 pinned models unchanged, TwIL-LM3-Pro licence and GGUF findings, shortlist) and the EmbeddingGemma 2 desk note, linked from the retrieval page, the ledger and the index. The side branch is still there: the settings refused its deletion, so David deletes it (or allows the lead to).
+Detail: David to the lead, 8 Oct 11:10 (Q82 (a)); D101 route: `f25aa64` and `f6f8979` cherry-picked onto `master`; branch deletion (local and origin) refused by the permission settings, pending; Q82 cleared from [[90 System/for-david]].

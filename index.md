@@ -113,6 +113,7 @@ Maintained model understanding, primary-source snapshots and separate local meas
 - [[30 Resources/Local AI/speech-models|speech models]] — ASR/TTS, French/English voice pipeline and tests · internal
 - [[30 Resources/Local AI/image-models|image models]] — generation/editing capabilities, limits and licensing distinctions · internal
 - [[30 Resources/Local AI/retrieval-models|retrieval models]] — lexical search, embeddings, rerankers and measured gaps · internal
+- [[30 Resources/Local AI/embeddinggemma-2-evaluation|EmbeddingGemma 2 desk evaluation]] — publisher scores, licence and limits, 8 Oct; testing only under M6b · internal
 - [[30 Resources/Local AI/benchmark-ledger|benchmark ledger]] — dated publisher scores and local results, kept distinct; weekly entries from 8 Oct · internal
 - [[30 Resources/Local AI/sources|source register]] — pinned model cards and external evidence archive · internal
 

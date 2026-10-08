@@ -766,3 +766,7 @@ Detail: [[90 System/briefs/Q84-default-model-c2|Q84 brief]]; D105; Codex `gpt-6.
 ## [2026-10-08] decision | Data policy v0.7: §7b audit trail (D106)
 **What changed for David:** the policy now says what Ask Brain's logs may hold (never the text of a question or an answer), that they are kept for audit for the life of the project, and that the weekly review and agents may read them. His approved text, word for word.
 Detail: [[10 Projects/AI Second Brain/02_Architecture/data-policy]] §7b; D106; dev-case corpus now `d926bd92ab8e` (T9 ran on `878a08ea6f57`).
+
+## [2026-10-08] decision | P2.7 files in scope reviewed; Q86 queued (cloud agents and the failure store)
+**What changed for David:** the build list for the failure loop is fixed and reviewed. The leak check, which reads no real question, is being built now. Capturing real questions waits for his answer to Q86: agents run as his user, so keeping them out of the store needs a permission change only he can approve.
+Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Files in scope and Review; [[90 System/for-david]] Q86; Codex `gpt-6.1-sol` rounds 1–2 FAIL, round 3 PASS.

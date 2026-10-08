@@ -790,3 +790,7 @@ Detail: runtime `3cbbd40` and `d62fdf7`; [[90 System/briefs/P2.7-failure-capture
 ## [2026-10-08] build | D108 deny rules applied; access test not passed yet (Q88)
 **What changed for David:** under its main config and its review profile, Codex's sandbox now refuses to read the failure store (its full-access mode and the app's computer-use plugins are not covered). Claude Code's file tools and plain shell reads are refused too, but a disguised shell command still gets through, and Cowork has not run its own test. So no real question is captured yet; Q88 asks him how to close the gaps (recommended: capture only on the Mac mini, under a dedicated user).
 Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] access tests; [[90 System/for-david]] Q88; D108.
+
+## [2026-10-08] decision | Q88 answered (c): exception to D108 on the Air (D110)
+**What changed for David:** he accepted, knowingly, that on the Air a deliberately disguised Claude Code command could still read the failure store, and that screen-control tools are untested. Capture may start once he has installed the Codex requirements file and Codex's re-test passes. The Mac mini's dedicated user replaces the exception later. The policy text is unchanged.
+Detail: D110; [[90 System/for-david]] Answered; Cowork's 18:10 handoff entry.

@@ -336,3 +336,7 @@ Detail: runtime `ae934d5` (Codex rounds 1–3 FAIL, round 4 PASS); four models a
 ## [2026-10-08] triage | Inbox: project-alignment brief parked; Tower13 area; EUrouter resource
 **What changed for David:** two of his 6 Oct captures are triaged as he decided. The project-alignment idea is a parked brief (until answer accuracy improves). EUrouter is a resource note with what its site says and the questions to answer before any use (a T0.7 candidate). Tower13 has an area that holds structure only, never anything about a client.
 Detail: `00 Inbox/2026-10-06-1505-project-alignment-1to1.md` → [[90 System/briefs/project-alignment]] (rename); EUrouter capture archived verbatim to `40 Archive/Inbox/` (D49) instead of deleted, cited from [[30 Resources/AI Vendors/eurouter]]; [[20 Areas/Tower13/README]]; the empty `ideas/` folder removed. Handoff 8 Oct ~09:35, item 3.
+
+## [2026-10-08] decision | Force-push deny list applied (D97, Q79 (a))
+**What changed for David:** the agents' settings now refuse force pushes in every form the list names, wherever the option is written. A few exotic spellings (listed in the brief) still rely on the rule that the lead never force-pushes.
+Detail: `.claude/settings.json`: 12 prefix rules replaced by the 13 wildcard rules of [[90 System/briefs/Q77-force-push-deny-list|Q77 deny list]], approved word for word by David (Q79 (a)); Tier 2. Q79 cleared from [[90 System/for-david]].

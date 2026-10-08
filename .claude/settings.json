@@ -90,18 +90,19 @@
       "Bash(git config:*)"
     ],
     "deny": [
-      "Bash(git push --force:*)",
-      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push --force:*)",
-      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push --force:*)",
-      "Bash(git push -f:*)",
-      "Bash(git push --force-with-lease:*)",
-      "Bash(git push --force-if-includes:*)",
-      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push -f:*)",
-      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push --force-with-lease:*)",
-      "Bash(git -C /Users/davidduchesne/Work/Dbrain2 push --force-if-includes:*)",
-      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push -f:*)",
-      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push --force-with-lease:*)",
-      "Bash(git -C /Users/davidduchesne/Work/dbrain-runtime push --force-if-includes:*)"
+      "Bash(*git*push*--force*)",
+      "Bash(*git*push* -f*)",
+      "Bash(*git*push* -uf*)",
+      "Bash(*git*push* -vf*)",
+      "Bash(*git*push* -qf*)",
+      "Bash(*git*push* +*)",
+      "Bash(*git*push*--mirror*)",
+      "Bash(*git*push*--delete*)",
+      "Bash(*git*push* -d*)",
+      "Bash(*git*push* :master*)",
+      "Bash(*git*push* :main*)",
+      "Bash(*git*push* :refs/*)",
+      "Bash(*git*push*--prune*)"
     ],
     "additionalDirectories": [
       "/Users/davidduchesne/Work/dbrain-runtime",

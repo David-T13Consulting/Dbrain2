@@ -2,7 +2,7 @@
 classification: internal
 task: Q77
 owner: "@code"
-status: blocked-on-david
+status: done
 models: [claude-opus-5-5 (lead), gpt-6.1-sol (review)]
 source: "David's Q77 (a), via Cowork, 7 Oct (D91); Claude Code permissions docs, https://code.claude.com/docs/en/permissions (rule matching); git-push docs, https://git-scm.com/docs/git-push (what each push form does); both read 8 Oct 2026"
 review_status: proposed
@@ -80,4 +80,4 @@ Hard limit: security or permission settings always ask David. Never test by forc
 Codex `gpt-6.1-sol` (review profile, high, read-only), session 36. **Round 1 FAIL:** `Bash(*git*push* :*)` ends in Claude Code's legacy `:*` suffix, so it would not match a literal colon (blocker; replaced by `:master*`, `:main*`, `:refs/*`); two scope blockers were concurrent Cowork edits in the shared tree, not part of this diff (excluded); should-fixes: gaps list (quoted flags, `-vd`), scope and Done-when split (applied). **Round 2 PASS:** all table examples matched; the seven normal push forms the lead uses (`git push`, `git push origin master`, `git -C … push`, `… push origin main`, `-u`, `--dry-run`, `--follow-tags`) stay allowed; all 12 current entries covered. Should-fixes applied: quoting gap limited to the space-dependent rules; git-push docs cited; Q79 wording narrowed.
 
 ## Outcome
-*(filled at the end)*
+**8 Oct (session 37):** David answered Q79 (a): the list as written. The lead replaced the 12 `deny` entries in `.claude/settings.json` with the 13 rules above, nothing else in the file changed (valid JSON, 13 entries); Tier 2 Codex review of the settings diff (see the commit); no force push was run to test it. Recorded as D97. Done-when 3 (each table example matched by a rule) was checked by the reviewer against the patterns in session 36, round 2.

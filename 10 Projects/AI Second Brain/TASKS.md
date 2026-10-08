@@ -11,7 +11,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## ▶ Next action
 
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
-- [ ] `@david` **After T9:** host order inside €4,000 by 16 Oct (Q85, D95) · go for P2.7 · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · delete the review branch on GitHub (local copy deleted, Q83) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
+- [ ] `@david` **After T9:** host order inside €4,000 by 16 Oct (Q85, D95) · Q86 (agents and the failure store) · Q87 (approve the test-hang fix) · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · delete the review branch on GitHub (local copy deleted, Q83) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
 - [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct:** has anything shipped out of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS
 
 ## S1 · Align architecture
@@ -20,10 +20,10 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## S2 · Prove local read-only answers
 - [ ] `@codex` **P2.1** Independent review of the retrieval cases; keep an untouched acceptance subset — [[90 System/briefs/P2.1-review|P2.1-review]]
 - [ ] `@code` **P2.3** Measure quality, latency, memory and sustained performance with pinned versions; Air versus dedicated host
-- [ ] `@code` **P2.4 follow-ups:** intermittent endpoint-test hang; `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
+- [ ] `@code` **P2.4 follow-ups:** intermittent endpoint-test hang: fix reviewed, waits for David (Q87); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
 - [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper; waits for David's phrase-set validation and for Cowork to name it as the first item of a run; a new dependency needs David's OK — [[90 System/briefs/P2.6-date-resolution|P2.6]], [[90 System/briefs/P2.6-phrase-set|phrase set]]
-- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; build after T9 (D94) — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
+- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) built, parked after a review-limit overrun (D72), uncommitted; stage C waits for Q86 — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
 
 ## S3 · Supervised wiki maintenance
 - [ ] `@code` **P3.0** Update my brain by voice or text, with approval — [[90 System/briefs/P3.0-update-my-brain|P3.0]]
@@ -74,7 +74,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## Local model knowledge
 - [ ] `@code` **M5** Retrieval corpus with D49 retention evidence; bilingual query expansion; expected evidence reviewed independently; keep original failures and untouched provisional cases
 - [x] `@code` **M6** Another model family under comparable conditions (with T9): Gemma 4 E4B and Ministral 3 8B measured 8 Oct; set separate voice fixtures and resource budgets before downloading any other modality model — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
-- [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline, after T9, never alongside it (D94, D100); downloads only as pinned in the brief's manifest — [[90 System/briefs/M6b-embedding-eval|M6b]]
+- [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline, after P2.7 (David, 8 Oct), never alongside a measurement run (D94, D100); downloads only as pinned in the brief's manifest — [[90 System/briefs/M6b-embedding-eval|M6b]]
 
 ## Wiki and vault upkeep
 - [ ] `@cowork` Triage `assistant-scope-ideas` and `how-to-automate-pm-job` at the next weekly pass, then lint

@@ -29,6 +29,8 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 > 2. Bump `version` to 0.7 with a version note; record the decision per §8 (next D number), source "David to Cowork, 8 Oct 16:06".
 > 3. Commit separately: `Data policy v0.7: §7b audit trail (David, 8 Oct)`. Note the new corpus version in PROGRESS: later dev-case runs are not comparable to T9's corpus `878a08ea6f57` without saying so.
 
+> *(Lead, session 39: the three 16:10 entries are worked. P2.7 brief committed `8b679e4`; C2 switch done `7874b6f`; v0.7 `5748ed0`; test-hang fix reviewed but Tier 2, waits for David (Q87); P2.7 files in scope `734cd3b`, stage L built and parked after the lead overran the D72 review limit, stage C waits for Q86. M6b not started. Detail: PROGRESS session 39.)*
+
 > ## ▶ Cowork → lead, 8 Oct 16:10: P2.7 go (David, 8 Oct 16:08)
 > P2.7 is next after: (1) the C2 switch and dev-case re-run, (2) the P2.4 test-hang fix, (3) data policy v0.7 (§7b). It goes **before M6b**. Follow the updated [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] brief: list the files in scope and get Codex's review of the list first; build the leak check (option B) and its planted-leak tests before any capture code; no real question is captured until those tests pass. Stop and report at the end of the run.
 

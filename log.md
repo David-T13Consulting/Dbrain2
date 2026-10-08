@@ -770,3 +770,11 @@ Detail: [[10 Projects/AI Second Brain/02_Architecture/data-policy]] §7b; D106; 
 ## [2026-10-08] decision | P2.7 files in scope reviewed; Q86 queued (cloud agents and the failure store)
 **What changed for David:** the build list for the failure loop is fixed and reviewed. The leak check, which reads no real question, is being built now. Capturing real questions waits for his answer to Q86: agents run as his user, so keeping them out of the store needs a permission change only he can approve.
 Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Files in scope and Review; [[90 System/for-david]] Q86; Codex `gpt-6.1-sol` rounds 1–2 FAIL, round 3 PASS.
+
+## [2026-10-08] build | P2.4 test hang: unbounded accept() removed, watchdog added
+**What changed for David:** the phone service can no longer get stuck waiting for a connection that is gone, the suspected (not proven) cause of the occasional test hang. The endpoint tests now stop within a minute and record where they were stuck if a hang recurs; other tests are not watched. Waits for his approval (Tier 2, Q87) before it is committed.
+Detail: [[90 System/briefs/MVP-phone|MVP-phone]] follow-up of 8 Oct; Codex consultation (D74).
+
+## [2026-10-08] session | Session 39 close: T9, C2 default, policy v0.7, P2.7 started and parked
+**What changed for David:** T9 is done and his phone service runs the new model once he restarts it. The audit-trail rule is in the policy. Three things wait for him: the host (Q85, by 16 Oct), how agents are kept out of the failure store (Q86), and approval of the test-hang fix (Q87). The leak check is built but parked and not committed: the lead overran the review limit for this run (seven reviews instead of five) and stopped once it noticed.
+Detail: [[10 Projects/AI Second Brain/PROGRESS]] session 39; [[90 System/for-david]].

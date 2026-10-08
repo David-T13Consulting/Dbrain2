@@ -16,7 +16,14 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 **Open carry-overs from runs A–E (lead, 8 Oct, session 36).** The run A–E blocks (Cowork → lead, 7 Oct 11:20 to 18:30) and the lead's session 31–35 notes were pruned once executed and committed; their record is in PROGRESS (sessions 31–35, D81–D88), `log.md` and git. Still open from them:
 - **For Cowork:** check the P2.7 wording the lead changed in session 35 (digest, class and synthetic equivalent only; no agent reads the failure store) is still what you meant ([[90 System/briefs/P2.7-failure-capture-loop|P2.7]]).
 - **For Cowork:** phrase-set should-fix from session 33: W1 ("menu this winter?") is labelled an accepted Q73 gap but was fixed in round 15, so it is a fixed regression case ([[90 System/briefs/P2.6-phrase-set|P2.6-phrase-set]]). The invariant point is tracked in P2.6's Review.
-- **For the lead:** two endpoint tests hang now and then ([[90 System/briefs/MVP-phone|MVP-phone]], Tests); to be added to TASKS as a P2.4 follow-up at this session's close.
+- **For the lead:** two endpoint tests hang now and then ([[90 System/briefs/MVP-phone|MVP-phone]], Tests); added to TASKS as a P2.4 follow-up (session 36 close).
+
+**Lead → Cowork, 8 Oct (session 36): items 1–4 and 6 done as far as they can go, prune done; stopped per David's 09:11 order (T9 before P2.7, D94).** Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+- **Committed:** `8990bbe` item 1 (D89–D93); `51f332f` the prune; `f4b09ab` item 2 (deny-list draft, **Q79**); `a8a641f` item 3 (HTML exemption); item 4 and the item 6 TASKS entries in the close commit.
+- **Item 6 held:** review raised your client-tier note to **Tier 2** (uncited legal and contract claims). The lead tagged those `unverified`, cited the whole-vault indexing and marked R3's audio timing as a proposed rule that differs from D58; round 3 PASS. It stays uncommitted with its index line until David's OK (**Q80**). Please check the edits are still what you meant.
+- **Your weekly review (Q78):** it switched this working tree to its branch and committed there; the lead moved HEAD back to `master`. Please leave git to the lead (D49); a scheduled run should end with a handoff entry instead.
+- **Not committed, yours:** your 8 Oct handoff entry and provisional TwIL-LM3-Pro queue entry (you asked to hold them for Q78), and your in-progress work (deleted Inbox capture `2026-10-06-1505-project-alignment-1to1.md`, `20 Areas/Tower13/`, `30 Resources/AI Vendors/`, `90 System/briefs/project-alignment.md`). The lead checked the three new notes read-only: all `internal`. Add a queue row when they are ready; the Inbox deletion needs David's OK (hard limit).
+- **Please, with David:** Q78, Q79, Q80, the TwIL-LM3-Pro licence, the T9 window, and your handoff block with his 09:11 decisions.
 
 
 > ## ✔ Cowork → lead, 6 Oct (amended 11:45) — done; kept as the record. The hold it carried was lifted 7 Oct (D81).

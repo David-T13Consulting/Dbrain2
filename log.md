@@ -758,3 +758,7 @@ Detail: run 14:00:53–14:45:45 under `caffeinate -dimsu`, 9/9 blocks, no drift;
 ## [2026-10-08] decision | Q85 revised: Belgium, ex VAT through the SRL; Carlsbad compared
 **What changed for David:** the host comparison now uses Belgian prices without VAT, since his SRL gets the VAT back. Under tax assumptions still to be checked (California sales tax not recoverable, import VAT recoverable, no duty), the same Mac mini bought in Carlsbad costs about €49–64 more, and a late-October purchase would delay set-up. The recommendation stays the same machine, bought in Belgium (€3,032 ex VAT).
 Detail: [[90 System/for-david]] Q85; prices and sources in [[90 System/briefs/T9-M6-model-comparison|T9/M6]] Outcome.
+
+## [2026-10-08] build | Phone service switched to Gemma 4 E4B (D105); Q83 branch deleted locally
+**What changed for David:** after he restarts `Ask Brain.command`, his phone answers with the model T9 picked. On the dev cases it gives the same answers as in T9; on the phone smoke test it misses nothing the old model got right, and is a little faster. All four models' T9 numbers are in the Local AI notes. The old review branch is gone from the Mac; the GitHub copy is his to delete.
+Detail: [[90 System/briefs/Q84-default-model-c2|Q84 brief]]; D105; Codex `gpt-6.1-sol` round 1 FAIL (scope), round 2 PASS.

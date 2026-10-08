@@ -1,5 +1,6 @@
 ---
 classification: internal
+review_status: codex-reviewed
 created: 2026-10-01
 last_reviewed: 2026-10-08
 next_review: 2026-10-15
@@ -61,6 +62,19 @@ Checked 8 Oct from primary sources (Hugging Face model APIs/cards, GitHub releas
 2. **Gemma 4 E4B-it (Apache-2.0, unchanged revision `ee0ef602`).** Reason: a different model family against the Qwen baselines, which the 1 Oct report asked for; llama.cpp and mlx-lm both list Gemma 4 support. Compare citation support, French/English and latency on the frozen cases.
 
 **Gaps:** IBM Granite, Gemma 4 12B assistant variant card, Kokoro/Whisper/Parakeet release notes beyond revision/date checks, Stability, Microsoft, Apple and other publishers outside the register were not reviewed. No image/ASR/TTS recipe changes could be assessed from metadata alone. Duration of this run: not recorded. Metadata and revision checks do not complete step 2's review of publisher collections and release notes; that review is outstanding for this week.
+
+## 2026-10-08 — T9/M6 measured on David's M2 / 24 GiB
+
+Frozen protocol, 10 platform dev cases, two scored blocks per model (n = 20), llama.cpp b11146, context 4096, temperature 0, `--reasoning off`. Development evidence on the Air, not the acceptance host. Detail, per-case verdicts and the rule: [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|T9 results]].
+
+| Model (file) | p50 / p95 | Prompt / generation tok/s | Peak server RSS | Safety gate · Q (of 8) |
+|---|---|---|---|---|
+| Qwen3-4B Q4_K_M | 8.38 / 15.71 s | 245 / 27.7 | 5.07 GiB | fail · 5 |
+| Qwen3.5-4B Q4_K_M (unsloth) | 11.17 / 18.21 s | 231 / 23.6 | 5.47 GiB | fail · 3 |
+| **Gemma 4 E4B-it QAT Q4_0** (google, rev `4b4a2c1d`) | **7.98 / 10.13 s** | 238 / 27.1 | 5.72 GiB | **pass · 5**, picked; adopted as default (D105) |
+| Ministral 3 8B Instruct 2512 Q4_K_M (mistralai, rev `0102285a`) | 15.58 / 23.74 s | 126 / 15.3 | 7.05 GiB | fail (one reviewer finding) · 5 |
+
+Q counts a case only when both judges (lead and Codex, blind) mark it correct in both blocks. Answers were identical across blocks, so n = 20 measures latency only. Ten cases on a three-file corpus: a one-case difference in Q is not tested for significance.
 
 ## What future weekly entries must record
 

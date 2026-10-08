@@ -11,7 +11,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## ▶ Next action
 
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
-- [ ] `@david` **After T9:** adopt the default model (Q84) · host order inside €4,000 by 16 Oct (Q85, D95) · go for P2.7 · phone re-check after restarting `Ask Brain.command` (P2.4) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
+- [ ] `@david` **After T9:** host order inside €4,000 by 16 Oct (Q85, D95) · go for P2.7 · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · delete the review branch on GitHub (local copy deleted, Q83) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
 - [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct:** has anything shipped out of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS
 
 ## S1 · Align architecture

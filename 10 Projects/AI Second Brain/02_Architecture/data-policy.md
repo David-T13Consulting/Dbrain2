@@ -1,10 +1,12 @@
 ---
 classification: internal
-version: 0.5
+version: 0.6
 status: scope confirmed 29 Sep 2026; implementation schedule amended at David's request 1 Oct 2026; personal-data waves and children's rule approved by David 5 Oct 2026 (D69); temporary §7 exception for the medispring-infi archive approved by David 6 Oct 2026 (Q63)
 ---
 
 # Data policy — Dbrain2 / AI Second Brain
+
+**v0.6 (7 Oct, Q76/P2.7):** adds §7a, the failure store (exact text approved by David on 7 Oct). Nothing else in the policy changes.
 
 **v0.5 (6 Oct, Q63):** temporary exception to the §7 boundary "client material physically unreachable", scoped to `~/Archive/medispring-infi` (former-employer confidential material, treated as client material). The boundary there is (1) the configured-roots check: the folder and its ancestors are outside every folder configured for Claude Code, Codex and Cowork, checked by realpath and failing closed, and (2) the no-access rule: no agent opens, reads, lists, runs git in or links to it. Ends when P1.3 verifies enforcement or on 31 Dec 2026, whichever is first; if P1.3 hasn't verified it by then, David decides again. Nothing else in the policy changes.
 
@@ -101,6 +103,10 @@ contract says so, nothing about that engagement goes into the system, **includin
 | Client material physically unreachable | Required boundary; outside-vault location alone is not proof | Verify allowed/reachable roots in P1.3 without reading prohibited material |
 | PII in traces | n/a | Redaction/retention from the first traces at S2; verify at S6 |
 | Exception: medispring-infi archive (v0.5, Q63) | Configured-roots check + no-access rule | Ends at P1.3 verification or 31 Dec 2026 |
+
+## 7a · Failure store (v0.6)
+
+Failure store. Ask Brain may keep the text of a question and its answer only when the question raised a failure signal, only in a local store on the host, outside the vault and outside git, readable only by the local model and by David. Unapproved failures are deleted after 90 days. No cloud model, agent or reviewer reads question text: cloud agents work from failure classes and synthetic equivalents. The weekly review reads counts, classes and synthetic equivalents only.
 
 ## 8 · Changing this policy
 

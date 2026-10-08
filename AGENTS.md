@@ -83,8 +83,9 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
 - **Hard limits: always ask David, never pre-approved.** Edits to `data-policy.md` or
   `AGENTS.md` · security or permission settings · the Keychain · launch agents, login items,
   Full Disk Access · deleting files · downloads not named in a brief or beyond budget ·
-  spending money · pushing to GitHub · anything touching `client` material · applying P1.4
+  spending money · anything touching `client` material · applying P1.4
   or any structured change across many notes.
+  The lead commits and pushes (no force) at the end of every run without asking (D79).
 - **Retry limit.** At most 5 attempts per failing command, test or script (review failures
   follow the rule above).
   After the 2nd failed attempt, ask Codex for a debugging opinion before trying again:

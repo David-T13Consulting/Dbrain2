@@ -18,8 +18,8 @@ Capability descriptions below are publisher-reported; suitability and limitation
 | **[Ministral 3 8B Instruct 2512](https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512)** | Multilingual instruction following, vision, structured output and function calling; French/English alternative | About 8.4B language parameters plus 0.4B vision encoder. Higher memory than a 4B baseline; publisher FP8/CUDA fit claims do not establish M2 performance | Not tested; evaluate a compatible quantization |
 | **[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)** | Newer verified family entry; publisher emphasizes coding, research, professional tasks and image/video understanding | Considerably more memory; thinking and agent loops add latency. On this busy 24 GiB host, fit/performance need a separate experiment | Watchlist; not downloaded or selected |
 | **[Qwen3-Coder-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct)** | Coding and tool-use specialization; useful comparator for a future code agent | All experts count toward weight storage. Code benchmarks do not establish faithful note synthesis, safe actions or useful French voice interaction | Watchlist; not a lightweight 3B deployment |
-
 | **[TwIL-LM3-Pro](https://huggingface.co/webAI-Official/TwIL-LM3-Pro)** (webAI, Granite 4.2 3B fine-tune) | Formal-logic reasoning (3.66B, text only); GGUF and LiteRT-LM builds | **Non-commercial license**; "not a general assistant"; vendor-only benchmarks (see ledger 8 Oct); thinking needs 2048+ output tokens; LiteRT bundles capped at 4,096 context | Watchlist, shortlisted for a bounded S5 trial **after David resolves the license**; not downloaded |
+
 Qwen3.5-4B is being tested because of size and runtime fit, not because it is the newest Qwen generation. Do not infer that an architecture announcement or a Transformers integration proves downloadable small checkpoints exist.
 
 ## How to choose for the vault

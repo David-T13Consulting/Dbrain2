@@ -3,7 +3,7 @@ classification: internal
 created: 2026-10-01
 last_reviewed: 2026-10-08
 next_review: 2026-10-15
-automation_status: activated 2026-10-01 (D60); task ID and first-run evidence pending
+automation_status: activated 2026-10-01 (D60); first run 2026-10-08 produced output; task ID and timezone still pending
 ---
 # Weekly local-model review
 
@@ -11,7 +11,7 @@ Owner: David. Research and documentation can be delegated to an assistant; deplo
 
 **Scheduling status: activated by David on 1 October 2026** in the desktop local-project scheduler (D60, OQ-18 resolved). Cadence Thursday 09:00 `Europe/Brussels`, first review 8 October 2026.
 
-⚠️ **Not yet evidenced.** The task ID, confirmed timezone, next-run time and first actual output have not been recorded here — David to paste them into the activation record below. Until a run has produced output, treat the cadence as configured rather than proven, and review the first two runs before relying on it.
+⚠️ **Partly evidenced.** The first scheduled run (8 Oct 2026) produced output (see the operating record below). The task ID, confirmed timezone and next-run time are still not recorded — David to paste them into the activation record below. Review the first two runs before relying on the cadence.
 
 The [official scheduled-task documentation](https://learn.chatgpt.com/docs/automations?surface=app) explains that local-project tasks need the computer on and desktop app running; the IDE/CLI has no Scheduled management interface. Web tasks cannot directly update a local folder. Activate in the desktop app with the vault as the project, then verify timezone, next run, permissions and a test output. Local model benchmarking and this assistant's online research are different workloads; the maintenance assistant is not being represented as a local model.
 
@@ -50,7 +50,7 @@ Copy into a desktop local-project scheduled task, using the proposed timezone/ca
 | 2026-10-01 | Initial research/manual execution of the review's documentation workflow completed | [[30 Resources/Local AI/benchmark-ledger]] and pinned source register |
 | 2026-10-01 | Scheduler activation blocked | No callable scheduler tool; desktop app access denied by computer-use tool |
 | 2026-10-01 | Task created in the desktop local-project scheduler by David | D60; task ID and next-run confirmation **still to be pasted here** |
-| 2026-10-08 | First scheduled run (Thu), session `session_01Dyiwy1hfwHSo73fG8E1Vjx` | Ran in a cloud session through the linked-computer tools; origin unreachable (no credentials), so branch `cowork/local-model-review-2026-10-08` is local only. Output: ledger entry 2026-10-08 and the notes in [[30 Resources/Local AI/benchmark-ledger]]. No missed run. Task ID and timezone still not pasted |
-| Pending | Verify first run (due 8 Oct 2026) | Record actual output, duration and any missed/failed run. Review the first two runs before relying on the cadence |
+| 2026-10-08 | First scheduled run (Thu), session `session_01Dyiwy1hfwHSo73fG8E1Vjx` | Ran in a cloud session through the linked-computer tools; origin unreachable (no credentials), so branch `cowork/local-model-review-2026-10-08` is local only. Output: ledger entry 2026-10-08 and the notes in [[30 Resources/Local AI/benchmark-ledger]]. No missed run. Duration: not recorded. Coverage gap: metadata and revision checks only; step 2's review of publisher collections and release notes was not completed. Task ID and timezone still not pasted |
+| Pending | Verify the second run (due 15 Oct 2026) | Record actual output, duration and any missed/failed run. Review the first two runs before relying on the cadence |
 
 Weekly monitoring does not mean upgrading weekly. Candidate promotion requires the project's regression/acceptance gates and rollback plan.

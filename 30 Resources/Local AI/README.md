@@ -39,7 +39,7 @@ The measured host is an M2 Mac with 24 GiB unified memory. This supports small-m
 
 ## Next local candidates (8 Oct shortlist)
 
-1. TwIL-LM3-Pro GGUF, research use only, pending David's decision on its non-commercial license.
+1. TwIL-LM3-Pro GGUF, research use only. Its edge for evidence checking (S5) is an `unverified` hypothesis carried over from its formal-logic results. It stays **watchlist only** in [[90 System/briefs/T9-M6-model-comparison|T9/M6]]: David's wish to use it in the demo (D99) does not settle its non-commercial license, add it to T9's candidates or authorise a download.
 2. Gemma 4 E4B-it, as a second model family against the Qwen baselines.
 
 Both need a separate, authorized, bounded run; no local benchmark ran on 8 Oct. Detail in [[30 Resources/Local AI/benchmark-ledger]].

@@ -106,7 +106,7 @@ Working knowledge base on the Scaled Agile Framework for three lenses (Product L
 - [[30 Resources/AI Vendors/eurouter|EUrouter]] — EU API gateway to frontier models: what its site says (8 Oct), open questions; T0.7 candidate · internal
 
 ## 30 Resources — Local AI
-Maintained model understanding, primary-source snapshots and separate local measurements; reviewed 1 Oct 2026. Weekly automation pending activation.
+Maintained model understanding, primary-source snapshots and separate local measurements; reviewed 1 Oct 2026, weekly review activated by David (D60), first scheduled run 8 Oct 2026.
 - [[30 Resources/Local AI/README|Local AI hub]] — reading route, evidence labels and project shortlist · internal
 - [[30 Resources/Local AI/model-fundamentals|model fundamentals]] — weights, runtimes, quantization, memory and agents · internal
 - [[30 Resources/Local AI/text-and-vision|text and vision]] — language, reasoning, code and image understanding candidates · internal

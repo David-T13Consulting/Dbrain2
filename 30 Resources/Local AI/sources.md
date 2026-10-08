@@ -63,8 +63,11 @@ New primary sources reviewed this week (not pinned in the table, because not yet
 | [`webAI-Official/TwIL-LM3-Pro`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro) | `4214aaa4020c`, modified 2026-09-30 | webAI Non-Commercial License 1.0 (`other`) |
 | [`webAI-Official/TwIL-LM3-Pro-LiteRT-LM`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro-LiteRT-LM) | `bb30df2e79d4`, created 2026-10-01 | same |
 | [`mradermacher/TwIL-LM3-Pro-GGUF`](https://huggingface.co/mradermacher/TwIL-LM3-Pro-GGUF) | community static quants; no date shown | same (declared) |
-| [`webAI-Official/TwIL-LM3`](https://huggingface.co/webAI-Official/TwIL-LM3) | modified 2026-10-01 | same |
-| [`Qwen/Qwen-Image-2.1-PE-I2I`](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I) | created 2026-09-20 | Qwen Research License |
+| [`webAI-Official/TwIL-LM3`](https://huggingface.co/webAI-Official/TwIL-LM3) | `145ff05e92c6`, modified 2026-10-01 | same |
+| [`webAI-Official/TwIL-LM2`](https://huggingface.co/webAI-Official/TwIL-LM2) | `d33781673bad`, created 2026-09-29; card: base `ibm-granite/granite-3.3-2b-instruct` | same |
+| [`webAI-Official/TwIL-LM`](https://huggingface.co/webAI-Official/TwIL-LM) | `39dc16b47090`, created 2026-07-23; holds the earlier TwIL-LM2 GGUF files, base SmolLM2-1.7B-Instruct (a different model from the repo above) | same |
+| [`Qwen/Qwen-Image-2.1-PE-I2I`](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I) | `72927bc08afc`, created 2026-09-20 | Qwen Research License |
+| [`Qwen/Qwen-Image-2.1-PE-T2I`](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I) | `f3ed7985c788`, created 2026-09-20 | Qwen Research License |
 | [`Qwen/Qwen-Drive-1.0-4B`](https://huggingface.co/Qwen/Qwen-Drive-1.0-4B) | created 2026-08-27 | apache-2.0 |
 | [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases), [mlx-lm releases](https://github.com/ml-explore/mlx-lm/releases), [whisper.cpp releases](https://github.com/ggml-org/whisper.cpp/releases) | read 8 Oct (see ledger) | MIT / MIT / MIT (not re-verified) |
 

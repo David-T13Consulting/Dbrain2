@@ -778,3 +778,7 @@ Detail: [[90 System/briefs/MVP-phone|MVP-phone]] follow-up of 8 Oct; Codex consu
 ## [2026-10-08] session | Session 39 close: T9, C2 default, policy v0.7, P2.7 started and parked
 **What changed for David:** T9 is done and his phone service runs the new model once he restarts it. The audit-trail rule is in the policy. Three things wait for him: the host (Q85, by 16 Oct), how agents are kept out of the failure store (Q86), and approval of the test-hang fix (Q87). The leak check is built but parked and not committed: the lead overran the review limit for this run (seven reviews instead of five) and stopped once it noticed.
 Detail: [[10 Projects/AI Second Brain/PROGRESS]] session 39; [[90 System/for-david]].
+
+## [2026-10-08] decision | Q85, Q86, Q87 answered (a): host D107, failure-store deny rules D108, hang fix D109
+**What changed for David:** his host is chosen (Mac mini M5 Pro, 64 GB, 1 TB, from Apple Belgium through his SRL; he orders it by 16 Oct). Agents get deny rules for the failure store, proven by an access test before anything is captured. The test-hang fix is approved and is committed next.
+Detail: [[90 System/for-david]] Answered; D107–D109; Cowork's 17:06 handoff entry.

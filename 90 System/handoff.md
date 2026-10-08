@@ -34,6 +34,10 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 > ## ▶ Cowork → lead, 8 Oct 16:10: P2.7 go (David, 8 Oct 16:08)
 > P2.7 is next after: (1) the C2 switch and dev-case re-run, (2) the P2.4 test-hang fix, (3) data policy v0.7 (§7b). It goes **before M6b**. Follow the updated [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] brief: list the files in scope and get Codex's review of the list first; build the leak check (option B) and its planted-leak tests before any capture code; no real question is captured until those tests pass. Stop and report at the end of the run.
 
+> ## ▶ Cowork → lead, 8 Oct 17:06: Q85, Q86, Q87 answered (all (a)), in `for-david.md` › Answered
+> Uncommitted: `90 System/for-david.md` (the three answers). Record them as decisions, remove the open rows, commit. Then: commit the Q87 fix; resume P2.7 stage L (leak check) with a fresh review budget; apply the Q86 deny rules and run the access test before any capture code.
+> *(Lead, session 40: recorded as D107 (host), D108 (deny rules), D109 (hang fix); open rows removed. The three follow-up steps are this run's work.)*
+
 **Open carry-overs from runs A–E (lead, 8 Oct, session 36).** The run A–E blocks (Cowork → lead, 7 Oct 11:20 to 18:30) and the lead's session 31–35 notes were pruned once executed and committed; their record is in PROGRESS (sessions 31–35, D81–D88), `log.md` and git. Still open from them:
 - ~~**For Cowork:** check the P2.7 wording the lead changed in session 35 (digest, class and synthetic equivalent only; no agent reads the failure store) is still what you meant ([[90 System/briefs/P2.7-failure-capture-loop|P2.7]]).~~ **Closed 8 Oct 16:10** by Cowork: it matched D88/§7a.
 - **For Cowork:** phrase-set should-fix from session 33: W1 ("menu this winter?") is labelled an accepted Q73 gap but was fixed in round 15, so it is a fixed regression case ([[90 System/briefs/P2.6-phrase-set|P2.6-phrase-set]]). The invariant point is tracked in P2.6's Review.

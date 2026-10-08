@@ -1,10 +1,12 @@
 ---
 classification: internal
-version: 0.6
+version: 0.7
 status: scope confirmed 29 Sep 2026; implementation schedule amended at David's request 1 Oct 2026; personal-data waves and children's rule approved by David 5 Oct 2026 (D69); temporary §7 exception for the medispring-infi archive approved by David 6 Oct 2026 (Q63)
 ---
 
 # Data policy — Dbrain2 / AI Second Brain
+
+**v0.7 (8 Oct, P2.7, D106):** adds §7b, the audit trail (exact text and retention approved by David on 8 Oct). Nothing else in the policy changes.
 
 **v0.6 (7 Oct, Q76/P2.7):** adds §7a, the failure store (exact text approved by David on 7 Oct). Nothing else in the policy changes.
 
@@ -107,6 +109,12 @@ contract says so, nothing about that engagement goes into the system, **includin
 ## 7a · Failure store (v0.6)
 
 Failure store. Ask Brain may keep the text of a question and its answer only when the question raised a failure signal, only in a local store on the host, outside the vault and outside git, readable only by the local model and by David. Unapproved failures are deleted after 90 days. No cloud model, agent or reviewer reads question text: cloud agents work from failure classes and synthetic equivalents. The weekly review reads counts, classes and synthetic equivalents only.
+
+## 7b · Audit trail (v0.7)
+
+Ask Brain keeps a per-question trace, the model server's log and an append-only audit log of the failure loop, locally on the host, outside the vault and outside git. None of them contains the text of a question or an answer. They are kept for audit and are not deleted on the failure store's 90-day cycle; any log found to contain question text is treated as the failure store. The weekly review and agents may read them for review and audit.
+
+Retention: for the life of the project, reviewed at S6; backups include these logs.
 
 ## 8 · Changing this policy
 

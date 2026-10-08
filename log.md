@@ -762,3 +762,7 @@ Detail: [[90 System/for-david]] Q85; prices and sources in [[90 System/briefs/T9
 ## [2026-10-08] build | Phone service switched to Gemma 4 E4B (D105); Q83 branch deleted locally
 **What changed for David:** after he restarts `Ask Brain.command`, his phone answers with the model T9 picked. On the dev cases it gives the same answers as in T9; on the phone smoke test it misses nothing the old model got right, and is a little faster. All four models' T9 numbers are in the Local AI notes. The old review branch is gone from the Mac; the GitHub copy is his to delete.
 Detail: [[90 System/briefs/Q84-default-model-c2|Q84 brief]]; D105; Codex `gpt-6.1-sol` round 1 FAIL (scope), round 2 PASS.
+
+## [2026-10-08] decision | Data policy v0.7: §7b audit trail (D106)
+**What changed for David:** the policy now says what Ask Brain's logs may hold (never the text of a question or an answer), that they are kept for audit for the life of the project, and that the weekly review and agents may read them. His approved text, word for word.
+Detail: [[10 Projects/AI Second Brain/02_Architecture/data-policy]] §7b; D106; dev-case corpus now `d926bd92ab8e` (T9 ran on `878a08ea6f57`).

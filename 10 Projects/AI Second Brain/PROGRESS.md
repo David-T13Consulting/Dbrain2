@@ -80,6 +80,8 @@ Newest first. One entry per working session — what happened, what changed, whe
 - **`.gitignore`:** `.claude/settings.local.json` added (it was already ignored by David's global git ignore on this Mac, not by the repo).
 - **Not done:** the handoff's branch entry still waits on Q83 (`-D`). A `caffeinate -ims` (PID 53896) from an earlier session was running before this run and was left alone.
 
+- **Data policy v0.7 (D106):** §7b audit trail added word for word. `data-policy.md` is in the dev-case corpus: the corpus version moves from `878a08ea6f57` (T9) to **`d926bd92ab8e`**, so later dev-case runs are not comparable to T9's without saying so.
+
 **Pick up at:** Q84 and Q85 with David (host order by 16 Oct); then M6b (D100); P2.7 on David's go.
 
 ### Session 38 — 8 Oct 2026 · Claude Code, lead loop (Q81/D103 records; Q82 landing; tracking-file maintenance)

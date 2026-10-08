@@ -26,6 +26,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/01_Key_Topics_Summary|01_Key_Topics_Summary]] — what the webinar said · internal
 - [[10 Projects/AI Second Brain/00_Source_Material|00_Source_Material]] — pointer to the raw source archive kept outside the vault · internal
 - [[10 Projects/AI Second Brain/02_Architecture/data-policy|data-policy]] — three-tier data policy and red lines · internal
+- [[10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements|client-tier-workspace-requirements]] — what a separate client-tier vault (from November) requires of Dbrain2 and the runtime: multi-vault config, per-vault policy, local recording pipeline (proposed) · internal
 - [[10 Projects/AI Second Brain/02_Architecture/success-thresholds|success-thresholds]] — pass thresholds for the three showcase skills · internal
 - [[10 Projects/AI Second Brain/03_Golden/heldout-order|heldout-order]] — reproducible sampling order for the held-out golden runs · internal
 - [[10 Projects/AI Second Brain/03_Golden/labels-batch-01|labels-batch-01]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-02|02]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-03|03]], [[10 Projects/AI Second Brain/03_Golden/labels-batch-04|04]] — David's golden-dataset labels, one batch per note. 01–03 are development data; **04 is the held-out test for rubric v1.4 and is not yet scored** · internal

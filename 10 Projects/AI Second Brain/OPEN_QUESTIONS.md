@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Open Questions
 
-**Updated:** 8 Oct 2026 (session 36): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q78 weekly-review branch, Q79 force-push deny list, Q80 client-tier note, and Cowork's TwIL-LM3-Pro licence question, still uncommitted with Cowork; Q30, Q69, Q77 answered and cleared, D89–D93) · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 8 Oct 2026 (session 37): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q81, the T9 go/no-go; Q78, Q79, Q80 and Cowork's Q-cowork-1/-2 answered and cleared, D97–D101) · Open questions block work. Resolve them or explicitly park them.
 
 ---
 

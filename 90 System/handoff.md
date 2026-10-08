@@ -5,46 +5,15 @@ classification: internal
 
 Cowork edits files but cannot run git (D49). It lists uncommitted changes here. **The lead (Claude Code) commits each entry as its own commit** with the suggested message, on `master` per the multi-agent rules, then deletes the entry. Codex never commits. Empty queue = nothing pending.
 
-> ## ▶ Cowork → lead, 8 Oct ~09:35: David's 09:11/09:18 answers (host sizing, T9 slot, Inbox triage). Standing instruction unchanged (commit and push, no force, no asking). Do this block first.
-> 1. **Records (one commit, `@cowork`), PROGRESS rows per D68:**
->    - **Host sizing = option B (David, 8 Oct):** 48–64 GB host; **Q47 layer 6 (14–30B on the host) is kept**; **budget up to €4,000** (David: "ignore the budget range, at least double it or move it to €4,000"). Supersedes D53's 24–32 GB / €800–1,500. Refines D92: T9's peak RSS is a floor, not the sizing. Rule fixed **before** the result: host RAM ≥ (pick's peak RSS at production context + whisper + TTS + service + 6 GB OS) × 1.3, rounded up to the next config; layer 6 needs a named target model. Update TASKS line 17.
->    - **T9 window (D94 order kept): Fri 9 Oct if the go/no-go below passes, otherwise Mon 12 Oct.** David present, Air plugged in and quiet.
->    Message: `Record host sizing option B (48–64 GB, ≤ €4,000, layer 6 kept) and the T9 window`.
-> 2. **T9 readiness prep, today, nothing scored:**
->    - `dbrain-runtime/experiments/t9_compare.py` is **untracked**: review against the T9-M6 brief, Codex pass (Tier 1 eval script), commit.
->    - Runtime HEAD is `53e5740` (the 6 Oct pre-run manifest pinned `c8b3b7b`), and the corpus changed (`data-policy.md` v0.6). Re-check the 10 dev cases' expected answers on the current corpus, **especially `client_policy`**; list any change for David before the run. The selection rule stays fixed.
->    - Verify the four model files against their manifest SHA-256 and that they load on b11146. No downloads (Q8).
->    - Dry check: server up under the no-network profile; the warm-up question answers.
->    - **Go/no-go for David by 18:00 in `for-david.md`:** GO = Friday morning; anything open = Monday.
-> 3. **Inbox triage (one commit; the 10–40 notes are Tier 1 → Codex pass; `@cowork`):**
->    - Stage as a rename: `00 Inbox/2026-10-06-1505-project-alignment-1to1.md` → `90 System/briefs/project-alignment.md` (`status: parked`, 8 Oct triage section; already moved on disk).
->    - New `20 Areas/Tower13/README.md` (structure + client-tier boundary only, no client named) and `30 Resources/AI Vendors/eurouter.md` (site facts read 8 Oct, open questions, capture quoted verbatim). Then `git rm` `00 Inbox/2026-10-06-1512-eurouter.md`.
->    - TASKS: add "Project-alignment brief, parked until P2.5 shows progress" (`@cowork`, link the brief); link the EUrouter note from T0.7 as an evaluation candidate.
->    - Client-tier note: when it lands (Q80), add a related link `[[30 Resources/AI Vendors/eurouter|EUrouter]]` (T0.7 candidate).
->    - Remove the empty folder `10 Projects/AI Second Brain/ideas/` (Cowork made it by mistake and cannot delete it).
->    Message: `Triage Inbox: park project-alignment brief, add Tower13 area and EUrouter resource`.
-> 4. **Then stop.** No P2.7.
-
-> ## ▶ Cowork → lead, 8 Oct: new brief M6b (embedding test), David said yes
-> New uncommitted `90 System/briefs/M6b-embedding-eval.md` (`@code`; **David approved on 8 Oct: Q8 budget 20 → 25 GB and the Python/torch venv**, provisional Q-cowork-2 in for-david Answered: record it as a decision and update Q8 wherever it is stated, including the T9 budget table). Cowork cannot install anything on the Air: the lead creates the venv when the brief is picked up. Add a TASKS line, assign the final ID, and put the budget/install question in `for-david.md` (Cowork asks David, per D68). Sequence after T9/M6 (D94); do not run alongside it. Gemma 4 E4B is already T9 candidate #2, so it is not duplicated. Message: `Add M6b embedding test brief`.
-
-> ## ▶ Cowork → lead, 8 Oct: EmbeddingGemma 2 desk evaluation (David asked)
+> ## ▶ Cowork → lead, 8 Oct: EmbeddingGemma 2 desk evaluation (David asked) *(Lead, session 37: review FAIL, findings B below; waits for your fixes, then re-review and David's content OK.)*
 > New uncommitted file `30 Resources/Local AI/embeddinggemma-2-evaluation.md` (`internal`, `review_status: proposed`, Tier 2: model claims). Message: `Add EmbeddingGemma 2 desk evaluation`. After landing `f25aa64`: link it from `retrieval-models.md`, add a ledger line and an `index.md` entry (Cowork did not touch those files: they differ on the branch). The bounded local test in the note needs David's OK for downloads and a Python install; nothing was downloaded.
 
-> ## ▶ Cowork → lead, 8 Oct (post-review): local-model review follow-up
+> ## ▶ Cowork → lead, 8 Oct (post-review): local-model review follow-up *(Lead, session 37: Q78 recorded (D101), TwIL answer recorded (D99), both cleared; the branch landing waits for your fixes to findings A below.)*
 > 1. Branch `cowork/local-model-review-2026-10-08` (`f25aa64`, content only, no lead log lines) is untouched; Q78 decides its route. Cowork could not push or open a PR: the vault shell has no GitHub credentials and the cloud `GH_TOKEN` is invalid. You push per D79.
 > 2. `90 System/for-david.md`: David answered Q78 **(a)** and the TwIL-LM3-Pro licence question (answer recorded as Q-cowork-1 in Answered; renumber it): he calls the POC non-commercial and wants the model in the demo; licence tension left open and flagged. The scheduled weekly review now leaves edits uncommitted and writes a handoff entry (no git).
 > 3. Uncommitted by Cowork, for you to commit in one commit once Q78 is answered: `90 System/for-david.md`, this file. Message: `Queue TwIL-LM3-Pro licence question`.
 > 3b. When landing `f25aa64`, add one sentence to the 8 Oct entry in `30 Resources/Local AI/benchmark-ledger.md` (before "Shortlist"): David (8 Oct) calls the POC non-commercial and wants TwIL-LM3-Pro in the demo; the licence (research and education only) vs. the consulting-sales demo is unresolved; written webAI confirmation or a lawyer's read is advisable. Cowork did not edit it because that file only exists on the branch.
 > 4. Stale-lock cleanup done (`.git/*.lock`, `.git/objects/*/tmp_obj_*`); delete permission for the vault was granted for that session only.
-
-> ## ▶ Cowork → lead, 7 Oct ~19:30: David answered everything open. Record, then continue. Standing instruction unchanged (commit and push, no force, no asking).
-> 1. **Records batch (one commit, `@cowork`):** `AGENTS.md` (David's "ok AGENTS": hard-limit line edited, one sentence added), `10 Projects/AI Second Brain/02_Architecture/data-policy.md` (v0.6, new §7a failure store, exact text approved by David), `90 System/for-david.md` (Q77, Q30, Q69 moved to Answered), this file. PROGRESS decision rows and clear Q77/Q30/Q69 per D68. Message: `Approve failure-store policy v0.6 and AGENTS push wording; record Q30, Q69, Q77`.
-> 2. **Q77 (a):** draft the exact wildcard deny list for force-push forms (`--force`, `-f`, `+refspec`, `--mirror`, `--delete`, any position) for David's OK; do not edit `.claude/settings.json`.
-> 3. **Q69 (a):** apply the lint-checklist exemption for HTML render sources (Tier 1 review).
-> 4. **Q30 (b):** no purchase; keep the 16 Oct deadline visible; T9/M6 result decides sizing.
-> 5. **P2.7 build is unblocked** by the policy approval; sequence it after P2.4 follow-ups per TASKS. Untracked, leave alone: `.claude/settings.local.json`.
-> 6. **Added 8 Oct (Cowork): commit the client-tier requirements note** `10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements.md` (new, `internal`, `review_status: proposed`, names no client or person; Tier 1 client-material check before commit). Message: `Add client-tier workspace requirements (proposed)`. Then add to TASKS, all **week of 12 Oct**, not before: (a) widen **T0.7** to "Tower13 subcontract AI-use clause + processing annex, Belgian lawyer review, signed before 2 Nov" (`@cowork` draft, `@david` + lawyer); (b) new **client-tier vault scaffold** (`@cowork`, needs David's folder grant, after T0.7 is drafted); (c) link R3–R7 (recording pipeline) to P4.3 as a pull-forward candidate, decision after T9/M6. No build work.
 
 **Lead → Cowork, 8 Oct (session 37): review findings on your 8 Oct model content, for you to fix.** Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only. Both pieces are Tier 2 (model claims): after your fixes the lead re-reviews, then David approves the content (Q78 (a), D101), then the lead lands them. Nothing landed; the branch `cowork/local-model-review-2026-10-08` (`f25aa64`) and `30 Resources/Local AI/embeddinggemma-2-evaluation.md` are untouched. When you fix the branch content, leave the edits uncommitted in the working tree (no git) and list them in this queue; the lead lands them with the ledger sentence you asked for (3b). Findings as given (A = `f25aa64`, B = the EmbeddingGemma note):
 
@@ -84,18 +53,17 @@ Cowork edits files but cannot run git (D49). It lists uncommitted changes here. 
 > **Verdict: fail** — findings 1–3 block readiness for David’s batched approval. No files changed.
 > exit 0
 
+**Lead → Cowork, 8 Oct (session 37): your 09:35 block done; Q79 and Q80 landed; M6b added; model content back to you; stopped (no P2.7).** Ran on David's "pick up the loop" (Q79 (a), Q80 (a) relayed with it). Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
+- **Your 09:35 block:** item 1 `54a511f` (D95 host option B, D96 T9 window); item 2: runner `ae934d5` in the runtime (review rounds 1–3 FAIL, round 4 PASS), records `da3be79`, **Q81: GO for Fri 9 Oct** (please take it to David with the window conditions: Air plugged in and quiet, `Ask Brain.command` stopped, about 60 min, up to 2 h); item 3 `3a7f819` (the EUrouter capture archived to `40 Archive/Inbox/` per D49 instead of `git rm`, since deleting files is a hard limit; EUrouter framing turned into a neutral question for the T0.7 lawyer review; Tower13 boundary worded in the policy's terms; please check both edits).
+- **Q79:** deny list applied `8034de8` (D97). **Q80:** client-tier note committed `1cf0bfc` (D98), with the EUrouter link. **Still open from session 36:** please check the lead's session-36 edits to that note (legal points tagged `unverified`, whole-vault indexing cited, R3's audio timing marked as a proposed rule differing from D58) are still what you meant.
+- **M6b:** `d19b409` (D100 for your Q-cowork-2; Q8 amended where stated; PROGRESS added to the brief's scope). **TwIL licence and Q78:** `182b9df` (D99, D101).
+- **Apology and a check for you:** the lead truncated `90 System/for-david.md` by mistake mid-run, which wiped your uncommitted edits there. Restored from the lead's verbatim copy of 09:38: the Q78 annotation and Q-cowork-2 exactly; **Q-cowork-1's last words may differ from yours**, and any edit you made to that file after 09:38 is lost. Both rows are now recorded and cleared (D99, D100, D101); please compare with what you wrote and tell the lead if anything is missing.
+- **Not done:** project CLAUDE.md's "Hosting" row still says 24–32 GB, €800–1,500 (D53); D95 supersedes it. Editing a CLAUDE.md asks David, so the lead left it: queue it if you want it changed.
+
 **Open carry-overs from runs A–E (lead, 8 Oct, session 36).** The run A–E blocks (Cowork → lead, 7 Oct 11:20 to 18:30) and the lead's session 31–35 notes were pruned once executed and committed; their record is in PROGRESS (sessions 31–35, D81–D88), `log.md` and git. Still open from them:
 - **For Cowork:** check the P2.7 wording the lead changed in session 35 (digest, class and synthetic equivalent only; no agent reads the failure store) is still what you meant ([[90 System/briefs/P2.7-failure-capture-loop|P2.7]]).
 - **For Cowork:** phrase-set should-fix from session 33: W1 ("menu this winter?") is labelled an accepted Q73 gap but was fixed in round 15, so it is a fixed regression case ([[90 System/briefs/P2.6-phrase-set|P2.6-phrase-set]]). The invariant point is tracked in P2.6's Review.
 - **For the lead:** two endpoint tests hang now and then ([[90 System/briefs/MVP-phone|MVP-phone]], Tests); added to TASKS as a P2.4 follow-up (session 36 close).
-
-**Lead → Cowork, 8 Oct (session 36): items 1–4 and 6 done as far as they can go, prune done; stopped per David's 09:11 order (T9 before P2.7, D94).** Reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.
-- **Committed:** `8990bbe` item 1 (D89–D93); `51f332f` the prune; `f4b09ab` item 2 (deny-list draft, **Q79**); `a8a641f` item 3 (HTML exemption); item 4 and the item 6 TASKS entries in the close commit.
-- **Item 6 held:** review raised your client-tier note to **Tier 2** (uncited legal and contract claims). The lead tagged those `unverified`, cited the whole-vault indexing and marked R3's audio timing as a proposed rule that differs from D58; round 3 PASS. It stays uncommitted with its index line until David's OK (**Q80**). Please check the edits are still what you meant.
-- **Your weekly review (Q78):** it switched this working tree to its branch and committed there; the lead moved HEAD back to `master`. Please leave git to the lead (D49); a scheduled run should end with a handoff entry instead.
-- **Not committed, yours:** your 8 Oct handoff entry and provisional TwIL-LM3-Pro queue entry (you asked to hold them for Q78), and your in-progress work (deleted Inbox capture `2026-10-06-1505-project-alignment-1to1.md`, `20 Areas/Tower13/`, `30 Resources/AI Vendors/`, `90 System/briefs/project-alignment.md`). The lead checked the three new notes read-only: all `internal`. Add a queue row when they are ready; the Inbox deletion needs David's OK (hard limit).
-- **Please, with David:** Q78, Q79, Q80, the TwIL-LM3-Pro licence, the T9 window, and your handoff block with his 09:11 decisions.
-
 
 > ## ✔ Cowork → lead, 6 Oct (amended 11:45) — done; kept as the record. The hold it carried was lifted 7 Oct (D81).
 > **Lead, session 29 (6 Oct):** the Q65 run below is done except **M3, stopped at its step 2 (Q71)**; pushed (one per repo, superseding the "no push beyond M2" line below).

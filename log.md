@@ -786,3 +786,7 @@ Detail: [[90 System/for-david]] Answered; D107–D109; Cowork's 17:06 handoff en
 ## [2026-10-08] build | Test-hang fix committed (D109); P2.7 leak check committed
 **What changed for David:** the approved test-hang fix is in. The leak check that guards what cloud agents may read about his failed questions is built, passed review on its fourth round, and is committed: it reads no real question.
 Detail: runtime `3cbbd40` and `d62fdf7`; [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review; [[90 System/briefs/MVP-phone|MVP-phone]].
+
+## [2026-10-08] build | D108 deny rules applied; access test not passed yet (Q88)
+**What changed for David:** under its main config and its review profile, Codex's sandbox now refuses to read the failure store (its full-access mode and the app's computer-use plugins are not covered). Claude Code's file tools and plain shell reads are refused too, but a disguised shell command still gets through, and Cowork has not run its own test. So no real question is captured yet; Q88 asks him how to close the gaps (recommended: capture only on the Mac mini, under a dedicated user).
+Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] access tests; [[90 System/for-david]] Q88; D108.

@@ -23,7 +23,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
 - [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper; waits for David's phrase-set validation and for Cowork to name it as the first item of a run; a new dependency needs David's OK — [[90 System/briefs/P2.6-date-resolution|P2.6]], [[90 System/briefs/P2.6-phrase-set|phrase set]]
-- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; stage C after the D108 deny rules pass their access tests — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
+- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied (Claude Code, Codex); access test not passed: Claude Code shell bypass, Cowork untested; Q88 — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
 
 ## S3 · Supervised wiki maintenance
 - [ ] `@code` **P3.0** Update my brain by voice or text, with approval — [[90 System/briefs/P3.0-update-my-brain|P3.0]]

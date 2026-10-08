@@ -18,6 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
+| Q88 | lead (Claude Code), 8 Oct, session 40 | [[90 System/briefs/P2.7-failure-capture-loop\|P2.7]] access tests (D108) | **The D108 access test does not pass yet: how should the gaps be closed?** Codex is blocked by its sandbox (main config and review profile). Claude Code's file tools and plain shell reads are blocked, but a disguised shell command still reads the store: its shell has no OS-level boundary. Cowork is untested. Capture of real questions stays off until every agent fails the test. | **(a) Recommended:** no real capture on the Air; capture starts on the Mac mini, where the service runs as a dedicated macOS user that alone owns the store (D108's host part), an OS boundary for every agent at once. Meanwhile the lead builds and tests stage C with planted data only, in a temporary home · (b) on the Air now: move the phone service and the store to a separate macOS user (you run one `sudo` step; the login item moves) · (c) on the Air now, **an exception to D108 that you would approve**: accept Claude Code's tripwire as it is (an agent that deliberately disguises a command could read the store; the Codex app's computer-use route is also untested), you install `/etc/codex/requirements.toml` with `sudo` to stop Codex's full-access mode, and Cowork runs its own test | real capture (P2.7 stage C) | this week |
 
 ## Answered (since 8 Oct)
 

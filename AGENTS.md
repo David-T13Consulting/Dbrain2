@@ -18,6 +18,7 @@ PARA layout: 00 Inbox · 10 Projects · 20 Areas · 30 Resources · 40 Archive �
 
 ## Conventions
 - Write in English. Transcribe French captures as spoken; translate at triage.
+- Supported languages: English and French only, for the product, its tests and reviews (David, 9 Oct). No work on other languages unless David asks.
 - `00 Inbox/` holds raw captures named `YYYY-MM-DD-HHmm-<slug>.md`. Don't process them unless David asks for triage.
 - Find things with file search (grep/glob). There is no vector index.
 - Link notes with `[[wikilinks]]`.

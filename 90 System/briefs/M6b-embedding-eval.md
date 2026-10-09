@@ -2,7 +2,7 @@
 classification: internal
 task: M6b   # final ID, assigned by the lead 8 Oct (session 37)
 owner: "@code"
-status: blocked-on-david # S2 done 9 Oct (session 44); S3 blocked on Q94: protocol item 2's label source holds totals only
+status: open # S2 done 9 Oct (session 44); S3 unblocked 9 Oct: Q94 (a), labels frozen (D124)
 models: []
 created: 2026-10-08
 source: David, 8 Oct ("Yes", run the EmbeddingGemma 2 evaluation); desk note [[30 Resources/Local AI/embeddinggemma-2-evaluation]]
@@ -32,7 +32,7 @@ Gemma 4 E4B (official QAT Q4_0 GGUF, Google repo `google/gemma-4-E4B-it-qat-q4_0
 
 ## Protocol (frozen before any result is seen)
 1. **Arms:** (A) the lexical baseline as in `retrieval-v1`; (B) `google/embeddinggemma-2`, text path only, bfloat16 or float32 (never float16), documented task prefixes, 768 d and 256 d re-normalized; (C) `Qwen/Qwen3-Embedding-0.6B` with its query instruction, full dimension. Same chunks, same cases, no generation step.
-2. **Cases:** the 10 retrieval-v1 cases, the French-query cases, and the corpus-gap case, with expected evidence labels fixed from `continuation_manual_review.json`. Reserved acceptance cases are never used.
+2. **Cases:** the 10 retrieval-v1 cases, the French-query cases, and the corpus-gap case, with expected evidence labels fixed from `continuation_manual_review.json`. **Amended 9 Oct (Q94 (a), D124):** that file holds totals only, so the labels are the table frozen in D124 (passage ids of the 26-passage corpus); client_policy counts on C9 only, also for item 7; the 1 Oct review's equivalent-wording credit is quoted beside the result, not scored. Reserved acceptance cases are never used.
 3. **Corpus:** the same 26 chunks first. A second pass on the whole-vault index files is allowed only for `classification: public|internal` notes passing the label allowlist (Q46); never client material.
 4. **Metric:** expected-evidence recall at top 3 and top 5, per case and in total, plus wrong-evidence hits in the top 3. Cold and warm load time and peak RSS are recorded but are not the selection criterion. Small n: report counts, no percentages as proof.
 5. **Pins:** before any download, a manifest with repository, immutable revision, file names, sizes and full SHA-256 read from the publisher at that moment. `embeddinggemma-2` was a single squashed commit (`914f7f89142e`, 8 Oct): record whatever revision is current, and treat a change after the manifest as a new candidate.

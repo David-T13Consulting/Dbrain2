@@ -1,10 +1,12 @@
 ---
 classification: internal
-version: 0.7
+version: 0.8
 status: scope confirmed 29 Sep 2026; implementation schedule amended at David's request 1 Oct 2026; personal-data waves and children's rule approved by David 5 Oct 2026 (D69); temporary §7 exception for the medispring-infi archive approved by David 6 Oct 2026 (Q63)
 ---
 
 # Data policy — Dbrain2 / AI Second Brain
+
+**v0.8 (9 Oct, Q93, D123):** adds a second paragraph to §7a, the short in-memory window that lets a "wrong" tap capture an answer (exact text and 1-hour window approved by David on 9 Oct). Nothing else in the policy changes.
 
 **v0.7 (8 Oct, P2.7, D106):** adds §7b, the audit trail (exact text and retention approved by David on 8 Oct). Nothing else in the policy changes.
 
@@ -109,6 +111,8 @@ contract says so, nothing about that engagement goes into the system, **includin
 ## 7a · Failure store (v0.6)
 
 Failure store. Ask Brain may keep the text of a question and its answer only when the question raised a failure signal, only in a local store on the host, outside the vault and outside git, readable only by the local model and by David. Unapproved failures are deleted after 90 days. No cloud model, agent or reviewer reads question text: cloud agents work from failure classes and synthetic equivalents. The weekly review reads counts, classes and synthetic equivalents only.
+
+So that a 'wrong' tap can capture it, Ask Brain may hold the text of each recent question and its answer in the service's memory only, never on disk, for at most 1 hour; it is dropped on expiry, on restart, or once tapped, and is stored only if tapped (then it is a failure under this section). This adds to, and does not replace, the capture of questions that raise a failure signal on their own.
 
 ## 7b · Audit trail (v0.7)
 

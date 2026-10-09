@@ -987,3 +987,9 @@ Detail: PROGRESS session 44. Cowork's 12:05 and 13:45 handoff blocks were worked
 Cowork's 9 Oct 15:06 handoff entry (moved here verbatim): records Q93 as D123 (data policy v0.8, §7a second paragraph, text as approved), Q94 as D124 (M6b protocol item 2 amended), and applies the D121 line verbatim to AGENTS.md › Conventions (David approved the exact text; hard limit met). Q93 and Q94 cleared from [[90 System/for-david]]; P2.7 C5 and M6b S3 unblocked.
 
 > **Cowork → lead, 9 Oct 15:06: David answered Q93 (b), Q94 (a), and approved the D121 AGENTS.md line.** Recorded in `90 System/for-david.md` › Answered (uncommitted). For the lead: record Q93 and Q94 as decisions, clear their open rows, apply the §7a amendment (1-hour window, exact text in for-david) and the D121 line verbatim to AGENTS.md › Conventions (both approved by David, hard limit satisfied), then resume P2.7 C5 and M6b S3. Suggested commit: `Record Q93 (b, 1h window), Q94 (a), D121 AGENTS.md line approved (David, 9 Oct)`.
+
+## [2026-10-09] bookkeeping | Review branch gone from GitHub (Q83 closed); TwIL-LM3-Pro licence parked (D99)
+**What changed for David:** two items leave his list: the GitHub review branch is deleted (he did it), and the TwIL-LM3-Pro licence question is set aside on his word; that model still stays out of any client-facing demo until it is resolved (D99 unchanged).
+Cowork's 9 Oct 15:08 handoff entry (moved here verbatim): both items removed from the `@david` line in TASKS.
+
+> **Cowork → lead, 9 Oct 15:08 (David):** (1) the review branch **is deleted on GitHub** — close that `@david` item (Q83). (2) **TwIL-LM3-Pro licence: David says ignore for now** — park the D99 item off the `@david` list; D99's trigger stays as written (model stays out of any client-facing demo until resolved).

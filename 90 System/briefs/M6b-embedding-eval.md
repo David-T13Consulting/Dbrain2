@@ -2,7 +2,7 @@
 classification: internal
 task: M6b   # final ID, assigned by the lead 8 Oct (session 37)
 owner: "@code"
-status: open             # S2 done 9 Oct (session 44): both models fetched and verified; S3 (harness, toy data) next
+status: blocked-on-david # S2 done 9 Oct (session 44); S3 blocked on Q94: protocol item 2's label source holds totals only
 models: []
 created: 2026-10-08
 source: David, 8 Oct ("Yes", run the EmbeddingGemma 2 evaluation); desk note [[30 Resources/Local AI/embeddinggemma-2-evaluation]]
@@ -82,6 +82,9 @@ Manifest committed; raw rankings and scores saved; results note written with per
   FAIL. Blocker: a revision change or a mismatch on the first model did not stop the step: the second model was still downloaded. Should-fix: an inherited `HF_HOME` or `HF_XET_CACHE` could point the cache into the vault. Fixed: each file is verified right after its download and the first problem records itself and ends the step (nothing more is fetched); `HF_HOME`, `HF_HUB_CACHE`, `HF_XET_CACHE` and `HF_ASSETS_CACHE` are forced into the app folder. Checked with mocks: a changed revision → 0 downloads; a mismatch on the first file → 1 download, then stop; a vault-pointing `HF_XET_CACHE` is overridden (no folder appeared in the vault). The real fetch re-run with the fixed script: 27/27 files match again.
 - Review 2/5 · M6b S2
   PASS, no findings. Committed runtime `cfb665a`.
+- **S3 · blocked-on-david (Q94), nothing built.** Protocol item 2 fixes the expected evidence "from `continuation_manual_review.json`"; that file holds totals only (`retrieval`: 7 answerable, 6 present in the top 3, 1 French miss, 1 rule outside the corpus, 2 unanswerable), no per-case passages. A mechanical table from `dev.json`'s expected fragments is proposed in Q94; client_policy (the 1 Oct review accepted equivalent wording without naming the passage) and media_storage (fragment in three passages) are the judgment points, and "French-query cases" exists as one case. Changing what the frozen protocol counts is not the lead's call.
+- Review 1/5 · M6b S3 (the record of this block: this brief and Q94; with session 44's close: TASKS, PROGRESS, handoff, log)
+  PASS. Should-fix, applied in Q94: C23 is not a media_storage label (same words, other topic); under (a) client_policy counts on C9 only for item 7, the 1 Oct credit quoted, not scored. The verbatim move of the handoff blocks could not be checked against git (the blocks were never committed).
 
 ## Outcome
 (owner)

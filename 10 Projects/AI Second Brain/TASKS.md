@@ -4,13 +4,13 @@ review_status: codex-reviewed
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 9 Oct 2026 (session 42) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 9 Oct 2026 (session 44) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or in the roadmap ([[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0). Done items, the legacy Week 0 / H1–H3 plan and the wording of every item before 8 Oct are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
 ## ▶ Next action
 
-- [ ] `@david` **Q92:** may the lead install Python 3.12 for M6b (Homebrew, recommended)? — [[90 System/for-david]]
+- [ ] `@david` **Q93:** how the phone's "Wrong" button may keep a question (§7a; P2.7 C5) · **Q94:** the embedding test's expected passages (M6b S3) · **AGENTS.md line** "English and French only" (D121): approve the exact text — [[90 System/for-david]]
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107) · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · delete the review branch on GitHub (local copy deleted, Q83) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
@@ -23,9 +23,9 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@codex` **P2.1** Independent review of the retrieval cases; keep an untouched acceptance subset — [[90 System/briefs/P2.1-review|P2.1-review]]
 - [ ] `@code` **P2.3** Measure quality, latency, memory and sustained performance with pinned versions; Air versus dedicated host
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
-- [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
+- [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set; slice F0–F3 (D120): **F0 parked 9 Oct** after 5 reviews (regression cases, runner and baseline uncommitted in the runtime; last fix unreviewed), F1–F3 next run; F0 is Tier 2 (David's batched approval) — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper; waits for David's phrase-set validation and for Cowork to name it as the first item of a run; a new dependency needs David's OK — [[90 System/briefs/P2.6-date-resolution|P2.6]], [[90 System/briefs/P2.6-phrase-set|phrase set]]
-- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C steps C1–C3b committed 9 Oct (session 42); **C4: real capture on since 9 Oct 11:41** (D119, runtime `72bf52b`, planted failure proven end to end and deleted through the store); next: Cowork's follow-up brief (stage 2, stage 3, digest gating) — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
+- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C steps C1–C3b committed 9 Oct (session 42); **C4: real capture on since 9 Oct 11:41** (D119, runtime `72bf52b`, planted failure proven end to end and deleted through the store); **C5 (one-tap "wrong") blocked on Q93** (§7a, session 44); next: Cowork's follow-up brief (stage 2, stage 3, digest gating) — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
 
 ## S3 · Supervised wiki maintenance
 - [ ] `@code` **P3.0** Update my brain by voice or text, with approval — [[90 System/briefs/P3.0-update-my-brain|P3.0]]
@@ -76,7 +76,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## Local model knowledge
 - [ ] `@code` **M5** Retrieval corpus with D49 retention evidence; bilingual query expansion; expected evidence reviewed independently; keep original failures and untouched provisional cases
 - [x] `@code` **M6** Another model family under comparable conditions (with T9): Gemma 4 E4B and Ministral 3 8B measured 8 Oct; set separate voice fixtures and resource budgets before downloading any other modality model — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
-- [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline; S0 committed, **S1 blocked on Q92** (needs Python >= 3.10; 9 Oct, session 43); after P2.7 (David, 8 Oct), never alongside a measurement run (D94, D100); downloads only as pinned in the brief's manifest — [[90 System/briefs/M6b-embedding-eval|M6b]]
+- [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline; S1 and S2 done 9 Oct (session 44: Python 3.12 venv, D122; both models fetched and verified); **S3 blocked on Q94** (expected-passage labels); never alongside a measurement run (D94, D100) — [[90 System/briefs/M6b-embedding-eval|M6b]]
 
 ## Wiki and vault upkeep
 - [ ] `@cowork` Triage `assistant-scope-ideas` and `how-to-automate-pm-job` at the next weekly pass, then lint

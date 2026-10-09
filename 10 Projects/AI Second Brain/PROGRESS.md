@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 9 Oct 2026 · **Updated by:** Claude Code (session 43: P2.7 C4, real capture on; M6b S1 blocked on Q92)
+**Last updated:** 9 Oct 2026 · **Updated by:** Claude Code (session 44: P2.5 F0 parked; P2.7 C5 blocked on Q93; M6b S1–S2 done, S3 blocked on Q94)
 
 ---
 
@@ -17,8 +17,8 @@ review_status: codex-reviewed
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | **Session 43 (9 Oct):** P2.7 stage C is done: **real failure capture is on** since 11:41 (D119), proven with one planted failure that David then deleted. M6b S0 is committed; S1 is blocked because the Air has no Python 3.10+ (**Q92**). Cowork revises the weekly-desktop-digest skill (five review blockers) and writes the P2.7 follow-up brief. Earlier history: [[10 Projects/AI Second Brain/PROGRESS-archive\|PROGRESS-archive]] |
-| **Action for David** | Open items are in [[10 Projects/AI Second Brain/TASKS\|TASKS]] (`@david`): order the host by Fri 16 Oct (Mac mini M5 Pro 64 GB / 1 TB via the SRL, D107); phone re-check on C2 (P2.4, D105); delete the review branch on GitHub; validate the P2.6 phrase set; TwIL-LM3-Pro licence (D99); weekly-review task ID (D60). Questions go through [[90 System/for-david\|for-david]] (open: Q92). |
+| **Next action** | **Session 44 (9 Oct):** the phone's wrong "no" became P2.5 slice F0–F3 (D120): F0 (13 synthetic regression cases, a scorer, a baseline) **parked after 5 reviews**, uncommitted; F1–F3 next run. P2.7 C5 ("Wrong" button) blocked on **Q93** (§7a). M6b: S1 (Python 3.12 venv, D122) and S2 (models verified) done; S3 blocked on **Q94**. English and French only (D121). Earlier history: [[10 Projects/AI Second Brain/PROGRESS-archive\|PROGRESS-archive]] |
+| **Action for David** | Open items are in [[10 Projects/AI Second Brain/TASKS\|TASKS]] (`@david`): order the host by Fri 16 Oct (Mac mini M5 Pro 64 GB / 1 TB via the SRL, D107); phone re-check on C2 (P2.4, D105); delete the review branch on GitHub; validate the P2.6 phrase set; TwIL-LM3-Pro licence (D99); weekly-review task ID (D60). Questions go through [[90 System/for-david\|for-david]] (open: Q93, Q94; and the AGENTS.md language line, D121). |
 
 ### Original work-package progress — retained snapshot
 
@@ -68,6 +68,20 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 44 — 9 Oct 2026 · Claude Code, lead loop (P2.5 F0 parked; P2.7 C5 blocked on Q93; M6b S1–S2 done, S3 blocked on Q94)
+**Authorization:** "pick up the loop" from David, 9 Oct, per Cowork's 12:05 handoff block; Cowork's 13:45 block (English and French only) applied mid-run on David's word to the lead ("no dutch"). **Ended by** stop condition (1): no actionable `@code` brief left (P2.5 F0 parked, P2.7 and M6b `blocked-on-david`). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only); one Codex D74 consultation. No subagents used. Codex hit its usage limit at 13:39 (one review did not run; waited to 14:19).
+
+**What changed for David:** the made-up test questions for the phone's wrong "no" exist and measure today's behaviour (the answer never says the word asked isn't in the note), but the fix waits for the next run. Two questions for him: how the "Wrong" button may keep a question (Q93) and how to label the embedding test's expected passages (Q94); and his OK on the AGENTS.md language line. The embedding models are downloaded and verified.
+
+- **Handoff 12:05:** `1c48214` scouts alias, P2.5 steps F0–F3, P2.7 C5, **D120**; files in scope for the slice (2 reviews: a quoted phone question replaced by a class description; F2 must not flag a correct "no").
+- **P2.5 F0:** synthetic regression cases (13), a runner through the phone path, a bounded-grammar scorer, tests; baseline row 0/6, none 2/2, negated 3/3, other 2/2; the wrong "no" did not reproduce on synthetic notes. Tier raised to 2 by Codex (write path). Reviews 3–5 failed (unchecked note paths, scorer misreads, temp folder via TMPDIR, a "No," after a semicolon); D74 consult taken. **Parked**, uncommitted; the last fix is in the working tree, unreviewed. Separate eval server on port 18089, stopped.
+- **D121** English and French only; Cowork's checklist line; Dutch removed from F0. AGENTS.md line awaits David's exact-text approval.
+- **P2.7 C5:** files in scope and design listed; review 1 failed on §7a (holding unsignalled answers for a later tap); **Q93**; `8f97ce5`.
+- **M6b:** S1 `20096a5` (runtime `89d9bd5`): Python 3.12.15 verified (**D122**), venv with pinned packages, manifest, budget ≈22 of 25 GB. S2 `1beca18` (runtime `fetch_verify.py`): 27/27 files verified, stop rule fixed after review. S3 blocked: the protocol's label source holds totals only (**Q94**).
+- **Keep-awake:** `caffeinate -ims` started at loop start, stopped at close. The MVP launcher stays running in David's Terminal.
+
+**Pick up at:** David's Q93, Q94 and the AGENTS.md line (via Cowork); next run: P2.5 F0 with a fresh budget (from the working tree), then F1–F3; C5 and M6b S3 on their answers.
 
 ### Session 43 — 9 Oct 2026 · Claude Code, lead loop (P2.7 C4 with David; M6b S1 blocked on Q92)
 **Authorization:** "pick up the loop" from David, 9 Oct, per Cowork's 11:25 handoff block. **Ended by** stop condition (1): no actionable `@code` brief left (M6b `blocked-on-david`, Q92). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents used.

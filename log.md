@@ -1009,3 +1009,7 @@ Cowork's 9 Oct 15:12 handoff entry (moved here verbatim): D125 recorded; the phr
 ## [2026-10-09] build | P2.7 C5: the "Wrong" button's service part (runtime b3e1f1a); phone part on Q95
 **What changed for David:** once he restarts `Ask Brain.command` and adds one step to his Shortcut, he can tap "Wrong" under any answer for up to about an hour (59¾ minutes) and that question is kept for the weekly review, even when the phone looked confident. Until then nothing changes on the phone. The service keeps recent answers in memory only, at most one hour, never on disk (§7a as he amended it).
 Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] run of 9 Oct (session 45): reviews 1/5 fail (the hour could be exceeded while a capture held a lock; a waiting tap was not re-checked), 2/5 pass. Shortcut steps in the runtime's `mvp/README.md`; the end-to-end check with David is [[90 System/for-david]] Q95.
+
+## [2026-10-09] build | M6b S3: embedding test harness, made-up data only; S4 on Q96 (Pillow)
+**What changed for David:** the embedding test's scorer exists and is checked on made-up passages; the real 10 questions are not scored yet. One of the two models (EmbeddingGemma 2) needs a small image library, Pillow, to load at all; installing it is his call (Q96).
+Detail: [[90 System/briefs/M6b-embedding-eval|M6b]] run of 9 Oct (session 45); labels as frozen in D124.

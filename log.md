@@ -939,3 +939,7 @@ IDs renumbered by the lead: D-cowork-11 → D115, D-cowork-12 → D116, D-cowork
 ## [2026-10-09] session | Session 42 closed: loop stopped on Q91
 **What changed for David:** the handoff queue was cleared, P2.7 is built up to the switch (Q90), and the run stopped because the Desktop pilot left sensitive screenshots where an agent can read them: he moves them out of reach today (Q91).
 Detail: PROGRESS session 42.
+
+## [2026-10-09] build | P2.7 C4: real failure capture switched on (D119), proven with one planted failure
+**What changed for David:** from 11:41 today, a question the phone fails on (declined, unreadable date, timeout, model down, unusable reply, real defect) is kept on the Air for 90 days for the local model and him only (D110 exceptions accepted). He watched one planted question go through: one record, a text-free audit line, no text in any log; he then deleted it himself with the store's new delete command. To switch capture off: `CAPTURE=off` in `mvp/run-all.sh`, then restart `Ask Brain.command`.
+Detail: runtime `72bf52b`; [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review, session 43.

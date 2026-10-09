@@ -11,7 +11,6 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## ▶ Next action
 
 - [ ] `@david` **Today: Q91.** Move the sensitive screenshots and the three possibly-client files out of the Desktop pilot's staging folder, out of every agent's reach; then delete them yourself, or decide deletion later (options a/b) — [[90 System/for-david]]
-- [ ] `@david` **Q90:** go for P2.7 C4 (real capture on), in a session with the lead — [[90 System/for-david]]
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107) · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · delete the review branch on GitHub (local copy deleted, Q83) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
@@ -26,7 +25,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
 - [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper; waits for David's phrase-set validation and for Cowork to name it as the first item of a run; a new dependency needs David's OK — [[90 System/briefs/P2.6-date-resolution|P2.6]], [[90 System/briefs/P2.6-phrase-set|phrase set]]
-- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C steps C1–C3b committed 9 Oct (session 42) — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] · **next: C4, real capture on, on David's go (Q90)**
+- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C steps C1–C3b committed 9 Oct (session 42); **C4: real capture on since 9 Oct 11:41** (D119, runtime `72bf52b`, planted failure proven end to end and deleted through the store); next: Cowork's follow-up brief (stage 2, stage 3, digest gating) — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
 
 ## S3 · Supervised wiki maintenance
 - [ ] `@code` **P3.0** Update my brain by voice or text, with approval — [[90 System/briefs/P3.0-update-my-brain|P3.0]]

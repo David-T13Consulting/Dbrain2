@@ -18,8 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-
-None open (9 Oct, after Q93 and Q94: D123, D124).
+| Q95 | lead, 9 Oct (session 45) | [[90 System/briefs/P2.7-failure-capture-loop\|P2.7]] C5 | The "Wrong" button's service part is built and committed (runtime `b3e1f1a`): every answer now carries an id, the service keeps each recent answer in memory for at most one hour (§7a as you amended it), and a tap stores that answer once. Three things need you: (1) add the "Wrong" step to the Ask Brain Shortcut, 7 short steps in `~/Work/dbrain-runtime/mvp/README.md` › "Marking an answer wrong" (about 2 minutes); (2) restart `Ask Brain.command` so the new code runs; (3) one end-to-end check with the lead: you ask a made-up question the lead gives you, tap "Wrong", and the lead shows you, from the text-free audit log only, that exactly one record was stored; you then delete it yourself, as on 9 Oct for C4. When? | (a) at the start of the next lead run, you at the Mac with your iPhone (recommended: about 10 minutes) · (b) you do (1) and (2) alone now and the check waits for a run with you present · (c) hold the phone part | P2.7 C5 (phone part) | this week |
 
 ## Answered (since 8 Oct)
 

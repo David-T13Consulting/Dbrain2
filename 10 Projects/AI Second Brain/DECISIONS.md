@@ -4,7 +4,7 @@ note_type: log
 source: PROGRESS.md decision log, moved verbatim 8 Oct 2026 (session 38)
 review_status: codex-reviewed
 created: 2026-09-07
-updated: 2026-10-08
+updated: 2026-10-09
 ---
 # Decisions — AI Second Brain Project
 
@@ -134,3 +134,4 @@ Append-only. Each entry: what, why, and what would change it.
 | D116 | 9 Oct | **Deletions from the Desktop flow are batch-approved weekly (was D-cowork-12).** Delete candidates are listed in that week's digest; nothing is deleted until David approves the digest | David in chat with Cowork, 9 Oct 09:20–09:23; Cowork's 9 Oct 09:45 handoff entry; W41 digest §A | David wants per-file approval again, or a deletion goes wrong |
 | D117 | 9 Oct | **Weekly hybrid Desktop flow adopted as the MVP (was D-cowork-13).** Local steps (sweep, group, screen, crop) run on the Mac; Claude only distils and fact-checks screened material; the whole Desktop is swept, not only screenshots. Procedure: Cowork's skill draft `90 System/skills/weekly-desktop-digest/SKILL.md`, not committed: Codex review of 9 Oct found blockers (log.md, same day) | David in chat with Cowork, 9 Oct 09:20–09:23; Cowork's 9 Oct 09:45 handoff entry; W41 digest §A | The weekly review stops fitting in about 20 minutes, or the pilot learnings change the design |
 | D118 | 9 Oct | **A reviewed digest page is David's approval for what it ticks (was D-cowork-14).** When David sets a digest's `review_status: reviewed`, each ticked item is his approval for that deletion or filing (the deletion hard limit and rule 4 are met by his review of each item); unticked items are not approved and carry over; the next weekly run executes the page. Rule and AGENTS.md changes ticked there are not executed by that run: they go to the lead | David to Cowork, 9 Oct 10:30; Cowork's 9 Oct 10:35 handoff entry; the skill draft v0.2, "Processing reviewed digests" (not committed) | An item is executed that David did not tick, or he wants a confirmation step before execution |
+| D119 | 9 Oct | **Q90 (a): switch real failure capture on (P2.7 C4), David present.** The lead sets `DBRAIN_FAILURE_CAPTURE=on` in the launcher, David restarts `Ask Brain.command`, and one planted synthetic failure proves the path end to end, then is removed through the store's own deletion path. Accepted with the D110 exceptions as stated in Q90. Q91 (a) is done: David reviewed and deleted the sensitive and quarantined Desktop-pilot files himself, which clears stop condition (3) | David to Cowork, 9 Oct 11:18; [[90 System/for-david]] Q90, Q91 | A planted or real capture lands question text anywhere but the store, or David asks to switch capture off |

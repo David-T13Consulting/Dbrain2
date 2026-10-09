@@ -2,7 +2,7 @@
 classification: internal
 task: M6b   # final ID, assigned by the lead 8 Oct (session 37)
 owner: "@code"
-status: open   # David approved the 25 GB budget and the Python environment on 8 Oct; starts after T9/M6 (D94)
+status: open   # David approved the 25 GB budget and the Python environment on 8 Oct; T9/M6 done 8 Oct; starts after P2.7 C4 (David, 8 Oct), or at once if C4 is deferred because David is away (handoff 9 Oct 11:25); cut into steps 9 Oct (D111)
 models: []
 created: 2026-10-08
 source: David, 8 Oct ("Yes", run the EmbeddingGemma 2 evaluation); desk note [[30 Resources/Local AI/embeddinggemma-2-evaluation]]
@@ -38,6 +38,16 @@ Gemma 4 E4B (official QAT Q4_0 GGUF, Google repo `google/gemma-4-E4B-it-qat-q4_0
 6. **Boundaries:** weights outside the vault, no HF cache copy kept in the vault, network blocked during scoring, raw rankings saved with hashes; no run counts unless its saved outputs exist.
 7. **Accept as a retrieval candidate only if:** it recovers at least one miss the lexical baseline had (including the French query against the English plan) without adding wrong-evidence hits in the top 3. Otherwise record "no measured benefit" and keep the lexical baseline.
 
+## Steps (D111, D112: each step committed before the next; 5 reviews per step, `Review n/5 · M6b Sx` before each Codex call; 12 per run)
+Cut by Cowork, 9 Oct. The protocol above is frozen and applies to every step; a step changes nothing in it.
+0. **S0 · Bookkeeping (lead, 9 Oct, session 43).** Record Cowork's step cut, David's Q90/Q91 answers (`for-david.md`) and D119 (DECISIONS); commit on its own before S1 starts. No experiment work.
+1. **S1 · Manifest and environment.** Read the publishers' current revisions and write the manifest (protocol item 5: repository, immutable revision, file names, sizes, full SHA-256), plus the pinned package versions; create the isolated venv outside the vault and iCloud (D100). Check free disk against the 25 GB budget and record it. **No weights downloaded.** Commit the manifest.
+2. **S2 · Download and verify.** Fetch both models outside the vault (no HF cache copy in the vault); verify every file against the S1 manifest; a mismatch or a newer revision stops the step and is reported (protocol item 5: a change is a new candidate). Record disk used. Commit the verification record.
+3. **S3 · Harness, toy data only.** `experiments/embedding-eval/`: the three arms (protocol item 1), the frozen case list and labels loaded read-only (item 2), metrics (item 4), network blocked during scoring, raw rankings saved with hashes (item 6). Tests on a tiny made-up corpus only; the real cases are not scored in this step. Commit.
+4. **S4 · Scored run.** One run on the 26-chunk corpus, all three arms; raw outputs, scores, cold/warm load and peak RSS saved. Not alongside any other measurement run. A run without saved outputs does not count. Commit the artifacts.
+5. **S5 · Results note and decision.** Dated note in `02_Architecture/` (`review_status: draft`), per-case outcomes for all three arms, protocol item 7 applied step by step, `index.md`/`log.md` entries, follow-up rows to David in `for-david.md`. The note's measured claims and any new decision are Tier 2: after the Codex pass the note waits **uncommitted** for David's batched approval (queued in `for-david.md`); `review_status: draft` does not replace that approval. Commit only after he approves. **Stop and report.**
+6. *(Optional, only if S5 shows a recovered miss and David says so)* **S6 · Whole-vault second pass** under protocol item 3 (label allowlist, never client material).
+
 ## Done when
 Manifest committed; raw rankings and scores saved; results note written with per-case outcomes for all three arms; the decision rule above applied step by step; Codex pass on the note; PROGRESS/TASKS updated; follow-up rows proposed to David.
 
@@ -49,6 +59,12 @@ Manifest committed; raw rankings and scores saved; results note written with per
 
 ## Review
 (lead, from Codex)
+
+**Run of 9 Oct (session 43).** Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+- **S0 · bookkeeping before S1** (a step of its own, committed before S1 starts: this Steps section as cut by Cowork, Q90/Q91 recorded, D119; the separate webAI weekly-review entry was reviewed in the same call).
+  - Review 1/5 · M6b S0: **fail**, 1 blocker (the review was counted against S1, which would commit mid-step; fixed by making S0 its own step). Should-fix, applied: S5 keeps the Tier 2 gate; the status line names the C4 fallback.
+  - Review 2/5 · M6b S0: **fail**, 1 blocker (S0 was not in the Steps section; added). Should-fix, applied: S5's Tier 2 note waits uncommitted for David's approval.
+  - Review 3/5 · M6b S0: **pass**, no findings. Committed.
 
 ## Outcome
 (owner)

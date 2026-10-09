@@ -33,6 +33,7 @@ Only blockers fail a review. Do not re-raise a finding listed as an accepted ris
 Style preferences, formatting taste and alternative designs are `nit` at most.
 
 ## Out of scope for the reviewer
+- **Languages other than English and French** (David, 9 Oct 13:39). The product and its tests support EN and FR only. Missing Dutch, German or any other language is never a finding; do not ask for it. Existing NL coverage in committed code is left as it is.
 - Deciding whether a claim is true (R4 checks the source, not the world).
 - Tier 0 changes, once the deterministic pre-commit check is installed: they get the deterministic checks only. Until it is installed, Tier 0 changes get a Codex pass like Tier 1 (Q65); until AGENTS.md carries the review tiers, every commit needs a Codex pass (Q40).
 - Choosing models, changing rules, or committing.

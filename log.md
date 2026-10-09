@@ -951,3 +951,11 @@ Detail: PROGRESS session 43. Cowork's 9 Oct 11:25 and 10:50 handoff entries were
 ## [2026-10-09] decision | Phone's wrong "no" on a dated row: scouts alias, P2.5 slice F0-F3, P2.7 C5 (D120)
 **What changed for David:** the scouts note now carries the word he uses ("baladins"), so that word can match the note (not yet re-checked on the phone); the lead fixes the whole class next (P2.5 F0-F3: a prompt rule, a check that catches a "no" contradicting a dated row, a small alias list), then the one-tap "wrong" button (P2.7 C5), then M6b.
 Cowork's 9 Oct 12:05 handoff entry committed (scouts note alias line; P2.5 Steps F0-F3; P2.7 step C5; the for-david answer, now cleared). The lead corrected "steps F1-F4" to "F0-F3" in P2.5's Constraints and listed the slice's files in scope. Decision recorded: D120 (a generic federation section name may be an alias, §3a reading).
+
+## [2026-10-09] decision | English and French only (D121)
+**What changed for David:** no more work or tokens on Dutch or other languages; what already exists stays. The AGENTS.md line waits for his OK on its exact wording.
+Cowork's 9 Oct 13:45 handoff entry: review-checklist line, P2.5 language line and F2 wording; the lead removed the Dutch patterns from the uncommitted P2.5 F0 runner and tests before its last review (F0 then parked: see below).
+
+## [2026-10-09] build | P2.5 F0 parked (5 reviews); P2.7 C5 blocked on Q93
+**What changed for David:** the made-up regression questions and their scorer are built but not committed (F0 used its 5 reviews; the last fix is in the working tree, unreviewed), so the answer fixes F1–F3 wait for the next run. The "Wrong" button needs his call first (Q93): the data policy allows keeping a question's text only once it has failed, and a tap comes after the answer.
+Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] Review and Outcome (session 44); [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] C5; [[90 System/for-david]] Q93.

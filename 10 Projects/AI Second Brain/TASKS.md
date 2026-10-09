@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 8 Oct 2026 (session 38) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 8 Oct 2026 (Cowork, 22:28) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or in the roadmap ([[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0). Done items, the legacy Week 0 / H1–H3 plan and the wording of every item before 8 Oct are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
@@ -23,7 +23,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
 - [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper; waits for David's phrase-set validation and for Cowork to name it as the first item of a run; a new dependency needs David's OK — [[90 System/briefs/P2.6-date-resolution|P2.6]], [[90 System/briefs/P2.6-phrase-set|phrase set]]
-- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C in build, fake data first — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
+- [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C in build, fake data first — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] · **next: stage C in steps C1, C1b (split `incomplete`, Q89 (c)), C2, C3, C3b, each committed, 5 reviews per step; stop before C4 (real capture on)** (Cowork handoff 22:26 and 9 Oct 08:45)
 
 ## S3 · Supervised wiki maintenance
 - [ ] `@code` **P3.0** Update my brain by voice or text, with approval — [[90 System/briefs/P3.0-update-my-brain|P3.0]]

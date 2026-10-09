@@ -4,7 +4,7 @@ note_type: queue
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-08
+updated: 2026-10-09
 ---
 # For David: the single decision queue
 
@@ -22,6 +22,9 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 ## Answered (since 8 Oct)
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
+
+- **Q89 → (c)** (David, 9 Oct 08:37, via Cowork; Cowork had recommended (a)): narrow what `incomplete` means in the service before any real capture, and Cowork places it in the work sequence. Cowork's finding: `answer.py` labels every answer `incomplete` by design, because `supported` needs a verifier (P2.5 layer 7, T4.1) that does not exist yet. So the narrowing is a split, not the verifier: answers that are cited and grounded but unverified get their own label (`unverified`, or a reason code), and only real defects stay `incomplete` (cited an id never offered, no citation, grounding below threshold, verifier rejection). Only those defects, plus the other signals, store question text. Placed as **P2.7 step C1b**, after C1 and before C2, so C2 wires the final signal set. The full verifier stays in P2.5 layer 7, and when it lands, `unverified` answers either become `supported` or are rejected. Recorded as **D113**.
+- **Review budget → Cowork's call** (David, 9 Oct 08:33: "Review limit: what should we do? do it yourself"). Cowork's rule: 5 reviews per *step* per run (a brief without steps is one step), every review counted against one step with a visible `Review n/5` line before each Codex call, a parked step stops that brief's later steps for the run, and a cap of 12 reviews per brief per run. Commit per step. Amends D72; exact AGENTS.md text in the 9 Oct 08:45 handoff entry. The smaller-steps rule (8 Oct 22:24) is recorded with it. Recorded as **D111** (small steps) and **D112** (review budget per step).
 
 - **Q88 → (c)** (David, 8 Oct 18:08, via Cowork; Cowork had recommended (a)): **an exception to D108 on the Air.** Accept Claude Code's tripwire as it is (a deliberately disguised command could read the store; the Codex app's computer-use route is untested); David installs `/etc/codex/requirements.toml` with `sudo` to stop Codex's full-access mode; Cowork runs its own test. **Cowork's test, 8 Oct 18:08:** its file tools and its shell both refuse the store path (`~/Library/Application Support/dbrain/failures/` is outside the folders connected to Cowork; the shell runs in an isolated VM that sees only those folders). Not covered: Cowork's computer-use tools (screen control), like Codex's, and a folder grant David would approve himself. The D108 host part (dedicated macOS user on the Mac mini) stands. Recorded as **D110**.
 - **Q84 → (a)** (David, 8 Oct, session 39): adopt C2 (Gemma 4 E4B) as the query-service default; write all four models' numbers into the Local AI notes. He still reads the full T9 report; the decision is made. Recorded as **D105**.

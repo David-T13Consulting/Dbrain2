@@ -10,6 +10,9 @@ created: YYYY-MM-DD
 ## Goal (one sentence)
 ## Files in scope (agent may touch only these)
 ## Inputs / context to read first
+## Steps (David, 8 Oct 22:24: each step fits one review cycle)
+Cut the work into numbered steps small enough that each passes Codex within the D72 limit (5 reviews), and is committed on its own before the next starts. As a rule of thumb, one step is one module plus its tests, or one wiring change. A run that hits the limit parks only the current step; every earlier step is already committed.
+1. …
 ## Done when (checkable)
 ## Constraints (vault rules that especially apply)
 ## Review   ← filled by the lead from Codex's read-only review: findings, verdict, model used

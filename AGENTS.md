@@ -57,14 +57,18 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   reached, or (3) something unsafe is found: a secret in a readable file, client material,
   or a data-policy breach. On (3): stop, do not fix it silently, report. A decision that
   belongs to David never stops the loop: queue it (D68), set the brief `blocked-on-david`,
-  move on. Commit only at the end of a brief, never mid-way.
-- **Review failures (D72, replaces D70's single re-review).** A failed Codex review is fixed
+  move on. Commit at the end of each step (a brief without steps: at its end), never mid-step.
+- **Review failures (D72, replaces D70's single re-review; amended by D112).** A failed Codex review is fixed
   and re-reviewed, whether its blockers are bookkeeping or substantive. Only `blocker` findings
   fail a review; `should-fix` and `nit` findings are logged in the brief and do not trigger
-  another round. At most **5 reviews of the same brief per run, the first one included**. After
-  the 5th failure, **park** it: status stays `in-review`, every round's findings go in the
-  brief, nothing is committed, and the run moves to the next brief. A parked brief is not
-  picked up again in the same run.
+  another round. At most **5 reviews per step per run, the first one included**. A step is a
+  numbered step in the brief's Steps section; a brief without steps is one step. Every review
+  counts against exactly one step, record and bookkeeping reviews included, and the lead writes
+  `Review n/5 · <brief> <step>` in the brief before each Codex call. After a step's 5th failure,
+  **park** that step: status stays `in-review`, every round's findings go in the brief, nothing
+  from that step is committed, the brief's later steps are not started this run, and the run
+  moves to the next brief. Steps already committed stay committed. A brief also parks once it
+  has had 12 reviews in one run, whatever its steps.
 - **Review tiers (D77, Q55).** Tier 0 (handoff bookkeeping, frontmatter/link/format fixes,
   Inbox captures, lint file moves): deterministic checks only. Tier 1 (briefs, drafts, specs,
   skills, eval scripts, runtime code outside the security boundary, notes in 10–40 with no Tier

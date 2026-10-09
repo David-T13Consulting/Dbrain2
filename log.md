@@ -935,3 +935,7 @@ IDs renumbered by the lead: D-cowork-11 → D115, D-cowork-12 → D116, D-cowork
 - **Changed:** `00 Inbox/2026-10-09-0940-desktop-digest-2026-W41.md`: review instruction line now says how to signal "reviewed".
 - **Decision to record (David, 9 Oct 10:30):** D-cowork-14: a reviewed digest page counts as David's approval for the deletions and filings it ticks (AGENTS.md hard limit and rule 4 satisfied by the review); execution happens at the next weekly run; rule/AGENTS.md changes stay with the lead.
 - **Suggested commit:** `Skill weekly-desktop-digest v0.2: next run executes reviewed pages (D-cowork-14)`
+
+## [2026-10-09] session | Session 42 closed: loop stopped on Q91
+**What changed for David:** the handoff queue was cleared, P2.7 is built up to the switch (Q90), and the run stopped because the Desktop pilot left sensitive screenshots where an agent can read them: he moves them out of reach today (Q91).
+Detail: PROGRESS session 42.

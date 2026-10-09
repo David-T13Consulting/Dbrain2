@@ -1,14 +1,50 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42)
 review_status: codex-reviewed
 created: 2026-09-07
-updated: 2026-10-08
+updated: 2026-10-09
 ---
-# Progress archive — sessions 1–37
+# Progress archive — sessions 1–39
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 39 — 8 Oct 2026 · Claude Code, T9/M6 run with David (handoff item 2)
+**Authorization:** David, about 14:00: "start T9 following handoff item 2 and the frozen protocol", confirming the window conditions (on power, lid open, Low Power Mode off, `Ask Brain.command` stopped, nothing heavy, no Codex during the run); `caffeinate -dimsu` around the whole run; pins re-checked against `dry-2026-10-08-final` before block 1; after T9, `.claude/settings.local.json` into `.gitignore`. **Ended by** the instruction's end: T9 measured, judged and reported; the choice is David's. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+
+**What changed for David:** T9 is done. The frozen rule picks **Gemma 4 E4B (C2)**: the only one of the four that never cited evidence wrongly, and the fastest (p95 10.1 s on the Air, still over the 8 s target). Two decisions are his: adopt it as the default (Q84), and which host to order by 16 Oct (Q85: Mac mini M5 Pro 64 GB / 1 TB from Apple Belgium through his SRL recommended, €3,032 ex VAT; Carlsbad compared: not cheaper under `unverified` tax assumptions). The Air was free again at 14:46.
+
+- **Run `2026-10-08-a`:** 14:00:53–14:45:45, 9/9 blocks ok, no drift (−0.3 %), all pins matched before block 1 and the pre-run manifest equals the dry one except its start time. Results note [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|t9-model-comparison-2026-10-08]] (draft, Q7).
+- **Judging:** the lead's verdicts were saved before Codex ran; Codex judged a masked packet blind. Safety: B0, C1 fail (both judges), C3 fails (one Codex-only finding; the pick is the same either way), C2 passes, Q 5/8. Disagreements listed in the note for David.
+- **D95 sizing (Q85):** the pick alone sizes to 22.8 GB (→ 24 GB); the 48–64 GB band rests on layer 6, which has no named model; TTS and service memory are `unverified` estimates.
+- **`.gitignore`:** `.claude/settings.local.json` added (it was already ignored by David's global git ignore on this Mac, not by the repo).
+- **Not done:** the handoff's branch entry still waits on Q83 (`-D`). A `caffeinate -ims` (PID 53896) from an earlier session was running before this run and was left alone.
+
+- **Data policy v0.7 (D106):** §7b audit trail added word for word. `data-policy.md` is in the dev-case corpus: the corpus version moves from `878a08ea6f57` (T9) to **`d926bd92ab8e`**, so later dev-case runs are not comparable to T9's without saying so.
+
+- **Later the same session (David's list of 8 Oct, after T9):** Q85 revised for Belgium (ex VAT through his SRL; Carlsbad compared) `d0c3e92`. Q84 (a) and Q83 (a) recorded as D105; local review branch deleted with `-D`; all four models' numbers in the Local AI notes `48696f1`. Cowork's P2.7 brief update committed `8b679e4` (review fixes: §7a text-holding logs readable by David and the local model only). **Step 1:** phone service switched to Gemma 4 E4B, runtime `7874b6f` (tests 202 OK; dev cases identical to T9; smoke no regression). **Step 3:** data policy v0.7 §7b `5748ed0` (committed before step 2, which needed David). **Step 4:** P2.7 files in scope reviewed `734cd3b`, Q86 queued (cloud agents and the failure store; stage C blocked). **Step 2:** test-hang fix (listener timeout, watchdog; Codex consultation) reviewed PASS, Tier 2: **uncommitted, Q87**. **Stage L** (leak check) built, two code rounds FAIL; P2.7 **parked** after the lead overran the D72 review limit (seven reviews this run, not five), files untracked in the runtime. **M6b:** not started (after P2.7). Lead `claude-opus-5-5`; Codex `gpt-6.1-sol` throughout.
+- **Uncommitted, on purpose:** runtime `dbrain/serve.py`, `tests/test_serve.py` (Q87); `dbrain/leakcheck.py`, `tests/test_leakcheck.py` (parked stage L).
+
+**Pick up at:** David's Q85 (host, by 16 Oct), Q86, Q87. Then: commit the hang fix if approved; a stage L review round (fixes since round 2 unreviewed); stage C after Q86 is verified; then M6b.
+
+### Session 38 — 8 Oct 2026 · Claude Code, lead loop (Q81/D103 records; Q82 landing; tracking-file maintenance)
+**Authorization:** "pick up the loop" from David, with Q82 (a) ("approve both; land per D101") and his maintenance layout (8 Oct 11:10). **Ended by** the instruction's end: everything before T9 is done; T9 (handoff item 2) and item 6 remain, in a fresh session. The run stalled from about 11:25 until David resumed it, past the 12:40 stop and D102's 13:00 slot; one Codex call (about 13:25–13:47) ran after 13:00, while T9 had not started. On David's "ignore timing, finalize anything needed before T9", the TASKS review and this close were finished. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+
+**What changed for David:** both model-research pieces he approved are in the vault. The tracking files are much shorter: PROGRESS about 15 KB, TASKS 10 KB as one-liners, handoff about 7 KB, for-david 2 KB; nothing was deleted, everything moved verbatim to DECISIONS, the archives or log.md. One thing for him: the old review branch still exists, because the settings would not let the lead delete it.
+
+- **Earlier in the session:** `293c813` Q81 (a) (D102), `5d1eb53` keep-awake rule (D103), `9208271` Hosting row, `8e3c449` Q82 queued.
+- **Q82 (a):** `f25aa64` and `f6f8979` cherry-picked onto `master` (`f11ad99`, `061766b`; log.md conflict resolved by keeping both sides); `8c661a4` EmbeddingGemma 2 note (`review_status: approved`), retrieval link, ledger row, index entry, D104. Round 1 PASS (one should-fix: branch statement; reworded). **Branch deletion** (local and origin) refused by the permission settings; it is an `@david` item in TASKS.
+- **Maintenance:** `fe9d899` verbatim split of PROGRESS (decision log → DECISIONS; sessions 1–35 → PROGRESS-archive), handoff (closed entries and run reports → log.md) and for-david (Answered → for-david-archive), plus the read-list pointers in the project CLAUDE.md, README, CAPTURE and index. A script checked that every original non-blank line is present at least once; only frontmatter lines and four reused headings appear twice. No Codex round for verbatim moves (David). `f2751c1` TASKS one-liners plus a verbatim TASKS-archive: rounds 1–4 FAIL, each on a gate or prerequisite dropped by compression (wave 1–2 gates; client-tier folder grant; M6 download prerequisite; T12 S3/S4 tests; T10 OQ-3; project-alignment diff approval; T7 escalation; P2.6 run order), all restored; round 5 PASS.
+- **Subagents:** no custom subagent definitions exist in the vault, the runtime or `~/.claude`; only archived and external repos have them, left alone.
+- **Note:** the T0.1 line (now in TASKS-archive) still shows the first characters of the Telegram bot token revoked on 8 Sep; moved as is, flagged to David.
+- **Branch, Cowork's 13:50 entry (David, 13:49):** `git branch -d` refused ("not fully merged": cherry-picking gave the commits new hashes). The branch's content files are identical to `master` at `061766b` and its log entry is on `master`. Per the entry the lead did not use `-D`; **Q83** asks David. The remote branch is his to delete on GitHub.
+- **Push:** pending after this close commit (non-force).
+
+**Pick up at:** T9/M6 with David (fresh session); then M6b; P2.7 on David's go.
+
+
+**Cowork, 8 Oct 13:45–22:28 (with David).** T9 readiness checked read-only; P2.7 brief revised (leak check option B, audit trail §7b, weekly review kept); Q84–Q88 put to David as multiple choice and recorded; Cowork's own D108 access test (file tools and shell refused; screen control untested); briefs now cut into steps that each fit one review cycle (David, 22:24; template updated). **Pick up at:** close session 41, then P2.7 stage C steps C1–C3 per the 22:26 handoff entry, stopping before C4.
 
 ### Session 37 — 8 Oct 2026 · Claude Code, lead loop (09:35 block; T9 readiness; Q79/Q80; triage; M6b; queue)
 **Authorization:** "pick up the loop" from David, with Q79 (a) and Q80 (a); the handoff's 8 Oct ~09:35 block first (records, T9 readiness with a go/no-go by 18:00, Inbox triage), then Q79/Q80 and the client-tier note, then the queued entries (Q78/`f25aa64`, EmbeddingGemma, M6b). No P2.7. **Ended by** the instruction's end (all items run). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile), high, read-only.

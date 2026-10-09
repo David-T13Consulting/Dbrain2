@@ -4,12 +4,15 @@ review_status: codex-reviewed
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 8 Oct 2026 (Cowork, 22:28) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 9 Oct 2026 (session 42) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or in the roadmap ([[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0). Done items, the legacy Week 0 / H1–H3 plan and the wording of every item before 8 Oct are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
 ## ▶ Next action
 
+- [ ] `@david` **Today: Q91.** Move the sensitive screenshots and the three possibly-client files out of the Desktop pilot's staging folder, out of every agent's reach; then delete them yourself, or decide deletion later (options a/b) — [[90 System/for-david]]
+- [ ] `@david` **Q90:** go for P2.7 C4 (real capture on), in a session with the lead — [[90 System/for-david]]
+- [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107) · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · delete the review branch on GitHub (local copy deleted, Q83) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
 - [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct:** has anything shipped out of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS

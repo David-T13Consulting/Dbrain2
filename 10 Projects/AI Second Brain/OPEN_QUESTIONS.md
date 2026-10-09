@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Open Questions
 
-**Updated:** 8 Oct 2026 (Cowork, 22:28): no change here; questions for David are in [[90 System/for-david|for-david]] (Q84–Q88 answered 8 Oct; none open).
+**Updated:** 9 Oct 2026 (session 42): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q90 P2.7 capture go, Q91 sensitive files in the Desktop staging folder).
 
 ---
 

@@ -18,11 +18,12 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-| Q92 | lead, 9 Oct (session 43) | [[90 System/briefs/M6b-embedding-eval\|M6b]] S1 | EmbeddingGemma 2 needs `sentence-transformers` 6.1 or later (its own `config_sentence_transformers.json` at revision `914f7f89`, saved as `~/Work/dbrain-runtime/experiments/embedding-eval/evidence-embeddinggemma-2-914f7f89-config_sentence_transformers.json` (fetched from https://huggingface.co/google/embeddinggemma-2/resolve/914f7f89142e33e77833254d9c9b90c3cef7303b/config_sentence_transformers.json)), and every current version of it, `transformers` and `torch` needs **Python 3.10 or later** ([sentence-transformers 6.1.0](https://pypi.org/pypi/sentence-transformers/6.1.0/json), [transformers 5.19.0](https://pypi.org/pypi/transformers/5.19.0/json), [torch 2.14.1](https://pypi.org/pypi/torch/2.14.1/json)). The Air has only Apple's Python 3.9.6 and no other Python. Your D100 go covers a venv with `sentence-transformers` and `torch`, not a new Python, and a download not named in a brief is a hard limit. May the lead install one? | (a) yes: `brew install python@3.12` (Homebrew is already on the Air; size `unverified`, tens of MB expected, in `/opt/homebrew`, outside the vault and iCloud); the M6b venv is built from it with pinned versions (recommended) · (b) yes, but the python.org 3.12 installer instead (system-wide, needs your admin password) · (c) no: M6b stays parked | M6b S1–S5 | this week |
 
 ## Answered (since 8 Oct)
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
+
+- **Q92 → David installed Python 3.12 himself** (David, 9 Oct 12:00, via Cowork: "I just installed python 3.12 as asked"). Method (Homebrew or python.org) not stated; Cowork cannot see the Mac's system paths, so the lead verifies the interpreter (`which`, version, origin) and records it in the M6b manifest before building the venv. No further install by an agent.
 
 - **Q91 → (a), done** (David, 9 Oct 11:18, via Cowork): the sensitive and quarantined Desktop-pilot files were reviewed and **deleted by David himself**. Cowork did not open or verify the staging folder (not connected to its session). Stop condition (3) is cleared.
 - **Q90 → (a)** (David, 9 Oct 11:18, via Cowork: "switch on real capture"): turn real capture on now, David present; one planted failure proves it end to end. Accepted with the D110 exceptions as stated in the question. Recorded as **D119**.

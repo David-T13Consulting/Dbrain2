@@ -947,3 +947,7 @@ Detail: runtime `72bf52b`; [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] R
 ## [2026-10-09] session | Session 43 closed: capture on (P2.7 C4); M6b S1 blocked on Q92
 **What changed for David:** failed phone questions are now kept on the Air for 90 days, switched on with him watching; the weekly review covers all webAI models; the embedding test waits for his OK to install Python 3.12 (Q92).
 Detail: PROGRESS session 43. Cowork's 9 Oct 11:25 and 10:50 handoff entries were worked and removed from `90 System/handoff.md`; their substance is in commits `6738899` and `437a7c4` and in the session 43 entry.
+
+## [2026-10-09] decision | Phone's wrong "no" on a dated row: scouts alias, P2.5 slice F0-F3, P2.7 C5 (D120)
+**What changed for David:** the scouts note now carries the word he uses ("baladins"), so that word can match the note (not yet re-checked on the phone); the lead fixes the whole class next (P2.5 F0-F3: a prompt rule, a check that catches a "no" contradicting a dated row, a small alias list), then the one-tap "wrong" button (P2.7 C5), then M6b.
+Cowork's 9 Oct 12:05 handoff entry committed (scouts note alias line; P2.5 Steps F0-F3; P2.7 step C5; the for-david answer, now cleared). The lead corrected "steps F1-F4" to "F0-F3" in P2.5's Constraints and listed the slice's files in scope. Decision recorded: D120 (a generic federation section name may be an alias, §3a reading).

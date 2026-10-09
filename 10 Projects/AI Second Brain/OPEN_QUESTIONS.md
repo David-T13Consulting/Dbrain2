@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Open Questions
 
-**Updated:** 8 Oct 2026 (session 37): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q81, the T9 go/no-go; Q78, Q79, Q80 and Cowork's Q-cowork-1/-2 answered and cleared, D97–D101) · Open questions block work. Resolve them or explicitly park them.
+**Updated:** 8 Oct 2026 (Cowork, 22:28): no change here; questions for David are in [[90 System/for-david|for-david]] (Q84–Q88 answered 8 Oct; none open).
 
 ---
 

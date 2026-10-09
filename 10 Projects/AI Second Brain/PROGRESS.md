@@ -69,6 +69,14 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
 
+### Session 41 — 8 Oct 2026 · Claude Code, lead (Q88 as D110; Codex re-test; P2.7 stage C part 1 parked)
+**Authorization:** Cowork's 18:10 entry (Q88 (c)) and the P2.7 go. **Ended by** the D72 review limit: P2.7 was parked. Closed in session 42 (9 Oct) per Cowork's 22:26 entry. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+
+- **Records:** `4cf843d` Q88 (c) as D110; `992c599` Codex re-test after David installed `/etc/codex/requirements.toml`: access tests pass on D110's terms.
+- **P2.7 stage C part 1, parked, not committed:** `dbrain/failures.py`, `tests/test_failures.py`, `dbrain/outpath.py`, `dbrain/serve.py`, `experiments/server_log_check.py` left uncommitted in the runtime; five code review rounds, all FAIL; fixes after round 5 unreviewed. **Why parked:** the P2.7 brief had seven reviews in the run (two on the re-test record, five on the code), over D72's five per brief; the lead counted stage C on its own, the same mistake as session 39. Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review, stage C part 1. Nothing captured; capture stays off.
+
+**Pick up at:** stage C in steps (Cowork's 22:26 entry), reusing the parked code per step.
+
 ### Session 40 — 8 Oct 2026 · Claude Code, lead (Q85–Q87 recorded; hang fix; P2.7 leak check; D108 access tests)
 **Authorization:** David, 8 Oct: commit Cowork's 17:06 entry and record Q85–Q87 (all (a)) as decisions; then commit the Q87 fix; resume P2.7 stage L with a fresh review budget and commit it; apply the Q86 deny rules and run the access test for each agent, no capture code until every agent fails to read the planted file. **Ended by** something needing David (Q88). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
 
@@ -115,6 +123,8 @@ Newest first. One entry per working session — what happened, what changed, whe
 
 **Pick up at:** T9/M6 with David (fresh session); then M6b; P2.7 on David's go.
 
+
+**Cowork, 8 Oct 13:45–22:28 (with David).** T9 readiness checked read-only; P2.7 brief revised (leak check option B, audit trail §7b, weekly review kept); Q84–Q88 put to David as multiple choice and recorded; Cowork's own D108 access test (file tools and shell refused; screen control untested); briefs now cut into steps that each fit one review cycle (David, 22:24; template updated). **Pick up at:** close session 41, then P2.7 stage C steps C1–C3 per the 22:26 handoff entry, stopping before C4.
 
 ---
 

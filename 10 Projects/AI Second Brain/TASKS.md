@@ -10,7 +10,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 
 ## ▶ Next action
 
-- [ ] `@david` **Today: Q91.** Move the sensitive screenshots and the three possibly-client files out of the Desktop pilot's staging folder, out of every agent's reach; then delete them yourself, or decide deletion later (options a/b) — [[90 System/for-david]]
+- [ ] `@david` **Q92:** may the lead install Python 3.12 for M6b (Homebrew, recommended)? — [[90 System/for-david]]
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107) · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · delete the review branch on GitHub (local copy deleted, Q83) · validate the P2.6 phrase set · TwIL-LM3-Pro licence question (D99) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
@@ -76,7 +76,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## Local model knowledge
 - [ ] `@code` **M5** Retrieval corpus with D49 retention evidence; bilingual query expansion; expected evidence reviewed independently; keep original failures and untouched provisional cases
 - [x] `@code` **M6** Another model family under comparable conditions (with T9): Gemma 4 E4B and Ministral 3 8B measured 8 Oct; set separate voice fixtures and resource budgets before downloading any other modality model — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
-- [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline, after P2.7 (David, 8 Oct), never alongside a measurement run (D94, D100); downloads only as pinned in the brief's manifest — [[90 System/briefs/M6b-embedding-eval|M6b]]
+- [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline; S0 committed, **S1 blocked on Q92** (needs Python >= 3.10; 9 Oct, session 43); after P2.7 (David, 8 Oct), never alongside a measurement run (D94, D100); downloads only as pinned in the brief's manifest — [[90 System/briefs/M6b-embedding-eval|M6b]]
 
 ## Wiki and vault upkeep
 - [ ] `@cowork` Triage `assistant-scope-ideas` and `how-to-automate-pm-job` at the next weekly pass, then lint

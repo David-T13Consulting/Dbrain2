@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 9 Oct 2026 · **Updated by:** Claude Code (session 42: handoff cleared; D111–D118; P2.7 C1–C3b; stopped on Q91)
+**Last updated:** 9 Oct 2026 · **Updated by:** Claude Code (session 43: P2.7 C4, real capture on; M6b S1 blocked on Q92)
 
 ---
 
@@ -17,8 +17,8 @@ review_status: codex-reviewed
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | Devices, availability, capacity, service targets and provenance schema all settled 1 Oct (D52–D59). Remaining dependency is the always-on host purchase (D53) — the Air cannot satisfy the availability requirement. Two local candidates and initial retrieval benchmarked, not accepted. Running labels continue independently |
-| **Next action** | **Session 42 (9 Oct):** P2.7 stage C steps C1–C3b are committed; C4 (real capture on) waits for David (**Q90**). The loop stopped on **Q91** (sensitive screenshots in the Desktop pilot's staging folder; David removes them from agents' reach today). Cowork revises the weekly-desktop-digest skill (five review blockers). Then M6b (after P2.7). Earlier history: [[10 Projects/AI Second Brain/PROGRESS-archive\|PROGRESS-archive]] |
-| **Action for David** | Open items are in [[10 Projects/AI Second Brain/TASKS\|TASKS]] (`@david`): order the host by Fri 16 Oct (Mac mini M5 Pro 64 GB / 1 TB via the SRL, D107); phone re-check on C2 (P2.4, D105); delete the review branch on GitHub; validate the P2.6 phrase set; TwIL-LM3-Pro licence (D99); weekly-review task ID (D60). Questions go through [[90 System/for-david\|for-david]] (open: Q90, Q91). |
+| **Next action** | **Session 43 (9 Oct):** P2.7 stage C is done: **real failure capture is on** since 11:41 (D119), proven with one planted failure that David then deleted. M6b S0 is committed; S1 is blocked because the Air has no Python 3.10+ (**Q92**). Cowork revises the weekly-desktop-digest skill (five review blockers) and writes the P2.7 follow-up brief. Earlier history: [[10 Projects/AI Second Brain/PROGRESS-archive\|PROGRESS-archive]] |
+| **Action for David** | Open items are in [[10 Projects/AI Second Brain/TASKS\|TASKS]] (`@david`): order the host by Fri 16 Oct (Mac mini M5 Pro 64 GB / 1 TB via the SRL, D107); phone re-check on C2 (P2.4, D105); delete the review branch on GitHub; validate the P2.6 phrase set; TwIL-LM3-Pro licence (D99); weekly-review task ID (D60). Questions go through [[90 System/for-david\|for-david]] (open: Q92). |
 
 ### Original work-package progress — retained snapshot
 
@@ -69,6 +69,18 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
 
+### Session 43 — 9 Oct 2026 · Claude Code, lead loop (P2.7 C4 with David; M6b S1 blocked on Q92)
+**Authorization:** "pick up the loop" from David, 9 Oct, per Cowork's 11:25 handoff block. **Ended by** stop condition (1): no actionable `@code` brief left (M6b `blocked-on-david`, Q92). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents used.
+
+**What changed for David:** failed phone questions are now kept on the Air for 90 days (capture switched on with him watching; one planted question proved it and he deleted it himself with the new delete command). The weekly model review now watches every webAI model. The embedding test is waiting for his OK to install a newer Python (Q92).
+
+- **Handoff:** `6738899` weekly review watches all webAI Hugging Face models (Codex: escalated for an uncited format claim, cited the ledger, pass); `437a7c4` Q90 (a) as **D119**, Q91 (a) recorded, M6b cut into steps plus S0 (3 reviews: two blockers on how S0 counted, fixed).
+- **P2.7 C4:** runtime `72bf52b`: launcher passes the checked absolute log folder to the service (C3b should-fix) and one switch `CAPTURE=on`; `FailureStore.delete(id, reason)` with fixed reason codes and a command David runs (2 reviews: free-form reason blocker, fixed). David started the launcher 11:41, sent one planted question 11:42 (one `withheld` capture, text-free audit, no planted text in any log; 35 characters arrived vs the 36 sent, cause not established), deleted it 11:49 (`deleting`/`deleted`, `planted-test`). Record `33a79e4` (1 review). The D108 hook blocked the lead's shell commands that named the store module; the lead used scratch scripts and a glob to read the permitted audit log, never the store.
+- **M6b S1:** revisions read and pinned (EmbeddingGemma 2 unchanged at `914f7f89`); draft manifest uncommitted in the runtime repo; blocked: Python 3.10+ needed (Q92). No weights downloaded.
+- **Keep-awake:** `caffeinate -ims` started at loop start, stopped at close. The MVP launcher (with its own `caffeinate -s`) stays running in David's Terminal window.
+
+**Pick up at:** David's Q92 (via Cowork); then M6b S1 → S5. Cowork: the digest skill revision and the P2.7 follow-up brief.
+
 ### Session 42 — 9 Oct 2026 · Claude Code, lead loop (handoff cleared; D111–D118; P2.7 C1–C3b; Desktop digest; stopped on Q91)
 **Authorization:** "pick up the loop" from David, 9 Oct. **Ended by** stop condition (3): the Desktop pilot's staging folder, readable by Cowork, holds screenshots the data policy keeps out of the system (Q91); also P2.7 reached its 12-review cap and C4 is David's go (Q90). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents used.
 
@@ -90,21 +102,6 @@ Newest first. One entry per working session — what happened, what changed, whe
 - **P2.7 stage C part 1, parked, not committed:** `dbrain/failures.py`, `tests/test_failures.py`, `dbrain/outpath.py`, `dbrain/serve.py`, `experiments/server_log_check.py` left uncommitted in the runtime; five code review rounds, all FAIL; fixes after round 5 unreviewed. **Why parked:** the P2.7 brief had seven reviews in the run (two on the re-test record, five on the code), over D72's five per brief; the lead counted stage C on its own, the same mistake as session 39. Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review, stage C part 1. Nothing captured; capture stays off.
 
 **Pick up at:** stage C in steps (Cowork's 22:26 entry), reusing the parked code per step.
-
-### Session 40 — 8 Oct 2026 · Claude Code, lead (Q85–Q87 recorded; hang fix; P2.7 leak check; D108 access tests)
-**Authorization:** David, 8 Oct: commit Cowork's 17:06 entry and record Q85–Q87 (all (a)) as decisions; then commit the Q87 fix; resume P2.7 stage L with a fresh review budget and commit it; apply the Q86 deny rules and run the access test for each agent, no capture code until every agent fails to read the planted file. **Ended by** something needing David (Q88). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
-
-**What changed for David:** his host is decided (D107; he orders it by 16 Oct). The test-hang fix and the leak check are in. Under its main config and review profile, Codex is now kept out of the failure store by its sandbox (its full-access mode and computer-use plugins are not covered); Claude Code only partly (a disguised command gets through) and Cowork is untested, so nothing is captured yet: Q88.
-
-- **Records:** `7824bd4`, D107 (host), D108 (deny rules), D109 (hang fix): [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
-- **Step 1:** runtime `3cbbd40` (hang fix, D109).
-- **Step 2:** [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] stage L, four review rounds this run (FAIL, FAIL, FAIL, PASS), runtime `d62fdf7`; records `a846110`.
-- **Step 3:** deny rules in `~/.claude/settings.json` (+ hook) and `~/.codex/config.toml`, `review.config.toml` (backups `*.bak-2026-10-08-d108`); access tests; records and **Q88** ([[90 System/for-david]]) `228fd37`. The first hook pattern blocked the lead's own commands naming the P2.7 brief (narrowed); the first review-profile edit broke its TOML for a few minutes (fixed, retested).
-- **Not done:** P2.7 stage C (capture) waits for Q88; M6b after P2.7. The planted test file stays in the store folder for future access tests.
-
-**Pick up at:** David's Q88; Cowork's own access test; then stage C as Q88 decides; then M6b.
-
----
 
 ## How to resume
 

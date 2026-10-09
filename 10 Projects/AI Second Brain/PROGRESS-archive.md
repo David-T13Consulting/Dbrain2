@@ -10,6 +10,21 @@ updated: 2026-10-09
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
 
+### Session 40 — 8 Oct 2026 · Claude Code, lead (Q85–Q87 recorded; hang fix; P2.7 leak check; D108 access tests)
+**Authorization:** David, 8 Oct: commit Cowork's 17:06 entry and record Q85–Q87 (all (a)) as decisions; then commit the Q87 fix; resume P2.7 stage L with a fresh review budget and commit it; apply the Q86 deny rules and run the access test for each agent, no capture code until every agent fails to read the planted file. **Ended by** something needing David (Q88). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+
+**What changed for David:** his host is decided (D107; he orders it by 16 Oct). The test-hang fix and the leak check are in. Under its main config and review profile, Codex is now kept out of the failure store by its sandbox (its full-access mode and computer-use plugins are not covered); Claude Code only partly (a disguised command gets through) and Cowork is untested, so nothing is captured yet: Q88.
+
+- **Records:** `7824bd4`, D107 (host), D108 (deny rules), D109 (hang fix): [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+- **Step 1:** runtime `3cbbd40` (hang fix, D109).
+- **Step 2:** [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] stage L, four review rounds this run (FAIL, FAIL, FAIL, PASS), runtime `d62fdf7`; records `a846110`.
+- **Step 3:** deny rules in `~/.claude/settings.json` (+ hook) and `~/.codex/config.toml`, `review.config.toml` (backups `*.bak-2026-10-08-d108`); access tests; records and **Q88** ([[90 System/for-david]]) `228fd37`. The first hook pattern blocked the lead's own commands naming the P2.7 brief (narrowed); the first review-profile edit broke its TOML for a few minutes (fixed, retested).
+- **Not done:** P2.7 stage C (capture) waits for Q88; M6b after P2.7. The planted test file stays in the store folder for future access tests.
+
+**Pick up at:** David's Q88; Cowork's own access test; then stage C as Q88 decides; then M6b.
+
+---
+
 ### Session 39 — 8 Oct 2026 · Claude Code, T9/M6 run with David (handoff item 2)
 **Authorization:** David, about 14:00: "start T9 following handoff item 2 and the frozen protocol", confirming the window conditions (on power, lid open, Low Power Mode off, `Ask Brain.command` stopped, nothing heavy, no Codex during the run); `caffeinate -dimsu` around the whole run; pins re-checked against `dry-2026-10-08-final` before block 1; after T9, `.claude/settings.local.json` into `.gitignore`. **Ended by** the instruction's end: T9 measured, judged and reported; the choice is David's. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
 

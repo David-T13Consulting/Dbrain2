@@ -2,7 +2,7 @@
 classification: internal
 task: M6b   # final ID, assigned by the lead 8 Oct (session 37)
 owner: "@code"
-status: open   # David approved the 25 GB budget and the Python environment on 8 Oct; T9/M6 done 8 Oct; starts after P2.7 C4 (David, 8 Oct), or at once if C4 is deferred because David is away (handoff 9 Oct 11:25); cut into steps 9 Oct (D111)
+status: blocked-on-david   # S1 blocked 9 Oct (session 43): no Python >= 3.10 on the Air; Q92. S0 committed 437a7c4
 models: []
 created: 2026-10-08
 source: David, 8 Oct ("Yes", run the EmbeddingGemma 2 evaluation); desk note [[30 Resources/Local AI/embeddinggemma-2-evaluation]]
@@ -65,6 +65,9 @@ Manifest committed; raw rankings and scores saved; results note written with per
   - Review 1/5 · M6b S0: **fail**, 1 blocker (the review was counted against S1, which would commit mid-step; fixed by making S0 its own step). Should-fix, applied: S5 keeps the Tier 2 gate; the status line names the C4 fallback.
   - Review 2/5 · M6b S0: **fail**, 1 blocker (S0 was not in the Steps section; added). Should-fix, applied: S5's Tier 2 note waits uncommitted for David's approval.
   - Review 3/5 · M6b S0: **pass**, no findings. Committed.
+- **S1 · blocked, nothing committed (session 43).** Read 9 Oct ~11:55 from the Hugging Face API: `google/embeddinggemma-2` revision `914f7f89142e33e77833254d9c9b90c3cef7303b` (unchanged since 8 Oct; 1,525,810,123 bytes; `model.safetensors` SHA-256 `197a3296…5d79`), `Qwen/Qwen3-Embedding-0.6B` revision `97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3` (1,207,489,041 bytes; `model.safetensors` `0437e45c…23fd`); the small files were fetched at those revisions and matched their git ids (no weights downloaded). Weights about 2.73 GB; models folder now 15 GB, so about 17.7 of the 25 GB budget; 79 GiB free on the disk. **Blocker:** EmbeddingGemma 2 requires `sentence-transformers` >= 6.1.0, and that version, `transformers` 5.19, `torch` 2.14.1, `tokenizers` and `safetensors` all need Python >= 3.10 (PyPI metadata, read 9 Oct: [sentence-transformers 6.1.0](https://pypi.org/pypi/sentence-transformers/6.1.0/json), [transformers 5.19.0](https://pypi.org/pypi/transformers/5.19.0/json), [torch 2.14.1](https://pypi.org/pypi/torch/2.14.1/json)); the requirement >= 6.1.0 is in `~/Work/dbrain-runtime/experiments/embedding-eval/evidence-embeddinggemma-2-914f7f89-config_sentence_transformers.json` (fetched from https://huggingface.co/google/embeddinggemma-2/resolve/914f7f89142e33e77833254d9c9b90c3cef7303b/config_sentence_transformers.json); the Air has only Python 3.9.6, and installing another Python is a download no brief names. Queued as **Q92**. The full draft manifest (every file, size and SHA-256) is **uncommitted** at `~/Work/dbrain-runtime/experiments/embedding-eval/manifest-draft.json`; the next run re-reads the revisions before using it (protocol item 5). The record of this block (this entry, Q92, TASKS, PROGRESS, session close) is bookkeeping, not S1's output: S1's manifest and venv stay uncommitted until S1 finishes.
+  - Review 1/5 · M6b S1 (the block record and session-close bookkeeping)
+    PASS. Should-fix, applied: Q91's stale task line removed; version-specific PyPI links and the saved config evidence cited; the Homebrew size marked `unverified`.
 
 ## Outcome
 (owner)

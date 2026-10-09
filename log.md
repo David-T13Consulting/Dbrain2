@@ -943,3 +943,7 @@ Detail: PROGRESS session 42.
 ## [2026-10-09] build | P2.7 C4: real failure capture switched on (D119), proven with one planted failure
 **What changed for David:** from 11:41 today, a question the phone fails on (declined, unreadable date, timeout, model down, unusable reply, real defect) is kept on the Air for 90 days for the local model and him only (D110 exceptions accepted). He watched one planted question go through: one record, a text-free audit line, no text in any log; he then deleted it himself with the store's new delete command. To switch capture off: `CAPTURE=off` in `mvp/run-all.sh`, then restart `Ask Brain.command`.
 Detail: runtime `72bf52b`; [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review, session 43.
+
+## [2026-10-09] session | Session 43 closed: capture on (P2.7 C4); M6b S1 blocked on Q92
+**What changed for David:** failed phone questions are now kept on the Air for 90 days, switched on with him watching; the weekly review covers all webAI models; the embedding test waits for his OK to install Python 3.12 (Q92).
+Detail: PROGRESS session 43. Cowork's 9 Oct 11:25 and 10:50 handoff entries were worked and removed from `90 System/handoff.md`; their substance is in commits `6738899` and `437a7c4` and in the session 43 entry.

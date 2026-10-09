@@ -2,7 +2,7 @@
 classification: internal
 task: D77             # was provisional D-cowork-10; final number assigned by the lead, 6 Oct (session 29)
 owner: "@code"        # David approved 5 Oct (Q55, with amendment); lead applies, David approves the AGENTS.md diff
-status: open          # lead, 6 Oct (session 29): AGENTS.md text applied (D77); pre-commit check, calibration file and ~/.codex prompt wait for the hold to lift
+status: open          # lead, 6 Oct (session 29): AGENTS.md text applied (D77); pre-commit check, calibration file and ~/.codex prompt waited for the hold, lifted 7 Oct (D81); not started
 models: ["claude-opus-5-5 (Cowork, draft; lead)", "gpt-6.1-sol (Codex reviewer, high)"]
 created: 2026-10-05
 ---
@@ -76,7 +76,7 @@ Codex classifies every finding as `blocker`, `should-fix` or `nit` using the che
 ## Files in scope
 - Cowork (done in this session, uncommitted): this brief, `90 System/codex-review-checklist.md` (new), `90 System/for-david.md` (Q55), `90 System/handoff.md`.
 - Lead, **after David approves Q55**: `AGENTS.md` (text above), vault pre-commit check (§3; the hook script lives in `dbrain-runtime` or `90 System/scripts/`, lead decides, tracked in git; installing the hook is a settings change, so it follows the hard-limit ask), `90 System/reports/review-calibration.md` (new), PROGRESS / TASKS / log (final D-number), `~/.codex` review prompt pointing at the checklist.
-- **Held (lead, 6 Oct):** Q65 releases only the AGENTS.md text, the checklist's `review_status` and their bookkeeping. The pre-commit check, the calibration file and the `~/.codex` prompt wait until David lifts the 6 Oct hold.
+- **Held (lead, 6 Oct):** Q65 releases only the AGENTS.md text, the checklist's `review_status` and their bookkeeping. The pre-commit check, the calibration file and the `~/.codex` prompt wait until David lifts the 6 Oct hold. *(Cowork, 9 Oct: the hold was lifted 7 Oct (D81); none of the three is started.)*
 
 ## Done when (checkable)
 - [x] David approves, amends or rejects Q55.

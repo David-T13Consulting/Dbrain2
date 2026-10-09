@@ -4,7 +4,7 @@ note_type: procedure
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-09
 ---
 # Course map: weekly update procedure
 
@@ -36,5 +36,6 @@ David asked on 2 Oct 2026 for the progress visual to be saved and refreshed ever
 ## Rules
 - Facts only from the vault; never invent dates. Undated stages stay "Ahead" with no date.
 - Cowork never runs git (D63): after editing the source, add an entry to `90 System/handoff.md` for the lead to commit.
+- **List every change in `handoff.md` (David, 9 Oct).** Under the vault's rules the lead won't touch work it can't attribute and may stop to ask about it. So each run adds its own entry, headed with the task name, date and time, naming every file it changed and what changed in it (one line per file, the course map included), with a suggested commit message. Before finishing, compare `git --no-optional-locks status` with the entry: every file this run changed is listed, and no file another agent changed is claimed. Never add this run's changes to another agent's entry, and never describe whose the other uncommitted files are unless an entry says so.
 - Publish with the Artifact tool to the URL above (read it first), never as a new artifact.
 - New questions for David go to `for-david.md` (D68), not into the report.

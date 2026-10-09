@@ -2,7 +2,7 @@
 classification: internal
 task: M6b   # final ID, assigned by the lead 8 Oct (session 37)
 owner: "@code"
-status: open             # S1 done 9 Oct (session 44): manifest re-read, venv built from Python 3.12 (D122); S2 (download) next
+status: open             # S2 done 9 Oct (session 44): both models fetched and verified; S3 (harness, toy data) next
 models: []
 created: 2026-10-08
 source: David, 8 Oct ("Yes", run the EmbeddingGemma 2 evaluation); desk note [[30 Resources/Local AI/embeddinggemma-2-evaluation]]
@@ -77,6 +77,11 @@ Manifest committed; raw rankings and scores saved; results note written with per
   FAIL. Blocker: DECISIONS.md (D122) was not in the brief's files in scope. Should-fix: the budget counted only the models folder, not T9/M6's allocation and the venv. Fixed: DECISIONS.md listed for this brief's answer rows; the budget restated against D100 (≈22.0 of 25 GB) in this record and the manifest. Verified by Codex read-only: Python 3.12.15 arm64 from Homebrew, the venv's location and 41 pins, a clean `pip check`, both model records equal to session 43's, no weights on disk. Apple GPU availability could not be confirmed from Codex's sandbox (the lead's own check: available).
 - Review 2/5 · M6b S1
   PASS. Nit, applied: the log says no model *weights* were downloaded (packages and a config file were).
+- **S2 · done (pending review).** Revisions re-read just before the fetch: unchanged. `experiments/embedding-eval/fetch_verify.py` (new) fetched only the manifest's files at its revisions with the venv's `huggingface_hub`, into `~/Library/Application Support/dbrain/models/embeddings/<org>__<name>@<rev12>/` (Hugging Face's cache pointed there too; nothing in `~/.cache/huggingface`, nothing in the vault), and checked every file's size and full SHA-256: `google/embeddinggemma-2` 15/15 files, 1,525,810,123 bytes; `Qwen/Qwen3-Embedding-0.6B` 12/12 files, 1,207,489,041 bytes; **all match**. Record: runtime `experiments/embedding-eval/verification.json` (commit `cfb665a`). Disk: folders 1.4 GB and 1.1 GB on disk; 74 GiB free after. Budget as in S1: ≈22.0 of 25 GB. Unauthenticated requests (no token used or stored).
+- Review 1/5 · M6b S2
+  FAIL. Blocker: a revision change or a mismatch on the first model did not stop the step: the second model was still downloaded. Should-fix: an inherited `HF_HOME` or `HF_XET_CACHE` could point the cache into the vault. Fixed: each file is verified right after its download and the first problem records itself and ends the step (nothing more is fetched); `HF_HOME`, `HF_HUB_CACHE`, `HF_XET_CACHE` and `HF_ASSETS_CACHE` are forced into the app folder. Checked with mocks: a changed revision → 0 downloads; a mismatch on the first file → 1 download, then stop; a vault-pointing `HF_XET_CACHE` is overridden (no folder appeared in the vault). The real fetch re-run with the fixed script: 27/27 files match again.
+- Review 2/5 · M6b S2
+  PASS, no findings. Committed runtime `cfb665a`.
 
 ## Outcome
 (owner)

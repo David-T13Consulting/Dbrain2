@@ -964,3 +964,7 @@ Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] Review and Outcome (sessi
 **What changed for David:** the Python 3.12 he installed is verified and the embedding test's isolated environment is built from it (1 GB, outside the vault); the two models' pins are re-checked and unchanged. No model weights downloaded yet: S2 fetches the 2.7 GB of weights next.
 Detail: [[90 System/briefs/M6b-embedding-eval|M6b]] Review, session 44; runtime `experiments/embedding-eval/manifest.json`.
 
+## [2026-10-09] build | M6b S2: both embedding models downloaded and verified
+**What changed for David:** the two embedding models (2.7 GB) are on the Air, outside the vault, every file checked against the pinned hashes; the test harness on made-up data is next (S3).
+Detail: [[90 System/briefs/M6b-embedding-eval|M6b]] Review, session 44; runtime `experiments/embedding-eval/verification.json`.
+

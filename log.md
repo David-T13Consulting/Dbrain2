@@ -1013,3 +1013,11 @@ Detail: [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] run of 9 Oct (sessio
 ## [2026-10-09] build | M6b S3: embedding test harness, made-up data only; S4 on Q96 (Pillow)
 **What changed for David:** the embedding test's scorer exists and is checked on made-up passages; the real 10 questions are not scored yet. One of the two models (EmbeddingGemma 2) needs a small image library, Pillow, to load at all; installing it is his call (Q96).
 Detail: [[90 System/briefs/M6b-embedding-eval|M6b]] run of 9 Oct (session 45); labels as frozen in D124.
+
+## [2026-10-09] build | P2.5 F0 passed review (4/5); waits for David's OK to commit (Q97)
+**What changed for David:** the test set that measures the phone's wrong "no" is ready: it shows the phone never says when his word isn't the note's own (0 of 6) and says "no" correctly when it should (7 of 7). It is a Tier 2 change, so it waits for his OK before it is committed (Q97).
+Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] run of 9 Oct (session 45): reviews 1–3 fail, a D74 consultation (the scorer rebuilt as a whole-answer contract with pass, fail and unscored), review 4 pass.
+
+## [2026-10-09] session | Session 45 closed: handoff 15:06–15:12 worked; C5 service part; M6b S3; P2.5 F0 passed review
+**What changed for David:** his 1-hour rule is in the data policy, his language line in AGENTS.md and his ask-with-options rule standing; the "Wrong" button is built on the service side; three questions for him (Q95–Q97).
+Detail: PROGRESS session 45. Sessions 41 and 42 moved verbatim to PROGRESS-archive so three remain. Cowork's 15:35 entry stays in the handoff for the next run.

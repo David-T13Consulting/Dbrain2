@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Open Questions
 
-**Updated:** 9 Oct 2026 (session 43): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q92 Python for M6b; Q90 and Q91 answered and recorded).
+**Updated:** 9 Oct 2026 (session 45): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q95–Q97; Q93 and Q94 answered and recorded as D123, D124).
 
 ---
 

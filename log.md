@@ -914,3 +914,24 @@ Detail: D114 in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]]; AGENTS.md �
 ## [2026-10-09] build | P2.7 stage C steps C1–C3b committed; real capture still off (Q90)
 **What changed for David:** the failure loop is built and tested with planted data: failed questions can be kept on the Air for 90 days and deleted on schedule, with a text-free audit trail; answers that cite their source but are not yet fact-checked no longer count as failures; the model server's log was checked and holds no question or answer text; the service's traces and logs now live outside every git folder. Nothing is captured until he says so (Q90).
 Detail: runtime `d262b08` (C1), `de7e662` (C1b), `24fb08d` (C2), `b3780eb` (C3), `d873748` (C3b); [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review.
+
+## [2026-10-09] decision | Desktop digest pilot: D115–D118 recorded; digest committed; skill returned to Cowork (session 42)
+**What changed for David:** his Desktop now has a weekly flow: a digest in the Inbox he reviews in about 20 minutes, ticking what to delete or file; once the skill passes review and Q91 is settled, the next weekly run executes only what he ticked. The image exception to rule 5 is agreed in principle, but no image enters the vault until he approves its exact wording.
+IDs renumbered by the lead: D-cowork-11 → D115, D-cowork-12 → D116, D-cowork-13 → D117, D-cowork-14 → D118. Detail: [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]]; `00 Inbox/2026-10-09-0940-desktop-digest-2026-W41.md`. **The skill draft (`90 System/skills/weekly-desktop-digest/SKILL.md`) is not committed:** Codex (gpt-6.1-sol, 9 Oct) found five blockers: the sweep removes Desktop originals before David approves; downloads are not scoped; no gate keeps raw sensitive or client material away from a cloud agent, and a breach carries over instead of stopping the run; deletion runs before filing; archiving whole digests puts unapproved claims into 40 Archive. Should-fix: reconcile "pending" with D115–D118; cite the pilot for baseline figures; Tesseract was English-only as configured. Returned to Cowork in the handoff; the data-policy question about the staging folder is Q91 in [[90 System/for-david]]. The three Cowork → lead entries worked here are moved below verbatim from `90 System/handoff.md` (headings demoted one level).
+
+### 2026-10-09 09:45 · Cowork · Desktop digest W41 (pilot)
+- **File:** `00 Inbox/2026-10-09-0940-desktop-digest-2026-W41.md` (new). Tier 0 (Inbox capture); its content is proposals awaiting David's approval, nothing filed in 10–40.
+- **Suggested commit:** `Inbox: Desktop digest 2026-W41, first weekly Desktop sweep (pilot)`
+- **Decisions taken by David in chat, 9 Oct 09:20–09:23, to record:** D-cowork-11 small-asset exception to rule 5 (wording pending his approval in §A of the digest; AGENTS.md edit is a hard limit, do not apply before he confirms), D-cowork-12 weekly batch approval of deletions, D-cowork-13 weekly hybrid Desktop flow adopted as MVP. Renumber and log per the IDs rule.
+- Outside the vault (not git): Desktop swept to `~/Documents/Source_Material/learning/_staging/2026-W41/`. No pointer note yet; one will be proposed with the first filing.
+
+### 2026-10-09 10:35 · Cowork · Weekly Desktop digest skill + digest revision
+- **New:** `90 System/skills/weekly-desktop-digest/SKILL.md` (Tier 1: skill). Procedure for the weekly scheduled run, with David's five pilot learnings (iCloud download first, Apple Vision OCR, learning filter before grouping, one session per week, full-resolution lossless image crops).
+- **Changed:** `00 Inbox/2026-10-09-0940-desktop-digest-2026-W41.md`: D-cowork-11 wording revised after David's review (images at full source resolution, lossless WebP, ≤ 500 KB, legible at 100% zoom; was ≤ 300 KB compressed), §C sizes, §D +6 superseded exports, §H learnings.
+- **Suggested commits:** `Skill: weekly-desktop-digest v0.1 (pilot learnings, David 9 Oct)` and `Inbox: W41 digest, image rule revised after David's review`
+
+### 2026-10-09 10:35 · Cowork · Desktop digest: review-then-execute flow (David, 9 Oct 10:30)
+- **Changed:** `90 System/skills/weekly-desktop-digest/SKILL.md` → v0.2: every weekly run first executes digest pages David marked `review_status: reviewed` (ticked = execute, unticked = hold and carry over, `>` notes = instructions), archives them to `40 Archive/desktop-digests/`, then sweeps. No manual trigger. Tier 1.
+- **Changed:** `00 Inbox/2026-10-09-0940-desktop-digest-2026-W41.md`: review instruction line now says how to signal "reviewed".
+- **Decision to record (David, 9 Oct 10:30):** D-cowork-14: a reviewed digest page counts as David's approval for the deletions and filings it ticks (AGENTS.md hard limit and rule 4 satisfied by the review); execution happens at the next weekly run; rule/AGENTS.md changes stay with the lead.
+- **Suggested commit:** `Skill weekly-desktop-digest v0.2: next run executes reviewed pages (D-cowork-14)`

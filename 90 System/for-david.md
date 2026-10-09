@@ -24,8 +24,6 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
-- **Q92 → David installed Python 3.12 himself** (David, 9 Oct 12:00, via Cowork: "I just installed python 3.12 as asked"). Method (Homebrew or python.org) not stated; Cowork cannot see the Mac's system paths, so the lead verifies the interpreter (`which`, version, origin) and records it in the M6b manifest before building the venv. No further install by an agent.
-
 - **Q91 → (a), done** (David, 9 Oct 11:18, via Cowork): the sensitive and quarantined Desktop-pilot files were reviewed and **deleted by David himself**. Cowork did not open or verify the staging folder (not connected to its session). Stop condition (3) is cleared.
 - **Q90 → (a)** (David, 9 Oct 11:18, via Cowork: "switch on real capture"): turn real capture on now, David present; one planted failure proves it end to end. Accepted with the D110 exceptions as stated in the question. Recorded as **D119**.
 

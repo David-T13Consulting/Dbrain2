@@ -2,7 +2,7 @@
 classification: internal
 task: M6b   # final ID, assigned by the lead 8 Oct (session 37)
 owner: "@code"
-status: blocked-on-david   # S1 blocked 9 Oct (session 43): no Python >= 3.10 on the Air; Q92. S0 committed 437a7c4
+status: open             # S1 done 9 Oct (session 44): manifest re-read, venv built from Python 3.12 (D122); S2 (download) next
 models: []
 created: 2026-10-08
 source: David, 8 Oct ("Yes", run the EmbeddingGemma 2 evaluation); desk note [[30 Resources/Local AI/embeddinggemma-2-evaluation]]
@@ -24,6 +24,7 @@ Gemma 4 E4B (official QAT Q4_0 GGUF, Google repo `google/gemma-4-E4B-it-qat-q4_0
 - `~/Work/dbrain-runtime/experiments/` (a new `embedding-eval/` folder) and `artifacts/` for pins and raw rankings.
 - A dated results note in `10 Projects/AI Second Brain/02_Architecture/` (`review_status: draft`) with `index.md` / `log.md` entries.
 - This brief, TASKS (M6b line), `10 Projects/AI Second Brain/PROGRESS.md`, `90 System/for-david.md`.
+- `10 Projects/AI Second Brain/DECISIONS.md`: only the rows recording David's answers for this brief (D122, Q92; added 9 Oct, session 44, after review).
 - Not in scope until David confirms: `30 Resources/Local AI/` rows (propose them in the queue).
 
 ## Inputs to read first
@@ -68,6 +69,14 @@ Manifest committed; raw rankings and scores saved; results note written with per
 - **S1 · blocked, nothing committed (session 43).** Read 9 Oct ~11:55 from the Hugging Face API: `google/embeddinggemma-2` revision `914f7f89142e33e77833254d9c9b90c3cef7303b` (unchanged since 8 Oct; 1,525,810,123 bytes; `model.safetensors` SHA-256 `197a3296…5d79`), `Qwen/Qwen3-Embedding-0.6B` revision `97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3` (1,207,489,041 bytes; `model.safetensors` `0437e45c…23fd`); the small files were fetched at those revisions and matched their git ids (no weights downloaded). Weights about 2.73 GB; models folder now 15 GB, so about 17.7 of the 25 GB budget; 79 GiB free on the disk. **Blocker:** EmbeddingGemma 2 requires `sentence-transformers` >= 6.1.0, and that version, `transformers` 5.19, `torch` 2.14.1, `tokenizers` and `safetensors` all need Python >= 3.10 (PyPI metadata, read 9 Oct: [sentence-transformers 6.1.0](https://pypi.org/pypi/sentence-transformers/6.1.0/json), [transformers 5.19.0](https://pypi.org/pypi/transformers/5.19.0/json), [torch 2.14.1](https://pypi.org/pypi/torch/2.14.1/json)); the requirement >= 6.1.0 is in `~/Work/dbrain-runtime/experiments/embedding-eval/evidence-embeddinggemma-2-914f7f89-config_sentence_transformers.json` (fetched from https://huggingface.co/google/embeddinggemma-2/resolve/914f7f89142e33e77833254d9c9b90c3cef7303b/config_sentence_transformers.json); the Air has only Python 3.9.6, and installing another Python is a download no brief names. Queued as **Q92**. The full draft manifest (every file, size and SHA-256) is **uncommitted** at `~/Work/dbrain-runtime/experiments/embedding-eval/manifest-draft.json`; the next run re-reads the revisions before using it (protocol item 5). The record of this block (this entry, Q92, TASKS, PROGRESS, session close) is bookkeeping, not S1's output: S1's manifest and venv stay uncommitted until S1 finishes.
   - Review 1/5 · M6b S1 (the block record and session-close bookkeeping)
     PASS. Should-fix, applied: Q91's stale task line removed; version-specific PyPI links and the saved config evidence cited; the Homebrew size marked `unverified`.
+
+**Run of 9 Oct (session 44): S1, fresh step budget.** Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+- **S1 · done (pending review).** Python: Homebrew `python@3.12` 3.12.15, arm64, installed by David 9 Oct 11:59 (Q92 → **D122**). Revisions re-read from the Hugging Face API at 14:32: `google/embeddinggemma-2` `914f7f89142e33e77833254d9c9b90c3cef7303b`, `Qwen/Qwen3-Embedding-0.6B` `97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3`, both unchanged since session 43, so its file list, sizes and SHA-256 stand. Venv `~/Library/Application Support/dbrain/venvs/m6b-py312` (outside the vault, iCloud and git), pins `sentence-transformers==6.1.0`, `transformers==5.19.0`, `torch==2.14.1`, 41 packages frozen in the manifest, 1.0 GB, Apple GPU backend available. Disk: 78 GiB free before the venv, 76 GiB after. **Budget (D100, weights and runtimes, 25 GB):** T9/M6's allocation ≈18.25 GB (the models folder measures 15 GB today) + this venv 1.0 GB + S2's weights 2.73 GB ≈ **22.0 GB**, about 3 GB spare. **No weights downloaded.** Manifest: runtime `experiments/embedding-eval/manifest.json` (commit `89d9bd5`) (the session 43 draft beside it stays uncommitted).
+- **Run notes (D114):** no subagents used this run.
+- Review 1/5 · M6b S1
+  FAIL. Blocker: DECISIONS.md (D122) was not in the brief's files in scope. Should-fix: the budget counted only the models folder, not T9/M6's allocation and the venv. Fixed: DECISIONS.md listed for this brief's answer rows; the budget restated against D100 (≈22.0 of 25 GB) in this record and the manifest. Verified by Codex read-only: Python 3.12.15 arm64 from Homebrew, the venv's location and 41 pins, a clean `pip check`, both model records equal to session 43's, no weights on disk. Apple GPU availability could not be confirmed from Codex's sandbox (the lead's own check: available).
+- Review 2/5 · M6b S1
+  PASS. Nit, applied: the log says no model *weights* were downloaded (packages and a config file were).
 
 ## Outcome
 (owner)

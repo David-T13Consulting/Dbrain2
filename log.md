@@ -959,3 +959,8 @@ Cowork's 9 Oct 13:45 handoff entry: review-checklist line, P2.5 language line an
 ## [2026-10-09] build | P2.5 F0 parked (5 reviews); P2.7 C5 blocked on Q93
 **What changed for David:** the made-up regression questions and their scorer are built but not committed (F0 used its 5 reviews; the last fix is in the working tree, unreviewed), so the answer fixes F1–F3 wait for the next run. The "Wrong" button needs his call first (Q93): the data policy allows keeping a question's text only once it has failed, and a tap comes after the answer.
 Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] Review and Outcome (session 44); [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] C5; [[90 System/for-david]] Q93.
+
+## [2026-10-09] build | M6b S1: environment ready for the embedding test (D122)
+**What changed for David:** the Python 3.12 he installed is verified and the embedding test's isolated environment is built from it (1 GB, outside the vault); the two models' pins are re-checked and unchanged. No model weights downloaded yet: S2 fetches the 2.7 GB of weights next.
+Detail: [[90 System/briefs/M6b-embedding-eval|M6b]] Review, session 44; runtime `experiments/embedding-eval/manifest.json`.
+

@@ -993,3 +993,9 @@ Cowork's 9 Oct 15:06 handoff entry (moved here verbatim): records Q93 as D123 (d
 Cowork's 9 Oct 15:08 handoff entry (moved here verbatim): both items removed from the `@david` line in TASKS.
 
 > **Cowork → lead, 9 Oct 15:08 (David):** (1) the review branch **is deleted on GitHub** — close that `@david` item (Q83). (2) **TwIL-LM3-Pro licence: David says ignore for now** — park the D99 item off the `@david` list; D99's trigger stays as written (model stays out of any client-facing demo until resolved).
+
+## [2026-10-09] build | P2.6 phrase set validated by David; S5 "next Monday" → UNCLEAR
+**What changed for David:** his checks on the date test phrases are in; "next Monday" said on a Monday now counts as a question the phone must ask about. Today the phone answers Mon 12 Oct there without asking, so the date work (P2.6) has to fix it.
+Cowork's 9 Oct 15:09 handoff entry (moved here verbatim): the phrase set's S5 row and validation line committed (L7 follows with the 15:12 entry); the lead ran S5 through the current reader and recorded the result in the [[90 System/briefs/P2.6-date-resolution|P2.6]] Outcome; TASKS updated.
+
+> **Cowork → lead, 9 Oct 15:09: P2.6 phrase set validated by David** (`90 System/briefs/P2.6-phrase-set.md`, uncommitted). S5 "next Monday" → `UNCLEAR` (was 12 Oct): check whether the phone's current reader resolves it to a date, since that would now count as silently wrong. L2 and S6 confirmed. L7 "lundi prochain" still open (same ambiguity). This clears P2.6's validation gate; it still needs Cowork to name it as a run's first item and David's OK for any new dependency. Suggested commit: `P2.6 phrase set validated by David; S5 next Monday -> UNCLEAR (9 Oct)`.

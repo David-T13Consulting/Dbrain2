@@ -136,7 +136,7 @@ Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents 
 |---|---|---|
 | Cowork: thinking, specs, briefs | Strongest Claude model (Opus) | App model picker (David) |
 | Claude Code: lead | Opus | `.claude/settings.json` in the vault (git-tracked) |
-| Claude Code subagents: search, tagging, simple checks | Smaller Claude model | `model:` field in each subagent definition |
+| Claude Code subagents | Routed per call by the lead (rules below); default Sonnet | `model` on each Agent call; default `CLAUDE_CODE_SUBAGENT_MODEL` in `.claude/settings.json` |
 | **Codex: reviewer** | **GPT-6.1 Sol at effort `high`** (was GPT-6 Astra until 5 Oct 2026, D73), escalating to `ultra` only when the lead and the reviewer are both stuck | `~/.codex/review.config.toml`; the lead calls `codex exec --profile review` |
 
 - The review is independent because it uses a different vendor's model. Do not swap the reviewer to a Claude model.
@@ -144,6 +144,13 @@ Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents 
 - Every brief records the model ID(s) actually used, under Review and Outcome.
 - This is about the agents that build the vault. The local runtime model (T9 / P2.2) is chosen by evals against D56, not by this policy.
 - Change this table only on David's decision.
+- **Subagent routing (D114, David 9 Oct).** The lead picks the model on every Agent call, Explore and Plan included (they run on Opus unless a model is named), by what the result will be used for:
+  - **Haiku:** mechanical lookups whose output is locations or counts, not judgment: find files, grep sweeps, list references, check that a string is present.
+  - **Sonnet (default):** reading and summarising code or notes, drafting tests from a written spec, routine edits outside the security boundary, bookkeeping drafts.
+  - **Opus:** anything touching the security boundary (failure store, `outpath`, leak check, deny rules, data policy), choosing between design options, diagnosing a failure that survived two rounds, and every D74 second-opinion consult.
+  - **Escalate, never downgrade:** a subagent result that is incomplete, contradicts the lead or other evidence, or is a second attempt is redone one tier up; security-boundary work never goes below Opus. When unsure between two tiers, take the higher.
+  - **Unchanged:** the lead stays Opus; Codex stays the reviewer; subagents never commit.
+  - **Logged:** one line per subagent call in the brief's run notes: task, model, reason. The weekly review samples these lines; misroutes (a lower tier that had to be redone) are counted.
 
 ## Where to start
 - Active work lives in `10 Projects/<name>/`. Read that project's CLAUDE.md or README first.

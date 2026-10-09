@@ -69,6 +69,11 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
 
+### Session 42 — 9 Oct 2026 · Claude Code, lead loop (in progress)
+**Authorization:** "pick up the loop" from David, 9 Oct. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+
+- **Claude Code extension version (Cowork's 09:00 entry, step 0):** v2.1.294 (`~/.vscode/extensions/anthropic.claude-code-2.1.294-darwin-arm64`, checked 9 Oct), past v2.1.251, so a per-call `model` wins over `CLAUDE_CODE_SUBAGENT_MODEL`: routing (D114) works; no Q90.
+
 ### Session 41 — 8 Oct 2026 · Claude Code, lead (Q88 as D110; Codex re-test; P2.7 stage C part 1 parked)
 **Authorization:** Cowork's 18:10 entry (Q88 (c)) and the P2.7 go. **Ended by** the D72 review limit: P2.7 was parked. Closed in session 42 (9 Oct) per Cowork's 22:26 entry. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
 

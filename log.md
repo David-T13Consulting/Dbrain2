@@ -911,3 +911,6 @@ Detail: D114 in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]]; AGENTS.md â
 > *- **Logged:** one line per subagent call in the brief's run notes: task, model, reason. The weekly review samples these lines; misroutes (a lower tier that had to be redone) are counted."*
 > Suggested message: `Subagent routing per call, default Sonnet (D-next, David 9 Oct)`; commit with `.claude/settings.json`. Tier 2 (rule change).
 
+## [2026-10-09] build | P2.7 stage C steps C1â€“C3b committed; real capture still off (Q90)
+**What changed for David:** the failure loop is built and tested with planted data: failed questions can be kept on the Air for 90 days and deleted on schedule, with a text-free audit trail; answers that cite their source but are not yet fact-checked no longer count as failures; the model server's log was checked and holds no question or answer text; the service's traces and logs now live outside every git folder. Nothing is captured until he says so (Q90).
+Detail: runtime `d262b08` (C1), `de7e662` (C1b), `24fb08d` (C2), `b3780eb` (C3), `d873748` (C3b); [[90 System/briefs/P2.7-failure-capture-loop|P2.7]] Review.

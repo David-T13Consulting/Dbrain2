@@ -18,6 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
+| Q90 | lead, 9 Oct (session 42) | [[90 System/briefs/P2.7-failure-capture-loop\|P2.7]] | Steps C1–C3b are built, reviewed and committed (store and 90-day deletion, the `incomplete` split, capture wiring, the server-log check, logs out of git). Turn real capture on (C4)? Then a question the phone fails on (a decline, an unreadable date, a timeout, a model outage, an unusable reply, or a real defect) is stored on the Air for 90 days, for the local model and you only, with the exceptions you accepted in D110 (a deliberately disguised Claude Code command could still read it; the screen-control tools of Codex and Cowork are untested; a folder grant you make yourself would open it to Cowork); answers that are cited but not yet fact-checked are only counted. On the 10 dev cases: 6 such unverified answers, 4 declines, 0 defects, so roughly the declines would be stored. | (a) yes: in the next session with you watching, the lead sets `DBRAIN_FAILURE_CAPTURE=on` in the launcher, you restart `Ask Brain.command`, and one planted failure proves it end to end (recommended) · (b) not yet: keep capture off | P2.7 C4, then M6b (after P2.7) | this week |
 
 ## Answered (since 8 Oct)
 

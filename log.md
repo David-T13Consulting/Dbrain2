@@ -1067,3 +1067,7 @@ Please: (1) give D-cowork-15 and D-cowork-16 final D numbers in DECISIONS and ma
 ## [2026-10-12] build | P2.5 F1 closed, no prompt change accepted (Q99)
 **What changed for David:** none in the phone's answers. Four wordings of the prompt were tried on the small model; each fixed some cases and broke others (one brought back the very "nothing found" error), so none ships, as he chose (Q99). The fix moves to F2, a code check. His two answers of this session are recorded (Q99, Q100: the phone step later in this run).
 Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] (run of 12 Oct, F1 outcome, D74 consult); [[90 System/for-david]] Answered Q99, Q100. Codex `gpt-6.1-sol` checked both records in review 3/5 of the D127 change: pass.
+
+## [2026-10-12] brief | G1-inj read-path injection suite drafted
+**What changed for David:** the safety test that gate G1 needs before any calendar or mail connector now has a plan: made-up notes that try to give orders, claim false authority, ask for data to be sent out, or sit outside the allowed folders, run through the phone's real answer path and scored automatically. It measures; any fix gets its own brief. Expected to fit the S2 exit; if not, he is asked.
+Detail: [[90 System/briefs/G1-inj-read-path-injection|G1-inj]]; TASKS G1-inj line; `index.md`. Tier 1a (D127): committed now, Codex in this run's batch.

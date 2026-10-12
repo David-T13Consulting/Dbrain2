@@ -1021,3 +1021,10 @@ Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] run of 9 Oct (session 45)
 ## [2026-10-09] session | Session 45 closed: handoff 15:06–15:12 worked; C5 service part; M6b S3; P2.5 F0 passed review
 **What changed for David:** his 1-hour rule is in the data policy, his language line in AGENTS.md and his ask-with-options rule standing; the "Wrong" button is built on the service side; three questions for him (Q95–Q97).
 Detail: PROGRESS session 45. Sessions 41 and 42 moved verbatim to PROGRESS-archive so three remain. Cowork's 15:35 entry stays in the handoff for the next run.
+
+## [2026-10-12] build | P2.5 F0 committed (Q97 (a)); Q95–Q97 answers recorded
+**What changed for David:** the test set that measures the phone's wrong "no" is now committed, as he approved (runtime `d584f13`); the fixes F1–F3 can be measured against it. His three 9 Oct answers are recorded; the "Wrong" button's phone part (Q95) waits for a run with him, as he asked on 12 Oct.
+Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] Review (Q97 record); [[90 System/for-david]] Answered; Cowork's 9 Oct 17:10 handoff entry committed as written.
+
+## [2026-10-12] lint | weekly
+Cowork's read-only run, 12 Oct (handoff entry of 12 Oct 10:10): M1 orphans 2 (`codex-review-checklist`; the uncommitted `weekly-desktop-digest/SKILL.md`) · M2 broken links 1 (`Welcome.md` placeholder) · M3 missing from `index.md` 16 · M4–M8 zero. Judgment notes are in that entry; nothing was fixed by the lint itself.

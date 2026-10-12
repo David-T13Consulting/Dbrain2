@@ -4,13 +4,13 @@ review_status: codex-reviewed
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 9 Oct 2026 (session 45) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 12 Oct 2026 (session 46) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or in the roadmap ([[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0). Done items, the legacy Week 0 / H1–H3 plan and the wording of every item before 8 Oct are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
 ## ▶ Next action
 
-- [ ] `@david` **Q95:** the "Wrong" button: Shortcut edit, restart, one check with the lead (P2.7 C5) · **Q96:** Pillow for EmbeddingGemma 2 (M6b S4) · **Q97:** commit P2.5 F0 — [[90 System/for-david]]
+- [ ] `@david` **Q95 (answered (a)), with the lead:** the "Wrong" button's phone part (Shortcut edit, restart `Ask Brain.command`, one check) plus the phone re-check on C2, in a run with David present; not done 12 Oct (David away) — [[90 System/for-david]]
 - [ ] `@code` Cowork's 9 Oct 15:35 handoff entry: roadmap amendment after the independent audit (decision, tasks, the ⚑ list) — [[90 System/handoff]]
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
@@ -24,7 +24,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@codex` **P2.1** Independent review of the retrieval cases; keep an untouched acceptance subset — [[90 System/briefs/P2.1-review|P2.1-review]]
 - [ ] `@code` **P2.3** Measure quality, latency, memory and sustained performance with pinned versions; Air versus dedicated host
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
-- [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set; slice F0–F3 (D120): **F0 passed review 9 Oct** (session 45: scorer rebuilt as a whole-answer contract after a D74 consult; baseline row 0/6, none 2/2, negated 3/3, other 2/2); Tier 2, **waits uncommitted for David's approval (Q97)**; F1–F3 after it — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
+- [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set; slice F0–F3 (D120): **F0 committed 12 Oct** (runtime `d584f13`, Q97 (a); whole-answer scorer; baseline row 0/6, none 2/2, negated 3/3, other 2/2); **F1–F3 next** — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper; phrase set validated by David 9 Oct (S5 "next Monday" said on a Monday → `UNCLEAR`; today's reader answers a date there); waits for Cowork to name it as the first item of a run; a new dependency needs David's OK — [[90 System/briefs/P2.6-date-resolution|P2.6]], [[90 System/briefs/P2.6-phrase-set|phrase set]]
 - [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C steps C1–C3b committed 9 Oct (session 42); **C4: real capture on since 9 Oct 11:41** (D119, runtime `72bf52b`, planted failure proven end to end and deleted through the store); **C5 (one-tap "wrong"): service done 9 Oct** (runtime `b3e1f1a`; 1-hour in-memory hold, D123); **phone part waits on Q95** (Shortcut edit, restart, end-to-end check with David); next: Cowork's follow-up brief (stage 2, stage 3, digest gating) — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
 

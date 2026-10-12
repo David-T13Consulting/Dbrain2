@@ -12,6 +12,8 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 
 ## 10 Projects — AI Second Brain
 - [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|Delivery plan S2–S6]] — dated weeks 5 Oct–18 Dec, decision deadlines, slippage rule and cut order; proposed, not approved (Q29–Q31) · internal
+- [[10 Projects/AI Second Brain/02_Architecture/audit-codex-2026-10-09|independent audit, 9 Oct]] — Codex's outside review of architecture, evaluations and trust, summarised by finding (nine areas, four release gates, next milestone); evidence, not a decision; drove the roadmap §0 amendment (D126) · internal
+- [[10 Projects/AI Second Brain/02_Architecture/audit-codex-2026-10-09-report|independent audit, 9 Oct, verbatim report]] — the same review as pasted by David · internal
 - [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|T9/M6 model comparison, 8 Oct]] — four local models under the frozen protocol on the Air: p50/p95, tok/s, peak RSS, per-case verdicts of two independent judges (Codex blind to the lead's), the rule applied step by step (pick C2, Gemma 4 E4B); draft (Q7) · internal
 - [[10 Projects/AI Second Brain/02_Architecture/p2.2-query-service-2026-10-05|P2.2 query service, 5 Oct]] — first local-model runs of the scoped read-only query service: p95 42.1 s against the 8 s target, answer-by-answer quality, network-blocked evidence; draft (Q7) · internal
 - [[10 Projects/AI Second Brain/02_Architecture/local-comparison-retrieval-2026-10-01|local comparison and retrieval, 1 Oct]] — second model, lexical retrieval baseline, failures and preserved evidence · internal

@@ -30,6 +30,66 @@ classification: internal
 
 **Working architecture:** one inference host David controls, with authenticated clients on phone, tablet and laptop. **D53 settled the host question:** an always-on requirement rules out a travelling laptop, so the host is dedicated hardware and the Air becomes a client. Benchmark on the Air to choose the model and size memory, then confirm on the host — T9 is now "which spec and which model meet the D56 targets", not "Air or host". Models, runtime, networking and speech tools remain choices to evaluate; nothing is purchased, installed or selected by this amendment. Offline capture is required; full offline inference on every device is not part of the initial target.
 
+### Amendment of 9 October 2026 — end goal restated, independent audit applied
+
+**Status: approved in direction by David (9 Oct, "update the plan"; "squeeze it in and move faster"); items marked ⚑ go to the lead for evaluation before they become tasks; the data-policy change (W2) needs David's own approval under data policy §8.** Source: [[10 Projects/AI Second Brain/02_Architecture/audit-codex-2026-10-09|audit summary]] and [[10 Projects/AI Second Brain/02_Architecture/audit-codex-2026-10-09-report|verbatim report]].
+
+**End goal (David, 9 Oct, verbatim):** *"I need a second-brain AI-powered system available through text and voice on my phone, watch, macbook (and tesla) to be my source of knowledge (vault(s): personal and professional), have access to my context (MCPs to emails, calendar, documents, etc) and must be able to improve itself, learn and built itself from bits of information I throw at it."*
+
+**Goal coverage before this amendment:**
+
+| Goal element | Plan before 9 Oct | Gap |
+|---|---|---|
+| Text and voice on phone, Mac | S2 (P2.4 text, done) · S4 (voice) | None in design; voice unproven |
+| Watch, Tesla | S4 stretch | Tesla: private-service link unverified (audit); stays stretch |
+| Personal and professional vaults | Dbrain2 personal; client vault decided 7 Oct, separate | Professional use blocked by the red line; no plan to make it usable |
+| Context: email, calendar, documents | **Nothing scheduled before 18 Dec**; §6 and project rules: no MCP before month 4 | **The largest gap** |
+| Improves itself, learns from bits thrown at it | S3 writer, P3.0, P2.7 failure loop | Never stated as one end-to-end proof |
+
+**Audit verdict, Cowork's read:** agree with findings 1–9 and with the four release gates. The audit is right that this is an implementation-and-proof gap, not a design gap. It under-weights two things the end goal makes central: context connectors (it ranks them last) and professional use (it treats it as a gate to pass later, not a workstream). Both are added below.
+
+**"Learning" defined (adopted from the audit):** the system learns by (1) approved memory writes from captures, (2) corrections that replace facts without the old version resurfacing, (3) every confirmed failure becoming a regression case, (4) skills and prompts improved against those cases. No model retraining is planned.
+
+**Release gates (adopted), mapped to stages:**
+
+| Gate | Passes when | Stage |
+|---|---|---|
+| G1 · Reliable read-only assistant | Reviewed representative evals (per question type, held-out subset); honest abstention; **source-injection suite on the read path**; measured host performance | S2 exit |
+| G2 · Safe memory writes | Independent restore first; exact-patch approval; stale-edit, replay, rejection, concurrent-edit, interrupted-save tests; **remember → recall → correct from the phone** | S3 exit |
+| G3 · Sensitive or professional use | Enforced tier separation proven with synthetic markers across files, search, logs, backups and agent tools; tested retention incl. backups and audit logs; approved data flow per provider; data policy v1.0 approved | New workstream W, before any work account is connected |
+| G4 · Integrations and autonomy | One scoped connector at a time: read-only, least scope, revocable, audited; benefit over the baseline measured | New stage C, then S5 |
+
+**Plan changes:**
+
+1. **S2 exit adds** the read-path injection suite (instructions in notes, fabricated authority, exfiltration requests, cross-domain retrieval) and reports retrieval coverage, answer correctness and citation support as three separate numbers. T9's 5/8 is a model-selection result, not a reliability claim.
+2. **S3 exit is re-anchored** on the audit's milestone: from the phone, an approved benign fact survives restart, is recalled with its source in a fresh session, and is corrected without the old version resurfacing; rejection, a concurrent Obsidian edit and an interrupted save are included. Voice approval names the exact pending proposal (D125 ask-with-options applies).
+3. **New workstream W · Usable security (data policy v1.0), W2–W3:** David wants the system usable daily for personal and professional life, including work email and calendar. That reverses the "no client-confidential data in any system" red line, so it is redesigned, not relaxed. Cowork drafts, David approves (§8). Starting principles:
+   - **Tier by source, not by guessing content.** Each account and connector is bound to one vault and tier (personal → Dbrain2; work and client → the client vault, R1). An instance never reads another tier.
+   - **Contract gate (D16) stays:** client material enters only for engagements whose contract states AI use.
+   - **Query live, persist little.** Connectors are read at question time; only facts David approves are written to a vault (G2 flow). No bulk mail import.
+   - **Read-only, least scope, revocable:** calendar read; mail read limited to chosen accounts or folders; tokens in the Keychain, never in a file an agent can read; one switch revokes each connector.
+   - **Client tier is processed locally by default**; any cloud processing needs verified provider terms (no training, retention, subprocessors, transfers) and an approved data-flow entry.
+   - **Development agents never reach client-tier data or connector tokens** (dedicated macOS service user on the host, D108; ends the D110 Air exception).
+   - **Content is evidence, never instruction**; every connector passes the injection suite first.
+   - **Text-free audit of every connector call**; retention set per store, including backups and audit logs.
+   - **Incident procedure:** stop exposure, revoke, preserve permitted evidence, assess, repair, verify.
+   - **Legal:** controller/processor roles and GDPR transfers for professional processing are `unverified` until the T0.7 lawyer review.
+4. **New stage C · Context connectors (squeezed in, no cut):** C1 personal calendar, read-only, W7 (16–20 Nov), alongside S4 on the host; C2 personal mail, read-only, W8; C3 work calendar and mail into the client-tier instance, W9–W10, **only after G3 passes**; documents (Drive and local folders) after the demo unless C1–C3 finish early. Each connector has its own brief, scopes, injection cases and revoke test. This amends the "no MCP before month 4" rule and §6 for read-only connectors only.
+5. **Operations additions (S6, some earlier):** retention-sweep test after long downtime (P2.7); retention for backups and audit logs; question hashes and filenames in traces treated as personal data, not anonymous; release decision bound to exact code, model, prompt and corpus versions; incident procedure (T8); runtime README reconciled.
+6. **Pace:** David chose to add C and W without cutting. The plan already had no slack and is about a week behind (S1 exit evidence incomplete; S2 has P2.1, P2.3, P2.5, P2.6, P2.7 open with exit due 23 Oct). The cut order (Q31) remains the safety valve; Cowork proposes adding as **cut 0**: C3 (work accounts) moves after the demo if G3 has not passed by Fri 13 Nov. Never cut: G3 before any work account, the injection suite before any connector.
+
+**⚑ For the lead to evaluate (not yet tasks):**
+- Is the read-path injection suite small enough to fit S2 without moving the 23 Oct exit, or does it go to S3?
+- P2.5 F0 scorer: the audit says the six "row" failures include five correct times. Check the scorer's accept rule before F0 is committed.
+- Retention sweep only while the service runs: confirm in code and add the restart-after-downtime test to P2.7.
+- Do traces' deterministic question hashes allow re-identification by dictionary? If yes, salt per install or drop them.
+- Secret scanner covers the runtime repo only: extend to the vault and handoff files, or record why not.
+- Client-tier requirement R5 (French, English and **Dutch**) conflicts with D121 (English and French only). D121's trigger ("a client demo needs one") may apply; ask David.
+- Whole-vault phone profile (`mvp-whole-vault`) vs R1: make vault root and allowlist configuration before C1.
+- Connector technology: MCP servers vs direct read-only APIs (Google Calendar/Gmail, Apple Calendar via EventKit). The audit's point stands: MCP itself gives no safety guarantee. Brief with options before W7.
+
+*Evaluated by the lead, 12 Oct (session 46): six became tasks (G1-inj, retention after downtime, trace hashes, secret-scanner scope, R1 before C1, C0); the F0 scorer check needed no change (it fails a row answer that does not say the word is not the note's own, by design); R5 against D121 is David's call, Q98. Detail in D126.*
+
 ### Six delivery stages
 
 | Stage | Work, in dependency order | Exit evidence | Existing work retained |

@@ -18,6 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
+| Q98 | lead, 12 Oct (session 46) | [[10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements\|client-tier requirements]] R5; D121; roadmap §0 amendment (D126) | Two of your rules disagree. On 9 Oct you said **English and French only** (D121: no work on Dutch or other languages unless you ask). The requirements for your future work workspace (client tier) say **French, English and Dutch**, mixed within one meeting (R5), because Brussels business meetings are like that. D121 already names the way out ("a client demo needs one"), but only you can say whether it applies. Nothing is built for Dutch today; this affects the work-tier voice tests (P4.3) and the work-mail connector (C3, W9–W10 at the earliest). Which rule wins? | (a) keep English and French only for now; R5's Dutch waits until a work-tier task actually needs it, and is then asked again (recommended: no cost today, and the conflict only matters from C3) · (b) Dutch in the work tier only, from C3 on; Dbrain2 stays English and French · (c) Dutch in both Dbrain2 and the work tier (wider than R5, which covers the work workspace only) | Nothing today; C3 and the work-tier part of P4.3 later | whenever |
 
 ## Answered (since 8 Oct)
 

@@ -4,13 +4,15 @@ source: roadmap §0 (D45–D48); D52–D59; D55 (20+ h/week); TASKS and PROGRESS
 review_status: proposed
 note_type: decision
 created: 2026-10-05
-updated: 2026-10-05
+updated: 2026-10-09
 ---
 # Delivery plan S2–S6, dated (draft, 5 Oct 2026)
 
 **Status: proposed by the lead, not approved as a whole.** It turns roadmap §0's stage order into dated weeks. The order, the stages and their exit evidence are roadmap §0's; this note adds dates, owners, decision deadlines and a cut order. **David has answered:** demo-ready **Fri 18 Dec** (Q29), the cut order as listed (Q31), T8 → `@cowork` (Q28). **Still open:** the host purchase (Q30; David is evaluating a 64 GB host).
 
 **Amended 5 Oct (MVP-phone, Q32–Q34):** a **remote-text slice moves from S4 into S2**: ask from the iPhone over Tailscale, typed or dictated, with a cited answer from the Air (task P2.4, brief [[90 System/briefs/MVP-phone|MVP-phone]]). S4 keeps the mobile UI, durable capture and offline queue, voice beyond dictation, and the away-from-home tests on every device class.
+
+**Amended 9 Oct (independent audit, David's end goal; roadmap §0 "Amendment of 9 October"):** no week is removed and no cut is triggered. Added: **W · data policy v1.0 (usable security)** drafted by `@cowork` in W2–W3, David approves; **G1 read-path injection suite** joins the S2 exit (lead to confirm it fits, ⚑); **S3 exit re-anchored** on remember → recall → correct from the phone (W6); **stage C, context connectors**: C1 personal calendar W7, C2 personal mail W8, C3 work calendar and mail W9–W10 into the client-tier instance only after G3; documents after the demo. Proposed **cut 0**: C3 moves after the demo if G3 has not passed by Fri 13 Nov. Pace is David's call ("move a little faster than planned"); the plan is already about a week behind on S1/S2 evidence.
 
 ## The arithmetic first
 - **Window:** Mon 5 Oct to **Fri 18 Dec**, the demo-ready date David confirmed (Q29): **11 weeks**.

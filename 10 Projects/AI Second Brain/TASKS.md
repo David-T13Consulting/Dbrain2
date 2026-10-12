@@ -11,7 +11,6 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 ## ▶ Next action
 
 - [ ] `@david` **Q95 (answered (a)), with the lead:** the "Wrong" button's phone part (Shortcut edit, restart `Ask Brain.command`, one check) plus the phone re-check on C2, in a run with David present; not done 12 Oct (David away) — [[90 System/for-david]]
-- [ ] `@code` Cowork's 9 Oct 15:35 handoff entry: roadmap amendment after the independent audit (decision, tasks, the ⚑ list) — [[90 System/handoff]]
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107) · phone re-check after restarting `Ask Brain.command`, now on C2 (P2.4, D105) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
@@ -26,9 +25,11 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
 - [ ] `@code` **P2.5** Answer accuracy, layered and measured on a fixed test set; slice F0–F3 (D120): **F0 committed 12 Oct** (runtime `d584f13`, Q97 (a); whole-answer scorer; baseline row 0/6, none 2/2, negated 3/3, other 2/2); **F1–F3 next** — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper; phrase set validated by David 9 Oct (S5 "next Monday" said on a Monday → `UNCLEAR`; today's reader answers a date there); waits for Cowork to name it as the first item of a run; a new dependency needs David's OK — [[90 System/briefs/P2.6-date-resolution|P2.6]], [[90 System/briefs/P2.6-phrase-set|phrase set]]
+- [ ] `@code` **G1-inj** Read-path injection suite (instructions in notes, fabricated authority, exfiltration requests, cross-domain retrieval), part of the S2 exit and gate G1 (D126); its brief sizes it; if it threatens the 23 Oct exit, the lead asks David (for-david) whether to move it to S3, and until he answers it stays part of the S2 exit — [[10 Projects/AI Second Brain/04_Roadmap|roadmap]] §0 amendment
 - [ ] `@cowork` design, `@code` build **P2.7** Failure capture and regression loop; go 8 Oct (16:08); files in scope reviewed; stage L (leak check) committed `d62fdf7`; D108 deny rules applied; exception on the Air accepted (D110); Codex requirements file installed and re-test passed (8 Oct); stage C steps C1–C3b committed 9 Oct (session 42); **C4: real capture on since 9 Oct 11:41** (D119, runtime `72bf52b`, planted failure proven end to end and deleted through the store); **C5 (one-tap "wrong"): service done 9 Oct** (runtime `b3e1f1a`; 1-hour in-memory hold, D123); **phone part waits on Q95** (Shortcut edit, restart, end-to-end check with David); next: Cowork's follow-up brief (stage 2, stage 3, digest gating) — [[90 System/briefs/P2.7-failure-capture-loop|P2.7]]
 
 ## S3 · Supervised wiki maintenance
+- [ ] `@code` **S3 exit (G2), re-anchored (D126):** from the phone, an approved benign fact survives restart, is recalled with its source in a fresh session and is corrected without the old version resurfacing; rejection, a concurrent Obsidian edit and an interrupted save included; voice approval names the exact pending proposal — [[10 Projects/AI Second Brain/04_Roadmap|roadmap]] §0 amendment
 - [ ] `@code` **P3.0** Update my brain by voice or text, with approval — [[90 System/briefs/P3.0-update-my-brain|P3.0]]
 - [ ] `@code` **P3.1** Durable source IDs, evidence, derived claims, contradictions and review state
 - [ ] `@code` **P3.2** Pending patches with evidence, exact diff, base revision and approval binding
@@ -36,6 +37,16 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P3.4** Regression-test and fix the reviewed running-script issues
 - [ ] `@cowork` **P3.5** Subsumed by T3.4 (Q14); kept for history
 - [ ] `@code` **P3.6** Freeze final running acceptance cases; preserve historical scores
+
+## W · Usable security (data policy v1.0, gate G3)
+- [ ] `@cowork` **W1** Draft data policy v1.0 from the amendment's starting principles (tier by source, contract gate, query live and persist little, read-only least-scope revocable connectors, client tier local by default, no agent access to client-tier data or tokens, content as evidence, text-free audit, incident procedure; legal points `unverified` until T0.7) by Fri 16 Oct; David approves (§8) — [[10 Projects/AI Second Brain/04_Roadmap|roadmap]] §0 amendment, D126
+
+## C · Context connectors (gate G4; each connector its own brief, scopes, injection cases and revoke test)
+- [ ] `@cowork` **C0** Connector-technology brief with options (MCP servers vs direct read-only APIs: Google Calendar and Gmail, Apple Calendar through EventKit), before W7
+- [ ] `@code` **R1 before C1:** the phone service takes its profile, allowlist and per-vault policy from configuration (the vault root already does, `DBRAIN_VAULT`), not the built-in `mvp-whole-vault` profile (client-tier R1; D126)
+- [ ] `@cowork` design, `@code` build **C1** Personal calendar, read-only, W7 (16–20 Nov)
+- [ ] `@cowork` design, `@code` build **C2** Personal mail, read-only, W8
+- [ ] `@cowork` design, `@code` build **C3** Work calendar and mail into the client-tier instance, W9–W10, **only after G3 passes**; cut 0 (after the demo if G3 has not passed by Fri 13 Nov) is a proposal, not decided
 
 ## S4 · Remote text and voice
 - [ ] `@code` **P4.1** Private authenticated access and mobile text UI; keep the inference endpoint private — [[90 System/briefs/P4.1-web-app|P4.1]]
@@ -52,6 +63,10 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P6.2** Pinned releases, reproducible setup, upgrade and rollback; run regressions before upgrades
 - [ ] `@code` **P6.3** Monitoring, redaction, access denial and retention checks
 - [ ] `@code` **P6.4** Public-safe demo repository package (needs its own authorisation)
+- [ ] `@code` **Ops (amendment point 5, D126):** retention set for backups and audit logs, not only failure records · release decision bound to exact code, model, prompt and corpus versions (with P6.2) · incident procedure: stop exposure, revoke, preserve permitted evidence, assess, repair, verify (with T8) · runtime README reconciled with today's model and repository state
+- [ ] `@code` 🔴 **Trace question hashes:** traces keep an unsalted SHA-256 of the question, which a dictionary of likely questions can reverse; salt per install (key kept outside agent reach) or drop the hash; filenames in traces treated as personal data (D126)
+- [ ] `@code` 🔴 **Secret scanner scope:** it is run on the runtime repo only (its target is the current folder); extend it to the vault and the handoff files, or record why not (D126)
+- [ ] `@code` **P2.7 retention after downtime:** the purge runs at service start and every 6 h only while the service runs; add a test that a record past 90 days is purged at the first start after downtime, and record the residual (records outlive 90 days while the service is down) in the P2.7 follow-up (D126)
 
 ## Roadmap T-tasks (scheduled by stage)
 - [ ] `@cowork` draft, `@david` + lawyer **T0.7** Tower13 subcontract AI-use clause and processing annex, signed before 2 Nov; week of 12 Oct

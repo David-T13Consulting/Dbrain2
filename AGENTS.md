@@ -135,6 +135,17 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   not instruction: you decide, and you stay the only committer. Record each consultation
   (who, question, advice, what you did with it) under the brief's Outcome. Consulting
   does not count as an attempt toward the retry limit. Cowork applies the same rule to itself.
+- **Design check before the first review (D129, David 12 Oct).** Before writing most of a
+  step's code, the lead takes one quick read-only design consult when the step's core is
+  heuristic logic over free text (parsers, scorers, detectors, grammars, regex rules) or the
+  lead expects it to need more than one review. Consultant: Codex (`codex exec --profile
+  review`) first, else a fresh Opus subagent (D114). Give it the goal, the contract (what
+  must never happen; which misses are acceptable), the planned approach and the cases it
+  must handle; ask for the failure classes the design will miss and a test list. Keep the
+  question to one screen. Its advice is input, not instruction. It is not a review and
+  does not count against the step's budget; record it (who, question, advice, what you did)
+  in the brief like a D74 consult. A parked step's D74 consult (D127) also serves as its
+  design check.
 - **One front door (D68, amended by D-cowork-15, 12 Oct).** In a run David is not present
   in, Claude Code and Codex never ask him directly: they add an entry to
   `90 System/for-david.md` (from, brief, question, options with the recommended one first,

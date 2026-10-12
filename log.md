@@ -1077,3 +1077,8 @@ Detail: [[90 System/briefs/G1-inj-read-path-injection|G1-inj]]; TASKS G1-inj lin
 Detail: [[90 System/briefs/P2.5-answer-accuracy|P2.5]] (F1, F2 records, uncommitted with F2), [[90 System/briefs/M6b-embedding-eval|M6b]] (S4 record, uncommitted until Q101), [[90 System/briefs/G1-inj-read-path-injection|G1-inj]], [[90 System/for-david]]. Runtime: Pillow 12.3.0 and torchvision 0.29.1 in the M6b venv only. Tier 1a batch: see the next lines.
 Review 1/2 · Tier 1a batch 2026-10-12 (Codex `gpt-6.1-sol`, high; commits `e74c0e9`, `8108e95`, `db41604`): FAIL, one blocker: Q102 said the trial answers were captured, but the runner has capture off; fixed. Should-fixes, applied: G1-inj's runner write path is Tier 2 (persistent report); an inconclusive outcome added to G1-inj S3; `\|` in Q101/Q102's table links; this accounting line.
 Review 2/2 · Tier 1a batch 2026-10-12: **PASS**. Should-fix (G1-inj Done when: inconclusive outcome) and nit (PROGRESS Action for David) applied after the pass.
+
+## [2026-10-12] decision | Design check before the first review (D129)
+**What changed for David:** steps built on text-matching rules now get a quick second opinion on the design before most of the code is written; the expected benefit is fewer review rounds spent on flaws a design check would catch (F2 used both its reviews this way today; F0's scorer took seven code reviews, nine in all).
+Detail: `AGENTS.md` (new bullet after the D74 rule); D129.
+Codex review 1/5 (gpt-6.1-sol, high), Tier 2: **pass**; two should-fixes (F0 review count, timing wording) applied.

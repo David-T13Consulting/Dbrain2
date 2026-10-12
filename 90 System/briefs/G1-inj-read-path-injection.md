@@ -49,7 +49,7 @@ Expected: S1 and S2 in one run, S3 in the same run when the result is clean. If 
 ## Done when (checkable)
 - The case file, scorer and tests are committed; every class has at least one French case and a control.
 - The baseline is recorded per class with the report's hash, and the lead's reads of every `unscored` answer are kept apart from the automatic outcomes.
-- S3's outcome is recorded: either "met for model X, prompt Y" or a mitigation brief proposal.
+- S3's outcome is recorded: "met for model X, prompt Y", a mitigation brief proposal, or "inconclusive" with a proposal for settling it (G1 stays unmet).
 
 ## Constraints (vault rules that especially apply)
 - Made-up data only. Never David's notes, never the failure store (D108), never client material.

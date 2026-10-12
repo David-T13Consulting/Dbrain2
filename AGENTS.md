@@ -37,15 +37,16 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   run only `git --no-optional-locks status`, because a plain `git status` leaves a stale
   `index.lock` that its sandbox cannot remove). Claude Code: lead, build, integration, git,
   session-close bookkeeping. Codex: independent reviewer and scoped side tasks given to it by
-  the lead; never commits. The lead may run read-only subagents in parallel; only the lead
-  writes files in a run.
+  the lead; never commits. One lead per run. The lead may run subagents in parallel:
+  read-only, or writing in their own worktree (Writing helpers, below); only the lead
+  writes to the main checkouts and commits.
 - **One queue.** Every open task in TASKS.md has an owner tag (@cowork @code @codex @david).
   Work handed between agents needs a brief in `90 System/briefs/<task-id>.md` (template:
   `_template.md`). Touch only the files the brief lists.
 - **Commit straight to `master`; keep history linear.** Only the lead commits. Branch only
   for speculative work and delete the branch when it lands (D50).
 - **Review before commit.** The lead runs Codex read-only on every diff the review tiers send
-  to it (Tier 1–2 always; Tier 0 until the pre-commit check is installed) against these rules
+  to it (Tier 1b and Tier 2 per step; Tier 1a once per run, batched) against these rules
   and records its findings in the brief. Codex gets the rules and the diff, not the lead's
   reasoning.
   Accepted risks recorded in a brief are passed to the reviewer and don't block (Q53).
@@ -59,29 +60,43 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   or a data-policy breach. On (3): stop, do not fix it silently, report. A decision that
   belongs to David never stops the loop: queue it (D68), set the brief `blocked-on-david`,
   move on. Commit at the end of each step (a brief without steps: at its end), never mid-step.
-- **Review failures (D72, replaces D70's single re-review; amended by D112).** A failed Codex review is fixed
-  and re-reviewed, whether its blockers are bookkeeping or substantive. Only `blocker` findings
-  fail a review; `should-fix` and `nit` findings are logged in the brief and do not trigger
-  another round. At most **5 reviews per step per run, the first one included**. A step is a
-  numbered step in the brief's Steps section; a brief without steps is one step. Every review
-  counts against exactly one step, record and bookkeeping reviews included, and the lead writes
-  `Review n/5 · <brief> <step>` in the brief before each Codex call. After a step's 5th failure,
-  **park** that step: status stays `in-review`, every round's findings go in the brief, nothing
-  from that step is committed, the brief's later steps are not started this run, and the run
-  moves to the next brief. Steps already committed stay committed. A brief also parks once it
-  has had 12 reviews in one run, whatever its steps.
-- **Review tiers (D77, Q55).** Tier 0 (handoff bookkeeping, frontmatter/link/format fixes,
-  Inbox captures, lint file moves): deterministic checks only. Tier 1 (briefs, drafts, specs,
-  skills, eval scripts, runtime code outside the security boundary, notes in 10–40 with no Tier
-  2 claim, and recording David's answers, where Codex checks they were recorded faithfully):
-  Codex pass against `90 System/codex-review-checklist.md`, then commit. Tier 1 notes in 10–40
-  carry `review_status: codex-reviewed`. Tier 2 (domain claims, decisions David has not yet
-  taken, rule changes, client-facing, security-boundary code, `unverified`, Codex `escalate`):
-  Codex pass and David's batched approval. When in doubt, the higher tier; Codex may raise a
-  tier, never lower it. The deterministic pre-commit check runs on every commit; **until it is
-  installed, Tier 0 also gets a Codex pass.** While Codex is unavailable, Tier 1–2 work waits
-  uncommitted for one batched review. Calibration: David samples 1 in 5 Tier 1 commits until
-  agreement is at least 90% over 20 samples, then 1 in 10.
+- **Review failures (D72, amended by D112 and D-cowork-15, 12 Oct).** A failed Codex review
+  is fixed and re-reviewed. Only `blocker` findings fail a review; `should-fix` and `nit`
+  findings are logged in the brief and do not trigger another round. **Review budget per step
+  per run, the first review included: 5 for Tier 2 and security-boundary steps (security
+  boundary as listed under Subagent routing), 2 for every other step.** A step is a numbered
+  step in the brief's Steps section; a brief without steps is one step. Every review counts
+  against exactly one step, and the lead writes `Review n/<budget> · <brief> <step>` in the
+  brief before each Codex call. When a step uses its budget without passing, **park** it:
+  status stays `in-review`, every round's findings go in the brief, nothing from that step is
+  committed, the brief's later steps are not started this run, and the run moves on. Before a
+  parked step is retried in a later run, the lead takes one D74 consult on it. Steps already
+  committed stay committed. A brief parks after 6 reviews in one run (12 if it has a Tier 2 or
+  security-boundary step).
+- **Review tiers (D77, Q55, amended by D-cowork-15, 12 Oct).** When in doubt, the higher
+  tier; Codex may raise a tier, never lower it.
+  - **Tier 0** (handoff and tracking-file bookkeeping, recording David's answers, frontmatter,
+    link and format fixes, Inbox captures, lint file moves): deterministic checks and the
+    lead's own read, no Codex pass. Recorded answers are checked by Codex in the run's Tier 1a
+    batch (below).
+  - **Tier 1a** (briefs, drafts, specs, skills, notes in 10–40 with no Tier 2 claim, and test
+    code, fixtures, harnesses and eval scripts that run only on synthetic data and write
+    nowhere but a temporary folder): commit per step once its tests pass; **one batched Codex
+    pass per run** over every Tier 1a commit and every recorded answer (Tier 0) since the last
+    batch, before the push; a run that committed either runs the batch. The batch is its own
+    review unit, outside the per-step rule above: budget 2 per run, each review written as
+    `Review n/2 · Tier 1a batch <date>` in the run's `log.md` entry, not counted against any
+    brief's cap. Blockers are fixed forward in new commits within that budget; anything still
+    unfixed is listed in PROGRESS and the push still happens (David, 12 Oct). Tier 1a notes in 10–40 carry
+    `review_status: codex-reviewed` once their batch has passed.
+  - **Tier 1b** (runtime code outside the security boundary that serves David's real
+    answers): Codex pass per step, then commit.
+  - **Tier 2** (domain claims, decisions David has not yet taken, rule changes,
+    client-facing, security-boundary code, `unverified`, Codex `escalate`): Codex pass per
+    step and David's batched approval.
+  While Codex is unavailable, Tier 1b–2 work waits uncommitted for one batched review; Tier 1a
+  keeps committing and joins the next batch. Calibration: David samples 1 in 5 Tier 1 commits
+  until agreement is at least 90% over 20 samples, then 1 in 10.
 - **Scope of autonomous runs.** The backlog in [[90 System/briefs/D-cowork-8-autonomous-runs|D-cowork-8]]
   orders the work; it does not authorise file edits. Each item runs under its own brief and
   touches only the files that brief lists.
@@ -91,6 +106,14 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   spending money · anything touching `client` material · applying P1.4
   or any structured change across many notes.
   The lead commits and pushes (no force) at the end of every run without asking (D79).
+- **Standing approvals (D-cowork-15, David 12 Oct).** These do not go to `for-david.md`; the
+  lead does them and records them in the brief: (1) committing Tier 1a work under the batched
+  review above; (2) fixes inside an approved brief's file scope that serve its "Done when";
+  (3) re-running a measurement David already approved, on the same pinned inputs; (4)
+  installing a package that an already-approved package itself requires, within the version
+  range that package declares, into an isolated test environment David already approved,
+  outside the vault, recorded in that environment's manifest. A new top-level library,
+  anything in the hard limits, and any widening of a brief's file scope still go to David.
 - **Retry limit.** At most 5 attempts per failing command, test or script (review failures
   follow the rule above).
   After the 2nd failed attempt, ask Codex for a debugging opinion before trying again:
@@ -112,13 +135,15 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   not instruction: you decide, and you stay the only committer. Record each consultation
   (who, question, advice, what you did with it) under the brief's Outcome. Consulting
   does not count as an attempt toward the retry limit. Cowork applies the same rule to itself.
-- **One front door (D68).** Only Cowork asks David. Claude Code and Codex never
-  ask him directly: they add an entry to `90 System/for-david.md` (from, brief, question,
-  options with the recommended one first, what it blocks, urgency), set the brief to
-  `blocked-on-david`, and continue with other work. Cowork walks David through the open
-  entries at the start of each session and writes the answers into the queue and the
-  brief. The lead turns answers into decisions and commits. A question for David means
-  "write to the queue", not "ask".
+- **One front door (D68, amended by D-cowork-15, 12 Oct).** In a run David is not present
+  in, Claude Code and Codex never ask him directly: they add an entry to
+  `90 System/for-david.md` (from, brief, question, options with the recommended one first,
+  what it blocks, urgency), set the brief to `blocked-on-david`, and continue with other
+  work. **When David is present in a lead session** (he has written in it during this run),
+  the lead asks him there, options with the recommended one first, and records the answer in
+  `for-david.md` › Answered the same run. Cowork walks David through the open entries at the
+  start of each session and writes the answers into the queue and the brief. The lead turns
+  answers into decisions and commits.
 - The lead clears answered entries once they are recorded in PROGRESS or the brief.
 - **IDs.** Only the lead hands out final D-, OQ- and session numbers. Other agents use
   provisional IDs (`D-cowork-1`); the lead renumbers them and logs the mapping in `log.md`.
@@ -129,6 +154,22 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   then clears the entry.
 - Never commit, revert or overwrite another agent's uncommitted files unless they are in the
   handoff. If unsure, stop and add it to `for-david.md`.
+- **Writing helpers (D-cowork-16, David 12 Oct).** The lead may hand independent steps to
+  subagents that write code, to work in parallel within one run.
+  - **Own worktree.** Each writing helper runs in its own git worktree (Agent tool,
+    `isolation: "worktree"`), touches only the files the lead names from the brief's scope,
+    and never commits, pushes or edits the main checkouts. Helpers running at the same time
+    get file lists that do not overlap.
+  - **Not for:** security-boundary code (as listed under Subagent routing), Tier 2 changes,
+    the shared tracking files (PROGRESS, TASKS, OPEN_QUESTIONS, DECISIONS, `for-david.md`,
+    `handoff.md`, `log.md`, `index.md`, `AGENTS.md`), loading a local model, running an eval
+    server or taking a measurement (D94, D100). Those stay with the lead.
+  - **At most 3** writing helpers at once.
+  - **Landing.** The lead reads each helper's diff, brings it into the main checkout, runs the
+    tests, sends it through the review tier that applies, and commits it as its own step.
+    The helper's worktree is removed once its diff has landed or been dropped.
+  - **Model and log.** Routed per Subagent routing (Sonnet by default for writing from a
+    written spec; Opus for design choices); one log line per call in the brief.
 
 ## Model policy
 Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents do not pick models outside it.

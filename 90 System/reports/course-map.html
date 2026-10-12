@@ -43,7 +43,7 @@ header p.lede{max-width:65ch;color:var(--muted)}
 .sw{width:22px;height:4px;border-radius:2px;display:inline-block}
 .timebar{display:flex;flex-direction:column;gap:8px}
 .track{position:relative;height:14px;border-radius:7px;background:var(--soft);border:1px solid var(--line);overflow:hidden}
-.track .gone{position:absolute;inset:0 auto 0 0;width:28%;background:var(--done)}
+.track .gone{position:absolute;inset:0 auto 0 0;width:30%;background:var(--done)}
 .ticks{display:flex;justify-content:space-between;font:400 .74rem/1 var(--mono);color:var(--muted)}
 .section{display:flex;flex-direction:column;gap:14px}
 .stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
@@ -75,16 +75,16 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
 
 <div class="wrap">
 <header>
-  <div class="eyebrow"><span class="blaze"><i></i><i></i></span>Dbrain2 · status at 9 Oct 2026, 08:37</div>
+  <div class="eyebrow"><span class="blaze"><i></i><i></i></span>Dbrain2 · status at 12 Oct 2026, 10:10</div>
   <h1>Second Brain Course Map</h1>
   <p class="lede">Where the build stands, the checkpoints already passed, and the climb that's left before the December demo. Two tracks run side by side: the <strong>platform</strong> (stages S1–S6) and the <strong>running showcase</strong> (golden dataset and rubric).</p>
 </header>
 
 <div class="stats">
-  <div class="stat"><b>S2</b><span>current stage; P2.7 failure capture in build</span></div>
-  <div class="stat"><b>Wk 5/17</b><span>7 Sep → end of Dec</span></div>
+  <div class="stat"><b>S2</b><span>current stage; answer-accuracy fix (P2.5) next</span></div>
+  <div class="stat"><b>Wk 6/17</b><span>7 Sep → end of Dec</span></div>
   <div class="stat"><b>70/150</b><span>golden-dataset runs labelled</span></div>
-  <div class="stat alert"><b>9</b><span>things waiting on you</span></div>
+  <div class="stat alert"><b>5</b><span>things waiting on you</span></div>
 </div>
 
 <section class="section">
@@ -125,9 +125,9 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     </div>
   </div>
   <div class="timebar">
-    <div class="track" aria-label="About 28 percent of the calendar to the December target has elapsed"><div class="gone"></div></div>
+    <div class="track" aria-label="About 30 percent of the calendar to the December target has elapsed"><div class="gone"></div></div>
     <div class="ticks"><span>7 Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>31 Dec</span></div>
-    <p class="small">Calendar used so far: about 28% (32 of 116 days). Platform stages fully passed: none yet, because S1's exit evidence (data-flow diagram, scoped-roots list) is still open. The dated S2–S6 plan is still proposed, not approved, and has no slack. Its first deadline is the host order by Fri 16 Oct; the host itself is now decided (D107). Only the demo-ready date, Fri 18 Dec, is decided.</p>
+    <p class="small">Calendar used so far: about 30% (35 of 116 days). Platform stages fully passed: none yet, because S1's exit evidence (data-flow diagram, scoped-roots list) is still open. The dated S2–S6 plan is still proposed, not approved, and has no slack. Cowork's 9 Oct amendment after the independent audit (end goal, release gates G1–G4, a usable-security workstream and context connectors, no cut) is written but not yet recorded by the lead. First deadline: the host order, Fri 16 Oct. Only the demo-ready date, Fri 18 Dec, is decided.</p>
   </div>
 </section>
 
@@ -135,16 +135,16 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
   <h2>Platform track · S1–S6</h2>
   <div class="stages">
     <div class="stage"><div class="top"><span class="code">S1 · Align</span><span class="chip wait">Exit open</span></div>
-      <p>Devices, always-on hosting, 20+ h/week, service targets and source schema decided 1 Oct (D52–D59). The last map called this done; the exit evidence isn't complete yet.</p>
+      <p>Devices, always-on hosting, 20+ h/week, service targets and source schema decided 1 Oct (D52–D59). No change this week: the exit evidence is still incomplete.</p>
       <p class="exit"><em>Still open:</em> data-flow diagram and scoped-roots list (T8, Cowork), not blocking S2.</p></div>
     <div class="stage now"><div class="top"><span class="code">S2 · Local answers</span><span class="chip now">In progress</span></div>
-      <p>Query service (P2.2) and phone slice (P2.4) committed; T9 ran 8 Oct and Gemma 4 E4B is now the phone default (D105), p95 10.1 s on the Air against an 8 s target. P2.7 failure capture: leak check committed, stage C built but parked after five failed reviews, now rebuilt in steps C1–C3b with capture off. Proposed exit: 23 Oct.</p>
+      <p>Since 9 Oct: real failure capture is on (P2.7 C4, D119) and the "Wrong" button's service part is committed; its phone part waits for a short sitting with you. The test set for the phone's wrong "no" passed review and you approved it (Q97); the fixes F1–F3 follow. Embedding test: harness built, S4 after Pillow (Q96). Proposed exit: 23 Oct.</p>
       <p class="exit"><em>Exit:</em> reproducible local Q&amp;A with citations and abstentions; p50/p95 latency and peak memory measured.</p></div>
     <div class="stage"><div class="top"><span class="code">S3 · Wiki writes</span><span class="chip ahead">Ahead</span></div>
-      <p>One source safely updates notes: exact patch, approval bound to it, one deterministic writer.</p>
+      <p>One source safely updates notes: exact patch, approval bound to it, one deterministic writer. The 9 Oct amendment (not yet recorded) re-anchors the exit on remember → recall → correct from the phone.</p>
       <p class="exit"><em>Exit:</em> rejection changes nothing; stale approval refused; rollback and restore shown.</p></div>
     <div class="stage"><div class="top"><span class="code">S4 · Text + voice</span><span class="chip wait">Needs host</span></div>
-      <p>Private access from iPhone, iPad and Air; durable capture queue; local speech in and out. The phone-access slice was pulled forward into S2. Host decided 8 Oct: Mac mini M5 Pro, 64 GB (D107), your order due Fri 16 Oct.</p>
+      <p>Private access from iPhone, iPad and Air; durable capture queue; local speech in and out. Host decided 8 Oct: Mac mini M5 Pro, 64 GB (D107), your order due Fri 16 Oct. The amendment proposes read-only personal calendar and mail connectors alongside S4.</p>
       <p class="exit"><em>Exit:</em> works away from home; captures survive host or network loss; voice first word &lt; 5 s.</p></div>
     <div class="stage"><div class="top"><span class="code">S5 · Multi-agent</span><span class="chip ahead">Ahead</span></div>
       <p>Coordinator, curator and evidence checker with scoped tools, measured against the single-agent baseline.</p>
@@ -181,11 +181,11 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <h2>Next checkpoints</h2>
     <div class="panel">
       <ul class="plain">
-        <li><i class="dot b"></i><div><strong>Now · P2.7 stage C in steps C1 → C3b.</strong> Store and audit log, capture wiring, server-log check, logs out of git; each step reviewed (max 5 per step) and committed on its own. Capture stays off.</div></li>
-        <li><i class="dot b"></i><div><strong>Week of 12 Oct · T0.7 Tower13 AI-use clause.</strong> Cowork drafts, then you and the lawyer; signed before 2 Nov. Client-tier vault scaffold follows the draft.</div></li>
-        <li><i class="dot b"></i><div><strong>Fri 16 Oct · host order.</strong> Mac mini M5 Pro 64 GB / 1 TB through the SRL (D107). The model choice is made: Gemma 4 E4B (D105).</div></li>
-        <li><i class="dot w"></i><div><strong>~19 Oct · Six-week honesty check.</strong> Has anything shipped out of the system? (Rule 5)</div></li>
-        <li><i class="dot"></i><div><strong>Fri 23 Oct · S2 exit, proposed.</strong> Only if you approve the dated plan. Real capture (C4) and the M6b embedding test come after P2.7's steps.</div></li>
+        <li><i class="dot b"></i><div><strong>Next lead run · with you at the Mac.</strong> The "Wrong" button's phone part (Shortcut, restart, one check, ~10 min) plus the phone re-check on Gemma 4 E4B; then the lead commits P2.5 F0 and records the 9 Oct roadmap amendment.</div></li>
+        <li><i class="dot b"></i><div><strong>Same run · P2.5 F1–F3, then M6b S4–S5.</strong> The fix for the phone's wrong "no", measured on the approved test set; the embedding test after Pillow goes into its own environment.</div></li>
+        <li><i class="dot b"></i><div><strong>Week of 12 Oct · T0.7 Tower13 AI-use clause.</strong> Cowork drafts (no brief yet), then you and the lawyer; signed before 2 Nov. Client-tier vault scaffold follows the draft.</div></li>
+        <li><i class="dot b"></i><div><strong>Fri 16 Oct · host order.</strong> Mac mini M5 Pro 64 GB / 1 TB through the SRL (D107).</div></li>
+        <li><i class="dot"></i><div><strong>Fri 23 Oct · S2 exit, proposed.</strong> Only if you approve the dated plan. Still open: P2.1, P2.3, P2.5 F1–F3, P2.6; the amendment would add a read-path injection suite (the lead checks it fits).</div></li>
       </ul>
     </div>
   </section>
@@ -194,38 +194,34 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <div class="panel">
       <ul class="plain">
         <li><i class="dot b"></i><div><strong>Order the host by Fri 16 Oct.</strong> Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium through the SRL, €3,032 ex VAT (D107).</div></li>
-        <li><i class="dot b"></i><div><strong>Which answers store question text (Q89), this week.</strong> <code>incomplete</code> covers almost every answer; recommended (a): store text only on real failures, count <code>incomplete</code>. Blocks real capture (C4) only.</div></li>
+        <li><i class="dot b"></i><div><strong>Be at the Mac with your iPhone for the next lead run (Q95 (a)).</strong> About 10 minutes: Shortcut edit, restart <code>Ask Brain.command</code>, one check, then the phone re-check (P2.4).</div></li>
         <li><i class="dot b"></i><div><strong>Product School / NN/g security follow-ups.</strong> Bot token and meeting passcodes in the Advanced Agents PDF (all copies), open since 1 Oct.</div></li>
-        <li><i class="dot w"></i><div><strong>Phone re-check (P2.4)</strong> after restarting <code>Ask Brain.command</code>, now on Gemma 4 E4B (D105).</div></li>
-        <li><i class="dot w"></i><div><strong>Validate the P2.6 phrase set:</strong> the Expected column and the French idioms. P2.6 waits on it.</div></li>
         <li><i class="dot w"></i><div><strong>~19 Oct · six-week honesty check</strong> (rule 5).</div></li>
-        <li><i class="dot"></i><div><strong>TwIL-LM3-Pro licence (D99).</strong> Non-commercial licence versus the December demo; still open.</div></li>
         <li><i class="dot"></i><div><strong>Weekly model review:</strong> paste the task ID and first-run output (D60).</div></li>
-        <li><i class="dot"></i><div><strong>Delete the review branch on GitHub</strong> (Q83; the local copy is gone).</div></li>
       </ul>
     </div>
   </section>
 </div>
 
 <section class="section">
-  <h2>Lint result · 9 Oct</h2>
+  <h2>Lint result · 12 Oct</h2>
   <div class="two">
     <div class="panel">
       <h3>Fixed now</h3>
       <ul class="plain" style="margin-top:10px">
-        <li><i class="dot g"></i><div>P2.6 phrase set: W1 is now a fixed regression case (round 15), not an accepted gap. Closes the session-33 should-fix left for Cowork.</div></li>
-        <li><i class="dot g"></i><div>P3.0 and D-cowork-10 briefs: no longer say they wait for the 6 Oct hold (lifted 7 Oct, D81). P3.0 Part 1 still waits for T4.2; D-cowork-10's three held items are not started.</div></li>
-        <li><i class="dot g"></i><div>Clean checks: no missing or <code>client</code> classification, no stale Inbox items, no large files, no secret-like strings. Orphans down from 4 to 1.</div></li>
+        <li><i class="dot g"></i><div>P2.7 brief: status line no longer says the phone part waits on Q95; it records your answer (a) and that it runs at the start of the next lead run with you present.</div></li>
+        <li><i class="dot g"></i><div>Clean checks: no missing or <code>client</code> classification, no index entries to missing files, no stale Inbox items, no large files, no secret-like strings.</div></li>
+        <li><i class="dot g"></i><div>Last week's overlaps are resolved: the GitHub branch deletion is closed (Q83), the TwIL-LM3-Pro licence is parked, and your P2.6 phrase set is validated.</div></li>
       </ul>
     </div>
     <div class="panel">
       <h3>Flagged to the lead</h3>
       <ul class="plain" style="margin-top:10px">
-        <li><i class="dot w"></i><div>Index drift still growing: 13 notes missing from <code>index.md</code> (11 last week), 1 orphan (<code>codex-review-checklist</code>), 1 broken placeholder link in <code>Welcome.md</code>.</div></li>
-        <li><i class="dot w"></i><div>T9 brief still <code>blocked-on-david</code> though Q84/Q85 are answered (D105, D107). M6b brief says it starts after T9; TASKS says after P2.7 (you, 8 Oct).</div></li>
-        <li><i class="dot w"></i><div>PROGRESS "Next action" still waits on Q85–Q87 (answered); "Action for David" and OQ-15 still say 32 GB / €800–1,500 against D107's 64 GB. D63 and D-cowork-8 still <code>in-review</code>.</div></li>
-        <li><i class="dot w"></i><div>TASKS overlaps: the GitHub branch deletion is listed twice (one still asks Q83, answered); the P2.4 README follow-up duplicates P2.6.</div></li>
-        <li><i class="dot w"></i><div>No brief yet for T0.7 (due week of 12 Oct) or the client-tier scaffold. The dated plan's W1 row is still stale (P2.2 "parked"), flagged 6 Oct.</div></li>
+        <li><i class="dot w"></i><div>Q95–Q97 were answered 9 Oct 17:10, but TASKS ▶ Next action, PROGRESS "Action for David" and the M6b brief still list them as waiting on you; the P2.5 brief too (uncommitted, left alone).</div></li>
+        <li><i class="dot w"></i><div>Index drift: 16 notes missing from <code>index.md</code> (13 last week; the 3 new ones are uncommitted), orphans <code>codex-review-checklist</code> and the uncommitted digest skill, 1 broken placeholder link in <code>Welcome.md</code>.</div></li>
+        <li><i class="dot w"></i><div>Still open from 9 Oct: T9 brief <code>blocked-on-david</code> after Q84/Q85; OQ-15 still says 32 GB / €800–1,500 against D107; D63 and D-cowork-8 <code>in-review</code>; ticked T9 and M6 lines still in TASKS; PROGRESS "Phase" still says P2.6 and P2.7 next.</div></li>
+        <li><i class="dot w"></i><div>No brief yet for T0.7 or the client-tier scaffold (both this week), nor for Cowork's P2.7 follow-up. The amendment's W1 (data policy v1.0, dated Fri 16 Oct), G1 injection suite and C0 connector brief are not tasks yet.</div></li>
+        <li><i class="dot w"></i><div>Conflict: client-tier requirement R5 adds Dutch; D121 says English and French only. The amendment flags it for you; it needs a <code>for-david</code> entry once the lead has evaluated it.</div></li>
       </ul>
     </div>
   </div>
@@ -237,13 +233,13 @@ footer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);paddi
     <table>
       <thead><tr><th>Agent</th><th>Role</th><th>Next item</th><th>Starts when</th></tr></thead>
       <tbody>
-        <tr><td><strong>Cowork</strong></td><td>Your only contact. Specs, briefs, labelling sessions</td><td>Copy steps C1–C3b into the P2.7 brief; draft the T0.7 Tower13 clause; then rubric v2.0 wording (T3.4)</td><td>P2.7 steps after the lead's session-41 commit; T0.7 week of 12 Oct</td></tr>
-        <tr><td><strong>Claude Code</strong></td><td>Lead: builds, commits, records decisions</td><td>Close session 41; record the smaller-steps rule and the per-step review budget (amends D72); then P2.7 C1 → C3b</td><td>Next lead run; C4 only after Q89 and your go</td></tr>
-        <tr><td><strong>Codex</strong></td><td>Independent reviewer, called by the lead</td><td>Reviews each P2.7 step, max 5 per step; P2.1 case review and batch 04 re-score still queued</td><td>The lead calls it</td></tr>
+        <tr><td><strong>Cowork</strong></td><td>Your only contact. Specs, briefs, labelling sessions</td><td>Revise the desktop-digest skill (5 Codex blockers); draft the T0.7 Tower13 clause; P2.7 follow-up brief; data policy v1.0 once the amendment is recorded; then rubric v2.0 wording (T3.4)</td><td>Now; T0.7 week of 12 Oct</td></tr>
+        <tr><td><strong>Claude Code</strong></td><td>Lead: builds, commits, records decisions</td><td>Per Cowork's 9 Oct 17:10 order: Q95 phone sitting with you; commit P2.5 F0 and the roadmap amendment; P2.5 F1–F3; M6b S4–S5; G1 injection-suite brief if time</td><td>Next lead run, with you present for the first item</td></tr>
+        <tr><td><strong>Codex</strong></td><td>Independent reviewer, called by the lead</td><td>Reviews each step, max 5 per step and 12 per brief per run (D112); P2.1 case review and batch 04 re-score still queued</td><td>The lead calls it</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<footer>Built by Cowork from the vault on 9 Oct 2026: <code>04_Roadmap.md</code> §0, TASKS, PROGRESS, OPEN_QUESTIONS, the briefs and <code>for-david.md</code>. Stage dates after S1 are proposed, not approved, except the 18 Dec demo date. This page shows order and state, not a schedule.</footer>
+<footer>Built by Cowork from the vault on 12 Oct 2026: <code>04_Roadmap.md</code> §0, TASKS, PROGRESS, OPEN_QUESTIONS, the briefs and <code>for-david.md</code>. Stage dates after S1 are proposed, not approved, except the 18 Dec demo date. This page shows order and state, not a schedule.</footer>
 </div>

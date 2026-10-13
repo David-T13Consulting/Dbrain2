@@ -4,7 +4,7 @@ note_type: queue
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-12
+updated: 2026-10-13
 ---
 # For David: the single decision queue
 
@@ -18,13 +18,15 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-| Q98 | lead, 12 Oct (session 46) | [[10 Projects/AI Second Brain/02_Architecture/client-tier-workspace-requirements\|client-tier requirements]] R5; D121; roadmap §0 amendment (D126) | Two of your rules disagree. On 9 Oct you said **English and French only** (D121: no work on Dutch or other languages unless you ask). The requirements for your future work workspace (client tier) say **French, English and Dutch**, mixed within one meeting (R5), because Brussels business meetings are like that. D121 already names the way out ("a client demo needs one"), but only you can say whether it applies. Nothing is built for Dutch today; this affects the work-tier voice tests (P4.3) and the work-mail connector (C3, W9–W10 at the earliest). Which rule wins? | (a) keep English and French only for now; R5's Dutch waits until a work-tier task actually needs it, and is then asked again (recommended: no cost today, and the conflict only matters from C3) · (b) Dutch in the work tier only, from C3 on; Dbrain2 stays English and French · (c) Dutch in both Dbrain2 and the work tier (wider than R5, which covers the work workspace only) | Nothing today; C3 and the work-tier part of P4.3 later | whenever |
-| Q101 | lead, 12 Oct (session 46) | [[90 System/briefs/M6b-embedding-eval\|M6b]] S4 | While finding which `torchvision` release matches torch 2.14.1, the lead downloaded three older wheels (0.27.1–0.29.0, about 2 MB each) to **its own session scratch folder** (outside the vault, the repos and the venv), read their declared torch version, and **deleted them** a minute later, without asking. Deleting files is on the always-ask list, and D127's standing approvals exclude it. Codex (S4 review 1/2) made this a blocker: S4 stays uncommitted until you rule. | **(a) Ratify, and add a standing approval: the lead may delete files it created itself in its session scratch folder during the same run** (never vault, repo, venv or your files) · (b) ratify this once only; ask next time · (c) not acceptable: say what you want done | Committing M6b S4 (run done, results checked by Codex); S5 after it | Low: S5 can wait; nothing is lost (the wheels were public downloads, re-fetchable) |
-| Q102 | lead, 12 Oct (session 46) | [[90 System/briefs/P2.5-answer-accuracy\|P2.5]] F2 | F2 (the code check for the wrong "no") only looks at notes the answer **cites**, as the brief specifies, so that a correct "nothing found" is never overturned by another activity's note (F0 case d). But in this run's prompt trials, the model's wrong "Nothing found for Sat 10 Oct" answers **cited nothing**, so F2 cannot see them. They are flagged "no source cited", which raises a failure signal, so the live service would capture them (capture was off in these trials), but the phone still shows the "no". | **(a) Leave F2 as specified; fix the uncited case through F3 (aliases) and a later retrieval layer** (no new risk to case d) · (b) widen F2: an uncited "no" is checked against the top retrieved note too, accepting that a correct "no" can sometimes be shown with another activity's row as "check the note" · (c) your own rule | Nothing now: F2 and F3 go ahead either way; (b) would be a follow-up step | Low |
 
 ## Answered (since 8 Oct)
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
+
+- **Q101 → (a)** (David, 13 Oct 10:30, via Cowork): ratify the 12 Oct deletion of the three scratch wheels, **and add a standing approval: the lead may delete files it created itself in its own session scratch folder during the same run** (never vault, repo, venv or David's files). Unblocks the M6b S4 commit. Standing-approval text for AGENTS.md / D127 to be drafted by the lead and shown to David word for word (hard limit).
+- **Q102 → (a)** (David, 13 Oct, via Cowork): leave F2 as specified (cited notes only); fix the uncited "no" through F3 (aliases) and a later retrieval layer.
+- **Q98 → (a)** (David, 13 Oct, via Cowork): English and French only for now; R5's Dutch waits until a work-tier task actually needs it (C3 at the earliest), then is asked again. D121 stands.
+- **Q95 timing → now** (David, 13 Oct, via Cowork): the phone step (Shortcut edit, restart `Ask Brain.command`, one end-to-end "Wrong" check, plus the C2 phone re-check) is the **first item of today's lead run, David present at the Air with his iPhone**; the loop then continues unattended.
 
 - **Q95 → (a)** (David, 9 Oct 17:10, via Cowork): the phone part of the "Wrong" button (Shortcut steps, restart, end-to-end check) is done at the start of the next lead run, David at the Mac with his iPhone. Fold the phone re-check on C2 (P2.4, D105) into the same session. **Not done in the 12 Oct run (session 46): David was not present and asked for it to wait for a later run with him;** `Ask Brain.command` was not restarted. **Timing superseded by Q100** (David, 12 Oct, session 46: later in that run).
 - **Q96 → (a)** (David, 9 Oct 17:10, via Cowork): install Pillow 12.3.0 into the M6b test environment only, recorded in the manifest.

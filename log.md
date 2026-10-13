@@ -1082,3 +1082,8 @@ Review 2/2 · Tier 1a batch 2026-10-12: **PASS**. Should-fix (G1-inj Done when: 
 **What changed for David:** steps built on text-matching rules now get a quick second opinion on the design before most of the code is written; the expected benefit is fewer review rounds spent on flaws a design check would catch (F2 used both its reviews this way today; F0's scorer took seven code reviews, nine in all).
 Detail: `AGENTS.md` (new bullet after the D74 rule); D129.
 Codex review 1/5 (gpt-6.1-sol, high), Tier 2: **pass**; two should-fixes (F0 review count, timing wording) applied.
+
+## [2026-10-13] decision | Scratch-folder deletes become standing approval (5) (D130, Q101 (a))
+**What changed for David:** the lead no longer asks before deleting temporary files it made itself in its own session scratch folder during the same run; everything else about deleting still comes to him. The 12 Oct wheel deletion is ratified, which unblocks the M6b S4 commit.
+Detail: `AGENTS.md` (Standing approvals (5); Hard limits names the exception), text approved word for word by David in session 47; D130; [[90 System/briefs/M6b-embedding-eval|M6b]] run of 13 Oct.
+Codex review 1/5 (gpt-6.1-sol, high), Tier 2: **pass**, no findings.

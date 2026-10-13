@@ -102,7 +102,7 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   touches only the files that brief lists.
 - **Hard limits: always ask David, never pre-approved.** Edits to `data-policy.md` or
   `AGENTS.md` · security or permission settings · the Keychain · launch agents, login items,
-  Full Disk Access · deleting files · downloads not named in a brief or beyond budget ·
+  Full Disk Access · deleting files (except standing approval (5) below) · downloads not named in a brief or beyond budget ·
   spending money · anything touching `client` material · applying P1.4
   or any structured change across many notes.
   The lead commits and pushes (no force) at the end of every run without asking (D79).
@@ -112,7 +112,10 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   (3) re-running a measurement David already approved, on the same pinned inputs; (4)
   installing a package that an already-approved package itself requires, within the version
   range that package declares, into an isolated test environment David already approved,
-  outside the vault, recorded in that environment's manifest. A new top-level library,
+  outside the vault, recorded in that environment's manifest; (5) deleting files the lead
+  itself created during the same run inside its own session scratch folder (the temporary
+  directory its harness gives that session), never anything in the vault, a repo, a venv or
+  David's files, and nothing it did not create in that run (David, 13 Oct, Q101). A new top-level library,
   anything in the hard limits, and any widening of a brief's file scope still go to David.
 - **Retry limit.** At most 5 attempts per failing command, test or script (review failures
   follow the rule above).

@@ -18,6 +18,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct:** has anything shipped out of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS
 
 ## S1 · Align architecture
+- [ ] `@code` **AS1** Agent setup hardening, this week (David, 13 Oct): one current rulebook, commit gates in both repos with protected-file gate (Q54 kept), startup check, trust-boundary line, D110 closure checklist; absorbs the secret-scanner-scope item; rest parked in [[00 Inbox/2026-10-13-1115-multi-agents-governances-improvements|inbox]] — [[90 System/briefs/AS1-agent-setup-hardening|AS1]]
 - [ ] `@code` **P1.4** D59 frontmatter retrofit across the existing notes: brief and dry-run diff only; applying it needs David (hard limit; gates personal-data wave 1)
 
 ## S2 · Prove local read-only answers

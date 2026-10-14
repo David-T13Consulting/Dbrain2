@@ -10,13 +10,14 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 
 ## ▶ Next action
 
+- [ ] `@code` ⭐ **P2.8 · first in the next run (David, 14 Oct):** phone stops searching the system's own notes (A1, A2: regression from the 14 Oct climbing question) and shows a phone-readable answer (B1, B2) — [[90 System/briefs/P2.8-phone-corpus-and-answer-screen|P2.8]]
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 - [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
 - [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct:** has anything shipped out of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS
 
 ## S1 · Align architecture
-- [ ] `@code` **AS1** Agent setup hardening, this week (David, 13 Oct): one current rulebook, commit gates in both repos with protected-file gate (Q54 kept), startup check, trust-boundary line, D110 closure checklist; absorbs the secret-scanner-scope item; rest parked in [[00 Inbox/2026-10-13-1115-multi-agents-governances-improvements|inbox]] — [[90 System/briefs/AS1-agent-setup-hardening|AS1]]
+- [ ] `@code` **AS1** Agent setup hardening, this week (David, 13 Oct): one current rulebook, commit gates in both repos with protected-file gate (Q54 kept), startup check, trust-boundary line, D110 closure checklist; absorbs the secret-scanner-scope item; rest parked in [[00 Inbox/2026-10-13-1115-multi-agents-governances-improvements|inbox]] — [[90 System/briefs/AS1-agent-setup-hardening|AS1]] · **14 Oct (session 48):** steps 1–2 done (`235361f`, `8660c18`, D132); step 3 parked after 5/5 reviews (gates built, uncommitted, not installed); next run: D74 consult on step 3, then steps 4–5
 - [ ] `@code` **P1.4** D59 frontmatter retrofit across the existing notes: brief and dry-run diff only; applying it needs David (hard limit; gates personal-data wave 1)
 
 ## S2 · Prove local read-only answers

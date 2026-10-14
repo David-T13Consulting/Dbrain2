@@ -23,6 +23,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q107 → "Accidents + detection"** (David, 14 Oct, session 48, same front door): AS1 step 3's hooks block accidental landings (with a pre-push re-check of every outgoing commit, approvals read from committed vault state); deliberate disabling is a written residual risk, detected by step 4's startup check. Recorded in the AS1 brief.
 - **AS1 step 1 text → approved word for word** (David, 14 Oct, session 48): the nine passages (review checklist, template, three historical banners, for-david and handoff openings, README, weekly local-model review). Recorded in the AS1 brief.
 - **Q106 → "Widen, same treatment"** (David, 13 Oct, session 48, same front door): AS1 step 1 also corrects six more places that still read as active rules contradicting AGENTS.md (two historical banners, four one-passage fixes), exact text shown to David after Codex. Recorded in the AS1 brief.
 - **Q105 → "One more review, fixed wording"** (David, 13 Oct, session 48, same front door): review 3 failed partly on the lead's over-broad contract wording; a second one-off review in session 48 with the contract corrected (other rows for other days are expected). On FAIL, F2 parks for the next run with no more exceptions. Recorded in the P2.5 brief.

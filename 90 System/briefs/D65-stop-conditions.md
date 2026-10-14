@@ -8,6 +8,8 @@ models: [gpt-6-astra (review)]   # the lost session-13 pass has no recorded mode
 ---
 # Add stop conditions and a retry limit to the lead loop (D65)
 
+> **Historical record (labelled 13 Oct 2026, AS1 step 1).** The stop conditions, retry limit and review-failure rules below, and the D70 amendment, are those of 1 and 5 Oct. The current rules are in [[AGENTS]] (Stop conditions, Review failures, Retry limit); where this brief differs, AGENTS.md wins.
+
 > Written by Cowork as provisional **D-cowork-3**; renumbered to **D65** by the lead in session 13.
 >
 > **Amended 5 Oct by D70 (Q27):** condition (2) now applies to substantive blockers; a review that fails only on bookkeeping is fixed in the same run and re-reviewed once. See [[AGENTS]].

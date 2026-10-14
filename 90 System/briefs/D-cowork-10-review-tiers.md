@@ -8,6 +8,8 @@ created: 2026-10-05
 ---
 # Review tiers: cut review load without weakening the hard gates
 
+> **Historical record (labelled 13 Oct 2026, AS1 step 1).** The tiers, review units and conforming edits below are those of 5–6 Oct, including the note under "Decision proposed" and the Review section it points to. The current rules are in [[AGENTS]] (Review tiers, Review before commit, Review failures; D127); where this brief differs, AGENTS.md wins.
+
 ## Goal (one sentence)
 Match review effort to risk, so bookkeeping and mechanical changes stop waiting on Codex and on David, while domain claims, rules and anything client-facing keep a human gate.
 

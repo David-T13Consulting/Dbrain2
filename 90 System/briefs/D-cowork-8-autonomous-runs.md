@@ -8,6 +8,8 @@ created: 2026-10-05
 ---
 # Autonomous runs: keep working until the credit runs out or real work does (D72, was D-cowork-8)
 
+> **Historical record (labelled 13 Oct 2026, AS1 step 1).** This brief records the rules of 5 Oct. Its run loop, review counts, Q40's "no commit without a Codex pass", hard-limit list, permission allowlist and launch prompt are no longer active. Its backlog section is still the work order that [[AGENTS]] › Scope of autonomous runs refers to; it orders the work and authorises no file edits. The current rules are in [[AGENTS]] (Multi-agent work); where this brief differs, AGENTS.md wins.
+
 ## Goal (one sentence)
 Claude Code keeps working through a prioritised backlog without David, stopping only for real blockers and never for trivial ones, while every safety rule stays intact.
 

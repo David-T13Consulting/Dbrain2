@@ -8,7 +8,7 @@ updated: 2026-10-13
 ---
 # For David: the single decision queue
 
-David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-6**). **Only Cowork asks David.** Claude Code and Codex never ask him directly. They add an entry below, set the brief to `blocked-on-david`, and carry on with other work. Cowork opens every session by walking David through the open entries, writes each answer into the entry and the brief, and the lead turns answers into decisions/commits.
+David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-6**), amended 12 Oct (D127). **In a run David is not present in, Claude Code and Codex never ask him directly:** they add an entry below, set the brief to `blocked-on-david`, and carry on with other work. When David is present in a lead session, the lead asks him there and records the answer below under Answered the same run. Cowork opens every session by walking David through the open entries, writes each answer into the entry and the brief, and the lead turns answers into decisions/commits.
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
@@ -23,6 +23,10 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **AS1 step 1 text → approved word for word** (David, 14 Oct, session 48): the nine passages (review checklist, template, three historical banners, for-david and handoff openings, README, weekly local-model review). Recorded in the AS1 brief.
+- **Q106 → "Widen, same treatment"** (David, 13 Oct, session 48, same front door): AS1 step 1 also corrects six more places that still read as active rules contradicting AGENTS.md (two historical banners, four one-passage fixes), exact text shown to David after Codex. Recorded in the AS1 brief.
+- **Q105 → "One more review, fixed wording"** (David, 13 Oct, session 48, same front door): review 3 failed partly on the lead's over-broad contract wording; a second one-off review in session 48 with the contract corrected (other rows for other days are expected). On FAIL, F2 parks for the next run with no more exceptions. Recorded in the P2.5 brief.
+- **Q104 → "Widen Q103, review now"** (David, 13 Oct, session 48, asked by the lead in session under D127's front door): for P2.5 F2, wording in a note that shifts a row's day or year ("the day after", a year in words) becomes a should-fix like cancellation words; blockers stay structural. One extra review in session 48 as a one-off exception to D127's budget. Recorded in the P2.5 brief.
 - **Q103 → "Accept, rare extra line OK"** (David, 13 Oct, session 47, asked by the lead in session under D127's front door): for P2.5 F2, new ways a note marks an event off that a review finds become should-fixes, not blockers, since a wrong fire keeps the model's answer and adds one line. Recorded in the P2.5 brief.
 - **F2 design → "Narrow + keep the answer"** (David, 13 Oct, session 47, same front door): F2 fires only on a bare "nothing on <date>" answer against a clean cited table row, and the phone keeps the answer and adds the row. Recorded in the P2.5 brief.
 - **Q101 AGENTS.md text → approved word for word** (David, 13 Oct, session 47): recorded as D130, committed `6c4a8c1`.

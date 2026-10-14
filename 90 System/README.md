@@ -20,8 +20,9 @@ PARA structure:
   folder elsewhere on disk (standing home: `~/Documents/Source_Material/<project-or-topic>/`), never git-tracked, and leave a pointer note in the vault (path + one-line
   summary) so they stay findable. Example: `10 Projects/AI Second Brain/00_Source_Material.md`.
   Update the pointer note if the file ever moves — a stale path is worse than no note.
-- **Fact-check before adding anything.** Nothing becomes structured knowledge (Projects / Areas /
-  Resources) without David confirming it first. Raw capture into `00 Inbox` is exempt — the gate is
+- **Fact-check before adding anything.** Tier 2 content (domain claims, decisions David has not yet
+  taken, rule changes, client-facing content) becomes structured knowledge (Projects / Areas /
+  Resources / Archive, folders 10–40) only after David confirms it; Tier 0 and Tier 1 changes follow `AGENTS.md` › Review tiers. Raw capture into `00 Inbox` is exempt — the gate is
   at triage. Claude structures the second brain; David populates it.
 
 ## Capture

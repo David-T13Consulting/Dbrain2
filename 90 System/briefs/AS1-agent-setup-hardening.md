@@ -2,8 +2,8 @@
 classification: internal
 task: AS1
 owner: "@code"
-status: open
-models: []
+status: claimed
+models: [claude-opus-5-5 (lead), gpt-6.1-sol (Codex review)]
 created: 2026-10-13
 review_status: draft
 source: cowork
@@ -54,5 +54,18 @@ Each step follows D127/D129: design check before code where the step's core is a
 No real failure-store access or probes. No client data. No change to `.claude/settings.json` allow/deny lists. Every AGENTS.md / instruction / config change: David approves the exact text or diff (hard limit). Commit straight to master; tests on synthetic fixtures only.
 
 ## Review
+**Run of 13 Oct (session 48).** Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only).
+- Step 1 (Tier 2: instruction-file text; budget 5). Draft: checklist line 10 names the review units and points to AGENTS.md as the authority; line 38 replaced by the D127 Tier 0 rule; a historical-record banner under D-cowork-8's title (no other change to it). Template checked: it already agrees (budgets 2/5, Tier 1a batch, parking), so it is unchanged.
+- Review 1/5 · AS1 step 1
+  FAIL, Tier 2 confirmed. Blocker: the banner called D-cowork-8's backlog inactive, but AGENTS.md › Scope of autonomous runs still names it as the work order. Should-fix: checklist R5 still said recorded answers are Tier 1 (D127: Tier 0, checked in the Tier 1a batch); the template's step paragraph lacked the Tier 0 exception, "later steps not started", and a pointer to AGENTS.md for caps, batch, consult and Tier 2 approval. **Fixed:** the banner keeps the backlog as the work order (ordering only, no edit authority); R5 corrected; one template sentence added (the template is in scope because step 1 found a gap). Report-only, outside this brief's files (should-fix): `D-cowork-10-review-tiers.md` line 26 (points to its own Review section, lines 109 and 122 keep conditional Tier 0 review); `D65-stop-conditions.md` lines 13 and 33; `for-david.md` line 11 (only Cowork asks David; D127 lets the lead ask when David is present); `handoff.md` line 6 (one commit per entry; AGENTS.md batches Tier 0 entries); `90 System/README.md` line 23 (no Tier 1a exception); `weekly-local-model-review.md` lines 22, 25, 45 (no Tier 2 gate on capability claims).
+- Review 2/5 · AS1 step 1
+  PASS, Tier 2 confirmed, no findings on the three files.
+- **Q106, David 13 Oct (session 48), asked by the lead (present, D127 front door): "Widen, same treatment".** The option read: *"Historical banners on the two old briefs; one-line corrections in for-david, handoff, README, weekly review, each shown to you word for word after Codex. Needed for AS1's Done when ("nothing else reads as active")."* Step 1's file scope gains `D-cowork-10-review-tiers.md`, `D65-stop-conditions.md`, `90 System/README.md`, `weekly-local-model-review.md` (banners or one passage each; `for-david.md` and `handoff.md` were already in scope as bookkeeping files). David could not see the first approval request's preview on his phone; the exact text goes to him in the chat after review.
+- Review 3/5 · AS1 step 1 (widened, Q106)
+  FAIL, Tier 2 confirmed. Blocker: in `weekly-local-model-review.md` the Tier 2 gate was attached to "commit", while step 3 still told the agent to write capability claims, so a claim could be written first (rule 4: confirmation before Tier 2 content enters 10–40). Should-fix: the README line omitted Archive. Banners, front door, handoff and template found consistent. **Fixed:** the gate moved to step 3 and the task prompt ("proposed, not written: add it to `for-david.md`, write it only after David confirms"); the commit lines just point to Review tiers; README names folders 10–40.
+- Review 4/5 · AS1 step 1 (widened, Q106)
+  PASS, Tier 2 confirmed, no findings.
+- **David, 14 Oct (session 48): step 1 text approved word for word** ("Approve all"; the nine passages were put to him in the chat, since he could not see the preview on his phone). The scheduled weekly-review task keeps its own copy of the task prompt; it needs re-pasting there.
+- Run notes (D114): no subagents. Codex calls for step 1: reviews 1/5 to 4/5.
 
 ## Outcome

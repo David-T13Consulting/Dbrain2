@@ -4,7 +4,7 @@ note_type: queue
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-13
+updated: 2026-10-14
 ---
 # For David: the single decision queue
 
@@ -23,6 +23,10 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q111 → "Lead runs `tailscale up`"** (David, 15 Oct, session 49, same front door): Tailscale was found stopped on the Air when the phone service was restarted for P2.8 A1; the lead started it from the CLI; `/health` ok. Recorded in the P2.8 brief.
+- **Q110 → "No-answer + closest note lines"** (David, 14 Oct, session 49, same front door): P2.8 B2's no-answer screen shows no model sentence; when sources were cited it shows "No clear answer. Closest in your notes:" with each source's title and quoted line, so a correct fact in a note stays visible even when a decline phrase ("not specified") withheld the answer; with nothing found, "Nothing in your notes matches" and the question. Recorded in the P2.8 brief.
+- **Q109 → "Title + one short quote"** (David, 14 Oct, session 49, same front door): P2.8 B1's phone screen shows each source as its note title and one quoted line (cells joined by ·, no pipes), keeping the 5 Oct acceptance fix that makes an answer/note contradiction visible. Amends the brief's "one line per source". Recorded in the P2.8 brief.
+- **Q108 → "Approve A1"** (David, 14 Oct, session 49, same front door): P2.8 A1 (Tier 2, the phone's read boundary) approved after Codex review 1/5 passed; committed runtime `5392cd1`. Recorded in the P2.8 brief.
 - **Q107 → "Accidents + detection"** (David, 14 Oct, session 48, same front door): AS1 step 3's hooks block accidental landings (with a pre-push re-check of every outgoing commit, approvals read from committed vault state); deliberate disabling is a written residual risk, detected by step 4's startup check. Recorded in the AS1 brief.
 - **AS1 step 1 text → approved word for word** (David, 14 Oct, session 48): the nine passages (review checklist, template, three historical banners, for-david and handoff openings, README, weekly local-model review). Recorded in the AS1 brief.
 - **Q106 → "Widen, same treatment"** (David, 13 Oct, session 48, same front door): AS1 step 1 also corrects six more places that still read as active rules contradicting AGENTS.md (two historical banners, four one-passage fixes), exact text shown to David after Codex. Recorded in the AS1 brief.

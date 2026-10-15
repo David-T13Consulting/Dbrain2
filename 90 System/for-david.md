@@ -18,6 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
+| Q119 | Lead, 15 Oct (session 50) | [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] | The Tier 1a batch review raised T9b's runner (runtime `c573ff2`, committed as Tier 1a) to **Tier 2**: it indexes the dev-case corpus and writes lasting evidence under `artifacts/t9b/`, like T9's runner. Codex found no blocker in it (11 tests, T9 unchanged). Approve it as Tier 2 before step 4 runs? | (a) **Approve; step 4 runs in your window (recommended)** · (b) Ask for a full Tier 2 review round first (one more Codex review of the runner) · (c) Hold T9b | T9b step 4 | this week |
 
 ## Answered (since 8 Oct)
 

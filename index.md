@@ -59,6 +59,7 @@ Placeholder name; brand undecided. Research scaffolding only — no venture stra
 - [[30 Resources/Running/weekly-flags|weekly-flags]] — weekly load flags and their thresholds · internal
 - [[30 Resources/Running/readiness-rules|readiness-rules]] — race-readiness rules · internal
 - [[30 Resources/Second Brain Best Practices|Second Brain Best Practices]] — the LLM Wiki pattern (Karpathy), fit with this vault, decisions D41–D44 · public · draft
+- [[30 Resources/Local AI/mac-mini-vs-ai-subscription|mac-mini-vs-ai-subscription]] — TL;DR of a video on Mac Mini vs a $200 AI plan: quality gap, RAM, prefill, payback · internal · unverified
 
 ### Belgian Healthcare & eHealth
 Industry knowledge base on Belgian ambulatory healthcare — institutional, financial and technical — built from published documentation. All `public` · draft, written 1 Oct 2026.

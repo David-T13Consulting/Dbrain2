@@ -21,7 +21,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P1.4** D59 frontmatter retrofit across the existing notes: brief and dry-run diff only; applying it needs David (hard limit; gates personal-data wave 1)
 
 ## S2 · Prove local read-only answers
-- [ ] `@code` **T9b** TwIL-LM3-Pro Q4_K_M trial beside the C2 default, same cases and pipeline, evidence only (David, 15 Oct; D99 untouched): steps 1–3 need no David; step 4 is a ~2 h window with him, date in Q115; one 2.09 GiB file, hash-pinned, within Q8 — [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]]
+- [ ] `@code` **T9b** TwIL-LM3-Pro Q4_K_M trial beside the C2 default, same cases and pipeline, evidence only (David, 15 Oct; D99 untouched): steps 1–3 need no David; step 4 is a ~2 h window with him, date in Q115; one 2.09 GiB file, hash-pinned, within Q8 — [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] · **15 Oct (session 50):** Q115 (a); the pin had moved (file replaced 9 Oct), David chose the new file (Q116); steps 1–3 done: file fetched and verified, loads on b11146 (thinking switch works), runner `c573ff2` with a passing dry check; **step 4 waits for David's window** (about 45–75 min, at most about 2.5 h)
 - [ ] `@codex` **P2.1** Independent review of the retrieval cases; keep an untouched acceptance subset — [[90 System/briefs/P2.1-review|P2.1-review]]
 - [ ] `@code` **P2.3** Measure quality, latency, memory and sustained performance with pinned versions; Air versus dedicated host
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]

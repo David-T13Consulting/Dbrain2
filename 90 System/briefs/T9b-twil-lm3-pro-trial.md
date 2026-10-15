@@ -2,7 +2,7 @@
 classification: internal
 task: T9b
 owner: "@code"
-status: open   # steps 1-3 actionable without David; step 4 (the measuring window) needs David present (Q115)
+status: in-progress   # steps 1-3 this run (Q115 (a)); step 4 needs David's window
 models: []
 created: 2026-10-15
 source: David, 15 Oct (asked Cowork to add TwIL-LM3-Pro to the model-comparison brief); D99; weekly local-model review 15 Oct (benchmark ledger, README shortlist, approved as unverified under Q114)
@@ -73,6 +73,17 @@ Same as T9 unless listed: P2.2 pipeline on the three-file `devcases` corpus, lex
 - The licence is recorded as a fact (David, 9 Oct); the trial is an internal development evaluation and does not settle whether a client-facing demo is covered (D99, not legal advice).
 - Results are development evidence on the Air, not D56 acceptance.
 - Commit only after the review tier's pass (AGENTS.md › Review tiers).
+
+## Run notes (session 50, 15 Oct, lead `claude-opus-5-5`)
+- **Q115 → (a)** (David, in session): steps 1–3 this run; he names the measuring window afterwards.
+- **Step 1.** The pin had moved: `webAI-Official/TwIL-LM3-Pro` head is `144a3ccb31264deadcf68bc5a1d58f621e497d03` (9 Oct 18:12 UTC, PR #1 "Replace Q4_K_M GGUF with new build (TwIL-LM3-Pro-q4km-im)", author's comment "a much better 4-bit quantization"). The Q4_K_M file there is 2,244,011,744 bytes, SHA-256 `8a7e0f48af1feea9a107e17e2c03e8ad8d0c397c47a5dae4a73b3d92e3533377`; at `4214aaa4` it was 2,244,011,456 bytes, `7a3edb4e…e161`. The 15 Oct weekly review's "model API sha unchanged since 30 Sep" was therefore wrong (the review had flagged conflicting registry fields as unresolved). Stopped and asked David: **Q116 → pin the new 9 Oct file.** Licence field unchanged (`webai-non-commercial-license-ver.-1.0`).
+- **Disk recount (Q8, 25 GB):** models folder 18.33 GB (embeddings 2.73 included), venvs 1.14 GB, llama.cpp 0.03 GB: 19.50 GB; with TW 21.74 GB; with a newer llama.cpp build about 21.85 GB. Fits.
+- **Pre-download manifest** written: `dbrain-runtime/artifacts/t9b-2026-10-15/manifest-pre-download.json` (TW at `144a3ccb`, C2 as pinned in T9, the recount).
+- **Step 2 done.** One file fetched with `curl` from the `resolve/144a3ccb…` URL straight to `~/Library/Application Support/dbrain/models/` as `.part` (no Hugging Face cache, nothing else): 2,244,011,744 bytes, SHA-256 `8a7e0f48…3377`, both equal to the manifest; then renamed. **Load check** (scratch script, unscored warm-ups, b11146 at its T9 pin, under the T9 no-network sandbox, network denial proven first; evidence `artifacts/t9b-2026-10-15/loadcheck/`): loads on **b11146**, so no newer build is needed and C2 needs no re-measure on another build. TW-B flags (T9's, `--reasoning off`, 320): answer in 0.86 s, `finish_reason` stop, no reasoning text: **the chat template honours thinking off**. TW-A (`--reasoning on`, 2048): 6.82 s, stop, 657 characters of thinking returned apart in `reasoning_content`, clean answer in `content` (200 completion tokens).
+- **Step 3 done** (Tier 1a; runtime `c573ff2`). `experiments/t9b_compare.py` runs T9's runner with the three declared changes only: order C2 TWA TWB C2 TWB TWA C2 (C2 scored at 1 and 7, position 4 a drift check with T9's 25 % rule and re-run rule); per configuration only the thinking switch, token cap and timeout differ (C2 off/320/120 s; TWA on/2048/300 s; TWB off/320/120 s); one request signature per configuration in the pre-run manifest (C2 and TWB equal T9's); evidence under `artifacts/t9b/`. `t9_compare.py` gained hooks whose defaults keep T9's behaviour (a test checks T9's order, baseline, signature and child command are unchanged). `tests/test_t9b_compare.py`: 11 synthetic tests (order, scored positions, n = 20 per configuration, drift re-run, flags differ only in the thinking switch, caps and signatures, the capped adapter, a signature mismatch voids the run). Suite 486 OK, secret scan clean. Not yet in a Codex batch.
+- **Dry check** with the committed runner (`--dry-check`, label `2026-10-15-dry1`, cool-down 0, warm-up only, no dev case): pins, network denial and all three configurations OK. Warm-up 6.2 s (C2), 17.6 s (TWA), 9.0 s (TWB); peak server RSS 5.16 GiB (C2), 2.52 GiB (TW). Evidence `artifacts/t9b/dry-2026-10-15-dry1/`.
+- **Step 4 duration, for David:** seven 180 s cool-downs (21 min) plus the blocks: about 45–75 min if TWA's thinking stays near its warm-up time; upper bound about 2.5 h if every TWA case ran to its 300 s timeout (2 × 10 × 5 min) and one drift re-run happened.
+- Note: the D108 tripwire refused the first download command because curl's `--fail` flag put "fail" after "Application Support" in the command text; the same command with `-f` ran. The store was never named or touched.
 
 ## Review
 ## Outcome

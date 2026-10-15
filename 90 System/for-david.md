@@ -4,7 +4,7 @@ note_type: queue
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-14
+updated: 2026-10-15
 ---
 # For David: the single decision queue
 
@@ -18,12 +18,13 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-| Q115 | Cowork, 15 Oct | [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] | TwIL-LM3-Pro trial: may the lead download the one file (2.09 GiB, official repo, hash-pinned, within the Q8 disk total) and when can you hold a ~2 h measuring window with the Air on power and the phone service stopped? | (a) **Yes, lead does steps 1–3 in its next run; you name the window afterwards (recommended)** · (b) Yes to the download, window only after the Mac mini arrives · (c) Not now, leave T9b parked | T9b step 4 (steps 1–3 can start on (a) or (b)) | low |
 
 ## Answered (since 8 Oct)
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q116 → "Pin the new 9 Oct file"** (David, 15 Oct, session 50, same front door): T9b's pin had moved: the publisher replaced `TwIL-LM3-Pro-Q4_K_M.gguf` on 9 Oct (revision `144a3ccb`, PR #1 "a much better 4-bit quantization", 2,244,011,744 bytes, new SHA-256) after the brief pinned `4214aaa4`. David chose the new file; the protocol is otherwise unchanged. Recorded in the T9b brief and its pre-download manifest.
+- **Q115 → "Yes, steps 1–3 now"** (David, 15 Oct, session 50, asked by the lead in session under the front door): T9b, the lead writes the pin, recounts disk, downloads the one TwIL-LM3-Pro Q4_K_M file (official repo, hash-pinned, within the Q8 total), checks it loads and extends the runner this run; David names the ~2 h measuring window afterwards. Recorded in the T9b brief.
 - **Q114 → "Approve both"** (David, 15 Oct, session 49, same front door): the Tier 1a batch raised two committed items to Tier 2 for their `unverified` content; David approved both as they stand: the Mac Mini video TL;DR note (`d2baa42`) and, in the weekly local-model review (`ae0505d`), the `unverified` TwIL-LM3-Pro hypothesis for S5 evidence checking and its fit beside the default model (benchmark ledger, Local AI README shortlist). Both stay tagged `unverified`. Recorded in `log.md` (session 49).
 - **Q113 → "Use single quotes"** (David, 15 Oct, session 49, same front door): the phone's index skipped `00 Inbox/2026-10-05-1235-child-a-scouts-2026-27.md` because its frontmatter `policy_note` held backslash-escaped quotes; the lead changed both escaped pairs on that line to single quotes (same meaning). The note is searchable again. Recorded in the P2.5 brief (F3).
 - **Q112 → "Remove all three"** (David, 15 Oct, session 49, same front door): after F2 landed (runtime `9ef5989`), the lead removed the worktree `~/Work/dbrain-runtime-f2`, deleted branch `p25-f2` and dropped the superseded session 46 stash. Recorded in the P2.5 brief.

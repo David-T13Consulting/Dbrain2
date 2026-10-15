@@ -10,6 +10,32 @@ updated: 2026-10-09
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
 
+### Session 44 — 9 Oct 2026 · Claude Code, lead loop (P2.5 F0 parked; P2.7 C5 blocked on Q93; M6b S1–S2 done, S3 blocked on Q94)
+**Authorization:** "pick up the loop" from David, 9 Oct, per Cowork's 12:05 handoff block; Cowork's 13:45 block (English and French only) applied mid-run on David's word to the lead ("no dutch"). **Ended by** stop condition (1): no actionable `@code` brief left (P2.5 F0 parked, P2.7 and M6b `blocked-on-david`). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only); one Codex D74 consultation. No subagents used. Codex hit its usage limit at 13:39 (one review did not run; waited to 14:19).
+
+**What changed for David:** the made-up test questions for the phone's wrong "no" exist and measure today's behaviour (the answer never says the word asked isn't in the note), but the fix waits for the next run. Two questions for him: how the "Wrong" button may keep a question (Q93) and how to label the embedding test's expected passages (Q94); and his OK on the AGENTS.md language line. The embedding models are downloaded and verified.
+
+- **Handoff 12:05:** `1c48214` scouts alias, P2.5 steps F0–F3, P2.7 C5, **D120**; files in scope for the slice (2 reviews: a quoted phone question replaced by a class description; F2 must not flag a correct "no").
+- **P2.5 F0:** synthetic regression cases (13), a runner through the phone path, a bounded-grammar scorer, tests; baseline row 0/6, none 2/2, negated 3/3, other 2/2; the wrong "no" did not reproduce on synthetic notes. Tier raised to 2 by Codex (write path). Reviews 3–5 failed (unchecked note paths, scorer misreads, temp folder via TMPDIR, a "No," after a semicolon); D74 consult taken. **Parked**, uncommitted; the last fix is in the working tree, unreviewed. Separate eval server on port 18089, stopped.
+- **D121** English and French only; Cowork's checklist line; Dutch removed from F0. AGENTS.md line awaits David's exact-text approval.
+- **P2.7 C5:** files in scope and design listed; review 1 failed on §7a (holding unsignalled answers for a later tap); **Q93**; `8f97ce5`.
+- **M6b:** S1 `20096a5` (runtime `89d9bd5`): Python 3.12.15 verified (**D122**), venv with pinned packages, manifest, budget ≈22 of 25 GB. S2 `1beca18` (runtime `fetch_verify.py`): 27/27 files verified, stop rule fixed after review. S3 blocked: the protocol's label source holds totals only (**Q94**).
+- **Keep-awake:** `caffeinate -ims` started at loop start, stopped at close. The MVP launcher stays running in David's Terminal.
+
+**Pick up at:** David's Q93, Q94 and the AGENTS.md line (via Cowork); next run: P2.5 F0 with a fresh budget (from the working tree), then F1–F3; C5 and M6b S3 on their answers.
+
+### Session 43 — 9 Oct 2026 · Claude Code, lead loop (P2.7 C4 with David; M6b S1 blocked on Q92)
+**Authorization:** "pick up the loop" from David, 9 Oct, per Cowork's 11:25 handoff block. **Ended by** stop condition (1): no actionable `@code` brief left (M6b `blocked-on-david`, Q92). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents used.
+
+**What changed for David:** failed phone questions are now kept on the Air for 90 days (capture switched on with him watching; one planted question proved it and he deleted it himself with the new delete command). The weekly model review now watches every webAI model. The embedding test is waiting for his OK to install a newer Python (Q92).
+
+- **Handoff:** `6738899` weekly review watches all webAI Hugging Face models (Codex: escalated for an uncited format claim, cited the ledger, pass); `437a7c4` Q90 (a) as **D119**, Q91 (a) recorded, M6b cut into steps plus S0 (3 reviews: two blockers on how S0 counted, fixed).
+- **P2.7 C4:** runtime `72bf52b`: launcher passes the checked absolute log folder to the service (C3b should-fix) and one switch `CAPTURE=on`; `FailureStore.delete(id, reason)` with fixed reason codes and a command David runs (2 reviews: free-form reason blocker, fixed). David started the launcher 11:41, sent one planted question 11:42 (one `withheld` capture, text-free audit, no planted text in any log; 35 characters arrived vs the 36 sent, cause not established), deleted it 11:49 (`deleting`/`deleted`, `planted-test`). Record `33a79e4` (1 review). The D108 hook blocked the lead's shell commands that named the store module; the lead used scratch scripts and a glob to read the permitted audit log, never the store.
+- **M6b S1:** revisions read and pinned (EmbeddingGemma 2 unchanged at `914f7f89`); draft manifest uncommitted in the runtime repo; blocked: Python 3.10+ needed (Q92). No weights downloaded.
+- **Keep-awake:** `caffeinate -ims` started at loop start, stopped at close. The MVP launcher (with its own `caffeinate -s`) stays running in David's Terminal window.
+
+**Pick up at:** David's Q92 (via Cowork); then M6b S1 → S5. Cowork: the digest skill revision and the P2.7 follow-up brief.
+
 ### Session 42 — 9 Oct 2026 · Claude Code, lead loop (handoff cleared; D111–D118; P2.7 C1–C3b; Desktop digest; stopped on Q91)
 **Authorization:** "pick up the loop" from David, 9 Oct. **Ended by** stop condition (3): the Desktop pilot's staging folder, readable by Cowork, holds screenshots the data policy keeps out of the system (Q91); also P2.7 reached its 12-review cap and C4 is David's go (Q90). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents used.
 

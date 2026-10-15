@@ -1,15 +1,15 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-08
-next_review: 2026-10-15
+last_reviewed: 2026-10-15
+next_review: 2026-10-22
 status: maintained research; deployment choices provisional
 ---
 # Local AI — understanding and choosing models
 
 Local AI is a collection of components, not one model that does everything. This guide connects current, verified model releases to the second-brain build. It is a representative shortlist, not an exhaustive leaderboard or a claim that every entry is the latest release.
 
-David requested this knowledge base and weekly benchmark updates on 1 October 2026. **The initial research is complete; the weekly review was activated by David on 1 October (D60) and its first scheduled run was 8 October.** See [[90 System/weekly-local-model-review]] for the procedure and operating record.
+David requested this knowledge base and weekly benchmark updates on 1 October 2026. **The initial research is complete; the weekly review was activated by David on 1 October (D60) and its first scheduled run was 8 October and the second 15 October.** See [[90 System/weekly-local-model-review]] for the procedure and operating record.
 
 ## Read in this order
 
@@ -37,12 +37,12 @@ These are engineering recommendations, not accepted deployment decisions.
 
 The measured host is an M2 Mac with 24 GiB unified memory. This supports small-model experiments; it does not prove that several models can run together acceptably. The current build order remains [[10 Projects/AI Second Brain/04_Roadmap|S1–S6]]. Larger model downloads, runtime upgrades and rollout remain separate from weekly research.
 
-## Next local candidates (8 Oct shortlist)
+## Next local candidates (15 Oct shortlist; replaces the 8 Oct list)
 
-1. TwIL-LM3-Pro GGUF, research use only. Its edge for evidence checking (S5) is an `unverified` hypothesis carried over from its formal-logic results. It stays **watchlist only** in [[90 System/briefs/T9-M6-model-comparison|T9/M6]]: David's wish to use it in the demo (D99) does not settle its non-commercial license, add it to T9's candidates or authorise a download.
-2. Gemma 4 E4B-it, as a second model family against the Qwen baselines.
+1. TwIL-LM3-Pro Q4_K_M GGUF, non-commercial POC use (webAI Non-Commercial License 1.0, unchanged on 15 Oct; no commercial tier or written permission found). Its edge for evidence checking (S5) is an `unverified` hypothesis from vendor-only formal-logic results. Stays **watchlist only** in [[90 System/briefs/T9-M6-model-comparison|T9/M6]] until a brief names it.
+2. Gemma 4 E2B-it QAT, as a latency test against the current default, Gemma 4 E4B (D105), whose T9 p95 of 10.13 s is above the 8 s target. Engineering estimate, not measured; artifact to be confirmed.
 
-Both need a separate, authorized, bounded run; no local benchmark ran on 8 Oct. Detail in [[30 Resources/Local AI/benchmark-ledger]].
+Both need a separate, authorized, bounded run; no local benchmark ran on 15 Oct. The 8 Oct item "Gemma 4 E4B-it as a second family" is done (T9). Detail in [[30 Resources/Local AI/benchmark-ledger]].
 
 ## Evidence labels
 

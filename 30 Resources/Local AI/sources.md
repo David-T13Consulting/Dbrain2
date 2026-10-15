@@ -1,8 +1,8 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-08
-next_review: 2026-10-15
+last_reviewed: 2026-10-15
+next_review: 2026-10-22
 ---
 # Local AI source register
 
@@ -72,5 +72,22 @@ New primary sources reviewed this week (not pinned in the table, because not yet
 | [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases), [mlx-lm releases](https://github.com/ml-explore/mlx-lm/releases), [whisper.cpp releases](https://github.com/ggml-org/whisper.cpp/releases) | read 8 Oct (see ledger) | MIT / MIT / MIT (not re-verified) |
 
 Evidence archive: no new model-card snapshots were saved outside the vault this week; the findings above come from live pages retrieved 8 Oct and should be re-fetched before relying on them.
+
+## Weekly check — 15 October 2026
+
+Re-queried through the Hugging Face model API: 8 of the 17 pinned repositories (Qwen3.5-4B, Gemma 4 E4B-it, Qwen3.8-27B, Qwen-Image-2.1, Whisper large-v3-turbo, Parakeet v3, FLUX.2-klein-4B, Qwen3-ASR-1.7B). Sha and license match the table; no change since 1 Oct. The other nine were not re-queried. Results come through a summarizing fetch tool; re-fetch raw API JSON before relying on a hash.
+
+| Source | Observation | License |
+|---|---|---|
+| [`webAI-Official/TwIL-LM3-Pro`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro) | model API sha `4214aaa4020c`, modified 2026-09-30 (the search listing says 2026-10-09; unresolved, see ledger) | webAI Non-Commercial License 1.0, unchanged |
+| [`webAI-Official/TwIL-LM3`](https://huggingface.co/webAI-Official/TwIL-LM3) | revision unresolved: `e4f94da572d9` (API, 2026-09-09) vs `145ff05e92c6` (register, 8 Oct); commit `7857a94` about 3 days old | same |
+| [`webAI-Official/TwIL-LM3-Pro-LiteRT-LM`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro-LiteRT-LM) | unchanged (`bb30df2e`) | same |
+| [webAI-Official organisation](https://huggingface.co/webAI-Official) | 17 repos; adds first record of `yolo26*-mlx` (AGPL-3.0) and ColVec1 4b/9b | mixed |
+| Community TwIL conversions: [`mlboydaisuke/TwIL-LM3-LiteRT`](https://huggingface.co/mlboydaisuke/TwIL-LM3-LiteRT), [`webmp3/Sakura-TwIL-LM3-Pro-GGUF`](https://huggingface.co/webmp3/Sakura-TwIL-LM3-Pro-GGUF), [`Soulfate24/TwIL-LM3-Pro-Paretrix`](https://huggingface.co/Soulfate24/TwIL-LM3-Pro-Paretrix), [`Neurona/TwIL-LM3-Pro`](https://huggingface.co/Neurona/TwIL-LM3-Pro), [`usermma/TwIL-LM3-mlx-8Bit`](https://huggingface.co/usermma/TwIL-LM3-mlx-8Bit) | provenance not inspected; third-party | declared `other` |
+| [`ibm-granite/granite-speech-5.0-470m-turboctc`](https://huggingface.co/ibm-granite/granite-speech-5.0-470m-turboctc) | listed only (created 2026-08-04, modified 2026-09-18); card not read | apache-2.0 |
+| [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases) | v0.6.0 (5 Oct), b11435 pre-release (6 Oct); session-format version bump noted | MIT (not re-verified) |
+| [mlx-lm releases](https://github.com/ml-explore/mlx-lm/releases) | v0.31.3 still latest | MIT (not re-verified) |
+
+Evidence archive: no new snapshots saved outside the vault this week.
 
 Related: [[30 Resources/Local AI/README]] · [[90 System/weekly-local-model-review]]

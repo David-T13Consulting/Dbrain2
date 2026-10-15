@@ -2,8 +2,8 @@
 classification: internal
 review_status: codex-reviewed
 created: 2026-10-01
-last_reviewed: 2026-10-08
-next_review: 2026-10-15
+last_reviewed: 2026-10-15
+next_review: 2026-10-22
 ---
 # Models for text, reasoning, code and visual understanding
 
@@ -19,7 +19,7 @@ Capability descriptions below are publisher-reported; suitability and limitation
 | **[Ministral 3 8B Instruct 2512](https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512)** | Multilingual instruction following, vision, structured output and function calling; French/English alternative | About 8.4B language parameters plus 0.4B vision encoder. Higher memory than a 4B baseline; publisher FP8/CUDA fit claims do not establish M2 performance | Q4_K_M measured in T9 (8 Oct, [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|T9 results]]), text only: p50/p95 15.58/23.74 s, 126/15.3 tok/s, peak RSS 7.05 GiB; failed the safety gate on one reviewer finding; out on latency in any case |
 | **[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)** | Newer verified family entry; publisher emphasizes coding, research, professional tasks and image/video understanding | Considerably more memory; thinking and agent loops add latency. On this busy 24 GiB host, fit/performance need a separate experiment | Watchlist; not downloaded or selected |
 | **[Qwen3-Coder-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct)** | Coding and tool-use specialization; useful comparator for a future code agent | All experts count toward weight storage. Code benchmarks do not establish faithful note synthesis, safe actions or useful French voice interaction | Watchlist; not a lightweight 3B deployment |
-| **[TwIL-LM3-Pro](https://huggingface.co/webAI-Official/TwIL-LM3-Pro)** (webAI, Granite 4.2 3B fine-tune) | Formal-logic reasoning (3.66B, text only); GGUF and LiteRT-LM builds | **Non-commercial license**; "not a general assistant"; vendor-only benchmarks (see ledger 8 Oct); thinking needs 2048+ output tokens; LiteRT bundles capped at 4,096 context | Watchlist, shortlisted for a bounded S5 trial **after David resolves the license**; not downloaded |
+| **[TwIL-LM3-Pro](https://huggingface.co/webAI-Official/TwIL-LM3-Pro)** (webAI, Granite 4.2 3B fine-tune) | Formal-logic reasoning (3.66B, text only); GGUF and LiteRT-LM builds | **Non-commercial license**; "not a general assistant"; vendor-only benchmarks (see ledger 8 Oct); thinking needs 2048+ output tokens; LiteRT bundles capped at 4,096 context | Watchlist, shortlisted for a bounded S5 trial (non-commercial POC use; license unchanged 15 Oct); not downloaded |
 
 Qwen3.5-4B is being tested because of size and runtime fit, not because it is the newest Qwen generation. Do not infer that an architecture announcement or a Transformers integration proves downloadable small checkpoints exist.
 

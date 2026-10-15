@@ -18,6 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
+| Q115 | Cowork, 15 Oct | [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] | TwIL-LM3-Pro trial: may the lead download the one file (2.09 GiB, official repo, hash-pinned, within the Q8 disk total) and when can you hold a ~2 h measuring window with the Air on power and the phone service stopped? | (a) **Yes, lead does steps 1–3 in its next run; you name the window afterwards (recommended)** · (b) Yes to the download, window only after the Mac mini arrives · (c) Not now, leave T9b parked | T9b step 4 (steps 1–3 can start on (a) or (b)) | low |
 
 ## Answered (since 8 Oct)
 

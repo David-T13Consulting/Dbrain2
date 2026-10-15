@@ -42,7 +42,7 @@ Vision projectors (`mmproj`) are not downloaded: the service is text only. No Hu
 
 **Pins: a pre-download manifest** is written to `dbrain-runtime/artifacts/` before anything is fetched: repository, immutable revision hash, file name, size and **full** SHA-256 for each file, read from the publisher's metadata at that moment (the 8-character prefixes above were read from the Hugging Face API on 5 Oct). A file whose revision, size or hash differs from the manifest is not used, and a changed revision is a new candidate that comes back to David. **Exception to "only these four files":** the one llama.cpp build in the table, pinned the same way, only if b11146 cannot load a candidate.
 
-**Not candidates now:** Qwen3.8-27B and Qwen3-Coder-30B-A3B (too large for a fair 24 GiB Air run and for the budget at sensible quants), TwIL-LM3-Pro (non-commercial licence; watchlist only), Gemma 4 E2B (kept in reserve if every candidate misses latency badly: it is the smaller fallback in the same family as #2).
+**Not candidates now:** Qwen3.8-27B and Qwen3-Coder-30B-A3B (too large for a fair 24 GiB Air run and for the budget at sensible quants), TwIL-LM3-Pro (non-commercial licence; watchlist only; David asked on 15 Oct to trial it: see [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]], a follow-up brief; this protocol stays frozen), Gemma 4 E2B (kept in reserve if every candidate misses latency badly: it is the smaller fallback in the same family as #2).
 
 ## Selection rule (fixed before measuring)
 Applied in this order to **all four models, baseline included**. A model that fails a gate is out; the rule is not changed after results are seen. If it picks nothing, that is the result, and it goes to David.

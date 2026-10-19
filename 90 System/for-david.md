@@ -12,7 +12,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (19 Oct, session 51):** three questions are open below (Q119–Q121). Your four answers of session 51 are under Answered.
+**Since you last looked (19 Oct, session 51):** three questions are open below (Q119–Q121). Your five answers of session 51 (Q122–Q126) are under Answered.
 
 ## Open
 

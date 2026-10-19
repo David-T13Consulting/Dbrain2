@@ -4,7 +4,7 @@ note_type: queue
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-15
+updated: 2026-10-19
 ---
 # For David: the single decision queue
 
@@ -19,6 +19,8 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
 | Q119 | Lead, 15 Oct (session 50) | [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] | The Tier 1a batch review raised T9b's runner (runtime `c573ff2`, committed as Tier 1a) to **Tier 2**: it indexes the dev-case corpus and writes lasting evidence under `artifacts/t9b/`, like T9's runner. Codex found no blocker in it (11 tests, T9 unchanged). Approve it as Tier 2 before step 4 runs? | (a) **Approve; step 4 runs in your window (recommended)** · (b) Ask for a full Tier 2 review round first (one more Codex review of the runner) · (c) Hold T9b | T9b step 4 | this week |
+| Q120 | Cowork, 19 Oct (weekly course map) | TASKS ▶ Next action (rule 5) | **Six-week honesty check, due ~19 Oct:** has anything shipped *out* of the system since 7 Sep? If not, rule 5 says stop capturing. The answer goes in PROGRESS. | (a) **Answer in your next Cowork session: name what shipped, or say nothing has (recommended)** · (b) Answer here now in one line · (c) Move the check to a date you name | Rule 5 check; whether capture continues | this week |
+| Q121 | Cowork, 19 Oct (weekly course map) | D107; S4 | **Host order:** was the Mac mini M5 Pro 64 GB / 1 TB ordered through the SRL by Fri 16 Oct (D107)? The vault has no record of the order or a delivery date. | (a) **Ordered: give the delivery date so S4 and the P2.3 host confirmation can be placed (recommended)** · (b) Not yet: give the new order date · (c) Changed your mind on the spec or timing | S4 start; host numbers for P2.3 and the S2 exit evidence | this week |
 
 ## Answered (since 8 Oct)
 

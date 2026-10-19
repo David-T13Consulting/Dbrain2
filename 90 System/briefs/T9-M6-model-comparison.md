@@ -2,7 +2,7 @@
 classification: internal
 task: T9 / M6
 owner: "@code"
-status: blocked-on-david   # run 2026-10-08-a done and judged; the choice of model (Q84) and the host (Q85) are David's
+status: done   # run 2026-10-08-a done and judged; Q84 answered (C2, D105), Q85 answered (host, D107)
 models: ["claude-opus-5-5 (lead, draft; readiness 8 Oct; run, lead judge and report 8 Oct)", "gpt-6.1-sol (review rounds 1-3; runner review rounds 1-4, 8 Oct; blind re-judge and report review 8 Oct)"]
 created: 2026-10-05
 updated: 2026-10-08

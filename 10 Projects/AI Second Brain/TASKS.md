@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 15 Oct 2026 (session 50) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 19 Oct 2026 (session 51) · **Phase:** S1 closing, S2 under way (dated plan: [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|S2–S6]], proposed) · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or in the roadmap ([[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0). Done items, the legacy Week 0 / H1–H3 plan and the wording of every item before 8 Oct are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
@@ -12,8 +12,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 
 - [ ] `@code` ⭐ **P2.8 · first in the next run (David, 14 Oct):** phone stops searching the system's own notes (A1, A2: regression from the 14 Oct climbing question) and shows a phone-readable answer (B1, B2) — [[90 System/briefs/P2.8-phone-corpus-and-answer-screen|P2.8]] · **15 Oct (session 49):** A1 and A2 committed and **live on the phone** (the 14 Oct question now cites the climbing note); **B1 parked** after 2/2 reviews (one blocker: a source shown without its quoted line), kept as a runtime stash; B2 not started; next run: D74 consult on B1, then B1, B2, phone check with David · **15 Oct (session 50): B1 committed** (runtime `6e51e4b`, Tier 2 after Codex raised it; reviews 1–4 failed on markdown structure shown as the line; D74 consult; David accepted the one-line residuals, Q117, and approved, Q118; review 5/5 PASS) and **B2 committed** (`88103ab`, review 2/2 PASS); phone service restarted on `88103ab`, in-process check good; **left: the phone check with David**, and his word on removing worktree `~/Work/dbrain-runtime-p28` and the old B1 stash
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
-- [x] `@code` **T9 · S2 model comparison**, run 8 Oct 14:00–14:45 with David (session 39): the rule picks C2, Gemma 4 E4B; [[10 Projects/AI Second Brain/02_Architecture/t9-model-comparison-2026-10-08|results]] — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
-- [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
+- [ ] `@david` **After T9:** order the host by Fri 16 Oct: Mac mini M5 Pro 64 GB / 1 TB, Apple Belgium via the SRL (D107); the date has passed and the vault has no record of the order (**Q121**) · weekly-review task ID and first-run output into [[90 System/weekly-local-model-review]] (D60)
 - [ ] `@david` **Six-week honesty check (rule 5), due ~19 Oct:** has anything shipped out of the system? If not, stop capturing. Cowork raises it at the session nearest 19 Oct; the answer goes in PROGRESS
 
 ## S1 · Align architecture
@@ -21,7 +20,7 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 - [ ] `@code` **P1.4** D59 frontmatter retrofit across the existing notes: brief and dry-run diff only; applying it needs David (hard limit; gates personal-data wave 1)
 
 ## S2 · Prove local read-only answers
-- [ ] `@code` **T9b** TwIL-LM3-Pro Q4_K_M trial beside the C2 default, same cases and pipeline, evidence only (David, 15 Oct; D99 untouched): steps 1–3 need no David; step 4 is a ~2 h window with him, date in Q115; one 2.09 GiB file, hash-pinned, within Q8 — [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] · **15 Oct (session 50):** Q115 (a); the pin had moved (file replaced 9 Oct), David chose the new file (Q116); steps 1–3 done: file fetched and verified, loads on b11146 (thinking switch works), runner `c573ff2` with a passing dry check; **step 4 waits for David's window** (about 45–75 min, at most about 3.5 h)
+- [ ] `@code` **T9b** TwIL-LM3-Pro Q4_K_M trial beside the C2 default, same cases and pipeline, evidence only (David, 15 Oct; D99 untouched): steps 1–3 need no David; step 4 is a window with him (about 45–75 min, at most about 3.5 h), after Q119; one 2.09 GiB file, hash-pinned, within Q8 — [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] · **15 Oct (session 50):** Q115 (a); the pin had moved (file replaced 9 Oct), David chose the new file (Q116); steps 1–3 done: file fetched and verified, loads on b11146 (thinking switch works), runner `c573ff2` with a passing dry check; **step 4 waits for David's window** (about 45–75 min, at most about 3.5 h)
 - [ ] `@codex` **P2.1** Independent review of the retrieval cases; keep an untouched acceptance subset — [[90 System/briefs/P2.1-review|P2.1-review]]
 - [ ] `@code` **P2.3** Measure quality, latency, memory and sustained performance with pinned versions; Air versus dedicated host
 - [ ] `@code` **P2.4 follow-ups:** ~~intermittent endpoint-test hang~~ (fixed `3cbbd40`, D109; cause not proven, watchdog in place); `mvp/README.md` date-coverage wording (in P2.6) — [[90 System/briefs/MVP-phone|MVP-phone]]
@@ -93,7 +92,6 @@ Open items only, one line each; detail lives in the linked brief or in the roadm
 
 ## Local model knowledge
 - [ ] `@code` **M5** Retrieval corpus with D49 retention evidence; bilingual query expansion; expected evidence reviewed independently; keep original failures and untouched provisional cases
-- [x] `@code` **M6** Another model family under comparable conditions (with T9): Gemma 4 E4B and Ministral 3 8B measured 8 Oct; set separate voice fixtures and resource budgets before downloading any other modality model — [[90 System/briefs/T9-M6-model-comparison|T9/M6]]
 - [ ] `@code` **M6b** EmbeddingGemma 2 vs Qwen3-Embedding-0.6B vs lexical baseline; S1 and S2 done 9 Oct (session 44: Python 3.12 venv, D122; both models fetched and verified); **S3 done 9 Oct** (runtime `98694a2`: harness, toy tests; labels D124); **S4 run 12 Oct** (Pillow per Q96, torchvision per D127 (4); no measured benefit: lexical 5/7, EmbeddingGemma 2 4/7, Qwen3 3/7), **committed 13 Oct** (runtime `0736b29`, after Q101 (a) / D130); S5 next (results note, Tier 2); never alongside a measurement run (D94, D100) — [[90 System/briefs/M6b-embedding-eval|M6b]]
 
 ## Wiki and vault upkeep

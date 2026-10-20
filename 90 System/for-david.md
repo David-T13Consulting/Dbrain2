@@ -12,20 +12,26 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (19 Oct, session 51):** three questions are open below (Q119–Q121). Your five answers of session 51 (Q122–Q126) are under Answered.
+**Since you last looked (19 Oct evening, Cowork):** you answered everything open: Q119 (T9b parked), Q120 (honesty check), Q127–Q131 (the pivot). They are recorded as D134–D140 and the plan is rewritten. Nothing is open.
 
 ## Open
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-| Q119 | Lead, 15 Oct (session 50) | [[90 System/briefs/T9b-twil-lm3-pro-trial|T9b]] | The Tier 1a batch review raised T9b's runner (runtime `c573ff2`, committed as Tier 1a) to **Tier 2**: it indexes the dev-case corpus and writes lasting evidence under `artifacts/t9b/`, like T9's runner. Codex found no blocker in it (11 tests, T9 unchanged). Approve it as Tier 2 before step 4 runs? | (a) **Approve; step 4 runs in your window (recommended)** · (b) Ask for a full Tier 2 review round first (one more Codex review of the runner) · (c) Hold T9b | T9b step 4 | this week |
-| Q120 | Cowork, 19 Oct (weekly course map) | TASKS ▶ Next action (rule 5) | **Six-week honesty check, due ~19 Oct:** has anything shipped *out* of the system since 7 Sep? If not, rule 5 says stop capturing. The answer goes in PROGRESS. | (a) **Answer in your next Cowork session: name what shipped, or say nothing has (recommended)** · (b) Answer here now in one line · (c) Move the check to a date you name | Rule 5 check; whether capture continues | this week |
-| Q121 | Cowork, 19 Oct (weekly course map) | D107; S4 | **Host order:** was the Mac mini M5 Pro 64 GB / 1 TB ordered through the SRL by Fri 16 Oct (D107)? The vault has no record of the order or a delivery date. | (a) **Ordered: give the delivery date so S4 and the P2.3 host confirmation can be placed (recommended)** · (b) Not yet: give the new order date · (c) Changed your mind on the spec or timing | S4 start; host numbers for P2.3 and the S2 exit evidence | this week |
+| — | | | Nothing open | | | |
 
 ## Answered (since 8 Oct)
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q131 → "L1 or stricter until G3 and the lawyer review"** (David, 19 Oct, Cowork session): client-tier requests stay at L1 or stricter until G3 passes and the T0.7 lawyer review is done. D139.
+- **Q130 → "Automatic, stricter-only override, soft cap"** (David, 19 Oct, Cowork session): automatic routing with a level badge; manual override can only tighten; soft monthly cap with an alert, threshold set in W1. D138.
+- **Q129 → "1 review per step, 2 for security"** (David, 19 Oct, Cowork session): 1 Codex review per step, 2 for Tier 2 and security-boundary steps; amends D127. D137; AGENTS.md edit in PV1 step 1.
+- **Q128 → "Yes, query service kept"** (David, 19 Oct, Cowork session): Open WebUI + Open Relay replace the Shortcut path; dbrain stays the answering model. D136.
+- **Q127 → "A: EU APIs, L1 default"** (David, 19 Oct, Cowork session), with "pivot now": EU model APIs by default, Claude per question where data permits, levels L0–L3 behind one gateway; roadmap rewritten, old plan archived. D135.
+- **Q120 → "Phone Q&A only, keep going"** (David, 19 Oct, Cowork session): since 7 Sep the system has shipped phone question-and-answer only, nothing client-facing; capture continues; the pivot is the response. Recorded in PROGRESS.
+- **Q119 → replaced: "Park T9b for an offline level"** (David, 19 Oct, Cowork session, after asking why T9b had lost its purpose): T9b parked with its model file kept; the runner's Tier 2 question is moot until T9b resumes; M6b closes with its results note. D140.
+- **Q121 → "No hardware; rent compute online"** (David, 19 Oct, Cowork session): no Mac mini or other host is bought; compute is rented from an online service. Supersedes D53 (dedicated always-on host) and D107 (Mac mini order). Options and plan in [[10 Projects/AI Second Brain/02_Architecture/sovereignty-router-proposal-2026-10-19|sovereignty router proposal]] (Q127). Recorded as D134.
 - **Q126 → "Approve, commit, install"** (David, 19 Oct, session 51, asked by the lead in session): AS1 step 3 (commit gates, security boundary, Tier 2), after the D74 consult and Codex review 1/5 PASS: committed in both repositories, hooks installed (`core.hooksPath` = `.githooks`). Pushes that would create a new branch or tag on the remote are refused; every local branch and tag is checked on each push. Recorded in the AS1 brief.
 - **Q125 → "Neither now"** (David, 19 Oct, session 51, asked by the lead in session): the P2.8 phone check and T9b step 4 (with Q119) wait for a later session with him at the Mac.
 - **Q124 → "Retry now"** (David, 19 Oct, session 51, asked by the lead in session): AS1 step 3 (commit gates) is retried this run: a D74 consult on the push-destination blocker, the fix, then up to 5 Codex reviews; committed only if a review passes, otherwise parked again. Recorded in the AS1 brief.

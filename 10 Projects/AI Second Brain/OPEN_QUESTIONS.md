@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Open Questions
 
-**Updated:** 9 Oct 2026 (session 45): no change here; questions for David are in [[90 System/for-david|for-david]] (open: Q95–Q97; Q93 and Q94 answered and recorded as D123, D124).
+**Updated:** 19 Oct 2026 evening (Cowork): no change here; questions for David are in [[90 System/for-david|for-david]]; none open after the pivot (D134–D140).
 
 ---
 

@@ -19,7 +19,7 @@ Not an engineer or designer, but works with them and can hold an informed techni
 
 ## This project in one line
 
-Build an Obsidian second brain with a local model, access across devices by text and voice, and measurable multi-agent operation. Demonstrate building, operating and maintaining it by the December 2026 target; re-estimate dates after hardware/time assessment. Current sequence: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §0.
+Build an Obsidian second brain on rented models behind a sovereignty router (levels L0–L3, EU provider by default; D134–D135), access across devices by text and voice, and measurable multi-agent operation. Demonstrate building, operating and maintaining it by the December 2026 target. Current sequence: [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4 (weeks W1–W8).
 
 > Sits inside the **"Learning AI"** Claude Project. **One workstream: this one.** The Product School **Vibe Coding** training (app + deck on Lovable / Supabase) was archived on 1 Oct 2026 (D62, OQ-5b) — it is not live work. If it revives it gets its own project folder. Historical references to a second workstream come from D10, which D62 supersedes.
 
@@ -34,7 +34,7 @@ Build an Obsidian second brain with a local model, access across devices by text
 | Showcase format | Live system I drive, screen-shared | 7 Sep |
 | Access and collaboration | David across devices first, then measured multi-agent execution; additional humans deferred | Amended 1 Oct, D45 |
 | Devices | iPhone · iPad · MacBook Air committed. Apple Watch and Tesla browser are S4 stretch | 1 Oct, D52 |
-| Hosting | Dedicated **always-on** host; the Air becomes a client. **48–64 GB, budget up to €4,000**, a 14–30B model kept possible (Q47 layer 6), which needs a named target model. RAM ≥ (T9 pick's peak RSS at production context + whisper + TTS + service + 6 GB) × 1.3, next configuration up. Not yet purchased; ordered after the T9/M6 result, by Fri 16 Oct | 1 Oct, D53; 7 Oct, D92; 8 Oct, D95 ([[10 Projects/AI Second Brain/PROGRESS\|PROGRESS]]) |
+| Hosting | **No hardware purchase; compute is rented online.** Models through EU provider APIs by default (L1: Scaleway, Mistral), other levels per question within the ceiling rules; always-on availability from a rented EU server (Open WebUI, gateway); the Air is a client | 19 Oct, D134–D136 (supersede D53's purchase, D92, D95, D107) |
 | Offline | Capture only — durable queue. No on-device inference initially | 1 Oct, D54 |
 | Capacity | 20+ h/week sustained | 1 Oct, D55 |
 | Service targets | Text p95 < 8 s · voice to first word < 5 s · RTO < 8 h · RPO zero confirmed captures | 1 Oct, D56 |
@@ -52,7 +52,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 
 | File | What |
 |---|---|
-| `04_Roadmap.md` | ⭐ **The plan.** S1–S6 delivery gates; original H1/H2/H3 retained as history |
+| `04_Roadmap.md` | ⭐ **The plan.** Rented compute, sovereignty levels, router rules, weekly plan W1–W8 (19 Oct pivot); the S1–S6 version is archived in `40 Archive/AI Second Brain/` |
 | `03_Product_School_Playbook.md` | Frameworks, thresholds, checklists to reuse |
 | `02_Critical_Assessment.md` | Why the webinar's plan was changed |
 | `01_Key_Topics_Summary.md` | What the webinar said (1 correction applied) |
@@ -75,7 +75,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 | **Agentic search** | Agent greps/reads files directly. Our retrieval choice. Not vector RAG |
 | **ZDR** | Zero data retention |
 | **S.M.A.R.T. memory** | Scoped · Monitored · Auditable · Retrievable · Timed |
-| **S1–S6 / H1–H3** | Current delivery gates / historical work-package labels. Running evaluation proceeds alongside platform work |
+| **W1–W8 / L0–L3** | Current delivery weeks / sovereignty levels (L0 own rented GPU, L1 EU provider, L2 US cloud in an EU region, L3 US frontier). S1–S6 and H1–H3 are historical labels. Running evaluation proceeds alongside platform work |
 
 → Full decoder ring: `memory/glossary.md`
 
@@ -84,7 +84,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 1. **No client-confidential data enters this system.** Demos run on synthetic/anonymised material.
 2. **No secrets in the vault.** One live credential was already found in source material.
 3. **Depth over breadth.** One showcase workflow, provably excellent.
-4. **Current scope (D45–D48):** local inference and controlled hosting now; remote text/voice next; multi-agent execution measured against a baseline. Defer MCP sprawl, unneeded vector infrastructure and additional human users. Knowledge writes remain approval-gated.
+4. **Current scope (D135–D139, replacing D45's local inference):** rented models behind the switchboard with ceiling rules and no looser fallback now; Open WebUI and phone text/voice next; read-only connectors one at a time behind G4; multi-agent execution measured against a baseline. Defer unneeded vector infrastructure and additional human users. Knowledge writes remain approval-gated.
 5. **Six-week honesty check:** has anything shipped *out* of the system? If not, stop capturing.
 6. Every note gets `classification: public|internal|client` in frontmatter, from note one. **New notes also carry `source`, `review_status`, `note_type` and `created`/`updated`** (D59). Retrofitting the 114 existing notes is P1.4, held until OQ-20 decides whether `classification` splits into separate domain/sensitivity/processing/sharing axes.
 7. **Large files (media, PDFs, recordings) never enter the vault.** They live outside it, ungit-tracked, with a pointer note (path + summary) left in the vault. See `00_Source_Material.md` for the current example.
@@ -93,7 +93,7 @@ The vault root also has `00 Inbox`, `20 Areas`, `30 Resources`, `40 Archive`, `9
 
 ## Capture protocol (Dispatch / voice / on the go)
 
-Dispatch is the interim route; the local remote text/voice service is planned for S4, not yet implemented.
+Dispatch is the interim route; phone text and voice through Open WebUI and Open Relay are planned for W2 (D136), not yet implemented.
 
 If a message starts with **`capture:`** or is clearly a raw thought dump:
 

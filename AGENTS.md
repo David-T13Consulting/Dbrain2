@@ -61,11 +61,11 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   or a data-policy breach. On (3): stop, do not fix it silently, report. A decision that
   belongs to David never stops the loop: queue it (D68), set the brief `blocked-on-david`,
   move on. Commit at the end of each step (a brief without steps: at its end), never mid-step.
-- **Review failures (D72, amended by D112 and D-cowork-15, 12 Oct).** A failed Codex review
+- **Review failures (D72, amended by D112, D-cowork-15 and D137, 19 Oct).** A failed Codex review
   is fixed and re-reviewed. Only `blocker` findings fail a review; `should-fix` and `nit`
   findings are logged in the brief and do not trigger another round. **Review budget per step
-  per run, the first review included: 5 for Tier 2 and security-boundary steps (security
-  boundary as listed under Subagent routing), 2 for every other step.** A step is a numbered
+  per run, the first review included: 2 for Tier 2 and security-boundary steps (security
+  boundary as listed under Subagent routing), 1 for every other step.** A step is a numbered
   step in the brief's Steps section; a brief without steps is one step. Every review counts
   against exactly one step, and the lead writes `Review n/<budget> · <brief> <step>` in the
   brief before each Codex call. When a step uses its budget without passing, **park** it:

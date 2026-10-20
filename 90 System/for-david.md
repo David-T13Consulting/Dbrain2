@@ -24,6 +24,8 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q133 → "Delete it"** (David, 19 Oct, session 52, asked by the lead in session): the untracked `.githooks/__pycache__/` that Cowork's read-only gate check left is deleted, not committed.
+- **Q132 → "Approve and commit"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 1, the D137 review budget in AGENTS.md and the brief template, and the D135 lines in the project CLAUDE.md (one-line summary, hosting row, roadmap row, terms row, Current scope without "Defer MCP sprawl", Dispatch line), as shown word for word after Codex review 1/2 PASS. Recorded in the PV1 brief.
 - **Q131 → "L1 or stricter until G3 and the lawyer review"** (David, 19 Oct, Cowork session): client-tier requests stay at L1 or stricter until G3 passes and the T0.7 lawyer review is done. D139.
 - **Q130 → "Automatic, stricter-only override, soft cap"** (David, 19 Oct, Cowork session): automatic routing with a level badge; manual override can only tighten; soft monthly cap with an alert, threshold set in W1. D138.
 - **Q129 → "1 review per step, 2 for security"** (David, 19 Oct, Cowork session): 1 Codex review per step, 2 for Tier 2 and security-boundary steps; amends D127. D137; AGENTS.md edit in PV1 step 1.

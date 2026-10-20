@@ -44,5 +44,7 @@ Answer a real question through a rented EU model (L1) with a level badge and a d
 - English and French only (D121).
 
 ## Review
+- **Step 1 (Tier 2: rule change in AGENTS.md, template, project CLAUDE.md).** Cowork's handoff committed first as two commits (`8356d89`, `3d4b608`; lead's read: archive copies match HEAD apart from the banner, except the PROGRESS copy, taken from Cowork's ~15:40 working copy rather than HEAD; demo uses only the fictional "Northbank").
+  - Review 1/2 · PV1 step 1 — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**, no findings; tier confirmed Tier 2. David approved the diff word for word in session (Q132) and the deletion of the stray `.githooks/__pycache__/` (Q133).
 
 ## Outcome

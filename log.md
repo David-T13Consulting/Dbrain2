@@ -1168,3 +1168,21 @@ Suggested commit: `Weekly course map 19 Oct: refresh report; queue Q120 (honesty
 Not touched: `.claude/settings.json`, `.githooks/`, `90 System/skills/weekly-desktop-digest/` (uncommitted before this run, not Cowork's).
 
 Review 1/2 · Tier 1a batch 2026-10-19 (session 51; Codex `gpt-6.1-sol`, high; vault `85d909a..fedf0a5` without `b039c63`, reviewed as AS1 step 3; recorded answers Q122–Q126): **PASS**, no blocker. Q122–Q126 faithful; Session 45 and the Cowork entry moved verbatim; 11 changed notes classified, no client material or secrets; 14 index links resolve. Should-fix (PROGRESS Phase listed AS1 step 3 as open) and nit (for-david said four answers, not five): both applied.
+
+## [2026-10-19] session | Session 52: pivot committed, PV1 steps 1–2
+Lead run on "pick up the loop" (David present until he closed for the night). Cowork's 19 Oct ~20:30 handoff entry worked: `8356d89`, `3d4b608`; PV1 step 1 `8220e1a` (Q132; review 1/2 PASS); step 2 `de85fe8` (Scaleway go for `internal`). Answers Q132–Q135 recorded; Q136 queued (dev-case corpus lost roadmap section 0). Step 4 (provider adapter) uncommitted in the runtime, not reviewed.
+
+Review 1/2 · Tier 1a batch 2026-10-19 (session 52; Codex `gpt-6.1-sol`, high; `8356d89`, `3d4b608`, `de85fe8`; recorded answers Q132–Q135): **FAIL**, one blocker (PV1 step 2 raised to Tier 2), fixed forward, not re-reviewed (David closed the session); five should-fix listed in PROGRESS, Q137 queued.
+
+Cowork's handoff entry, moved verbatim:
+
+**Cowork → lead, 19 Oct ~20:30 (PIVOT: rented compute, D134–D140; supersedes the ~15:40 entry, which is folded in here). Work this first, then PV1.** David answered Q119, Q120, Q121 and Q127–Q131 in session and asked for a clean record; Cowork numbered the decisions **D134–D140** (renumber if you must, and update every citation). He will say "pick up the loop" next; under D137 the review budget is already 1 per step, 2 for Tier 2 and security-boundary steps.
+
+New (uncommitted): `10 Projects/AI Second Brain/02_Architecture/sovereignty-router-proposal-2026-10-19.md` (approved), `10 Projects/AI Second Brain/05_App_Prototype/sovereignty-router-demo.html` (demo, simulated data, not a note), `90 System/briefs/PV1-rented-models-and-switchboard.md` (W1 brief), `40 Archive/AI Second Brain/` with four verbatim pre-pivot copies (roadmap, delivery plan, TASKS, PROGRESS).
+Rewritten: `10 Projects/AI Second Brain/04_Roadmap.md` (new plan, W1–W8), `10 Projects/AI Second Brain/TASKS.md` (rebuilt around the weeks; every old item mapped, full wording in the archive), `10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6.md` (superseded pointer).
+Changed: `10 Projects/AI Second Brain/DECISIONS.md` (D134–D140 appended), `10 Projects/AI Second Brain/PROGRESS.md` (current-state rows; Cowork entry above session 51), `90 System/for-david.md` (Q119, Q120, Q121, Q127–Q131 answered; nothing open), `10 Projects/AI Second Brain/OPEN_QUESTIONS.md`, `index.md`, this file.
+Suggested commits: (1) `Pivot to rented compute (D134-D140, David 19 Oct): decisions, answers Q119-Q121 and Q127-Q131, archive of the pre-pivot plan` · (2) `Roadmap, TASKS and PV1 brief for the rented-compute plan; sovereignty router proposal and demo`.
+**Protected files, not touched by Cowork, for PV1 step 1:** AGENTS.md review-budget sentence and the brief template (D137, `David-approved: Q129`); project `CLAUDE.md` lines on the local host, hosting row, roadmap row, S1–S6 row, "Current scope" and the S4 Dispatch line (D135, `David-approved: Q127`); show David the diff. The data policy needs **no** change (§1 and §5 allow `internal` to a provider once terms are verified; that check is PV1 step 2).
+**Stop doing:** T9b (parked, D140; keep the model file), P2.3 host comparison, P4.1, P4.3, S5 items (cut, D135–D136). **Still do:** M6b S5 results note (D140). Not touched: runtime, `weekly-desktop-digest` folder.
+**Note for David's Claude.ai Project instructions** (only he can edit them): "no self-hosted server" and "no MCP sprawl before month 4" now conflict with D135–D136 (rented EU server running Open WebUI and the gateway); Cowork has told him.
+**Stray file:** Cowork ran `gates.py`'s classification check read-only on the changed notes (all pass), which left an untracked `.githooks/__pycache__/` that Cowork cannot delete. Delete it; do not commit it.

@@ -2,8 +2,8 @@
 classification: internal
 task: PV1
 owner: "@code"
-status: open
-models: []
+status: claimed
+models: [claude-opus-5-5 (lead), gpt-6.1-sol (review, consult)]
 created: 2026-10-19
 ---
 # PV1 · Week 1: rented models and the switchboard core
@@ -47,7 +47,12 @@ Answer a real question through a rented EU model (L1) with a level badge and a d
 - **Step 1 (Tier 2: rule change in AGENTS.md, template, project CLAUDE.md).** Cowork's handoff committed first as two commits (`8356d89`, `3d4b608`; lead's read: archive copies match HEAD apart from the banner, except the PROGRESS copy, taken from Cowork's ~15:40 working copy rather than HEAD; demo uses only the fictional "Northbank").
   - Review 1/2 · PV1 step 1 — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**, no findings; tier confirmed Tier 2. David approved the diff word for word in session (Q132) and the deletion of the stray `.githooks/__pycache__/` (Q133).
 
-- **Step 2 (Tier 1a):** committed once written; reviewed in this run's Tier 1a batch. Outcome **go** for Scaleway (`internal` allowed under §5: no training, zero retention by default, incident retention up to two weeks, Paris); Mistral direct conditional on David switching off its API training toggle (W2, not this week). Note: [[30 Resources/AI Vendors/scaleway]]. Finding carried to step 4: Scaleway silently substitutes a successor model after end of life, so the adapter checks the response's model name and fails closed on a mismatch.
+- **Step 2, raised to Tier 2 by the Tier 1a batch review (19 Oct):** committed as Tier 1a (`de85fe8`) before the batch raised it; fixed forward: the assessment is marked proposed and waits for David's approval (**Q137**); nothing is sent to a provider before that. Proposed outcome **go** for Scaleway (`internal` allowed under §5: no training, zero retention by default, incident retention up to two weeks, Paris); Mistral direct conditional on David switching off its API training toggle (W2, not this week). Note: [[30 Resources/AI Vendors/scaleway]]. Finding carried to step 4: Scaleway silently substitutes a successor model after end of life, so the adapter checks the response's model name and fails closed on a mismatch.
+
+- **Step 3 (David):** later this week (Q134). Keychain item: service `dbrain-scaleway`, account `dbrain`. Soft-cap alert threshold **€50 a month** (Q135, D138).
+- **Step 4 (security boundary, budget 2):** **in progress, not reviewed, uncommitted** in the runtime working tree: `dbrain/provider.py` (new) and `tests/test_provider.py` (new, 25 tests pass). No review taken yet (0/2). Next run: re-read the diff, add the README section "Rented providers" (including the undetectable case: a successor model answering under the requested ID), then Review 1/2.
+  - **D129 design consult** (Codex `gpt-6.1-sol`, read-only, 19 Oct): question = the planned adapter (closed registry, Keychain key per call, exact model check, no proxy, refuse redirects, stub-server tests); which failure classes does it miss. Advice: (1) model identity is only detectable when the provider reports a different ID; document the undetectable case; (2) don't reuse error texts that echo server data (error object, finish reason, redirect Location) and suppress exception chains; reject an answer containing the key; (3) key reading: absolute `/usr/bin/security`, timeout, non-zero exit with stdout, CR/LF, bad bytes, deletion between calls; (4) loopback override only as a literal address, reject userinfo/query/fragment/bad port; (5) test proxies in every case variant; (6) wire the factory through every entry point; (7) bounded body, malformed schema, per-call usage. **Done:** all but (6): the phone service and `answer.ask` stay on the local path until W2 by the brief's "Done when", so no entry point uses the provider yet; step 5 wires `run_dev_cases.py`.
+- **Finding for step 5 (not caused by step 4):** Cowork's rewrite of `04_Roadmap.md` (`3d4b608`) removed its `## 0.` section, which the dev-case corpus (`config.DEFAULT`/`DEVCASES`) indexes. Two runtime read-only tests now fail (`tests/test_readonly.py`, "section bound '## 0.' not found") and `run_dev_cases.py` cannot reproduce the C2 baseline. The phone is unaffected (its profile excludes the project folder). The archive copy's section 0 is not the committed one either: it carries Cowork's intermediate "Proposed amendment of 19 October" paragraph, so it is not verbatim HEAD. Options for the next run (David's call, Tier 2 measurement input): (a) point the dev-case corpus at a verbatim copy of the pre-pivot section 0 taken from git (`e7b558e`) (recommended: keeps the baseline comparable); (b) re-baseline C2 on the new roadmap; (c) drop the roadmap from the dev corpus.
 
 ## Outcome
 - **Run notes, session 52 (19 Oct):** lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents.

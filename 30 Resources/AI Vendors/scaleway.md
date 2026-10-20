@@ -6,7 +6,7 @@ sharing: private
 source: Scaleway and Mistral pages read by the lead on 19 Oct 2026 (session 52, PV1 step 2); URLs per row below
 created: 2026-10-19
 updated: 2026-10-19
-review_status: unreviewed
+review_status: proposed
 note_type: reference
 owner: "@david"
 ---
@@ -34,11 +34,12 @@ Provider check for PV1 step 2 (D135): can `internal` notes be sent to these APIs
 | Item | Provider's statement | Source |
 |---|---|---|
 | Retention | API inputs and outputs kept for the time needed to answer, then 30 rolling days for abuse monitoring, unless zero data retention (ZDR) is active | [6] |
-| Training | Pay-as-you-go API customers can opt out at any time, in the Admin panel › Privacy ("Anonymous improvement data"); the API and Vibe toggles are separate. Feedback (thumbs) can send data to training regardless | [7] |
+| Training | Pay-as-you-go API customers can opt out at any time, in the Admin panel › Privacy ("Anonymous improvement data"); the API and Vibe toggles are separate. Feedback (thumbs) can send data to training regardless | [7]; feedback: [6] §3 |
 | ZDR | On request to support, paid plans, stateless endpoints only; covers `/v1/audio/transcriptions`; not batch, files, agents | [8] |
 | Location | Not stated on the pages read | — |
 
-## Assessment against data policy §5 (lead, 19 Oct)
+## Assessment against data policy §5 (lead, 19 Oct): proposed, Tier 2, awaiting David's approval (Q137)
+Until David approves, nothing is sent to either provider: the conclusions below are the lead's proposal, not a clearance.
 - **Scaleway: go for `public` and `internal`.** No training; nothing retained by default; the longest stated retention of content is two weeks (incident case), inside §5's 30-day assumption; processed in Paris by a French company. `client` stays excluded as always (red line, §1).
 - **Mistral direct: go only once David has switched off the API training toggle** (Admin › Privacy); retention of 30 days matches §5 exactly. Not needed in W1 (no Voxtral call this week); revisit in W2. Data location not stated: `unverified`.
 - **For the adapter (PV1 step 4):** Scaleway may silently answer with a successor model after an end of life. The adapter must compare the model named in each response with the configured model and fail closed on a mismatch, so the level badge never names a model that did not answer.

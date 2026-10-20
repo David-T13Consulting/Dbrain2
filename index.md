@@ -113,6 +113,7 @@ Working knowledge base on the Scaled Agile Framework for three lenses (Product L
 
 ## 30 Resources — AI Vendors
 - [[30 Resources/AI Vendors/eurouter|EUrouter]] — EU API gateway to frontier models: what its site says (8 Oct), open questions; T0.7 candidate · internal
+- [[30 Resources/AI Vendors/scaleway|Scaleway Generative APIs (and Mistral)]] — provider terms read 19 Oct against data policy §5: go for `internal` on Scaleway; Mistral direct after the training opt-out (PV1 step 2) · internal
 
 ## 30 Resources — Local AI
 Maintained model understanding, primary-source snapshots and separate local measurements; reviewed 1 Oct 2026, weekly review activated by David (D60), first scheduled run 8 Oct 2026.

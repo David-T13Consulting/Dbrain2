@@ -47,4 +47,7 @@ Answer a real question through a rented EU model (L1) with a level badge and a d
 - **Step 1 (Tier 2: rule change in AGENTS.md, template, project CLAUDE.md).** Cowork's handoff committed first as two commits (`8356d89`, `3d4b608`; lead's read: archive copies match HEAD apart from the banner, except the PROGRESS copy, taken from Cowork's ~15:40 working copy rather than HEAD; demo uses only the fictional "Northbank").
   - Review 1/2 · PV1 step 1 — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**, no findings; tier confirmed Tier 2. David approved the diff word for word in session (Q132) and the deletion of the stray `.githooks/__pycache__/` (Q133).
 
+- **Step 2 (Tier 1a):** committed once written; reviewed in this run's Tier 1a batch. Outcome **go** for Scaleway (`internal` allowed under §5: no training, zero retention by default, incident retention up to two weeks, Paris); Mistral direct conditional on David switching off its API training toggle (W2, not this week). Note: [[30 Resources/AI Vendors/scaleway]]. Finding carried to step 4: Scaleway silently substitutes a successor model after end of life, so the adapter checks the response's model name and fails closed on a mismatch.
+
 ## Outcome
+- **Run notes, session 52 (19 Oct):** lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents.

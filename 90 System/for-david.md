@@ -4,7 +4,7 @@ note_type: queue
 source: cowork
 review_status: approved
 created: 2026-10-02
-updated: 2026-10-19
+updated: 2026-10-21
 ---
 # For David: the single decision queue
 
@@ -12,7 +12,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (21 Oct, Cowork):** you chose three stages (Mac, Claude Code, hosted EU; D141) and answered Q119 (again), Q136 and Q137. Nothing is open.
+**Since you last looked (21 Oct, Cowork):** you chose three stages (Mac, Claude Code, hosted EU; D141) and answered Q119 (again), Q136 and Q137. Nothing is open. **21 Oct ~14:15 (Cowork):** you chose option A for the agent topology and defined the critical tier; three follow-ups answered 14:15 (see Answered). Nothing is open.
 
 ## Open
 
@@ -24,6 +24,9 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q-cowork-21c → "Quality first"** (David, 21 Oct ~14:15, Cowork session): T9b step 4 picks the strongest model that fits the Air's 24 GiB on the dev cases, latency second; text p95 above 8 s (D56) is accepted for L0 if needed. Agent-topology proposal.
+- **Q-cowork-21a → "Strava is not critical"** (David, 21 Oct ~14:15, Cowork session): Strava and training data are workout data, not critical and not treated as health for the critical tier; they stay approved for external processing (data policy §4 unchanged). Critical health = health beyond training. The showcase workflow and the stage 3 three-level demo are unaffected.
+- **Q-cowork-21b → "Yes"** (David, 21 Oct ~14:15, Cowork session): critical material (health beyond training, finances, transatlantic move) stays out of Dbrain2 until the wave-2 gates pass; the L0-only rule is built in stage 3 and tested on synthetic notes.
 - **Q135 → "€50 a month"** (David, 19 Oct, session 52, asked by the lead in session): the router's soft monthly cap alert threshold (D138) is €50; it alerts only and never loosens the level. Recorded in the PV1 brief.
 - **Q134 → "Later this week"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 3 (Scaleway account, budget alert, API key in the Keychain as service `dbrain-scaleway`, account `dbrain`, stored with `security add-generic-password -s dbrain-scaleway -a dbrain -w`) is done by David later this week; steps 5 and 6's live parts wait for it.
 - **Q133 → "Delete it"** (David, 19 Oct, session 52, asked by the lead in session): the untracked `.githooks/__pycache__/` that Cowork's read-only gate check left is deleted, not committed.

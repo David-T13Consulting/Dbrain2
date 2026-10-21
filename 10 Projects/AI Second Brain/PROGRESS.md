@@ -69,6 +69,11 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
 
+### Cowork — 21 Oct 2026 · agent topology (option A)
+- David proposed an organiser agent with sub-agents per confidentiality level and many role agents. Cowork checked it against current research (Anthropic 2026, Google/MIT scaling study, CaMeL) and the existing router; David chose **option A: router + one runtime agent + skills**, with a quarantined reader for untrusted input and Codex as the separate reviewer. Decision number for the lead to assign.
+- David defined the critical tier: health, financial and transatlantic-move discussions; no online model, but not the weakest local one; email and calendar stay on the current plan.
+- Answered 14:15: 21c quality-first model pick for T9b step 4; 21a Strava/training data is not critical; 21b critical material stays out of the vault until wave 2. Record: [[10 Projects/AI Second Brain/02_Architecture/agent-topology-proposal-2026-10-21|agent-topology proposal]]. No runtime or stage 1 scope change.
+
 ### Cowork — 21 Oct 2026 · three stages, small wins (D141)
 **David present.** He asked whether the Mac Air version could move first, then set the sequence: (1) a second brain on the Mac, with voice and vault updates from the phone over Tailscale; (2) a second brain with Claude Code working in the vault; (3) the hosted GDPR/EU second brain. Cowork's condition, accepted: three levels of one system, same vault, query service and evaluation set. **Recorded as D141**, with L0 redefined as the own machine (Mac Air). **Answers:** Q136 (a) frozen copy of the pre-pivot section 0; Q137 (a) Scaleway approved, after David asked why Mistral and not Gemma or Qwen (the question was about the host; Scaleway hosts all three; Gemma 4 26B-A4B added to the measurement); Q119 approved again so T9b step 4 runs in stage 1; stage 1 two weeks, hard stop 1 Nov.
 

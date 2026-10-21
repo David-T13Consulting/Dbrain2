@@ -13,6 +13,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 ## 10 Projects — AI Second Brain
 - [[10 Projects/AI Second Brain/06_Delivery_Plan_S2-S6|Delivery plan S2–S6]] — superseded 19 Oct (D135); pointer to the roadmap and the archived version · internal
 - [[10 Projects/AI Second Brain/02_Architecture/sovereignty-router-proposal-2026-10-19|sovereignty router proposal, 19 Oct]] — reuse findings, levels, switchboard and router design, cost table and sources behind D134–D140; approved · internal
+- [[10 Projects/AI Second Brain/02_Architecture/agent-topology-proposal-2026-10-21|agent topology proposal, 21 Oct]] — option A: router as coordinator, one runtime agent with skills, quarantined reader, critical tier at L0 only; evidence and options behind D142; approved · internal
 - `10 Projects/AI Second Brain/05_App_Prototype/sovereignty-router-demo.html` — interactive demo of the router and cost configurator, simulated data · internal
 - [[10 Projects/AI Second Brain/02_Architecture/audit-codex-2026-10-09|independent audit, 9 Oct]] — Codex's outside review of architecture, evaluations and trust, summarised by finding (nine areas, four release gates, next milestone); evidence, not a decision; drove the roadmap §0 amendment (D126) · internal
 - [[10 Projects/AI Second Brain/02_Architecture/audit-codex-2026-10-09-report|independent audit, 9 Oct, verbatim report]] — the same review as pasted by David · internal

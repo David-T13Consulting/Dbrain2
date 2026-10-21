@@ -11,7 +11,7 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 ## ▶ Stage 1 · Second brain on the Mac (20 Oct–1 Nov, hard stop) — [[90 System/briefs/PL1-mac-second-brain|PL1]]
 
 - [ ] `@code` ⭐ **PL1** steps 1–7: finish PV1 step 4 (adapter, unused until stage 3); freeze dev-case evidence (Q136); T9b step 4 with David (Q119); voice in the Shortcut; restore test (T4.2); remember from the phone (P3.0 Part 1); correct from the phone (P3.1–P3.3 minimal)
-- [ ] `@david` **T9b step 4** window, about 1 h, Mac on power (PL1 step 3)
+- [ ] `@david` **T9b step 4** window, about 1 h, Mac on power (PL1 step 3); pick quality first, latency second (Q-cowork-21c)
 - [ ] `@david` **PL1 step 8:** G2 check by voice from the phone, plus the P2.8 phone check
 - [ ] `@code` **M6b S5** Results note, then close M6b (lexical baseline stays; D140; one review) — [[90 System/briefs/M6b-embedding-eval|M6b]]
 - [ ] `@code` **P2.7** retention-after-downtime test (D126), while on the Mac
@@ -37,6 +37,7 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 - [ ] `@code` **R1** Profile, allowlist and per-vault policy from configuration, before C1 (D126)
 - [ ] `@cowork` **C0** connector brief; `@cowork` design, `@code` build **C1** personal calendar, read-only (cut first if late)
 - [ ] `@code` **P4.4** Away-from-home test on each device class
+- [ ] `@code` **Agent topology (option A, David 21 Oct):** router ceiling rule processing=local-only → L0 for health beyond training, finances and transatlantic-move material; C1 reader quarantined (no tools, structured output); data-policy edit per Q-cowork-21a/21b answers (protected; approved by David 21 Oct) — [[10 Projects/AI Second Brain/02_Architecture/agent-topology-proposal-2026-10-21|proposal]]
 
 ## Operate and demo (7–13 Dec; demo Fri 18 Dec)
 - [ ] `@code` **T5** Eval dashboard · **T6** reliability contract · **P6.1** backup and restore drill · **P6.3** monitoring, redaction, retention checks

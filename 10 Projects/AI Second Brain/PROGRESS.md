@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 21 Oct 2026 · **Updated by:** Cowork (three stages, D141)
+**Last updated:** 21 Oct 2026 · **Updated by:** Claude Code (session 53: D141/D142 handoffs, T9b done, M6b closed; PV1 step 4 and PL1 step 5 parked)
 
 ---
 
@@ -16,9 +16,9 @@ review_status: codex-reviewed
 | **Schedule** | [[10 Projects/AI Second Brain/04_Roadmap\|04_Roadmap]] §4: stages 1–3, then operate and demo 7–13 Dec; demo-ready Fri 18 Dec 2026 (Q29) |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
-| **Dependencies** | No hardware (D134). Stage 1: David for T9b step 4 (about 1 h) and the G2 phone check. Stage 3: Scaleway key (Q134) and Claude API key |
-| **Next action** | **"Pick up the loop" → Cowork's 21 Oct handoff, the open Tier 1a batch review 2/2, then [[90 System/briefs/PL1-mac-second-brain\|PL1]]** (stage 1): finish PV1 step 4, freeze dev-case evidence (Q136), T9b step 4 with David, voice, restore test, remember and correct from the phone; M6b S5 |
-| **Action for David** | T9b step 4 window (about 1 h, Mac on power); PL1 step 8 (G2 check by voice and the P2.8 check); Scaleway key before 9 Nov (Q134); `.claude/settings.json` keep-or-revert (session 52). Nothing open in [[90 System/for-david\|for-david]] |
+| **Dependencies** | No hardware (D134). Stage 1: David for T9c step 1 (candidates, disk budget, window; Q141) and the PL1 step 8 phone check. Stage 3: Scaleway key (Q134) and Claude API key |
+| **Next action** | **"Pick up the loop" → [[90 System/briefs/PL1-mac-second-brain\|PL1]]: D74 consults first on the two parked steps** (PV1 step 4 URL override; PL1 step 5 restore test, five blockers), then fresh reviews; then PL1 step 4 (voice in the Shortcut); steps 6–7 after step 5 passes and their file list is reviewed. T9c after David's step 1 answer. Uncommitted on purpose in the runtime: `dbrain/provider.py`, `tests/test_provider.py`, the README "Rented providers" hunk, `experiments/restore_test.py`, `tests/test_restore_test.py` |
+| **Action for David** | **T9c step 1:** pick at most two larger local models, the disk budget (17 of 25 GB used after Q143) and a window; PL1 step 8 (G2 by voice, P2.8 check); Scaleway key before 9 Nov (Q134); **backups:** nothing outside git has an independent copy (models, logs, failure store; Time Machine has no destination), found by the T4.2 drill. Nothing open in [[90 System/for-david\|for-david]] |
 
 ### Original work-package progress — retained snapshot
 
@@ -68,6 +68,20 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 53 — 21 Oct 2026 · Claude Code, lead loop (D141/D142 handoffs; T9b done, C2 stays; M6b closed; two steps parked)
+**Authorization:** "pick up the loop" from David, 21 Oct; no ⛔ block in the handoff. David present; answered Q138–Q143 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents. On AC power: `caffeinate -ims` for the loop (D103), T9b under `caffeinate -dimsu`.
+- **Handoffs:** Cowork's ~13:45 entry (three stages, D141) `f4bcdda` + bookkeeping `fb1f6c5`; ~14:15 entry (agent topology option A) `7989553`, numbered **D142**; Q-cowork-21a–c kept their IDs.
+- **Tier 1a batch 2026-10-19, review 2/2:** FAIL, one blocker (PL1 steps 6–7 had no file list); fixed forward `2daf21b` with the should-fixes; D135/D140's "rented models outclass local" wording left (DECISIONS is append-only; the roadmap marks it `unverified`).
+- **PL1 step 1 (= PV1 step 4): PARKED.** Reviews 1/2 and 2/2 failed on the test-only URL override (`[::1%30]` decoded to `::10`; `@127.0.0.1`), both a parser differential; the root-cause fix (ask urllib and http.client which host they would use) is applied **uncommitted, unreviewed**.
+- **PL1 step 2: done** (runtime `a9b8746`). Q138: the dev cases read the three files byte for byte as C2 read them (vault `8990bbe`, corpus `878a08ea6f57` reproduced); review 1/1 PASS; suite 564 OK.
+- **PL1 step 3 = T9b step 4–6: done** (`5f4e009`). All seven blocks ok; TwIL fails the safety gate in both configurations (6/8 vs C2's 5/8); Codex blind judge stricter and right on two answers. **Q141:** C2 stays; T9c brief for larger models (blocked on David). Phone service stopped for the window and restarted.
+- **PL1 step 5 (T4.2): PARKED.** Review 1/1 FAIL, five blockers (symlink overwrite path, `--out` guard, rewound remote, dirty files omitted, remote into the repo). Real drills ran ok but do not count. Steps 6–8 not started.
+- **M6b S5: done, M6b closed** (`eaf3e4c`): no measured benefit, lexical stays; review 1/2 PASS; approved Q142; embedding models and venv deleted on Q143.
+- **Settings:** `.claude/settings.json` committed on Q140 (`70ea3b3`).
+- **Not done, for later:** the protected edits approved by Q-cowork-21a–c (data policy, PV1 ceiling rule, D56 note; TASKS stage 3); project `CLAUDE.md` still says W1–W8 and "L0 own rented GPU" (protected; needs David's word); runtime README's "never pushed" line is out of date.
+
+**Pick up at:** D74 consults on PV1 step 4 and PL1 step 5, then PL1 step 4.
 
 ### Cowork — 21 Oct 2026 · agent topology (option A)
 - David proposed an organiser agent with sub-agents per confidentiality level and many role agents. Cowork checked it against current research (Anthropic 2026, Google/MIT scaling study, CaMeL) and the existing router; David chose **option A: router + one runtime agent + skills**, with a quarantined reader for untrusted input and Codex as the separate reviewer. Decision number for the lead to assign.
@@ -132,20 +146,6 @@ Newest first. One entry per working session — what happened, what changed, whe
 - **Keep-awake:** `caffeinate -ims` started at loop start, stopped at close.
 
 **Pick up at:** with David: P2.8 phone check, T9b window, worktree and stash removal, settings edit; then AS1 step 3 (D74 consult first), G1-inj S1.
-
-### Session 47 — 13 Oct 2026 · Claude Code, lead loop (Q95 with David; D130; M6b S4 committed; P2.5 F2 parked again; AS1/D131)
-**Authorization:** "pick up the loop" from David, 13 Oct, with the order: Cowork's 13 Oct handoff, Q95 phone step first (David present), then Q101 (AGENTS.md line word for word) and the M6b S4 commit, then P2.5 F2 per D127 and F3. **Ended by** stop condition (1): F2 parked (F3 waits on it), M6b S5 is Tier 2 and comes after F2/F3 in David's order. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): 5 reviews, one D74 consult, the Tier 1a batch. No subagents (D114).
-
-**What changed for David:** the phone's "Wrong" button works (he tapped it; the service recorded it), and the phone answers on the new default model (C2) were good; the lead may now delete its own scratch files without asking (D130); the embedding test is on record (no gain over plain keyword search); the code check for the wrong "no" is narrower and never hides an answer, but is not live yet; the AS1 hardening brief is queued for this week.
-
-- **Q95:** the service had been down since a reboot (Tailscale off on the Air; David reconnected it); F2's unreviewed edits were stashed first so the restarted service runs committed code only (`d584f13`). Hand-edit steps were too tedious for David; the lead built token-free Shortcuts from the Mac (`shortcuts sign`): "Ask Brain 2"–"4" failed (a variable-carried token never reached the header; then the menu-item format), "Ask Brain 5" works once David pasted the Keychain token into its two headers. C2 re-check: three good answers. End to end: `POST /wrong wrong-recorded` 14:47:09. David's standing preference (13 Oct): never ask him to edit Shortcuts by hand.
-- **Q101 / D130:** AGENTS.md standing approval (5) and the hard-limits exception, text approved word for word by David; Codex 1/5 pass; `6c4a8c1`.
-- **M6b S4:** review 2/2 pass (review 1's only blocker ratified); runtime `0736b29`, vault `b3e6054`.
-- **P2.5 F2:** D74 consult (Codex: the free-text design will not converge; narrow it); David chose "narrow + keep the answer"; rebuilt; reviews 1/2 and 2/2 fail, each on two more ways a note marks an event off; **parked** (D127), fixes uncommitted in worktree `~/Work/dbrain-runtime-f2` (branch `p25-f2`); David's **Q103**: such markers are should-fixes from now on. F3 not started.
-- **AS1:** Cowork's 11:20 entry committed with **D131** (Q54 reaffirmed, protected-file commit gate, AS1 scope) as `03a811d`.
-- **Not touched:** the `weekly-desktop-digest` folder; the old `manifest-draft.json` in the runtime.
-
-**Pick up at:** P2.5 F2 (D74 consult, one review under Q103, commit, then F3); M6b S5 (results note, Tier 2); AS1 this week.
 
 ## How to resume
 

@@ -1,14 +1,28 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53)
 review_status: codex-reviewed
 created: 2026-09-07
-updated: 2026-10-09
+updated: 2026-10-21
 ---
 # Progress archive — sessions 1–39
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 47 — 13 Oct 2026 · Claude Code, lead loop (Q95 with David; D130; M6b S4 committed; P2.5 F2 parked again; AS1/D131)
+**Authorization:** "pick up the loop" from David, 13 Oct, with the order: Cowork's 13 Oct handoff, Q95 phone step first (David present), then Q101 (AGENTS.md line word for word) and the M6b S4 commit, then P2.5 F2 per D127 and F3. **Ended by** stop condition (1): F2 parked (F3 waits on it), M6b S5 is Tier 2 and comes after F2/F3 in David's order. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): 5 reviews, one D74 consult, the Tier 1a batch. No subagents (D114).
+
+**What changed for David:** the phone's "Wrong" button works (he tapped it; the service recorded it), and the phone answers on the new default model (C2) were good; the lead may now delete its own scratch files without asking (D130); the embedding test is on record (no gain over plain keyword search); the code check for the wrong "no" is narrower and never hides an answer, but is not live yet; the AS1 hardening brief is queued for this week.
+
+- **Q95:** the service had been down since a reboot (Tailscale off on the Air; David reconnected it); F2's unreviewed edits were stashed first so the restarted service runs committed code only (`d584f13`). Hand-edit steps were too tedious for David; the lead built token-free Shortcuts from the Mac (`shortcuts sign`): "Ask Brain 2"–"4" failed (a variable-carried token never reached the header; then the menu-item format), "Ask Brain 5" works once David pasted the Keychain token into its two headers. C2 re-check: three good answers. End to end: `POST /wrong wrong-recorded` 14:47:09. David's standing preference (13 Oct): never ask him to edit Shortcuts by hand.
+- **Q101 / D130:** AGENTS.md standing approval (5) and the hard-limits exception, text approved word for word by David; Codex 1/5 pass; `6c4a8c1`.
+- **M6b S4:** review 2/2 pass (review 1's only blocker ratified); runtime `0736b29`, vault `b3e6054`.
+- **P2.5 F2:** D74 consult (Codex: the free-text design will not converge; narrow it); David chose "narrow + keep the answer"; rebuilt; reviews 1/2 and 2/2 fail, each on two more ways a note marks an event off; **parked** (D127), fixes uncommitted in worktree `~/Work/dbrain-runtime-f2` (branch `p25-f2`); David's **Q103**: such markers are should-fixes from now on. F3 not started.
+- **AS1:** Cowork's 11:20 entry committed with **D131** (Q54 reaffirmed, protected-file commit gate, AS1 scope) as `03a811d`.
+- **Not touched:** the `weekly-desktop-digest` folder; the old `manifest-draft.json` in the runtime.
+
+**Pick up at:** P2.5 F2 (D74 consult, one review under Q103, commit, then F3); M6b S5 (results note, Tier 2); AS1 this week.
 
 ### Session 45 — 9 Oct 2026 · Claude Code, lead loop (handoff 15:06–15:12; P2.7 C5 service; M6b S3; P2.5 F0 passed review)
 **Authorization:** "pick up the loop" from David, 9 Oct, with the order: Cowork's 15:06–15:12 handoff entries (commit them; record Q93 (b), Q94 (a) and the ask-with-options rule; apply the §7a amendment and the D121 line to AGENTS.md, both approved), then P2.7 C5, M6b S3, P2.5 F0 (resume review); leave the `weekly-desktop-digest` folder alone. **Ended by** stop condition (1) for that list: C5's phone part, M6b S4 and P2.5 F0's commit all wait on David (Q95–Q97). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only), 12 reviews (the close review included) and one D74 consultation. No subagents used (D114).

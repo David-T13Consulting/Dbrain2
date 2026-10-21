@@ -1212,5 +1212,5 @@ Lead run on "pick up the loop" (David present; Q146 answered in session). No han
 
 Review 1/2 · Tier 1a batch 2026-10-21b (session 54; Codex `gpt-6.1-sol`, high; recorded answer Q146 and this run's bookkeeping): **FAIL**, one blocker (the planned Shortcut generator would write the token into temporary files, against data policy §2.2: plan amended, David to be asked); should-fix (step 5 failed two reviews, not three) applied. Fixed forward in the next commit.
 
-Review 2/2 · Tier 1a batch 2026-10-21b (re-review of the fix):
+Review 2/2 · Tier 1a batch 2026-10-21b (re-review of the fix `ab49a15`): **PASS**; should-fix (PROGRESS and handoff still described the old plan) applied in the closing commit.
 

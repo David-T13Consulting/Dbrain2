@@ -28,7 +28,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]] — snapshot of the task list before 8 Oct: done items, legacy plan, original wording · internal
 - [[10 Projects/AI Second Brain/OPEN_QUESTIONS|OPEN_QUESTIONS]] — what blocks work and who can answer · internal
 - [[10 Projects/AI Second Brain/CAPTURE|CAPTURE]] — on-the-go capture protocol · internal
-- [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] — the plan since the 19 Oct pivot: rented compute, sovereignty levels L0–L3, router rules, weekly plan W1–W8 to the 18 Dec demo; pre-pivot version archived; three stages since 21 Oct (D141) · internal
+- [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] — the plan since the 19 Oct pivot: rented compute, sovereignty levels L0–L3, router rules, three stages since 21 Oct (D141: Mac, Claude Code, hosted EU) to the 18 Dec demo; pre-pivot version archived · internal
 - [[10 Projects/AI Second Brain/03_Product_School_Playbook|03_Product_School_Playbook]] — frameworks, thresholds and checklists from Product School · internal
 - [[10 Projects/AI Second Brain/02_Critical_Assessment|02_Critical_Assessment]] — why the webinar's plan was changed · internal
 - [[10 Projects/AI Second Brain/01_Key_Topics_Summary|01_Key_Topics_Summary]] — what the webinar said · internal
@@ -152,7 +152,7 @@ Own-words notes from NN/g UX Conference decks (2015–17) refreshed with 2025–
 - [[40 Archive/AI Second Brain/04_Roadmap-pre-pivot-2026-10-19|Roadmap, pre-pivot]] — the S1–S6 roadmap with the 9 Oct amendment and the original H1/H2/H3 rationale, as of 19 Oct (exact text in git `e7b558e`) · internal
 - [[40 Archive/AI Second Brain/06_Delivery_Plan_S2-S6-pre-pivot-2026-10-19|Delivery plan S2–S6, pre-pivot]] — dated weeks, decision deadlines and cut order, as of 19 Oct (exact text in git `e7b558e`) · internal
 - [[40 Archive/AI Second Brain/TASKS-pre-pivot-2026-10-19|TASKS, pre-pivot]] — the full task list with every item's history, as of 19 Oct (exact text in git `e7b558e`) · internal
-- [[40 Archive/AI Second Brain/PROGRESS-pre-pivot-2026-10-19|PROGRESS, pre-pivot]] — current-state table and sessions 50–51 as of 19 Oct, verbatim · internal
+- [[40 Archive/AI Second Brain/PROGRESS-pre-pivot-2026-10-19|PROGRESS, pre-pivot]] — current-state table and sessions 50–51 as of 19 Oct (exact text in git `e7b558e`) · internal
 - [[40 Archive/agent-orchestration-proposal|agent-orchestration-proposal]] — the design record behind D63: why one lead and one queue, and the options not taken · internal
 
 ## 90 System

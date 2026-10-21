@@ -2,7 +2,7 @@
 classification: internal
 task: T9b
 owner: "@code"
-status: blocked-on-david   # steps 1-3 done; step 4 needs David's window and Q119 (runner raised to Tier 2)
+status: blocked-on-david   # steps 1-3 done; Q119 approved 21 Oct (D141); step 4 needs only David's window (PL1 step 3)
 models: []
 created: 2026-10-15
 source: David, 15 Oct (asked Cowork to add TwIL-LM3-Pro to the model-comparison brief); D99; weekly local-model review 15 Oct (benchmark ledger, README shortlist, approved as unverified under Q114)

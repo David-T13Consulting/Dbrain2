@@ -35,7 +35,7 @@ From the iPhone over Tailscale, by voice, David asks and hears a cited answer, a
 ## Done when (checkable)
 - Steps 1–7 committed; step 8 passed with David and recorded in PROGRESS.
 - Nothing leaves the Mac: no provider call in stage 1 (the adapter of step 1 is not wired in).
-- Hard stop Fri 1 Nov: unfinished steps move to stage 3 and are listed in PROGRESS.
+- Hard stop Sun 1 Nov: unfinished steps move to stage 3 and are listed in PROGRESS.
 
 ## Constraints (vault rules that especially apply)
 - Red line and data policy unchanged; family logistics only within the current waves; no client data.

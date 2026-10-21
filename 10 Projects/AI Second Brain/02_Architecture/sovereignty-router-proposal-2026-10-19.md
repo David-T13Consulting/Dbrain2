@@ -38,7 +38,7 @@ RunPod and Modal not recommended: US companies, cold starts of about 10–50 s b
 ## Sovereignty levels
 | Level | Meaning | Example | US CLOUD Act exposure |
 |---|---|---|---|
-| L0 | Own machine (redefined 21 Oct, D141: the Mac Air; a rented single-tenant GPU would also sit here) | Mac Air local model | None |
+| L0 | Own machine (redefined 21 Oct, D141: the Mac Air; a rented GPU is not L0 and its exposure is not assessed) | Mac Air local model | None: no provider receives the request |
 | L1 | EU-owned provider, EU data centres | Scaleway, Mistral | None claimed; `unverified` (Mistral's privacy policy §7 allows some non-EU service providers) |
 | L2 | US cloud, EU region | Claude or Mistral on AWS Bedrock Frankfurt | Yes (contractual protection only) |
 | L3 | US frontier, global | Claude API | Yes |

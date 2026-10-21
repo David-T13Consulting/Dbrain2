@@ -6,7 +6,7 @@ review_status: approved
 
 **Updated:** 21 Oct 2026 (Cowork: three stages, D141) · **Plan:** [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4, stages 1–3 · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
-Open items only, one line each; detail lives in the linked brief or the roadmap. The pre-pivot list, with every item's full wording and history, is archived verbatim at [[40 Archive/AI Second Brain/TASKS-pre-pivot-2026-10-19]]; older done items are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
+Open items only, one line each; detail lives in the linked brief or the roadmap. The pre-pivot list, with every item's full wording and history, is archived at [[40 Archive/AI Second Brain/TASKS-pre-pivot-2026-10-19]] (exact text in git `e7b558e`); older done items are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
 ## ▶ Stage 1 · Second brain on the Mac (20 Oct–1 Nov, hard stop) — [[90 System/briefs/PL1-mac-second-brain|PL1]]
 

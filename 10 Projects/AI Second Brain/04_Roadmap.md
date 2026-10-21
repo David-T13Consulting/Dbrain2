@@ -45,7 +45,7 @@ Stage 3   iPhone (Open Relay) ─► Open WebUI (EU server) ─► dbrain ─►
 
 | Level | Meaning | Example | US CLOUD Act exposure |
 |---|---|---|---|
-| L0 | Own machine: nothing leaves David's hardware | Mac Air with the local model (a rented single-tenant GPU would also sit here; not planned) | None |
+| L0 | Own machine: nothing leaves David's hardware | Mac Air with the local model | None: no provider receives the request |
 | L1 | EU-owned provider, EU data centres | Scaleway (Paris), hosting Qwen, Gemma and Mistral models | None claimed; `unverified` (sub-processors to be checked) |
 | L2 | US cloud, EU region | Claude or Mistral on AWS Bedrock Frankfurt | Yes |
 | L3 | US frontier, global | Claude API, Claude Code | Yes |

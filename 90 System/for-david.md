@@ -12,13 +12,13 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (21 Oct, Cowork):** you chose three stages (Mac, Claude Code, hosted EU; D141) and answered Q119 (again), Q136 and Q137. Nothing is open. **21 Oct ~14:15 (Cowork):** you chose option A for the agent topology and defined the critical tier; three follow-ups answered 14:15 (see Answered). Nothing is open.
+**Since you last looked (21 Oct, session 53, lead):** you answered Q138–Q143 in session (corpus, T9b window, settings, Mac model, M6b note, disk); **Q144 is open** (T9c candidates, budget, window). **Earlier, 21 Oct (Cowork):** you chose three stages (Mac, Claude Code, hosted EU; D141) and answered Q119 (again), Q136 and Q137. Nothing is open. **21 Oct ~14:15 (Cowork):** you chose option A for the agent topology and defined the critical tier; three follow-ups answered 14:15 (see Answered). Nothing is open.
 
 ## Open
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-| — | | | Nothing open | | | |
+| Q144 | Lead, 21 Oct (session 53) | [[90 System/briefs/T9c-larger-local-model\|T9c]] step 1 | Which one or two larger local models to measure (licence must allow the December demo), what disk budget (17 of 25 GB used), and when the measuring window is | The lead proposes candidates from the benchmark ledger first; you pick · or skip T9c | T9c steps 2–6 | this week |
 
 ## Answered (since 8 Oct)
 
@@ -31,6 +31,7 @@ Answers land here first; the lead clears each once recorded (D68). Older answere
 - **Q134 → "Later this week"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 3 (Scaleway account, budget alert, API key in the Keychain as service `dbrain-scaleway`, account `dbrain`, stored with `security add-generic-password -s dbrain-scaleway -a dbrain -w`) is done by David later this week; steps 5 and 6's live parts wait for it.
 - **Q133 → "Delete it"** (David, 19 Oct, session 52, asked by the lead in session): the untracked `.githooks/__pycache__/` that Cowork's read-only gate check left is deleted, not committed.
 - **Q132 → "Approve and commit"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 1, the D137 review budget in AGENTS.md and the brief template, and the D135 lines in the project CLAUDE.md (one-line summary, hosting row, roadmap row, terms row, Current scope without "Defer MCP sprawl", Dispatch line), as shown word for word after Codex review 1/2 PASS. Recorded in the PV1 brief.
+- **Q145 → "Approve as written"** (David, 21 Oct, session 53, asked by the lead in session after the Tier 1a batch review raised the agent-topology note to Tier 2): the note's evidence table and revisit rule stand as approved; option B's "2–3x" stays tagged `unverified`.
 - **Q143 → "Remove both and the venv"** (David, 21 Oct, session 53, asked by the lead in session): the M6b embedding models (`models/embeddings/` Qwen3-Embedding-0.6B and EmbeddingGemma 2) and the `venvs/m6b-py312` venv deleted by the lead the same session; models folder now 17 GB of the 25 GB budget.
 - **Q142 → "Approve as written"** (David, 21 Oct, session 53, asked by the lead in session): the M6b S5 results note ([[10 Projects/AI Second Brain/02_Architecture/m6b-embedding-eval-2026-10-12]]) after Codex review 1/2 PASS and its should-fix; no measured benefit, lexical baseline stays; M6b closes (D140).
 - **Q141 → "Keep C2, test bigger"** (David, 21 Oct, session 53, asked by the lead in session): T9b outcome. TwIL-LM3-Pro fails the safety gate in both configurations (cited evidence for claims it does not make), though 6/8 correct against C2's 5/8; C2 (Gemma 4 E4B) stays the Mac's default. Under "quality first" (Q-cowork-21c), the lead drafts a T9c brief to measure one or two larger models that fit 24 GiB on the same frozen cases; download and disk budget go to David before anything is fetched.

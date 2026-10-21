@@ -6,14 +6,14 @@ sharing: private
 source: Cowork session with David, 21 Oct 2026 (web research; David's decisions in session)
 created: 2026-10-21
 updated: 2026-10-21
-review_status: unreviewed
+review_status: approved
 note_type: proposal
 owner: "@david"
 status: approved
 ---
 # Agent topology: one router, one agent, skills (proposal, 21 Oct 2026)
 
-**Status: approved by David 21 Oct 2026 (option A), recorded as D142.** Follow-ups Q-cowork-21a to 21c answered by David 21 Oct ~14:15 (see below and [[90 System/for-david|for-david]]). Builds on [[10 Projects/AI Second Brain/02_Architecture/sovereignty-router-proposal-2026-10-19|sovereignty router proposal]] (D135, D138) and the OQ-20 axes.
+**Status: approved by David 21 Oct 2026 (option A), recorded as D142; the evidence table and revisit rule approved as Tier 2 content (Q145, session 53).** Follow-ups Q-cowork-21a to 21c answered by David 21 Oct ~14:15 (see below and [[90 System/for-david|for-david]]). Builds on [[10 Projects/AI Second Brain/02_Architecture/sovereignty-router-proposal-2026-10-19|sovereignty router proposal]] (D135, D138) and the OQ-20 axes.
 
 ## David's idea (21 Oct, stated in session)
 One organiser agent, with sub-agents per confidentiality level: public handled by Claude, private by a hosted agent, critical by a local agent. Possibly many role agents: coder, reviewer, organiser, email manager, calendar manager, writer, designer, software architect, business sounding board.
@@ -48,7 +48,7 @@ Flaws in the idea as first stated:
 |---|---|---|---|
 | Confidentiality | Code-enforced, one log line per request (D138) | Same if the coordinator is fixed at L0 or is code | Spread across prompts, not auditable |
 | Fit with the 18 Dec plan | Is the current plan (D135) | Adds a coordinator to build and evaluate | No |
-| Token cost | 1x | About 2–3x | 3–10x |
+| Token cost | 1x | About 2–3x (`unverified`: Cowork's estimate, not in the sources above) | 3–10x |
 | Demo story | Proves where every request ran, and when not to use multi-agent | Impressive, harder to defend | Fragile live |
 
 ## The chosen shape (option A)

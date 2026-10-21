@@ -1192,6 +1192,10 @@ Lead run on "pick up the loop" (David present; Q138–Q143 answered in session).
 
 Review 2/2 · Tier 1a batch 2026-10-19 (session 53; Codex `gpt-6.1-sol`, high; `d9a6bca`, `f4bcdda`, `fb1f6c5`; recorded answers Q119, Q136, Q137): **FAIL**, one blocker (PL1 steps 6–7 write scope undefined), fixed forward in `2daf21b`, budget used; five should-fix, four applied, D135/D140 wording left for Cowork/David.
 
+Review 1/2 · Tier 1a batch 2026-10-21 (session 53; Codex `gpt-6.1-sol`, high; vault `2daf21b..5f4c3a8`; recorded answers Q138–Q143, Q-cowork-21a–c): **FAIL**, one blocker (topology note: option B's "2–3x" unsourced, now `unverified`); escalations: the topology note's research conclusions to Tier 2 (David approved them, **Q145**) and T9c step 3 to Tier 2 (brief amended); should-fixes applied (backups wording "not tested", Q144 queued for T9c step 1, TASKS PL1 step 5 parked and 17 GB). Fixed forward in the next commit.
+
+Review 2/2 · Tier 1a batch 2026-10-21 (re-review of the fix-forward):
+
 Cowork's handoff entries, moved verbatim:
 
 **Cowork → lead, 21 Oct ~13:45 (three stages, D141). Work this first, then the open Tier 1a review 2/2, then PL1.** David reordered the plan into three small-win stages: (1) second brain on the Mac, phone over Tailscale with voice and vault updates, nothing leaves the Mac, 20 Oct–1 Nov hard stop; (2) Claude Code in the vault, 2–8 Nov; (3) hosted EU with the router, 9 Nov–6 Dec. Recorded as **D141**; L0 redefined as the Mac. Answers in for-david: Q119 approved (T9b step 4 runs in stage 1), Q136 (a) frozen copy of the pre-pivot section 0 from `e7b558e`, Q137 (a) Scaleway approved (Gemma 4 26B-A4B added to PV1 step 5), stage 1 two weeks.

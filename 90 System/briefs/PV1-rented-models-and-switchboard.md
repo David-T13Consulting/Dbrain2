@@ -6,7 +6,9 @@ status: claimed
 models: [claude-opus-5-5 (lead), gpt-6.1-sol (review, consult)]
 created: 2026-10-19
 ---
-# PV1 · Week 1: rented models and the switchboard core
+# PV1 · Rented models and the switchboard core
+
+**Re-sequenced 21 Oct (D141):** step 4 finishes in stage 1 (as PL1 step 1); steps 3, 5, 6 and 7 move to stage 3 (from 9 Nov). Step 2 approved by David (Q137, 21 Oct).
 
 ## Goal (one sentence)
 Answer a real question through a rented EU model (L1) with a level badge and a decision-log line, behind ceiling rules that never fall back to a looser level, and measure the rented models against the committed baseline.
@@ -27,7 +29,7 @@ Answer a real question through a rented EU model (L1) with a level badge and a d
 2. **Provider terms (Tier 1a).** Read Scaleway Generative APIs' data-privacy page, terms and DPA (retention, training use, sub-processors, location, logging), and Mistral's for Voxtral. Write `30 Resources/AI Vendors/scaleway.md` with each fact sourced. Compare with data policy §5 (assumes up to 30 days' retention, `public` and `internal` only). Outcome: go or no-go for sending `internal` notes. **No-go or unclear → stop the step and ask David.**
 3. **Account and key (David).** David creates the Scaleway account (billing through the SRL is his call), sets a budget alert, and stores the API key in the macOS Keychain. The lead reads it at runtime with `security find-generic-password`; the key never appears in a file, a log, a trace or a commit. David sets the soft-cap alert threshold (D138; placeholder €75 a month).
 4. **Provider adapter (security boundary, 2 reviews).** An OpenAI-compatible provider in the runtime, chosen only by explicit configuration (level, provider, base URL, model). No fallback to another provider, model or level; network egress limited to the configured host; the local llama.cpp path keeps working. Tests against a stub server, including: provider down returns "unavailable", never another provider; key absent fails closed; no key in any output.
-5. **Measure (Tier 1b).** After step 2 says go: run the 10 dev cases and the 13 P2.5 F0 cases on Mistral Small 3.2, Qwen3.8-27B and Qwen3-235B, with the committed C2 run as the baseline. Report end-to-end p50/p95, verdict counts per case group, citation support, and cost per question. Results note in `02_Architecture/`. No tuning on these cases.
+5. **Measure (Tier 1b).** After step 2 says go (approved by David, Q137): run the 10 dev cases and the 13 P2.5 F0 cases on Mistral Small 3.2, Gemma 4 26B-A4B, Qwen3.8-27B and Qwen3-235B (all on Scaleway; Gemma added at David's request, 21 Oct), with the committed C2 run as the baseline. Report end-to-end p50/p95, verdict counts per case group, citation support, and cost per question. Results note in `02_Architecture/`. No tuning on these cases.
 6. **Switchboard core (security boundary, 2 reviews).** LiteLLM pinned to an exact version, running on the Mac for now. A pre-call hook computes the ceiling as the strictest of: the toggle in configuration, the classification of the retrieved notes, a watch-list hit in the question (file outside the repos), unknown or unlabelled → strictest. Routes only to models at or below the ceiling; refuses with a clear reason otherwise; no looser fallback. Writes one text-free decision-log line per request (level, ceiling reasons, model, cost, latency, verdict). The answer JSON carries a level badge (level, provider, model, cost). Tests cover the full ceiling matrix, including a fictional "Northbank" watch-list hit and an unlabelled note.
 7. **With David (not a code step):** the P2.8 phone check on the current Shortcut ("is there climbing class on november 2?"); then one real question through step 6 at L1, shown to him with its badge and log line.
 

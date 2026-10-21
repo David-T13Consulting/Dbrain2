@@ -2,9 +2,9 @@
 classification: internal
 review_status: codex-reviewed
 archived: 2026-10-19
-archive_reason: superseded by the 19 Oct pivot (D134-D140); kept verbatim below this banner
+archive_reason: superseded by the 19 Oct pivot (D134-D140); kept below this banner; exact pre-pivot text in git at e7b558e
 ---
-> **Archived 19 Oct 2026, verbatim.** This is the progress tracker as it stood before the rent-not-buy pivot (D134–D140). The current version is [[10 Projects/AI Second Brain/PROGRESS]].
+> **Archived 19 Oct 2026.** This is the progress tracker as Cowork had it on the afternoon of 19 Oct, before the rent-not-buy pivot (D134–D140). Where it differs from the last commit before the pivot (roadmap and PROGRESS carry Cowork's uncommitted afternoon edits), git `e7b558e` is authoritative. The current version is [[10 Projects/AI Second Brain/PROGRESS]].
 
 # Progress Tracker — AI Second Brain Project
 

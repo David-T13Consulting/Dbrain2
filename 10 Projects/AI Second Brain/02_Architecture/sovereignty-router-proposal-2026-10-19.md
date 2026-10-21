@@ -12,7 +12,7 @@ status: approved
 ---
 # Sovereignty router and rent-not-buy plan (proposal, 19 Oct 2026)
 
-**Status: approved 19 Oct 2026** (Q121, Q127–Q131 → D134–D140); the plan now lives in [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]]. Demo: [[10 Projects/AI Second Brain/05_App_Prototype/sovereignty-router-demo.html|sovereignty-router-demo.html]] (simulated data; also published as a private Claude artifact "Dbrain Sovereignty Router").
+**Status: approved 19 Oct 2026; re-sequenced into three stages 21 Oct (D141); review fixes of 21 Oct applied (L0 redefined, CLOUD Act and quality claims marked unverified, Dutch out of scope per D121)** (Q121, Q127–Q131 → D134–D140); the plan now lives in [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]]. Demo: [[10 Projects/AI Second Brain/05_App_Prototype/sovereignty-router-demo.html|sovereignty-router-demo.html]] (simulated data; also published as a private Claude artifact "Dbrain Sovereignty Router").
 
 ## David's decision (19 Oct, stated in session)
 - **No hardware purchase. Compute is rented online.** Supersedes the Mac mini order (D53, D107) and answers Q121. Recorded as D134.
@@ -25,7 +25,7 @@ Building blocks exist for most layers. The larger cause of slow progress is proc
 | Layer | Today | Reusable | Verdict |
 |---|---|---|---|
 | Model | 4B local on the Air; T9b; host order | Scaleway Generative APIs (Paris, iliad group, HDS + ISO 27001): Qwen3.8-27B, Qwen3-235B, Mistral Small 3.2, Gemma 4, whisper-large-v3, qwen3-embedding-8b; listed about $0.15–0.75 per 1M input tokens | Rent |
-| Speech EN/FR/NL | S4 local ASR planned | Scaleway whisper-large-v3 (listed $0, verify); Mistral Voxtral, EN/FR/NL, $0.003/min batch, $0.006/min realtime, realtime weights Apache 2.0 | Rent; Dutch becomes cheap (Q98) |
+| Speech EN/FR | S4 local ASR planned | Scaleway whisper-large-v3 (listed $0, verify); Mistral Voxtral (EN, FR; also covers Dutch, out of scope under D121), $0.003/min batch, $0.006/min realtime, realtime weights Apache 2.0 | Rent |
 | Phone and voice | Shortcut "Ask Brain 5" | Open WebUI (self-hosted) + Open Relay iOS app ($4.99; CallKit voice, STT/TTS, citations) | Reuse; dbrain query service plugs in as a model |
 | Vault structure | PARA, frontmatter, AGENTS.md | claudesidian (2.6k stars, inactive 6 months); Karpathy LLM-wiki pattern (raw, wiki, schema; ingest, query, lint) | Keep ours; borrow the pattern's vocabulary |
 | Ingest / wiki upkeep (S3) | Custom writer | AgriciDaniel/claude-obsidian (MIT), sdyckjq-lab/llm-wiki-skill, Ar9av/obsidian-wiki (validation after writes) | Adapt one; keep git-diff approval as the governance layer |
@@ -38,8 +38,8 @@ RunPod and Modal not recommended: US companies, cold starts of about 10–50 s b
 ## Sovereignty levels
 | Level | Meaning | Example | US CLOUD Act exposure |
 |---|---|---|---|
-| L0 | Own rented GPU, EU-owned host | Hetzner GEX44 (DE) | None |
-| L1 | EU-owned provider, EU data centres | Scaleway, Mistral | None |
+| L0 | Own machine (redefined 21 Oct, D141: the Mac Air; a rented single-tenant GPU would also sit here) | Mac Air local model | None |
+| L1 | EU-owned provider, EU data centres | Scaleway, Mistral | None claimed; `unverified` (Mistral's privacy policy §7 allows some non-EU service providers) |
 | L2 | US cloud, EU region | Claude or Mistral on AWS Bedrock Frankfurt | Yes (contractual protection only) |
 | L3 | US frontier, global | Claude API | Yes |
 

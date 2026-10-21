@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 19 Oct 2026 · **Updated by:** Claude Code (session 52: pivot committed; PV1 steps 1–2 committed, step 4 in progress)
+**Last updated:** 21 Oct 2026 · **Updated by:** Cowork (three stages, D141)
 
 ---
 
@@ -12,13 +12,13 @@ review_status: codex-reviewed
 
 | | |
 |---|---|
-| **Phase** | **Pivot of 19 Oct (D134–D140): rented compute, sovereignty router.** W1 of the new plan starts 20 Oct (PV1). Kept from before: P2.2 query service, P2.8 phone screen, P2.5 F0–F3, P2.7 failure capture, AS1 commit gates. Pre-pivot state archived at [[40 Archive/AI Second Brain/PROGRESS-pre-pivot-2026-10-19]] |
-| **Schedule** | Weekly plan W1–W8 in [[10 Projects/AI Second Brain/04_Roadmap\|04_Roadmap]] §4 (20 Oct–13 Dec), demo-ready Fri 18 Dec 2026 (Q29); the S1–S6 week order is superseded (D135) |
+| **Phase** | **Three stages since 21 Oct (D141)**, inside the 19 Oct pivot (D134–D140): stage 1 second brain on the Mac (20 Oct–1 Nov, hard stop), stage 2 with Claude Code (2–8 Nov), stage 3 hosted EU with the router (9 Nov–6 Dec). Kept from before: P2.2 query service, P2.8 phone screen, P2.5 F0–F3, P2.7 failure capture, AS1 commit gates |
+| **Schedule** | [[10 Projects/AI Second Brain/04_Roadmap\|04_Roadmap]] §4: stages 1–3, then operate and demo 7–13 Dec; demo-ready Fri 18 Dec 2026 (Q29) |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
-| **Dependencies** | No hardware (D134). W1 needs David for the Scaleway account and key (PV1 step 3) and the provider-terms go (PV1 step 2); W3 needs his Claude API key |
-| **Next action** | **Next run → PV1** ([[90 System/briefs/PV1-rented-models-and-switchboard\|brief]]): step 4 (provider adapter, uncommitted in the runtime: README section, then Review 1/2); step 6 (switchboard core) can start without the key; step 5 after David's key and **Q136** (dev-case corpus lost the roadmap's section 0); M6b S5. **With David:** PV1 step 3 (key, later this week, Q134) and step 7 (P2.8 phone check, first L1 answer). Session history: the log below and the archive |
-| **Action for David** | PV1 step 3 this week: Scaleway account, budget alert, API key into the Keychain (`security add-generic-password -s dbrain-scaleway -a dbrain -w`); soft cap set at €50 (Q135); answer **Q136** and **Q137**; the P2.8 phone check with the lead; weekly-review task ID (D60). Q136, Q137 open in [[90 System/for-david\|for-david]] |
+| **Dependencies** | No hardware (D134). Stage 1: David for T9b step 4 (about 1 h) and the G2 phone check. Stage 3: Scaleway key (Q134) and Claude API key |
+| **Next action** | **"Pick up the loop" → Cowork's 21 Oct handoff, the open Tier 1a batch review 2/2, then [[90 System/briefs/PL1-mac-second-brain\|PL1]]** (stage 1): finish PV1 step 4, freeze dev-case evidence (Q136), T9b step 4 with David, voice, restore test, remember and correct from the phone; M6b S5 |
+| **Action for David** | T9b step 4 window (about 1 h, Mac on power); PL1 step 8 (G2 check by voice and the P2.8 check); Scaleway key before 9 Nov (Q134); `.claude/settings.json` keep-or-revert (session 52). Nothing open in [[90 System/for-david\|for-david]] |
 
 ### Original work-package progress — retained snapshot
 
@@ -68,6 +68,13 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Cowork — 21 Oct 2026 · three stages, small wins (D141)
+**David present.** He asked whether the Mac Air version could move first, then set the sequence: (1) a second brain on the Mac, with voice and vault updates from the phone over Tailscale; (2) a second brain with Claude Code working in the vault; (3) the hosted GDPR/EU second brain. Cowork's condition, accepted: three levels of one system, same vault, query service and evaluation set. **Recorded as D141**, with L0 redefined as the own machine (Mac Air). **Answers:** Q136 (a) frozen copy of the pre-pivot section 0; Q137 (a) Scaleway approved, after David asked why Mistral and not Gemma or Qwen (the question was about the host; Scaleway hosts all three; Gemma 4 26B-A4B added to the measurement); Q119 approved again so T9b step 4 runs in stage 1; stage 1 two weeks, hard stop 1 Nov.
+
+**Done:** roadmap §2–§5 rewritten in three stages; TASKS regrouped by stage; new brief [[90 System/briefs/PL1-mac-second-brain|PL1]]; PV1 brief re-sequenced; session 52's should-fixes for Cowork applied: the demo (classification at L0 when the ceiling is L0, no looser override after withholding, L0 = Mac, Dutch removed; artifact republished), "CLOUD Act: None" for L1 marked `unverified`, rented-model superiority marked `unverified`, Dutch out of scope per D121, archive banners no longer say "verbatim" (git `e7b558e` is authoritative). **Not touched:** runtime, protected files.
+
+**Pick up at:** "pick up the loop" → handoff, Tier 1a review 2/2, PL1.
 
 ### Session 52 — 19 Oct 2026 · Claude Code, lead loop (pivot committed; PV1 steps 1–2)
 **Authorization:** "pick up the loop" from David, 19 Oct; no ⛔ block in the handoff; Cowork's 19 Oct ~20:30 pivot entry worked first. David present; he closed the session for the night mid-step 4. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): PV1 step 1 review 1/2, one D129 design consult, the Tier 1a batch. No subagents. On battery: no caffeinate (D103).

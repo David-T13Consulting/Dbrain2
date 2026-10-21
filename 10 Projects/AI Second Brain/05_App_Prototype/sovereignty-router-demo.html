@@ -239,7 +239,7 @@ td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:n
           <div class="bar" id="bar"></div>
           <div class="profile" id="profile"></div>
         </div>
-        <p class="note">Claude prices: Anthropic's pricing page. Scaleway prices: third-party catalogue. Hetzner and the server price are estimates. €1 ≈ $1.10 assumed.</p>
+        <p class="note">Claude prices: Anthropic's pricing page. Scaleway prices: third-party catalogue. The server price is an estimate. Model quality scores are illustrative. €1 ≈ $1.10 assumed.</p>
       </aside>
     </div>
   </section>
@@ -276,12 +276,12 @@ td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:n
 (function(){
 const FX=1.10, BAR=85, IN_Q=6000, OUT_Q=500;
 const LEVELS=[
- {i:0,c:'L0',n:'Own GPU, EU',w:'Rented server, Hetzner (DE)'},
+ {i:0,c:'L0',n:'Own machine',w:'Mac Air, local model'},
  {i:1,c:'L1',n:'EU provider',w:'Scaleway / Mistral (FR)'},
  {i:2,c:'L2',n:'US cloud, EU region',w:'AWS Bedrock Frankfurt'},
  {i:3,c:'L3',n:'US frontier, global',w:'Claude API'}];
 const M={
- gpu:{n:'Qwen3 14B-class (own GPU)',l:0,i:0,o:0,s:6.5},
+ gpu:{n:'Gemma 4 E4B (Mac Air)',l:0,i:0,o:0,s:6.5},
  msmall:{n:'Mistral Small 3.2',l:1,i:.15,o:.35,s:1.8},
  q27:{n:'Qwen3.8-27B',l:1,i:.68,o:4,s:4.6},
  q235:{n:'Qwen3-235B',l:1,i:.75,o:2,s:5.9},
@@ -370,7 +370,7 @@ async function run(s){
   ladder(ceil,null); $('ceilnote').textContent='Ceiling L'+ceil;
   // 3 classify
   drawSteps(2,det); await wait(500);
-  det[2]={d:`Task type: <code>${s.task}</code>. Classified by Mistral Small at L1, so the question never leaves the floor.`,tag:''};
+  det[2]={d:`Task type: <code>${s.task}</code>. Classified by `+(ceil===0?'the Mac\'s local model at L0':'Mistral Small at L1')+`, inside the ceiling, so the question never leaves the strictest allowed level.`,tag:''};
   // 4 pick
   drawSteps(3,det); await wait(550);
   const table=ROUTES[s.task];
@@ -380,11 +380,11 @@ async function run(s){
   if(!pick){
     det[3]={d:`No model inside L${ceil} meets the ${BAR}% bar for ${s.task}`+(inside.length?` (best: ${M[inside[0][0]].n}, ${inside[0][1]}%)`:'')+'. No looser fallback.',tag:'<span class="tag bad">none</span>'};
     drawSteps(4,det); await wait(450);
-    det[4]={d:'Withheld. The reply explains why and offers to loosen the toggle for this question only.',tag:'<span class="tag bad">withheld</span>'};
+    det[4]={d:'Withheld. The reply explains why. Nothing was sent to another level.',tag:'<span class="tag bad">withheld</span>'};
     drawSteps(5,det); await wait(350);
     det[5]={d:`<code>ceiling=L${ceil} task=${s.task} model=none verdict=withheld reason=no_model_meets_bar</code>`,tag:''};
     drawSteps(6,det); typing.remove();
-    addBubble(`I can't answer this inside L${ceil}: no model at that level passed your evals for ${s.task}. Allow a looser level for this question only?<div class="meta">${lvs(ceil)}<span class="tag bad">withheld</span></div>`,'ai');
+    addBubble(`I can't answer this inside L${ceil}: no model at that level passed your evals for ${s.task}. Nothing was sent elsewhere; you can change your toggle in settings.<div class="meta">${lvs(ceil)}<span class="tag bad">withheld</span></div>`,'ai');
     log(s,ceil,why,null,0,0,'withheld'); running=false; return;
   }
   const skipped=table.filter(([m,sc])=>!(M[m].l<=ceil&&sc>=BAR)).map(([m,sc])=>`${M[m].n} (${M[m].l>ceil?'L'+M[m].l+' blocked':sc+'% below bar'})`);
@@ -421,14 +421,14 @@ const GROUPS=[
    {v:'msmall',n:'Mistral Small 3.2',d:'Fast lookups and short answers.',l:1},
    {v:'q27',n:'Qwen3.8-27B',d:'Stronger drafting and reasoning.',l:1},
    {v:'q235',n:'Qwen3-235B',d:'Largest EU option; strong synthesis.',l:1},
-   {v:'gpu',n:'Your own GPU',d:'Hetzner GEX44, 20 GB. €79 one-time setup. About 13B models at most.',l:0}]},
+   {v:'gpu',n:'Your Mac (local)',d:'Free. Small model; answers only while the Mac is awake.',l:0}]},
  {k:'prem',h:'Premium model',sub:'Used only for questions the router allows above L1.',opts:[
    {v:'none',n:'None',d:'Everything stays at the everyday model.',l:null},
    {v:'haiku',n:'Claude Haiku 5.5',d:'Cheap and quick.',l:3},
    {v:'sonEU',n:'Claude Sonnet 5.5, EU region',d:'Bedrock Frankfurt, +10% regional premium.',l:2},
    {v:'sonnet',n:'Claude Sonnet 5.5',d:'Best value for writing and synthesis.',l:3},
    {v:'opus',n:'Claude Opus 5.5',d:'Hardest questions.',l:3}]},
- {k:'speech',h:'Voice',sub:'Speech to text, English, French and Dutch.',opts:[
+ {k:'speech',h:'Voice',sub:'Speech to text, English and French.',opts:[
    {v:'whisper',n:'Whisper large-v3, Scaleway',d:'Listed at $0. Verify before relying on it.',l:1},
    {v:'voxtral',n:'Voxtral Realtime, Mistral',d:'Live transcription, $0.006 per minute.',l:1},
    {v:'off',n:'No voice',d:'Text only.',l:null}]},
@@ -442,13 +442,13 @@ function calc(c){
   const q=qpd*30;
   const L={};
   L.server=10;
-  if(c.every==='gpu'){L.every=0;L.gpu=184;}
+  if(c.every==='gpu'){L.every=0;L.gpu=0;}
   else{L.every=q*(1-share)*reqCost(c.every,IN_Q,OUT_Q)+(5e6*M[c.every].i+1e6*M[c.every].o)/1e6/FX;}
   L.prem=c.prem==='none'?0:q*share*reqCost(c.prem,IN_Q,OUT_Q);
   L.speech=c.speech==='voxtral'?vpd*30*0.006/FX:0;
   L.gw=c.gw==='eurouter'?39+0.09*(L.every+L.prem):0;
   const total=Object.values(L).reduce((a,b)=>a+b,0);
-  return {L,total,share,once:c.every==='gpu'?79:0};
+  return {L,total,share,once:0};
 }
 function money(v){return '€'+(Math.abs(v)<10?v.toFixed(2):Math.round(v));}
 function drawConfig(){
@@ -461,7 +461,7 @@ function drawConfig(){
   const r=base, L=r.L;
   $('total').innerHTML=`${money(r.total)}<small> /month</small>`;
   const rows=[['EU server (Open WebUI, router)',L.server]];
-  if(sel.every==='gpu')rows.push(['Own GPU server',L.gpu]); else rows.push([M[sel.every].n+' + wiki upkeep',L.every]);
+  if(sel.every==='gpu')rows.push(['Your Mac (local model)',L.gpu]); else rows.push([M[sel.every].n+' + wiki upkeep',L.every]);
   if(sel.prem!=='none')rows.push([M[sel.prem].n,L.prem]);
   rows.push(['Voice',L.speech]); rows.push(['Switchboard',L.gw]);
   $('lines').innerHTML=rows.map(([a,b])=>`<div><span>${a}</span><span>${money(b)}</span></div>`).join('')+(r.once?`<div><span>One-time setup</span><span>€${r.once}</span></div>`:'');

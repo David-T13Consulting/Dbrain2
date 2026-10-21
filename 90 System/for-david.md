@@ -12,14 +12,13 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (19 Oct night, session 52):** two questions are open (Q136, Q137); your four answers of session 52 (Q132–Q135) are under Answered. **Earlier (19 Oct evening, Cowork):** you answered everything open: Q119 (T9b parked), Q120 (honesty check), Q127–Q131 (the pivot). They are recorded as D134–D140 and the plan is rewritten.
+**Since you last looked (21 Oct, Cowork):** you chose three stages (Mac, Claude Code, hosted EU; D141) and answered Q119 (again), Q136 and Q137. Nothing is open.
 
 ## Open
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-| Q137 | Lead, 19 Oct (session 52) | [[90 System/briefs/PV1-rented-models-and-switchboard\|PV1]] step 2 | Approve the provider assessment in [[30 Resources/AI Vendors/scaleway]]? Proposed: Scaleway is a go for `public` and `internal` notes under data policy §5 (no training, zero retention by default, incident retention up to two weeks, Paris); Mistral direct only after you switch off its API training toggle. Codex raised this to Tier 2, so it needs your approval before any real call | (a) **Approve as written (recommended)** · (b) Approve Scaleway only; Mistral later · (c) Hold until the full DPA is read | PV1 steps 5–7 (any real call to Scaleway) | this week |
-| Q136 | Lead, 19 Oct (session 52) | [[90 System/briefs/PV1-rented-models-and-switchboard\|PV1]] step 5 | The pivot's roadmap rewrite removed the roadmap's section 0, which the 10 dev cases read, so the committed C2 baseline can no longer be reproduced (two runtime tests fail; the phone is unaffected). What should the dev-case corpus read? | (a) **A verbatim copy of the pre-pivot section 0 from git, outside the live roadmap, so the rented models are compared on the same evidence (recommended)** · (b) Re-run the C2 baseline on the new roadmap and compare to that · (c) Drop the roadmap from the dev corpus | PV1 step 5 (measurement) | this week |
+| — | | | Nothing open | | | |
 
 ## Answered (since 8 Oct)
 
@@ -29,6 +28,10 @@ Answers land here first; the lead clears each once recorded (D68). Older answere
 - **Q134 → "Later this week"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 3 (Scaleway account, budget alert, API key in the Keychain as service `dbrain-scaleway`, account `dbrain`, stored with `security add-generic-password -s dbrain-scaleway -a dbrain -w`) is done by David later this week; steps 5 and 6's live parts wait for it.
 - **Q133 → "Delete it"** (David, 19 Oct, session 52, asked by the lead in session): the untracked `.githooks/__pycache__/` that Cowork's read-only gate check left is deleted, not committed.
 - **Q132 → "Approve and commit"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 1, the D137 review budget in AGENTS.md and the brief template, and the D135 lines in the project CLAUDE.md (one-line summary, hosting row, roadmap row, terms row, Current scope without "Defer MCP sprawl", Dispatch line), as shown word for word after Codex review 1/2 PASS. Recorded in the PV1 brief.
+- **Stage 1 length → "2 weeks, hard stop 1 Nov"** (David, 21 Oct, Cowork session): voice, phone vault updates and model choice; anything unfinished moves to stage 3. D141.
+- **Q137 → "Approve as written"** (David, 21 Oct, Cowork session, after asking why only Mistral and not Gemma or Qwen; Cowork explained the question is about the host, and Scaleway hosts Qwen, Gemma and Mistral models): Scaleway approved for `public` and `internal`; Mistral's own service only after its API training toggle is off. PV1 step 5 adds Gemma 4 26B-A4B. D141.
+- **Q136 → "Frozen copy of the old text"** (David, 21 Oct, Cowork session): the dev cases read a verbatim copy of the pre-pivot roadmap section 0 from git `e7b558e`, outside the live roadmap. PL1 step 2.
+- **Q119 → "Approve, run it in stage 1"** (David, 21 Oct, Cowork session; supersedes the 19 Oct "park" answer for step 4): the T9b runner is approved as Tier 2; step 4 runs with David in stage 1 to pick the Mac model. D141.
 - **Q131 → "L1 or stricter until G3 and the lawyer review"** (David, 19 Oct, Cowork session): client-tier requests stay at L1 or stricter until G3 passes and the T0.7 lawyer review is done. D139.
 - **Q130 → "Automatic, stricter-only override, soft cap"** (David, 19 Oct, Cowork session): automatic routing with a level badge; manual override can only tighten; soft monthly cap with an alert, threshold set in W1. D138.
 - **Q129 → "1 review per step, 2 for security"** (David, 19 Oct, Cowork session): 1 Codex review per step, 2 for Tier 2 and security-boundary steps; amends D127. D137; AGENTS.md edit in PV1 step 1.

@@ -1194,7 +1194,7 @@ Review 2/2 · Tier 1a batch 2026-10-19 (session 53; Codex `gpt-6.1-sol`, high; `
 
 Review 1/2 · Tier 1a batch 2026-10-21 (session 53; Codex `gpt-6.1-sol`, high; vault `2daf21b..5f4c3a8`; recorded answers Q138–Q143, Q-cowork-21a–c): **FAIL**, one blocker (topology note: option B's "2–3x" unsourced, now `unverified`); escalations: the topology note's research conclusions to Tier 2 (David approved them, **Q145**) and T9c step 3 to Tier 2 (brief amended); should-fixes applied (backups wording "not tested", Q144 queued for T9c step 1, TASKS PL1 step 5 parked and 17 GB). Fixed forward in the next commit.
 
-Review 2/2 · Tier 1a batch 2026-10-21 (re-review of the fix-forward):
+Review 2/2 · Tier 1a batch 2026-10-21 (re-review of the fix-forward `5a47f1b`): **PASS**; two should-fixes applied in the closing commit (PL1 backups wording "not tested"; T9c's 17 GB).
 
 Cowork's handoff entries, moved verbatim:
 

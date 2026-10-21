@@ -1,7 +1,7 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54)
 review_status: codex-reviewed
 created: 2026-09-07
 updated: 2026-10-21
@@ -9,6 +9,23 @@ updated: 2026-10-21
 # Progress archive — sessions 1–39
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 50 — 15 Oct 2026 · Claude Code, lead loop (T9b steps 1–3; P2.8 B1 and B2 committed and live)
+**Authorization:** "pick up the loop" from David, 15 Oct, no ⛔ block in the handoff. David present: he answered Q115–Q118 in session. **Ended by** David ("let's stop for today, wrap up") before the phone check. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): P2.8 two D74 consults and 7 reviews, G1-inj one D129 design check, the Tier 1a batch. No subagents (D114). Codex hit its usage limit 14:27–14:41 (one review did not run); one call hung on stdin after moving to the background (no review; later calls close stdin).
+
+**What changed for David:** the phone screen is now readable: the answer, then each source as its note's title with one line from it, a plain status line, and the time only when it is over 8 s; no file paths, pipes or codes. When the notes do not answer, it says "No clear answer. Closest in your notes:" and shows the closest lines, never a half-answer. TwIL-LM3-Pro is downloaded (the 9 Oct build he chose), checked and ready to measure beside today's model in a ~1–3.5 h window with him.
+
+- **Cowork's T9b entry:** brief committed (`e2e9898`, Tier 1a).
+- **T9b steps 1–3:** Q115 (a). The pin had moved: the publisher replaced the Q4_K_M file on 9 Oct (`144a3ccb`); David chose the new file (**Q116**). Disk 19.50 GB → 21.74 GB of 25. One file fetched and verified (size and SHA-256 equal to the manifest). Loads on b11146 under the no-network sandbox; thinking switches off for TW-B. Runner `experiments/t9b_compare.py` (runtime `c573ff2`, Tier 1a, 11 tests; T9's runner gained hooks with unchanged defaults); dry check OK for all three configurations. Vault `c95a84e`. The D108 tripwire refused one download command because curl's `--fail` put "fail" after "Application Support"; rerun with `-f`.
+- **P2.8 B1:** D74 consult; built in worktree `~/Work/dbrain-runtime-p28` so the live service kept committed code. Review 1 **raised the tier to 2** (the title re-read skipped the label check: now used only if the bytes hash to what the query indexed) and found a quote cut hiding "CANCELLED" (no display cut now). Reviews 2–4 each found markdown structure shown as the line (header rows, tables without outer pipes, blockquote tables, comments); after review 4 a second D74 consult; David accepted the one-line residuals (**Q117**); containers, comments and definitions handled; **review 5/5 PASS**; David approved (**Q118**); runtime `6e51e4b`.
+- **P2.8 B2:** withheld answers show no model sentence (Q110). Review 1 failed (the leading date came from model-writable text; now the service's own label); review 2/2 PASS; runtime `88103ab`. Phone service restarted on it; in-process check on the real notes good (the 14 Oct question cites the climbing note, 10.0 s shown). **Phone check with David not done.**
+- **P2.5 F0–F3 reported to David** (session close message).
+- **G1-inj S1:** D129 design check taken and recorded (closed whole-answer forms; canary absence alone is not a pass). Not started.
+- **AS1 step 3:** not worked. Draft for its D74 consult (scratch, not sent): drop the destination listing; for an existing remote ref check `rev-list <local> ^<remote sha from stdin>`; refuse creating new remote refs (D50: push to master); ask what that misses (follow-tags, submodule recursion, protocol details).
+- **Not touched:** `weekly-desktop-digest`, AS1's uncommitted `.githooks/` and `tests/test_gates.py`, the M6b draft manifest. **Uncommitted, not the lead's:** the vault's `.claude/settings.json` (harness edit from a permission approval at 14:20: one added `additionalDirectories` entry, keys reordered); left for David.
+- **Keep-awake:** `caffeinate -ims` started at loop start, stopped at close.
+
+**Pick up at:** with David: P2.8 phone check, T9b window, worktree and stash removal, settings edit; then AS1 step 3 (D74 consult first), G1-inj S1.
 
 ### Session 47 — 13 Oct 2026 · Claude Code, lead loop (Q95 with David; D130; M6b S4 committed; P2.5 F2 parked again; AS1/D131)
 **Authorization:** "pick up the loop" from David, 13 Oct, with the order: Cowork's 13 Oct handoff, Q95 phone step first (David present), then Q101 (AGENTS.md line word for word) and the M6b S4 commit, then P2.5 F2 per D127 and F3. **Ended by** stop condition (1): F2 parked (F3 waits on it), M6b S5 is Tier 2 and comes after F2/F3 in David's order. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): 5 reviews, one D74 consult, the Tier 1a batch. No subagents (D114).

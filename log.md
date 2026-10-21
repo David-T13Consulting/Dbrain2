@@ -1206,3 +1206,9 @@ Suggested commit: `Three stages, small wins (D141, David 21 Oct): roadmap, TASKS
 **Addendum ~14:20:** David answered all three: **21c quality first** (T9b step 4 picks the strongest model that fits 24 GiB, latency second; L0 may exceed the 8 s p95); **21a Strava is not critical** (training data stays approved for external processing; critical health = health beyond training); **21b yes** (critical material stays out of Dbrain2 until wave 2). Recorded in for-david › Answered and the proposal note. His answers are the approval for the protected edits listed at the end of the proposal note (data policy, PV1 ceiling rule, D56 note for L0); those edits are not made yet. Extra changed file: none beyond the list above.
 
 **Cowork → lead, 21 Oct ~14:55 (pivot history; doc-only, Tier 1a).** David asked for one file recording the big decisions and why the plan pivoted. New, uncommitted: `10 Projects/AI Second Brain/07_Pivot_History.md` (synthesis of D1–D142; `review_status: unreviewed` until David checks the wording). Please add it to the Key documents table in the project `CLAUDE.md` if you agree (protected; David's request covers the note, not that edit). Suggested commit: `Pivot history: big decisions and why (David 21 Oct)`. Not touched: everything else.
+
+## [2026-10-21] session | Session 54: PV1 step 4 committed; PL1 steps 4 and 5 parked
+Lead run on "pick up the loop" (David present; Q146 answered in session). No handoff entries to work. Two D74 consults (PV1 step 4, PL1 step 5). PV1 step 4 committed, runtime `46b702b` (review 1/2 PASS). PL1 step 5 review 1/1 FAIL (three blockers), parked; PL1 step 4 (spoken field) review 1/1 FAIL (one blocker), parked as a patch outside git (Q146). Lead `claude-opus-5-5`, reviewer Codex `gpt-6.1-sol`; no subagents.
+
+Review 1/2 · Tier 1a batch 2026-10-21b (session 54; Codex `gpt-6.1-sol`, high; recorded answer Q146 and this run's bookkeeping):
+

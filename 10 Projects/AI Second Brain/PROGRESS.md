@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 21 Oct 2026 · **Updated by:** Claude Code (session 53: D141/D142 handoffs, T9b done, M6b closed; PV1 step 4 and PL1 step 5 parked)
+**Last updated:** 21 Oct 2026 · **Updated by:** Claude Code (session 54: PV1 step 4 committed; PL1 steps 4 and 5 parked)
 
 ---
 
@@ -17,7 +17,7 @@ review_status: codex-reviewed
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | No hardware (D134). Stage 1: David for T9c step 1 (candidates, disk budget, window; Q141) and the PL1 step 8 phone check. Stage 3: Scaleway key (Q134) and Claude API key |
-| **Next action** | **"Pick up the loop" → [[90 System/briefs/PL1-mac-second-brain\|PL1]]: D74 consults first on the two parked steps** (PV1 step 4 URL override; PL1 step 5 restore test, five blockers), then fresh reviews; then PL1 step 4 (voice in the Shortcut); steps 6–7 after step 5 passes and their file list is reviewed. T9c after David's step 1 answer. Uncommitted on purpose in the runtime: `dbrain/provider.py`, `tests/test_provider.py`, the README "Rented providers" hunk, `experiments/restore_test.py`, `tests/test_restore_test.py` |
+| **Next action** | **"Pick up the loop" → [[90 System/briefs/PL1-mac-second-brain\|PL1]]:** step 4 (voice): re-apply the parked patch (Q146), D74 consult, review, then build the voice Shortcut with David; step 5 (T4.2): D74 consult asking whether the findings converge, missing failure tests, review; steps 6–7 after step 5 passes and their file list is reviewed. T9c after Q144. Untracked on purpose in the runtime: `experiments/restore_test.py`, `tests/test_restore_test.py` |
 | **Action for David** | **T9c step 1:** pick at most two larger local models, the disk budget (17 of 25 GB used after Q143) and a window; PL1 step 8 (G2 by voice, P2.8 check); Scaleway key before 9 Nov (Q134); **backups:** whether anything outside git (models, logs, failure store) has an independent copy is not tested; Time Machine has no destination configured (seen during the T4.2 drill). **Q144** open in [[90 System/for-david\|for-david]] (T9c step 1) |
 
 ### Original work-package progress — retained snapshot
@@ -68,6 +68,15 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 54 — 21 Oct 2026 · Claude Code, lead loop (PV1 step 4 committed; PL1 steps 4 and 5 parked)
+**Authorization:** "pick up the loop" from David, 21 Oct; no ⛔ block, no new handoff entries. David present (Q146). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol`. No subagents. `caffeinate -ims` on AC power.
+- **PL1 step 1 = PV1 step 4: done** (runtime `46b702b`). D74 consult → no caller-supplied URL at all: a port-only test mode with fixed host, scheme and path, the Keychain refused in test mode, the endpoint rebuilt from the registry per call. Review 1/2 PASS; suite 574 OK.
+- **PL1 step 5 (T4.2): parked again.** D74 consult applied in full (regular files only without following links, report outside every git tree, snapshot before the drills, dirty or unpushed state fails, https on `github.com` only, sanitised git env, refusals for submodules, LFS, shallow, alternates, sparse). Review 1/1 FAIL with three narrower blockers (separate git dir for `--out`, repository-local fsmonitor, nested `.gitattributes`); fixed uncommitted; failure-path tests still to write.
+- **PL1 step 4 (voice), service part: parked.** `spoken` field (same answer as the screen, up to three titles). Review 1/1 FAIL: 423/503 kept "No answer." as spoken; fixed. Saved as a patch outside git and the files restored (Q146), so the phone runs committed code only. Shortcut generator planned on the 6 Oct pattern, not written.
+- **Observation:** step 5 has now failed three reviews, each on narrower edge cases; the next consult asks whether it converges or needs a different cut (for example, a narrower contract).
+
+**Pick up at:** PL1 step 4 (re-apply patch, consult, review, Shortcut with David), then step 5.
 
 ### Session 53 — 21 Oct 2026 · Claude Code, lead loop (D141/D142 handoffs; T9b done, C2 stays; M6b closed; two steps parked)
 **Authorization:** "pick up the loop" from David, 21 Oct; no ⛔ block in the handoff. David present; answered Q138–Q143 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents. On AC power: `caffeinate -ims` for the loop (D103), T9b under `caffeinate -dimsu`.
@@ -129,23 +138,6 @@ Newest first. One entry per working session — what happened, what changed, whe
 - **Not touched:** the `weekly-desktop-digest` folder (Cowork's); the runtime's M6b `manifest-draft.json` (kept on purpose); T9b step 4 and the P2.8 phone check (Q125).
 
 **Pick up at:** with David: P2.8 phone check, Q119 and T9b step 4. Then AS1 steps 4–5, G1-inj S1, M6b S5.
-
-### Session 50 — 15 Oct 2026 · Claude Code, lead loop (T9b steps 1–3; P2.8 B1 and B2 committed and live)
-**Authorization:** "pick up the loop" from David, 15 Oct, no ⛔ block in the handoff. David present: he answered Q115–Q118 in session. **Ended by** David ("let's stop for today, wrap up") before the phone check. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): P2.8 two D74 consults and 7 reviews, G1-inj one D129 design check, the Tier 1a batch. No subagents (D114). Codex hit its usage limit 14:27–14:41 (one review did not run); one call hung on stdin after moving to the background (no review; later calls close stdin).
-
-**What changed for David:** the phone screen is now readable: the answer, then each source as its note's title with one line from it, a plain status line, and the time only when it is over 8 s; no file paths, pipes or codes. When the notes do not answer, it says "No clear answer. Closest in your notes:" and shows the closest lines, never a half-answer. TwIL-LM3-Pro is downloaded (the 9 Oct build he chose), checked and ready to measure beside today's model in a ~1–3.5 h window with him.
-
-- **Cowork's T9b entry:** brief committed (`e2e9898`, Tier 1a).
-- **T9b steps 1–3:** Q115 (a). The pin had moved: the publisher replaced the Q4_K_M file on 9 Oct (`144a3ccb`); David chose the new file (**Q116**). Disk 19.50 GB → 21.74 GB of 25. One file fetched and verified (size and SHA-256 equal to the manifest). Loads on b11146 under the no-network sandbox; thinking switches off for TW-B. Runner `experiments/t9b_compare.py` (runtime `c573ff2`, Tier 1a, 11 tests; T9's runner gained hooks with unchanged defaults); dry check OK for all three configurations. Vault `c95a84e`. The D108 tripwire refused one download command because curl's `--fail` put "fail" after "Application Support"; rerun with `-f`.
-- **P2.8 B1:** D74 consult; built in worktree `~/Work/dbrain-runtime-p28` so the live service kept committed code. Review 1 **raised the tier to 2** (the title re-read skipped the label check: now used only if the bytes hash to what the query indexed) and found a quote cut hiding "CANCELLED" (no display cut now). Reviews 2–4 each found markdown structure shown as the line (header rows, tables without outer pipes, blockquote tables, comments); after review 4 a second D74 consult; David accepted the one-line residuals (**Q117**); containers, comments and definitions handled; **review 5/5 PASS**; David approved (**Q118**); runtime `6e51e4b`.
-- **P2.8 B2:** withheld answers show no model sentence (Q110). Review 1 failed (the leading date came from model-writable text; now the service's own label); review 2/2 PASS; runtime `88103ab`. Phone service restarted on it; in-process check on the real notes good (the 14 Oct question cites the climbing note, 10.0 s shown). **Phone check with David not done.**
-- **P2.5 F0–F3 reported to David** (session close message).
-- **G1-inj S1:** D129 design check taken and recorded (closed whole-answer forms; canary absence alone is not a pass). Not started.
-- **AS1 step 3:** not worked. Draft for its D74 consult (scratch, not sent): drop the destination listing; for an existing remote ref check `rev-list <local> ^<remote sha from stdin>`; refuse creating new remote refs (D50: push to master); ask what that misses (follow-tags, submodule recursion, protocol details).
-- **Not touched:** `weekly-desktop-digest`, AS1's uncommitted `.githooks/` and `tests/test_gates.py`, the M6b draft manifest. **Uncommitted, not the lead's:** the vault's `.claude/settings.json` (harness edit from a permission approval at 14:20: one added `additionalDirectories` entry, keys reordered); left for David.
-- **Keep-awake:** `caffeinate -ims` started at loop start, stopped at close.
-
-**Pick up at:** with David: P2.8 phone check, T9b window, worktree and stash removal, settings edit; then AS1 step 3 (D74 consult first), G1-inj S1.
 
 ## How to resume
 

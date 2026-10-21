@@ -1210,5 +1210,7 @@ Suggested commit: `Three stages, small wins (D141, David 21 Oct): roadmap, TASKS
 ## [2026-10-21] session | Session 54: PV1 step 4 committed; PL1 steps 4 and 5 parked
 Lead run on "pick up the loop" (David present; Q146 answered in session). No handoff entries to work. Two D74 consults (PV1 step 4, PL1 step 5). PV1 step 4 committed, runtime `46b702b` (review 1/2 PASS). PL1 step 5 review 1/1 FAIL (three blockers), parked; PL1 step 4 (spoken field) review 1/1 FAIL (one blocker), parked as a patch outside git (Q146). Lead `claude-opus-5-5`, reviewer Codex `gpt-6.1-sol`; no subagents.
 
-Review 1/2 · Tier 1a batch 2026-10-21b (session 54; Codex `gpt-6.1-sol`, high; recorded answer Q146 and this run's bookkeeping):
+Review 1/2 · Tier 1a batch 2026-10-21b (session 54; Codex `gpt-6.1-sol`, high; recorded answer Q146 and this run's bookkeeping): **FAIL**, one blocker (the planned Shortcut generator would write the token into temporary files, against data policy §2.2: plan amended, David to be asked); should-fix (step 5 failed two reviews, not three) applied. Fixed forward in the next commit.
+
+Review 2/2 · Tier 1a batch 2026-10-21b (re-review of the fix):
 

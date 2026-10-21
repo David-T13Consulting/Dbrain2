@@ -44,5 +44,9 @@ From the iPhone over Tailscale, by voice, David asks and hears a cited answer, a
 - English and French only (D121).
 
 ## Review
+- **Step 1 (= PV1 step 4, security boundary): PARKED 21 Oct** after reviews 1/2 and 2/2 failed (two host-parsing blockers in the test-only URL override); record in the PV1 brief. Not blocking stage 1: the adapter is wired into nothing.
+- **Step 2 (Tier 1b).** Q138 (David, 21 Oct) refined Q136: the dev cases read the three corpus files byte for byte as the C2 baseline read them (vault `8990bbe`), not section 0 of `e7b558e`. Runtime: `evidence/devcase-corpus-8990bbe/` (three copied files, sha256 equal to C2's record), `Profile.vault`, `DEFAULT` and `DEVCASES` read it, `index.build` uses the profile's vault when the caller names none; a test pins corpus version `878a08ea6f57` and the three hashes. The two failing read-only tests pass again. Same corpus as T9 (`878a08ea6f57`), so T9b's C2 blocks compare like for like with T9.
+  - Review 1/1 · PL1 step 2 — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**. Should-fix applied: `serve.py`'s title reread uses the same effective root as `index.build`. Suite 564 OK. Committed runtime `a9b8746` (`David-approved: Q138`, as the gate treats the copied AGENTS.md and data policy as protected).
+- **Step 3 (T9b step 4, with David): done 21 Oct.** C2 stays the Mac's default; TwIL fails the safety gate in both configurations (6/8 correct vs C2's 5/8). David, **Q141**: keep C2, measure one or two larger models that fit 24 GiB next (T9c brief). Record in the T9b brief and [[10 Projects/AI Second Brain/02_Architecture/t9b-twil-lm3-pro-2026-10-21|results note]].
 
 ## Outcome

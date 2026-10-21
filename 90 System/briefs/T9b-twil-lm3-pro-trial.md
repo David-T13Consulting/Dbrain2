@@ -2,7 +2,7 @@
 classification: internal
 task: T9b
 owner: "@code"
-status: blocked-on-david   # steps 1-3 done; Q119 approved 21 Oct (D141); step 4 needs only David's window (PL1 step 3)
+status: done   # 21 Oct, session 53: steps 4-6 done; outcome Q141 (C2 stays; T9c next)
 models: []
 created: 2026-10-15
 source: David, 15 Oct (asked Cowork to add TwIL-LM3-Pro to the model-comparison brief); D99; weekly local-model review 15 Oct (benchmark ledger, README shortlist, approved as unverified under Q114)
@@ -88,3 +88,5 @@ Same as T9 unless listed: P2.2 pipeline on the three-file `devcases` corpus, lex
 ## Review
 - Tier 1a batch 2026-10-15, review 1/2 (Codex `gpt-6.1-sol`, high, read-only), runtime `c573ff2` and the vault records: **PASS**, no blocker; T9's behaviour unchanged, the runner implements the declared schedule, configurations and drift rule; Q115–Q116 applied as answered. Should-fixes: (1) **tier raised to 2** for the runner (it indexes the dev-case corpus and writes lasting evidence): queued as **Q119** for David's approval before step 4; (2) the duration's upper bound left out a TW-A drift re-run: corrected to about 3.5 h.
 ## Outcome
+- **Run notes, session 53 (21 Oct, lead `claude-opus-5-5`):** Q119 approved again (D141), window approved by David in session (Q139). Phone service stopped for the window and restarted after (health ok). Runner at runtime `a9b8746` (PL1 step 2: the frozen 8 Oct corpus `878a08ea6f57`, same as T9). Step 4: all seven blocks ok, no drift re-run (C2 position 4 +24 %, inside 25 %), about 1 h. Step 5: lead verdicts first, then Codex `gpt-6.1-sol` blind on a masked packet run from a folder holding only the packet and rubric; 56/60 agreement, the 4 differences are two `write_approval` findings where Codex was stricter and right. Results note: [[10 Projects/AI Second Brain/02_Architecture/t9b-twil-lm3-pro-2026-10-21]] (draft). Step 6: outcome asked of David in session (present): **Q141 → keep C2, measure larger models (T9c)**; no ledger rows proposed.
+- **Done when:** (1) measured in both configurations; (2) note drafted; (3) Codex re-judged blind; (4) queued and answered, default model unchanged, licence position unchanged; (5) no new download this run.

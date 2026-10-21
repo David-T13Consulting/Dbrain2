@@ -10,8 +10,9 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 
 ## ▶ Stage 1 · Second brain on the Mac (20 Oct–1 Nov, hard stop) — [[90 System/briefs/PL1-mac-second-brain|PL1]]
 
-- [ ] `@code` ⭐ **PL1** steps 1–7: finish PV1 step 4 (adapter, unused until stage 3); freeze dev-case evidence (Q136); T9b step 4 with David (Q119); voice in the Shortcut; restore test (T4.2); remember from the phone (P3.0 Part 1); correct from the phone (P3.1–P3.3 minimal)
-- [ ] `@david` **T9b step 4** window, about 1 h, Mac on power (PL1 step 3); pick quality first, latency second (Q-cowork-21c)
+- [ ] `@code` ⭐ **PL1** steps 1, 4–7 (step 1 parked 21 Oct; steps 2–3 done): PV1 step 4 adapter (D74 consult first); voice in the Shortcut; restore test (T4.2); remember from the phone (P3.0 Part 1); correct from the phone (P3.1–P3.3 minimal)
+- [ ] `@david` **T9c step 1:** pick at most two larger candidates, the disk budget (Q8, about 19 of 25 GB used) and a measuring window — [[90 System/briefs/T9c-larger-local-model|T9c]] (Q141; T9b done 21 Oct, C2 stays)
+- [ ] `@code` **T9c** steps 2–6 after David's step 1 answer
 - [ ] `@david` **PL1 step 8:** G2 check by voice from the phone, plus the P2.8 phone check
 - [ ] `@code` **M6b S5** Results note, then close M6b (lexical baseline stays; D140; one review) — [[90 System/briefs/M6b-embedding-eval|M6b]]
 - [ ] `@code` **P2.7** retention-after-downtime test (D126), while on the Mac

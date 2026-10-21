@@ -2,7 +2,7 @@
 classification: internal
 task: M6b   # final ID, assigned by the lead 8 Oct (session 37)
 owner: "@code"
-status: in-progress # S4 committed 13 Oct (session 47, runtime 0736b29) after Q101 (a) / D130; S5 (results note, Tier 2) next
+status: done   # 21 Oct, session 53: S5 note approved by David (Q142); M6b closed (D140); embedding files removed (Q143)
 models: []
 created: 2026-10-08
 source: David, 8 Oct ("Yes", run the EmbeddingGemma 2 evaluation); desk note [[30 Resources/Local AI/embeddinggemma-2-evaluation]]
@@ -112,6 +112,11 @@ Manifest committed; raw rankings and scores saved; results note written with per
 - Review 2/2 · M6b S4 (re-review after review 1's blocker, now ratified by D130; diff unchanged since review 1 except this record)
   PASS (Codex `gpt-6.1-sol`, high, read-only): blocker resolved by Q101 (a) / D130; all artifact, log and version-list hashes re-checked and match. Should-fix, applied: the status line. **S4 committed:** runtime `0736b29`.
 - Run notes (D114): no subagents.
+
+**Run of 21 Oct (session 53): S5, results note.** Lead `claude-opus-5-5`. D137 budget: S5 is Tier 2, 2 reviews. Note drafted from `scores.json` (per-case values copied by script, not by hand): [[10 Projects/AI Second Brain/02_Architecture/m6b-embedding-eval-2026-10-12]].
+- Review 1/2 · M6b S5 — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**; every value checked against `scores.json`, item 7 applied literally. Should-fix, applied: quote the 1 Oct equivalent-wording credit beside the result (6 of 7, French the miss; D124), scoring unchanged. Lead removed one unsupported sentence of its own. Waits uncommitted for David's approval (Tier 2).
+
+- **Q142 (David, in session): approved as written; committed. Q143: the two embedding models and `m6b-py312` removed.** S6 does not apply (no recovered miss).
 
 ## Outcome
 (owner)

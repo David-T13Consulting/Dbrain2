@@ -1,7 +1,7 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54), session 51 on 21 Oct 2026 (session 55)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54), session 51 on 21 Oct 2026 (session 55), session 52 on 21 Oct 2026 (session 55, batch review)
 review_status: codex-reviewed
 created: 2026-09-07
 updated: 2026-10-21
@@ -9,6 +9,17 @@ updated: 2026-10-21
 # Progress archive — sessions 1–39
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 52 — 19 Oct 2026 · Claude Code, lead loop (pivot committed; PV1 steps 1–2)
+**Authorization:** "pick up the loop" from David, 19 Oct; no ⛔ block in the handoff; Cowork's 19 Oct ~20:30 pivot entry worked first. David present; he closed the session for the night mid-step 4. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): PV1 step 1 review 1/2, one D129 design consult, the Tier 1a batch. No subagents. On battery: no caffeinate (D103).
+
+**Done:** Cowork's pivot committed as two commits (`8356d89` decisions, answers and archive; `3d4b608` roadmap, TASKS, PV1 brief, proposal, demo), D134–D140 kept as numbered. **PV1 step 1** (Tier 2): D137 review budget in AGENTS.md and the brief template, D135 lines in the project CLAUDE.md; Codex 1/2 PASS, David approved the diff (Q132), `8220e1a`; stray `.githooks/__pycache__/` deleted (Q133). **PV1 step 2** (Tier 1a): [[30 Resources/AI Vendors/scaleway]], go for `internal` on Scaleway (no training, zero retention by default, incident retention up to two weeks, Paris); Mistral direct only after its API training toggle is off; `de85fe8`. Answers Q134 (key later this week) and Q135 (cap €50).
+
+**In progress:** PV1 step 4, provider adapter: `dbrain/provider.py` and `tests/test_provider.py` uncommitted in the runtime, 25 tests pass, not reviewed (0/2). **Found:** the roadmap rewrite removed section 0, which the dev-case corpus reads: two runtime read-only tests fail and the C2 baseline cannot be reproduced (Q136); the archived roadmap and PROGRESS copies come from Cowork's ~15:40 working copy, not HEAD. **Not done:** PROGRESS oldest-session archiving (four sessions remain listed). **Left for David:** `.claude/settings.json` carries an uncommitted harness edit from tonight's web-fetch permission approvals (five WebSearch/WebFetch allows added; the deny list and `model` key only moved): keep or revert, his call (protected file).
+
+**Tier 1a batch 2026-10-19 (session 52):** Review 1/2 **FAIL**, one blocker: PV1 step 2 raised to Tier 2 (its go/no-go is a domain conclusion); fixed forward (assessment marked proposed, **Q137** for David's approval); review 2/2 not taken, as David closed the session, so the fix is unreviewed. **Unfixed should-fix, for Cowork (owner of these texts):** (1) the demo classifies at L1 even when the ceiling is L0 and offers a looser override after withholding, against D138; (2) "CLOUD Act exposure: None" for L0/L1 in the roadmap and proposal needs a source or `unverified` (Mistral's privacy policy §7 allows some non-EU service providers); (3) the archive copies (roadmap, TASKS, PROGRESS) are not verbatim pre-pivot, correct the "verbatim" wording; (4) the proposal and demo list Dutch, against D121; (5) D135/D140's "rented models outclass the local ones" is an expectation until PV1 step 5: label it `unverified`. Fixed: the Mistral feedback-training citation, and for-david's "Nothing is open".
+
+**Pick up at:** Tier 1a batch review 2/2 on the fix, then PV1 step 4 (README, Review 1/2, commit), then step 6; Q136 and Q137 before step 5.
 
 ### Session 51 — 19 Oct 2026 · Claude Code, lead loop (WIP clean-up; AS1 step 3 committed, gates installed)
 **Authorization:** "pick up the loop to finalize what's WIP. let's not start anything new but make sure we're cleaning up everything that's needed" from David, 19 Oct; no ⛔ block in the handoff. David present: he answered Q122–Q126 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): one D74 consult, AS1 step 3 review 1/5, the Tier 1a batch. No subagents (D114).

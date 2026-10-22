@@ -12,7 +12,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 **Entry format:** `ID · from · brief · question · options (recommended first) · what it blocks · urgency (today / this week / whenever)`. Answered entries move to *Answered* with the date and answer; the lead clears them once they are recorded in PROGRESS/briefs.
 
-**Since you last looked (21 Oct, session 53, lead):** you answered Q138–Q143 in session (corpus, T9b window, settings, Mac model, M6b note, disk); **Q144 is open** (T9c candidates, budget, window). **Earlier, 21 Oct (Cowork):** you chose three stages (Mac, Claude Code, hosted EU; D141) and answered Q119 (again), Q136 and Q137. Nothing is open. **21 Oct ~14:15 (Cowork):** you chose option A for the agent topology and defined the critical tier; three follow-ups answered 14:15 (see Answered). Nothing is open.
+**Since you last looked (21 Oct, session 55, lead):** you answered Q144 and Q147–Q152 in session (T9c candidates and disk, voice token, T4.2 scope, spoken evidence words, Keychain for the two clones, T9c run, Mac model). Nothing is open. **Earlier (session 53):** Q138–Q143. **Earlier, 21 Oct (Cowork):** you chose three stages (Mac, Claude Code, hosted EU; D141) and answered Q119 (again), Q136 and Q137. Nothing is open. **21 Oct ~14:15 (Cowork):** you chose option A for the agent topology and defined the critical tier; three follow-ups answered 14:15 (see Answered). Nothing is open.
 
 ## Open
 

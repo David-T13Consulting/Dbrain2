@@ -115,7 +115,7 @@ Checked 22 Oct (run started about 06:50 UTC) from primary sources through a summ
 - 15 Oct shortlist item "Gemma 4 E2B-it QAT as a latency test against the default E4B": the default is now 26B-A4B (Q152), so the comparison point moved.
 - TwIL-LM3 revisions `145ff05e` (8 Oct register) and `e4f94da5` (15 Oct API): superseded by head `7857a94` (card fix, 8 Oct), weights last changed by `715bde2` (v5 MGPO).
 
-**Shortlist for a separate bounded run (no weights downloaded here; max two):**
+**Shortlist for a separate bounded run (no weights downloaded here; max two):** **Proposed, not adopted (David kept it as a proposal, Q161, 22 Oct): the claims are `unverified` engineering estimates; neither item runs without its own authorised, bounded run.**
 
 1. **Gemma 4 26B-A4B-it QAT Q4_0 plus its `-it-assistant` MTP drafter, latency only.** Reason: the new default misses D56's 8 s target at p95 (13.8 s in T9c), and a drafter is the one publisher-documented way to cut decode time without changing outputs. Honest caveats: speedup for this MoE at batch size 1 is doubtful by Google's own text; llama.cpp support is reported for E2B/E4B assistants only (secondary source); the drafter adds memory on top of 15.3 GiB RSS. **First step is a read-only check of llama.cpp support for the 26B-A4B drafter, which needs no download.** If unsupported, drop it.
 2. **Qwen3-ASR-1.7B vs Whisper large-v3-turbo on French/English synthetic dictation (WER, critical errors), conditional.** Reason: the README table lists voice capture as an unmeasured need and no local ASR number exists; Granite Speech is excluded (English only). Relevance depends on whether stage-1 voice (iPhone dictation) is ever replaced by local ASR; `unverified`, so run it only if the lead confirms that need.

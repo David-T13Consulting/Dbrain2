@@ -1,9 +1,9 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-15
-next_review: 2026-10-22
-automation_status: activated 2026-10-01 (D60); runs 2026-10-08 and 2026-10-15 produced output; task ID and timezone still pending
+last_reviewed: 2026-10-22
+next_review: 2026-10-29
+automation_status: activated 2026-10-01 (D60); runs 2026-10-08, 2026-10-15 and 2026-10-22 produced output; task ID and timezone still pending
 ---
 # Weekly local-model review
 
@@ -53,6 +53,7 @@ Copy into a desktop local-project scheduled task, using the proposed timezone/ca
 | 2026-10-01 | Task created in the desktop local-project scheduler by David | D60; task ID and next-run confirmation **still to be pasted here** |
 | 2026-10-08 | First scheduled run (Thu), session `session_01Dyiwy1hfwHSo73fG8E1Vjx` | Ran in a cloud session through the linked-computer tools; origin unreachable (no credentials), so branch `cowork/local-model-review-2026-10-08` is local only. Output: ledger entry 2026-10-08 and the notes in [[30 Resources/Local AI/benchmark-ledger]]. No missed run. Duration: not recorded. Coverage gap: metadata and revision checks only; step 2's review of publisher collections and release notes was not completed. Task ID and timezone still not pasted |
 | 2026-10-15 | Second scheduled run (Thu), session `session_01THjSYmKM6RvEDRF4ZUthoP`, trigger `trig_01BC7KmN6XKUpANtXX3gc6sE` | Cloud session through the linked-computer tools; fired 08:00 UTC against a 06:52 UTC schedule. No missed run. Output: ledger entry 2026-10-15, source-register check, README shortlist; edits left uncommitted on master per the 8 Oct git rule and listed in `90 System/handoff.md`. Coverage: step 2 reviewed through registry listings and release pages, not model cards; nine of 17 pinned repos and whisper.cpp not re-checked. Duration: not recorded. Task ID and timezone still not pasted |
-| Pending | Third run due 22 Oct 2026; review the first two runs before relying on the cadence | Record actual output, duration and any missed/failed run |
+| 2026-10-22 | Third scheduled run (Thu), session `session_01Tn2L39VG6xmNbPkkxSSsQr` | Cloud session through the linked-computer tools; started about 06:50 UTC. No missed run. Output: ledger entry 2026-10-22 (corrects the 15 Oct TwIL-LM3-Pro revision reading, Q116; records T9b/T9c local results and Gemma 4 MTP drafters), source-register check, README shortlist; edits left uncommitted on master and listed in `90 System/handoff.md`. Coverage: nine pinned repos not re-queried on 15 Oct now re-queried; webAI organisation, TwIL commit pages, license text, runtimes and four publisher listings checked; eight pinned repos from 15 Oct, model-card text and several publishers not re-checked (see ledger gaps). Task ID and timezone still not pasted. Duration: not recorded |
+| Pending | Fourth run due 29 Oct 2026; the first two runs have now been reviewed in use, cadence holding | Record actual output, duration and any missed/failed run |
 
 Weekly monitoring does not mean upgrading weekly. Candidate promotion requires the project's regression/acceptance gates and rollback plan.

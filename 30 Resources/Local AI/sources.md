@@ -1,8 +1,8 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-15
-next_review: 2026-10-22
+last_reviewed: 2026-10-22
+next_review: 2026-10-29
 ---
 # Local AI source register
 
@@ -87,6 +87,24 @@ Re-queried through the Hugging Face model API: 8 of the 17 pinned repositories (
 | [`ibm-granite/granite-speech-5.0-470m-turboctc`](https://huggingface.co/ibm-granite/granite-speech-5.0-470m-turboctc) | listed only (created 2026-08-04, modified 2026-09-18); card not read | apache-2.0 |
 | [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases) | v0.6.0 (5 Oct), b11435 pre-release (6 Oct); session-format version bump noted | MIT (not re-verified) |
 | [mlx-lm releases](https://github.com/ml-explore/mlx-lm/releases) | v0.31.3 still latest | MIT (not re-verified) |
+
+Evidence archive: no new snapshots saved outside the vault this week.
+
+## Weekly check — 22 October 2026
+
+Third scheduled run. Re-queried through the Hugging Face model API (summarizing fetch tool): the **nine pinned repositories not re-queried on 15 Oct** (Qwen3-Coder-30B-A3B-Instruct, Ministral-3-8B-Instruct-2512, Qwen3-ASR-0.6B, Qwen3-TTS-12Hz-0.6B-CustomVoice, Kokoro-82M, FLUX.1-schnell, Z-Image-Turbo, Qwen3-Embedding-0.6B, Qwen3-Reranker-0.6B). Sha and license match the table; no change since 1 Oct. The eight re-queried on 15 Oct were **not** repeated this week, so all 17 were confirmed at least once in the last two weeks, none twice. Registry metadata only; no model-card text re-read.
+
+| Source | Observation (retrieved 22 Oct) | License |
+|---|---|---|
+| [`webAI-Official/TwIL-LM3-Pro`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro) | **Revision moved on 9 Oct.** Commit list head is `144a3cc` "Replace TwIL-LM3-Pro-Q4_K_M.gguf with new build (#1)", 2026-10-09 18:12; the organisation listing API shows lastModified 2026-10-09T18:12:15Z. `4214aaa4` (30 Sep) is the previous head. **Correction of 15 Oct:** the "sha unchanged since 30 Sep" reading was wrong (Q116); the single-repo API answer fetched today still returned `4214aaa4`, a stale summary, so use the commit page and the listing, not that answer. T9b pinned the 9 Oct file (Q116) | webAI Non-Commercial License ver. 1.0, unchanged |
+| [`webAI-Official/TwIL-LM3`](https://huggingface.co/webAI-Official/TwIL-LM3) | Listing API lastModified 2026-10-08T16:21Z; head `7857a94` "Fix TwIL-LM3 model card references (#3)". This resolves the 15 Oct three-way conflict in favour of the commit page and listing; `715bde2` "v5 MGPO weights" is the last weights commit (date not shown, relative only). The sha written on 8 Oct (`145ff05e`) and the 15 Oct API reading (`e4f94da5`) are **superseded**, not re-derived | same |
+| [`webAI-Official/TwIL-LM`](https://huggingface.co/webAI-Official/TwIL-LM), [`TwIL-LM2`](https://huggingface.co/webAI-Official/TwIL-LM2), [`TwIL-LM3-Pro-LiteRT-LM`](https://huggingface.co/webAI-Official/TwIL-LM3-Pro-LiteRT-LM) | TwIL-LM: head `39dc16b` (16 Aug). TwIL-LM2: unchanged since 29 Sep. LiteRT-LM bundle: unchanged (created and last modified 2026-10-01; INT4 2.19 GB, INT8 3.76 GB, context 4,096, no scores) | same |
+| [webAI-Official organisation](https://huggingface.co/webAI-Official) | Listing API returns **18 repos** (15 Oct note said 17; the extra is `webAI-ColVec1-4b`, created 2026-04-05, so a counting difference, not a new repo). **No repo created after 2026-10-01.** The organisation web page showed "about 7 hours ago" for TwIL-LM and TwIL-LM3; the API shows 16 Aug and 8 Oct, so that text is not trusted | mixed |
+| [`google/gemma-4-12B-it-assistant`](https://huggingface.co/google/gemma-4-12B-it-assistant) and 26B-A4B / E2B / E4B "assistant" repos | Multi-token-prediction drafters for speculative decoding (12B drafter about 0.4B parameters, BF16). First recorded here; repos date from April to August. `google/gemma-4-26B-A4B-it-assistant` created 2026-04-23, `…-qat-q4_0-unquantized-assistant` 2026-05-29, `gemma-4-12B-it-assistant` modified 2026-08-20. Revisions not pinned | apache-2.0 (12B card) |
+| [`google/gemma-4-26B-A4B-it-qat-q4_0-gguf`](https://huggingface.co/google/gemma-4-26B-A4B-it-qat-q4_0-gguf), [`google/gemma-4-E2B-it-qat-q4_0-gguf`](https://huggingface.co/google/gemma-4-E2B-it-qat-q4_0-gguf) | Exist (created 2026-05-01). The 26B-A4B GGUF is the Mac's default since 21 Oct (T9c revision `d1c082be`, 14.44 GB, per the T9c note); not re-queried | apache-2.0 (declared in T9c) |
+| [`ibm-granite/granite-speech-5.0-470m-turboctc`](https://huggingface.co/ibm-granite/granite-speech-5.0-470m-turboctc) | Card read: about 470M parameters, **English only**, non-autoregressive CTC, released 2026-08-25; MLX via mlx-audio 0.5.1+, GGUF via transcribe.cpp; WER shown only in charts | apache-2.0 |
+| Publisher listings (API, newest first) | Qwen: newest items are Qwen3.8-27B-FP8 (2026-08-13) and ASR/aligner `-hf` variants; nothing from October. Google: newest timesfm-3.0 (2026-08-28) and the Gemma 4 assistants; IBM: granite-4.2-30b/8b (2026-09-04); Mistral: Mistral-Large-3 NVFP4 (2026-09-11). The Qwen listing appears sorted by creation date and omits the 20 Sep PE-T2I/PE-I2I repos, so "no new Qwen release" stays weakly supported | various |
+| llama.cpp, mlx-lm, whisper.cpp releases | llama.cpp: tags now `b11800`–`b11804` (21–22 Oct); the five newest list no Metal/Gemma 4 change. mlx-lm: v0.31.3 (22 Apr) still latest. whisper.cpp: **v1.9.5 (6 Oct, ggml 0.26.0)**, newer than the v1.9.4 recorded on 8 Oct | MIT (not re-verified) |
 
 Evidence archive: no new snapshots saved outside the vault this week.
 

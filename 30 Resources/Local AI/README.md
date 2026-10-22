@@ -1,15 +1,15 @@
 ---
 classification: internal
 created: 2026-10-01
-last_reviewed: 2026-10-15
-next_review: 2026-10-22
+last_reviewed: 2026-10-22
+next_review: 2026-10-29
 status: maintained research; deployment choices provisional
 ---
 # Local AI — understanding and choosing models
 
 Local AI is a collection of components, not one model that does everything. This guide connects current, verified model releases to the second-brain build. It is a representative shortlist, not an exhaustive leaderboard or a claim that every entry is the latest release.
 
-David requested this knowledge base and weekly benchmark updates on 1 October 2026. **The initial research is complete; the weekly review was activated by David on 1 October (D60) and its first scheduled run was 8 October and the second 15 October.** See [[90 System/weekly-local-model-review]] for the procedure and operating record.
+David requested this knowledge base and weekly benchmark updates on 1 October 2026. **The initial research is complete; the weekly review was activated by David on 1 October (D60) and its first scheduled run was 8 October, the second 15 October and the third 22 October.** See [[90 System/weekly-local-model-review]] for the procedure and operating record.
 
 ## Read in this order
 
@@ -37,12 +37,12 @@ These are engineering recommendations, not accepted deployment decisions.
 
 The measured host is an M2 Mac with 24 GiB unified memory. This supports small-model experiments; it does not prove that several models can run together acceptably. The current build order remains [[10 Projects/AI Second Brain/04_Roadmap|S1–S6]]. Larger model downloads, runtime upgrades and rollout remain separate from weekly research.
 
-## Next local candidates (15 Oct shortlist; replaces the 8 Oct list)
+## Next local candidates (22 Oct shortlist; replaces the 15 Oct list)
 
-1. TwIL-LM3-Pro Q4_K_M GGUF, non-commercial POC use (webAI Non-Commercial License 1.0, unchanged on 15 Oct; no commercial tier or written permission found). Its edge for evidence checking (S5) is an `unverified` hypothesis from vendor-only formal-logic results. Stays **watchlist only** in [[90 System/briefs/T9-M6-model-comparison|T9/M6]] until a brief names it.
-2. Gemma 4 E2B-it QAT, as a latency test against the current default, Gemma 4 E4B (D105), whose T9 p95 of 10.13 s is above the 8 s target. Engineering estimate, not measured; artifact to be confirmed.
+1. Gemma 4 26B-A4B-it QAT Q4_0 (the Mac's default since 21 Oct, Q152) with Google's `-it-assistant` multi-token-prediction drafter, latency only. The default's T9c p95 of 13.8 s is above D56's 8 s target. Doubtful by Google's own documentation for a mixture-of-experts model at batch size 1, and llama.cpp support is reported for E2B/E4B drafters only (secondary source), so the first step is a read-only support check; drop it if unsupported. Engineering estimate, not measured.
+2. Qwen3-ASR-1.7B against Whisper large-v3-turbo on French/English synthetic dictation, only if the lead confirms local ASR is needed (stage-1 voice currently uses iPhone dictation); no local ASR number exists. Granite Speech 5.0 is English-only and excluded.
 
-Both need a separate, authorized, bounded run; no local benchmark ran on 15 Oct. The 8 Oct item "Gemma 4 E4B-it as a second family" is done (T9). Detail in [[30 Resources/Local AI/benchmark-ledger]].
+TwIL-LM3-Pro (webAI Non-Commercial License 1.0, unchanged on 22 Oct; no commercial tier or written permission found) is **not shortlisted**: T9b (21 Oct) measured it and it failed the safety gate in both configurations; C2 stayed. It remains on the weekly watchlist, and a new revision (the publisher replaced its Q4_K_M file on 9 Oct) or an independent evaluation would justify a re-test. Both candidates above need a separate, authorized, bounded run; no local benchmark ran on 22 Oct. Detail in [[30 Resources/Local AI/benchmark-ledger]].
 
 ## Evidence labels
 

@@ -32,6 +32,7 @@ Rule 8 applies: Claude proposes entries, David approves them. Seeded 1 Oct 2026 
 - [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]] — snapshot of the task list before 8 Oct: done items, legacy plan, original wording · internal
 - [[10 Projects/AI Second Brain/OPEN_QUESTIONS|OPEN_QUESTIONS]] — what blocks work and who can answer · internal
 - [[10 Projects/AI Second Brain/CAPTURE|CAPTURE]] — on-the-go capture protocol · internal
+- [[10 Projects/AI Second Brain/07_Pivot_History|07_Pivot_History]] — the big decisions and why the plan pivoted (7 Sep → 21 Oct), causes, hard questions; synthesis of D1–D142, unreviewed wording · internal
 - [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] — the plan since the 19 Oct pivot: rented compute, sovereignty levels L0–L3, router rules, three stages since 21 Oct (D141: Mac, Claude Code, hosted EU) to the 18 Dec demo; pre-pivot version archived · internal
 - [[10 Projects/AI Second Brain/03_Product_School_Playbook|03_Product_School_Playbook]] — frameworks, thresholds and checklists from Product School · internal
 - [[10 Projects/AI Second Brain/02_Critical_Assessment|02_Critical_Assessment]] — why the webinar's plan was changed · internal

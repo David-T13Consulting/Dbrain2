@@ -1,14 +1,23 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54), session 51 on 21 Oct 2026 (session 55), session 52 on 21 Oct 2026 (session 55, batch review), session 53 on 21 Oct 2026 (session 56)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54), session 51 on 21 Oct 2026 (session 55), session 52 on 21 Oct 2026 (session 55, batch review), session 53 on 21 Oct 2026 (session 56); session 54 moved verbatim 22 Oct 2026 (session 57)
 review_status: codex-reviewed
 created: 2026-09-07
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 # Progress archive — sessions 1–39
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 54 — 21 Oct 2026 · Claude Code, lead loop (PV1 step 4 committed; PL1 steps 4 and 5 parked)
+**Authorization:** "pick up the loop" from David, 21 Oct; no ⛔ block, no new handoff entries. David present (Q146). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol`. No subagents. `caffeinate -ims` on AC power.
+- **PL1 step 1 = PV1 step 4: done** (runtime `46b702b`). D74 consult → no caller-supplied URL at all: a port-only test mode with fixed host, scheme and path, the Keychain refused in test mode, the endpoint rebuilt from the registry per call. Review 1/2 PASS; suite 574 OK.
+- **PL1 step 5 (T4.2): parked again.** D74 consult applied in full (regular files only without following links, report outside every git tree, snapshot before the drills, dirty or unpushed state fails, https on `github.com` only, sanitised git env, refusals for submodules, LFS, shallow, alternates, sparse). Review 1/1 FAIL with three narrower blockers (separate git dir for `--out`, repository-local fsmonitor, nested `.gitattributes`); fixed uncommitted; failure-path tests still to write.
+- **PL1 step 4 (voice), service part: parked.** `spoken` field (same answer as the screen, up to three titles). Review 1/1 FAIL: 423/503 kept "No answer." as spoken; fixed. Saved as a patch outside git and the files restored (Q146), so the phone runs committed code only. Shortcut generator not written: the 6 Oct temp-file token pattern is ruled out (data policy §2.2); David to decide how the token reaches the Shortcut.
+- **Observation:** step 5 has now failed two reviews (sessions 53 and 54), the second on narrower edge cases; the next consult asks whether it converges or needs a different cut (for example, a narrower contract).
+
+**Pick up at:** PL1 step 4 (re-apply patch, consult, review, Shortcut with David), then step 5.
 
 ### Session 53 — 21 Oct 2026 · Claude Code, lead loop (D141/D142 handoffs; T9b done, C2 stays; M6b closed; two steps parked)
 **Authorization:** "pick up the loop" from David, 21 Oct; no ⛔ block in the handoff. David present; answered Q138–Q143 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents. On AC power: `caffeinate -ims` for the loop (D103), T9b under `caffeinate -dimsu`.

@@ -1,5 +1,6 @@
 ---
 classification: internal
+review_status: codex-reviewed
 created: 2026-10-01
 last_reviewed: 2026-10-22
 next_review: 2026-10-29

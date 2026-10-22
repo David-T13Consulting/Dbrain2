@@ -23,6 +23,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q160 → "macOS sandbox enforces it"** (David, 22 Oct, lead session 57, asked in session): AS1 step 4's startup check runs itself, git and `gates.py` under `sandbox-exec` (no writes, no network, no reads under the failure store), enforced by the OS for every child; the path checks stay as a second line. Recorded in the AS1 brief.
 - **Q159 → "Accept, keep a backup"** (David, 22 Oct, lead session 57, asked in session): for step 7's last race (an edit on the Mac in the milliseconds between the final check and the replace), the writer keeps a hidden hard-link backup of the note and checks it after the swap; an in-place edit in the window is kept and reported; a replace-by-rename in that window is an accepted risk under Q53. Recorded in the PL1 brief.
 - **Q158 → "Model proposes the edit"** (David, 22 Oct, lead session 57, asked in session): PL1 step 7 corrections: David says what is wrong; the local model proposes one exact change; deterministic checks, read-back old → new, applied only on Save. Recorded in the PL1 brief.
 - **Q157 → "Commit and deploy"** (David, 22 Oct, lead session 57, asked in session): PL1 step 6 (remember from the phone; Tier 2, security boundary; Codex review 2/2 PASS) is committed, the phone service restarted on it, and "Brain Remember" built for his phone. Recorded in the PL1 brief.

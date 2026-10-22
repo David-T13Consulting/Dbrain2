@@ -1,7 +1,7 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54), session 51 on 21 Oct 2026 (session 55), session 52 on 21 Oct 2026 (session 55, batch review)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54), session 51 on 21 Oct 2026 (session 55), session 52 on 21 Oct 2026 (session 55, batch review), session 53 on 21 Oct 2026 (session 56)
 review_status: codex-reviewed
 created: 2026-09-07
 updated: 2026-10-21
@@ -9,6 +9,20 @@ updated: 2026-10-21
 # Progress archive — sessions 1–39
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 53 — 21 Oct 2026 · Claude Code, lead loop (D141/D142 handoffs; T9b done, C2 stays; M6b closed; two steps parked)
+**Authorization:** "pick up the loop" from David, 21 Oct; no ⛔ block in the handoff. David present; answered Q138–Q143 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only). No subagents. On AC power: `caffeinate -ims` for the loop (D103), T9b under `caffeinate -dimsu`.
+- **Handoffs:** Cowork's ~13:45 entry (three stages, D141) `f4bcdda` + bookkeeping `fb1f6c5`; ~14:15 entry (agent topology option A) `7989553`, numbered **D142**; Q-cowork-21a–c kept their IDs.
+- **Tier 1a batch 2026-10-19, review 2/2:** FAIL, one blocker (PL1 steps 6–7 had no file list); fixed forward `2daf21b` with the should-fixes; D135/D140's "rented models outclass local" wording left (DECISIONS is append-only; the roadmap marks it `unverified`).
+- **PL1 step 1 (= PV1 step 4): PARKED.** Reviews 1/2 and 2/2 failed on the test-only URL override (`[::1%30]` decoded to `::10`; `@127.0.0.1`), both a parser differential; the root-cause fix (ask urllib and http.client which host they would use) is applied **uncommitted, unreviewed**.
+- **PL1 step 2: done** (runtime `a9b8746`). Q138: the dev cases read the three files byte for byte as C2 read them (vault `8990bbe`, corpus `878a08ea6f57` reproduced); review 1/1 PASS; suite 564 OK.
+- **PL1 step 3 = T9b step 4–6: done** (`5f4e009`). All seven blocks ok; TwIL fails the safety gate in both configurations (6/8 vs C2's 5/8); Codex blind judge stricter and right on two answers. **Q141:** C2 stays; T9c brief for larger models (blocked on David). Phone service stopped for the window and restarted.
+- **PL1 step 5 (T4.2): PARKED.** Review 1/1 FAIL, five blockers (symlink overwrite path, `--out` guard, rewound remote, dirty files omitted, remote into the repo). Real drills ran ok but do not count. Steps 6–8 not started.
+- **M6b S5: done, M6b closed** (`eaf3e4c`): no measured benefit, lexical stays; review 1/2 PASS; approved Q142; embedding models and venv deleted on Q143.
+- **Settings:** `.claude/settings.json` committed on Q140 (`70ea3b3`).
+- **Not done, for later:** the protected edits approved by Q-cowork-21a–c (data policy, PV1 ceiling rule, D56 note; TASKS stage 3); project `CLAUDE.md` still says W1–W8 and "L0 own rented GPU" (protected; needs David's word); runtime README's "never pushed" line is out of date.
+
+**Pick up at:** D74 consults on PV1 step 4 and PL1 step 5, then PL1 step 4.
 
 ### Session 52 — 19 Oct 2026 · Claude Code, lead loop (pivot committed; PV1 steps 1–2)
 **Authorization:** "pick up the loop" from David, 19 Oct; no ⛔ block in the handoff; Cowork's 19 Oct ~20:30 pivot entry worked first. David present; he closed the session for the night mid-step 4. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): PV1 step 1 review 1/2, one D129 design consult, the Tier 1a batch. No subagents. On battery: no caffeinate (D103).

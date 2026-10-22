@@ -1219,3 +1219,19 @@ Lead run on "pick up the loop or flag blockers" (David present; Q144, Q147–Q15
 
 Review 1/2 · Tier 1a batch 2026-10-21c (session 55; Codex `gpt-6.1-sol`, high; vault `a07e4b4..HEAD`; recorded answers Q144, Q147–Q152): **PASS**; five should-fixes applied in the closing commit (TASKS PL1/T9c lines; Q144 no longer shown as open; the untracked-state exclusion described as the lead's proposal, not approved; T9c memory claim limited to what was measured; session 52 moved to the archive so three sessions remain).
 
+
+## [2026-10-21] session | Session 56 (overnight, autonomous): T4.2 passed; PL1 steps 6–7 blocked on David (Q153, Q154); AS1 step 4 parked (Q155); G1-inj S1 built
+Lead run on "pick up the loop" with Cowork's overnight handoff (David asleep; decisions queued, D68). Vault: `952b95b` (pivot history), `9c79493` (Q-cowork-21d), `9917f86`, `2457131` (PL1), `c0f8f6c` (AS1), `45e7626`, `2cd7881` (G1 record; batch fixes). Runtime: `6f1e0dc` (T4.2 restore test, Tier 1b review 1/1 PASS), `797ff41` and `53bda83` (G1-inj S1, Tier 1a). T4.2 real drills ok on both repositories. AS1 step 4 reviews 1/2 and 2/2 FAIL (Tier 2, raised by Codex): parked, files untracked in the runtime.
+
+Review 1/2 · Tier 1a batch 2026-10-21d (session 56; Codex `gpt-6.1-sol`, high; vault `2b72c75..45e7626`, runtime `797ff41`; recorded answer Q-cowork-21d): **FAIL**, two blockers, fixed forward: the G1 scorer passed reversed or unbound start/end times (runtime `53bda83`); `07_Pivot_History.md` presented D135's unmeasured "rented 27B+ outclasses the local 4B" as a T9 result (vault `2cd7881`, now attributed and `unverified`). Q-cowork-21d matches the handoff and the brief.
+
+Review 2/2 · Tier 1a batch 2026-10-21d: **not run to a verdict**: Codex hit its usage limit mid-review (~21:35; resets 23:39). The lead runs it after the reset if the session is still going; otherwise the next run does, and the fixes stay listed in PROGRESS.
+
+Moved verbatim from `90 System/handoff.md` (session 56, worked):
+
+**Cowork → lead, 21 Oct ~20:50 (overnight autonomous run; David asleep). Work this first.** David: "I'd like the lead to work as much as possible in autonomy when I sleep." He is not present until morning: queue every decision of his in for-david (D68), never wait.
+1. **Uncommitted from Cowork's ~14:55 entry:** that entry was moved to `log.md` but `10 Projects/AI Second Brain/07_Pivot_History.md` is still untracked. Commit it: `Pivot history: big decisions and why (David 21 Oct)`.
+2. **PL1 step 5 unblocked (Q-cowork-21d, David ~20:45):** untracked state is an accepted risk under Q53, outside T4.2. Fix blockers 1–3 and 5 and the report-write failure in 6; D74 consult (Opus subagent if Codex is at its limit, as in session 55); review. Then steps 6–7 per the brief (reviewed file list first). Step 8 needs David: leave it.
+3. **Then any actionable `@code` item** inside its brief's scope, highest first in TASKS (for example P2.7 retention-after-downtime test, the approved D142 protected edits, AS1 step 4, trace hashes, secret scanner scope). Stop conditions per D65/D70/D72 unchanged; nothing unsafe silently fixed.
+4. **At close:** PROGRESS, TASKS, OPEN_QUESTIONS, push (D79), and a one-paragraph summary in this file for David's morning.
+Changed by Cowork: `90 System/for-david.md` (Q-cowork-21d answered), this file. Suggested commit: `Answer Q-cowork-21d (T4.2 committed state only); overnight run handoff`.

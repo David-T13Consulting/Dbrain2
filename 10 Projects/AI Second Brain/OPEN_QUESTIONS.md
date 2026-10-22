@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Open Questions
 
-**Updated:** 19 Oct 2026 evening (Cowork): no change here; questions for David are in [[90 System/for-david|for-david]]; none open after the pivot (D134–D140).
+**Updated:** 21 Oct 2026 night (session 56, lead): no change here; questions for David are in [[90 System/for-david|for-david]]: Q153–Q155 open (PL1 step 6 admission and gate; AS1 step 4 scope).
 
 ---
 

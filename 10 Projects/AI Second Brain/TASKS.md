@@ -4,13 +4,13 @@ review_status: approved
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 21 Oct 2026 (Cowork: three stages, D141) · **Plan:** [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4, stages 1–3 · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 21 Oct 2026 (session 56: T4.2 passed; PL1 6–7 wait for Q153/Q154; AS1 step 4 parked; G1-inj S1 built) · **Plan:** [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4, stages 1–3 · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or the roadmap. The pre-pivot list, with every item's full wording and history, is archived at [[40 Archive/AI Second Brain/TASKS-pre-pivot-2026-10-19]] (exact text in git `e7b558e`); older done items are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
 ## ▶ Stage 1 · Second brain on the Mac (20 Oct–1 Nov, hard stop) — [[90 System/briefs/PL1-mac-second-brain|PL1]]
 
-- [ ] `@code` ⭐ **PL1** steps 5–7 (steps 1–4 done 21 Oct; step 5 parked three times, next: David on the untracked-files scope, then a D74 consult): restore test (T4.2); remember from the phone (P3.0 Part 1); correct from the phone (P3.1–P3.3 minimal)
+- [ ] `@code` ⭐ **PL1** steps 6–7 (steps 1–5 done; T4.2 passed 21 Oct for the committed state; file list reviewed; `blocked-on-david`: Q153, Q154): remember from the phone (P3.0 Part 1); correct from the phone (P3.1–P3.3 minimal)
 - [ ] `@david` **PL1 step 8:** G2 check by voice from the phone, plus the P2.8 phone check
 - [ ] `@code` **P2.7** retention-after-downtime test (D126), while on the Mac
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
@@ -28,10 +28,9 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 - [ ] `@code` **PV2** build (D136; replaces P4.1, P4.3); "Wrong" moves to Open WebUI feedback (P2.7)
 - [ ] `@code` Router across L0 Mac, L1 Scaleway, L3 Claude: task classifier, routing table from eval scores, escalate once, soft budget alert (D138)
 - [ ] `@david` Claude API key into the Keychain for the L3 route
-- [ ] `@code` **G1-inj** Read-path injection suite on retrieval and router — [[90 System/briefs/G1-inj-read-path-injection|G1-inj]]
+- [ ] `@code` **G1-inj** Read-path injection suite: S1 cases, scorer and runner committed (21 Oct); next the persistent report (Tier 2) and S2's baseline run (model server alongside the phone service: ask David) — [[90 System/briefs/G1-inj-read-path-injection|G1-inj]]
 - [ ] `@code` 🔴 **Trace question hashes:** salt per install or drop; filenames in traces are personal data (D126); before traces live on the server
-- [ ] `@code` 🔴 **Secret scanner scope:** extend to the vault and handoff files, or record why not (D126)
-- [ ] `@code` **AS1 step 4** startup check; **step 5** rescoped: close the D110 Air exception when the service moves to the server — [[90 System/briefs/AS1-agent-setup-hardening|AS1]]
+- [ ] `@code` **AS1 step 4** startup check (parked 21 Oct after 2 reviews, Tier 2; D74 consult next; Q155); **step 5** rescoped: close the D110 Air exception when the service moves to the server — [[90 System/briefs/AS1-agent-setup-hardening|AS1]]
 - [ ] `@code` **R1** Profile, allowlist and per-vault policy from configuration, before C1 (D126)
 - [ ] `@cowork` **C0** connector brief; `@cowork` design, `@code` build **C1** personal calendar, read-only (cut first if late)
 - [ ] `@code` **P4.4** Away-from-home test on each device class

@@ -2,7 +2,7 @@
 classification: internal
 task: T9c
 owner: "@code"
-status: blocked-on-david   # step 1 (candidates, download and disk budget) needs David before anything is fetched
+status: in-progress   # session 55: step 1 answered (Q144); step 2 download running; step 3 runner written, waits for Codex (Tier 2) and David's approval
 models: []
 created: 2026-10-21
 source: "David, Q141 (21 Oct, session 53) - keep C2, measure larger models; Q-cowork-21c quality first; T9b results note"
@@ -42,6 +42,11 @@ Find out whether one or two models larger than C2 that fit the Air's 24 GiB pass
 - Synthetic dev cases only; nothing leaves the Mac (D141); provider keys unset; no-network sandbox.
 - Safety gate before quality: "quality first" ranks safe models only (Q141 framing).
 - English and French only (D121).
+
+## Run notes, session 55 (21 Oct, lead `claude-opus-5-5`)
+- **Step 1 done (Q144, David in session):** candidates Google `gemma-4-12B-it-qat-q4_0-gguf` (rev `29d097773436`, `gemma-4-12b-it-qat-q4_0.gguf`, 6,975,879,296 bytes, sha256 `93567e57a8fe10b2…`) and `gemma-4-26B-A4B-it-qat-q4_0-gguf` (rev `d1c082be9cf3`, `gemma-4-26B_q4_0-it.gguf`, 14,439,363,584 bytes, sha256 `3eca3b8f6d7baf21…`); both Apache-2.0 (licence rule 1 met), ungated, same family and quantisation as C2; the 26B-A4B is a mixture-of-experts model also measured on Scaleway in PV1 step 5. Disk: the four models that failed T9/T9b deleted on David's word (11.8 GB); Q8 budget 30 GB; 26.2 GB after download. Window: tonight, once the runner passes review and David approves it. Manifest: runtime `artifacts/t9c-2026-10-21/manifest-pre-download.json` (C2's pin copied from T9b's manifest).
+- **Step 2:** download of the two pinned files started (each to `.part`, size and sha256 checked against the manifest before rename); load check follows under the no-network sandbox.
+- **Step 3 (Tier 2):** `experiments/t9c_compare.py` on T9b's pattern: order C2 G12 G26 C2 G26 G12 C2; T9's server flags and request signature unchanged for all three; timeouts 120 s (C2) and 300 s (G12, G26); evidence under `artifacts/t9c/`. `tests/test_t9c_compare.py` (9 synthetic tests) and T9b's tests pass. Uncommitted: Codex is at its usage limit until 18:38; then review and David's approval before the dry check and the run.
 
 ## Review
 

@@ -18,7 +18,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 | ID | From | Brief | Question | Options | Blocks | Urgency |
 |---|---|---|---|---|---|---|
-| Q144 | Lead, 21 Oct (session 53) | [[90 System/briefs/T9c-larger-local-model\|T9c]] step 1 | Which one or two larger local models to measure (licence must allow the December demo), what disk budget (17 of 25 GB used), and when the measuring window is | The lead proposes candidates from the benchmark ledger first; you pick · or skip T9c | T9c steps 2–6 | this week |
+| — | | | Nothing open | | | |
 
 ## Answered (since 8 Oct)
 
@@ -31,6 +31,7 @@ Answers land here first; the lead clears each once recorded (D68). Older answere
 - **Q134 → "Later this week"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 3 (Scaleway account, budget alert, API key in the Keychain as service `dbrain-scaleway`, account `dbrain`, stored with `security add-generic-password -s dbrain-scaleway -a dbrain -w`) is done by David later this week; steps 5 and 6's live parts wait for it.
 - **Q133 → "Delete it"** (David, 19 Oct, session 52, asked by the lead in session): the untracked `.githooks/__pycache__/` that Cowork's read-only gate check left is deleted, not committed.
 - **Q132 → "Approve and commit"** (David, 19 Oct, session 52, asked by the lead in session): PV1 step 1, the D137 review budget in AGENTS.md and the brief template, and the D135 lines in the project CLAUDE.md (one-line summary, hosting row, roadmap row, terms row, Current scope without "Defer MCP sprawl", Dispatch line), as shown word for word after Codex review 1/2 PASS. Recorded in the PV1 brief.
+- **Q144 → "Both 12B and 26B-A4B · delete the 4 failed, cap 30 GB · tonight if ready"** (David, 21 Oct, session 55, asked by the lead in session): T9c measures Google's `gemma-4-12B-it-qat-q4_0-gguf` (rev `29d097773436`, 6.5 GiB) and `gemma-4-26B-A4B-it-qat-q4_0-gguf` (rev `d1c082be9cf3`, 13.45 GiB), both Apache-2.0, against C2; the four models that failed T9/T9b (Qwen3-4B, Qwen3.5-4B, Ministral 3 8B, TwIL-LM3-Pro; 11.8 GB) are deleted; Q8 budget raised to 30 GB; the measuring window is tonight once the runner passes review and David approves it (Tier 2).
 - **Q150 → "Yes, these two clones"** (David, 21 Oct, session 55, asked by the lead in session; Keychain is a hard limit): the T4.2 restore test may read his GitHub credential from the Keychain (`osxkeychain`) for the GitHub clones of the vault and the runtime only, read-only (a helper that answers `get` only; nothing stored or erased). Both repositories are private (anonymous request: 404).
 - **Q149 → "Words now: 'Not sure', 'Verified'"** (David, 21 Oct, session 55, asked by the lead in session; he first asked for a certainty percentage, then chose words once told it cannot be honest before calibration): the spoken answer ends with "Verified." or "Not sure." (and "From an unreviewed note." when true); a calibrated percentage is added to T4.1, once the evaluation set can back it.
 - **Q148 → "Narrow to our two repos"** (David, 21 Oct, session 55, asked by the lead in session after the restore test failed two reviews): T4.2's contract is the vault (`master`) and the runtime (`main`) as they are, each with its GitHub remote; every unusual setup is refused rather than handled; the review checks that contract.

@@ -1225,7 +1225,7 @@ Lead run on "pick up the loop" with Cowork's overnight handoff (David asleep; de
 
 Review 1/2 · Tier 1a batch 2026-10-21d (session 56; Codex `gpt-6.1-sol`, high; vault `2b72c75..45e7626`, runtime `797ff41`; recorded answer Q-cowork-21d): **FAIL**, two blockers, fixed forward: the G1 scorer passed reversed or unbound start/end times (runtime `53bda83`); `07_Pivot_History.md` presented D135's unmeasured "rented 27B+ outclasses the local 4B" as a T9 result (vault `2cd7881`, now attributed and `unverified`). Q-cowork-21d matches the handoff and the brief.
 
-Review 2/2 · Tier 1a batch 2026-10-21d: **not run to a verdict**: Codex hit its usage limit mid-review (~21:35; resets 23:39). The lead runs it after the reset if the session is still going; otherwise the next run does, and the fixes stay listed in PROGRESS.
+Review 2/2 · Tier 1a batch 2026-10-21d: the first attempt (~21:35) was cut off by Codex's usage limit with no verdict; run again at 23:45 (Codex `gpt-6.1-sol`, high; vault `2b72c75..2cd7881`, runtime `797ff41`, `53bda83`): **FAIL**, two blockers, both in the G1 scorer: filler words between "until" and the time still passed ("runs until the scheduled time of 17:00"), and no form required the event or an assertion ("The run starts at 17:00", a question). Vault side clean: Q-cowork-21d matches; the pivot-note fix accepted. Budget used: fixed forward **unreviewed** in runtime `72035e1` (whole-answer forms over tokens; questions never pass; 6 regressions); listed in PROGRESS for the next batch.
 
 Moved verbatim from `90 System/handoff.md` (session 56, worked):
 

@@ -20,7 +20,7 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 ## Stage 2 · Second brain with Claude Code (2–8 Nov)
 - [ ] `@cowork` Draft the **PL2** brief: Claude Code vault skills adapted from an LLM-wiki skill (ingest, query, lint), git-diff approval, use from the phone through the Claude app, same evaluation set as stage 1
 - [ ] `@code` **PL2** build; one raw capture ingested into connected notes with David's approval
-- [ ] `@code` **T4.1** Versioned evaluations: the same question set scored at L0 (stage 1) and L3 (stage 2), deterministic checks first
+- [ ] `@code` **T4.1** Versioned evaluations: the same question set scored at L0 (stage 1) and L3 (stage 2), deterministic checks first; then a calibrated certainty percentage for answers, spoken and shown, only once these evaluations can back it (David, Q149)
 - [ ] `@codex` **P2.1** Independent review of the retrieval cases; keep an untouched acceptance subset — [[90 System/briefs/P2.1-review|P2.1-review]]
 
 ## Stage 3 · Hosted, EU (9 Nov–6 Dec)

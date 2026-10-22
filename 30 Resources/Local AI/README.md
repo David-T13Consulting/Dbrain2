@@ -38,9 +38,10 @@ These are engineering recommendations, not accepted deployment decisions.
 The measured host is an M2 Mac with 24 GiB unified memory. This supports small-model experiments; it does not prove that several models can run together acceptably. The current build order remains [[10 Projects/AI Second Brain/04_Roadmap|S1–S6]]. Larger model downloads, runtime upgrades and rollout remain separate from weekly research.
 
 ## Next local candidates (22 Oct shortlist; replaces the 15 Oct list)
+**Proposed, not adopted (David kept it as a proposal, Q161, 22 Oct): the claims are `unverified` engineering estimates; neither item runs without its own authorised, bounded run.**
 
 1. Gemma 4 26B-A4B-it QAT Q4_0 (the Mac's default since 21 Oct, Q152) with Google's `-it-assistant` multi-token-prediction drafter, latency only. The default's T9c p95 of 13.8 s is above D56's 8 s target. Doubtful by Google's own documentation for a mixture-of-experts model at batch size 1, and llama.cpp support is reported for E2B/E4B drafters only (secondary source), so the first step is a read-only support check; drop it if unsupported. Engineering estimate, not measured.
-2. Qwen3-ASR-1.7B against Whisper large-v3-turbo on French/English synthetic dictation, only if the lead confirms local ASR is needed (stage-1 voice currently uses iPhone dictation); no local ASR number exists. Granite Speech 5.0 is English-only and excluded.
+2. Qwen3-ASR-1.7B against Whisper large-v3-turbo on French/English synthetic dictation, only if the lead confirms local ASR is needed (stage-1 voice currently uses iPhone dictation); no local ASR number exists. Granite Speech 5.0 was read as English-only and excluded on 22 Oct; a reported 21 Oct multilingual update (French included) is `unverified` and is to be re-checked at the next weekly review.
 
 TwIL-LM3-Pro (webAI Non-Commercial License 1.0, unchanged on 22 Oct; no commercial tier or written permission found) is **not shortlisted**: T9b (21 Oct) measured it and it failed the safety gate in both configurations; C2 stayed. It remains on the weekly watchlist, and a new revision (the publisher replaced its Q4_K_M file on 9 Oct) or an independent evaluation would justify a re-test. Both candidates above need a separate, authorized, bounded run; no local benchmark ran on 22 Oct. Detail in [[30 Resources/Local AI/benchmark-ledger]].
 

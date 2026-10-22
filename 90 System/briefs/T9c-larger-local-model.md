@@ -52,7 +52,7 @@ Find out whether one or two models larger than C2 that fit the Air's 24 GiB pass
   - Review 1/1 · T9c default-model switch (Tier 1b) — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**, no findings. Committed runtime `4c38652`; phone service restarted on G26: health ok, server RSS 13.7 GiB, 25 % of system memory free.
 
 - **Finding after the switch (session 55):** traces still named the model `gemma-4-E4B_q4_0-it`: the service takes the name from `DBRAIN_MODEL`, which `run-all.sh` never set, so the adapter's default (E4B) was recorded although the 26B-A4B answered (server process checked). Label only: the name goes into `describe()` and traces, not into the request. Fix: `run-all.sh` passes `DBRAIN_MODEL` from the pinned file's name. The switch review had missed it. Traces written 21 Oct from 20:21 (the restart on G26) carry the wrong label.
-  - Review 1/1 · trace model label fix (Tier 1b) — Codex `gpt-6.1-sol` (review profile, high, read-only):
+  - Review 1/1 · trace model label fix (Tier 1b) — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**, no findings. Committed runtime `e1844d0`; phone service restarted once on it.
 
 ## Review
 - Review 1/2 · T9c step 3 — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**. Should-fix, applied: synthetic tests that a wrong size, a wrong hash or a changed runtime stop the run before any block (12 tests OK). **Approved by David (Q151)**; committed; run tonight.

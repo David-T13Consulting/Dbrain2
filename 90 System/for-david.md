@@ -24,6 +24,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q-cowork-21d → "Accept the risk"** (David, 21 Oct ~20:45, Cowork session): PL1 step 5 (T4.2) covers committed state only; untracked files (Codex session 55 blockers 4 and 6, untracked part) are recorded as an accepted risk under Q53 and become a separate backup question. Fix blockers 1–3 and 5, and the report-write failure in 6, then D74 consult and review.
 - **Q-cowork-21c → "Quality first"** (David, 21 Oct ~14:15, Cowork session): T9b step 4 picks the strongest model that fits the Air's 24 GiB on the dev cases, latency second; text p95 above 8 s (D56) is accepted for L0 if needed. Agent-topology proposal.
 - **Q-cowork-21a → "Strava is not critical"** (David, 21 Oct ~14:15, Cowork session): Strava and training data are workout data, not critical and not treated as health for the critical tier; they stay approved for external processing (data policy §4 unchanged). Critical health = health beyond training. The showcase workflow and the stage 3 three-level demo are unaffected.
 - **Q-cowork-21b → "Yes"** (David, 21 Oct ~14:15, Cowork session): critical material (health beyond training, finances, transatlantic move) stays out of Dbrain2 until the wave-2 gates pass; the L0-only rule is built in stage 3 and tested on synthetic notes.

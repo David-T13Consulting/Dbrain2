@@ -1214,3 +1214,8 @@ Review 1/2 · Tier 1a batch 2026-10-21b (session 54; Codex `gpt-6.1-sol`, high; 
 
 Review 2/2 · Tier 1a batch 2026-10-21b (re-review of the fix `ab49a15`): **PASS**; should-fix (PROGRESS and handoff still described the old plan) applied in the closing commit.
 
+## [2026-10-21] session | Session 55: voice on the phone; Mac model Gemma 4 26B-A4B (T9c); T4.2 parked again
+Lead run on "pick up the loop or flag blockers" (David present; Q144, Q147–Q152 answered in session). Codex at its usage limit 16:00–18:38: D74 consults by two Opus subagents, reviews after 18:38. Runtime: `3f7145c` (spoken field), `8f74f8a` (T9c runner, Q151), `4c38652` (default model switch, Q152), `a02bfb6` (voice Shortcut generator), `e1844d0` (trace model label). Vault: `dc90869`, `34a8852`, `3aea638`, `501eb42`, this close. PL1 step 5 review FAIL, parked. Four failed models deleted (Q144); two Gemma 4 files downloaded under the T9c manifest. Lead `claude-opus-5-5`, reviewer Codex `gpt-6.1-sol`; subagents: two D74 consults (Opus).
+
+Review 1/2 · Tier 1a batch 2026-10-21c (session 55; Codex `gpt-6.1-sol`, high; vault `a07e4b4..HEAD`; recorded answers Q144, Q147–Q152):
+

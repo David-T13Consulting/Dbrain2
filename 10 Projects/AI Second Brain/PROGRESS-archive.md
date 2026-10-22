@@ -1,7 +1,7 @@
 ---
 classification: internal
 note_type: log
-source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54)
+source: PROGRESS.md session log, sessions 1–35 moved verbatim 8 Oct 2026 (session 38); session 36 moved verbatim 8 Oct 2026 (session 39); session 37 moved verbatim 8 Oct 2026 (session 40); sessions 38–39 moved verbatim 9 Oct 2026 (session 42); later sessions moved verbatim at each close, session 47 on 21 Oct 2026 (session 53), session 50 on 21 Oct 2026 (session 54), session 51 on 21 Oct 2026 (session 55)
 review_status: codex-reviewed
 created: 2026-09-07
 updated: 2026-10-21
@@ -9,6 +9,19 @@ updated: 2026-10-21
 # Progress archive — sessions 1–39
 
 Moved verbatim from [[10 Projects/AI Second Brain/PROGRESS|PROGRESS]] on 8 Oct 2026 (session 38). Newest first, as in the original. Decision rows are in [[10 Projects/AI Second Brain/DECISIONS|DECISIONS]].
+
+### Session 51 — 19 Oct 2026 · Claude Code, lead loop (WIP clean-up; AS1 step 3 committed, gates installed)
+**Authorization:** "pick up the loop to finalize what's WIP. let's not start anything new but make sure we're cleaning up everything that's needed" from David, 19 Oct; no ⛔ block in the handoff. David present: he answered Q122–Q126 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): one D74 consult, AS1 step 3 review 1/5, the Tier 1a batch. No subagents (D114).
+
+**What changed for David:** commits and pushes in both repos now pass through gates: a secret in staged content, a commit message or a pushed commit is refused; a vault note without a valid `classification:` is refused; a change to AGENTS.md, any CLAUDE.md, the data policy, `.claude/`, `.gitignore`, sandbox profiles, the secret scanner or the gates themselves needs a `David-approved:` trailer naming a recorded decision or answer; merges are refused; a push may only update master/main (no new branches or tags on GitHub). The old P2.8 worktree, stash and settings edit are gone.
+
+- **Cowork's 19 Oct entry (weekly course map):** committed as `bf8ec65` (Tier 0); its lint notes worked under Q123.
+- **Clean-up (Q122):** worktree `~/Work/dbrain-runtime-p28`, branch `p28-b1` (at `88103ab`) and the B1 stash removed; the vault's `.claude/settings.json` restored to its committed version.
+- **Lint drift (Q123, `1676560`):** PROGRESS Phase and Action for David, TASKS host-order and T9b lines, ticked T9/M6 lines removed, T9 brief `done`, OQ-15 pointer to D107, for-david's "Since you last looked", 14 notes added to `index.md` (the eurouter capture sits in `40 Archive/Inbox/`, which the index does not list one by one), Welcome.md's placeholder link. Not touched: the five stale Inbox items, the digest skill, D63 and D-cowork-8 `in-review`.
+- **AS1 step 3 (Q124, Q126):** D74 consult (Codex): drop the destination listing; the stdin remote value is authoritative; git packs tips of updates it rejects itself without passing them to the hook; replacement objects hide content. All taken: no lookup of the destination, new remote refs refused, unknown remote value refused, every local branch and tag counted, `GIT_NO_REPLACE_OBJECTS`, shallow and grafts refused. 50 gate tests (three fail on the previous gate), runtime suite 537 OK, scan clean. Review 1/5 PASS. Committed in the vault (`409a06b` record, `b039c63` gates) and the runtime (`c664ce4`), both with `David-approved: Q126`; `gates.py install` run in both (check passes); this run's pushes went through the gates.
+- **Not touched:** the `weekly-desktop-digest` folder (Cowork's); the runtime's M6b `manifest-draft.json` (kept on purpose); T9b step 4 and the P2.8 phone check (Q125).
+
+**Pick up at:** with David: P2.8 phone check, Q119 and T9b step 4. Then AS1 steps 4–5, G1-inj S1, M6b S5.
 
 ### Session 50 — 15 Oct 2026 · Claude Code, lead loop (T9b steps 1–3; P2.8 B1 and B2 committed and live)
 **Authorization:** "pick up the loop" from David, 15 Oct, no ⛔ block in the handoff. David present: he answered Q115–Q118 in session. **Ended by** David ("let's stop for today, wrap up") before the phone check. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): P2.8 two D74 consults and 7 reviews, G1-inj one D129 design check, the Tier 1a batch. No subagents (D114). Codex hit its usage limit 14:27–14:41 (one review did not run); one call hung on stdin after moving to the background (no review; later calls close stdin).

@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 21 Oct 2026 · **Updated by:** Claude Code (session 54: PV1 step 4 committed; PL1 steps 4 and 5 parked)
+**Last updated:** 21 Oct 2026 · **Updated by:** Claude Code (session 55: voice on the phone; Mac model now Gemma 4 26B-A4B; T4.2 parked)
 
 ---
 
@@ -17,8 +17,8 @@ review_status: codex-reviewed
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
 | **Dependencies** | No hardware (D134). Stage 1: David for T9c step 1 (candidates, disk budget, window; Q141) and the PL1 step 8 phone check. Stage 3: Scaleway key (Q134) and Claude API key |
-| **Next action** | **"Pick up the loop" → [[90 System/briefs/PL1-mac-second-brain\|PL1]]:** step 4 (voice): re-apply the parked patch (Q146), D74 consult, review, then ask David how the Shortcut gets its token without a file (data policy §2.2 rules out the 6 Oct temp-file pattern) and build it with him; step 5 (T4.2): D74 consult asking whether the findings converge, missing failure tests, review; steps 6–7 after step 5 passes and their file list is reviewed. T9c after Q144. Untracked on purpose in the runtime: `experiments/restore_test.py`, `tests/test_restore_test.py` |
-| **Action for David** | **T9c step 1:** pick at most two larger local models, the disk budget (17 of 25 GB used after Q143) and a window; PL1 step 8 (G2 by voice, P2.8 check); Scaleway key before 9 Nov (Q134); **backups:** whether anything outside git (models, logs, failure store) has an independent copy is not tested; Time Machine has no destination configured (seen during the T4.2 drill). **Q144** open in [[90 System/for-david\|for-david]] (T9c step 1) |
+| **Next action** | **"Pick up the loop" → [[90 System/briefs/PL1-mac-second-brain\|PL1]] step 5 (T4.2):** ask David to record untracked files as an accepted risk (Q53), fix the other blockers of review 3, D74 consult, review; then steps 6–7 (file list reviewed first), then step 8 (G2 by voice with David). Untracked on purpose in the runtime: `experiments/restore_test.py`, `tests/test_restore_test.py`; the README line as a patch in `~/Library/Application Support/dbrain/parked/` |
+| **Action for David** | Delete the superseded Shortcuts "Ask Brain 6", "7" and "8" (keep "Ask Brain", "Brain Key" and "Ask Brain 5"); say if the Air feels slow with the 26B-A4B (Q152); PL1 step 8 (G2) when steps 5–7 are done; Scaleway key before 9 Nov (Q134); backups outside git untested (Time Machine has no destination). Nothing open in [[90 System/for-david\|for-david]] |
 
 ### Original work-package progress — retained snapshot
 
@@ -68,6 +68,15 @@ Decisions that notes cite as "in PROGRESS" are in DECISIONS.
 ## Session log
 
 Newest first. One entry per working session — what happened, what changed, where to pick up.
+
+### Session 55 — 21 Oct 2026 · Claude Code, lead loop (voice on the phone; Mac model Gemma 4 26B-A4B; T4.2 parked again)
+**Authorization:** "pick up the loop or flag blockers" from David, 21 Oct; then "do what you can until Codex comes back up". David present; answered Q144, Q147–Q152 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol`; two Opus subagents for D74 consults while **Codex was at its usage limit (about 16:00–18:38)**.
+- **PL1 step 4 done:** `spoken` field (runtime `3f7145c`, review PASS) with the evidence state in words (Q149); voice Shortcut built and tested on David's phone: dictate, hear, one screen with OK/Wrong; the token lives in a "Brain Key" Shortcut David filled once (generator `a02bfb6`, review PASS). **P2.8 phone check passed** (climbing, 2 Nov). Tailscale had stopped on the Air; restarted.
+- **T9c done:** Gemma 4 12B and 26B-A4B (Apache-2.0) against C2 on the frozen corpus; **26B-A4B safe and 7/8** (C2 5/8, 12B 5/8), p50 8.5 s, ~15 GiB; both judges 58/60. **David switched the Mac default to the 26B-A4B (Q152)** (runtime `4c38652`, review PASS); four failed models deleted, budget 30 GB (Q144); a trace-label bug after the switch fixed (`e1844d0`, review PASS).
+- **PL1 step 5 (T4.2) parked a third time:** narrowed to the two repos (Q148), Keychain read-only for their GitHub clones (Q150), 31 synthetic tests; review FAIL with six blockers, two of which argue against the declared scope (untracked files). Next: accepted risk under Q53, then fixes.
+- **Observation:** a dictated question was misheard once and lexical retrieval found nothing; retry worked (M5).
+
+**Pick up at:** PL1 step 5 with David's accepted-risk decision, then steps 6–8.
 
 ### Session 54 — 21 Oct 2026 · Claude Code, lead loop (PV1 step 4 committed; PL1 steps 4 and 5 parked)
 **Authorization:** "pick up the loop" from David, 21 Oct; no ⛔ block, no new handoff entries. David present (Q146). Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol`. No subagents. `caffeinate -ims` on AC power.
@@ -125,19 +134,6 @@ Newest first. One entry per working session — what happened, what changed, whe
 **Done:** roadmap rewritten (§4 weekly plan W1–W8); TASKS rebuilt around the weeks; delivery plan S2–S6 superseded; pre-pivot roadmap, delivery plan, TASKS and PROGRESS archived verbatim in `40 Archive/AI Second Brain/`; PV1 brief written. **Correction:** no data-policy change is needed (§1 and §5 already allow `internal` to a provider once its terms are verified); the earlier proposal text said D46 had to change, which was wrong. **Not touched:** data policy, AGENTS.md and project CLAUDE.md (protected; PV1 step 1 edits them with David's approval cited), runtime.
 
 **Pick up at:** "pick up the loop" → PV1.
-
-### Session 51 — 19 Oct 2026 · Claude Code, lead loop (WIP clean-up; AS1 step 3 committed, gates installed)
-**Authorization:** "pick up the loop to finalize what's WIP. let's not start anything new but make sure we're cleaning up everything that's needed" from David, 19 Oct; no ⛔ block in the handoff. David present: he answered Q122–Q126 in session. Lead `claude-opus-5-5`; reviewer Codex `gpt-6.1-sol` (review profile, high, read-only): one D74 consult, AS1 step 3 review 1/5, the Tier 1a batch. No subagents (D114).
-
-**What changed for David:** commits and pushes in both repos now pass through gates: a secret in staged content, a commit message or a pushed commit is refused; a vault note without a valid `classification:` is refused; a change to AGENTS.md, any CLAUDE.md, the data policy, `.claude/`, `.gitignore`, sandbox profiles, the secret scanner or the gates themselves needs a `David-approved:` trailer naming a recorded decision or answer; merges are refused; a push may only update master/main (no new branches or tags on GitHub). The old P2.8 worktree, stash and settings edit are gone.
-
-- **Cowork's 19 Oct entry (weekly course map):** committed as `bf8ec65` (Tier 0); its lint notes worked under Q123.
-- **Clean-up (Q122):** worktree `~/Work/dbrain-runtime-p28`, branch `p28-b1` (at `88103ab`) and the B1 stash removed; the vault's `.claude/settings.json` restored to its committed version.
-- **Lint drift (Q123, `1676560`):** PROGRESS Phase and Action for David, TASKS host-order and T9b lines, ticked T9/M6 lines removed, T9 brief `done`, OQ-15 pointer to D107, for-david's "Since you last looked", 14 notes added to `index.md` (the eurouter capture sits in `40 Archive/Inbox/`, which the index does not list one by one), Welcome.md's placeholder link. Not touched: the five stale Inbox items, the digest skill, D63 and D-cowork-8 `in-review`.
-- **AS1 step 3 (Q124, Q126):** D74 consult (Codex): drop the destination listing; the stdin remote value is authoritative; git packs tips of updates it rejects itself without passing them to the hook; replacement objects hide content. All taken: no lookup of the destination, new remote refs refused, unknown remote value refused, every local branch and tag counted, `GIT_NO_REPLACE_OBJECTS`, shallow and grafts refused. 50 gate tests (three fail on the previous gate), runtime suite 537 OK, scan clean. Review 1/5 PASS. Committed in the vault (`409a06b` record, `b039c63` gates) and the runtime (`c664ce4`), both with `David-approved: Q126`; `gates.py install` run in both (check passes); this run's pushes went through the gates.
-- **Not touched:** the `weekly-desktop-digest` folder (Cowork's); the runtime's M6b `manifest-draft.json` (kept on purpose); T9b step 4 and the P2.8 phone check (Q125).
-
-**Pick up at:** with David: P2.8 phone check, Q119 and T9b step 4. Then AS1 steps 4–5, G1-inj S1, M6b S5.
 
 ## How to resume
 

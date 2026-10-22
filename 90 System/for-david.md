@@ -23,6 +23,7 @@ David chose a single front door on 2 Oct 2026 (option A, provisional **D-cowork-
 
 Answers land here first; the lead clears each once recorded (D68). Older answered entries, moved verbatim on 8 Oct 2026 (session 38): [[90 System/for-david-archive]].
 
+- **Q157 → "Commit and deploy"** (David, 22 Oct, lead session 57, asked in session): PL1 step 6 (remember from the phone; Tier 2, security boundary; Codex review 2/2 PASS) is committed, the phone service restarted on it, and "Brain Remember" built for his phone. Recorded in the PL1 brief.
 - **Q156 → "Yes, work captures"** (David, 22 Oct, lead session 57, asked in session; follow-up to Q153 (b)): until P1.4 is applied and the lint check passes, "remember from the phone" may save **work captures** (still refused if they touch an engagement, data policy §6); personal captures get a spoken refusal until then; the G2 check uses a benign work fact. Recorded in the PL1 brief.
 
 - **Q154 → (a) "Your read-back and save is the gate"** (David, 22 Oct ~10:27, Cowork session): on "remember from the phone", David's read-back and explicit "save" is the gate; the EN/FR word lists are a fail-closed second line that refuse what they detect; the residual risk (implicit sensitive content David himself approves) is recorded as an accepted risk under Q53; P3.0's "when the check is unsure, it refuses" wording changes to match. Unblocks PL1 step 6's protection design.

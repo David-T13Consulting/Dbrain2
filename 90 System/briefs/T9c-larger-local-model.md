@@ -49,5 +49,6 @@ Find out whether one or two models larger than C2 that fit the Air's 24 GiB pass
 - **Step 3 (Tier 2):** `experiments/t9c_compare.py` on T9b's pattern: order C2 G12 G26 C2 G26 G12 C2; T9's server flags and request signature unchanged for all three; timeouts 120 s (C2) and 300 s (G12, G26); evidence under `artifacts/t9c/`. `tests/test_t9c_compare.py` (9 synthetic tests) and T9b's tests pass. Uncommitted: Codex is at its usage limit until 18:38; then review and David's approval before the dry check and the run.
 
 ## Review
+- Review 1/2 · T9c step 3 — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**. Should-fix, applied: synthetic tests that a wrong size, a wrong hash or a changed runtime stop the run before any block (12 tests OK). **Approved by David (Q151)**; committed; run tonight.
 
 ## Outcome

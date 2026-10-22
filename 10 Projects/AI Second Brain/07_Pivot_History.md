@@ -36,7 +36,7 @@ updated: 2026-10-21
 | 3 | 1–12 Oct | Three agents writing freely → one lead, one queue, tiered reviews | Two stale branches and tangled uncommitted work in one day; then review loops eating runs | Ownership first (D63); then the process was lightened four times as reviews became the bottleneck | D63, D65, D70, D72, D77, D111, D112, D127, D128 |
 | 4 | 1–8 Oct | Mac mini 24–32 GB, €800–1.5k → 64 GB, €3.7k, purchase approved | Sizing: 24 GB leaves no headroom for model, retrieval, speech and agents together | Bigger local models wanted; purchase gated on the T9 benchmark | D53, D92, D95, D107 |
 | 5 | 9 Oct | Platform plan → same plan plus explicit end goal, audit gates G1–G4, calendars and mail, usable security | David restated the end goal ("usable for me", personal and work calendars and mail) | Gates give pass/fail release criteria; integrations come one connector at a time after security | D126 |
-| 6 | 19 Oct | Buy hardware, run local → rent EU compute behind a sovereignty router (L0–L3); reuse Open WebUI; 1 review per step | T9 benchmark: a rented 27B+ model outclasses the local 4B; ~130 decisions and review loops had consumed most of the time since 12 Oct | Renting removes purchase, hardware ceiling and home ops; building blocks exist for most layers; **the router is the demonstrable governance product.** No hardware was bought | D134–D140 |
+| 6 | 19 Oct | Buy hardware, run local → rent EU compute behind a sovereignty router (L0–L3); reuse Open WebUI; 1 review per step | T9 (8 Oct) measured four local models only and picked a 4B (C2); T9c (21 Oct) later ran a 26B-A4B on the Air (7/8 dev cases, Q152). D135 records as a *reason*, not a measurement, that a rented 27B+ model outclasses it (`unverified` until PV1 steps 5–7 measure rented models); ~130 decisions and review loops had consumed most of the time since 12 Oct | Renting removes purchase, hardware ceiling and home ops; building blocks exist for most layers; **the router is the demonstrable governance product.** No hardware was bought | D134–D140 |
 | 7 | 21 Oct | One big hosted cutover → three small, usable stages (Mac, Claude Code, hosted EU) | Need for usable wins sooner; stage 1 was mostly built | The three stages become the router's three levels (L0, L3, L1) on one vault, one query service, one eval set | D141 |
 | 8 | 21 Oct | Idea of an organiser plus confidentiality agents and role agents → router + one runtime agent + skills; critical tier = local only | Research check (Anthropic 2026; Google/MIT scaling study; CaMeL) | Confidentiality enforced in code and logged, not in prompts; multi-agent costs 3–10x tokens and degrades sequential work | D142 |
 
@@ -44,17 +44,17 @@ updated: 2026-10-21
 
 | Cause | Pivots | What it shows |
 |---|---|---|
-| **Measurement overturned an assumption** | 6 (local 4B too weak), 8 (multi-agent evidence) | Decisions were set up to be overturned by data: D8 deferred the model choice to a benchmark on purpose |
+| **Measurement overturned an assumption** | 6 in part (T9 measured the local models; the rented side is a recorded reason, still to be measured), 8 (multi-agent evidence) | Decisions were set up to be overturned by data: D8 deferred the model choice to a benchmark on purpose |
 | **Scope grew as goals became explicit** | 2, 5 | Early plan was a read-only showcase; David's real goal is a system he uses daily, by phone and voice |
 | **Process cost became visible** | 3, 6 (review depth), 7 | Governance has a cost too; it was measured and cut each time it exceeded its value |
 
-Every decision row carries a **"revisit when"** column. Pivot 6 is the cleanest example: D53 said "revisit if availability relaxes or memory use changes"; the benchmark changed the premise, so the purchase was reversed before money was spent.
+Every decision row carries a **"revisit when"** column. Pivot 6 is the cleanest example: D53 said "revisit if availability relaxes or memory use changes"; T9 showed what the Air could run, and D134–D135 reversed the purchase on the reasons recorded there, before money was spent.
 
 ## Hard questions to be ready for
 
 | Question | Honest answer |
 |---|---|
-| "You approved a €3.7k host on 8 Oct and cancelled it on 19 Oct. Isn't that churn?" | The order was gated on a benchmark (D92). The benchmark showed rented models beat any model the box could run, so the gate did its job and no money was spent. Lesson (Cowork's reading, not in the log): compare renting with buying earlier |
+| "You approved a €3.7k host on 8 Oct and cancelled it on 19 Oct. Isn't that churn?" | The order was gated on a benchmark (D92). T9 measured the local models; the switch to renting rested on D134–D135's recorded reasons (no hardware ceiling, no home operations, a rented 27B+ model expected to outclass the local 4B: `unverified`, measured in PV1). No money was spent. Lesson (Cowork's reading, not in the log): compare renting with buying earlier |
 | "L0 meant the Mac, then a rented GPU, then the Mac again." | True; D141 fixed it as "own machine". The level model itself (L0–L3) stayed stable; only its hardware example moved |
 | "142 decisions in six weeks is a lot." | Yes. Most are small operational rules; the process was deliberately lightened in D77, D127 and D137. The big decisions fit on this page |
 | "Why not just use Claude for everything?" | Retention terms changed in Aug 2026 (30-day default for business tiers); EU clients ask where data went. The router answers that per request, with a log line |

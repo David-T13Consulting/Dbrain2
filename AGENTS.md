@@ -61,19 +61,24 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   or a data-policy breach. On (3): stop, do not fix it silently, report. A decision that
   belongs to David never stops the loop: queue it (D68), set the brief `blocked-on-david`,
   move on. Commit at the end of each step (a brief without steps: at its end), never mid-step.
-- **Review failures (D72, amended by D112, D-cowork-15 and D137, 19 Oct).** A failed Codex review
-  is fixed and re-reviewed. Only `blocker` findings fail a review; `should-fix` and `nit`
-  findings are logged in the brief and do not trigger another round. **Review budget per step
+- **Review failures (D72, amended by D112, D-cowork-15, D137 and D143, 22 Oct).** A failed Codex
+  review is fixed and re-reviewed. Only `blocker` findings fail a review. **A blocker is only a
+  concrete failure on realistic input: data loss, a leak, an unapproved write, or a
+  security-boundary bypass.** Every other finding is a `should-fix` or `nit`: logged in the
+  brief, not blocking, no further round. The lead gives Codex this definition with the diff.
+  **Review budget per step
   per run, the first review included: 2 for Tier 2 and security-boundary steps (security
   boundary as listed under Subagent routing), 1 for every other step.** A step is a numbered
   step in the brief's Steps section; a brief without steps is one step. Every review counts
   against exactly one step, and the lead writes `Review n/<budget> · <brief> <step>` in the
-  brief before each Codex call. When a step uses its budget without passing, **park** it:
-  status stays `in-review`, every round's findings go in the brief, nothing from that step is
-  committed, the brief's later steps are not started this run, and the run moves on. Before a
-  parked step is retried in a later run, the lead takes one D74 consult on it. Steps already
-  committed stay committed. A brief parks after 6 reviews in one run (12 if it has a Tier 2 or
-  security-boundary step).
+  brief before each Codex call. When a step uses its budget without passing, the lead **does
+  not park it: it asks David to choose (a) accept the listed residual risks and commit, (b)
+  shrink the step, or (c) defer it** (in the session if he is present, else via
+  `for-david.md` with the brief `blocked-on-david`). Until he answers: status stays
+  `in-review`, every round's findings go in the brief, nothing from that step is committed,
+  the brief's later steps wait. A deferred step gets one D74 consult before it is retried.
+  Steps already committed stay committed. After 6 reviews of one brief in one run (12 with a
+  Tier 2 or security-boundary step), the same choice goes to David.
 - **Review tiers (D77, Q55, amended by D-cowork-15, 12 Oct).** When in doubt, the higher
   tier; Codex may raise a tier, never lower it.
   - **Tier 0** (handoff and tracking-file bookkeeping, recording David's answers, frontmatter,

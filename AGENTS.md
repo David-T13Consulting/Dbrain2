@@ -47,9 +47,10 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
 - **Commit straight to `master`; keep history linear.** Only the lead commits. Branch only
   for speculative work and delete the branch when it lands (D50).
 - **Review before commit.** The lead runs Codex read-only on every diff the review tiers send
-  to it (Tier 1b and Tier 2 per step; Tier 1a once per run, batched) against these rules
+  to it (Tier 1b and Tier 2 per step; Tier 1a every second run, batched) against these rules
   and records its findings in the brief. Codex gets the rules and the diff, not the lead's
-  reasoning.
+  reasoning, inside the prompt itself (the diff and the rule lines that apply; stdin
+  closed), so it reads further only where it needs to (D144).
   Accepted risks recorded in a brief are passed to the reviewer and don't block (Q53).
 - **Trigger phrase (Q52).** "Pick up the loop" from David starts an autonomous lead run per
   [[90 System/briefs/D-cowork-8-autonomous-runs|D72]]; read the Cowork → lead section of
@@ -88,9 +89,11 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
   - **Tier 1a** (briefs, drafts, specs, skills, notes in 10–40 with no Tier 2 claim, and test
     code, fixtures, harnesses and eval scripts that run only on synthetic data and write
     nowhere but a temporary folder): commit per step once its tests pass; **one batched Codex
-    pass per run** over every Tier 1a commit and every recorded answer (Tier 0) since the last
-    batch, before the push; a run that committed either runs the batch. The batch is its own
-    review unit, outside the per-step rule above: budget 2 per run, each review written as
+    pass every second run** (D144) over every Tier 1a commit and every recorded answer
+    (Tier 0) since the last batch, before that run's push, at effort `medium`; a run that
+    skips it lists the unreviewed range in its `log.md` entry, and no range stays unreviewed
+    past a second run. The batch is its own
+    review unit, outside the per-step rule above: budget 2 per batch, each review written as
     `Review n/2 · Tier 1a batch <date>` in the run's `log.md` entry, not counted against any
     brief's cap. Blockers are fixed forward in new commits within that budget; anything still
     unfixed is listed in PROGRESS and the push still happens (David, 12 Oct). Tier 1a notes in 10–40 carry
@@ -147,7 +150,8 @@ Adopted 1 Oct 2026 (D63). Design record: [[40 Archive/agent-orchestration-propos
 - **Design check before the first review (D129, David 12 Oct).** Before writing most of a
   step's code, the lead takes one quick read-only design consult when the step's core is
   heuristic logic over free text (parsers, scorers, detectors, grammars, regex rules) or the
-  lead expects it to need more than one review. Consultant: Codex (`codex exec --profile
+  lead expects it to need more than one review. Not needed when the lead expects the step's
+  diff to stay under about 150 changed lines (D144). Consultant: Codex (`codex exec --profile
   review`) first, else a fresh Opus subagent (D114). Give it the goal, the contract (what
   must never happen; which misses are acceptable), the planned approach and the cases it
   must handle; ask for the failure classes the design will miss and a test list. Keep the
@@ -199,7 +203,7 @@ Adopted 1 Oct 2026 (D64). David sets this policy; config files apply it; agents 
 | Cowork: thinking, specs, briefs | Strongest Claude model (Opus) | App model picker (David) |
 | Claude Code: lead | Opus | `.claude/settings.json` in the vault (git-tracked) |
 | Claude Code subagents | Routed per call by the lead (rules below); default Sonnet | `model` on each Agent call; default `CLAUDE_CODE_SUBAGENT_MODEL` in `.claude/settings.json` |
-| **Codex: reviewer** | **GPT-6.1 Sol at effort `high`** (was GPT-6 Astra until 5 Oct 2026, D73), escalating to `ultra` only when the lead and the reviewer are both stuck | `~/.codex/review.config.toml`; the lead calls `codex exec --profile review` |
+| **Codex: reviewer** | **GPT-6.1 Sol at effort `high`** (was GPT-6 Astra until 5 Oct 2026, D73); `medium` for Tier 1a batches (same review profile, `-c model_reasoning_effort=medium`, D144), escalating to `ultra` only when the lead and the reviewer are both stuck | `~/.codex/review.config.toml`; the lead calls `codex exec --profile review` |
 
 - The review is independent because it uses a different vendor's model. Do not swap the reviewer to a Claude model.
 - Reviewer setup (D64, David 2 Oct): the standalone CLI is installed at `~/.local/bin/codex`, not the copy bundled inside the ChatGPT app. From Codex CLI 0.159 a profile is **its own file** (`$CODEX_HOME/<name>.config.toml`), not a `[profiles.<name>]` section in `config.toml` — look in the right place before concluding the profile is missing.

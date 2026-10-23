@@ -12,6 +12,7 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 
 - [ ] `@code` ⭐ **PL1** step 7 (steps 1–6 done; step 6 "remember" live 22 Oct, work captures only until P1.4, Q156): correct from the phone, the model proposes (Q158), backup on the edit race (Q159); **parked** after reviews 1/2 and 2/2 (Markdown gate); code in runtime `stash@{0}`; next: D74 consult for a narrower contract
 - [ ] `@david` **PL1 step 8:** G2 check by voice from the phone, plus the P2.8 phone check
+- [ ] `@code` **One Shortcut "Brain"** (Q163, David 22 Oct: option B): one input step for voice or typing, fixed first-word routing to the remember flow (gate unchanged), "Brain Key" separate; after step 8's G2 check; triggers "note" and "save" (Q164), typed answers shown only, Siri runs spoken (Q165); re-run the phone check
 - [ ] `@code` **P2.7** retention-after-downtime test (D126), while on the Mac
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews
 

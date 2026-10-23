@@ -4,15 +4,14 @@ review_status: approved
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 22 Oct 2026 (Cowork: stage 1 focus and append-only correction, D143) · **Plan:** [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4, stages 1–3 · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 22 Oct 2026 (session 59: PL1 step 7 done append-only, D143 review rule in AGENTS.md) · **Plan:** [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4, stages 1–3 · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or the roadmap. The pre-pivot list, with every item's full wording and history, is archived at [[40 Archive/AI Second Brain/TASKS-pre-pivot-2026-10-19]] (exact text in git `e7b558e`); older done items are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
 ## ▶ Stage 1 · Second brain on the Mac (20 Oct–1 Nov, hard stop) — [[90 System/briefs/PL1-mac-second-brain|PL1]]
 
-- [ ] `@code` ⭐ **PL1 step 7, append-only correction (D143):** "That's wrong: …" → one new Inbox note via the step 6 writer naming the corrected note; the index drops the corrected note; no file edited; the 22 Oct edit stash is not reused · **date guard Tue 28 Oct**, else stage 3 — [[90 System/briefs/PL1-mac-second-brain|PL1]]
 - **Focus until 1 Nov (D143):** only PL1 steps 7–8 and the one-Shortcut "Brain" item. Frozen to stage 3: P1.4 step 1, AS1 step 4, M-inj
-- [ ] `@david` **PL1 step 8:** G2 check by voice from the phone, plus the P2.8 phone check
+- [ ] `@david` ⭐ **PL1 step 8:** G2 check by voice from the phone (remember, recall, Correct, recall), plus the P2.8 phone check. Step 7 done 22 Oct (append-only, runtime `0fbf8f6`, Q172)
 - [ ] `@code` **One Shortcut "Brain"** (Q163, David 22 Oct: option B): one input step for voice or typing, fixed first-word routing to the remember flow (gate unchanged), "Brain Key" separate; after step 8's G2 check; triggers "note" and "save" (Q164), typed answers shown only, Siri runs spoken (Q165); re-run the phone check
 - [ ] `@code` **P2.7** retention-after-downtime test (D126), while on the Mac
 - [ ] `@cowork` Revise `90 System/skills/weekly-desktop-digest/SKILL.md` for the five Codex blockers (handoff, 9 Oct); the lead re-reviews

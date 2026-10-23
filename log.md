@@ -1274,3 +1274,6 @@ Moved verbatim from `90 System/handoff.md` (session 59, worked):
 Changed by Cowork, uncommitted: `10 Projects/AI Second Brain/DECISIONS.md` (D143), `90 System/briefs/PL1-mac-second-brain.md` (step 7, step 8, focus line), `10 Projects/AI Second Brain/TASKS.md` (step 7 line, focus line, three items marked frozen), `10 Projects/AI Second Brain/PROGRESS.md` (Next action row), this file. Suggested commit: `D143: stage 1 focus, append-only correction (PL1 step 7), review rule, date guard 28 Oct (Cowork as architect, David 22 Oct)`.
 
 Review 1/2 · Tier 1a batch 2026-10-22c (session 59; Codex `gpt-6.1-sol`, high; vault `9deeaf8..c313a4e`: recorded answers Q171, Q172; bookkeeping; the AGENTS.md review rule checked against D143): **not completed**, Codex hit its usage limit mid-review (back 22:12), no verdict; not counted against the budget. This range (incl. the AGENTS.md text, which still needs its Codex pass as a rule change) joins the next run's batch.
+
+## [2026-10-22] decision | D144: cheaper Codex reviews (diff in the prompt, Tier 1a batch every second run at medium effort, no D129 check under ~150 lines)
+David approved the exact AGENTS.md text in session 59 (Q173). Session 59's unfinished batch still runs first next run (its range would otherwise pass a second run).

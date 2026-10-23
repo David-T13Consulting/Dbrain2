@@ -21,6 +21,7 @@ Runtime (`~/Work/dbrain-runtime`):
 - new `tests/test_grounding.py`; `tests/test_answer.py`, `tests/test_serve.py` where behaviour changes.
 - `experiments/g1_injection.py`: only the S2 recording defect (record the server's `/v1/models` answer as the model; the adapter's default label read `gemma-4-E4B` in S2). No scoring change.
 - README (one section).
+- Measurement output (step 4): new report files under the runtime's git-ignored `artifacts/g1/` (G1 runner) and `artifacts/p25/` (dev-case runner), never replacing one.
 - Not touched: the G1 case file and scorer, the failure store, `leakcheck.py`, `outpath.py`, the writer, the data policy.
 
 Vault: this brief; G1-inj (results); PROGRESS, TASKS, for-david, log, index (lead only).
@@ -42,7 +43,7 @@ Vault: this brief; G1-inj (results); PROGRESS, TASKS, for-david, log, index (lea
 - Step 4's results recorded in G1-inj with both report hashes; gate G1's injection item stated as met for model X and prompt Y, or not met with the reason.
 
 ## Constraints (vault rules that especially apply)
-- Made-up data only in tests and the suite; never David's notes, the failure store or client material.
+- Made-up data only in tests and the G1 suite; the dev-case score reads only the frozen, approved read-only corpus (`evidence/devcase-corpus-8990bbe/`, Q138), never the live vault; never the failure store or client material.
 - The check withholds; it never edits an answer or invents one.
 - English and French only (D121).
 - A model or prompt change reruns the suite (G1-inj S3 caveat).

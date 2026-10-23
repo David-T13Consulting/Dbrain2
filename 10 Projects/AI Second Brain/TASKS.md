@@ -4,13 +4,13 @@ review_status: approved
 ---
 # Tasks — AI Second Brain Project
 
-**Updated:** 22 Oct 2026 (session 57: PL1 step 6 live; step 7, P1.4 step 1 and AS1 step 4 parked; G1-inj report writer waits for Codex) · **Plan:** [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4, stages 1–3 · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
+**Updated:** 22 Oct 2026 (session 58: G1-inj S1–S3 done, I and A fail → M-inj brief; PL1 step 7, P1.4 step 1 and AS1 step 4 parked again) · **Plan:** [[10 Projects/AI Second Brain/04_Roadmap|04_Roadmap]] §4, stages 1–3 · **Target:** demo-ready Fri 18 Dec 2026 (Q29)
 
 Open items only, one line each; detail lives in the linked brief or the roadmap. The pre-pivot list, with every item's full wording and history, is archived at [[40 Archive/AI Second Brain/TASKS-pre-pivot-2026-10-19]] (exact text in git `e7b558e`); older done items are in [[10 Projects/AI Second Brain/TASKS-archive|TASKS-archive]]. Owner tags per D63 and Q17; conventions at the end.
 
 ## ▶ Stage 1 · Second brain on the Mac (20 Oct–1 Nov, hard stop) — [[90 System/briefs/PL1-mac-second-brain|PL1]]
 
-- [ ] `@code` ⭐ **PL1** step 7 (steps 1–6 done; step 6 "remember" live 22 Oct, work captures only until P1.4, Q156): correct from the phone, the model proposes (Q158), backup on the edit race (Q159); **parked** after reviews 1/2 and 2/2 (Markdown gate); code in runtime `stash@{0}`; next: D74 consult for a narrower contract
+- [ ] `@code` ⭐ **PL1** step 7 (steps 1–6 done; step 6 "remember" live 22 Oct, work captures only until P1.4, Q156): correct from the phone, the model proposes (Q158), backup on the edit race (Q159, Q169); rebuilt on a whitelist of plain notes (session 58, Markdown surface closed), **parked again** after review 2/2 on the frontmatter seam (fix unreviewed); code in runtime `stash@{0}`; next: D74 consult (one shared frontmatter parser?), fresh review, David's approval
 - [ ] `@david` **PL1 step 8:** G2 check by voice from the phone, plus the P2.8 phone check
 - [ ] `@code` **One Shortcut "Brain"** (Q163, David 22 Oct: option B): one input step for voice or typing, fixed first-word routing to the remember flow (gate unchanged), "Brain Key" separate; after step 8's G2 check; triggers "note" and "save" (Q164), typed answers shown only, Siri runs spoken (Q165); re-run the phone check
 - [ ] `@code` **P2.7** retention-after-downtime test (D126), while on the Mac
@@ -29,9 +29,10 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 - [ ] `@code` **PV2** build (D136; replaces P4.1, P4.3); "Wrong" moves to Open WebUI feedback (P2.7)
 - [ ] `@code` Router across L0 Mac, L1 Scaleway, L3 Claude: task classifier, routing table from eval scores, escalate once, soft budget alert (D138)
 - [ ] `@david` Claude API key into the Keychain for the L3 route
-- [ ] `@code` **G1-inj** Read-path injection suite: S1 cases, scorer, runner committed; scorer reviewed (batch 2026-10-22 PASS); report writer built, review 1/2 fixed, **review 2/2 next** (Codex limit), then David's approval and S2 on the live model server (Q162) — [[90 System/briefs/G1-inj-read-path-injection|G1-inj]]
+- [ ] `@code` **G1-inj** Read-path injection suite: S1–S3 done 22 Oct (Q166); baseline on the phone's model: **I and A fail**, X and D clean, A2 inconclusive; G1's injection item unmet until M-inj — [[90 System/briefs/G1-inj-read-path-injection|G1-inj]]
+- [ ] `@david` **M-inj** approve the mitigation brief (Q167; output check first, then evidence framing) and say whether its measurement may rerun on the live server — [[90 System/briefs/M-inj-answer-injection-mitigation|M-inj]]
 - [ ] `@code` 🔴 **Trace question hashes:** salt per install or drop; filenames in traces are personal data (D126); before traces live on the server
-- [ ] `@code` **AS1 step 4** startup check (narrowed Q155 (a), OS-enforced Q160; parked again 22 Oct after 2 reviews; next: D74 consult on in-process `sandbox_init`); **step 5** rescoped: close the D110 Air exception when the service moves to the server — [[90 System/briefs/AS1-agent-setup-hardening|AS1]]
+- [ ] `@code` **AS1 step 4** startup check (narrowed Q155 (a), OS-enforced Q160; rebuilt on in-process `sandbox_init`, Q168, Q170; parked a third time 22 Oct, session 58, on who can call the checks unconfined; fix unreviewed; next: D74 consult, fresh review); **step 5** rescoped: close the D110 Air exception when the service moves to the server — [[90 System/briefs/AS1-agent-setup-hardening|AS1]]
 - [ ] `@code` **R1** Profile, allowlist and per-vault policy from configuration, before C1 (D126)
 - [ ] `@cowork` **C0** connector brief; `@cowork` design, `@code` build **C1** personal calendar, read-only (cut first if late)
 - [ ] `@code` **P4.4** Away-from-home test on each device class
@@ -64,7 +65,7 @@ Open items only, one line each; detail lives in the linked brief or the roadmap.
 ## Carried over, to reassess after the stage 1 and stage 3 measurements
 - [ ] `@code` **P2.5** Layers beyond F3 (F0–F3 done): rerun on the stage 1 model and the rented models first; scope new layers only if they still fail — [[90 System/briefs/P2.5-answer-accuracy|P2.5]]
 - [ ] `@code` **P2.6** Date library behind the fail-closed wrapper: keep only if the rented models still misread dates — [[90 System/briefs/P2.6-date-resolution|P2.6]]
-- [ ] `@code` **P1.4** four-axis retrofit (Q153 b, started 22 Oct): brief committed; step 1 dry run (Tier 2) parked after review 1/1, fixes uncommitted; step 2 report to David next; applying needs David — [[90 System/briefs/P1.4-four-axis-retrofit|P1.4]]
+- [ ] `@code` **P1.4** four-axis retrofit (Q153 b, started 22 Oct): brief committed; step 1 dry run (Tier 2) parked again 22 Oct (session 58) after reviews 1/2 and 2/2 (labels admitted that YAML would not read; fixes uncommitted); next: D74 consult on a positive admission rule, fresh review; step 2 report to David after; applying needs David — [[90 System/briefs/P1.4-four-axis-retrofit|P1.4]]
 - [ ] `@code` **M5** Retrieval corpus with retention evidence; bilingual query expansion
 - [ ] `@code` **T7** Evidence UX: the level badge and evidence states, phone screen in stage 1, Open WebUI in stage 3
 

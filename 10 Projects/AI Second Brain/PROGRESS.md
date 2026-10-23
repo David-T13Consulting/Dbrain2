@@ -4,7 +4,7 @@ review_status: codex-reviewed
 ---
 # Progress Tracker — AI Second Brain Project
 
-**Last updated:** 22 Oct 2026 · **Updated by:** Claude Code (session 57: remember from the phone live; PL1 step 7, P1.4 and AS1 step 4 parked; G1-inj report waits for Codex)
+**Last updated:** 22 Oct 2026 · **Updated by:** Claude Code (session 58: G1-inj baseline done, planted text steers answers in 2 of 4 classes → M-inj brief; PL1 step 7, P1.4 step 1 and AS1 step 4 parked again)
 
 ---
 
@@ -16,9 +16,9 @@ review_status: codex-reviewed
 | **Schedule** | [[10 Projects/AI Second Brain/04_Roadmap\|04_Roadmap]] §4: stages 1–3, then operate and demo 7–13 Dec; demo-ready Fri 18 Dec 2026 (Q29) |
 | **Target** | Client-ready demo, December 2026 |
 | **Status** | 🟢 Week 0 closed · Week 1 closed · Week 2: 3 skills drafted and smoke-tested · Week 3: golden dataset **70/150** runs labelled. Batch 04 held out and scored 2 Oct — terrain 100% (≥95% ✅), intent 65% (≥85% ❌); the flags have no D19 threshold, and against the always-"no" baseline of 85% `tempo_block` at 40% is far worse while vertical at 90% barely beats it. The evidence behind the v2 taxonomy (D67) |
-| **Dependencies** | No hardware (D134). Stage 1: PL1 step 7 (parked; narrower contract next) and step 8 (G2 by voice with David; its remember half can run now). Personal captures from the phone wait for P1.4 applied + lint (Q153, Q156). Stage 3: Scaleway key (Q134) and Claude API key |
-| **Next action** | **"Pick up the loop":** [[90 System/briefs/G1-inj-read-path-injection\|G1-inj]] report writer review 2/2 (Tier 2; Codex hit its limit), David's approval, then S2 on the live model server (Q162). Then D74 consults for the three parked steps: [[90 System/briefs/PL1-mac-second-brain\|PL1]] step 7 (narrower plain-text contract; code in runtime `stash@{0}`), [[90 System/briefs/P1.4-four-axis-retrofit\|P1.4]] step 1 (Tier 2; untracked `experiments/p14_retrofit.py`), [[90 System/briefs/AS1-agent-setup-hardening\|AS1]] step 4 (in-process `sandbox_init`; untracked `ops/`) |
-| **Action for David** | Try "Brain Remember" with one benign work note (press "Add Shortcut" on the Mac first if not done); G2's remember half (PL1 step 8); approve G1-inj's report writer once reviewed; replace `~/Work/CLAUDE.md`'s start text with the AS1 proposal (now `python3 -I -B -S`) when step 4 lands; Scaleway key before 9 Nov (Q134); backups outside git untested |
+| **Dependencies** | No hardware (D134). Stage 1: PL1 step 7 (parked; frontmatter seam fix unreviewed) and step 8 (G2 by voice with David; its remember half can run now). Personal captures from the phone wait for P1.4 applied + lint (Q153, Q156). Stage 3: Scaleway key (Q134) and Claude API key |
+| **Next action** | **"Pick up the loop":** D74 consults, then fresh reviews, for the three parked steps: [[90 System/briefs/PL1-mac-second-brain\|PL1]] step 7 (one shared frontmatter parser?; code in runtime `stash@{0}`), [[90 System/briefs/P1.4-four-axis-retrofit\|P1.4]] step 1 (a positive admission rule; untracked `experiments/p14_retrofit.py`), [[90 System/briefs/AS1-agent-setup-hardening\|AS1]] step 4 (checks reachable only through `run_confined`; untracked `ops/`). [[90 System/briefs/M-inj-answer-injection-mitigation\|M-inj]] once David approves it. G1-inj S2 (22 Oct): I and A fail, X and D clean |
+| **Action for David** | Try "Brain Remember" with one benign work note (press "Add Shortcut" on the Mac first if not done); G2's remember half (PL1 step 8); approve the M-inj brief (and whether its measurement may rerun on the live server); whether the unused `ops/sandbox-canary` may be deleted; replace `~/Work/CLAUDE.md`'s start text with the AS1 proposal (now `python3 -I -B -S`) when step 4 lands; Scaleway key before 9 Nov (Q134); backups outside git untested |
 
 ### Original work-package progress — retained snapshot
 

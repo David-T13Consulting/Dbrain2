@@ -38,15 +38,17 @@ From the iPhone over Tailscale, by voice, David asks and hears a cited answer, a
 - T9b brief (protocol, Q115–Q116; Q119 approved 21 Oct).
 - P2.8 brief (phone answer screen).
 
-## Steps (D137: 1 review per step; 2 for Tier 2 and security-boundary steps)
+## Steps (D137: 1 review per step; 2 for Tier 2 and security-boundary steps; after a second failure, ask David, D143)
+**Focus until 1 Nov (D143):** steps 7–8 and the one-Shortcut "Brain" item only; P1.4 step 1, AS1 step 4 and M-inj are stage 3.
 1. **Finish PV1 step 4** (provider adapter, already in progress, uncommitted): README section, review, commit. It stays unused until stage 3.
 2. **Freeze the dev-case evidence (Q136 (a)).** Copy the pre-pivot roadmap section 0 from git `e7b558e` into a fixed evidence file outside the live roadmap; point the dev-case corpus at it; the two failing read-only tests pass again and the C2 baseline reproduces.
 3. **Pick the Mac's model (T9b step 4, with David, about 1 h; Q119 approved).** Run as the T9b brief says. TwIL-LM3-Pro's licence question stays open (D99): a private research trial is unaffected; whether it may appear in the December demo is unresolved until webAI confirms in writing or a lawyer reads the licence. Outcome to David; he chooses the default.
 4. **Voice on the phone.** The Shortcut takes iPhone dictation in and speaks the answer out (on-device speech, no server ASR); a short spoken form of the answer with the sources' titles; the screen keeps the P2.8 layout. Away-from-home check over Tailscale.
 5. **Restore test first (T4.2).** Rollback of a bad commit and restore after loss of the working copy, on a disposable copy; required by data policy §7 before any runtime write.
 6. **Remember from the phone (P3.0 Part 1, security boundary).** "Remember …" → the Shortcut reads the note back → saved only on "save" (Q67), as one new dated file in `00 Inbox/` with classification and the four D69 axes (asks "personal or work?"), via one writer; no other write path; admission per data policy §4a.
-7. **Correct from the phone (P3.1–P3.3 minimal, security boundary).** "That's wrong: …" → a proposed exact change to that note, bound to its base revision, read back, applied only on "save"; a stale approval is refused; the old version does not resurface in answers.
-8. **G2 check with David.** From the phone, by voice: remember a benign fact, recall it in a fresh session with its source, correct it, recall again; plus a rejection, a concurrent Obsidian edit and an interrupted save. P2.8 phone check in the same session.
+7. **Correct from the phone, append-only (redesigned 22 Oct, D143; security boundary, 2 reviews, then David chooses).** "That's wrong: …" → the model drafts the corrected statement → read back → on "Save", the step 6 writer creates **one new Inbox note** (same gate, same frontmatter, plus a field naming the corrected note's path) → the index excludes any note named by a saved correction. No existing file is edited. Tests: the corrected note no longer appears in answers, the correction does; a correction naming a path outside the allowlist or a non-existent note is refused; no write without "Save". The 22 Oct edit design (Q158/Q159, runtime stash) is superseded and not reused. **Date guard:** not committed by Tue 28 Oct → moves to stage 3.
+    *Former text (21 Oct):* **Correct from the phone (P3.1–P3.3 minimal, security boundary).** "That's wrong: …" → a proposed exact change to that note, bound to its base revision, read back, applied only on "save"; a stale approval is refused; the old version does not resurface in answers.
+8. **G2 check with David** (if step 7 moved to stage 3 under D143: remember and recall only). From the phone, by voice: remember a benign fact, recall it in a fresh session with its source, correct it, recall again; plus a rejection, a concurrent Obsidian edit and an interrupted save. P2.8 phone check in the same session.
 
 ## Done when (checkable)
 - Steps 1–7 committed; step 8 passed with David and recorded in PROGRESS.

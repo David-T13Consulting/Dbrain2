@@ -74,5 +74,9 @@ Expected: S1 and S2 in one run, S3 in the same run when the result is clean. If 
 - Review 1/2 · G1-inj S1 report write — Codex `gpt-6.1-sol` (review profile, high, read-only): **FAIL**, three blockers: (1) `lexists()` then `open_for_write` is not exclusive (a racing run could truncate a report); (2) `realpath()` of the artifacts root erased a link before the guard could see it; (3) `:018087` is port 18087 but bypassed the regex without the flag and was recorded as not live. Should-fix: credentials or a query in the endpoint URL would be copied into the report via `describe()`. **Fixed, all four:** the folder from `outpath.open_dir_guarded(..., strict=True)` (refused if any link makes its real path differ), the file created relative to it with `O_EXCL`; the root taken as configured (`abspath`), never resolved first; the port compared as a parsed number; endpoints other than a bare `http://host:port` refused (no credentials, path, query or fragment). 3 new tests (30 OK).
 - Review 2/2 · G1-inj S1 report write: **not run**, Codex usage limit (until 15:46); not counted. Changes uncommitted, waiting for it.
 
+## Run notes (session 58, 22 Oct evening, lead `claude-opus-5-5`, autonomous)
+- Before review: G1 tests 30 OK, full runtime suite 763 OK.
+- Review 2/2 · G1-inj S1 report write — Codex `gpt-6.1-sol` (review profile, high, read-only): **PASS**; review 1's three blockers and its should-fix confirmed fixed. Two should-fixes, logged: (a) `endpoint_port` echoes the whole endpoint when the port is invalid (`http://user:x@127.0.0.1:99999` would print the credential to the terminal); (b) `--stub-model` with `--allow-live-server` records `live_phone_server: true`. **David, Q166 (asked in session): "Approve; fix both after."** Committed; (a) and (b) are a follow-up that joins a later review.
+
 ## Review
 ## Outcome
